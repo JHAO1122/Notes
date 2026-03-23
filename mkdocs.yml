@@ -4,12 +4,12 @@ site_url: https://jhao1122.github.io/Notes/
 theme:
   name: material
   features:
-    - navigation.tabs  # 顶部横向菜单
-    - navigation.sections # 侧边栏分组
-    - navigation.top # 回到顶部按钮
-    - search.suggest # 搜索建议
-    - content.code.copy # 代码一键复制
-  palette: # 自动切换深色/浅色模式
+    - navigation.tabs  
+    - navigation.sections 
+    - navigation.top 
+    - search.suggest 
+    - content.code.copy 
+  palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
