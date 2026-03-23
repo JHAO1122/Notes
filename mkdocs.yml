@@ -1,5 +1,7 @@
 site_name: My Study Notes
 site_url: https://jhao1122.github.io/Notes/ 
+repo_url: https://github.com/jhao1122/Notes   
+repo_name: jhao1122/Notes
 
 theme:
   name: material
@@ -31,5 +33,21 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
   
 markdown_extensions:
-  - pymdownx.arithmatex:
+  - admonition          
+  - pymdownx.details    
+  - pymdownx.superfences 
+  - pymdownx.arithmatex: 
       generic: true
+
+plugins:
+  - search
+  - i18n:
+      default_language: zh
+      languages:
+        - locale: zh
+          name: 中文
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
