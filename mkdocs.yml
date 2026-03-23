@@ -1,3 +1,34 @@
-site_name: My Study Site
+site_name: My Study Notes
+site_url: https://jhao1122.github.io/Notes/ 
+
 theme:
   name: material
+  features:
+    - navigation.tabs  # 顶部横向菜单
+    - navigation.sections # 侧边栏分组
+    - navigation.top # 回到顶部按钮
+    - search.suggest # 搜索建议
+    - content.code.copy # 代码一键复制
+  palette: # 自动切换深色/浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        title: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        title: 切换到浅色模式
+  language: zh 
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
