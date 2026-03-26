@@ -1,0 +1,986 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/2Brown_Motion/">
+      
+      
+        <link rel="prev" href="../1conditional_expectation/">
+      
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/2Brown_Motion/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第二章：布朗运动 (Brownian Motion) - My Study Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#brownian-motion" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="My Study Notes" class="md-header__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Study Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第二章：布朗运动 (Brownian Motion)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/Stochastic-Differential-Equation/2Brown_Motion/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to Halo's Academic Space
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0Intro/" class="md-tabs__link">
+          
+  
+  
+  Stochastic Differential Equation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Study Notes" class="md-nav__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Study Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Halo's Academic Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Differential Equation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Differential Equation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    0Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动 (Brownian Motion)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动 (Brownian Motion)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 基础定义与性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 引入白噪声与 SDE 雏形
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 多维布朗运动与核心性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kolmogorov" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Kolmogorov 连续性定理与轨道性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 基础定义与性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 引入白噪声与 SDE 雏形
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 多维布朗运动与核心性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kolmogorov" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Kolmogorov 连续性定理与轨道性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="brownian-motion">第二章：布朗运动 (Brownian Motion)</h1>
+<p>在建立了条件期望与鞅论的测度论基础后，我们正式引入连续时间随机过程的核心基石——<strong>布朗运动 (Brownian Motion, BM)</strong>，也常被称为维纳过程 (Wiener Process)。它不仅是自然界中随机游走现象的连续极限，更是构建随机微分方程 (SDE) 积分理论（如 Itô 积分）的根本驱动力。</p>
+<h2 id="1">1. 基础定义与性质</h2>
+<div class="admonition abstract">
+<p class="admonition-title">定义：标准布朗运动 (Standard Brownian Motion)</p>
+<p>设 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> 为一个概率空间，其上定义了一个实值随机过程 <span class="arithmatex">\(W = \{W(t), t \ge 0\}\)</span>。如果 <span class="arithmatex">\(W\)</span> 满足以下四个条件，则称其为<strong>标准布朗运动</strong>：</p>
+<p><strong>1. 初始零点</strong>：<span class="arithmatex">\(P(W(0) = 0) = 1\)</span> a.s.</p>
+<p><strong>2. 独立增量 (Independent Increments)</strong>：对于任意的时间划分 <span class="arithmatex">\(0 \le t_1 &lt; t_2 &lt; \dots &lt; t_n\)</span>，增量序列：</p>
+<div class="arithmatex">\[
+W(t_1), W(t_2) - W(t_1), \dots, W(t_n) - W(t_{n-1})
+\]</div>
+<p>相互独立。</p>
+<p><strong>3. 平稳的高斯增量 (Stationary Gaussian Increments)</strong>：对于任意 <span class="arithmatex">\(0 \le s &lt; t\)</span>，增量服从均值为 0，方差为时间差的正态分布：</p>
+<div class="arithmatex">\[
+W(t) - W(s) \sim \mathcal{N}(0, t-s)
+\]</div>
+<p><strong>4. 轨道连续性 (Continuous Paths)</strong>：几乎所有的样本轨道 <span class="arithmatex">\(t \mapsto W(t, \omega)\)</span> 都是连续的（即 a.s. 连续）。</p>
+</div>
+<p>由以上定义，我们可以立刻得出布朗运动的低阶矩与协方差结构，这是后续推导白噪声性质的关键。</p>
+<div class="admonition info">
+<p class="admonition-title">基本性质：矩与协方差结构</p>
+<p><strong>1. 均值与方差</strong>：
+由于 <span class="arithmatex">\(W(t) = W(t) - W(0) \sim \mathcal{N}(0, t)\)</span>，显然有：</p>
+<div class="arithmatex">\[
+E[W(t)] = 0, \quad Var(W(t)) = t
+\]</div>
+<p><strong>2. 自协方差函数 (Autocovariance)</strong>：
+对于任意的 <span class="arithmatex">\(s, t \ge 0\)</span>，有：</p>
+<div class="arithmatex">\[
+R(s, t) = Cov(W(s), W(t)) = E[W(s)W(t)] = s \wedge t = \min(s, t)
+\]</div>
+<details class="proof">
+<summary>自协方差的推导（点击展开）</summary>
+<p>不失一般性，假设 <span class="arithmatex">\(0 \le s \le t\)</span>。我们将 <span class="arithmatex">\(W(t)\)</span> 拆分为增量形式：</p>
+<div class="arithmatex">\[
+E[W(s)W(t)] = E\big[W(s) \big( W(t) - W(s) + W(s) \big)\big]
+\]</div>
+<p>展开得到：</p>
+<div class="arithmatex">\[
+= E[W(s)(W(t) - W(s))] + E[W(s)^2]
+\]</div>
+<p>由于布朗运动具有独立增量性质，<span class="arithmatex">\(W(t) - W(s)\)</span> 与 <span class="arithmatex">\(W(s) = W(s) - W(0)\)</span> 相互独立。又因为增量均值为 0，所以第一项为 0：</p>
+<div class="arithmatex">\[
+= E[W(s)] E[W(t) - W(s)] + Var(W(s)) = 0 + s = s
+\]</div>
+<p>由于我们假设了 <span class="arithmatex">\(s \le t\)</span>，因此一般情况可以写为 <span class="arithmatex">\(s \wedge t\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">布朗运动的联合概率密度与转移密度</p>
+<p>布朗运动在时间点 <span class="arithmatex">\(0 &lt; t_1 &lt; t_2 &lt; \dots &lt; t_n\)</span> 上的取值 <span class="arithmatex">\((W(t_1), \dots, W(t_n))\)</span> 服从多元正态分布。
+由于马尔可夫性，其联合概率密度 (Joint PDF) 可以用<strong>转移密度函数 (Transition Density)</strong> 乘积的形式优雅地表达：</p>
+<p>定义高斯转移密度（从空间点 <span class="arithmatex">\(y\)</span> 经过时间 <span class="arithmatex">\(t\)</span> 转移到 <span class="arithmatex">\(x\)</span>）：</p>
+<div class="arithmatex">\[
+g(x, t | y) = \frac{1}{\sqrt{2\pi t}} e^{-\frac{|x-y|^2}{2t}}
+\]</div>
+<p>则联合概率密度为：</p>
+<div class="arithmatex">\[
+p(x_1, t_1; x_2, t_2; \dots; x_n, t_n) = g(x_1, t_1 | 0) g(x_2, t_2 - t_1 | x_1) \dots g(x_n, t_n - t_{n-1} | x_{n-1})
+\]</div>
+</div>
+<hr />
+<h2 id="2-sde">2. 引入白噪声与 SDE 雏形</h2>
+<p>从常微分方程 (ODE) <span class="arithmatex">\(\frac{dX(t)}{dt} = b(X(t), t)\)</span> 过渡到随机微分方程 (SDE) 时，我们直观上希望加入一个“随机力”或“噪声”项 <span class="arithmatex">\(\xi(t)\)</span>。
+理想的白噪声 <span class="arithmatex">\(\xi(t)\)</span> 应该在不同时刻完全不相关，即协方差呈现 Dirac <span class="arithmatex">\(\delta\)</span> 函数的性质：<span class="arithmatex">\(E[\xi(s)\xi(t)] = \delta(s-t)\)</span>。
+在数学上，这个所谓的白噪声正是<strong>布朗运动的“形式导数”</strong> <span class="arithmatex">\(\dot{W}(t)\)</span>。</p>
+<div class="admonition info">
+<p class="admonition-title">定理：布朗运动增量商的协方差极限为 <span class="arithmatex">\(\delta\)</span> 函数</p>
+<p>考虑布朗运动的差商过程 <span class="arithmatex">\(\xi_h(t) = \frac{W(t+h) - W(t)}{h}\)</span> (<span class="arithmatex">\(h &gt; 0\)</span>)。
+当 <span class="arithmatex">\(h \to 0\)</span> 时，其自协方差函数在广义函数（分布）的意义下收敛于 Dirac <span class="arithmatex">\(\delta\)</span> 函数。</p>
+<details class="proof">
+<summary>极限推导过程（点击展开）</summary>
+<p>我们计算差商在不同时刻 <span class="arithmatex">\(s, t\)</span> 的协方差 <span class="arithmatex">\(E[\xi_h(s) \xi_h(t)]\)</span>。
+利用布朗运动的协方差性质 <span class="arithmatex">\(E[W(u)W(v)] = u \wedge v\)</span>：</p>
+<div class="arithmatex">\[
+E\left[ \frac{W(s+h)-W(s)}{h} \frac{W(t+h)-W(t)}{h} \right] = \frac{1}{h^2} \Big( (s+h \wedge t+h) - (s \wedge t+h) - (s+h \wedge t) + (s \wedge t) \Big)
+\]</div>
+<p>假设 <span class="arithmatex">\(s \le t\)</span>，我们分析上式的非零区域：
+1. 当时间差 <span class="arithmatex">\(|t-s| \ge h\)</span> 时，上述四个项相互抵消，结果为 <span class="arithmatex">\(0\)</span>。这表明只要时间间隔大于 <span class="arithmatex">\(h\)</span>，差商过程就是不相关的。
+2. 当时间差 <span class="arithmatex">\(|t-s| &lt; h\)</span> 时，存在重叠区间。计算可得协方差为：</p>
+<div class="arithmatex">\[
+\varphi_h(t-s) = \frac{1}{h^2} (h - |t-s|)
+\]</div>
+<p>这是一个底边宽为 <span class="arithmatex">\(2h\)</span>、高为 <span class="arithmatex">\(\frac{1}{h}\)</span> 的等腰三角形函数。
+显然，积分 <span class="arithmatex">\(\int_{-\infty}^\infty \varphi_h(x) dx = 1\)</span>。
+当 <span class="arithmatex">\(h \to 0\)</span> 时，该函数在非零点处趋于 0，在 0 处趋于无穷大，且积分恒为 1。这正是 Dirac <span class="arithmatex">\(\delta\)</span> 函数的定义：</p>
+<div class="arithmatex">\[
+\lim_{h \to 0} E[\xi_h(s) \xi_h(t)] = \delta(t-s)
+\]</div>
+<p>这就解释了为何 SDE 通常写成微分形式 <span class="arithmatex">\(dX(t) = b(X,t)dt + \sigma(X,t)dW(t)\)</span>，因为 <span class="arithmatex">\(W(t)\)</span> 的真正导数并不存在，只能作为广义函数处理。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="3">3. 多维布朗运动与核心性质</h2>
+<p>在量化金融与多粒子系统中，我们常面临高维随机现象。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：多维布朗运动 (n-dimensional BM)</p>
+<p><span class="arithmatex">\(n\)</span> 维布朗运动定义为一个向量过程 <span class="arithmatex">\(W(t) = (W^1(t), W^2(t), \dots, W^n(t))^T\)</span>，其中：
+1. 每一个分量 <span class="arithmatex">\(W^k(t)\)</span> 都是一个标准的一维布朗运动。
+2. 分量之间相互独立：即对于任意 <span class="arithmatex">\(k \neq l\)</span>，<span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\sigma(W^k(t), t \ge 0)\)</span> 与 <span class="arithmatex">\(\sigma(W^l(t), t \ge 0)\)</span> 独立。</p>
+<p>其分量间的协方差结构为：</p>
+<div class="arithmatex">\[
+E[W^k(t) W^l(s)] = (t \wedge s) \delta_{kl}
+\]</div>
+<p><em>(此处 <span class="arithmatex">\(\delta_{kl}\)</span> 为 Kronecker 记号，不是 Dirac <span class="arithmatex">\(\delta\)</span> 函数)</em></p>
+</div>
+<p>布朗运动在随机分析中最强大的两个属性，是它完美同时兼具了<strong>鞅 (Martingale)</strong> 和 <strong>马尔可夫过程 (Markov Process)</strong> 的特征。</p>
+<div class="admonition success">
+<p class="admonition-title">定理：布朗运动是连续鞅</p>
+<p>设 <span class="arithmatex">\(\{\mathcal{F}_t\}_{t \ge 0}\)</span> 为布朗运动自然生成的流 <span class="arithmatex">\(\mathcal{F}_t = \sigma(W(u), 0 \le u \le t)\)</span>。则 <span class="arithmatex">\(W(t)\)</span> 是一个鞅。</p>
+<details class="proof">
+<summary>鞅性质证明（点击展开）</summary>
+<p>对于任意 <span class="arithmatex">\(s \le t\)</span>，我们需要证明 <span class="arithmatex">\(E[W(t) | \mathcal{F}_s] = W(s)\)</span>。
+通过增量拆分构造独立性：</p>
+<div class="arithmatex">\[
+E[W(t) | \mathcal{F}_s] = E[W(t) - W(s) + W(s) | \mathcal{F}_s]
+\]</div>
+<p>由条件期望的线性性质：</p>
+<div class="arithmatex">\[
+= E[W(t) - W(s) | \mathcal{F}_s] + E[W(s) | \mathcal{F}_s]
+\]</div>
+<p>因为布朗运动具有独立增量，未来的增量 <span class="arithmatex">\(W(t) - W(s)\)</span> 与历史信息流 <span class="arithmatex">\(\mathcal{F}_s\)</span> 完全独立，故独立则无关（等于无条件期望）；
+而 <span class="arithmatex">\(W(s)\)</span> 本身是 <span class="arithmatex">\(\mathcal{F}_s\)</span>-可测的，故已知即常数（直接提出）：</p>
+<div class="arithmatex">\[
+= E[W(t) - W(s)] + W(s) = 0 + W(s) = W(s)
+\]</div>
+<p>证毕。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<div class="admonition success">
+<p class="admonition-title">定理：布朗运动是马尔可夫过程</p>
+<p>布朗运动满足马尔可夫性：即“未来仅依赖于现在，而与过去无关”。
+对于任意 Borel 集 <span class="arithmatex">\(B \in \mathcal{B}(\mathbb{R}^n)\)</span> 以及 <span class="arithmatex">\(s \le t\)</span>：</p>
+<div class="arithmatex">\[
+P(W(t) \in B | \mathcal{F}_s) = P(W(t) \in B | W(s)) \quad a.s.
+\]</div>
+<details class="proof">
+<summary>马尔可夫性严格测度论证明（点击展开）</summary>
+<p>利用指示函数 <span class="arithmatex">\(\chi_B\)</span>（或记作 <span class="arithmatex">\(I_B\)</span>），我们可以将概率写为条件期望：</p>
+<div class="arithmatex">\[
+P(W(t) \in B | \mathcal{F}_s) = E[\chi_B(W(t)) | \mathcal{F}_s]
+\]</div>
+<p>引入增量，设函数 <span class="arithmatex">\(f(x, y) = \chi_B(x + y)\)</span>。将 <span class="arithmatex">\(W(t)\)</span> 拆分为 <span class="arithmatex">\(W(s)\)</span> 和 <span class="arithmatex">\(W(t) - W(s)\)</span>：</p>
+<div class="arithmatex">\[
+E[\chi_B(W(t)) | \mathcal{F}_s] = E[f(W(s), W(t) - W(s)) | \mathcal{F}_s]
+\]</div>
+<p>此处应用测度论中独立性与条件期望的核心引理（冻结引理/替换定理）：
+因为 <span class="arithmatex">\(W(s)\)</span> 是 <span class="arithmatex">\(\mathcal{F}_s\)</span>-可测的，而 <span class="arithmatex">\(W(t) - W(s)\)</span> 与 <span class="arithmatex">\(\mathcal{F}_s\)</span> 独立，我们可以将 <span class="arithmatex">\(W(s)\)</span> 视作“冻结”的常数 <span class="arithmatex">\(x\)</span>，对另一部分求无条件期望，然后再把 <span class="arithmatex">\(W(s)\)</span> 代回来：</p>
+<div class="arithmatex">\[
+= E[f(x, W(t) - W(s))]\Big|_{x = W(s)}
+\]</div>
+<p>设增量 <span class="arithmatex">\(Z = W(t) - W(s) \sim \mathcal{N}(0, t-s)\)</span>，其密度函数为 <span class="arithmatex">\(g(z)\)</span>，上式等于：</p>
+<div class="arithmatex">\[
+= \int_{\mathbb{R}^n} \chi_B(x + z) g(z) dz \Bigg|_{x = W(s)}
+\]</div>
+<p>换元令 <span class="arithmatex">\(y = x + z\)</span>，则 <span class="arithmatex">\(dz = dy\)</span>：</p>
+<div class="arithmatex">\[
+= \int_B g(y - x) dy \Bigg|_{x = W(s)} = \int_B \frac{1}{\sqrt{2\pi(t-s)}} e^{-\frac{|y - W(s)|^2}{2(t-s)}} dy
+\]</div>
+<p>这个积分结果显然只依赖于随机变量 <span class="arithmatex">\(W(s)\)</span> 的取值，而不依赖于 <span class="arithmatex">\(\mathcal{F}_s\)</span> 中 <span class="arithmatex">\(s\)</span> 时刻之前的任何信息。
+根据条件期望的定义，这恰好等于 <span class="arithmatex">\(E[\chi_B(W(t)) | W(s)]\)</span>，即 <span class="arithmatex">\(P(W(t) \in B | W(s))\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="4-kolmogorov">4. Kolmogorov 连续性定理与轨道性质</h2>
+<p>布朗运动定义中直接假设了“轨道连续”。但数学上我们需要问：给定了一致的有限维分布后，是否<strong>一定存在</strong>一个具有连续轨道的修正版本？这需要借助极其强大的 Kolmogorov 连续性定理。</p>
+<p>为了量化连续的“粗糙程度”，我们引入 Hölder 空间。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：Hölder 连续空间 <span class="arithmatex">\(C^\gamma\)</span></p>
+<p>如果一个函数 <span class="arithmatex">\(f(t)\)</span> 满足存在常数 <span class="arithmatex">\(K &gt; 0\)</span> 使得：</p>
+<div class="arithmatex">\[
+|f(t) - f(s)| \le K |t - s|^\gamma
+\]</div>
+<p>则称其具有指数为 <span class="arithmatex">\(\gamma\)</span> 的 Hölder 连续性。记为 <span class="arithmatex">\(f \in C^\gamma\)</span>。
+（注：当 <span class="arithmatex">\(\gamma = 1\)</span> 时即为 Lipschitz 连续。布朗运动的轨道极其粗糙，它处处不可微，因此达不到 Lipschitz 连续）。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">定理：Kolmogorov 连续性定理 (Kolmogorov Continuity Theorem)</p>
+<p>设 <span class="arithmatex">\(X(t)\)</span> 为一定义在区间 <span class="arithmatex">\([0, T]\)</span> 上的随机过程。如果存在常数 <span class="arithmatex">\(\alpha &gt; 0, \beta &gt; 0, C &gt; 0\)</span>，使得对于所有的 <span class="arithmatex">\(s, t \in [0, T]\)</span>：</p>
+<div class="arithmatex">\[
+E[|X(t) - X(s)|^\beta] \le C |t - s|^{1+\alpha}
+\]</div>
+<p>那么 <span class="arithmatex">\(X(t)\)</span> 存在一个具有连续样本轨道的修正版本。更进一步，对于任意的 <span class="arithmatex">\(\gamma \in \left(0, \frac{\alpha}{\beta}\right)\)</span>，该修正版本的样本轨道几乎必然 (a.s.) 是局部 <span class="arithmatex">\(\gamma\)</span>-Hölder 连续的。</p>
+<details class="proof">
+<summary>核心证明思路 (基于 Borel-Cantelli 引理)（点击展开）</summary>
+<p>定理的严格证明十分繁琐，但其核心机理非常优美。</p>
+<p><strong>1. 考察二进有理数点：</strong> 我们在区间上取二进网络点 <span class="arithmatex">\(t_i = \frac{i}{2^n}\)</span>。
+考虑相邻两点增量过大的概率事件 <span class="arithmatex">\(A_n\)</span>：</p>
+<div class="arithmatex">\[
+A_n = \left\{ \omega : \max_{0 \le i &lt; 2^n} \left| X\left(\frac{i+1}{2^n}\right) - X\left(\frac{i}{2^n}\right) \right| &gt; \left(\frac{1}{2^n}\right)^\gamma \right\}
+\]</div>
+<p><strong>2. 利用 Chebyshev/Markov 不等式放缩：</strong></p>
+<div class="arithmatex">\[
+P(A_n) \le \sum_{i=0}^{2^n-1} P\left( |X_{i+1} - X_i| &gt; 2^{-n\gamma} \right) \le \sum_{i=0}^{2^n-1} \frac{E[|X_{i+1} - X_i|^\beta]}{2^{-n\gamma\beta}}
+\]</div>
+<p>代入定理给定的条件 <span class="arithmatex">\(E[|X_{i+1} - X_i|^\beta] \le C (2^{-n})^{1+\alpha}\)</span>，可得：</p>
+<div class="arithmatex">\[
+P(A_n) \le 2^n \cdot C 2^{-n(1+\alpha)} \cdot 2^{n\gamma\beta} = C 2^{-n(\alpha - \gamma\beta)}
+\]</div>
+<p><strong>3. 应用 Borel-Cantelli 引理：</strong>
+由于我们选取了 <span class="arithmatex">\(\gamma &lt; \frac{\alpha}{\beta}\)</span>，故 <span class="arithmatex">\(\alpha - \gamma\beta &gt; 0\)</span>。这是一个公比小于 1 的几何级数，因此：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^\infty P(A_n) &lt; \infty
+\]</div>
+<p>由 Borel-Cantelli 引理（第一引理）可知，<span class="arithmatex">\(P(\limsup A_n) = 0\)</span>。即几乎必然地，存在 <span class="arithmatex">\(N(\omega)\)</span>，使得对所有 <span class="arithmatex">\(n \ge N(\omega)\)</span>，二进网络上的增量都被紧紧控制在 <span class="arithmatex">\(2^{-n\gamma}\)</span> 之内。通过一致收敛性，这保证了极限过程的 Hölder 连续性。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<p>现在，我们将这个威力无穷的定理直接拍在布朗运动上，得出其标志性的 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> 性质。</p>
+<div class="admonition success">
+<p class="admonition-title">结论：布朗运动轨道的 Hölder 粗糙度为 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span></p>
+<p>布朗运动 <span class="arithmatex">\(W(t)\)</span> 的样本轨道几乎处处是 <span class="arithmatex">\(\gamma\)</span>-Hölder 连续的，对于任意 <span class="arithmatex">\(\gamma \in \left(0, \frac{1}{2}\right)\)</span>。
+（即它无限逼近 <span class="arithmatex">\(1/2\)</span> 次 Hölder 连续，但不能达到 <span class="arithmatex">\(1/2\)</span>）。</p>
+<details class="proof">
+<summary>推导过程（利用高斯矩）（点击展开）</summary>
+<p>由于布朗运动的增量 <span class="arithmatex">\(W(t) - W(s) \sim \mathcal{N}(0, |t-s|)\)</span>，我们知道正态分布的高阶偶数矩有明确的公式。
+对于偶数次幂 <span class="arithmatex">\(2m\)</span>（<span class="arithmatex">\(m \in \mathbb{N}\)</span>）：</p>
+<div class="arithmatex">\[
+E[|W(t) - W(s)|^{2m}] = (2m-1)!! \big( Var(W(t)-W(s)) \big)^m = (2m-1)!! |t - s|^m
+\]</div>
+<p>这完美匹配了 Kolmogorov 连续性定理的条件。我们令：
+- <span class="arithmatex">\(\beta = 2m\)</span>
+- <span class="arithmatex">\(1 + \alpha = m \implies \alpha = m - 1\)</span></p>
+<p>根据定理，轨道的 Hölder 指数 <span class="arithmatex">\(\gamma\)</span> 必须满足：</p>
+<div class="arithmatex">\[
+\gamma &lt; \frac{\alpha}{\beta} = \frac{m - 1}{2m} = \frac{1}{2} - \frac{1}{2m}
+\]</div>
+<p>由于这个性质对所有的正整数 <span class="arithmatex">\(m\)</span> 都成立。我们可以让 <span class="arithmatex">\(m \to \infty\)</span>，此时 <span class="arithmatex">\(\frac{1}{2m} \to 0\)</span>。
+因此，对于任意严格小于 <span class="arithmatex">\(\frac{1}{2}\)</span> 的 <span class="arithmatex">\(\gamma\)</span>，布朗运动都是 <span class="arithmatex">\(\gamma\)</span>-Hölder 连续的。这就是量化圈和 SDE 中常说的 <strong>布朗运动轨道是 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> 连续的</strong> 这一结论的根源。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -8,11 +8,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/"/>
     </url>
     <url>
-        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/conditional_expectation/</loc>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/0Intro/</loc>
         <lastmod>2026-03-26</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/conditional_expectation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/conditional_expectation/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/0Intro/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/1conditional_expectation/</loc>
+        <lastmod>2026-03-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/1conditional_expectation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/1conditional_expectation/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/2Brown_Motion/</loc>
+        <lastmod>2026-03-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/2Brown_Motion/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/2Brown_Motion/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/</loc>
@@ -22,10 +36,24 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/"/>
     </url>
     <url>
-        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/conditional_expectation/</loc>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/0Intro/</loc>
         <lastmod>2026-03-26</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/conditional_expectation/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/conditional_expectation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/0Intro/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/1conditional_expectation/</loc>
+        <lastmod>2026-03-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/1conditional_expectation/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/1conditional_expectation/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/2Brown_Motion/</loc>
+        <lastmod>2026-03-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/2Brown_Motion/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/2Brown_Motion/"/>
     </url>
 </urlset>

@@ -1,0 +1,1016 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/1conditional_expectation/">
+      
+      
+        <link rel="prev" href="../0Intro/">
+      
+      
+        <link rel="next" href="../2Brown_Motion/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/1conditional_expectation/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第一章：Conditional Expectation - My Study Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conditional-expectation" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="My Study Notes" class="md-header__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Study Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第一章：Conditional Expectation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/Stochastic-Differential-Equation/1conditional_expectation/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to Halo's Academic Space
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0Intro/" class="md-tabs__link">
+          
+  
+  
+  Stochastic Differential Equation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Study Notes" class="md-nav__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Study Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Halo's Academic Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Differential Equation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Differential Equation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    0Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 条件期望的测度论定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jensen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Jensen 不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-martingale-doob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 鞅 (Martingale) 与 Doob 不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动 (Brownian Motion)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 条件期望的测度论定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jensen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Jensen 不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-martingale-doob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 鞅 (Martingale) 与 Doob 不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="conditional-expectation">第一章：Conditional Expectation</h1>
+<p>在开始随机微分方程前，我们需要抛弃初等概率论中条件期望的定义方法，用测度论的语言严格定义条件期望。这是我们后续探索鞅理论、随机分析的基础。</p>
+<blockquote>
+<p>在测度论中，<span class="arithmatex">\(\sigma\)</span>-代数是对“信息”的数学刻画
+对于集合 <span class="arithmatex">\(\Omega\)</span> 上的一个子集族 <span class="arithmatex">\(\mathcal{F}\)</span>，若满足以下条件，则称其为一个 <strong><span class="arithmatex">\(\sigma\)</span>-代数</strong>：
+1.  <strong>包含全集</strong>：<span class="arithmatex">\(\Omega \in \mathcal{F}\)</span>。
+2.  <strong>对补集封闭</strong>：若 <span class="arithmatex">\(A \in \mathcal{F}\)</span>，则 <span class="arithmatex">\(A^c \in \mathcal{F}\)</span>。
+3.  <strong>对可列并封闭</strong>：若 <span class="arithmatex">\(A_1, A_2, \dots \in \mathcal{F}\)</span>，则 <span class="arithmatex">\(\bigcup_{n=1}^\infty A_n \in \mathcal{F}\)</span>。</p>
+<p>Radon-Nikodym 定理：若测度 <span class="arithmatex">\(\nu\)</span> 关于 <span class="arithmatex">\(P\)</span> 是 <strong>绝对连续 (Absolutely Continuous)</strong> 的，即满足 <span class="arithmatex">\(\nu \ll P\)</span>（若 <span class="arithmatex">\(P(A)=0\)</span> 则 <span class="arithmatex">\(\nu(A)=0\)</span>），则存在一个 <span class="arithmatex">\(P\)</span>-几乎处处唯一的 <span class="arithmatex">\(\mathcal{F}\)</span>-可测函数 <span class="arithmatex">\(f: \Omega \to [0, \infty)\)</span>，使得对于任意 <span class="arithmatex">\(A \in \mathcal{F}\)</span>，有：
+$$
+\nu(A) = \int_A f(\omega) \, dP(\omega)
+$$</p>
+<p>Radon-Nikodym 导数：称上述可测函数 <span class="arithmatex">\(f\)</span> 为 <span class="arithmatex">\(\nu\)</span> 关于 <span class="arithmatex">\(P\)</span> 的 <strong>Radon-Nikodym 导数</strong>（也称为 <span class="arithmatex">\(\nu\)</span> 的密度函数），记作：<span class="arithmatex">\(f = \frac{d\nu}{dP}\)</span></p>
+</blockquote>
+<h2 id="1">1. 条件期望的测度论定义</h2>
+<p>在古典概率论中，定义事件 <span class="arithmatex">\(A\)</span> 在事件 <span class="arithmatex">\(B\)</span> 发生的条件下的条件概率为 <span class="arithmatex">\(P(A|B) \triangleq \frac{P(AB)}{P(B)}.\)</span></p>
+<p>相应的条件期望为 <span class="arithmatex">\(E[X|B] \triangleq \frac{1}{P(B)}\int_B X dP.\)</span></p>
+<p>但当给定的是一个连续随机变量 <span class="arithmatex">\(Y\)</span> 时，事件 <span class="arithmatex">\(\{Y=y\}\)</span> 的概率为 0，古典定义失效。</p>
+<p>此时我们需要借助 Radon-Nikodym 定理在 <span class="arithmatex">\(\sigma\)</span>-代数层面重新定义。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：条件期望 (Conditional Expectation)</p>
+<p>设 <span class="arithmatex">\(X\)</span> 为概率空间 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> 上的可积随机变量（即 <span class="arithmatex">\(E[|X|] &lt; \infty\)</span>），<span class="arithmatex">\(\mathcal{G}\)</span> 是 <span class="arithmatex">\(\mathcal{F}\)</span> 的一个子 <span class="arithmatex">\(\sigma\)</span>-代数（常记为 <span class="arithmatex">\(\mathcal{G} = \sigma(Y)\)</span>）。
+我们称随机变量 <span class="arithmatex">\(Z\)</span> 为 <span class="arithmatex">\(X\)</span> 给定 <span class="arithmatex">\(\mathcal{G}\)</span> 下的<strong>条件期望</strong>，记作 <span class="arithmatex">\(E[X|\mathcal{G}] = Z\)</span>，如果它满足以下两个条件：</p>
+<p><strong>1. 可测性</strong>：<span class="arithmatex">\(Z\)</span> 是 <span class="arithmatex">\(\mathcal{G}\)</span>-可测的随机变量。</p>
+<p><strong>2. 局部平均相等（积分匹配）</strong>：对于任意的 <span class="arithmatex">\(A \in \mathcal{G}\)</span>，都有：</p>
+<div class="arithmatex">\[
+\int_A X dP = \int_A Z dP
+\]</div>
+<p>由 Radon-Nikodym 定理保证，这样的 <span class="arithmatex">\(Z\)</span> 存在且在 almost sure (a.s.) 的意义下唯一。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">补充：初等定义与测度论定义的过渡性质</p>
+<p>基于随机变量 <span class="arithmatex">\(Y\)</span> 产生的 <span class="arithmatex">\(\sigma\)</span>-代数，我们有以下三个直观的基本性质：
+1. <span class="arithmatex">\(E[X|Y] = E[X|\sigma(Y)]\)</span> （对随机变量求条件期望，本质是对其产生的 <span class="arithmatex">\(\sigma\)</span>-代数求条件期望）。
+2. <span class="arithmatex">\(E\big[E[X|\mathcal{G}]\big] = E[X]\)</span> （保期望性质）。
+3. 若 <span class="arithmatex">\(\mathcal{G} = \left\{\Omega，\emptyset\right\}\)</span> ，则 <span class="arithmatex">\(E[X|\mathcal{G}] = X\)</span> a.s. （平凡的 <span class="arithmatex">\(\sigma\)</span>-代数无信息）。</p>
+</div>
+<h2 id="2">2. 核心性质</h2>
+<blockquote>
+<p>绝大部分定义证明或者简单变式即可。</p>
+</blockquote>
+<p>设 <span class="arithmatex">\(\mathcal{G}, \mathcal{H}\)</span> 为子 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+<div class="admonition info">
+<p class="admonition-title">基本性质</p>
+<p><strong>1. 线性性</strong>：</p>
+<div class="arithmatex">\[
+E[aX + bY | \mathcal{G}] = aE[X|\mathcal{G}] + bE[Y|\mathcal{G}] \quad a.s.
+\]</div>
+<p><strong>2. 保期望性</strong>：</p>
+<p>如果 <span class="arithmatex">\(X\)</span> 是 <span class="arithmatex">\(\mathcal{G}\)</span>-可测的，那么：</p>
+<div class="arithmatex">\[
+E[X|\mathcal{G}] = X \quad a.s.
+\]</div>
+<blockquote>
+<p><em>符合投影直观，可测意味着完全在<span class="arithmatex">\(\mathcal{G}\)</span>张成的超平面上。</em></p>
+</blockquote>
+<p><strong>3. 已知即常数（提出已知因子）</strong>：</p>
+<p>如果 <span class="arithmatex">\(X\)</span> 是 <span class="arithmatex">\(\mathcal{G}\)</span>-可测的，那么：</p>
+<div class="arithmatex">\[
+E[XY|\mathcal{G}] = X E[Y|\mathcal{G}] \quad a.s.
+\]</div>
+<p><strong>4. 独立则无关</strong>：</p>
+<p>如果 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(\mathcal{G}\)</span> 独立，那么：</p>
+<div class="arithmatex">\[
+E[X|\mathcal{G}] = E[X] \quad a.s.
+\]</div>
+<blockquote>
+<p><em>符合投影直观，独立意味着垂直<span class="arithmatex">\(\mathcal{G}\)</span>张成的超平面上。</em></p>
+</blockquote>
+<p><strong>5. 塔牌性质 (Tower Property)</strong>：</p>
+<p>若 <span class="arithmatex">\(\mathcal{H} \subset \mathcal{G} \subset \mathcal{F}\)</span>，则：</p>
+<div class="arithmatex">\[
+E\big[ E[X|\mathcal{G}] \big| \mathcal{H} \big] = E\big[ E[X|\mathcal{H}] \big| \mathcal{G} \big] = E[X|\mathcal{H}] \quad a.s.
+\]</div>
+<blockquote>
+<p><em>取信息少的。</em></p>
+</blockquote>
+<details class="proof">
+<summary>后三个核心性质的完整推导</summary>
+<p><strong>3. 提出已知因子证明 (Standard Machine)</strong>：
+第一步：设 <span class="arithmatex">\(X = \chi_B\)</span>（其中 <span class="arithmatex">\(B \in \mathcal{G}\)</span>）。对于任意测试集 <span class="arithmatex">\(A \in \mathcal{G}\)</span>，由于 <span class="arithmatex">\(A \cap B \in \mathcal{G}\)</span>，有：</p>
+<div class="arithmatex">\[
+\int_A \chi_B E[Y|\mathcal{G}] dP = \int_{A \cap B} E[Y|\mathcal{G}] dP = \int_{A \cap B} Y dP = \int_A \chi_B Y dP
+\]</div>
+<p>第二步：由线性性推广到简单函数 <span class="arithmatex">\(X = \sum a_i \chi_{B_i}\)</span>。
+第三步：对非负可测函数 <span class="arithmatex">\(X \ge 0, Y \ge 0\)</span>，存在非负简单函数列 <span class="arithmatex">\(X_n \uparrow X\)</span>，由单调收敛定理极限可与积分交换。一般情况拆分正负部即得证。</p>
+<p><strong>4. 独立则无关证明</strong>：
+常数 <span class="arithmatex">\(E[X]\)</span> 自然是 <span class="arithmatex">\(\mathcal{G}\)</span>-可测的。对于任意 <span class="arithmatex">\(A \in \mathcal{G}\)</span>，由于 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(\mathcal{G}\)</span> 独立，所以 <span class="arithmatex">\(X\)</span> 与指示函数 <span class="arithmatex">\(\chi_A\)</span> 独立：</p>
+<div class="arithmatex">\[
+\int_A X dP = E[X \cdot \chi_A] = E[X] \cdot E[\chi_A] = E[X] P(A) = \int_A E[X] dP
+\]</div>
+<p>完全符合条件期望定义。</p>
+<p><strong>5. 塔牌性质证明</strong>：
+设 <span class="arithmatex">\(Z = E[X|\mathcal{G}]\)</span>。因为子代数嵌套 <span class="arithmatex">\(\mathcal{H} \subset \mathcal{G}\)</span>，对于任意 <span class="arithmatex">\(A \in \mathcal{H}\)</span>，必然有 <span class="arithmatex">\(A \in \mathcal{G}\)</span>。
+由 <span class="arithmatex">\(Z\)</span> 的定义，对该集合 <span class="arithmatex">\(A\)</span> 有：</p>
+<div class="arithmatex">\[
+\int_A Z dP = \int_A X dP
+\]</div>
+<p>而由 <span class="arithmatex">\(E[X|\mathcal{H}]\)</span> 的定义，对同一个 <span class="arithmatex">\(A \in \mathcal{H}\)</span> 有：</p>
+<div class="arithmatex">\[
+\int_A E[X|\mathcal{H}] dP = \int_A X dP
+\]</div>
+<p>两式结合即得 <span class="arithmatex">\(\int_A Z dP = \int_A E[X|\mathcal{H}] dP\)</span>。由于等式对所有 <span class="arithmatex">\(A \in \mathcal{H}\)</span> 成立，且二者均 <span class="arithmatex">\(\mathcal{H}\)</span>-可测，故 a.s. 相等。</p>
+</details>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">几何解释：<span class="arithmatex">\(L^2\)</span> 空间上的正交投影</p>
+<p>条件期望有一个极其优美的几何直观。</p>
+<p>考虑平方可积空间 <span class="arithmatex">\(L^2(\Omega, \mathcal{F}, P)\)</span>，它是一个 Hilbert 空间，内积定义为：</p>
+<div class="arithmatex">\[
+(X,Y) = E[XY]
+\]</div>
+<p>由于 <span class="arithmatex">\(\mathcal{G} \subset \mathcal{F}\)</span>，子空间 <span class="arithmatex">\(L^2(\Omega, \mathcal{G}, P)\)</span> 也是一个闭子空间。</p>
+<p>在这个视角下，<strong>条件期望 <span class="arithmatex">\(E[X|\mathcal{G}]\)</span> 实际上就是元素 <span class="arithmatex">\(X\)</span> 在子空间 <span class="arithmatex">\(L^2(\Omega, \mathcal{G}, P)\)</span> 上的正交投影</strong>。</p>
+<p>它使得均方误差 <span class="arithmatex">\(E[(X - Z)^2]\)</span> 在所有 <span class="arithmatex">\(\mathcal{G}\)</span>-可测的随机变量 <span class="arithmatex">\(Z\)</span> 中达到最小：</p>
+<div class="arithmatex">\[
+\min_{Z \in \mathcal{G}} E[(X - Z)^2] = E\big[(X - E[X|\mathcal{G}])^2\big]
+\]</div>
+</div>
+<h2 id="3-jensen">3. Jensen 不等式</h2>
+<p>Jesen不等式是高等概率论中非常重要的关于函数凸性的不等式。</p>
+<div class="admonition success">
+<p class="admonition-title">定理：条件 Jensen 不等式</p>
+<p>设 <span class="arithmatex">\(\Phi: \mathbb{R} \rightarrow \mathbb{R}\)</span> 为凸函数，且 <span class="arithmatex">\(E[|\Phi(X)|] &lt; \infty\)</span>，则有：</p>
+<div class="arithmatex">\[
+\Phi(E[X|\mathcal{G}]) \le E[\Phi(X)|\mathcal{G}] \quad a.s.
+\]</div>
+<p><strong>证明思路 (基于简单函数逼近)</strong>：
+利用凸函数的离散性质 <span class="arithmatex">\(\Phi(\sum a_i b_i) \le \sum b_i \Phi(a_i)\)</span>（其中 <span class="arithmatex">\(b_i \ge 0, \sum b_i = 1\)</span>）。由于条件期望可以看作是一种加权平均，我们可以用指示函数构造简单函数来逼近，利用实变函数中从指示函数到简单函数再到可测函数的标准途径来证明。</p>
+<details class="proof">
+<summary>Jensen 不等式的证明</summary>
+<p><strong>第一步：对简单函数证明</strong>
+假设 <span class="arithmatex">\(X\)</span> 是一个简单函数，可表示为：</p>
+<div class="arithmatex">\[
+X = \sum_{i=1}^n a_i \chi_{B_i}
+\]</div>
+<p>其中 <span class="arithmatex">\(B_i\)</span> 互不相交且 <span class="arithmatex">\(\bigcup_{i=1}^n B_i = \Omega\)</span>。
+取关于 <span class="arithmatex">\(\mathcal{G}\)</span> 的条件期望，由线性性：</p>
+<div class="arithmatex">\[
+E[X|\mathcal{G}] = \sum_{i=1}^n a_i E[\chi_{B_i}|\mathcal{G}]
+\]</div>
+<p>令 <span class="arithmatex">\(b_i = E[\chi_{B_i}|\mathcal{G}]\)</span>。显然 <span class="arithmatex">\(b_i \ge 0\)</span>，且 <span class="arithmatex">\(\sum_{i=1}^n b_i = E\big[\sum_{i=1}^n \chi_{B_i} \big| \mathcal{G}\big] = E[1|\mathcal{G}] = 1\)</span>。
+这说明 <span class="arithmatex">\(b_i\)</span> 构成了一组凸组合的权重。
+根据凸函数的离散性质 <span class="arithmatex">\(\Phi(\sum a_i b_i) \le \sum b_i \Phi(a_i)\)</span>，我们有：</p>
+<div class="arithmatex">\[
+\Phi(E[X|\mathcal{G}]) = \Phi\left(\sum_{i=1}^n a_i b_i\right) \le \sum_{i=1}^n b_i \Phi(a_i)
+\]</div>
+<p>将 <span class="arithmatex">\(b_i\)</span> 的定义代回：</p>
+<div class="arithmatex">\[
+\sum_{i=1}^n E[\chi_{B_i}|\mathcal{G}] \Phi(a_i) = E\left[\sum_{i=1}^n \Phi(a_i) \chi_{B_i} \bigg| \mathcal{G}\right] = E[\Phi(X)|\mathcal{G}]
+\]</div>
+<p>故对简单函数，结论成立。</p>
+<p><strong>第二步：推广至一般可测函数</strong>
+对于一般的可积随机变量 <span class="arithmatex">\(X\)</span>，我们可以找到一列简单函数 <span class="arithmatex">\(X_n\)</span> 使得 <span class="arithmatex">\(X_n \to X\)</span> a.s.。
+利用极限过程（控制收敛定理或单调收敛定理），并结合 <span class="arithmatex">\(\Phi\)</span> 作为凸函数的连续性，两边取极限即可将不等式推广到一般情况。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<h2 id="4-martingale-doob">4. 鞅 (Martingale) 与 Doob 不等式</h2>
+<p>在研究随机微分方程前，我们需要从离散时间步入连续时间，引入信息流和鞅的概念。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：离散鞅 与 连续信息流</p>
+<p><strong>1. 离散时间的鞅 (Discrete Martingale)</strong>：
+设 <span class="arithmatex">\(X_1, X_2, \dots\)</span> 为一列随机变量，且满足 <span class="arithmatex">\(E[|X_i|] &lt; \infty\)</span>。如果对于任意 <span class="arithmatex">\(j &gt; i\)</span>，都有：</p>
+<div class="arithmatex">\[
+E[X_j | X_1, \dots, X_i] = X_i \quad a.s.
+\]</div>
+<p>则称 <span class="arithmatex">\(\{X_n\}\)</span> 为一个<strong>离散鞅</strong>。（代表公平游戏，已知历史信息下，未来的期望等于现在）。
+若 <span class="arithmatex">\(E[X_j | X_1, \dots, X_i] \ge X_i\)</span>，称为<strong>下鞅 (Submartingale)</strong>。</p>
+<p><strong>2. 连续时间的信息流 (Filtration)</strong>：
+在连续时间 <span class="arithmatex">\(t \in [0, \infty)\)</span> 下，我们定义一族单调递增的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\{\mathcal{F}_t\}_{t \ge 0}\)</span>，即当 <span class="arithmatex">\(s \le t\)</span> 时，<span class="arithmatex">\(\mathcal{F}_s \subset \mathcal{F}_t\)</span>。它代表了随着时间 <span class="arithmatex">\(t\)</span> 累积的“历史信息”。（例如布朗运动自然生成的流 <span class="arithmatex">\(\mathcal{F}_t = \sigma(B_s, 0 \le s \le t)\)</span>）。</p>
+<p><strong>3. 连续鞅</strong>：设随机过程 <span class="arithmatex">\(\{X_t\}\)</span> 适应于流 <span class="arithmatex">\(\mathcal{F}_t\)</span>，如果对于任意 <span class="arithmatex">\(s \le t\)</span>，都有 <span class="arithmatex">\(E[X_t | \mathcal{F}_s] = X_s \ a.s.\)</span>，则称 <span class="arithmatex">\(\{X_t\}\)</span> 为一个<strong>连续鞅</strong>。</p>
+</div>
+<p>在随机分析中，我们常常需要控制整个过程在其路径上的最大值（例如研究布朗运动的最大位移）。Doob 不等式成为解决此类问题最重要的工具。</p>
+<div class="admonition info">
+<p class="admonition-title">定理：Doob 极大值不等式 (Doob's Maximal Inequality)</p>
+<p><strong>(1) 次线性界</strong>：设 <span class="arithmatex">\(\{X_n\}_{n=1}^N\)</span> 为非负下鞅，则对于任意 <span class="arithmatex">\(\lambda &gt; 0\)</span>：</p>
+<div class="arithmatex">\[
+P\left(\max_{1 \le k \le n} X_k \ge \lambda\right) \le \frac{1}{\lambda} E[X_n I_{\{\max X_k \ge \lambda\}}] \le \frac{1}{\lambda} E[X_n]
+\]</div>
+<blockquote>
+<p><em>(注意它与 Chebyshev 不等式的形式相似，但它强大在于控制的是整个路径的极大值，而不仅是单点)</em></p>
+</blockquote>
+<p><strong>(2) <span class="arithmatex">\(L^p\)</span> 极大不等式</strong>：设 <span class="arithmatex">\(p &gt; 1\)</span> 且 <span class="arithmatex">\(\frac{1}{p} + \frac{1}{q} = 1\)</span>。如果 <span class="arithmatex">\(\{X_n\}\)</span> 是非负下鞅且 <span class="arithmatex">\(X_n \in L^p\)</span>，则：</p>
+<div class="arithmatex">\[
+E\left[\max_{1 \le k \le n} X_k^p\right] \le \left(\frac{p}{p-1}\right)^p E[X_n^p]
+\]</div>
+<details class="proof">
+<summary>Doob 不等式完整推导（包含次线性界与 <span class="arithmatex">\(L^p\)</span> 边界）</summary>
+<p><strong>第一部分：次线性界证明</strong>
+设 <span class="arithmatex">\(\{X_n\}\)</span> 是非负下鞅。对于任意 <span class="arithmatex">\(\lambda &gt; 0\)</span>，我们定义首次越界集 <span class="arithmatex">\(A_k\)</span>（即在时刻 <span class="arithmatex">\(k\)</span> 第一次突破 <span class="arithmatex">\(\lambda\)</span>）：</p>
+<div class="arithmatex">\[
+A_k = \{X_1 &lt; \lambda, \dots, X_{k-1} &lt; \lambda, X_k \ge \lambda\}
+\]</div>
+<ol>
+<li>显然 <span class="arithmatex">\(A_k\)</span> 互不相交，且它们的并集正是我们要估计的事件：</li>
+</ol>
+<div class="arithmatex">\[
+A = \bigcup_{k=1}^n A_k = \left\{\max_{1 \le k \le n} X_k \ge \lambda\right\}
+\]</div>
+<ol>
+<li>由于 <span class="arithmatex">\(A_k \in \mathcal{F}_k\)</span> 且 <span class="arithmatex">\(X_n\)</span> 是下鞅（即 <span class="arithmatex">\(E[X_n | \mathcal{F}_k] \ge X_k\)</span>），我们在 <span class="arithmatex">\(A_k\)</span> 上积分有：</li>
+</ol>
+<div class="arithmatex">\[
+\int_{A_k} X_n dP \ge \int_{A_k} X_k dP
+\]</div>
+<ol>
+<li>根据 <span class="arithmatex">\(A_k\)</span> 的定义，在集合 <span class="arithmatex">\(A_k\)</span> 上必然有 <span class="arithmatex">\(X_k \ge \lambda\)</span>，因此：</li>
+</ol>
+<div class="arithmatex">\[
+\int_{A_k} X_k dP \ge \int_{A_k} \lambda dP = \lambda P(A_k)
+\]</div>
+<ol>
+<li>将所有的 <span class="arithmatex">\(k = 1, \dots, n\)</span> 加起来。由于 <span class="arithmatex">\(A_k\)</span> 是不交并，且 <span class="arithmatex">\(X_n \ge 0\)</span>：</li>
+</ol>
+<div class="arithmatex">\[
+E[X_n] \ge \int_A X_n dP = \sum_{k=1}^n \int_{A_k} X_n dP \ge \lambda \sum_{k=1}^n P(A_k) = \lambda P(A)
+\]</div>
+<p>由此即得 <span class="arithmatex">\(P(\max X_k \ge \lambda) \le \frac{1}{\lambda} \int_A X_n dP \le \frac{1}{\lambda} E[X_n]\)</span>。次线性界得证。</p>
+<hr />
+<p><strong>第二部分：<span class="arithmatex">\(L^p\)</span> 边界推导</strong>
+设极大值变量为 <span class="arithmatex">\(X^* = \max_{1 \le k \le n} X_k\)</span>。利用非负随机变量期望的积分恒等式：</p>
+<div class="arithmatex">\[
+E[(X^*)^p] = \int_0^\infty p \lambda^{p-1} P(X^* \ge \lambda) d\lambda
+\]</div>
+<p>将第一部分证明的更紧的边界 <span class="arithmatex">\(P(X^* \ge \lambda) \le \frac{1}{\lambda} \int_{\{X^* \ge \lambda\}} X_n dP\)</span> 代入：</p>
+<div class="arithmatex">\[
+E[(X^*)^p] \le \int_0^\infty p \lambda^{p-2} \left( \int_{\{X^* \ge \lambda\}} X_n dP \right) d\lambda
+\]</div>
+<p><strong>关键点 1：Fubini 定理交换积分顺序</strong>。先对 <span class="arithmatex">\(\lambda\)</span> 积分（注意积分上限受制于 <span class="arithmatex">\(\lambda \le X^*\)</span>）：</p>
+<div class="arithmatex">\[
+= \int_{\Omega} X_n \left( \int_0^{X^*} p \lambda^{p-2} d\lambda \right) dP = \int_{\Omega} X_n \left( \frac{p}{p-1} (X^*)^{p-1} \right) dP
+\]</div>
+<p>提出常数，得到：</p>
+<div class="arithmatex">\[
+E[(X^*)^p] \le \frac{p}{p-1} E\left[X_n (X^*)^{p-1}\right]
+\]</div>
+<p><strong>关键点 2：Hölder 不等式剥离</strong>。对上式右侧的乘积应用 Hölder 不等式（共轭指数 <span class="arithmatex">\(\frac{1}{p} + \frac{1}{q} = 1\)</span>）：</p>
+<div class="arithmatex">\[
+E\left[X_n (X^*)^{p-1}\right] \le \left( E[X_n^p] \right)^{\frac{1}{p}} \left( E\left[((X^*)^{p-1})^q\right] \right)^{\frac{1}{q}}
+\]</div>
+<p>由于 <span class="arithmatex">\(\frac{1}{p} + \frac{1}{q} = 1\)</span>，所以 <span class="arithmatex">\(q = \frac{p}{p-1}\)</span>，进而在第二个因子中 <span class="arithmatex">\((p-1)q = p\)</span>：</p>
+<div class="arithmatex">\[
+\left( E\left[((X^*)^{p-1})^q\right] \right)^{\frac{1}{q}} = \left( E[(X^*)^p] \right)^{1 - \frac{1}{p}}
+\]</div>
+<p>将 Hölder 的结果代回原式：</p>
+<div class="arithmatex">\[
+E[(X^*)^p] \le \frac{p}{p-1} \left( E[X_n^p] \right)^{\frac{1}{p}} \left( E[(X^*)^p] \right)^{1 - \frac{1}{p}}
+\]</div>
+<p>假设 <span class="arithmatex">\(E[(X^*)^p] &lt; \infty\)</span>（严格证明中可通过截断处理），两边同时除以 <span class="arithmatex">\(\left( E[(X^*)^p] \right)^{1 - 1/p}\)</span>：</p>
+<div class="arithmatex">\[
+\left( E[(X^*)^p] \right)^{\frac{1}{p}} \le \frac{p}{p-1} \left( E[X_n^p] \right)^{\frac{1}{p}}
+\]</div>
+<p>两边同取 <span class="arithmatex">\(p\)</span> 次方，即得最终结论：</p>
+<div class="arithmatex">\[
+E\left[\max_{1 \le k \le n} X_k^p\right] \le \left(\frac{p}{p-1}\right)^p E[X_n^p] \quad \square
+\]</div>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
