@@ -29,7 +29,7 @@
     
     
       
-        <title>第一章：Conditional Expectation - My Study Notes</title>
+        <title>第一章：条件期望Conditional Expectation - My Study Notes</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第一章：Conditional Expectation
+              第一章：条件期望Conditional Expectation
             
           </span>
         </div>
@@ -431,7 +431,7 @@
   <span class="md-ellipsis">
     
   
-    0Intro
+    📈 随机微分方程 (Stochastic Differential Equation)
   
 
     
@@ -468,7 +468,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：Conditional Expectation
+    第一章：条件期望Conditional Expectation
   
 
     
@@ -486,7 +486,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：Conditional Expectation
+    第一章：条件期望Conditional Expectation
   
 
     
@@ -555,6 +555,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-borel-cantelli-borel-cantelli-lemmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Borel-Cantelli 引理 (Borel-Cantelli Lemmas)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -579,6 +590,34 @@
     
   
     第二章：布朗运动 (Brownian Motion)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分基础与 Itô 积分的引出
   
 
     
@@ -669,6 +708,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-borel-cantelli-borel-cantelli-lemmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Borel-Cantelli 引理 (Borel-Cantelli Lemmas)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -689,7 +739,7 @@
   
 
 
-<h1 id="conditional-expectation">第一章：Conditional Expectation</h1>
+<h1 id="conditional-expectation">第一章：条件期望Conditional Expectation</h1>
 <p>在开始随机微分方程前，我们需要抛弃初等概率论中条件期望的定义方法，用测度论的语言严格定义条件期望。这是我们后续探索鞅理论、随机分析的基础。</p>
 <blockquote>
 <p>在测度论中，<span class="arithmatex">\(\sigma\)</span>-代数是对“信息”的数学刻画
@@ -945,6 +995,95 @@ E[(X^*)^p] \le \frac{p}{p-1} \left( E[X_n^p] \right)^{\frac{1}{p}} \left( E[(X^*
 <div class="arithmatex">\[
 E\left[\max_{1 \le k \le n} X_k^p\right] \le \left(\frac{p}{p-1}\right)^p E[X_n^p] \quad \square
 \]</div>
+</details>
+</div>
+<h2 id="5-borel-cantelli-borel-cantelli-lemmas">5. Borel-Cantelli 引理 (Borel-Cantelli Lemmas)</h2>
+<p>在研究随机过程的轨道性质和几乎必然 (almost surely, a.s.) 收敛时，我们需要一种能将“概率的级数求和”转化为“事件发生频率”的强大工具。这就是测度论中极其著名的 Borel-Cantelli 引理。</p>
+<p>在介绍引理前，我们需要先定义序列事件的“上极限”：</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：上极限集 (Limit Superior of Events)</p>
+<p>设 <span class="arithmatex">\(\{A_n\}_{n=1}^\infty\)</span> 为概率空间 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> 中的一列事件。我们定义这列事件的<strong>上极限 (limsup)</strong> 为：</p>
+<div class="arithmatex">\[
+\limsup_{n \to \infty} A_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k
+\]</div>
+<p><strong>概率论直觉</strong>：
+样本点 <span class="arithmatex">\(\omega \in \limsup_{n \to \infty} A_n\)</span> 当且仅当 <span class="arithmatex">\(\omega\)</span> 属于无穷多个 <span class="arithmatex">\(A_k\)</span>。换句话说，上极限集代表了那些<strong>“无限次发生 (infinitely often, 简记为 i.o.)”</strong> 的事件的集合。
+因此，我们常将其记作 <span class="arithmatex">\(P(A_n \text{ i.o.})\)</span>。</p>
+</div>
+<p>Borel-Cantelli 引理分为两个部分，分别给出了事件无限次发生的充分条件和必要条件。</p>
+<div class="admonition info">
+<p class="admonition-title">定理：Borel-Cantelli 第一引理 (收敛部分)</p>
+<p>如果事件列 <span class="arithmatex">\(\{A_n\}_{n=1}^\infty\)</span> 满足其概率级数收敛，即：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^\infty P(A_n) &lt; \infty
+\]</div>
+<p>那么这些事件无限次发生的概率为 0：</p>
+<div class="arithmatex">\[
+P(\limsup_{n \to \infty} A_n) = 0
+\]</div>
+<blockquote>
+<p><em>(注意：第一引理</em><em>不需要</em><em>事件之间具有任何独立性假设，这是一个极其强大的普适结论！)</em></p>
+</blockquote>
+<details class="proof">
+<summary>B-C 第一引理的严格证明（点击展开）</summary>
+<p>设 <span class="arithmatex">\(B_n = \bigcup_{k=n}^\infty A_k\)</span>。显然，序列 <span class="arithmatex">\(\{B_n\}\)</span> 是一个单调递减的集合序列，即 <span class="arithmatex">\(B_1 \supset B_2 \supset B_3 \dots\)</span>。
+根据概率测度的连续性（连续性由上），上极限的概率可以写为极限的概率：</p>
+<div class="arithmatex">\[
+P\left( \bigcap_{n=1}^\infty B_n \right) = \lim_{n \to \infty} P(B_n) = \lim_{n \to \infty} P\left( \bigcup_{k=n}^\infty A_k \right)
+\]</div>
+<p>利用概率的次可加性（Boole 不等式），我们对并集进行放缩：</p>
+<div class="arithmatex">\[
+P\left( \bigcup_{k=n}^\infty A_k \right) \le \sum_{k=n}^\infty P(A_k)
+\]</div>
+<p>由于已知整个无穷级数 <span class="arithmatex">\(\sum_{k=1}^\infty P(A_k)\)</span> 是收敛的，根据微积分中收敛级数的性质，其“尾部余项 (Tail sum)”在 <span class="arithmatex">\(n \to \infty\)</span> 时必然趋于 0：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_{k=n}^\infty P(A_k) = 0
+\]</div>
+<p>将上下两部分结合，由于概率非负，由夹逼定理即可得到：</p>
+<div class="arithmatex">\[
+P\left( \limsup_{n \to \infty} A_n \right) = 0 \quad \square
+\]</div>
+</details>
+</div>
+<p>与第一引理相对，第二引理探讨了当级数发散时的情况，但它额外要求了一个极其苛刻的条件：独立性。</p>
+<div class="admonition success">
+<p class="admonition-title">定理：Borel-Cantelli 第二引理 (发散部分)</p>
+<p>如果事件列 <span class="arithmatex">\(\{A_n\}_{n=1}^\infty\)</span> 是<strong>相互独立 (Mutually Independent)</strong> 的，且其概率级数发散，即：</p>
+<div class="arithmatex">\[
+\sum_{n=1}^\infty P(A_n) = \infty
+\]</div>
+<p>那么这些事件无限次发生的概率为 1：</p>
+<div class="arithmatex">\[
+P(\limsup_{n \to \infty} A_n) = 1
+\]</div>
+<details class="proof">
+<summary>B-C 第二引理的严格证明（点击展开）</summary>
+<p>直接证明某个事件发生概率为 1 往往比较困难，我们转而证明其对立事件的概率为 0。
+利用 De Morgan 定律，上极限集的补集（即 <span class="arithmatex">\(\liminf\)</span> 下极限）为：</p>
+<div class="arithmatex">\[
+\left( \limsup_{n \to \infty} A_n \right)^c = \left( \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k \right)^c = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k^c
+\]</div>
+<p>这就意味着，我们只需要证明对于任意给定的 <span class="arithmatex">\(n \ge 1\)</span>，都有 <span class="arithmatex">\(P\left( \bigcap_{k=n}^\infty A_k^c \right) = 0\)</span> 即可。</p>
+<p>对于任意的有限整数 <span class="arithmatex">\(m &gt; n\)</span>，由于事件序列 <span class="arithmatex">\(\{A_k\}\)</span> 相互独立，它们的补集 <span class="arithmatex">\(\{A_k^c\}\)</span> 也是相互独立的。因此交集的概率等于概率的乘积：</p>
+<div class="arithmatex">\[
+P\left( \bigcap_{k=n}^m A_k^c \right) = \prod_{k=n}^m P(A_k^c) = \prod_{k=n}^m (1 - P(A_k))
+\]</div>
+<p>这里我们引入一个在概率论放缩中极其常用的初等不等式：对于任意 <span class="arithmatex">\(x \ge 0\)</span>，都有 <span class="arithmatex">\(1 - x \le e^{-x}\)</span>。
+将其应用到上述连乘中：</p>
+<div class="arithmatex">\[
+\prod_{k=n}^m (1 - P(A_k)) \le \prod_{k=n}^m e^{-P(A_k)} = \exp\left( -\sum_{k=n}^m P(A_k) \right)
+\]</div>
+<p>现在，让 <span class="arithmatex">\(m \to \infty\)</span>。由于已知条件给出级数 <span class="arithmatex">\(\sum_{k=1}^\infty P(A_k) = \infty\)</span>，故对于任何固定的起始项 <span class="arithmatex">\(n\)</span>，其部分和 <span class="arithmatex">\(\sum_{k=n}^\infty P(A_k)\)</span> 也必然趋于 <span class="arithmatex">\(\infty\)</span>。
+因此：</p>
+<div class="arithmatex">\[
+P\left( \bigcap_{k=n}^\infty A_k^c \right) = \lim_{m \to \infty} P\left( \bigcap_{k=n}^m A_k^c \right) \le \exp(-\infty) = 0
+\]</div>
+<p>由概率的非负性，该交集的概率必然为 0。
+既然对任意的 <span class="arithmatex">\(n\)</span> 概率都为 0，那么这些零测集的可列并（即原集合的补集）概率依然为 0：</p>
+<div class="arithmatex">\[
+P\left( \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k^c \right) \le \sum_{n=1}^\infty P\left( \bigcap_{k=n}^\infty A_k^c \right) = 0
+\]</div>
+<p>故原事件发生的概率为 <span class="arithmatex">\(1 - 0 = 1\)</span>。证明完毕。<span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 

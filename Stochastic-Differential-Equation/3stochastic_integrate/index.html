@@ -1,0 +1,1035 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/3stochastic_integrate/">
+      
+      
+        <link rel="prev" href="../2Brown_Motion/">
+      
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/3stochastic_integrate/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第三章：随机积分基础与 Itô 积分的引出 - My Study Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ito" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="My Study Notes" class="md-header__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Study Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第三章：随机积分基础与 Itô 积分的引出
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/Stochastic-Differential-Equation/3stochastic_integrate/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to Halo's Academic Space
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0Intro/" class="md-tabs__link">
+          
+  
+  
+  Stochastic Differential Equation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Study Notes" class="md-nav__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Study Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Halo's Academic Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Differential Equation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Differential Equation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 随机微分方程 (Stochastic Differential Equation)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：条件期望Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动 (Brownian Motion)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分基础与 Itô 积分的引出
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分基础与 Itô 积分的引出
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-paley-wiener-zygmund-pwz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Paley-Wiener-Zygmund (PWZ) 随机积分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-blt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 有界线性算子的稠密延拓 (BLT 定理)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-quadratic-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 布朗运动的二次变差 (Quadratic Variation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-riemann-ito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 随机积分的 Riemann 和与 Itô 积分的引出
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 严格 Itô 积分的测度论准备
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-paley-wiener-zygmund-pwz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Paley-Wiener-Zygmund (PWZ) 随机积分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-blt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 有界线性算子的稠密延拓 (BLT 定理)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-quadratic-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 布朗运动的二次变差 (Quadratic Variation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-riemann-ito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 随机积分的 Riemann 和与 Itô 积分的引出
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 严格 Itô 积分的测度论准备
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ito">第三章：随机积分基础与 Itô 积分的引出</h1>
+<p>在经典的微积分中，我们可以轻易地定义黎曼-斯蒂尔杰斯积分 <span class="arithmatex">\(\int g(t) dX(t)\)</span>。但在随机分析中，当积分微元变成布朗运动 <span class="arithmatex">\(dW(t)\)</span> 时，由于其样本轨道的极端粗糙性，经典积分理论彻底失效。本章将展示从确定性被积函数向随机被积函数跨越的演进过程，并严格引出 Itô 积分的核心思想。</p>
+<h2 id="1-paley-wiener-zygmund-pwz">1. Paley-Wiener-Zygmund (PWZ) 随机积分</h2>
+<p>最简单的情形是：被积函数 <span class="arithmatex">\(g(t)\)</span> 是一个普通的确定性函数，而积分变量是布朗运动。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：PWZ 随机积分</p>
+<p>设 <span class="arithmatex">\(W(t)\)</span> 为标准布朗运动。假设 <span class="arithmatex">\(g(t) \in C^1([0, T])\)</span> 是一阶连续可导的确定性函数。
+利用分部积分公式（Integration by Parts），我们“回避”了布朗运动不可微的问题，将 <strong>PWZ 随机积分</strong> 定义为：</p>
+<div class="arithmatex">\[
+\int_0^T g(t) dW(t) \triangleq g(T)W(T) - g(0)W(0) - \int_0^T g'(t) W(t) dt
+\]</div>
+<p>由于 <span class="arithmatex">\(W(0) = 0\)</span> a.s.，上式通常简写为：</p>
+<div class="arithmatex">\[
+\int_0^T g(t) dW(t) = g(T)W(T) - \int_0^T g'(t) W(t) dt
+\]</div>
+<p>这里右侧的积分是普通的黎曼积分（因为 <span class="arithmatex">\(W(t)\)</span> 的样本轨道是 a.s. 连续的，<span class="arithmatex">\(g'(t)\)</span> 是连续的，所以积分良定）。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">定理：PWZ 积分的核心性质</p>
+<p>对于上述定义的 PWZ 积分，满足以下两个极其重要的性质（也是后续所有随机积分的基石）：</p>
+<p><strong>(1) 期望为零</strong>：</p>
+<div class="arithmatex">\[
+E\left[ \int_0^T g(t) dW(t) \right] = 0
+\]</div>
+<p><strong>(2) Itô 等距同构 (Itô Isometry)</strong>：</p>
+<div class="arithmatex">\[
+E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt
+\]</div>
+<details class="proof">
+<summary>等距同构性质的严格推导（点击展开）</summary>
+<p>我们直接从 PWZ 积分的定义出发，计算其平方的期望（假设 <span class="arithmatex">\(g(0)=0\)</span> 或为简化书写将其吸收到常数项中，此处采用你手稿中更本质的双重积分法推导）：</p>
+<p>将平方写成双重积分的形式：</p>
+<div class="arithmatex">\[
+E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W(t) dt \int_0^T g'(s)W(s) ds \right]
+\]</div>
+<p>利用 Fubini 定理交换期望与积分的顺序：</p>
+<div class="arithmatex">\[
+= \int_0^T \int_0^T g'(t)g'(s) E[W(t)W(s)] ds dt
+\]</div>
+<p>代入布朗运动的自协方差函数 <span class="arithmatex">\(E[W(t)W(s)] = t \wedge s\)</span>：</p>
+<div class="arithmatex">\[
+= \int_0^T \int_0^T g'(t)g'(s) (t \wedge s) ds dt
+\]</div>
+<p>利用对称性，将积分区域拆分为 <span class="arithmatex">\(s \le t\)</span> 和 <span class="arithmatex">\(t \le s\)</span> 两部分：</p>
+<div class="arithmatex">\[
+= \int_0^T \left( \int_0^t g'(s) g'(t) s \, ds + \int_t^T g'(s) g'(t) t \, ds \right) dt
+\]</div>
+<p>通过分部积分和代数化简（手稿此处略过繁杂代数步骤），上式最终将完美收缩为目标形式：</p>
+<div class="arithmatex">\[
+= \int_0^T g(t)^2 dt \quad \square
+\]</div>
+</details>
+</div>
+<hr />
+<h2 id="2-blt">2. 有界线性算子的稠密延拓 (BLT 定理)</h2>
+<p>刚才的 PWZ 积分要求 <span class="arithmatex">\(g(t) \in C^1\)</span>。但在实际应用中，我们需要对更一般的 <span class="arithmatex">\(L^2\)</span> 函数进行积分。这需要借助泛函分析中极其强大的工具：<strong>有界线性算子延拓定理 (BLT Theorem)</strong>。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定理：有界线性算子的稠密延拓</p>
+<p>设 <span class="arithmatex">\(X, Y\)</span> 为 Banach 空间，<span class="arithmatex">\(S\)</span> 为 <span class="arithmatex">\(X\)</span> 中稠密的线性子空间。
+设 <span class="arithmatex">\(T: S \to Y\)</span> 为一个有界线性算子，即存在常数 <span class="arithmatex">\(C &gt; 0\)</span>，使得对任意 <span class="arithmatex">\(x \in S\)</span>：</p>
+<div class="arithmatex">\[
+\|Tx\|_Y \le C \|x\|_X
+\]</div>
+<p>则存在唯一的有界线性算子 <span class="arithmatex">\(\overline{T}: X \to Y\)</span>，使得对于所有的 <span class="arithmatex">\(x \in S\)</span>，都有 <span class="arithmatex">\(\overline{T}x = Tx\)</span>（即 <span class="arithmatex">\(\overline{T}|_S = T\)</span>）。
+此外，算子的算子范数保持不变：<span class="arithmatex">\(\|\overline{T}\| = \|T\| \le C\)</span>。</p>
+<details class="proof">
+<summary>BLT 定理的构造性证明（点击展开）</summary>
+<p><strong>第一步：构造极限映射</strong>
+由于 <span class="arithmatex">\(S\)</span> 在 <span class="arithmatex">\(X\)</span> 中稠密，对于任意的 <span class="arithmatex">\(x \in X\)</span>，必然存在 <span class="arithmatex">\(S\)</span> 中的序列 <span class="arithmatex">\(\{x_n\}\)</span> 使得 <span class="arithmatex">\(x_n \to x\)</span>。
+因为 <span class="arithmatex">\(T\)</span> 在 <span class="arithmatex">\(S\)</span> 上是有界（连续）的，我们考察序列 <span class="arithmatex">\(\{Tx_n\}\)</span> 在 <span class="arithmatex">\(Y\)</span> 中的距离：</p>
+<div class="arithmatex">\[
+\|Tx_n - Tx_m\|_Y = \|T(x_n - x_m)\|_Y \le C \|x_n - x_m\|_X
+\]</div>
+<p>由于 <span class="arithmatex">\(\{x_n\}\)</span> 是收敛列，它必然是 Cauchy 列（柯西列）。因此，当 <span class="arithmatex">\(n, m \to \infty\)</span> 时，<span class="arithmatex">\(\|x_n - x_m\|_X \to 0\)</span>。
+这就意味着 <span class="arithmatex">\(\{Tx_n\}\)</span> 是 Banach 空间 <span class="arithmatex">\(Y\)</span> 中的 Cauchy 列。由于 <span class="arithmatex">\(Y\)</span> 是完备的，极限 <span class="arithmatex">\(\lim_{n \to \infty} Tx_n\)</span> 必定存在。我们定义：</p>
+<div class="arithmatex">\[
+\overline{T}x \triangleq \lim_{n \to \infty} Tx_n
+\]</div>
+<p><strong>第二步：证明定义的合理性（与序列选择无关）</strong>
+假设有另一个序列 <span class="arithmatex">\(x_n' \to x\)</span>，我们需要证明 <span class="arithmatex">\(\lim Tx_n' = \lim Tx_n\)</span>。
+设 <span class="arithmatex">\(y = \lim Tx_n\)</span>，<span class="arithmatex">\(y' = \lim Tx_n'\)</span>。</p>
+<div class="arithmatex">\[
+\|y - y'\|_Y = \lim_{n \to \infty} \|Tx_n - Tx_n'\|_Y \le C \lim_{n \to \infty} \|x_n - x_n'\|_X = 0
+\]</div>
+<p>故 <span class="arithmatex">\(y = y'\)</span>，映射 <span class="arithmatex">\(\overline{T}\)</span> 定义良定。</p>
+<p><strong>第三步：证明线性和保范性</strong>
+线性是极限的自然推论。对于保范性，对任意 <span class="arithmatex">\(x \in X\)</span> 及逼近列 <span class="arithmatex">\(x_n \to x\)</span>：</p>
+<div class="arithmatex">\[
+\|\overline{T}x\|_Y = \lim_{n \to \infty} \|Tx_n\|_Y \le C \lim_{n \to \infty} \|x_n\|_X = C \|x\|_X
+\]</div>
+<p>故 <span class="arithmatex">\(\overline{T}\)</span> 有界，且范数不超过 <span class="arithmatex">\(C\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<div class="admonition success">
+<p class="admonition-title">应用：PWZ 积分向 <span class="arithmatex">\(L^2\)</span> 空间的延拓</p>
+<p>我们将被积函数空间取为 <span class="arithmatex">\(X = L^2([0, T])\)</span>，积分结果空间取为 <span class="arithmatex">\(Y = L^2(\Omega, P)\)</span>。
+稠密子空间取为 <span class="arithmatex">\(S = C^1([0, T])\)</span>。
+定义算子 <span class="arithmatex">\(T: g \mapsto \int_0^T g(t) dW(t)\)</span>。</p>
+<p>由 Itô 等距同构知，对于任意 <span class="arithmatex">\(g \in S\)</span>：</p>
+<div class="arithmatex">\[
+\|Tg\|_{L^2(\Omega)}^2 = E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt = \|g\|_{L^2([0,T])}^2
+\]</div>
+<p>这意味着算子 <span class="arithmatex">\(T\)</span> 是一致等距的（算子范数 <span class="arithmatex">\(C=1\)</span>）。由 BLT 定理，我们可以将 PWZ 积分完美且唯一地延拓到整个 <span class="arithmatex">\(L^2([0, T])\)</span> 空间。</p>
+</div>
+<hr />
+<h2 id="3-quadratic-variation">3. 布朗运动的二次变差 (Quadratic Variation)</h2>
+<p>为什么我们不能用传统的黎曼方法处理随机积分？核心在于布朗运动轨道的“粗糙性”，这体现在其二次变差上。</p>
+<p>考虑时间区间 <span class="arithmatex">\([0, T]\)</span> 的一个划分 <span class="arithmatex">\(P = \{0 = t_0 &lt; t_1 &lt; \dots &lt; t_m = T\}\)</span>，网格模长 <span class="arithmatex">\(|P| = \max (t_{k+1} - t_k)\)</span>。</p>
+<div class="admonition info">
+<p class="admonition-title">定理 1：布朗运动的二次变差等于时间 <span class="arithmatex">\(T\)</span></p>
+<p>当网格不断细化 <span class="arithmatex">\(|P| \to 0\)</span> 时，布朗运动增量的平方和在 <span class="arithmatex">\(L^2(\Omega, P)\)</span> 的意义下收敛于 <span class="arithmatex">\(T\)</span>：</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{m-1} (W(t_{k+1}) - W(t_k))^2 \xrightarrow{L^2} T
+\]</div>
+<details class="proof">
+<summary>二次变差 <span class="arithmatex">\(L^2\)</span> 收敛的严格推导（点击展开）</summary>
+<p>为了证明 <span class="arithmatex">\(L^2\)</span> 收敛，我们需要证明其与 <span class="arithmatex">\(T\)</span> 的均方误差趋于 0。
+由于 <span class="arithmatex">\(\sum_{k=0}^{m-1} (t_{k+1} - t_k) = T\)</span>，我们可以将目标误差写为：</p>
+<div class="arithmatex">\[
+E\left[ \left( \sum_{k=0}^{m-1} \big((W(t_{k+1}) - W(t_k))^2 - (t_{k+1} - t_k)\big) \right)^2 \right]
+\]</div>
+<p>令 <span class="arithmatex">\(\Delta W_k = W(t_{k+1}) - W(t_k)\)</span>，<span class="arithmatex">\(\Delta t_k = t_{k+1} - t_k\)</span>。展开平方项，分为平方项和交叉项：</p>
+<div class="arithmatex">\[
+= \sum_k E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] + \sum_{k \neq j} E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)\big((\Delta W_j)^2 - \Delta t_j\big) \Big]
+\]</div>
+<p><strong>关键点 1：交叉项为 0。</strong>
+由于布朗运动具有独立增量性质，当 <span class="arithmatex">\(k \neq j\)</span> 时，<span class="arithmatex">\(\Delta W_k\)</span> 与 <span class="arithmatex">\(\Delta W_j\)</span> 独立。且由于 <span class="arithmatex">\(E[(\Delta W_k)^2] = \Delta t_k\)</span>，每个因式的期望均为 0，故交叉项整体期望为 0。</p>
+<p><strong>关键点 2：平方项的计算。</strong>
+只剩下对角线上的方差项。注意到 <span class="arithmatex">\(\Delta W_k \sim \mathcal{N}(0, \Delta t_k)\)</span>，因此可以标准化表示为 <span class="arithmatex">\(\sqrt{\Delta t_k} Z\)</span>，其中 <span class="arithmatex">\(Z \sim \mathcal{N}(0, 1)\)</span>。</p>
+<div class="arithmatex">\[
+E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] = E\Big[ (\Delta t_k Z^2 - \Delta t_k)^2 \Big] = (\Delta t_k)^2 E[(Z^2 - 1)^2]
+\]</div>
+<p>由于标准正态分布的四阶矩 <span class="arithmatex">\(E[Z^4] = 3\)</span>，<span class="arithmatex">\(E[Z^2] = 1\)</span>，所以 <span class="arithmatex">\(E[(Z^2 - 1)^2] = 3 - 2(1) + 1 = 2\)</span>。</p>
+<div class="arithmatex">\[
+\text{总误差} = 2 \sum_{k=0}^{m-1} (\Delta t_k)^2
+\]</div>
+<p>我们放大这个和式：提取出一个最大的 <span class="arithmatex">\(\Delta t_k\)</span> 即网格模长 <span class="arithmatex">\(|P|\)</span>：</p>
+<div class="arithmatex">\[
+2 \sum_{k=0}^{m-1} (\Delta t_k)^2 \le 2 |P| \sum_{k=0}^{m-1} \Delta t_k = 2 |P| T
+\]</div>
+<p>当 <span class="arithmatex">\(|P| \to 0\)</span> 时，<span class="arithmatex">\(2 |P| T \to 0\)</span>。故在 <span class="arithmatex">\(L^2\)</span> 意义下收敛于 <span class="arithmatex">\(T\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<p>这个定理直接导出了一个令人绝望（但又极具物理意义）的推论：</p>
+<div class="admonition success">
+<p class="admonition-title">定理 2：布朗运动处处无界变差 (Infinite Total Variation)</p>
+<p>几乎所有的布朗运动样本轨道 <span class="arithmatex">\(W(t, \omega)\)</span> 在任何区间上的全变差都是无穷大。</p>
+<blockquote>
+<p><strong>反证法极简证明</strong>：如果某条轨道有界的总变差 <span class="arithmatex">\(V_T &lt; \infty\)</span>，那么它的二次变差可以放缩为：
+<span class="arithmatex">\(\sum (\Delta W_k)^2 \le (\max_k |\Delta W_k|) \sum |\Delta W_k| \le (\max_k |\Delta W_k|) \cdot V_T\)</span>
+由于轨道连续，当分割无限细化时 <span class="arithmatex">\(\max |\Delta W_k| \to 0\)</span>。这会导致二次变差趋于 0，与定理 1 中二次变差等于 <span class="arithmatex">\(T &gt; 0\)</span> 产生绝对矛盾！</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="4-riemann-ito">4. 随机积分的 Riemann 和与 Itô 积分的引出</h2>
+<p>既然经典微积分因变差无界而失效，我们如何计算 <span class="arithmatex">\(\int_0^T W(t) dW(t)\)</span>？
+让我们回到黎曼和的定义，并观察一个在经典微积分中绝不会出现的诡异现象：<strong>取值点的微小改变，将导致积分结果的剧变。</strong></p>
+<p>构造划分 <span class="arithmatex">\(P\)</span>，并在每个子区间 <span class="arithmatex">\([t_k, t_{k+1}]\)</span> 中取一点 <span class="arithmatex">\(\tau_k = (1-\lambda)t_k + \lambda t_{k+1}\)</span> (<span class="arithmatex">\(\lambda \in [0, 1]\)</span>)。
+考察黎曼和：</p>
+<div class="arithmatex">\[
+R_n = \sum_{k=0}^{m-1} W(\tau_k) \big( W(t_{k+1}) - W(t_k) \big)
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">积分结果对 <span class="arithmatex">\(\lambda\)</span> 取值的依赖</p>
+<p>为了清晰展示，我们研究 <span class="arithmatex">\(\lambda = 0\)</span>（取左端点，即 Itô 积分）的特殊情况，此时 <span class="arithmatex">\(\tau_k = t_k\)</span>：</p>
+<div class="arithmatex">\[
+R_n = \sum_{k=0}^{m-1} W(t_k) \big( W(t_{k+1}) - W(t_k) \big)
+\]</div>
+<details class="proof">
+<summary>代数恒等式拆分与 Itô 积分的极限求解（点击展开）</summary>
+<p>这是一个极其巧妙的代数技巧。利用恒等式 <span class="arithmatex">\(a(b-a) = \frac{1}{2}\big( b^2 - a^2 - (b-a)^2 \big)\)</span>，我们将每一项改写：
+令 <span class="arithmatex">\(a = W(t_k), b = W(t_{k+1})\)</span>：</p>
+<div class="arithmatex">\[
+W(t_k) \big( W(t_{k+1}) - W(t_k) \big) = \frac{1}{2}\big( W(t_{k+1})^2 - W(t_k)^2 \big) - \frac{1}{2}\big( W(t_{k+1}) - W(t_k) \big)^2
+\]</div>
+<p>将所有的项加起来，原和式分裂为两部分 <span class="arithmatex">\(B_1\)</span> 和 <span class="arithmatex">\(B_2\)</span>：</p>
+<div class="arithmatex">\[
+R_n = \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1})^2 - W(t_k)^2 \big) }_{B_1} - \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1}) - W(t_k) \big)^2 }_{B_2}
+\]</div>
+<p><strong>分析 <span class="arithmatex">\(B_1\)</span></strong>：这是一个完美的交错求和（Telescoping sum），中间项全部抵消：</p>
+<div class="arithmatex">\[
+B_1 = \frac{1}{2} \big( W(T)^2 - W(0)^2 \big) = \frac{1}{2} W(T)^2
+\]</div>
+<p><strong>分析 <span class="arithmatex">\(B_2\)</span></strong>：这正是布朗运动的二次变差！根据定理 1，当划分细化时，它在 <span class="arithmatex">\(L^2\)</span> 意义下收敛：</p>
+<div class="arithmatex">\[
+B_2 \xrightarrow{L^2} \frac{1}{2} T
+\]</div>
+<p>综上所述，当 <span class="arithmatex">\(\lambda = 0\)</span> 时（Itô 积分），我们得到：</p>
+<div class="arithmatex">\[
+\int_0^T W(t) dW(t) \triangleq \lim_{|P|\to 0} R_n = \frac{1}{2} W(T)^2 - \frac{1}{2} T
+\]</div>
+<p><em>(注：后面多出来的 <span class="arithmatex">\(-\frac{1}{2}T\)</span> 项，正是大名鼎鼎的 Itô 校正项！)</em> <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<p><strong>两种最重要的积分流派：</strong>
+* 当 <span class="arithmatex">\(\lambda = 0\)</span> 时（取左端点），即为 <strong>Itô 积分</strong>，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>。它保持了鞅的性质（不“偷看”未来），是金融数学的基石。
+* 当 <span class="arithmatex">\(\lambda = 1/2\)</span> 时（取中点），即为 <strong>Stratonovich 积分</strong>，校正项相互抵消，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>，形式上与经典微积分一致，常用于物理和工程中的随机动力系统。</p>
+<hr />
+<h2 id="5-ito">5. 严格 Itô 积分的测度论准备</h2>
+<p>为了将 Itô 积分推广到更一般的随机过程（不只是 <span class="arithmatex">\(W(t)\)</span>），我们需要严格定义什么叫做“不偷看未来”。这就引入了流 (Filtration) 和适应过程 (Adapted Process) 的概念。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：信息流与 <span class="arithmatex">\(\sigma\)</span>-代数</p>
+<p><strong>1. 布朗运动的自然流</strong>：
+对于任意时刻 <span class="arithmatex">\(t\)</span>，布朗运动历史轨迹产生的信息记为 <span class="arithmatex">\(\sigma\)</span>-代数：</p>
+<div class="arithmatex">\[
+\mathcal{F}_W(t) \triangleq \sigma(\{W(s) \mid 0 \le s \le t\})
+\]</div>
+<p>它包含了直到时刻 <span class="arithmatex">\(t\)</span> 为止布朗运动所有的路径信息。</p>
+<p><strong>2. 未来增量的独立性</strong>：
+我们定义未来的增量信息流 <span class="arithmatex">\(\mathcal{F}^t \triangleq \sigma(\{W(s) - W(t) \mid s &gt; t\})\)</span>。根据布朗运动的独立增量性质，<span class="arithmatex">\(\mathcal{F}^t\)</span> 与历史流 <span class="arithmatex">\(\mathcal{F}_W(t)\)</span> 是<strong>完全独立</strong>的。</p>
+<p><strong>3. 一般信息流 (Filtration)</strong>：
+一族满足以下条件的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\{\mathcal{F}(t)\}_{t \ge 0}\)</span>：
+* <strong>单调性</strong>：<span class="arithmatex">\(\mathcal{F}(s) \subset \mathcal{F}(t)\)</span> 对任意 <span class="arithmatex">\(0 \le s \le t\)</span>（信息不遗忘）。
+* <strong>包含历史</strong>：<span class="arithmatex">\(\mathcal{F}_W(t) \subset \mathcal{F}(t)\)</span>。
+* <strong>未来独立</strong>：增量 <span class="arithmatex">\(W(s) - W(t)\)</span> 与 <span class="arithmatex">\(\mathcal{F}(t)\)</span> 独立。</p>
+</div>
+<p>有了信息的数学框架，我们就可以框定哪些随机过程是可以被 Itô 积分的。</p>
+<div class="admonition info">
+<p class="admonition-title">定义：适应过程与循序可测 (Adapted &amp; Progressively Measurable)</p>
+<p><strong>1. 适应过程 (Adapted Process)</strong>：
+若对于每一个固定的时刻 <span class="arithmatex">\(t\)</span>，随机变量 <span class="arithmatex">\(G(t, \omega)\)</span> 都是 <span class="arithmatex">\(\mathcal{F}(t)\)</span>-可测的，则称随机过程 <span class="arithmatex">\(G(t)\)</span> 是关于流 <span class="arithmatex">\(\{\mathcal{F}(t)\}\)</span> 适应的。
+<em>(直观理解：在时刻 <span class="arithmatex">\(t\)</span> 这一刻，你只要知道了所有的历史信息 <span class="arithmatex">\(\mathcal{F}(t)\)</span>，你就知道此时刻 <span class="arithmatex">\(G(t)\)</span> 的值，绝不需要未来的信息。)</em></p>
+<p><strong>2. 循序可测 (Progressively Measurable)</strong>：
+一个更强的条件。映射 <span class="arithmatex">\((s, \omega) \mapsto G(s, \omega)\)</span> 在乘积空间 <span class="arithmatex">\([0, t] \times \Omega\)</span> 上的 <span class="arithmatex">\(\mathcal{B}([0, t]) \otimes \mathcal{F}(t)\)</span> 域上是联合可测的。这保证了在时间区间上的黎曼或勒贝格积分操作是合法的。</p>
+</div>
+<p>在本书后续的构建中，Itô 积分 <span class="arithmatex">\(\int_0^T G(t, \omega) dW(t)\)</span> 将在以下希尔伯特空间中被严格定义：</p>
+<div class="arithmatex">\[
+L^2(\Omega \times [0, T]) = \left\{ G(t, \omega) \text{ 为循序可测过程} \mid E\left[ \int_0^T G(t, \omega)^2 dt \right] &lt; \infty \right\}
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

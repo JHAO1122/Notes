@@ -14,6 +14,8 @@
         <link rel="prev" href="../1conditional_expectation/">
       
       
+        <link rel="next" href="../3stochastic_integrate/">
+      
       
         
           <link rel="alternate" href="../../../Stochastic-Differential-Equation/2Brown_Motion/" hreflang="zh">
@@ -429,7 +431,7 @@
   <span class="md-ellipsis">
     
   
-    0Intro
+    📈 随机微分方程 (Stochastic Differential Equation)
   
 
     
@@ -590,6 +592,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分基础与 Itô 积分的引出
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -688,7 +718,7 @@
 
 
 <h1 id="brownian-motion">第二章：布朗运动 (Brownian Motion)</h1>
-<p>在建立了条件期望与鞅论的测度论基础后，我们正式引入连续时间随机过程的核心基石——<strong>布朗运动 (Brownian Motion, BM)</strong>，也常被称为维纳过程 (Wiener Process)。它不仅是自然界中随机游走现象的连续极限，更是构建随机微分方程 (SDE) 积分理论（如 Itô 积分）的根本驱动力。</p>
+<p>在有了条件期望与鞅论的测度论基础后，我们正式引入一个经典的连续时间随机过程——<strong>布朗运动 (Brownian Motion, BM)</strong>，也被称为维纳过程 (Wiener Process)。它是构建随机微分方程 (SDE) 积分理论（如 Itô 积分）的基础。</p>
 <h2 id="1">1. 基础定义与性质</h2>
 <div class="admonition abstract">
 <p class="admonition-title">定义：标准布朗运动 (Standard Brownian Motion)</p>
@@ -750,7 +780,7 @@ p(x_1, t_1; x_2, t_2; \dots; x_n, t_n) = g(x_1, t_1 | 0) g(x_2, t_2 - t_1 | x_1)
 </div>
 <hr />
 <h2 id="2-sde">2. 引入白噪声与 SDE 雏形</h2>
-<p>从常微分方程 (ODE) <span class="arithmatex">\(\frac{dX(t)}{dt} = b(X(t), t)\)</span> 过渡到随机微分方程 (SDE) 时，我们直观上希望加入一个“随机力”或“噪声”项 <span class="arithmatex">\(\xi(t)\)</span>。
+<p>从常微分方程 (ODE) <span class="arithmatex">\(\frac{dX(t)}{dt} = b(X(t), t)\)</span> 过渡到随机微分方程 (SDE) 时，我们需要加入一个噪声项 <span class="arithmatex">\(\xi(t)\)</span>。
 理想的白噪声 <span class="arithmatex">\(\xi(t)\)</span> 应该在不同时刻完全不相关，即协方差呈现 Dirac <span class="arithmatex">\(\delta\)</span> 函数的性质：<span class="arithmatex">\(E[\xi(s)\xi(t)] = \delta(s-t)\)</span>。
 在数学上，这个所谓的白噪声正是<strong>布朗运动的“形式导数”</strong> <span class="arithmatex">\(\dot{W}(t)\)</span>。</p>
 <div class="admonition info">
@@ -793,7 +823,7 @@ E[W^k(t) W^l(s)] = (t \wedge s) \delta_{kl}
 \]</div>
 <p><em>(此处 <span class="arithmatex">\(\delta_{kl}\)</span> 为 Kronecker 记号，不是 Dirac <span class="arithmatex">\(\delta\)</span> 函数)</em></p>
 </div>
-<p>布朗运动在随机分析中最强大的两个属性，是它完美同时兼具了<strong>鞅 (Martingale)</strong> 和 <strong>马尔可夫过程 (Markov Process)</strong> 的特征。</p>
+<p>布朗运动的经典之处在于是它兼具了<strong>鞅 (Martingale)</strong> 和 <strong>马尔可夫过程 (Markov Process)</strong> 的特征。</p>
 <div class="admonition success">
 <p class="admonition-title">定理：布朗运动是连续鞅</p>
 <p>设 <span class="arithmatex">\(\{\mathcal{F}_t\}_{t \ge 0}\)</span> 为布朗运动自然生成的流 <span class="arithmatex">\(\mathcal{F}_t = \sigma(W(u), 0 \le u \le t)\)</span>。则 <span class="arithmatex">\(W(t)\)</span> 是一个鞅。</p>
@@ -894,7 +924,7 @@ P(A_n) \le 2^n \cdot C 2^{-n(1+\alpha)} \cdot 2^{n\gamma\beta} = C 2^{-n(\alpha 
 <p>由 Borel-Cantelli 引理（第一引理）可知，<span class="arithmatex">\(P(\limsup A_n) = 0\)</span>。即几乎必然地，存在 <span class="arithmatex">\(N(\omega)\)</span>，使得对所有 <span class="arithmatex">\(n \ge N(\omega)\)</span>，二进网络上的增量都被紧紧控制在 <span class="arithmatex">\(2^{-n\gamma}\)</span> 之内。通过一致收敛性，这保证了极限过程的 Hölder 连续性。<span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p>现在，我们将这个威力无穷的定理直接拍在布朗运动上，得出其标志性的 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> 性质。</p>
+<p>之后将此定理应用到布朗运动的连续性分析上，得出其重要的 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> 性质。</p>
 <div class="admonition success">
 <p class="admonition-title">结论：布朗运动轨道的 Hölder 粗糙度为 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span></p>
 <p>布朗运动 <span class="arithmatex">\(W(t)\)</span> 的样本轨道几乎处处是 <span class="arithmatex">\(\gamma\)</span>-Hölder 连续的，对于任意 <span class="arithmatex">\(\gamma \in \left(0, \frac{1}{2}\right)\)</span>。
@@ -914,7 +944,7 @@ E[|W(t) - W(s)|^{2m}] = (2m-1)!! \big( Var(W(t)-W(s)) \big)^m = (2m-1)!! |t - s|
 \gamma &lt; \frac{\alpha}{\beta} = \frac{m - 1}{2m} = \frac{1}{2} - \frac{1}{2m}
 \]</div>
 <p>由于这个性质对所有的正整数 <span class="arithmatex">\(m\)</span> 都成立。我们可以让 <span class="arithmatex">\(m \to \infty\)</span>，此时 <span class="arithmatex">\(\frac{1}{2m} \to 0\)</span>。
-因此，对于任意严格小于 <span class="arithmatex">\(\frac{1}{2}\)</span> 的 <span class="arithmatex">\(\gamma\)</span>，布朗运动都是 <span class="arithmatex">\(\gamma\)</span>-Hölder 连续的。这就是量化圈和 SDE 中常说的 <strong>布朗运动轨道是 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> 连续的</strong> 这一结论的根源。<span class="arithmatex">\(\square\)</span></p>
+因此，对于任意严格小于 <span class="arithmatex">\(\frac{1}{2}\)</span> 的 <span class="arithmatex">\(\gamma\)</span>，布朗运动都是 <span class="arithmatex">\(\gamma\)</span>-Hölder 连续的。进而就得出了 <strong>布朗运动轨道是 <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> 连续的</strong> 这一结论。<span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 
