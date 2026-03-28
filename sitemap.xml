@@ -36,6 +36,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/3stochastic_integrate/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/4Ito_integrate/</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/4Ito_integrate/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/4Ito_integrate/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/en/</loc>
         <lastmod>2026-03-28</lastmod>
         <changefreq>daily</changefreq>
@@ -69,5 +76,12 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/3stochastic_integrate/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/3stochastic_integrate/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/4Ito_integrate/</loc>
+        <lastmod>2026-03-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/4Ito_integrate/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/4Ito_integrate/"/>
     </url>
 </urlset>
