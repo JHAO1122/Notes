@@ -27,7 +27,7 @@
     
     
       
-        <title>第三章：随机积分基础与 Itô 积分的引出 - My Study Notes</title>
+        <title>第三章：随机积分(Stochastic Integral) - My Study Notes</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ito" class="md-skip">
+        <a href="#stochastic-integral" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第三章：随机积分基础与 Itô 积分的引出
+              第三章：随机积分(Stochastic Integral)
             
           </span>
         </div>
@@ -522,7 +522,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分基础与 Itô 积分的引出
+    第三章：随机积分(Stochastic Integral)
   
 
     
@@ -540,7 +540,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分基础与 Itô 积分的引出
+    第三章：随机积分(Stochastic Integral)
   
 
     
@@ -580,7 +580,7 @@
   <a href="#2-blt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 有界线性算子的稠密延拓 (BLT 定理)
+        2. 稠定有界线性算子的保范延拓 (BLT 定理)
       
     </span>
   </a>
@@ -677,7 +677,7 @@
   <a href="#2-blt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 有界线性算子的稠密延拓 (BLT 定理)
+        2. 稠定有界线性算子的保范延拓 (BLT 定理)
       
     </span>
   </a>
@@ -737,14 +737,14 @@
   
 
 
-<h1 id="ito">第三章：随机积分基础与 Itô 积分的引出</h1>
-<p>在经典的微积分中，我们可以轻易地定义黎曼-斯蒂尔杰斯积分 <span class="arithmatex">\(\int g(t) dX(t)\)</span>。但在随机分析中，当积分微元变成布朗运动 <span class="arithmatex">\(dW(t)\)</span> 时，由于其样本轨道的极端粗糙性，经典积分理论彻底失效。本章将展示从确定性被积函数向随机被积函数跨越的演进过程，并严格引出 Itô 积分的核心思想。</p>
+<h1 id="stochastic-integral">第三章：随机积分(Stochastic Integral)</h1>
+<p>在经典的微积分中，可以定义黎曼-斯蒂尔杰斯积分 <span class="arithmatex">\(\int g(t) dX(t)\)</span>。但当积分微元变成布朗运动 <span class="arithmatex">\(dW(t)\)</span> 时，由于其样本轨道是粗糙的，不能用传统的方法定义。本节展示从确定性被积函数向随机被积函数跨越的演进过程，并引出 Itô 积分的概念。</p>
 <h2 id="1-paley-wiener-zygmund-pwz">1. Paley-Wiener-Zygmund (PWZ) 随机积分</h2>
 <p>最简单的情形是：被积函数 <span class="arithmatex">\(g(t)\)</span> 是一个普通的确定性函数，而积分变量是布朗运动。</p>
 <div class="admonition abstract">
 <p class="admonition-title">定义：PWZ 随机积分</p>
 <p>设 <span class="arithmatex">\(W(t)\)</span> 为标准布朗运动。假设 <span class="arithmatex">\(g(t) \in C^1([0, T])\)</span> 是一阶连续可导的确定性函数。
-利用分部积分公式（Integration by Parts），我们“回避”了布朗运动不可微的问题，将 <strong>PWZ 随机积分</strong> 定义为：</p>
+利用分部积分公式（Integration by Parts），将 <strong>PWZ 随机积分</strong> 定义为：</p>
 <div class="arithmatex">\[
 \int_0^T g(t) dW(t) \triangleq g(T)W(T) - g(0)W(0) - \int_0^T g'(t) W(t) dt
 \]</div>
@@ -791,10 +791,10 @@ E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W
 </details>
 </div>
 <hr />
-<h2 id="2-blt">2. 有界线性算子的稠密延拓 (BLT 定理)</h2>
-<p>刚才的 PWZ 积分要求 <span class="arithmatex">\(g(t) \in C^1\)</span>。但在实际应用中，我们需要对更一般的 <span class="arithmatex">\(L^2\)</span> 函数进行积分。这需要借助泛函分析中极其强大的工具：<strong>有界线性算子延拓定理 (BLT Theorem)</strong>。</p>
+<h2 id="2-blt">2. 稠定有界线性算子的保范延拓 (BLT 定理)</h2>
+<p>刚才的 PWZ 积分要求 <span class="arithmatex">\(g(t) \in C^1\)</span>。但在实际应用中，我们需要对更一般的 <span class="arithmatex">\(L^2\)</span> 函数进行积分。这需要借助泛函分析中的工具：<strong>有界线性算子延拓定理 (BLT Theorem)</strong>。</p>
 <div class="admonition abstract">
-<p class="admonition-title">定理：有界线性算子的稠密延拓</p>
+<p class="admonition-title">定理：稠定有界线性算子的保范延拓</p>
 <p>设 <span class="arithmatex">\(X, Y\)</span> 为 Banach 空间，<span class="arithmatex">\(S\)</span> 为 <span class="arithmatex">\(X\)</span> 中稠密的线性子空间。
 设 <span class="arithmatex">\(T: S \to Y\)</span> 为一个有界线性算子，即存在常数 <span class="arithmatex">\(C &gt; 0\)</span>，使得对任意 <span class="arithmatex">\(x \in S\)</span>：</p>
 <div class="arithmatex">\[
@@ -843,7 +843,7 @@ E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W
 </div>
 <hr />
 <h2 id="3-quadratic-variation">3. 布朗运动的二次变差 (Quadratic Variation)</h2>
-<p>为什么我们不能用传统的黎曼方法处理随机积分？核心在于布朗运动轨道的“粗糙性”，这体现在其二次变差上。</p>
+<p>不能用传统的黎曼积分处理随机积分的问题根本在于布朗运动轨道的“粗糙性”，即其二次变差性质。</p>
 <p>考虑时间区间 <span class="arithmatex">\([0, T]\)</span> 的一个划分 <span class="arithmatex">\(P = \{0 = t_0 &lt; t_1 &lt; \dots &lt; t_m = T\}\)</span>，网格模长 <span class="arithmatex">\(|P| = \max (t_{k+1} - t_k)\)</span>。</p>
 <div class="admonition info">
 <p class="admonition-title">定理 1：布朗运动的二次变差等于时间 <span class="arithmatex">\(T\)</span></p>
@@ -880,7 +880,7 @@ E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] = E\Big[ (\Delta t_k Z^2 - 
 <p>当 <span class="arithmatex">\(|P| \to 0\)</span> 时，<span class="arithmatex">\(2 |P| T \to 0\)</span>。故在 <span class="arithmatex">\(L^2\)</span> 意义下收敛于 <span class="arithmatex">\(T\)</span>。<span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p>这个定理直接导出了一个令人绝望（但又极具物理意义）的推论：</p>
+<p>这个定理直接导出了一个关于布朗运动性质的推论：</p>
 <div class="admonition success">
 <p class="admonition-title">定理 2：布朗运动处处无界变差 (Infinite Total Variation)</p>
 <p>几乎所有的布朗运动样本轨道 <span class="arithmatex">\(W(t, \omega)\)</span> 在任何区间上的全变差都是无穷大。</p>
@@ -892,8 +892,8 @@ E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] = E\Big[ (\Delta t_k Z^2 - 
 </div>
 <hr />
 <h2 id="4-riemann-ito">4. 随机积分的 Riemann 和与 Itô 积分的引出</h2>
-<p>既然经典微积分因变差无界而失效，我们如何计算 <span class="arithmatex">\(\int_0^T W(t) dW(t)\)</span>？
-让我们回到黎曼和的定义，并观察一个在经典微积分中绝不会出现的诡异现象：<strong>取值点的微小改变，将导致积分结果的剧变。</strong></p>
+<p>那我们如何计算 <span class="arithmatex">\(\int_0^T W(t) dW(t)\)</span>？
+回到黎曼和的定义，我们能观察到一个在经典微积分中不会出现的现象：<strong>取值点的改变，将导致积分结果的巨大改变。</strong></p>
 <p>构造划分 <span class="arithmatex">\(P\)</span>，并在每个子区间 <span class="arithmatex">\([t_k, t_{k+1}]\)</span> 中取一点 <span class="arithmatex">\(\tau_k = (1-\lambda)t_k + \lambda t_{k+1}\)</span> (<span class="arithmatex">\(\lambda \in [0, 1]\)</span>)。
 考察黎曼和：</p>
 <div class="arithmatex">\[
@@ -928,15 +928,15 @@ B_2 \xrightarrow{L^2} \frac{1}{2} T
 <div class="arithmatex">\[
 \int_0^T W(t) dW(t) \triangleq \lim_{|P|\to 0} R_n = \frac{1}{2} W(T)^2 - \frac{1}{2} T
 \]</div>
-<p><em>(注：后面多出来的 <span class="arithmatex">\(-\frac{1}{2}T\)</span> 项，正是大名鼎鼎的 Itô 校正项！)</em> <span class="arithmatex">\(\square\)</span></p>
+<p><em>(注：后面多出来的 <span class="arithmatex">\(-\frac{1}{2}T\)</span> 项称为 Itô 校正项)</em> <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <p><strong>两种最重要的积分流派：</strong>
-* 当 <span class="arithmatex">\(\lambda = 0\)</span> 时（取左端点），即为 <strong>Itô 积分</strong>，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>。它保持了鞅的性质（不“偷看”未来），是金融数学的基石。
-* 当 <span class="arithmatex">\(\lambda = 1/2\)</span> 时（取中点），即为 <strong>Stratonovich 积分</strong>，校正项相互抵消，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>，形式上与经典微积分一致，常用于物理和工程中的随机动力系统。</p>
+* 当 <span class="arithmatex">\(\lambda = 0\)</span> 时（取左端点），即为 <strong>Itô 积分</strong>，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>。它保持了鞅的性质，常用于金融数学领域。
+* 当 <span class="arithmatex">\(\lambda = 1/2\)</span> 时（取中点），即为 <strong>Stratonovich 积分</strong>，校正项相互抵消，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>，形式上与经典微积分一致，常用于物理和工程领域。</p>
 <hr />
 <h2 id="5-ito">5. 严格 Itô 积分的测度论准备</h2>
-<p>为了将 Itô 积分推广到更一般的随机过程（不只是 <span class="arithmatex">\(W(t)\)</span>），我们需要严格定义什么叫做“不偷看未来”。这就引入了流 (Filtration) 和适应过程 (Adapted Process) 的概念。</p>
+<p>为了将 Itô 积分推广到更一般的随机过程（不只是 <span class="arithmatex">\(W(t)\)</span>），我们需要严格定义什么叫做“不管未来，只看过去”。这需要我们引入流 (Filtration) 和适应过程 (Adapted Process) 的概念。</p>
 <div class="admonition abstract">
 <p class="admonition-title">定义：信息流与 <span class="arithmatex">\(\sigma\)</span>-代数</p>
 <p><strong>1. 布朗运动的自然流</strong>：
@@ -953,7 +953,7 @@ B_2 \xrightarrow{L^2} \frac{1}{2} T
 * <strong>包含历史</strong>：<span class="arithmatex">\(\mathcal{F}_W(t) \subset \mathcal{F}(t)\)</span>。
 * <strong>未来独立</strong>：增量 <span class="arithmatex">\(W(s) - W(t)\)</span> 与 <span class="arithmatex">\(\mathcal{F}(t)\)</span> 独立。</p>
 </div>
-<p>有了信息的数学框架，我们就可以框定哪些随机过程是可以被 Itô 积分的。</p>
+<p>有了关于“信息”这一概念的数学框架，我们就可以确定哪些随机过程是可以被 Itô 积分的。</p>
 <div class="admonition info">
 <p class="admonition-title">定义：适应过程与循序可测 (Adapted &amp; Progressively Measurable)</p>
 <p><strong>1. 适应过程 (Adapted Process)</strong>：
