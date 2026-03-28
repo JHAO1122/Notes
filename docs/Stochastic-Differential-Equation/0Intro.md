@@ -20,7 +20,7 @@ tags:
 
 ## 📚 参考教材与文献 (References)
 
-本课程无PPT等展示工具，完全由教授黑板手写板书讲解。
+本课程无PPT等展示工具，完全由教授手写板书讲解。
 
 1. **刘见礼、袁海荣**, 《随机微分方程基本理论及其应用》
     * *老师评价：本书较为简单。*
@@ -28,7 +28,7 @@ tags:
 
 ---
 
-## 🗺️ 课程知识地图 (Syllabus & Navigation)
+## 🗺️ 课程地图 (Syllabus & Navigation)
 
 以下是本课程的详细笔记目录：
 
@@ -37,6 +37,8 @@ tags:
 * [x] [第二章：布朗运动](2Brown_Motion.md)
 
 ### Part II: 随机积分和随机微分方程
+* [x] [第三章：随机积分](3stochastic_integrate.md)
+* [x] [第四章：Itô积分](4Ito_integrate.md)
 
 ### Part III: 随机微分方程的应用
 
