@@ -31,7 +31,7 @@ tags:
 以下是本课程的目录：
 
 ### Part I: 随机收敛与极限定理基础
-* [x] [第一章：数据分布与随机收敛 (Stochastic Convergence)](ch1_stochastic_convergence.md) *(涵盖四大收敛、Portmanteau 综合引理与映射定理)* * 
+* [x] [第一章：数据分布与随机收敛 (Stochastic Convergence)](1Stochastic_convergence.md) *(涵盖四大收敛、Portmanteau 综合引理与映射定理)* * 
 
 
 ---
