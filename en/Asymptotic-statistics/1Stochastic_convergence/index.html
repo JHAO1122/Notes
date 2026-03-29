@@ -1,0 +1,1171 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/1Stochastic_convergence/">
+      
+      
+        <link rel="prev" href="../0Intro/">
+      
+      
+        <link rel="next" href="../../Stochastic-Differential-Equation/0Intro/">
+      
+      
+        
+          <link rel="alternate" href="../../../Asymptotic-statistics/1Stochastic_convergence/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第一章：数据分布与随机收敛 (Data Distributions and Stochastic Convergence) - My Study Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-distributions-and-stochastic-convergence" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="My Study Notes" class="md-header__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Study Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第一章：数据分布与随机收敛 (Data Distributions and Stochastic Convergence)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Asymptotic-statistics/1Stochastic_convergence/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to Halo's Academic Space
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0Intro/" class="md-tabs__link">
+          
+  
+  
+  Asymptotic statistics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  Stochastic Differential Equation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="My Study Notes" class="md-nav__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Study Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Halo's Academic Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Asymptotic statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 渐近统计 (Asymptotic Statistics)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：数据分布与随机收敛 (Data Distributions and Stochastic Convergence)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：数据分布与随机收敛 (Data Distributions and Stochastic Convergence)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-stochastic-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 随机收敛的基本定义 (Stochastic Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-polya" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Polya 定理与渐近正态性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-portmanteau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 随机收敛的基石：Portmanteau 引理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-continuous-mapping-theorem-cmt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 连续映射定理 (Continuous Mapping Theorem, CMT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Differential Equation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Differential Equation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 随机微分方程 (Stochastic Differential Equation)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Foundations of Conditional Expectation and Martingales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动 (Brownian Motion)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分(Stochastic Integral)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：Itô 积分与随机微分(Itô Integral &amp; Stochastic Differential)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-stochastic-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 随机收敛的基本定义 (Stochastic Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-polya" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Polya 定理与渐近正态性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-portmanteau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 随机收敛的基石：Portmanteau 引理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-continuous-mapping-theorem-cmt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 连续映射定理 (Continuous Mapping Theorem, CMT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="data-distributions-and-stochastic-convergence">第一章：数据分布与随机收敛 (Data Distributions and Stochastic Convergence)</h1>
+<p>在统计推断中，寻找统计量 <span class="arithmatex">\(\hat{\theta}_n\)</span> 在有限样本下的精确分布 <span class="arithmatex">\(F_{\hat{\theta}_n}(x)\)</span> 往往是极其困难的。然而，通过让样本量 <span class="arithmatex">\(n \to \infty\)</span>，我们可以利用渐近理论极大地简化问题，并获得质量极高的近似分布。这不仅能帮助我们构建近似的置信区间与假设检验，还能在理论上评估不同推断方法的渐近效率。</p>
+<hr />
+<h2 id="1-stochastic-convergence">1. 随机收敛的基本定义 (Stochastic Convergence)</h2>
+<p>设 <span class="arithmatex">\(\{X_n\}\)</span> 为定义在同一个概率空间 <span class="arithmatex">\((\Omega, \mathcal{A}, P)\)</span> 上的 <span class="arithmatex">\(\mathbb{R}^p\)</span> 维随机向量序列，<span class="arithmatex">\(d(x,y)\)</span> 为欧氏距离。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：四大随机收敛</p>
+<p><strong>1. 几乎必然收敛 (Almost-Sure Convergence, <span class="arithmatex">\(X_n \xrightarrow{a.s.} X\)</span>)</strong>：</p>
+<div class="arithmatex">\[
+P(\lim_{n \to \infty} d(X_n, X) = 0) = 1
+\]</div>
+<p><em>(直观理解：100% 确定且 100% 准确)</em>。</p>
+<p><strong>2. 依概率收敛 (Convergence in Probability, <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span>)</strong>：
+对于任意给定的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} P(d(X_n, X) &lt; \epsilon) = 1
+\]</div>
+<p><em>(直观理解：100% 确定，但不一定绝对准确)</em>。</p>
+<p><strong>3. <span class="arithmatex">\(r\)</span> 阶平均收敛 (Convergence in <span class="arithmatex">\(r_{th}\)</span> mean, <span class="arithmatex">\(X_n \xrightarrow{L^r} X\)</span>)</strong>：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} E[d(X_n, X)^r] = 0
+\]</div>
+<p><strong>4. 依分布收敛 / 弱收敛 (Convergence in Distribution, <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>)</strong>：
+设 <span class="arithmatex">\(F_n\)</span> 和 <span class="arithmatex">\(F\)</span> 分别为 <span class="arithmatex">\(X_n\)</span> 和 <span class="arithmatex">\(X\)</span> 的累积分布函数 (CDF)。如果对于 <span class="arithmatex">\(F\)</span> 的所有连续点 <span class="arithmatex">\(x \in \mathcal{C}_F\)</span>：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} F_n(x) = F(x)
+\]</div>
+<p>则称 <span class="arithmatex">\(X_n\)</span> 依分布收敛到 <span class="arithmatex">\(X\)</span>。</p>
+<blockquote>
+<p><strong>注记</strong>：依分布收敛是最弱的收敛，也是统计推断中最核心的收敛。它<strong>不要求</strong> <span class="arithmatex">\(X_n\)</span> 和 <span class="arithmatex">\(X\)</span> 定义在同一个概率空间上。且不连续点集合 <span class="arithmatex">\(\mathcal{C}_F^c\)</span> 至多只有可数个。</p>
+</blockquote>
+</div>
+<hr />
+<h2 id="2-polya">2. Polya 定理与渐近正态性</h2>
+<p>在微积分中，闭区间上的连续函数是一致连续的。这可以推广到全空间上的累积分布函数：</p>
+<div class="admonition info">
+<p class="admonition-title">引理 1.2</p>
+<p>如果 <span class="arithmatex">\(F\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 上的一个连续分布函数，那么 <span class="arithmatex">\(F\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 上是一致连续的。</p>
+</div>
+<p>基于此，我们可以得到强化依分布收敛的一个极其优美的结论：</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.3：Polya 定理 (Polya's Theorem)</p>
+<p>假设 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>，且极限随机变量 <span class="arithmatex">\(X\)</span> 的分布函数 <span class="arithmatex">\(F(x)\)</span> 是<strong>连续</strong>的。
+那么，这种逐点收敛会自动升级为<strong>一致收敛</strong>：</p>
+<div class="arithmatex">\[
+\sup_x |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
+\]</div>
+<details class="proof">
+<summary>Polya 定理证明思路（点击展开）</summary>
+<p>该证明采用了经典的<strong>有限覆盖法 (Covering Method)</strong>。</p>
+<p>由于 <span class="arithmatex">\(F\)</span> 是一致连续的分布函数，我们在无穷区间上截取一个足够大的 <span class="arithmatex">\([-M, M]\)</span>，使得尾部概率极其微小。
+将 <span class="arithmatex">\([-M, M]\)</span> 进行等宽划分，构造网格点 <span class="arithmatex">\(\{x_i\}_{i=0}^{K+1}\)</span>。</p>
+<p>定义在这些网格点上的最大误差为：</p>
+<div class="arithmatex">\[
+\Delta_n = \max_{i=0}^{K+1} |F_n(x_i) - F(x_i)|
+\]</div>
+<p>因为 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> 且 <span class="arithmatex">\(F\)</span> 无间断点，对于这<strong>有限个</strong>网格点 <span class="arithmatex">\(K\)</span>，当 <span class="arithmatex">\(n \to \infty\)</span> 时必然有 <span class="arithmatex">\(\Delta_n \to 0\)</span>。利用单调性与三角不等式，即可将网格点上的收敛推广到全空间的 <span class="arithmatex">\(\sup\)</span> 一致收敛。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<p>统计学中最常见的一种收敛便是向正态分布的收敛：</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义 1.4 &amp; 1.5：渐近正态性 (Asymptotic Normality, AN)</p>
+<p><strong>1. 一维渐近正态</strong>：
+序列 <span class="arithmatex">\(\{X_n\}\)</span> 称为具有“均值” <span class="arithmatex">\(\mu_n\)</span> 和“方差” <span class="arithmatex">\(\sigma_n^2 &gt; 0\)</span> 的渐近正态分布，记作 <span class="arithmatex">\(X_n \sim AN(\mu_n, \sigma_n^2)\)</span>，如果当 <span class="arithmatex">\(n\)</span> 足够大时满足：</p>
+<div class="arithmatex">\[
+\frac{X_n - \mu_n}{\sigma_n} \xrightarrow{d} N(0, 1)
+\]</div>
+<p><em>(注：这里的 <span class="arithmatex">\(\mu_n\)</span> 和 <span class="arithmatex">\(\sigma_n^2\)</span> 不一定真的是 <span class="arithmatex">\(X_n\)</span> 的均值和方差，有时 <span class="arithmatex">\(X_n\)</span> 的真实矩甚至不存在！)</em></p>
+<p><strong>2. 多维渐近正态</strong>：
+对于随机向量序列 <span class="arithmatex">\(X_n\)</span>，称其服从 <span class="arithmatex">\(AN(\mu_n, \Sigma_n)\)</span>，如果对于任意非零向量 <span class="arithmatex">\(a \in \mathbb{R}^p\)</span>，通过一维化投影均满足：</p>
+<div class="arithmatex">\[
+a'X_n \sim AN(a'\mu_n, a'\Sigma_n a)
+\]</div>
+</div>
+<hr />
+<h2 id="3-portmanteau">3. 随机收敛的基石：Portmanteau 引理</h2>
+<p>依分布收敛除了通过 CDF 定义，还可以通过期望、开集/闭集等多种拓扑方式等价描述。这构成了渐近理论中最核心的工具。</p>
+<div class="admonition info">
+<p class="admonition-title">定理 1.6：Portmanteau 综合引理 (Portmanteau Lemma)</p>
+<p>对于任意随机向量 <span class="arithmatex">\(X_n\)</span> 和 <span class="arithmatex">\(X\)</span>，以下陈述是<strong>完全等价</strong>的：</p>
+<p><strong>(i)</strong> <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>;</p>
+<p><strong>(ii)</strong> 对于任意<strong>有界连续函数</strong> <span class="arithmatex">\(f \in C_B\)</span>，<span class="arithmatex">\(E[f(X_n)] \to E[f(X)]\)</span>;</p>
+<p><strong>(iii)</strong> 对于任意<strong>有界 Lipschitz 连续函数</strong> <span class="arithmatex">\(f \in C_{B, Lip}\)</span>，<span class="arithmatex">\(E[f(X_n)] \to E[f(X)]\)</span>;</p>
+<p><strong>(iv)</strong> 对于任意<strong>非负连续函数</strong> <span class="arithmatex">\(f\)</span>，<span class="arithmatex">\(\liminf E[f(X_n)] \ge E[f(X)]\)</span>;</p>
+<p><strong>(v)</strong> 对于任意<strong>开集</strong> <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(\liminf P(X_n \in G) \ge P(X \in G)\)</span>;</p>
+<p><strong>(vi)</strong> 对于任意<strong>闭集</strong> <span class="arithmatex">\(F\)</span>，<span class="arithmatex">\(\limsup P(X_n \in F) \le P(X \in F)\)</span>;</p>
+<p><strong>(vii)</strong> 对于任意<strong>边界测度为 0</strong> 的 Borel 集 <span class="arithmatex">\(B\)</span>（即 <span class="arithmatex">\(P(X \in \partial B) = 0\)</span>），<span class="arithmatex">\(P(X_n \in B) \to P(X \in B)\)</span>。</p>
+<details class="proof">
+<summary>Portmanteau 引理核心步骤的严格推导（点击展开）</summary>
+<p><strong>证明 (i) <span class="arithmatex">\(\Rightarrow\)</span> (ii)</strong>：
+不失一般性，假设 <span class="arithmatex">\(\sup |f(x)| \le 1\)</span>。对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，选取一个足够大的矩形区域 <span class="arithmatex">\(I\)</span>，使得尾部概率 <span class="arithmatex">\(P(X \in I^c) &lt; \epsilon\)</span>。
+将 <span class="arithmatex">\(I\)</span> 划分为有限个互不重叠的小矩形 <span class="arithmatex">\(I = \cup_{j=1}^K I_j\)</span>，并在每个小矩形内取代表点 <span class="arithmatex">\(x_j\)</span>。构造简单阶梯函数：</p>
+<div class="arithmatex">\[
+f_\epsilon(x) = \sum_{j=1}^K f(x_j) \mathbb{I}(x \in I_j)
+\]</div>
+<p>通过足够细的划分，保证在 <span class="arithmatex">\(I\)</span> 内 <span class="arithmatex">\(|f(x) - f_\epsilon(x)| &lt; \epsilon\)</span>。
+利用三角不等式拆解期望误差：</p>
+<div class="arithmatex">\[
+|Ef(X_n) - Ef_\epsilon(X_n)| \le \epsilon + 2P(X_n \in I^c)
+\]</div>
+<p>同理对于极限变量：</p>
+<div class="arithmatex">\[
+|Ef(X) - Ef_\epsilon(X)| \le \epsilon + 2P(X \in I^c) &lt; 3\epsilon
+\]</div>
+<p>而对于简单函数部分：</p>
+<div class="arithmatex">\[
+|Ef_\epsilon(X_n) - Ef_\epsilon(X)| \le \sum_{j=1}^K |f(x_j)| |P(X_n \in I_j) - P(X \in I_j)| \to 0
+\]</div>
+<p>由于 <span class="arithmatex">\(K\)</span> 是有限的，且每个 <span class="arithmatex">\(I_j\)</span> 是一个连续集，联合这三项即可得证 <span class="arithmatex">\(E[f(X_n)] \to E[f(X)]\)</span>。</p>
+<p><strong>证明 (iii) <span class="arithmatex">\(\Rightarrow\)</span> (v)</strong>：
+对于任意开集 <span class="arithmatex">\(G\)</span>，我们构造一列非负的 Lipschitz 函数来逼近其指示函数：设 <span class="arithmatex">\(f_m(x) = (m \cdot d(x, G^c)) \wedge 1\)</span>。
+当 <span class="arithmatex">\(m \to \infty\)</span> 时，<span class="arithmatex">\(f_m \uparrow \mathbb{I}_G\)</span>。对于固定的 <span class="arithmatex">\(m\)</span>：</p>
+<div class="arithmatex">\[
+\liminf_{n \to \infty} P(X_n \in G) \ge \liminf_{n \to \infty} E[f_m(X_n)] = E[f_m(X)]
+\]</div>
+<p>由单调收敛定理 (Monotone Convergence Theorem)，令 <span class="arithmatex">\(m \to \infty\)</span>，右侧单调增加至 <span class="arithmatex">\(P(X \in G)\)</span>。</p>
+<p><strong>证明 (v) <span class="arithmatex">\(\Leftrightarrow\)</span> (vi)</strong>：
+利用开集和闭集的补集对应关系（De Morgan 定律），直接取补集反转不等式方向即可。</p>
+<p><strong>证明 (v) + (vi) <span class="arithmatex">\(\Rightarrow\)</span> (vii)</strong>：
+设 <span class="arithmatex">\(B\)</span> 的内部为 <span class="arithmatex">\(B^\circ\)</span>，闭包为 <span class="arithmatex">\(\overline{B}\)</span>。利用前两个性质：</p>
+<div class="arithmatex">\[
+P(X \in B^\circ) \le \liminf P(X_n \in B) \le \limsup P(X_n \in B) \le P(X \in \overline{B})
+\]</div>
+<p>因为已知边界测度为零，即 <span class="arithmatex">\(P(X \in \partial B) = 0\)</span>，所以 <span class="arithmatex">\(P(X \in B^\circ) = P(X \in \overline{B})\)</span>。由此夹逼出中间的极限存在且等于 <span class="arithmatex">\(P(X \in B)\)</span>。<span class="arithmatex">\(\square\)</span></p>
+<p><strong>证明 (vii) <span class="arithmatex">\(\Rightarrow\)</span> (i)</strong>：
+对于任意实数 <span class="arithmatex">\(x\)</span>，构造一个左侧无限的闭区间 <span class="arithmatex">\(B = (-\infty, x]\)</span>。该集合的边界仅为单点集 <span class="arithmatex">\(\partial B = \{x\}\)</span>。
+如果 <span class="arithmatex">\(x\)</span> 是累积分布函数 <span class="arithmatex">\(F(x) = P(X \le x)\)</span> 的连续点，那么在这一点上的概率测度为零，即 <span class="arithmatex">\(P(X \in \partial B) = P(X = x) = 0\)</span>。
+既然该集合的边界测度为零，由条件 (vii) 可知：</p>
+<div class="arithmatex">\[
+P(X_n \le x) = P(X_n \in B) \to P(X \in B) = P(X \le x)
+\]</div>
+<p>由于这个等式对于所有 <span class="arithmatex">\(F(x)\)</span> 的连续点 <span class="arithmatex">\(x\)</span> 都成立，这恰好就是依分布收敛 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> 的严格定义。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<div class="admonition success">
+<p class="admonition-title">定理 1.6 补充：Lévy 连续性定理 (Lévy's Continuity Theorem)</p>
+<p>除了 Portmanteau 引理给出的几种等价拓扑条件外，依分布收敛还有一个极其重要且极具计算价值的等价刻画，即<strong>特征函数 (Characteristic Function)</strong> 的点态收敛。</p>
+<p>设 <span class="arithmatex">\(\{X_n\}\)</span> 和 <span class="arithmatex">\(X\)</span> 为 <span class="arithmatex">\(\mathbb{R}^d\)</span> 中的随机向量，<span class="arithmatex">\(\phi_{X_n}(t)\)</span> 和 <span class="arithmatex">\(\phi_X(t)\)</span> 分别为它们的特征函数（定义为 <span class="arithmatex">\(\phi_X(t) = E[e^{i t^\top X}]\)</span>）。那么：</p>
+<div class="arithmatex">\[
+X_n \xrightarrow{d} X \iff \phi_{X_n}(t) \to \phi_X(t), \quad \forall t \in \mathbb{R}^d
+\]</div>
+<blockquote>
+<p><em>(注：特征函数的收敛是证明中心极限定理 (CLT) 等渐近分布时最常用的工具！)</em></p>
+</blockquote>
+</div>
+<hr />
+<h2 id="4-continuous-mapping-theorem-cmt">4. 连续映射定理 (Continuous Mapping Theorem, CMT)</h2>
+<p>如果一个随机变量序列是收敛的，那么当它们经过一个“足够好”的函数映射后，收敛性质是否依然保持？映射定理给出了肯定的回答。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.7：连续映射定理 (Mapping Theorem)</p>
+<p>设函数 <span class="arithmatex">\(g: \mathbb{R}^k \to \mathbb{R}^m\)</span> 在连续点集 <span class="arithmatex">\(\mathcal{C}_g\)</span> 上连续，且满足 <span class="arithmatex">\(P(X \in \mathcal{C}_g) = 1\)</span>（即 <span class="arithmatex">\(X\)</span> 几乎必然落在 <span class="arithmatex">\(g\)</span> 的连续点上）。
+那么，操作算子 <span class="arithmatex">\(g(\cdot)\)</span> 会完美地继承并传递以下三种收敛性：</p>
+<ol>
+<li>若 <span class="arithmatex">\(X_n \xrightarrow{a.s.} X\)</span>，则 <span class="arithmatex">\(g(X_n) \xrightarrow{a.s.} g(X)\)</span></li>
+<li>若 <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span>，则 <span class="arithmatex">\(g(X_n) \xrightarrow{P} g(X)\)</span></li>
+<li>若 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>，则 <span class="arithmatex">\(g(X_n) \xrightarrow{d} g(X)\)</span></li>
+</ol>
+<details class="proof">
+<summary>映射定理的严格证明（点击展开）</summary>
+<p>我们在此重点证明<strong>依分布收敛</strong>的情况 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>。我们将利用极其巧妙的 Portmanteau 引理的闭集性质 (vi) 来证明。</p>
+<p>对于任意闭集 <span class="arithmatex">\(F\)</span>，考虑其原像 <span class="arithmatex">\(g^{-1}(F) = \{x : g(x) \in F\}\)</span>。
+由于 <span class="arithmatex">\(g\)</span> 并非处处连续，我们需要分析原像闭包 <span class="arithmatex">\(\overline{g^{-1}(F)}\)</span> 的结构：</p>
+<div class="arithmatex">\[
+g^{-1}(F) \subset \overline{g^{-1}(F)} \subset g^{-1}(F) \cup \mathcal{C}_g^c
+\]</div>
+<p><em>(解释：如果一个极限点 <span class="arithmatex">\(x\)</span> 是连续点，即 <span class="arithmatex">\(x \in \mathcal{C}_g\)</span>，那么序列 <span class="arithmatex">\(x_m \to x\)</span> 必有 <span class="arithmatex">\(g(x_m) \to g(x)\)</span>。由于 <span class="arithmatex">\(F\)</span> 是闭集，自然有 <span class="arithmatex">\(g(x) \in F\)</span>，故 <span class="arithmatex">\(x \in g^{-1}(F)\)</span>)。</em></p>
+<p>对该集合运用 Portmanteau 引理 (vi)：</p>
+<div class="arithmatex">\[
+\limsup P(g(X_n) \in F) \le \limsup P\left(X_n \in \overline{g^{-1}(F)}\right)
+\]</div>
+<p>由引理性质，上式小于等于极限在闭包上的概率：</p>
+<div class="arithmatex">\[
+\le P\left(X \in \overline{g^{-1}(F)}\right)
+\]</div>
+<p>将其拆分为连续点和非连续点两部分：</p>
+<div class="arithmatex">\[
+\le P(X \in g^{-1}(F)) + P(X \notin \mathcal{C}_g)
+\]</div>
+<p>根据定理前提，<span class="arithmatex">\(P(X \notin \mathcal{C}_g) = 0\)</span>。因此：</p>
+<div class="arithmatex">\[
+\limsup P(g(X_n) \in F) \le P(g(X) \in F)
+\]</div>
+<p>再次使用 Portmanteau 引理的反向推导 (vi) <span class="arithmatex">\(\Rightarrow\)</span> (i)，立刻得证 <span class="arithmatex">\(g(X_n) \xrightarrow{d} g(X)\)</span>。<span class="arithmatex">\(\square\)</span></p>
+<p><strong>证明 (ii) 依概率收敛的映射性质</strong>：
+我们需要证明：对于任意给定的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，<span class="arithmatex">\(P(|g(X_n) - g(X)| &gt; \epsilon) \to 0\)</span>。</p>
+<p>固定任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>。对于任意 <span class="arithmatex">\(\delta &gt; 0\)</span>，我们定义一个“坏集” <span class="arithmatex">\(B_\delta\)</span>，它包含了所有可能使得函数值发生剧烈突变的 <span class="arithmatex">\(x\)</span> 点：</p>
+<div class="arithmatex">\[
+B_\delta = \{x : \exists y \text{ 满足 } |x - y| &lt; \delta \text{ 但 } |g(x) - g(y)| &gt; \epsilon\}
+\]</div>
+<p>现在考察事件 <span class="arithmatex">\(\{|g(X_n) - g(X)| &gt; \epsilon\}\)</span>。如果该事件发生，且极限变量 <span class="arithmatex">\(X\)</span> 恰好不在“坏集” <span class="arithmatex">\(B_\delta\)</span> 中（即 <span class="arithmatex">\(X \notin B_\delta\)</span>），那么必然是因为 <span class="arithmatex">\(|X_n - X| \ge \delta\)</span>。
+利用全概率放缩，我们可以得到：</p>
+<div class="arithmatex">\[
+P(|g(X_n) - g(X)| &gt; \epsilon) \le P(X \in B_\delta) + P(|X_n - X| \ge \delta)
+\]</div>
+<p>接下来对右边两项分别取极限：
+<strong>第一项</strong>：由于 <span class="arithmatex">\(g\)</span> 在 <span class="arithmatex">\(\mathcal{C}_g\)</span> 上连续，当 <span class="arithmatex">\(\delta \downarrow 0\)</span> 时，集合 <span class="arithmatex">\(B_\delta\)</span> 与连续点集 <span class="arithmatex">\(\mathcal{C}_g\)</span> 的交集必然为空集。又因为已知 <span class="arithmatex">\(P(X \in \mathcal{C}_g) = 1\)</span>，所以当 <span class="arithmatex">\(\delta \to 0\)</span> 时，<span class="arithmatex">\(P(X \in B_\delta) \to 0\)</span>。
+<strong>第二项</strong>：对于任何固定的 <span class="arithmatex">\(\delta &gt; 0\)</span>，由于已知 <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span>，当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(P(|X_n - X| \ge \delta) \to 0\)</span>。</p>
+<p>综合两项，令 <span class="arithmatex">\(n \to \infty\)</span> 再令 <span class="arithmatex">\(\delta \downarrow 0\)</span>，即可得证原概率趋于 0，即 <span class="arithmatex">\(g(X_n) \xrightarrow{P} g(X)\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">映射定理的经典应用示例 (Applications)</p>
+<p>Mapping Theorem 在推导复杂统计量的渐近分布时堪称“神兵利器”：</p>
+<ol>
+<li>
+<p><strong>卡方分布的引出</strong>：
+   若一维序列 <span class="arithmatex">\(X_n \xrightarrow{d} X \sim N(0,1)\)</span>，取连续映射 <span class="arithmatex">\(g(x) = x^2\)</span>，则立刻得到 <span class="arithmatex">\(X_n^2 \xrightarrow{d} \chi_1^2\)</span>。</p>
+</li>
+<li>
+<p><strong>柯西分布的引出</strong>：
+   若二维序列 <span class="arithmatex">\((X_n, Y_n)^\top \xrightarrow{d} N_2(0, I_2)\)</span>，取映射 <span class="arithmatex">\(g(x,y) = x/y\)</span>（在 <span class="arithmatex">\(y=0\)</span> 处不连续，但标准正态分布下 <span class="arithmatex">\(P(Y=0)=0\)</span>，满足几乎必然连续条件），则 <span class="arithmatex">\(X_n/Y_n \xrightarrow{d} Cauchy\)</span>。</p>
+</li>
+<li>
+<p><strong>样本方差的依概率收敛</strong>：
+   由大数定律，<span class="arithmatex">\((\overline{X}, \frac{1}{n}\sum X_i^2)^\top \xrightarrow{P} (\mu, \mu_2)^\top\)</span>。取连续函数 <span class="arithmatex">\(g(x,y) = y - x^2\)</span>，直接可得样本方差 <span class="arithmatex">\(S_n^2 = g(\overline{X}, \frac{1}{n}\sum X_i^2) \xrightarrow{P} \mu_2 - \mu^2 = \sigma^2\)</span>。</p>
+</li>
+<li>
+<p><strong>多元正态的仿射变换</strong>：
+   若 <span class="arithmatex">\(X_n \xrightarrow{d} N_p(\mu, \Sigma)\)</span>，对于任意常数矩阵 <span class="arithmatex">\(C \in \mathbb{R}^{m \times p}\)</span>，有 <span class="arithmatex">\(C X_n \xrightarrow{d} N_m(C\mu, C\Sigma C^\top)\)</span>。</p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
