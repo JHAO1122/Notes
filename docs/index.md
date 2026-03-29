@@ -49,7 +49,7 @@
 
 **🧮 纯数学基础 (Advanced Pure Mathematics)**
 
-* 实变函数 (Functions of a Real Variable) 
+* 实变函数 (Functions of Real Variables) 
 
 * 泛函分析 (Functional Analysis) 
 
