@@ -51,3 +51,10 @@ plugins:
         - locale: en
           name: English
           build: true
+
+
+
+extra:
+  analytics:
+    provider: google
+    property: G-MPD6ZGWYW1  
