@@ -19,7 +19,7 @@ tags:
 
 ## 📚 参考教材与文献 (References)
 
-本课程的理论框架极其深厚，用到的参考教材如下：
+本课程用到的参考教材如下：
 
 1. **A.W. van der Vaart**, *Asymptotic Statistics* (Cambridge University Press) 
 
