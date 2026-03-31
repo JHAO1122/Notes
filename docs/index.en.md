@@ -11,9 +11,13 @@
 Welcome to my academic notes homepage! I am an undergraduate student majoring in Statistics at the School of Mathematical Sciences, Zhejiang University (ZJU). Prior to this, I majored in Physics at the Chu Kochen Honors College, but transferred to the School of Mathematical Sciences to pursue my profound interest in strict mathematical training and long-term career goals. 
 
 Currently, my research interests are focused on the following areas:
+
 * **High-Dimensional Statistical Inference** (e.g., Knockoff Filters)
+
 * **Conformal Prediction**
+
 * **Probability Theory & Stochastic Processes** (Personal pursuit)
+
 * **Quantitative Finance** (Personal interest)
 
 ## 💡 Philosophy
@@ -25,31 +29,53 @@ My original intention in building this website is twofold. First, to systematica
 Below are the mathematics and statistics courses I have completed or am currently taking at ZJU:
 
 **📈 Probability & Statistics**
+
 * Stochastic Differential Equations 
+
 * Asymptotic Statistical Theory 
+
 * Stochastic Processes 
+
 * Mathematical Statistics 
+
 * Probability Theory 
+
 * Multivariate Statistical Analysis 
+
 * Regression Analysis 
+
 * Statistical Learning 
+
 * Statistical Computing 
+
 * Mathematical Practice
 
 **🧮 Advanced Pure Mathematics**
+
 * Functions of Real Variables 
+
 * Functional Analysis 
+
 * Point-Set Topology
+
 * Ordinary Differential Equations 
+
 * Honors Mathematical Analysis I & II
+
 * Mathematical Analysis III
+
 * Advanced Algebra & Analytic Geometry I & II
 
 **🌌 Applied Mathematics & Computation**
+
 * Mathematical Software 
+
 * Discrete Mathematics
+
 * Practical Optimization Algorithms 
+
 * Data Structures and Algorithms 
+
 * Intro to Uncertainty Quantification 
 
 ## 📬 Contact & Contribution
