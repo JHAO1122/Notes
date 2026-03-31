@@ -3,10 +3,13 @@
 在开始随机微分方程前，我们需要抛弃初等概率论中条件期望的定义方法，用测度论的语言严格定义条件期望。这是我们后续探索鞅理论、随机分析的基础。
 
 > 在测度论中，$\sigma$-代数是对“信息”的数学刻画
-对于集合 $\Omega$ 上的一个子集族 $\mathcal{F}$，若满足以下条件，则称其为一个 **$\sigma$-代数**：
-1.  **包含全集**：$\Omega \in \mathcal{F}$。
-2.  **对补集封闭**：若 $A \in \mathcal{F}$，则 $A^c \in \mathcal{F}$。
-3.  **对可列并封闭**：若 $A_1, A_2, \dots \in \mathcal{F}$，则 $\bigcup_{n=1}^\infty A_n \in \mathcal{F}$。
+> 对于集合 $\Omega$ 上的一个子集族 $\mathcal{F}$，若满足以下条件，则称其为一个 **$\sigma$-代数**：
+>
+> 1.  **包含全集**：$\Omega \in \mathcal{F}$。
+>
+> 2.  **对补集封闭**：若 $A \in \mathcal{F}$，则 $A^c \in \mathcal{F}$。
+>
+> 3.  **对可列并封闭**：若 $A_1, A_2, \dots \in \mathcal{F}$，则 $\bigcup_{n=1}^\infty A_n \in \mathcal{F}$。
 
 > Radon-Nikodym 定理：若测度 $\nu$ 关于 $P$ 是 **绝对连续 (Absolutely Continuous)** 的，即满足 $\nu \ll P$（若 $P(A)=0$ 则 $\nu(A)=0$），则存在一个 $P$-几乎处处唯一的 $\mathcal{F}$-可测函数 $f: \Omega \to [0, \infty)$，使得对于任意 $A \in \mathcal{F}$，有：
 > $$
