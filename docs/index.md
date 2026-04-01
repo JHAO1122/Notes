@@ -1,4 +1,4 @@
-# Welcome to Halo's Academic Space
+# Welcome to Jiahao's Academic Space
 
 > *"The theory of probability as mathematical discipline can and should be developed from axioms in exactly the same way as Geometry and Algebra."*
 > — **Andrey Kolmogorov** (安德雷·科尔莫哥洛夫)
@@ -18,7 +18,7 @@
 
 ## 💡 我的初衷 (Philosophy)
 
-建立这个网站，一方面是为了将我平时在草稿纸和 iPad 上凌乱的手写推导整合成系统的笔记便于我随时回顾；另一方面，我坚信开源与分享的力量，希望能给看到这个网站的陌生人一点帮助。
+建立这个网站，一方面是为了将我平时在草稿纸和 iPad 上零散的手写推导整合成系统的笔记便于我随时回顾；另一方面，我坚信开源与分享的力量，希望能给看到这个网站的陌生人一点帮助。
 
 
 ## 📖 核心课程 (Selected Coursework)
@@ -81,7 +81,7 @@
 
 ## 📬 交流与指正 (Contact & Contribution)
 
-本网站的内容是在AI（主要是Gemini 3 Pro）的辅助下结合个人上课（包括选课和浙江大学录播课程）、自学手稿完成，进度与难度匹配浙江大学数学科学学院本科生或研究生课程。且因本人英语水平和时间有限，翻译工作完全由AI完成。证明过程做到尽量补全，个别证明则进行思路说明或略过，请多多包涵！
+本网站的全部数学推导均源自我个人上课（包括选课与浙江大学录播课程）及课后自学时的手写草稿，进度与难度匹配浙江大学数学科学学院的本科生或研究生课程。为了提高效率，本站的 Markdown 格式排版、LaTeX 公式录入以及英文版的翻译工作，均使用了大语言模型（主要是 Gemini 3 Pro）作为辅助工具完成。
 
 数学推导难免存在 typo 或是思维盲区。如果你在阅读笔记时发现了任何错误，或者对统计推断、共形预测、概率论与随机过程甚至量化金融有共同的探讨兴趣，非常欢迎与我交流！
 

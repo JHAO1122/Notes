@@ -1,28 +1,30 @@
-# Welcome to Halo's Academic Space
+# Welcome to Jiahao's Academic Space
 
 > *"The theory of probability as mathematical discipline can and should be developed from axioms in exactly the same way as Geometry and Algebra."*
-> — **Andrey Kolmogorov**
+> — **Andrey Kolmogorov** (安德雷·科尔莫哥洛夫)
 
 > *"All models are wrong, but some are useful."*
-> — **George E.P. Box**
+> — **George E.P. Box** (乔治·博克斯)
 
 ## 👨‍💻 About Me
 
-Welcome to my academic notes homepage! I am an undergraduate student majoring in Statistics at the School of Mathematical Sciences, Zhejiang University (ZJU). Prior to this, I majored in Physics at the Chu Kochen Honors College, but transferred to the School of Mathematical Sciences to pursue my profound interest in strict mathematical training and long-term career goals. 
+Welcome to my academic notes homepage! I am an undergraduate student majoring in Statistics at the School of Mathematical Sciences, Zhejiang University (ZJU). Prior to this, I was a student in the Physics program of the Qiushi Science Class at Chu Kochen Honors College. I later transferred to the School of Mathematical Sciences driven by personal interest and long-term career goals.
 
-Currently, my research interests are focused on the following areas:
+Currently, my research interests focus on the following fields:
 
-* **High-Dimensional Statistical Inference** (e.g., Knockoff Filters)
+* **High-Dimensional Statistical Inference** (e.g., Knockoff Filter algorithms)
 
 * **Conformal Prediction**
 
-* **Probability Theory & Stochastic Processes** (Personal pursuit)
+* **Probability Theory and Stochastic Processes** (Personal pursuit)
 
 * **Quantitative Finance** (Personal interest)
 
+
 ## 💡 Philosophy
 
-My original intention in building this website is twofold. First, to systematically organize my messy, handwritten derivations from scratch paper and my iPad, making them easy to review at any time. Second, I firmly believe in the power of open source and sharing; I hope these notes can offer some inspiration or help to strangers who stumble upon this site.
+The purpose of this website is twofold. First, it serves as a platform to organize my scattered handwritten derivations from scratch paper and my iPad into systematic notes for future review. Second, I firmly believe in the power of open-source and knowledge sharing, hoping that these notes might provide some value to others in the community.
+
 
 ## 📖 Selected Coursework
 
@@ -62,9 +64,9 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 * Honors Mathematical Analysis I & II
 
-* Mathematical Analysis III
-
 * Advanced Algebra & Analytic Geometry I & II
+
+* Mathematical Analysis III
 
 **🌌 Applied Mathematics & Computation**
 
@@ -80,19 +82,20 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 ## 📬 Contact & Contribution
 
-The content of this website is completed with the assistance of AI (primarily Gemini 3.1 Pro), combined with my coursework (including selected ZJU courses and recorded lectures) and self-study manuscripts. The pace and difficulty align with the undergraduate or graduate courses at the School of Mathematical Sciences, ZJU. 
+All mathematical derivations on this website originate from my personal course-taking (including on-campus courses and recorded lectures from ZJU) and self-study manuscripts. The progress and difficulty are matched to the undergraduate and graduate curricula of the School of Mathematical Sciences at Zhejiang University.
 
-Due to my limited time, the English translation work is entirely handled by AI. I have tried my best to provide complete proofs; however, for certain proofs, I only outlined the main ideas or skipped them entirely. Your understanding is greatly appreciated!
+To improve efficiency, the Markdown formatting, LaTeX typesetting, and the translation of the English version were completed with the assistance of Large Language Models (primarily Gemini 3 Pro).
 
-Mathematical derivations are prone to typos or blind spots. If you find any errors while reading, or if you share a mutual interest in statistical inference, conformal prediction, probability theory, stochastic processes, or even quantitative finance, you are more than welcome to reach out and discuss!
+Mathematical derivations inevitably contain typos or blind spots. If you find any errors while reading, or if you share a mutual interest in statistical inference, conformal prediction, probability theory, stochastic processes, or quantitative finance, I would be more than happy to connect!
 
-If you find these notes slightly inspiring for your studies or derivations, please consider leaving a ⭐ (Star) for this project in the top right corner. This is the greatest encouragement for my commitment to open source and documentation!
+If you find these notes helpful or inspiring, please consider giving this project a ⭐ (Star) in the top right corner. It is the greatest encouragement for my commitment to open-source and documentation!
 
 ## 🌍 Beyond Math
 
-I deal with more than just probability measures and statistical methods—I am also a passionate football fan (*Visca el Barça!*). One of my bucket list items is to watch a World Cup knockout stage match featuring Spain or Argentina, or a UEFA Champions League match with FC Barcelona at Camp Nou.
+Beyond probability measures and statistical methods, I am a passionate football fan (*Visca el Barça!*). One of my bucket list items is to attend a World Cup knockout match involving Spain or Argentina, or a UEFA Champions League match featuring FC Barcelona at the Camp Nou.
 
 * **Email**: jiahaot1122@gmail.com
+
 * **GitHub**: [@jhao1122](https://github.com/jhao1122)
 
 ---
