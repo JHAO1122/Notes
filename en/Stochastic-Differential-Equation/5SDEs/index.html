@@ -8,17 +8,15 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/4Ito_integrate/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/5SDEs/">
       
       
-        <link rel="prev" href="../3stochastic_integrate/">
+        <link rel="prev" href="../4Ito_integrate/">
       
-      
-        <link rel="next" href="../5SDEs/">
       
       
         
-          <link rel="alternate" href="../../../Stochastic-Differential-Equation/4Ito_integrate/" hreflang="zh">
+          <link rel="alternate" href="../../../Stochastic-Differential-Equation/5SDEs/" hreflang="zh">
         
           <link rel="alternate" href="./" hreflang="en">
         
@@ -29,7 +27,7 @@
     
     
       
-        <title>Chapter 4: Itô Integral & Stochastic Differential - My Study Notes</title>
+        <title>Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations - My Study Notes</title>
       
     
     
@@ -90,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-4-ito-integral-stochastic-differential" class="md-skip">
+        <a href="#chapter-5-multivariate-ito-integral-and-stochastic-differential-equations" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 4: Itô Integral &amp; Stochastic Differential
+              Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations
             
           </span>
         </div>
@@ -171,7 +169,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../Stochastic-Differential-Equation/4Ito_integrate/" hreflang="zh" class="md-select__link">
+            <a href="../../../Stochastic-Differential-Equation/5SDEs/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
@@ -678,6 +676,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: Itô Integral &amp; Stochastic Differential
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -697,7 +723,7 @@
   <span class="md-ellipsis">
     
   
-    Chapter 4: Itô Integral &amp; Stochastic Differential
+    Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations
   
 
     
@@ -715,7 +741,7 @@
   <span class="md-ellipsis">
     
   
-    Chapter 4: Itô Integral &amp; Stochastic Differential
+    Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations
   
 
     
@@ -741,10 +767,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-the-ito-integral-of-adapted-processes-and-ito-isometry" class="md-nav__link">
+  <a href="#1-multivariate-ito-integral-and-isometry" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. The Itô Integral of Adapted Processes and Itô Isometry
+        1. Multivariate Itô Integral and Isometry
       
     </span>
   </a>
@@ -752,10 +778,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-indefinite-integrals-and-continuous-martingale-properties" class="md-nav__link">
+  <a href="#2-multivariate-itos-formula-and-multiplication-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Indefinite Integrals and Continuous Martingale Properties
+        2. Multivariate Itô's Formula and Multiplication Table
       
     </span>
   </a>
@@ -763,32 +789,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-ito-process-and-the-product-rule-integration-by-parts" class="md-nav__link">
+  <a href="#3-practical-solving-of-linear-stochastic-differential-equations-lsde" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Itô Process and the Product Rule (Integration by Parts)
+        3. Practical Solving of Linear Stochastic Differential Equations (LSDE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Practical Solving of Linear Stochastic Differential Equations (LSDE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-exponential-martingale-and-hermite-polynomials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Exponential Martingale and Hermite Polynomials
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-itos-formula-in-stochastic-differential-calculus" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#32-black-scholes-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Itô's Formula in Stochastic Differential Calculus
+        3.2 Black-Scholes Model
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#5-the-fokker-planck-equation" class="md-nav__link">
+  <a href="#4-brownian-bridge" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. The Fokker-Planck Equation
+        4. Brownian Bridge
       
     </span>
   </a>
@@ -799,34 +842,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5SDEs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -866,10 +881,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-the-ito-integral-of-adapted-processes-and-ito-isometry" class="md-nav__link">
+  <a href="#1-multivariate-ito-integral-and-isometry" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. The Itô Integral of Adapted Processes and Itô Isometry
+        1. Multivariate Itô Integral and Isometry
       
     </span>
   </a>
@@ -877,10 +892,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-indefinite-integrals-and-continuous-martingale-properties" class="md-nav__link">
+  <a href="#2-multivariate-itos-formula-and-multiplication-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Indefinite Integrals and Continuous Martingale Properties
+        2. Multivariate Itô's Formula and Multiplication Table
       
     </span>
   </a>
@@ -888,32 +903,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-ito-process-and-the-product-rule-integration-by-parts" class="md-nav__link">
+  <a href="#3-practical-solving-of-linear-stochastic-differential-equations-lsde" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Itô Process and the Product Rule (Integration by Parts)
+        3. Practical Solving of Linear Stochastic Differential Equations (LSDE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Practical Solving of Linear Stochastic Differential Equations (LSDE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-exponential-martingale-and-hermite-polynomials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Exponential Martingale and Hermite Polynomials
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-itos-formula-in-stochastic-differential-calculus" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#32-black-scholes-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Itô's Formula in Stochastic Differential Calculus
+        3.2 Black-Scholes Model
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#5-the-fokker-planck-equation" class="md-nav__link">
+  <a href="#4-brownian-bridge" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. The Fokker-Planck Equation
+        4. Brownian Bridge
       
     </span>
   </a>
@@ -940,254 +972,249 @@
   
 
 
-<h1 id="chapter-4-ito-integral-stochastic-differential">Chapter 4: Itô Integral &amp; Stochastic Differential</h1>
-<p>In the previous chapter, we extended the integral to the <span class="arithmatex">\(L^2\)</span> space. Now, we formally define the Itô integral for <strong>stochastic processes</strong> and establish a mathematical system distinct from classical calculus—<strong>Itô Calculus</strong>.</p>
-<h2 id="1-the-ito-integral-of-adapted-processes-and-ito-isometry">1. The Itô Integral of Adapted Processes and Itô Isometry</h2>
-<p>For a stochastic process <span class="arithmatex">\(G(t, \omega)\)</span>, due to the rough paths of Brownian motion <span class="arithmatex">\(W(t)\)</span>, we cannot employ the pointwise-defined Riemann-Stieltjes integral. Instead, we must define it based on the left endpoints of a time grid (without knowledge of the future).</p>
+<h1 id="chapter-5-multivariate-ito-integral-and-stochastic-differential-equations">Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations</h1>
+<p>In previous chapters, we established the Itô integral theory under one-dimensional Brownian motion. However, in practical financial mathematics and statistical physics, systems are often driven by multiple independent noise sources. In this chapter, we will extend the Itô integral to high-dimensional spaces, establish the multivariate Itô's formula, and formally introduce the core tool for characterizing continuous-time stochastic dynamic systems: <strong>Stochastic Differential Equations (SDEs)</strong>.</p>
+<h2 id="1-multivariate-ito-integral-and-isometry">1. Multivariate Itô Integral and Isometry</h2>
+<p>We first define multi-dimensional Brownian motion and its corresponding filtration.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Definition: The Itô Integral</p>
-<p>Let <span class="arithmatex">\(\{W(t)\}_{t \ge 0}\)</span> be a standard Brownian motion, and <span class="arithmatex">\(\{\mathcal{F}(t)\}\)</span> be its filtration.
-Assume the stochastic process <span class="arithmatex">\(G(t) \in L^2(0, T)\)</span> and <span class="arithmatex">\(G(t)\)</span> is an <strong>Adapted Process</strong> (i.e., its value at time <span class="arithmatex">\(t\)</span> depends only on the historical information <span class="arithmatex">\(\mathcal{F}(t)\)</span>).</p>
-<p>For a partition <span class="arithmatex">\(P = \{0 = t_0 &lt; t_1 &lt; \dots &lt; t_m = T\}\)</span> of the interval <span class="arithmatex">\([0, T]\)</span>, define its Riemann sum as:</p>
+<p class="admonition-title">Definition: Multivariate Brownian Motion and Adapted Matrix Process</p>
+<p>Let <span class="arithmatex">\(W(t) = (W^1(t), W^2(t), \dots, W^m(t))^T\)</span> be an <span class="arithmatex">\(m\)</span>-dimensional standard Brownian motion, where each component <span class="arithmatex">\(W^j(t)\)</span> is an independent one-dimensional standard Brownian motion.</p>
+<p>Define the filtration generated by it as <span class="arithmatex">\(\mathcal{F}(t) = \sigma\{W(s) \mid 0 \le s \le t\}\)</span>. For any <span class="arithmatex">\(t &lt; s\)</span>, the future increment <span class="arithmatex">\(W(s) - W(t)\)</span> is completely independent of <span class="arithmatex">\(\mathcal{F}(t)\)</span>.</p>
+<p>Let <span class="arithmatex">\(G(t, \omega) = (G^{ij}(t, \omega))_{n \times m}\)</span> be an <span class="arithmatex">\(n \times m\)</span> stochastic matrix process. If each component <span class="arithmatex">\(G^{ij}(t)\)</span> of <span class="arithmatex">\(G(t)\)</span> is <span class="arithmatex">\(\mathcal{F}(t)\)</span>-adapted and satisfies the square-integrable condition:</p>
 <div class="arithmatex">\[
-R_m = \sum_{k=0}^{m-1} G(t_k) \big( W(t_{k+1}) - W(t_k) \big)
+E\left[ \int_0^T \sum_{i=1}^n \sum_{j=1}^m (G^{ij}(t))^2 dt \right] &lt; \infty
 \]</div>
-<p>As the mesh size <span class="arithmatex">\(|P| \to 0\)</span>, if this sum converges in the sense of <span class="arithmatex">\(L^2(\Omega, P)\)</span>, its limit is defined as the <strong>Itô integral</strong> of <span class="arithmatex">\(G(t)\)</span> with respect to Brownian motion:</p>
-<div class="arithmatex">\[
-\int_0^T G(t) dW(t) = \lim_{|P| \to 0} \sum_{k=0}^{m-1} G(t_k) \big( W(t_{k+1}) - W(t_k) \big)
-\]</div>
+<p>Then the matrix process is denoted as <span class="arithmatex">\(G \in L_{n \times m}^2(0, T)\)</span>.</p>
 </div>
-<p>After defining this integral using the approximation method of simple functions (step processes), it possesses the following properties:</p>
+<p>For such matrix processes, the multivariate Itô integral is naturally defined in vector form.</p>
 <div class="admonition info">
-<p class="admonition-title">Theorem 1: Core Properties of the Itô Integral</p>
-<p>Let <span class="arithmatex">\(G(t), H(t) \in L^2(0, T)\)</span> both be adapted processes, and <span class="arithmatex">\(a, b \in \mathbb{R}\)</span> be constants.</p>
-<p><strong>(1) Linearity</strong>:</p>
+<p class="admonition-title">Definition and Theorem: Multivariate Itô Integral</p>
+<p>For <span class="arithmatex">\(G \in L_{n \times m}^2(0, T)\)</span>, we define the multivariate Itô integral <span class="arithmatex">\(\int_0^T G dW\)</span> as an <span class="arithmatex">\(n\)</span>-dimensional column vector, where its <span class="arithmatex">\(i\)</span>-th component is defined as:</p>
 <div class="arithmatex">\[
-\int_0^T (aG(t) + bH(t)) dW(t) = a \int_0^T G(t) dW(t) + b \int_0^T H(t) dW(t) \quad a.s.
+\left( \int_0^T G dW \right)^i = \sum_{j=1}^m \int_0^T G^{ij} dW^j
 \]</div>
-<p><strong>(2) Zero Expectation</strong>:</p>
+<p>Under this definition, the multivariate Itô integral still perfectly preserves the martingale and isometric properties:</p>
+<p><strong>(1) Zero Expectation</strong>: <span class="arithmatex">\(E\left[ \int_0^T G dW \right] = 0\)</span> (i.e., the expectation of each component is 0).</p>
+<p><strong>(2) Multivariate Itô Isometry</strong>: Define the norm of the matrix as <span class="arithmatex">\(|G| = \sqrt{\sum_{i,j} (G^{ij})^2}\)</span>, then we have:</p>
 <div class="arithmatex">\[
-E\left[ \int_0^T G(t) dW(t) \right] = 0
-\]</div>
-<p><strong>(3) Itô Isometry</strong>:</p>
-<div class="arithmatex">\[
-E\left[ \left( \int_0^T G(t) dW(t) \right)^2 \right] = \int_0^T E[G(t)^2] dt
+E\left[ \left| \int_0^T G dW \right|^2 \right] = E\left[ \int_0^T |G(t)|^2 dt \right]
 \]</div>
 <details class="proof">
-<summary>Rigorous Proof of Zero Expectation and Itô Isometry (Click to expand)</summary>
-<p>We use simple functions (step functions) to prove these properties. Let <span class="arithmatex">\(G_k = G(t_k)\)</span>.</p>
-<p><strong>1. Proof of Zero Expectation</strong>:</p>
+<summary>Rigorous Proof of Multivariate Itô Isometry (Click to expand)</summary>
+<p>By the definition of the vector norm, the squared magnitude of the integral can be written as the sum of the squares of its components:</p>
 <div class="arithmatex">\[
-E\left[ \sum_{k} G_k \big(W(t_{k+1}) - W(t_k)\big) \right] = \sum_k E\Big[ G_k \big(W(t_{k+1}) - W(t_k)\big) \Big]
+E\left[ \left| \int_0^T G dW \right|^2 \right] = E\left[ \sum_{i=1}^n \left( \sum_{j=1}^m \int_0^T G^{ij} dW^j \right)^2 \right]
 \]</div>
-<p>Since <span class="arithmatex">\(G(t)\)</span> is an adapted process, <span class="arithmatex">\(G_k\)</span> is measurable with respect to <span class="arithmatex">\(\mathcal{F}(t_k)\)</span>; meanwhile, Brownian motion has independent increments, so the increment <span class="arithmatex">\(\Delta W_k = W(t_{k+1}) - W(t_k)\)</span> is <strong>completely independent</strong> of <span class="arithmatex">\(\mathcal{F}(t_k)\)</span>. Using the independent multiplication property of expectations (or conditional expectation):</p>
+<p>Expand the internal squared term into a double summation:</p>
 <div class="arithmatex">\[
-E[G_k \Delta W_k] = E[G_k] \cdot E[\Delta W_k] = E[G_k] \cdot 0 = 0
+= \sum_{i=1}^n E\left[ \sum_{j=1}^m \int_0^T G^{ij} dW^j \sum_{k=1}^m \int_0^T G^{ik} dW^k \right]
 \]</div>
-<p>Therefore, the expectation of the sum is 0.</p>
-<p><strong>2. Proof of Itô Isometry</strong>:</p>
-<p>Expanding the expectation of the squared integral (using Fubini's Theorem to swap expectation and summation):</p>
+<p>Since summation and expectation are linear operators, we swap their order and focus on the cross terms:</p>
 <div class="arithmatex">\[
-E\left[ \left(\sum_k G_k \Delta W_k \right)^2 \right] = E\left[ \sum_{k} \sum_{j} G_k G_j \Delta W_k \Delta W_j \right]
+= \sum_{i=1}^n \sum_{j=1}^m \sum_{k=1}^m E\left[ \int_0^T G^{ij} dW^j \int_0^T G^{ik} dW^k \right]
 \]</div>
-<p>Split the double summation into three parts: <span class="arithmatex">\(k &gt; j\)</span>, <span class="arithmatex">\(k &lt; j\)</span>, and <span class="arithmatex">\(k = j\)</span>.</p>
-<p><strong>Analyzing the cross terms (<span class="arithmatex">\(k \neq j\)</span>)</strong>: Without loss of generality, assume <span class="arithmatex">\(k &gt; j\)</span>. The time points satisfy <span class="arithmatex">\(t_j &lt; t_{j+1} \le t_k &lt; t_{k+1}\)</span>.
-Among the four random variables <span class="arithmatex">\(G_k, G_j, \Delta W_j, \Delta W_k\)</span>, the first three belong entirely to the historical information <span class="arithmatex">\(\mathcal{F}(t_k)\)</span>, while the last increment <span class="arithmatex">\(\Delta W_k\)</span> occurs after <span class="arithmatex">\(t_k\)</span> and is independent of <span class="arithmatex">\(\mathcal{F}(t_k)\)</span>.
-Using the Tower Property, we first take the conditional expectation with respect to <span class="arithmatex">\(\mathcal{F}(t_k)\)</span>:</p>
+<p><strong>Key Point: Independence between Brownian motion components</strong>.
+When <span class="arithmatex">\(j \neq k\)</span>, <span class="arithmatex">\(W^j\)</span> and <span class="arithmatex">\(W^k\)</span> are independent Brownian motions. Using the polarization identity of the one-dimensional stochastic integral and the independent increments property, the cross expectation of this part is <span class="arithmatex">\(0\)</span>.</p>
+<p>Therefore, non-zero terms only exist on the diagonal where <span class="arithmatex">\(j = k\)</span>:</p>
 <div class="arithmatex">\[
-E\Big[ G_k G_j \Delta W_j \Delta W_k \Big] = E\Big[ E\big[ G_k G_j \Delta W_j \Delta W_k \mid \mathcal{F}(t_k) \big] \Big]
+= \sum_{i=1}^n \sum_{j=1}^m E\left[ \left( \int_0^T G^{ij} dW^j \right)^2 \right]
 \]</div>
-<p>Since <span class="arithmatex">\(G_k, G_j, \Delta W_j\)</span> are known, they can be pulled out:</p>
+<p>Apply the one-dimensional Itô isometry <span class="arithmatex">\(E[(\int G^{ij} dW^j)^2] = E[\int (G^{ij})^2 dt]\)</span> to each term:</p>
 <div class="arithmatex">\[
-= E\Big[ G_k G_j \Delta W_j \underbrace{ E[\Delta W_k \mid \mathcal{F}(t_k)] }_{= 0} \Big] = 0
+= \sum_{i=1}^n \sum_{j=1}^m E\left[ \int_0^T (G^{ij})^2 dt \right] = E\left[ \int_0^T \sum_{i,j} (G^{ij})^2 dt \right] = E\left[ \int_0^T |G(t)|^2 dt \right]
 \]</div>
-<p>Thus, the expectations of all cross terms are exactly 0.</p>
-<p><strong>Analyzing the diagonal terms (<span class="arithmatex">\(k = j\)</span>)</strong>:</p>
-<p>Only the squared terms on the diagonal remain:</p>
-<div class="arithmatex">\[
-\sum_{k} E\Big[ G_k^2 (\Delta W_k)^2 \Big]
-\]</div>
-<p>Again, using conditional expectation, we extract the squared term of <span class="arithmatex">\(\Delta W_k\)</span>:</p>
-<div class="arithmatex">\[
-= \sum_{k} E\Big[ E\big[ G_k^2 (\Delta W_k)^2 \mid \mathcal{F}(t_k) \big] \Big] = \sum_k E\Big[ G_k^2 E\big[ (\Delta W_k)^2 \mid \mathcal{F}(t_k) \big] \Big]
-\]</div>
-<p>Since the increments are independent and the variance is <span class="arithmatex">\(\Delta t_k = t_{k+1} - t_k\)</span>, we have <span class="arithmatex">\(E[(\Delta W_k)^2 | \mathcal{F}(t_k)] = \Delta t_k\)</span>. Substituting this yields:</p>
-<div class="arithmatex">\[
-= \sum_k E[G_k^2] (t_{k+1} - t_k)
-\]</div>
-<p>As <span class="arithmatex">\(|P| \to 0\)</span>, this Riemann sum converges directly to the Riemann integral <span class="arithmatex">\(\int_0^T E[G(t)^2] dt\)</span>. Itô Isometry is proven! <span class="arithmatex">\(\square\)</span></p>
-<blockquote>
-<p>Approximating to the <span class="arithmatex">\(L^2(0, T)\)</span> space with simple functions completes the argument.</p>
-</blockquote>
+<p>The proof is complete. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <hr />
-<h2 id="2-indefinite-integrals-and-continuous-martingale-properties">2. Indefinite Integrals and Continuous Martingale Properties</h2>
-<p>If we replace the upper limit of the integral <span class="arithmatex">\(T\)</span> with a variable <span class="arithmatex">\(t\)</span>, we obtain the <strong>Indefinite Integral</strong> of a stochastic process. This fundamentally defines a new stochastic process.</p>
+<h2 id="2-multivariate-itos-formula-and-multiplication-table">2. Multivariate Itô's Formula and Multiplication Table</h2>
+<p>Before proceeding to solve stochastic differential equations, we must master the "chain rule" in the multi-dimensional case.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Definition: Itô Indefinite Integral</p>
-<p>Let <span class="arithmatex">\(G \in L^2(0, T)\)</span>, define its indefinite integral as the stochastic process <span class="arithmatex">\(I(t)\)</span>:</p>
-<div class="arithmatex">\[
-I(t) = \int_0^t G(s) dW(s), \quad 0 \le t \le T
-\]</div>
-<p>Obviously, the initial condition is <span class="arithmatex">\(I(0) = 0\)</span>.</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Theorem: The Itô Integral is a Continuous Square-Integrable Martingale</p>
-<p>The indefinite integral process <span class="arithmatex">\(\{I(t)\}_{t \ge 0}\)</span> defined by the Itô integral has perfectly elegant mathematical properties:
-Not only does it almost surely possess <strong>continuous sample paths</strong>, but it is also a <strong>Martingale</strong> with respect to the natural filtration.</p>
-<details class="proof">
-<summary>Proof of Martingale Property (Click to expand)</summary>
-<p>For any <span class="arithmatex">\(0 \le s \le t \le T\)</span>, we need to prove <span class="arithmatex">\(E[I(t) \mid \mathcal{F}(s)] = I(s)\)</span> a.s.</p>
-<p>Split the interval <span class="arithmatex">\([0, t]\)</span> at point <span class="arithmatex">\(s\)</span>:</p>
-<div class="arithmatex">\[
-I(t) = \int_0^s G(\tau) dW(\tau) + \int_s^t G(\tau) dW(\tau) = I(s) + \int_s^t G(\tau) dW(\tau)
-\]</div>
-<p>Take the conditional expectation with respect to <span class="arithmatex">\(\mathcal{F}(s)\)</span> on both sides:</p>
-<div class="arithmatex">\[
-E[I(t) \mid \mathcal{F}(s)] = E\left[ I(s) + \int_s^t G(\tau) dW(\tau) \bigg| \mathcal{F}(s) \right]
-\]</div>
-<p>Since the integration domain of <span class="arithmatex">\(I(s)\)</span> is within <span class="arithmatex">\([0, s]\)</span>, it is clearly <span class="arithmatex">\(\mathcal{F}(s)\)</span>-measurable, so it is "known and therefore a constant" (pulled out directly).
-For the second part, using the conditional version of the zero expectation property of the Itô integral:</p>
-<div class="arithmatex">\[
-= I(s) + E\left[ \int_s^t G(\tau) dW(\tau) \bigg| \mathcal{F}(s) \right] = I(s) + 0 = I(s)
-\]</div>
-<p>Therefore, <span class="arithmatex">\(I(t)\)</span> is a martingale.</p>
-<p><em>(Note: The rigorous proof of continuity requires using Doob's maximal inequality and the Borel-Cantelli lemma to construct the uniform convergence of an <span class="arithmatex">\(L^2\)</span> Cauchy sequence. This is mentioned in the manuscript, and the idea is extremely similar to the construction of Brownian motion; the tedious analytic details are omitted here.)</em> <span class="arithmatex">\(\square\)</span></p>
-</details>
-</div>
-<hr />
-<h2 id="3-ito-process-and-the-product-rule-integration-by-parts">3. Itô Process and the Product Rule (Integration by Parts)</h2>
-<p>Having established the integral, the next step is to study its differential form.</p>
-<div class="admonition abstract">
-<p class="admonition-title">Definition: Itô Process and SDE</p>
-<p>Let <span class="arithmatex">\(F(t) \in L^1(0,T)\)</span> and <span class="arithmatex">\(G(t) \in L^2(0,T)\)</span> both be adapted processes. Define the stochastic process <span class="arithmatex">\(X(t)\)</span>:</p>
-<div class="arithmatex">\[
-X(t) = X(0) + \int_0^t F(s) ds + \int_0^t G(s) dW(s)
-\]</div>
-<p>The above equation is typically written in the intuitive form of a <strong>Stochastic Differential Equation (SDE)</strong>:</p>
+<p class="admonition-title">Definition: Multivariate Itô Process</p>
+<p>The differential form of an <span class="arithmatex">\(n\)</span>-dimensional Itô process <span class="arithmatex">\(X(t) = (X^1(t), \dots, X^n(t))^T\)</span> is defined as:</p>
 <div class="arithmatex">\[
 dX(t) = F(t) dt + G(t) dW(t)
 \]</div>
-<p>Here, <span class="arithmatex">\(F(t)dt\)</span> is called the <strong>Drift</strong> term, representing the deterministic trend; <span class="arithmatex">\(G(t)dW(t)\)</span> is called the <strong>Diffusion</strong> term, representing the stochastic perturbation.</p>
+<p>Written in component form, it is:</p>
+<div class="arithmatex">\[
+dX^i(t) = F^i(t) dt + \sum_{j=1}^m G^{ij}(t) dW^j(t), \quad i = 1, \dots, n
+\]</div>
+<p>where the drift term <span class="arithmatex">\(F \in L_n^1(0, T)\)</span> and the diffusion term <span class="arithmatex">\(G \in L_{n \times m}^2(0, T)\)</span>.</p>
 </div>
-<p>In classical Leibniz calculus, <span class="arithmatex">\(d(X_1 X_2) = X_1 dX_2 + X_2 dX_1\)</span>. However, in stochastic analysis, because the quadratic variation of Brownian motion is not 0, we must introduce an additional <strong>quadratic correction term</strong>.</p>
+<p>The core of handling multivariate stochastic differentials lies in the extended version of the <strong>Itô Multiplication Table</strong>. Since different Brownian motion components are independent, their "quadratic cross-variation" is 0.</p>
 <div class="admonition info">
-<p class="admonition-title">Theorem: Itô Product Rule</p>
-<p>Assume we have two Itô processes <span class="arithmatex">\(dX_i = F_i dt + G_i dW \quad (i=1,2)\)</span>.
-Then their product <span class="arithmatex">\(X_1(t)X_2(t)\)</span> is also an Itô process and satisfies:</p>
+<p class="admonition-title">Theorem: Multivariate Itô Multiplication Rule</p>
+<p>For the time differential <span class="arithmatex">\(dt\)</span> and Brownian motion differentials <span class="arithmatex">\(dW^j, dW^k\)</span> of different dimensions, we have the following multiplication rules:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\((dt)^2 = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(dt \cdot dW^j = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(dW^j \cdot dW^k = \delta_{jk} dt = \begin{cases} dt, &amp; j = k \\ 0, &amp; j \neq k \end{cases}\)</span></p>
+</li>
+</ul>
+<p>Using the above rules, we can directly derive the <strong>Product Rule</strong> for two one-dimensional Itô processes <span class="arithmatex">\(X_1, X_2\)</span>:</p>
 <div class="arithmatex">\[
 d(X_1 X_2) = X_1 dX_2 + X_2 dX_1 + dX_1 dX_2
 \]</div>
-<p>Here, we need to apply the following famous <strong>Itô Multiplication Table</strong> to expand <span class="arithmatex">\(dX_1 dX_2\)</span>:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><span class="arithmatex">\(\times\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(dt\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(dW\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong><span class="arithmatex">\(dt\)</span></strong></td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong><span class="arithmatex">\(dW\)</span></strong></td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;"><span class="arithmatex">\(dt\)</span></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><em>(Core intuition: Because <span class="arithmatex">\(dW \sim \sqrt{dt}\)</span>, we have <span class="arithmatex">\((dW)^2 = dt\)</span>. Terms containing powers of <span class="arithmatex">\(dt\)</span> higher than one become higher-order infinitesimals in the limit, meaning they are 0).</em></p>
-</blockquote>
-<p><strong>Direct application of expansion</strong>:</p>
-<div class="arithmatex">\[
-dX_1 dX_2 = (F_1 dt + G_1 dW)(F_2 dt + G_2 dW) = G_1 G_2 (dW)^2 = G_1 G_2 dt
-\]</div>
-<p>Therefore, the fully expanded form is:</p>
-<div class="arithmatex">\[
-d(X_1 X_2) = (X_1 F_2 + X_2 F_1 + G_1 G_2) dt + (X_1 G_2 + X_2 G_1) dW
-\]</div>
-<blockquote>
-<p><strong>Example 1:</strong> <span class="arithmatex">\(d(W^2) = W dW + W dW + (dW)^2 = 2W dW + dt\)</span></p>
-<p>(From this, the integral form can be immediately derived: <span class="arithmatex">\(\int_0^t W dW = \frac{1}{2}W^2(t) - \frac{1}{2}t\)</span>, which perfectly aligns with the Riemann sum limit from the previous chapter!)</p>
-<p><strong>Example 2:</strong> <span class="arithmatex">\(d(tW) = t dW + W dt + dt \cdot dW = t dW + W dt\)</span></p>
-</blockquote>
-</div>
-<hr />
-<h2 id="4-itos-formula-in-stochastic-differential-calculus">4. Itô's Formula in Stochastic Differential Calculus</h2>
-<p>Itô's formula is the "Chain Rule" of the entire stochastic calculus and can be used to solve equations for various stochastic phenomena.</p>
-<div class="admonition success">
-<p class="admonition-title">Theorem: Itô's Formula</p>
-<p>Let <span class="arithmatex">\(X(t)\)</span> be an Itô process, <span class="arithmatex">\(dX(t) = F dt + G dW\)</span>.
-Let <span class="arithmatex">\(U(x, t): \mathbb{R} \times [0, T] \to \mathbb{R}\)</span> be a twice continuously differentiable (<span class="arithmatex">\(C^{2,1}\)</span>) deterministic function.
-Define a new stochastic process <span class="arithmatex">\(Y(t) = U(X(t), t)\)</span>. Then the stochastic differential of <span class="arithmatex">\(Y(t)\)</span> satisfies the truncated Taylor expansion up to the second order:</p>
-<div class="arithmatex">\[
-dU(X(t), t) = \frac{\partial U}{\partial t} dt + \frac{\partial U}{\partial x} dX + \frac{1}{2} \frac{\partial^2 U}{\partial x^2} (dX)^2
-\]</div>
-<p>Substituting the expression for <span class="arithmatex">\(dX\)</span> and the Itô multiplication table rule <span class="arithmatex">\((dX)^2 = G^2 dt\)</span> and rearranging yields the standard <strong>Itô's Formula</strong>:</p>
-<div class="arithmatex">\[
-dU(X(t), t) = \left( \frac{\partial U}{\partial t} + \frac{\partial U}{\partial x} F + \frac{1}{2} \frac{\partial^2 U}{\partial x^2} G^2 \right) dt + \frac{\partial U}{\partial x} G dW
-\]</div>
 <details class="proof">
-<summary>Example Application of Itô's Formula to Polynomials (Click to expand)</summary>
-<p>We derive and verify this for the polynomial <span class="arithmatex">\(f(x) = x^m\)</span>.
-By Itô's formula:</p>
+<summary>Derivation of the Cross Term <span class="arithmatex">\(dX_1 dX_2\)</span> in the Product Rule (Click to expand)</summary>
+<p>Let the two processes be <span class="arithmatex">\(dX_1 = F_1 dt + \sum_j G_1^j dW^j\)</span> and <span class="arithmatex">\(dX_2 = F_2 dt + \sum_k G_2^k dW^k\)</span>.
+Expand their product:</p>
 <div class="arithmatex">\[
-df(X) = f'(X) dX + \frac{1}{2} f''(X) (dX)^2
+dX_1 dX_2 = \left( F_1 dt + \sum_j G_1^j dW^j \right) \left( F_2 dt + \sum_k G_2^k dW^k \right)
 \]</div>
-<p>Substitute the derivatives <span class="arithmatex">\(f'(x) = m x^{m-1}\)</span> and <span class="arithmatex">\(f''(x) = m(m-1) x^{m-2}\)</span>:</p>
+<p>According to the multivariate multiplication table, all quadratic terms containing <span class="arithmatex">\(dt\)</span> (such as <span class="arithmatex">\((dt)^2, dt \cdot dW\)</span>) are treated as higher-order infinitesimals and are directly eliminated:</p>
 <div class="arithmatex">\[
-d(X^m) = m X^{m-1} dX + \frac{1}{2} m(m-1) X^{m-2} G^2 dt
+= \sum_{j=1}^m \sum_{k=1}^m G_1^j G_2^k dW^j dW^k
 \]</div>
-<p>This is perfectly consistent with the conclusion derived step-by-step using the product rule <span class="arithmatex">\(d(x \cdot x^{k-1})\)</span> earlier, confirming the self-consistency of the algebraic system of stochastic calculus operators.</p>
+<p>Since <span class="arithmatex">\(dW^j dW^k = \delta_{jk} dt\)</span>, which is non-zero only when <span class="arithmatex">\(j=k\)</span>, the summation collapses into a single sum:</p>
+<div class="arithmatex">\[
+= \sum_{j=1}^m G_1^j G_2^j dt
+\]</div>
+<p>Writing this in the form of a vector inner product yields <span class="arithmatex">\((G_1^T G_2) dt\)</span>. This is the correction term brought by the quadratic variation. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
+<p>Based on the multivariate multiplication table, we can generalize the Taylor expansion to obtain the most important cornerstone of modern stochastic analysis.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem: Multivariate Itô's Formula</p>
+<p>Let <span class="arithmatex">\(X(t)\)</span> be an <span class="arithmatex">\(n\)</span>-dimensional Itô process, and <span class="arithmatex">\(U(t, x_1, \dots, x_n)\)</span> be a multivariate scalar function from <span class="arithmatex">\(\mathbb{R}^+ \times \mathbb{R}^n \to \mathbb{R}\)</span> with <span class="arithmatex">\(C^{1,2}\)</span> continuous partial derivatives.
+Then the composite stochastic process <span class="arithmatex">\(U(t, X(t))\)</span> is still an Itô process, and its differential is:</p>
+<div class="arithmatex">\[
+dU(t, X(t)) = \frac{\partial U}{\partial t} dt + \sum_{i=1}^n \frac{\partial U}{\partial x^i} dX^i + \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^n \frac{\partial^2 U}{\partial x^i \partial x^j} dX^i dX^j
+\]</div>
+<p>If we expand <span class="arithmatex">\(dX^i\)</span> and substitute <span class="arithmatex">\(dW^j dW^k = \delta_{jk} dt\)</span>, the above formula can be written in a more compact matrix trace form:</p>
+<div class="arithmatex">\[
+dU = \left( U_t + \nabla U^T F + \frac{1}{2} \text{Tr}(G^T D_x^2 U G) \right) dt + (\nabla U^T G) dW
+\]</div>
+<p>where <span class="arithmatex">\(\nabla U\)</span> is the spatial gradient vector, and <span class="arithmatex">\(D_x^2 U\)</span> is the Hessian matrix.</p>
+</div>
 <hr />
-<h2 id="5-the-fokker-planck-equation">5. The Fokker-Planck Equation</h2>
-<p>With Itô's formula, we can study not only microscopic individual stochastic paths but also directly derive the <strong>deterministic laws governing macroscopic probability density functions</strong>. This is the Fokker-Planck equation, also known as the Kolmogorov Forward Equation (KFE).</p>
+<h2 id="3-practical-solving-of-linear-stochastic-differential-equations-lsde">3. Practical Solving of Linear Stochastic Differential Equations (LSDE)</h2>
+<p>We now formally consider stochastic differential equations of the form <span class="arithmatex">\(dX(t) = b(t, X(t)) dt + \sigma(t, X(t)) dW(t)\)</span>. Since explicit solutions for non-linear SDEs often do not exist, this section will focus on analyzing a class of equations that dominate the field of finance: <strong>Linear Stochastic Differential Equations (Linear SDEs)</strong>.</p>
+<h3 id="31-exponential-martingale-and-hermite-polynomials">3.1 Exponential Martingale and Hermite Polynomials</h3>
+<p>Consider the simplest homogeneous linear equation, where its drift term is 0:</p>
+<div class="arithmatex">\[
+\begin{cases} dY(t) = \lambda Y(t) dW(t) \\ Y(0) = 1 \end{cases}
+\]</div>
+<p>This represents that the stochastic fluctuation of the system is proportional to the current state of the system.</p>
+<div class="admonition tip">
+<p class="admonition-title">Solving Method (Reverse Construction using Itô's Formula)</p>
+<p>We guess the solution takes an exponential form <span class="arithmatex">\(Y(t) = e^{f(t, W(t))}\)</span>. To offset the correction term <span class="arithmatex">\(\frac{1}{2} (dW)^2 = \frac{1}{2}dt\)</span> generated when expanding with Itô's formula, we pre-add a "compensation term" into the exponent.</p>
+<p>Define the function <span class="arithmatex">\(U(x, t) = e^{\lambda x - \frac{\lambda^2}{2}t}\)</span>, and replace <span class="arithmatex">\(x\)</span> with <span class="arithmatex">\(W(t)\)</span>. Apply the one-dimensional Itô's formula:</p>
+<div class="arithmatex">\[
+dU(W(t), t) = \frac{\partial U}{\partial t} dt + \frac{\partial U}{\partial x} dW + \frac{1}{2} \frac{\partial^2 U}{\partial x^2} (dW)^2
+\]</div>
+<p>Substitute the partial derivatives <span class="arithmatex">\(U_t = -\frac{\lambda^2}{2} U\)</span>, <span class="arithmatex">\(U_x = \lambda U\)</span>, <span class="arithmatex">\(U_{xx} = \lambda^2 U\)</span>:</p>
+<div class="arithmatex">\[
+dY(t) = -\frac{\lambda^2}{2} Y(t) dt + \lambda Y(t) dW(t) + \frac{1}{2} \lambda^2 Y(t) dt = \lambda Y(t) dW(t)
+\]</div>
+<p>This perfectly matches the target equation. Therefore, its solution is the <strong>Exponential Martingale</strong>:</p>
+<div class="arithmatex">\[
+Y(t) = e^{\lambda W(t) - \frac{\lambda^2}{2}t}
+\]</div>
+</div>
+<p>This solution has profound implications in probability theory; its Taylor expansion is directly linked to orthogonal polynomials.</p>
+<details class="note">
+<summary>Extension: Recurrence Relation between Hermite Polynomials and Stochastic Integrals</summary>
+<p>Recall the generating function formula for Hermite polynomials in probability theory:</p>
+<div class="arithmatex">\[
+e^{\lambda x - \frac{\lambda^2}{2}t} = \sum_{n=0}^{\infty} \frac{\lambda^n}{n!} H_n(x, t) = \sum_{n=0}^{\infty} \lambda^n h_n(x, t)
+\]</div>
+<p>We compare the integral form of the solution <span class="arithmatex">\(Y(t)\)</span> with its series expansion form. Given <span class="arithmatex">\(Y(t) = 1 + \lambda \int_0^t Y(s) dW(s)\)</span>, substitute the expansion:</p>
+<div class="arithmatex">\[
+\sum_{n=0}^{\infty} \lambda^n h_n(W(t), t) = 1 + \lambda \int_0^t \sum_{n=0}^{\infty} \lambda^n h_n(W(s), s) dW(s)
+\]</div>
+<p>By comparing the coefficients of the same power <span class="arithmatex">\(\lambda^{n+1}\)</span> on both sides of the equation, we obtain an extremely elegant integral recurrence formula regarding Brownian motion:</p>
+<div class="arithmatex">\[
+h_{n+1}(W(t), t) = \int_0^t h_n(W(s), s) dW(s)
+\]</div>
+<p>This formula demonstrates how repeatedly performing stochastic integration on Brownian motion naturally generates higher-order Hermite polynomials (since the constant term <span class="arithmatex">\(h_0 = 1\)</span>, then <span class="arithmatex">\(h_1 = W(t)\)</span>, <span class="arithmatex">\(h_2 = \frac{1}{2}(W(t)^2 - t)\)</span>, which is perfectly consistent with the Riemann sum limit from the previous chapter).</p>
+</details>
+<h3 id="32-black-scholes-model">3.2 Black-Scholes Model</h3>
+<p>If we add a linear time drift to the above equation, we obtain the most famous Geometric Brownian Motion (GBM) model for asset pricing in finance.</p>
+<div class="arithmatex">\[
+\frac{dS(t)}{S(t)} = \mu dt + \sigma dW(t)
+\]</div>
+<p>where <span class="arithmatex">\(\mu\)</span> is called the expected rate of return (drift term), and <span class="arithmatex">\(\sigma\)</span> is called the asset volatility.</p>
+<div class="admonition success">
+<p class="admonition-title">Exact Solution of Geometric Brownian Motion</p>
+<p>We rewrite the equation as <span class="arithmatex">\(dS(t) = \mu S(t) dt + \sigma S(t) dW(t)\)</span>.
+Inspired by the previous method, we consider a logarithmic transformation. Let <span class="arithmatex">\(U(x) = \ln x\)</span>. Differentiate <span class="arithmatex">\(\ln S(t)\)</span> according to Itô's formula:</p>
+<div class="arithmatex">\[
+d(\ln S(t)) = U'(S(t)) dS(t) + \frac{1}{2} U''(S(t)) (dS(t))^2
+\]</div>
+<p>Substitute the derivatives <span class="arithmatex">\(U'(x) = 1/x\)</span> and <span class="arithmatex">\(U''(x) = -1/x^2\)</span>, along with <span class="arithmatex">\((dS)^2 = \sigma^2 S^2 dt\)</span>:</p>
+<div class="arithmatex">\[
+d(\ln S(t)) = \frac{1}{S(t)} (\mu S(t) dt + \sigma S(t) dW(t)) - \frac{1}{2} \frac{1}{S(t)^2} (\sigma^2 S(t)^2 dt)
+\]</div>
+<p>Simplifying yields:</p>
+<div class="arithmatex">\[
+d(\ln S(t)) = \left(\mu - \frac{\sigma^2}{2}\right) dt + \sigma dW(t)
+\]</div>
+<p>Now the right side no longer depends on <span class="arithmatex">\(S(t)\)</span> and becomes an ordinary integral! Integrate both sides of the equation from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[
+\ln S(t) - \ln S(0) = \left(\mu - \frac{\sigma^2}{2}\right) t + \sigma W(t)
+\]</div>
+<p>Take the exponential of both sides to get the ultimate solution:</p>
+<div class="arithmatex">\[
+S(t) = S_0 e^{\left(\mu - \frac{\sigma^2}{2}\right)t + \sigma W(t)}
+\]</div>
+<p>This result tells us that although the expectation of the logarithmic return behaves as linear <span class="arithmatex">\(\mu t\)</span>, due to the penalty of variance, the actual long-term growth rate of the asset price is reduced to <span class="arithmatex">\(\mu - \frac{\sigma^2}{2}\)</span>. This is the mathematical essence of "Volatility Drag".</p>
+</div>
+<hr />
+<h2 id="4-brownian-bridge">4. Brownian Bridge</h2>
+<p>Finally, we explore a case of an SDE with strong boundary constraints.</p>
+<p>In statistics, we often need to study a random walk that is "pinned" between two fixed points (e.g., the limit process in the Kolmogorov-Smirnov test). This is the Brownian bridge process.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Derivation: Fokker-Planck Equation</p>
-<p>Consider a general diffusion process (SDE):</p>
+<p class="admonition-title">Definition: Standard Brownian Bridge Equation</p>
+<p>Consider the following stochastic differential equation with a singular drift term, with the initial condition <span class="arithmatex">\(B(0) = 0\)</span>, and time restricted to <span class="arithmatex">\(t \in [0, 1)\)</span>:</p>
 <div class="arithmatex">\[
-dX(t) = b(X, t) dt + \sigma(X, t) dW(t)
+dB(t) = -\frac{B(t)}{1-t} dt + dW(t)
 \]</div>
-<p>Let <span class="arithmatex">\(p(x, t)\)</span> be the probability density function of the system being in state <span class="arithmatex">\(x\)</span> at time <span class="arithmatex">\(t\)</span>.
-We take an arbitrary bounded, twice-differentiable <strong>test function</strong> <span class="arithmatex">\(\phi(x)\)</span> that vanishes at infinity.
-Expand <span class="arithmatex">\(d\phi(X(t))\)</span> according to Itô's formula:</p>
+<p>Intuitively: As time <span class="arithmatex">\(t\)</span> approaches <span class="arithmatex">\(1\)</span>, the denominator <span class="arithmatex">\((1-t) \to 0\)</span>, and the drift term generates an extremely massive "pulling force," forcibly pulling the trajectory of <span class="arithmatex">\(B(t)\)</span> back to <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<p>We can solve this SDE using the <strong>integrating factor method</strong> from classical ODEs combined with the Itô product rule.</p>
+<div class="admonition info">
+<p class="admonition-title">Explicit Solution of the Brownian Bridge</p>
+<p>We move the term containing <span class="arithmatex">\(B\)</span> to the left side of the equation:</p>
 <div class="arithmatex">\[
-d\phi(X(t)) = \phi'(X) dX + \frac{1}{2} \phi''(X) (dX)^2 = \phi'(X) \big[b(X, t) dt + \sigma(X, t) dW\big] + \frac{1}{2} \phi''(X) \sigma^2(X, t) dt
+dB(t) + \frac{B(t)}{1-t} dt = dW(t)
 \]</div>
-<p>Take the <strong>expectation</strong> on both sides of the equation (the diffusion term <span class="arithmatex">\(\int \sigma dW\)</span> possesses the martingale property, so its expectation vanishes):</p>
+<p>Multiply both sides by the integrating factor <span class="arithmatex">\(\frac{1}{1-t}\)</span>:</p>
 <div class="arithmatex">\[
-E[\phi(X(t))] = E[\phi(X(0))] + \int_0^t E\left[ \phi'(X) b(X, s) + \frac{1}{2} \phi''(X) \sigma^2(X, s) \right] ds
+\frac{1}{1-t} dB(t) + \frac{B(t)}{(1-t)^2} dt = \frac{dW(t)}{1-t}
 \]</div>
-<p>Using the density function <span class="arithmatex">\(p(x, t)\)</span>, write the expectation in the form of a spatial integral over <span class="arithmatex">\(x\)</span>:</p>
+<p>Observing the left side, it is exactly the expansion of the joint differential <span class="arithmatex">\(d\left(\frac{B(t)}{1-t}\right)\)</span> (because according to the ordinary product rule for differentiation, there are no two stochastic processes multiplied here, so there is no quadratic correction term):</p>
 <div class="arithmatex">\[
-\int_{\mathbb{R}} \phi(x) p(x, t) dx = \int_{\mathbb{R}} \phi(x) p(x, 0) dx + \int_0^t \int_{\mathbb{R}} \left( \phi'(x) b(x, s) + \frac{1}{2} \phi''(x) \sigma^2(x, s) \right) p(x, s) dx ds
+d\left(\frac{B(t)}{1-t}\right) = \frac{dW(t)}{1-t}
 \]</div>
-<p>Take the derivative with respect to time <span class="arithmatex">\(t\)</span> on both sides:</p>
+<p>Integrate both sides from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(t\)</span> (note that <span class="arithmatex">\(B(0) = 0\)</span>):</p>
 <div class="arithmatex">\[
-\int_{\mathbb{R}} \phi(x) \frac{\partial p}{\partial t} dx = \int_{\mathbb{R}} \left( \phi'(x) b(x, t) + \frac{1}{2} \phi''(x) \sigma^2(x, t) \right) p(x, t) dx
+\frac{B(t)}{1-t} - 0 = \int_0^t \frac{dW(s)}{1-s}
 \]</div>
-<p><strong>The Key: Integration by Parts Twice.</strong></p>
-<p>To peel the derivative operator off the test function <span class="arithmatex">\(\phi\)</span> and transfer it to the density function <span class="arithmatex">\(p\)</span>, we perform integration by parts on the right side (assuming <span class="arithmatex">\(\phi\)</span> and its derivatives decay to 0 at the boundaries):</p>
-<p>First term:</p>
+<p>Rearranging yields the explicit integral solution of the Brownian bridge:</p>
 <div class="arithmatex">\[
-\int_{\mathbb{R}} \phi'(x) \big(b(x, t) p(x, t)\big) dx = -\int_{\mathbb{R}} \phi(x) \frac{\partial}{\partial x}\big(b(x, t) p(x, t)\big) dx
+B(t) = (1-t) \int_0^t \frac{dW(s)}{1-s}, \quad 0 \le t &lt; 1
 \]</div>
-<p>Second term (applying continuous integration by parts twice):</p>
+<details class="proof">
+<summary>Framework for Proving Continuity and Zero Value at the Endpoint <span class="arithmatex">\(t=1\)</span> (Click to expand)</summary>
+<p>The denominator of the above integral exhibits a singularity as <span class="arithmatex">\(t \to 1\)</span>. To prove that almost all paths can continuously "land" at <span class="arithmatex">\(B(1) = 0\)</span>, advanced probability tools are needed for bounding.</p>
+<p>First, analyze the variance of the integral part. Let <span class="arithmatex">\(M(t) = \int_0^t \frac{dW(s)}{1-s}\)</span>. Since this is an Itô integral with respect to a non-random function, its expectation is 0, and the variance is given by the isometry:</p>
 <div class="arithmatex">\[
-\frac{1}{2} \int_{\mathbb{R}} \phi''(x) \big(\sigma^2(x, t) p(x, t)\big) dx = \frac{1}{2} \int_{\mathbb{R}} \phi(x) \frac{\partial^2}{\partial x^2}\big(\sigma^2(x, t) p(x, t)\big) dx
+E[M(t)^2] = \int_0^t \frac{1}{(1-s)^2} ds = \frac{1}{1-t} - 1 = \frac{t}{1-t}
 \]</div>
-<p>After combining them, since the equation holds for <strong>any</strong> test function <span class="arithmatex">\(\phi(x)\)</span>, the integrands themselves must be equal. This yields the <strong>Fokker-Planck Equation</strong>:</p>
+<p>Therefore, the variance of <span class="arithmatex">\(B(t) = (1-t) M(t)\)</span> is <span class="arithmatex">\(E[B(t)^2] = (1-t)^2 \frac{t}{1-t} = t(1-t)\)</span>. Obviously, as <span class="arithmatex">\(t \to 1\)</span>, the variance approaches 0. But this only shows convergence in probability or in <span class="arithmatex">\(L^2\)</span>.</p>
+<p>To prove <strong>almost sure (a.s.) continuous convergence</strong>, one must employ the Borel-Cantelli Lemma and maximal inequalities.
+Take dyadic grid points <span class="arithmatex">\(t_n = 1 - 2^{-n}\)</span>. For the interval <span class="arithmatex">\([t_n, t_{n+1}]\)</span>, use Chebyshev's inequality and the martingale maximal inequality to estimate the probability bound of deviating from the target value within that interval:</p>
 <div class="arithmatex">\[
-\frac{\partial p}{\partial t} = - \frac{\partial}{\partial x} \big( b(x, t) p(x, t) \big) + \frac{1}{2} \frac{\partial^2}{\partial x^2} \big( \sigma^2(x, t) p(x, t) \big)
+P\left( \max_{t \in [t_n, t_{n+1}]} |B(t)| &gt; \varepsilon \right) \le \frac{C}{\varepsilon^2} 2^{-\eta n}
 \]</div>
+<p>Since the right side constitutes a convergent geometric series <span class="arithmatex">\(\sum 2^{-\eta n} &lt; \infty\)</span>, according to the First Borel-Cantelli Lemma, the probability of large deviation events occurring is 0. Therefore, almost all Brownian bridge paths are forced to converge to <span class="arithmatex">\(0\)</span> as <span class="arithmatex">\(t \to 1\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
 </div>
 
 

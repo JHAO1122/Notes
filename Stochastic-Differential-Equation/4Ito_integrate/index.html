@@ -14,6 +14,8 @@
         <link rel="prev" href="../3stochastic_integrate/">
       
       
+        <link rel="next" href="../5SDEs/">
+      
       
         
           <link rel="alternate" href="./" hreflang="zh">
@@ -27,7 +29,7 @@
     
     
       
-        <title>第四章：Itô 积分与随机微分(Itô Integral & Stochastic Differential) - My Study Notes</title>
+        <title>第四章：Itô 积分与随机微分 - My Study Notes</title>
       
     
     
@@ -88,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ito-ito-integral-stochastic-differential" class="md-skip">
+        <a href="#ito" class="md-skip">
           跳转至
         </a>
       
@@ -122,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第四章：Itô 积分与随机微分(Itô Integral &amp; Stochastic Differential)
+              第四章：Itô 积分与随机微分
             
           </span>
         </div>
@@ -602,7 +604,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：条件期望(Conditional Expectation)
+    第一章：条件期望
   
 
     
@@ -630,7 +632,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：布朗运动 (Brownian Motion)
+    第二章：布朗运动
   
 
     
@@ -658,7 +660,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分(Stochastic Integral)
+    第三章：随机积分
   
 
     
@@ -695,7 +697,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分与随机微分(Itô Integral &amp; Stochastic Differential)
+    第四章：Itô 积分与随机微分
   
 
     
@@ -713,7 +715,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分与随机微分(Itô Integral &amp; Stochastic Differential)
+    第四章：Itô 积分与随机微分
   
 
     
@@ -797,6 +799,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：多元 Itô 积分与随机微分方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -910,7 +940,7 @@
   
 
 
-<h1 id="ito-ito-integral-stochastic-differential">第四章：Itô 积分与随机微分(Itô Integral &amp; Stochastic Differential)</h1>
+<h1 id="ito">第四章：Itô 积分与随机微分</h1>
 <p>上一章将积分推广到了 <span class="arithmatex">\(L^2\)</span> 空间，现在我们正式定义<strong>随机过程</strong>的 Itô 积分，并建立起一套区别于经典微积分的体系——<strong>Itô 微积分 (Itô Calculus)</strong>。</p>
 <h2 id="1-ito">1. 适应过程的 Itô 积分与等距同构</h2>
 <p>对于一个随机过程 <span class="arithmatex">\(G(t, \omega)\)</span>，由于布朗运动 <span class="arithmatex">\(W(t)\)</span> 的路径粗糙，我们无法采用逐点定义的黎曼-斯蒂尔杰斯积分，须基于时间网格的左端点（不知未来）定义。</p>

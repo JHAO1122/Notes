@@ -8,19 +8,17 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/3stochastic_integrate/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/5SDEs/">
       
       
-        <link rel="prev" href="../2Brown_Motion/">
+        <link rel="prev" href="../4Ito_integrate/">
       
-      
-        <link rel="next" href="../4Ito_integrate/">
       
       
         
           <link rel="alternate" href="./" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/3stochastic_integrate/" hreflang="en">
+          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/5SDEs/" hreflang="en">
         
       
       
@@ -29,7 +27,7 @@
     
     
       
-        <title>第三章：随机积分 - My Study Notes</title>
+        <title>第五章：多元 Itô 积分与随机微分方程 - My Study Notes</title>
       
     
     
@@ -90,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ito" class="md-skip">
           跳转至
         </a>
       
@@ -124,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第三章：随机积分
+              第五章：多元 Itô 积分与随机微分方程
             
           </span>
         </div>
@@ -177,7 +175,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Stochastic-Differential-Equation/3stochastic_integrate/" hreflang="en" class="md-select__link">
+            <a href="../../en/Stochastic-Differential-Equation/5SDEs/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -650,37 +648,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第三章：随机积分
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../3stochastic_integrate/" class="md-nav__link">
         
   
   
@@ -696,81 +667,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-paley-wiener-zygmund-pwz" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Paley-Wiener-Zygmund (PWZ) 随机积分
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-blt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 稠定有界线性算子的保范延拓 (BLT 定理)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-quadratic-variation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 布朗运动的二次变差 (Quadratic Variation)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-riemann-ito" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 随机积分的 Riemann 和与 Itô 积分的引出
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-ito" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 严格 Itô 积分的测度论准备
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -808,10 +704,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../5SDEs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：多元 Itô 积分与随机微分方程
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -827,6 +750,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 多元 Itô 积分与等距同构
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 多元 Itô 公式与乘法表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lsde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 线性随机微分方程 (LSDE) 求解实战
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 线性随机微分方程 (LSDE) 求解实战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-hermite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 指数鞅与 Hermite 多项式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-black-scholes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 黑尔斯-斯科尔斯 (Black-Scholes) 模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-brownian-bridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 布朗桥 (Brownian Bridge)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -866,10 +881,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-paley-wiener-zygmund-pwz" class="md-nav__link">
+  <a href="#1-ito" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Paley-Wiener-Zygmund (PWZ) 随机积分
+        1. 多元 Itô 积分与等距同构
       
     </span>
   </a>
@@ -877,10 +892,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-blt" class="md-nav__link">
+  <a href="#2-ito" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 稠定有界线性算子的保范延拓 (BLT 定理)
+        2. 多元 Itô 公式与乘法表
       
     </span>
   </a>
@@ -888,32 +903,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-quadratic-variation" class="md-nav__link">
+  <a href="#3-lsde" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 布朗运动的二次变差 (Quadratic Variation)
+        3. 线性随机微分方程 (LSDE) 求解实战
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 线性随机微分方程 (LSDE) 求解实战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-hermite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 指数鞅与 Hermite 多项式
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-riemann-ito" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#32-black-scholes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 随机积分的 Riemann 和与 Itô 积分的引出
+        3.2 黑尔斯-斯科尔斯 (Black-Scholes) 模型
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#5-ito" class="md-nav__link">
+  <a href="#4-brownian-bridge" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 严格 Itô 积分的测度论准备
+        4. 布朗桥 (Brownian Bridge)
       
     </span>
   </a>
@@ -940,235 +972,244 @@
   
 
 
-<h1 id="_1">第三章：随机积分</h1>
-<p>在经典的微积分中，可以定义黎曼-斯蒂尔杰斯积分 <span class="arithmatex">\(\int g(t) dX(t)\)</span>。但当积分微元变成布朗运动 <span class="arithmatex">\(dW(t)\)</span> 时，由于其样本轨道是粗糙的，不能用传统的方法定义。本节展示从确定性被积函数向随机被积函数跨越的演进过程，并引出 Itô 积分的概念。</p>
-<h2 id="1-paley-wiener-zygmund-pwz">1. Paley-Wiener-Zygmund (PWZ) 随机积分</h2>
-<p>最简单的情形是：被积函数 <span class="arithmatex">\(g(t)\)</span> 是一个普通的确定性函数，而积分变量是布朗运动。</p>
+<h1 id="ito">第五章：多元 Itô 积分与随机微分方程</h1>
+<p>前面的章节已经建立了一维布朗运动下的 Itô 积分理论。然而在金融数学与统计物理中，系统往往受到多个独立噪声源的影响。本章我们将 Itô 积分推广到高维空间，建立多元 Itô 公式，并正式引入刻画连续时间随机动态系统的工具——<strong>随机微分方程 (Stochastic Differential Equations, SDE)</strong>。</p>
+<h2 id="1-ito">1. 多元 Itô 积分与等距同构</h2>
+<p>我们首先定义多维的布朗运动及其对应的信息流。</p>
 <div class="admonition abstract">
-<p class="admonition-title">定义：PWZ 随机积分</p>
-<p>设 <span class="arithmatex">\(W(t)\)</span> 为标准布朗运动。假设 <span class="arithmatex">\(g(t) \in C^1([0, T])\)</span> 是一阶连续可导的确定性函数。
-利用分部积分公式（Integration by Parts），将 <strong>PWZ 随机积分</strong> 定义为：</p>
+<p class="admonition-title">定义：多元布朗运动与适应矩阵过程</p>
+<p>设 <span class="arithmatex">\(W(t) = (W^1(t), W^2(t), \dots, W^m(t))^T\)</span> 是一个 <span class="arithmatex">\(m\)</span> 维标准布朗运动，它的每一个分量 <span class="arithmatex">\(W^j(t)\)</span> 都是独立的一维标准布朗运动。</p>
+<p>定义其产生的信息流为 <span class="arithmatex">\(\mathcal{F}(t) = \sigma\{W(s) \mid 0 \le s \le t\}\)</span>。对于任意 <span class="arithmatex">\(t &lt; s\)</span>，未来的增量 <span class="arithmatex">\(W(s) - W(t)\)</span> 与 <span class="arithmatex">\(\mathcal{F}(t)\)</span> 完全独立。</p>
+<p>设 <span class="arithmatex">\(G(t, \omega) = (G^{ij}(t, \omega))_{n \times m}\)</span> 是一个 <span class="arithmatex">\(n \times m\)</span> 阶的随机矩阵过程。如果 <span class="arithmatex">\(G(t)\)</span> 的每一个分量 <span class="arithmatex">\(G^{ij}(t)\)</span> 都是 <span class="arithmatex">\(\mathcal{F}(t)\)</span>-适应的，且满足平方可积条件：</p>
 <div class="arithmatex">\[
-\int_0^T g(t) dW(t) \triangleq g(T)W(T) - g(0)W(0) - \int_0^T g'(t) W(t) dt
+E\left[ \int_0^T \sum_{i=1}^n \sum_{j=1}^m (G^{ij}(t))^2 dt \right] &lt; \infty
 \]</div>
-<p>由于 <span class="arithmatex">\(W(0) = 0\)</span> a.s.，上式通常简写为：</p>
-<div class="arithmatex">\[
-\int_0^T g(t) dW(t) = g(T)W(T) - \int_0^T g'(t) W(t) dt
-\]</div>
-<p>这里右侧的积分是普通的黎曼积分（因为 <span class="arithmatex">\(W(t)\)</span> 的样本轨道是 a.s. 连续的，<span class="arithmatex">\(g'(t)\)</span> 是连续的，所以积分良定）。</p>
+<p>则称矩阵过程 <span class="arithmatex">\(G \in L_{n \times m}^2(0, T)\)</span>。</p>
 </div>
+<p>对于这样的矩阵过程，多元 Itô 积分被自然地定义为向量形式。</p>
 <div class="admonition info">
-<p class="admonition-title">定理：PWZ 积分的核心性质</p>
-<p>对于上述定义的 PWZ 积分，满足以下两个极其重要的性质（也是后续所有随机积分的基石）：</p>
-<p><strong>(1) 期望为零</strong>：</p>
+<p class="admonition-title">定义与定理：多元 Itô 积分</p>
+<p>对于 <span class="arithmatex">\(G \in L_{n \times m}^2(0, T)\)</span>，我们定义多元 Itô 积分 <span class="arithmatex">\(\int_0^T G dW\)</span> 为一个 <span class="arithmatex">\(n\)</span> 维列向量，其第 <span class="arithmatex">\(i\)</span> 个分量定义为：</p>
 <div class="arithmatex">\[
-E\left[ \int_0^T g(t) dW(t) \right] = 0
+\left( \int_0^T G dW \right)^i = \sum_{j=1}^m \int_0^T G^{ij} dW^j
 \]</div>
-<p><strong>(2) Itô 等距同构 (Itô Isometry)</strong>：</p>
+<p>在这个定义下，多元 Itô 积分依然保持完美的鞅性质和等距性质：</p>
+<p><strong>(1) 期望为零</strong>：<span class="arithmatex">\(E\left[ \int_0^T G dW \right] = 0\)</span> （即每个分量的期望均为 0）。</p>
+<p><strong>(2) 多元 Itô 等距同构 (Multivariate Itô Isometry)</strong>：定义矩阵的范数为 <span class="arithmatex">\(|G| = \sqrt{\sum_{i,j} (G^{ij})^2}\)</span>，则有：</p>
 <div class="arithmatex">\[
-E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt
+E\left[ \left| \int_0^T G dW \right|^2 \right] = E\left[ \int_0^T |G(t)|^2 dt \right]
 \]</div>
 <details class="proof">
-<summary>等距同构性质的严格推导（点击展开）</summary>
-<p>我们直接从 PWZ 积分的定义出发，计算其平方的期望（假设 <span class="arithmatex">\(g(0)=0\)</span> 或为简化书写将其吸收到常数项中，此处采用你手稿中更本质的双重积分法推导）：</p>
-<p>将平方写成双重积分的形式：</p>
+<summary>多元 Itô 等距同构的严格证明（点击展开）</summary>
+<p>由向量范数的定义，积分模长的平方可以写为各个分量平方的和：</p>
 <div class="arithmatex">\[
-E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W(t) dt \int_0^T g'(s)W(s) ds \right]
+E\left[ \left| \int_0^T G dW \right|^2 \right] = E\left[ \sum_{i=1}^n \left( \sum_{j=1}^m \int_0^T G^{ij} dW^j \right)^2 \right]
 \]</div>
-<p>利用 Fubini 定理交换期望与积分的顺序：</p>
+<p>将内部的平方项展开为双重求和形式：</p>
 <div class="arithmatex">\[
-= \int_0^T \int_0^T g'(t)g'(s) E[W(t)W(s)] ds dt
+= \sum_{i=1}^n E\left[ \sum_{j=1}^m \int_0^T G^{ij} dW^j \sum_{k=1}^m \int_0^T G^{ik} dW^k \right]
 \]</div>
-<p>代入布朗运动的自协方差函数 <span class="arithmatex">\(E[W(t)W(s)] = t \wedge s\)</span>：</p>
+<p>由于求和与期望是线性算子，我们交换顺序，重点考察交叉项：</p>
 <div class="arithmatex">\[
-= \int_0^T \int_0^T g'(t)g'(s) (t \wedge s) ds dt
+= \sum_{i=1}^n \sum_{j=1}^m \sum_{k=1}^m E\left[ \int_0^T G^{ij} dW^j \int_0^T G^{ik} dW^k \right]
 \]</div>
-<p>利用对称性，将积分区域拆分为 <span class="arithmatex">\(s \le t\)</span> 和 <span class="arithmatex">\(t \le s\)</span> 两部分：</p>
+<p><strong>关键点：布朗运动分量间的独立性</strong>。
+当 <span class="arithmatex">\(j \neq k\)</span> 时，<span class="arithmatex">\(W^j\)</span> 和 <span class="arithmatex">\(W^k\)</span> 是相互独立的布朗运动。利用一维随机积分的极化恒等式和独立增量性质，这部分的交叉期望为 <span class="arithmatex">\(0\)</span>。</p>
+<p>因此，非零项仅存在于对角线 <span class="arithmatex">\(j = k\)</span> 处：</p>
 <div class="arithmatex">\[
-= \int_0^T \left( \int_0^t g'(s) g'(t) s \, ds + \int_t^T g'(s) g'(t) t \, ds \right) dt
+= \sum_{i=1}^n \sum_{j=1}^m E\left[ \left( \int_0^T G^{ij} dW^j \right)^2 \right]
 \]</div>
-<p>通过分部积分和代数化简（手稿此处略过繁杂代数步骤），上式最终将完美收缩为目标形式：</p>
+<p>对每一项应用一维的 Itô 等距同构 <span class="arithmatex">\(E[(\int G^{ij} dW^j)^2] = E[\int (G^{ij})^2 dt]\)</span>：</p>
 <div class="arithmatex">\[
-= \int_0^T g(t)^2 dt \quad \square
+= \sum_{i=1}^n \sum_{j=1}^m E\left[ \int_0^T (G^{ij})^2 dt \right] = E\left[ \int_0^T \sum_{i,j} (G^{ij})^2 dt \right] = E\left[ \int_0^T |G(t)|^2 dt \right]
 \]</div>
+<p>证明完毕。<span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <hr />
-<h2 id="2-blt">2. 稠定有界线性算子的保范延拓 (BLT 定理)</h2>
-<p>刚才的 PWZ 积分要求 <span class="arithmatex">\(g(t) \in C^1\)</span>。但在实际应用中，我们需要对更一般的 <span class="arithmatex">\(L^2\)</span> 函数进行积分。这需要借助泛函分析中的工具：<strong>有界线性算子延拓定理 (BLT Theorem)</strong>。</p>
+<h2 id="2-ito">2. 多元 Itô 公式与乘法表</h2>
+<p>在进入随机微分方程的求解前，我们必须掌握多维情况下的“链式法则”。</p>
 <div class="admonition abstract">
-<p class="admonition-title">定理：稠定有界线性算子的保范延拓</p>
-<p>设 <span class="arithmatex">\(X, Y\)</span> 为 Banach 空间，<span class="arithmatex">\(S\)</span> 为 <span class="arithmatex">\(X\)</span> 中稠密的线性子空间。
-设 <span class="arithmatex">\(T: S \to Y\)</span> 为一个有界线性算子，即存在常数 <span class="arithmatex">\(C &gt; 0\)</span>，使得对任意 <span class="arithmatex">\(x \in S\)</span>：</p>
+<p class="admonition-title">定义：多元 Itô 过程 (Multivariate Itô Process)</p>
+<p>一个 <span class="arithmatex">\(n\)</span> 维 Itô 过程 <span class="arithmatex">\(X(t) = (X^1(t), \dots, X^n(t))^T\)</span> 的微元形式定义为：</p>
 <div class="arithmatex">\[
-\|Tx\|_Y \le C \|x\|_X
+dX(t) = F(t) dt + G(t) dW(t)
 \]</div>
-<p>则存在唯一的有界线性算子 <span class="arithmatex">\(\overline{T}: X \to Y\)</span>，使得对于所有的 <span class="arithmatex">\(x \in S\)</span>，都有 <span class="arithmatex">\(\overline{T}x = Tx\)</span>（即 <span class="arithmatex">\(\overline{T}|_S = T\)</span>）。
-此外，算子的算子范数保持不变：<span class="arithmatex">\(\|\overline{T}\| = \|T\| \le C\)</span>。</p>
+<p>写成分量形式即为：</p>
+<div class="arithmatex">\[
+dX^i(t) = F^i(t) dt + \sum_{j=1}^m G^{ij}(t) dW^j(t), \quad i = 1, \dots, n
+\]</div>
+<p>其中漂移项 <span class="arithmatex">\(F \in L_n^1(0, T)\)</span>，扩散项 <span class="arithmatex">\(G \in L_{n \times m}^2(0, T)\)</span>。</p>
+</div>
+<p>处理多元随机微分的核心在于推广版的 <strong>Itô 乘法表</strong>。由于不同的布朗运动分量是独立的，它们的“二次交叉变差”为 0。</p>
+<div class="admonition info">
+<p class="admonition-title">定理：多元 Itô 乘法法则</p>
+<p>对于时间微元 <span class="arithmatex">\(dt\)</span> 和不同维度的布朗运动微元 <span class="arithmatex">\(dW^j, dW^k\)</span>，有如下乘法规则：</p>
+<ul>
+<li><span class="arithmatex">\((dt)^2 = 0\)</span></li>
+<li><span class="arithmatex">\(dt \cdot dW^j = 0\)</span></li>
+<li><span class="arithmatex">\(dW^j \cdot dW^k = \delta_{jk} dt = \begin{cases} dt, &amp; j = k \\ 0, &amp; j \neq k \end{cases}\)</span></li>
+</ul>
+<p>利用上述规则，我们可以直接得出两个一维 Itô 过程 <span class="arithmatex">\(X_1, X_2\)</span> 的<strong>乘积法则 (Product Rule)</strong>：</p>
+<div class="arithmatex">\[
+d(X_1 X_2) = X_1 dX_2 + X_2 dX_1 + dX_1 dX_2
+\]</div>
 <details class="proof">
-<summary>BLT 定理的构造性证明（点击展开）</summary>
-<p><strong>第一步：构造极限映射</strong>
-由于 <span class="arithmatex">\(S\)</span> 在 <span class="arithmatex">\(X\)</span> 中稠密，对于任意的 <span class="arithmatex">\(x \in X\)</span>，必然存在 <span class="arithmatex">\(S\)</span> 中的序列 <span class="arithmatex">\(\{x_n\}\)</span> 使得 <span class="arithmatex">\(x_n \to x\)</span>。
-因为 <span class="arithmatex">\(T\)</span> 在 <span class="arithmatex">\(S\)</span> 上是有界（连续）的，我们考察序列 <span class="arithmatex">\(\{Tx_n\}\)</span> 在 <span class="arithmatex">\(Y\)</span> 中的距离：</p>
+<summary>乘积法则中交叉项 <span class="arithmatex">\(dX_1 dX_2\)</span> 的推导计算（点击展开）</summary>
+<p>设两个过程分别为 <span class="arithmatex">\(dX_1 = F_1 dt + \sum_j G_1^j dW^j\)</span>，且 <span class="arithmatex">\(dX_2 = F_2 dt + \sum_k G_2^k dW^k\)</span>。
+展开它们的乘积：</p>
 <div class="arithmatex">\[
-\|Tx_n - Tx_m\|_Y = \|T(x_n - x_m)\|_Y \le C \|x_n - x_m\|_X
+dX_1 dX_2 = \left( F_1 dt + \sum_j G_1^j dW^j \right) \left( F_2 dt + \sum_k G_2^k dW^k \right)
 \]</div>
-<p>由于 <span class="arithmatex">\(\{x_n\}\)</span> 是收敛列，它必然是 Cauchy 列（柯西列）。因此，当 <span class="arithmatex">\(n, m \to \infty\)</span> 时，<span class="arithmatex">\(\|x_n - x_m\|_X \to 0\)</span>。
-这就意味着 <span class="arithmatex">\(\{Tx_n\}\)</span> 是 Banach 空间 <span class="arithmatex">\(Y\)</span> 中的 Cauchy 列。由于 <span class="arithmatex">\(Y\)</span> 是完备的，极限 <span class="arithmatex">\(\lim_{n \to \infty} Tx_n\)</span> 必定存在。我们定义：</p>
+<p>根据多元乘法表，所有含有 <span class="arithmatex">\(dt\)</span> 的二次项（如 <span class="arithmatex">\((dt)^2, dt \cdot dW\)</span>）均视为高阶无穷小，直接消去：</p>
 <div class="arithmatex">\[
-\overline{T}x \triangleq \lim_{n \to \infty} Tx_n
+= \sum_{j=1}^m \sum_{k=1}^m G_1^j G_2^k dW^j dW^k
 \]</div>
-<p><strong>第二步：证明定义的合理性（与序列选择无关）</strong>
-假设有另一个序列 <span class="arithmatex">\(x_n' \to x\)</span>，我们需要证明 <span class="arithmatex">\(\lim Tx_n' = \lim Tx_n\)</span>。
-设 <span class="arithmatex">\(y = \lim Tx_n\)</span>，<span class="arithmatex">\(y' = \lim Tx_n'\)</span>。</p>
+<p>由于 <span class="arithmatex">\(dW^j dW^k = \delta_{jk} dt\)</span>，只有当 <span class="arithmatex">\(j=k\)</span> 时非零，和式坍缩为一重求和：</p>
 <div class="arithmatex">\[
-\|y - y'\|_Y = \lim_{n \to \infty} \|Tx_n - Tx_n'\|_Y \le C \lim_{n \to \infty} \|x_n - x_n'\|_X = 0
+= \sum_{j=1}^m G_1^j G_2^j dt
 \]</div>
-<p>故 <span class="arithmatex">\(y = y'\)</span>，映射 <span class="arithmatex">\(\overline{T}\)</span> 定义良定。</p>
-<p><strong>第三步：证明线性和保范性</strong>
-线性是极限的自然推论。对于保范性，对任意 <span class="arithmatex">\(x \in X\)</span> 及逼近列 <span class="arithmatex">\(x_n \to x\)</span>：</p>
-<div class="arithmatex">\[
-\|\overline{T}x\|_Y = \lim_{n \to \infty} \|Tx_n\|_Y \le C \lim_{n \to \infty} \|x_n\|_X = C \|x\|_X
-\]</div>
-<p>故 <span class="arithmatex">\(\overline{T}\)</span> 有界，且范数不超过 <span class="arithmatex">\(C\)</span>。<span class="arithmatex">\(\square\)</span></p>
+<p>将其写成向量内积的形式，即为 <span class="arithmatex">\((G_1^T G_2) dt\)</span>。这就是二次变差带来的修正项。<span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
+<p>基于多元乘法表，我们可以将泰勒展开推广，得到现代随机分析最重要的基石。</p>
 <div class="admonition success">
-<p class="admonition-title">应用：PWZ 积分向 <span class="arithmatex">\(L^2\)</span> 空间的延拓</p>
-<p>我们将被积函数空间取为 <span class="arithmatex">\(X = L^2([0, T])\)</span>，积分结果空间取为 <span class="arithmatex">\(Y = L^2(\Omega, P)\)</span>。
-稠密子空间取为 <span class="arithmatex">\(S = C^1([0, T])\)</span>。
-定义算子 <span class="arithmatex">\(T: g \mapsto \int_0^T g(t) dW(t)\)</span>。</p>
-<p>由 Itô 等距同构知，对于任意 <span class="arithmatex">\(g \in S\)</span>：</p>
+<p class="admonition-title">定理：多元 Itô 公式 (Multivariate Itô's Formula)</p>
+<p>设 <span class="arithmatex">\(X(t)\)</span> 为一个 <span class="arithmatex">\(n\)</span> 维 Itô 过程，<span class="arithmatex">\(U(t, x_1, \dots, x_n)\)</span> 为 <span class="arithmatex">\(\mathbb{R}^+ \times \mathbb{R}^n \to \mathbb{R}\)</span> 的具有 <span class="arithmatex">\(C^{1,2}\)</span> 连续偏导数的多元纯量函数。
+则复合随机过程 <span class="arithmatex">\(U(t, X(t))\)</span> 依然是一个 Itô 过程，且其微分为：</p>
 <div class="arithmatex">\[
-\|Tg\|_{L^2(\Omega)}^2 = E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt = \|g\|_{L^2([0,T])}^2
+dU(t, X(t)) = \frac{\partial U}{\partial t} dt + \sum_{i=1}^n \frac{\partial U}{\partial x^i} dX^i + \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^n \frac{\partial^2 U}{\partial x^i \partial x^j} dX^i dX^j
 \]</div>
-<p>这意味着算子 <span class="arithmatex">\(T\)</span> 是一致等距的（算子范数 <span class="arithmatex">\(C=1\)</span>）。由 BLT 定理，我们可以将 PWZ 积分完美且唯一地延拓到整个 <span class="arithmatex">\(L^2([0, T])\)</span> 空间。</p>
+<p>如果将 <span class="arithmatex">\(dX^i\)</span> 展开并代入 <span class="arithmatex">\(dW^j dW^k = \delta_{jk} dt\)</span>，上述公式可写为更紧凑的矩阵迹 (Trace) 形式：</p>
+<div class="arithmatex">\[
+dU = \left( U_t + \nabla U^T F + \frac{1}{2} \text{Tr}(G^T D_x^2 U G) \right) dt + (\nabla U^T G) dW
+\]</div>
+<p>其中 <span class="arithmatex">\(\nabla U\)</span> 为空间梯度向量，<span class="arithmatex">\(D_x^2 U\)</span> 为 Hessian 矩阵。</p>
 </div>
 <hr />
-<h2 id="3-quadratic-variation">3. 布朗运动的二次变差 (Quadratic Variation)</h2>
-<p>不能用传统的黎曼积分处理随机积分的问题根本在于布朗运动轨道的“粗糙性”，即其二次变差性质。</p>
-<p>考虑时间区间 <span class="arithmatex">\([0, T]\)</span> 的一个划分 <span class="arithmatex">\(P = \{0 = t_0 &lt; t_1 &lt; \dots &lt; t_m = T\}\)</span>，网格模长 <span class="arithmatex">\(|P| = \max (t_{k+1} - t_k)\)</span>。</p>
-<div class="admonition info">
-<p class="admonition-title">定理 1：布朗运动的二次变差等于时间 <span class="arithmatex">\(T\)</span></p>
-<p>当网格不断细化 <span class="arithmatex">\(|P| \to 0\)</span> 时，布朗运动增量的平方和在 <span class="arithmatex">\(L^2(\Omega, P)\)</span> 的意义下收敛于 <span class="arithmatex">\(T\)</span>：</p>
+<h2 id="3-lsde">3. 线性随机微分方程 (LSDE) 求解实战</h2>
+<p>我们现在正式考虑形如 <span class="arithmatex">\(dX(t) = b(t, X(t)) dt + \sigma(t, X(t)) dW(t)\)</span> 的随机微分方程。由于非线性 SDE 的显式解往往不存在，本节我们重点剖析一类在金融学中具有统治地位的方程：<strong>线性随机微分方程 (Linear SDE)</strong>。</p>
+<h3 id="31-hermite">3.1 指数鞅与 Hermite 多项式</h3>
+<p>考虑最简单的齐次线性方程，其漂移项为 0：</p>
 <div class="arithmatex">\[
-\sum_{k=0}^{m-1} (W(t_{k+1}) - W(t_k))^2 \xrightarrow{L^2} T
+\begin{cases} dY(t) = \lambda Y(t) dW(t) \\ Y(0) = 1 \end{cases}
 \]</div>
-<details class="proof">
-<summary>二次变差 <span class="arithmatex">\(L^2\)</span> 收敛的严格推导（点击展开）</summary>
-<p>为了证明 <span class="arithmatex">\(L^2\)</span> 收敛，我们需要证明其与 <span class="arithmatex">\(T\)</span> 的均方误差趋于 0。
-由于 <span class="arithmatex">\(\sum_{k=0}^{m-1} (t_{k+1} - t_k) = T\)</span>，我们可以将目标误差写为：</p>
+<p>这代表系统的随机波动与系统当前的状态成正比。</p>
+<div class="admonition tip">
+<p class="admonition-title">方程的求解方法 (Itô 公式反向构造)</p>
+<p>我们猜想解为某种指数形式 <span class="arithmatex">\(Y(t) = e^{f(t, W(t))}\)</span>。为了抵消 Itô 公式展开时产生的 <span class="arithmatex">\(\frac{1}{2} (dW)^2 = \frac{1}{2}dt\)</span> 修正项，我们在指数中预先加入“补偿项”。</p>
+<p>定义函数 <span class="arithmatex">\(U(x, t) = e^{\lambda x - \frac{\lambda^2}{2}t}\)</span>，将 <span class="arithmatex">\(x\)</span> 替换为 <span class="arithmatex">\(W(t)\)</span>。应用一维 Itô 公式：</p>
 <div class="arithmatex">\[
-E\left[ \left( \sum_{k=0}^{m-1} \big((W(t_{k+1}) - W(t_k))^2 - (t_{k+1} - t_k)\big) \right)^2 \right]
+dU(W(t), t) = \frac{\partial U}{\partial t} dt + \frac{\partial U}{\partial x} dW + \frac{1}{2} \frac{\partial^2 U}{\partial x^2} (dW)^2
 \]</div>
-<p>令 <span class="arithmatex">\(\Delta W_k = W(t_{k+1}) - W(t_k)\)</span>，<span class="arithmatex">\(\Delta t_k = t_{k+1} - t_k\)</span>。展开平方项，分为平方项和交叉项：</p>
+<p>代入偏导数 <span class="arithmatex">\(U_t = -\frac{\lambda^2}{2} U\)</span>，<span class="arithmatex">\(U_x = \lambda U\)</span>，<span class="arithmatex">\(U_{xx} = \lambda^2 U\)</span>：</p>
 <div class="arithmatex">\[
-= \sum_k E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] + \sum_{k \neq j} E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)\big((\Delta W_j)^2 - \Delta t_j\big) \Big]
+dY(t) = -\frac{\lambda^2}{2} Y(t) dt + \lambda Y(t) dW(t) + \frac{1}{2} \lambda^2 Y(t) dt = \lambda Y(t) dW(t)
 \]</div>
-<p><strong>关键点 1：交叉项为 0。</strong>
-由于布朗运动具有独立增量性质，当 <span class="arithmatex">\(k \neq j\)</span> 时，<span class="arithmatex">\(\Delta W_k\)</span> 与 <span class="arithmatex">\(\Delta W_j\)</span> 独立。且由于 <span class="arithmatex">\(E[(\Delta W_k)^2] = \Delta t_k\)</span>，每个因式的期望均为 0，故交叉项整体期望为 0。</p>
-<p><strong>关键点 2：平方项的计算。</strong>
-只剩下对角线上的方差项。注意到 <span class="arithmatex">\(\Delta W_k \sim \mathcal{N}(0, \Delta t_k)\)</span>，因此可以标准化表示为 <span class="arithmatex">\(\sqrt{\Delta t_k} Z\)</span>，其中 <span class="arithmatex">\(Z \sim \mathcal{N}(0, 1)\)</span>。</p>
+<p>这完美匹配了目标方程。因此其解为 <strong>指数鞅 (Exponential Martingale)</strong>：</p>
 <div class="arithmatex">\[
-E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] = E\Big[ (\Delta t_k Z^2 - \Delta t_k)^2 \Big] = (\Delta t_k)^2 E[(Z^2 - 1)^2]
+Y(t) = e^{\lambda W(t) - \frac{\lambda^2}{2}t}
 \]</div>
-<p>由于标准正态分布的四阶矩 <span class="arithmatex">\(E[Z^4] = 3\)</span>，<span class="arithmatex">\(E[Z^2] = 1\)</span>，所以 <span class="arithmatex">\(E[(Z^2 - 1)^2] = 3 - 2(1) + 1 = 2\)</span>。</p>
-<div class="arithmatex">\[
-\text{总误差} = 2 \sum_{k=0}^{m-1} (\Delta t_k)^2
-\]</div>
-<p>我们放大这个和式：提取出一个最大的 <span class="arithmatex">\(\Delta t_k\)</span> 即网格模长 <span class="arithmatex">\(|P|\)</span>：</p>
-<div class="arithmatex">\[
-2 \sum_{k=0}^{m-1} (\Delta t_k)^2 \le 2 |P| \sum_{k=0}^{m-1} \Delta t_k = 2 |P| T
-\]</div>
-<p>当 <span class="arithmatex">\(|P| \to 0\)</span> 时，<span class="arithmatex">\(2 |P| T \to 0\)</span>。故在 <span class="arithmatex">\(L^2\)</span> 意义下收敛于 <span class="arithmatex">\(T\)</span>。<span class="arithmatex">\(\square\)</span></p>
-</details>
 </div>
-<p>这个定理直接导出了一个关于布朗运动性质的推论：</p>
+<p>这个解在概率论中有着极深的内涵，它的泰勒展开与正交多项式直接挂钩。</p>
+<details class="note">
+<summary>拓展：Hermite 多项式与随机积分的递推关系</summary>
+<p>回顾概率论中的 Hermite 多项式母函数生成公式：</p>
+<div class="arithmatex">\[
+e^{\lambda x - \frac{\lambda^2}{2}t} = \sum_{n=0}^{\infty} \frac{\lambda^n}{n!} H_n(x, t) = \sum_{n=0}^{\infty} \lambda^n h_n(x, t)
+\]</div>
+<p>我们将解 <span class="arithmatex">\(Y(t)\)</span> 的积分形式与级数展开形式进行对比。已知 <span class="arithmatex">\(Y(t) = 1 + \lambda \int_0^t Y(s) dW(s)\)</span>，代入展开式：</p>
+<div class="arithmatex">\[
+\sum_{n=0}^{\infty} \lambda^n h_n(W(t), t) = 1 + \lambda \int_0^t \sum_{n=0}^{\infty} \lambda^n h_n(W(s), s) dW(s)
+\]</div>
+<p>比较方程两边同次幂 <span class="arithmatex">\(\lambda^{n+1}\)</span> 的系数，我们得到了一个极其优美的关于布朗运动的积分递推公式：</p>
+<div class="arithmatex">\[
+h_{n+1}(W(t), t) = \int_0^t h_n(W(s), s) dW(s)
+\]</div>
+<p>这个公式展示了如何通过反复对布朗运动进行随机积分，自然地生成出高阶的 Hermite 多项式（由于常数项 <span class="arithmatex">\(h_0 = 1\)</span>，则 <span class="arithmatex">\(h_1 = W(t)\)</span>，<span class="arithmatex">\(h_2 = \frac{1}{2}(W(t)^2 - t)\)</span>，与上一章黎曼和极限完全一致）。</p>
+</details>
+<h3 id="32-black-scholes">3.2 黑尔斯-斯科尔斯 (Black-Scholes) 模型</h3>
+<p>如果我们在上面的方程中加入线性的时间漂移，就得到了金融学中最著名的资产定价几何布朗运动模型 (GBM)。</p>
+<div class="arithmatex">\[
+\frac{dS(t)}{S(t)} = \mu dt + \sigma dW(t)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mu\)</span> 称为预期收益率（漂移项），<span class="arithmatex">\(\sigma\)</span> 称为资产波动率。</p>
 <div class="admonition success">
-<p class="admonition-title">定理 2：布朗运动处处无界变差 (Infinite Total Variation)</p>
-<p>几乎所有的布朗运动样本轨道 <span class="arithmatex">\(W(t, \omega)\)</span> 在任何区间上的全变差都是无穷大。</p>
-<blockquote>
-<p><strong>反证法极简证明</strong>：如果某条轨道有界的总变差 <span class="arithmatex">\(V_T &lt; \infty\)</span>，那么它的二次变差可以放缩为：
-<span class="arithmatex">\(\sum (\Delta W_k)^2 \le (\max_k |\Delta W_k|) \sum |\Delta W_k| \le (\max_k |\Delta W_k|) \cdot V_T\)</span>
-由于轨道连续，当分割无限细化时 <span class="arithmatex">\(\max |\Delta W_k| \to 0\)</span>。这会导致二次变差趋于 0，与定理 1 中二次变差等于 <span class="arithmatex">\(T &gt; 0\)</span> 产生绝对矛盾！</p>
-</blockquote>
+<p class="admonition-title">几何布朗运动的精确解</p>
+<p>我们将方程改写为 <span class="arithmatex">\(dS(t) = \mu S(t) dt + \sigma S(t) dW(t)\)</span>。
+启发于前面的解法，我们考虑对数变换。设 <span class="arithmatex">\(U(x) = \ln x\)</span>，根据 Itô 公式对 <span class="arithmatex">\(\ln S(t)\)</span> 求微分：</p>
+<div class="arithmatex">\[
+d(\ln S(t)) = U'(S(t)) dS(t) + \frac{1}{2} U''(S(t)) (dS(t))^2
+\]</div>
+<p>代入导数 <span class="arithmatex">\(U'(x) = 1/x\)</span> 和 <span class="arithmatex">\(U''(x) = -1/x^2\)</span>，以及 <span class="arithmatex">\((dS)^2 = \sigma^2 S^2 dt\)</span>：</p>
+<div class="arithmatex">\[
+d(\ln S(t)) = \frac{1}{S(t)} (\mu S(t) dt + \sigma S(t) dW(t)) - \frac{1}{2} \frac{1}{S(t)^2} (\sigma^2 S(t)^2 dt)
+\]</div>
+<p>化简得到：</p>
+<div class="arithmatex">\[
+d(\ln S(t)) = \left(\mu - \frac{\sigma^2}{2}\right) dt + \sigma dW(t)
+\]</div>
+<p>此时右侧不再依赖于 <span class="arithmatex">\(S(t)\)</span>，变成了一个普通的积分！对方程两端从 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(t\)</span> 积分：</p>
+<div class="arithmatex">\[
+\ln S(t) - \ln S(0) = \left(\mu - \frac{\sigma^2}{2}\right) t + \sigma W(t)
+\]</div>
+<p>两边取指数，得到终极解：</p>
+<div class="arithmatex">\[
+S(t) = S_0 e^{\left(\mu - \frac{\sigma^2}{2}\right)t + \sigma W(t)}
+\]</div>
+<p>这个结果告诉我们，虽然对数收益率的期望表现为线性的 <span class="arithmatex">\(\mu t\)</span>，但由于方差的惩罚，实际资产价格的长期增长率被削弱为了 <span class="arithmatex">\(\mu - \frac{\sigma^2}{2}\)</span>，这就是“波动性拖累 (Volatility Drag)”的数学本质。</p>
 </div>
 <hr />
-<h2 id="4-riemann-ito">4. 随机积分的 Riemann 和与 Itô 积分的引出</h2>
-<p>那我们如何计算 <span class="arithmatex">\(\int_0^T W(t) dW(t)\)</span>？
-回到黎曼和的定义，我们能观察到一个在经典微积分中不会出现的现象：<strong>取值点的改变，将导致积分结果的巨大改变。</strong></p>
-<p>构造划分 <span class="arithmatex">\(P\)</span>，并在每个子区间 <span class="arithmatex">\([t_k, t_{k+1}]\)</span> 中取一点 <span class="arithmatex">\(\tau_k = (1-\lambda)t_k + \lambda t_{k+1}\)</span> (<span class="arithmatex">\(\lambda \in [0, 1]\)</span>)。
-考察黎曼和：</p>
+<h2 id="4-brownian-bridge">4. 布朗桥 (Brownian Bridge)</h2>
+<p>最后我们探讨一个具有强约束边界条件的 SDE 案例。</p>
+<p>在统计学中，我们常常需要研究被“钉在”两个固定点之间的随机游走（例如 Kolmogorov-Smirnov 检验中的极限过程）。这就是布朗桥过程。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义：标准布朗桥方程</p>
+<p>考虑以下具有奇异漂移项的随机微分方程，初始条件 <span class="arithmatex">\(B(0) = 0\)</span>，时间限定在 <span class="arithmatex">\(t \in [0, 1)\)</span>：</p>
 <div class="arithmatex">\[
-R_n = \sum_{k=0}^{m-1} W(\tau_k) \big( W(t_{k+1}) - W(t_k) \big)
+dB(t) = -\frac{B(t)}{1-t} dt + dW(t)
 \]</div>
+<p>直观上理解：随着时间 <span class="arithmatex">\(t\)</span> 逼近 <span class="arithmatex">\(1\)</span>，分母 <span class="arithmatex">\((1-t) \to 0\)</span>，漂移项会产生一股极其巨大的“拉力”，强行将 <span class="arithmatex">\(B(t)\)</span> 的轨迹拉回 <span class="arithmatex">\(0\)</span>。</p>
+</div>
+<p>我们可以用经典 ODE 中的<strong>积分因子法</strong>配合 Itô 乘积法则来求解此 SDE。</p>
 <div class="admonition info">
-<p class="admonition-title">积分结果对 <span class="arithmatex">\(\lambda\)</span> 取值的依赖</p>
-<p>为了清晰展示，我们研究 <span class="arithmatex">\(\lambda = 0\)</span>（取左端点，即 Itô 积分）的特殊情况，此时 <span class="arithmatex">\(\tau_k = t_k\)</span>：</p>
+<p class="admonition-title">布朗桥的显式解</p>
+<p>我们将含有 <span class="arithmatex">\(B\)</span> 的项移到方程左边：</p>
 <div class="arithmatex">\[
-R_n = \sum_{k=0}^{m-1} W(t_k) \big( W(t_{k+1}) - W(t_k) \big)
+dB(t) + \frac{B(t)}{1-t} dt = dW(t)
+\]</div>
+<p>方程两边同乘积分因子 <span class="arithmatex">\(\frac{1}{1-t}\)</span>：</p>
+<div class="arithmatex">\[
+\frac{1}{1-t} dB(t) + \frac{B(t)}{(1-t)^2} dt = \frac{dW(t)}{1-t}
+\]</div>
+<p>观察左侧，它恰好是联合微元 <span class="arithmatex">\(d\left(\frac{B(t)}{1-t}\right)\)</span> 的展开（因为根据普通乘积求导法则，这里没有两个随机过程相乘，不存在二次修正项）：</p>
+<div class="arithmatex">\[
+d\left(\frac{B(t)}{1-t}\right) = \frac{dW(t)}{1-t}
+\]</div>
+<p>对两边从 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(t\)</span> 积分（注意 <span class="arithmatex">\(B(0) = 0\)</span>）：</p>
+<div class="arithmatex">\[
+\frac{B(t)}{1-t} - 0 = \int_0^t \frac{dW(s)}{1-s}
+\]</div>
+<p>整理即得布朗桥的显式积分解：</p>
+<div class="arithmatex">\[
+B(t) = (1-t) \int_0^t \frac{dW(s)}{1-s}, \quad 0 \le t &lt; 1
 \]</div>
 <details class="proof">
-<summary>代数恒等式拆分与 Itô 积分的极限求解（点击展开）</summary>
-<p>这是一个极其巧妙的代数技巧。利用恒等式 <span class="arithmatex">\(a(b-a) = \frac{1}{2}\big( b^2 - a^2 - (b-a)^2 \big)\)</span>，我们将每一项改写：
-令 <span class="arithmatex">\(a = W(t_k), b = W(t_{k+1})\)</span>：</p>
+<summary>端点 <span class="arithmatex">\(t=1\)</span> 处的连续性与零值证明框架（点击展开）</summary>
+<p>上述积分在 <span class="arithmatex">\(t \to 1\)</span> 时分母会出现奇异性。为了证明几乎所有轨道都能连续地“降落”在 <span class="arithmatex">\(B(1) = 0\)</span>，需要借助高级概率论工具进行界定。</p>
+<p>首先分析积分部分的方差。记 <span class="arithmatex">\(M(t) = \int_0^t \frac{dW(s)}{1-s}\)</span>。由于这是对于非随机函数的 Itô 积分，其期望为 0，方差由等距同构给出：</p>
 <div class="arithmatex">\[
-W(t_k) \big( W(t_{k+1}) - W(t_k) \big) = \frac{1}{2}\big( W(t_{k+1})^2 - W(t_k)^2 \big) - \frac{1}{2}\big( W(t_{k+1}) - W(t_k) \big)^2
+E[M(t)^2] = \int_0^t \frac{1}{(1-s)^2} ds = \frac{1}{1-t} - 1 = \frac{t}{1-t}
 \]</div>
-<p>将所有的项加起来，原和式分裂为两部分 <span class="arithmatex">\(B_1\)</span> 和 <span class="arithmatex">\(B_2\)</span>：</p>
+<p>因此 <span class="arithmatex">\(B(t) = (1-t) M(t)\)</span> 的方差为 <span class="arithmatex">\(E[B(t)^2] = (1-t)^2 \frac{t}{1-t} = t(1-t)\)</span>。显然当 <span class="arithmatex">\(t \to 1\)</span> 时，方差趋于 0。但这仅说明了依概率或 <span class="arithmatex">\(L^2\)</span> 收敛。</p>
+<p>为了证明<strong>几乎必然 (a.s.) 连续收敛</strong>，需采用 Borel-Cantelli 引理与极大值不等式。
+取二进网络点 <span class="arithmatex">\(t_n = 1 - 2^{-n}\)</span>。对于区间 <span class="arithmatex">\([t_n, t_{n+1}]\)</span>，利用 Chebyshev 不等式和鞅的极大值不等式，估计在该区间内偏离目标值的概率界：</p>
 <div class="arithmatex">\[
-R_n = \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1})^2 - W(t_k)^2 \big) }_{B_1} - \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1}) - W(t_k) \big)^2 }_{B_2}
+P\left( \max_{t \in [t_n, t_{n+1}]} |B(t)| &gt; \varepsilon \right) \le \frac{C}{\varepsilon^2} 2^{-\eta n}
 \]</div>
-<p><strong>分析 <span class="arithmatex">\(B_1\)</span></strong>：这是一个完美的交错求和（Telescoping sum），中间项全部抵消：</p>
-<div class="arithmatex">\[
-B_1 = \frac{1}{2} \big( W(T)^2 - W(0)^2 \big) = \frac{1}{2} W(T)^2
-\]</div>
-<p><strong>分析 <span class="arithmatex">\(B_2\)</span></strong>：这正是布朗运动的二次变差！根据定理 1，当划分细化时，它在 <span class="arithmatex">\(L^2\)</span> 意义下收敛：</p>
-<div class="arithmatex">\[
-B_2 \xrightarrow{L^2} \frac{1}{2} T
-\]</div>
-<p>综上所述，当 <span class="arithmatex">\(\lambda = 0\)</span> 时（Itô 积分），我们得到：</p>
-<div class="arithmatex">\[
-\int_0^T W(t) dW(t) \triangleq \lim_{|P|\to 0} R_n = \frac{1}{2} W(T)^2 - \frac{1}{2} T
-\]</div>
-<p><em>(注：后面多出来的 <span class="arithmatex">\(-\frac{1}{2}T\)</span> 项称为 Itô 校正项)</em> <span class="arithmatex">\(\square\)</span></p>
+<p>由于右侧构成收敛的几何级数 <span class="arithmatex">\(\sum 2^{-\eta n} &lt; \infty\)</span>，根据 Borel-Cantelli 第一引理，大偏差事件发生的概率为 0。因此，几乎所有的布朗桥轨道在 <span class="arithmatex">\(t \to 1\)</span> 时都被强制收敛到了 <span class="arithmatex">\(0\)</span>。<span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p><strong>两种最重要的积分流派：</strong>
-* 当 <span class="arithmatex">\(\lambda = 0\)</span> 时（取左端点），即为 <strong>Itô 积分</strong>，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>。它保持了鞅的性质，常用于金融数学领域。
-* 当 <span class="arithmatex">\(\lambda = 1/2\)</span> 时（取中点），即为 <strong>Stratonovich 积分</strong>，校正项相互抵消，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>，形式上与经典微积分一致，常用于物理和工程领域。</p>
-<hr />
-<h2 id="5-ito">5. 严格 Itô 积分的测度论准备</h2>
-<p>为了将 Itô 积分推广到更一般的随机过程（不只是 <span class="arithmatex">\(W(t)\)</span>），我们需要严格定义什么叫做“不管未来，只看过去”。这需要我们引入流 (Filtration) 和适应过程 (Adapted Process) 的概念。</p>
-<div class="admonition abstract">
-<p class="admonition-title">定义：信息流与 <span class="arithmatex">\(\sigma\)</span>-代数</p>
-<p><strong>1. 布朗运动的自然流</strong>：
-对于任意时刻 <span class="arithmatex">\(t\)</span>，布朗运动历史轨迹产生的信息记为 <span class="arithmatex">\(\sigma\)</span>-代数：</p>
-<div class="arithmatex">\[
-\mathcal{F}_W(t) \triangleq \sigma(\{W(s) \mid 0 \le s \le t\})
-\]</div>
-<p>它包含了直到时刻 <span class="arithmatex">\(t\)</span> 为止布朗运动所有的路径信息。</p>
-<p><strong>2. 未来增量的独立性</strong>：
-我们定义未来的增量信息流 <span class="arithmatex">\(\mathcal{F}^t \triangleq \sigma(\{W(s) - W(t) \mid s &gt; t\})\)</span>。根据布朗运动的独立增量性质，<span class="arithmatex">\(\mathcal{F}^t\)</span> 与历史流 <span class="arithmatex">\(\mathcal{F}_W(t)\)</span> 是<strong>完全独立</strong>的。</p>
-<p><strong>3. 一般信息流 (Filtration)</strong>：
-一族满足以下条件的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\{\mathcal{F}(t)\}_{t \ge 0}\)</span>：
-* <strong>单调性</strong>：<span class="arithmatex">\(\mathcal{F}(s) \subset \mathcal{F}(t)\)</span> 对任意 <span class="arithmatex">\(0 \le s \le t\)</span>（信息不遗忘）。
-* <strong>包含历史</strong>：<span class="arithmatex">\(\mathcal{F}_W(t) \subset \mathcal{F}(t)\)</span>。
-* <strong>未来独立</strong>：增量 <span class="arithmatex">\(W(s) - W(t)\)</span> 与 <span class="arithmatex">\(\mathcal{F}(t)\)</span> 独立。</p>
-</div>
-<p>有了关于“信息”这一概念的数学框架，我们就可以确定哪些随机过程是可以被 Itô 积分的。</p>
-<div class="admonition info">
-<p class="admonition-title">定义：适应过程与循序可测 (Adapted &amp; Progressively Measurable)</p>
-<p><strong>1. 适应过程 (Adapted Process)</strong>：
-若对于每一个固定的时刻 <span class="arithmatex">\(t\)</span>，随机变量 <span class="arithmatex">\(G(t, \omega)\)</span> 都是 <span class="arithmatex">\(\mathcal{F}(t)\)</span>-可测的，则称随机过程 <span class="arithmatex">\(G(t)\)</span> 是关于流 <span class="arithmatex">\(\{\mathcal{F}(t)\}\)</span> 适应的。
-<em>(直观理解：在时刻 <span class="arithmatex">\(t\)</span> 这一刻，你只要知道了所有的历史信息 <span class="arithmatex">\(\mathcal{F}(t)\)</span>，你就知道此时刻 <span class="arithmatex">\(G(t)\)</span> 的值，绝不需要未来的信息。)</em></p>
-<p><strong>2. 循序可测 (Progressively Measurable)</strong>：
-一个更强的条件。映射 <span class="arithmatex">\((s, \omega) \mapsto G(s, \omega)\)</span> 在乘积空间 <span class="arithmatex">\([0, t] \times \Omega\)</span> 上的 <span class="arithmatex">\(\mathcal{B}([0, t]) \otimes \mathcal{F}(t)\)</span> 域上是联合可测的。这保证了在时间区间上的黎曼或勒贝格积分操作是合法的。</p>
-</div>
-<p>在本书后续的构建中，Itô 积分 <span class="arithmatex">\(\int_0^T G(t, \omega) dW(t)\)</span> 将在以下希尔伯特空间中被严格定义：</p>
-<div class="arithmatex">\[
-L^2(\Omega \times [0, T]) = \left\{ G(t, \omega) \text{ 为循序可测过程} \mid E\left[ \int_0^T G(t, \omega)^2 dt \right] &lt; \infty \right\}
-\]</div>
 
 
 
