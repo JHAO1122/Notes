@@ -1,4 +1,4 @@
-# 第四章：Itô 积分与随机微分(Itô Integral & Stochastic Differential)
+# 第四章：Itô 积分与随机微分
 
 上一章将积分推广到了 $L^2$ 空间，现在我们正式定义**随机过程**的 Itô 积分，并建立起一套区别于经典微积分的体系——**Itô 微积分 (Itô Calculus)**。
 
