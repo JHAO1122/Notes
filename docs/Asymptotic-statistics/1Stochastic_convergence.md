@@ -62,23 +62,80 @@
     那么，这种逐点收敛会自动升级为**一致收敛**：
     
     $$
-    \sup_x |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
+    \sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
     $$
     
-    ??? proof "Polya 定理证明思路（点击展开）"
+    ??? proof "Polya 定理详细证明（点击展开）"
         
-        该证明采用了经典的**有限覆盖法 (Covering Method)**。
+        我们需要证明对于任意 $\epsilon > 0$，当 $n$ 足够大时，$\sup_x |F_n(x) - F(x)| < \epsilon$。
+
+        **1. 构造有限划分（Partitioning）**
         
-        由于 $F$ 是一致连续的分布函数，我们在无穷区间上截取一个足够大的 $[-M, M]$，使得尾部概率极其微小。
-        将 $[-M, M]$ 进行等宽划分，构造网格点 $\{x_i\}_{i=0}^{K+1}$。
-        
-        定义在这些网格点上的最大误差为：
+        由于 $F(x)$ 是连续分布函数，其值域为 $[0, 1]$。对于给定的 $\epsilon > 0$，我们可以找到有限个点 $-\infty = x_0 < x_1 < x_2 < \dots < x_K = \infty$，使得：
         
         $$
-        \Delta_n = \max_{i=0}^{K+1} |F_n(x_i) - F(x_i)|
+        F(x_i) - F(x_{i-1}) < \frac{\epsilon}{2}, \quad \forall i = 1, \dots, K
         $$
         
-        因为 $X_n \xrightarrow{d} X$ 且 $F$ 无间断点，对于这**有限个**网格点 $K$，当 $n \to \infty$ 时必然有 $\Delta_n \to 0$。利用单调性与三角不等式，即可将网格点上的收敛推广到全空间的 $\sup$ 一致收敛。$\square$
+        （注：这里规定 $F(x_0) = 0$ 且 $F(x_K) = 1$）。
+
+        **2. 利用点点收敛（Pointwise Convergence）**
+        
+        因为 $X_n \xrightarrow{d} X$，对于上述每一个有限的网格点 $x_i$（当 $1 \le i \le K-1$ 时），根据分布收敛的定义，当 $n \to \infty$ 时：
+        
+        $$
+        F_n(x_i) \rightarrow F(x_i)
+        $$
+        
+        由于网格点是有限的，必存在 $N$，使得当 $n > N$ 时，对所有 $i=1, \dots, K-1$ 均有：
+        
+        $$
+        |F_n(x_i) - F(x_i)| < \frac{\epsilon}{2}
+        $$
+
+        **3. 单调性夹逼（The Sandwich Argument）**
+        
+        对于轴上任意一点 $x$，它必然落在某个区间 $[x_{i-1}, x_i]$ 内。利用 $F_n$ 和 $F$ 的单调不减性：
+        
+        * **上界：**
+        
+        $$
+        F_n(x) - F(x) \le F_n(x_i) - F(x_{i-1}) = [F_n(x_i) - F(x_i)] + [F(x_i) - F(x_{i-1})]
+        $$
+        
+        当 $n > N$ 时，代入前两步的结论：
+        
+        $$
+        F_n(x) - F(x) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+        $$
+        
+        * **下界：**
+        
+        $$
+        F_n(x) - F(x) \ge F_n(x_{i-1}) - F(x_i) = [F_n(x_{i-1}) - F(x_{i-1})] - [F(x_i) - F(x_{i-1})]
+        $$
+        
+        当 $n > N$ 时，同理可得：
+        
+        $$
+        F_n(x) - F(x) > -\frac{\epsilon}{2} - \frac{\epsilon}{2} = -\epsilon
+        $$
+
+        **4. 结论**
+        
+        综合上下界，对于所有 $x \in \mathbb{R}$，只要 $n > N$，就有：
+        
+        $$
+        |F_n(x) - F(x)| < \epsilon
+        $$
+        
+        由此证明了：
+        
+        $$
+        \sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad (n \rightarrow \infty)
+        $$
+        
+        $\square$
 
 统计学中最常见的一种收敛便是向正态分布的收敛：
 
