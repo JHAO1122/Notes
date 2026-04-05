@@ -110,7 +110,10 @@ Multivariate characteristic functions perfectly inherit the properties of univar
   * If $E\|X\| < \infty$, then the gradient $\nabla \phi_X(t)$ exists and is continuous, and $\nabla \phi_X(0) = i\mu$ (where $\mu = EX$).
   * If $E\|X\|^2 < \infty$, then the Hessian matrix $\nabla^2 \phi_X(t)$ exists and is continuous, and $\nabla^2 \phi_X(0) = -E[XX^\top]$.
 
-* **Multivariate Normal Distribution Special Case**: If $X \sim N_d(\mu, \Sigma)$, its characteristic function is an extremely elegant quadratic exponential form:
+* **Multivariate Normal Distribution Special Case**: 
+
+If $X \sim N_d(\mu, \Sigma)$, 
+its characteristic function is an extremely elegant quadratic exponential form:
 
   $$
   \phi_X(t) = \exp\left\{ it^\top \mu - \frac{1}{2} t^\top \Sigma t \right\}

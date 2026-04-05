@@ -108,11 +108,13 @@
   * 若 $E\|X\| < \infty$，则梯度 $\nabla \phi_X(t)$ 存在且连续，且 $\nabla \phi_X(0) = i\mu$（其中 $\mu = EX$）。
   * 若 $E\|X\|^2 < \infty$，则 Hessian 矩阵 $\nabla^2 \phi_X(t)$ 存在且连续，且 $\nabla^2 \phi_X(0) = -E[XX^\top]$。
 
-* **多元正态分布特例**：若 $X \sim N_d(\mu, \Sigma)$，其特征函数为极其优美的二次型指数形式：
+* **多元正态分布特例**：
 
-  $$
-  \phi_X(t) = \exp\left\{ it^\top \mu - \frac{1}{2} t^\top \Sigma t \right\}
-  $$
+若 $X \sim N_d(\mu, \Sigma)$，其特征函数为极其优美的二次型指数形式：
+
+    $$
+    \phi_X(t) = \exp\left\{ it^\top \mu - \frac{1}{2} t^\top \Sigma t \right\}
+    $$
 
 ---
 
