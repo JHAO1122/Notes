@@ -6,7 +6,7 @@ tags:
   - 研究生课程
 ---
 
-# 📈 随机微分方程 (Stochastic Differential Equation)
+# 📈 随机微分方程 
 
 > **"Probability is not about the odds, but about the flow of information."**
 

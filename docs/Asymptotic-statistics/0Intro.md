@@ -5,7 +5,7 @@ tags:
   - 研究生课程
 ---
 
-# 📊 渐近统计 (Asymptotic Statistics)
+# 📊 渐近统计
 
 > **"Asymptotics is the art of replacing the impossible exact finite-sample distributions with the beautiful infinite-sample limits."**
 
