@@ -371,3 +371,293 @@
        
     4. **多元正态的仿射变换**：
        若 $X_n \xrightarrow{d} N_p(\mu, \Sigma)$，对于任意常数矩阵 $C \in \mathbb{R}^{m \times p}$，有 $C X_n \xrightarrow{d} N_m(C\mu, C\Sigma C^\top)$。
+
+## 5. 随机收敛的相互关系 (Relations of Stochastic Convergence)
+
+四种随机收敛之间存在着严格的强弱蕴含关系。在实际应用中，我们经常需要利用这些关系在依概率收敛和依分布收敛之间进行转换。
+
+!!! success "定理 1.8：随机收敛关系定理"
+
+    设 $X_n$、$X$ 和 $Y_n$ 为随机向量。那么以下推论成立：
+
+    1. **几乎必然 $\Rightarrow$ 依概率**：若 $X_n \xrightarrow{a.s.} X$，则 $X_n \xrightarrow{P} X$；
+    2. **依概率 $\Rightarrow$ 依分布**：若 $X_n \xrightarrow{P} X$，则 $X_n \xrightarrow{d} X$；
+    3. **向常数收敛的等价性**：$X_n \xrightarrow{P} c$（$c$ 为常数） 当且仅当 $X_n \xrightarrow{d} c$；
+    4. **距离收敛传递 (Convergence Lemma)**：若 $X_n \xrightarrow{d} X$ 且 $d(X_n, Y_n) \xrightarrow{P} 0$，则 $Y_n \xrightarrow{d} X$；
+    5. **联合分布收敛 (1)**：若 $X_n \xrightarrow{d} X$ 且 $Y_n \xrightarrow{P} c$（常数），则 $(X_n, Y_n) \xrightarrow{d} (X, c)$；
+    6. **联合分布收敛 (2)**：若 $X_n \xrightarrow{P} X$ 且 $Y_n \xrightarrow{P} Y$，则 $(X_n, Y_n) \xrightarrow{P} (X, Y)$。
+
+    > **重要注记**：单一边缘的依概率收敛可以推出联合的依概率收敛。但是，**单一边缘的依分布收敛，通常推不出联合的依分布收敛**（除非用到 Copula 或者其中一个是向常数收敛，如性质 5）。
+
+    ??? proof "核心性质的严格证明（点击展开）"
+
+        **(1) 几乎必然 $\Rightarrow$ 依概率**：
+        定义事件序列 $A_n = \cup_{m \ge n} \{||X_m - X|| > \epsilon\}$。该集合序列是单调递减的。
+        如果对于所有的 $\omega \in \Omega$ 都有 $X_n(\omega) \to X(\omega)$，那么当 $n \to \infty$ 时 $A_n$ 递减趋于空集。
+        若 $X_n \xrightarrow{a.s.} X$，由概率的连续性：
+        
+        $$
+        P(||X_n - X|| > \epsilon) \le P(A_n) \to 0
+        $$
+
+        **(4) 距离收敛传递 (证明的基础)**：
+        我们利用 Portmanteau 引理 (iii) 证明。对于任意有界 Lipschitz 连续函数 $f \in C_{B, Lip}$，设其 Lipschitz 常数为 $L$，且 $\sup |f| \le M$。
+        考察期望差值的绝对值，通过引入指示函数截断：
+        
+        $$
+        \begin{aligned}
+        |Ef(X_n) - Ef(Y_n)| &\le E\left[ |f(X_n) - f(Y_n)| \cdot \mathbb{I}(||X_n - Y_n|| \le \epsilon) \right] \\
+        &\quad + E\left[ |f(X_n) - f(Y_n)| \cdot \mathbb{I}(||X_n - Y_n|| > \epsilon) \right]
+        \end{aligned}
+        $$
+        
+        对于第一部分，利用 Lipschitz 性质放缩为 $L \epsilon \cdot P(||X_n - Y_n|| \le \epsilon) \le L \epsilon$；
+        对于第二部分，利用有界性放缩为 $2M \cdot P(||X_n - Y_n|| > \epsilon)$。
+        因此：
+        
+        $$
+        |Ef(X_n) - Ef(Y_n)| \le L\epsilon + 2M \cdot P(||X_n - Y_n|| > \epsilon)
+        $$
+        
+        由于 $d(X_n, Y_n) \xrightarrow{P} 0$，当 $n \to \infty$ 时第二项趋于 0。因为 $\epsilon$ 是任意小的，所以 $Ef(X_n) - Ef(Y_n) \to 0$。
+        结合前提 $X_n \xrightarrow{d} X$（即 $Ef(X_n) \to Ef(X)$），必然有 $Ef(Y_n) \to Ef(X)$。再次由 Portmanteau 引理，得证 $Y_n \xrightarrow{d} X$。
+
+        **(2) 依概率 $\Rightarrow$ 依分布**：
+        将 $X_n$ 拆分为 $X_n = X + (X_n - X)$。
+        由于显然有 $X \xrightarrow{d} X$，并且已知 $X_n - X \xrightarrow{P} 0$，我们直接套用刚刚证明的性质 (4)（令性质 (4) 中的 $X_n$ 角色为 $X$，$Y_n$ 角色为 $X_n$），立刻得到 $X_n \xrightarrow{d} X$。
+
+        **(3) 向常数收敛等价性**：
+        充分性由性质 (2) 保证。证明必要性 ($X_n \xrightarrow{d} c \Rightarrow X_n \xrightarrow{P} c$)：
+        事件 $\{||X_n - c|| \ge \epsilon\}$ 等价于 $X_n \in B(c, \epsilon)^c$。这是一个闭集。
+        由 Portmanteau 引理 (vi)：
+        
+        $$
+        \limsup P(||X_n - c|| \ge \epsilon) \le P(c \in B(c, \epsilon)^c) = 0
+        $$
+        
+        因此极限为 0，依概率收敛得证。
+
+        **(5) $(X_n, Y_n) \xrightarrow{d} (X, c)$**：
+        将联合变量拆解为 $(X_n, Y_n) = (X_n, c) + (0, Y_n - c)$。
+        由于 $Y_n \xrightarrow{P} c$，误差项 $(0, Y_n - c) \xrightarrow{P} (0,0)$。
+        由性质 (4)，我们只需证明主项 $(X_n, c) \xrightarrow{d} (X, c)$。对于任意二维连续有界函数 $f(x,y)$，固定 $y=c$ 后边缘函数 $f_m(x) = f(x,c)$ 也是连续有界的。
+        因为 $X_n \xrightarrow{d} X$，所以 $E[f(X_n, c)] = E[f_m(X_n)] \to E[f_m(X)] = E[f(X, c)]$。得证！
+        
+        **(6) $(X_n, Y_n) \xrightarrow{P} (X, Y)$**：
+        由三角不等式 $||(X_n, Y_n) - (X, Y)|| \le ||X_n - X|| + ||Y_n - Y||$。
+        
+        $$
+        P(||(X_n, Y_n) - (X, Y)|| > \epsilon) \le P(||X_n - X|| > \epsilon/2) + P(||Y_n - Y|| > \epsilon/2) \to 0
+        $$
+        
+        得证。$\square$
+
+---
+
+## 6. Slutsky 定理 (Slutsky's Theorem)
+
+作为定理 1.8 和连续映射定理 (CMT) 的直接推论，Slutsky 定理为统计量之间的代数运算提供了极为便利的准则。它是构建 $t$ 统计量、Wald 统计量等渐近分布的基石。
+
+!!! success "定理 1.9：Slutsky 定理 (Slutsky, 1925)"
+
+    设 $X_n, X, Y_n$ 为随机向量或标量随机变量。
+    如果 $X_n \xrightarrow{d} X$ 且 $Y_n \xrightarrow{P} c$（常数），那么：
+
+    1. **加法法则**：$X_n + Y_n \xrightarrow{d} X + c$
+    2. **乘法法则**：$Y_n X_n \xrightarrow{d} cX$
+    3. **除法法则**：$Y_n^{-1} X_n \xrightarrow{d} c^{-1}X$ （前提是 $c \neq 0$ 且对于矩阵而言可逆）
+
+    ??? proof "推导极简证明（点击展开）"
+
+        根据定理 1.8 的性质 (5)，已知 $X_n \xrightarrow{d} X$ 且 $Y_n \xrightarrow{P} c$，可以直接推导出它们的联合分布收敛：
+        
+        $$
+        (X_n, Y_n) \xrightarrow{d} (X, c)
+        $$
+        
+        接下来，分别构造二元连续映射函数 $g(x,y) = x+y$、$g(x,y) = yx$ 以及 $g(x,y) = y^{-1}x$。
+        直接套用连续映射定理 (CMT) $g(X_n, Y_n) \xrightarrow{d} g(X, c)$，Slutsky 定理的三条法则立刻得证。$\square$
+
+!!! tip "经典应用：$t$-统计量的渐近正态性"
+
+    设 $Y_1, \dots, Y_n$ 是 i.i.d. 的样本，满足 $E[Y_1] = 0, E[Y_1^2] = \sigma^2$。
+    我们要推导 $t$-统计量 $t_n := \frac{\sqrt{n}\overline{Y}}{S_n}$ 的极限分布，其中 $S_n^2$ 是样本方差。
+
+    **步骤 1：分析分子**
+    由中心极限定理 (CLT)，均值的渐近分布为：
+    
+    $$
+    \sqrt{n}\overline{Y} \xrightarrow{d} N(0, \sigma^2)
+    $$
+    
+    **步骤 2：分析分母**
+    由大数定律，样本方差依概率收敛于总体方差：$S_n^2 \xrightarrow{P} \sigma^2$。再由映射定理 ($g(x)=\sqrt{x}$)，得到 $S_n \xrightarrow{P} \sigma$。
+
+    **步骤 3：应用 Slutsky 定理**
+    将分子视为 $X_n$，分母视为 $Y_n^{-1}$：
+    
+    $$
+    \frac{\sqrt{n}\overline{Y}}{S_n} \xrightarrow{d} \frac{1}{\sigma} N(0, \sigma^2) \stackrel{d}{=} N(0, 1)
+    $$
+    
+    这从理论上证明了在大样本下，$t$-检验可以近似使用标准正态分布的临界值。
+
+---
+
+## 7. 胎紧性与随机有界 (Tightness & Stochastic Boundedness)
+
+在研究一列随机变量是否收敛时，“它们是否会跑到无穷远处逃逸掉？”是一个核心问题。这就引出了胎紧性（Tightness）的概念。
+
+!!! abstract "定义 1.10：随机有界 (Stochastically Bounded) / 胎紧 (Tight)"
+
+    序列 $\{X_n\}$ 被称为是**随机有界**的（或**胎紧的**），如果对于任意给定的 $\epsilon > 0$，都存在一个有限的常数 $M_\epsilon > 0$，使得对于所有的 $n$：
+    
+    $$
+    \sup_n P(||X_n|| > M_\epsilon) < \epsilon
+    $$
+    
+    在渐近统计中，我们通常将这种性质记为大 O 符号：**$X_n = O_p(1)$**。
+
+一个单独的随机变量 $X$ 本身必定是胎紧的（因为分布函数 $F(\infty)=1, F(-\infty)=0$）。进而，任何**有限个**随机变量的集合也是胎紧的。真正需要警惕的是无限序列 $\{X_n\}$ 的逃逸。
+
+!!! info "定理 1.11：Prohorov 定理 (Prohorov's Theorem)"
+
+    依分布收敛与胎紧性之间有着极其深刻的拓扑联系：
+
+    1. 若 $X_n \xrightarrow{d} X$，那么 $\{X_n\}$ **必然是胎紧的**（即收敛必有界）。
+    2. 若 $\{X_n\}$ 是胎紧的，那么它**必然存在一个依分布收敛的子列** $\{X_{n_i}\}$，使得当 $n_i \to \infty$ 时，$X_{n_i} \xrightarrow{d} X$。（这可以看作是实分析中“有界数列必有收敛子列”的 Bolzano-Weierstrass 定理在概率空间上的推广）。
+
+    ??? proof "定理 1.11 (1) 的严格证明（点击展开）"
+
+        因为极限随机变量 $X$ 单独是一个随机变量，所以它是胎紧的。对于任意 $\epsilon > 0$，我们可以找到一个足够大的 $M_\epsilon$，且满足 $P(||X|| = M_\epsilon) = 0$（避开间断点），使得：
+        
+        $$
+        P(||X|| \ge M_\epsilon) < \epsilon
+        $$
+        
+        考虑闭集 $F = \{x : ||x|| \ge M_\epsilon\}$。由 Portmanteau 引理 (vi) 和 $X_n \xrightarrow{d} X$：
+        
+        $$
+        \limsup_{n \to \infty} P(||X_n|| \ge M_\epsilon) \le P(||X|| \ge M_\epsilon) < \epsilon
+        $$
+        
+        既然上极限严格小于 $\epsilon$，那么必定存在一个正整数 $N$，使得对于所有的 $n \ge N$：
+        
+        $$
+        P(||X_n|| \ge M_\epsilon) \le 2\epsilon
+        $$
+        
+        对于前面有限的 $N-1$ 个随机变量 $\{X_1, \dots, X_{N-1}\}$，由于有限集必然胎紧，我们可以适当放大 $M_\epsilon$，使得对于所有的 $n \in \mathbb{N}_+$ 都有 $P(||X_n|| > M_\epsilon) < \epsilon$ 成立。故序列全局胎紧。$\square$
+
+---
+
+## 8. 随机阶符号 $o_p$ 与 $O_p$ (Stochastic Order)
+
+为了在概率论中进行类似微积分的泰勒展开，我们需要一套描述“概率意义下无穷小”和“概率意义下同阶”的符号系统。
+
+!!! abstract "定义 1.12：随机小 $o_p$ 与大 $O_p$"
+
+    设 $\{a_n\}$ 为一个常数序列。对于随机向量序列 $\{X_n\}$：
+
+    * **大 $O_p$ (Stochastically of order $a_n$)**：若 $\frac{X_n}{a_n} = O_p(1)$，即 $\frac{X_n}{a_n}$ 是胎紧的（随机有界的），则记作 $X_n = O_p(a_n)$。
+    * **小 $o_p$ (Stochastically of smaller order $a_n$)**：若 $\frac{X_n}{a_n} \xrightarrow{P} 0$，即比 $a_n$ 衰减得更快，则记作 $X_n = o_p(a_n)$。
+    
+    > *特例*：$X_n = o_p(1)$ 意味着 $X_n \xrightarrow{P} 0$。
+
+在确定统计量的阶时，切比雪夫不等式 (Chebyshev's Inequality) 是最常用的手段。例如，如果 $E[T_n] = \mu_n$ 且 $Var(T_n) = \sigma_n^2$，则必定有 $T_n - \mu_n = O_p(\sigma_n)$。
+
+**$o_p$ 与 $O_p$ 的运算准则：**
+在进行渐近展开时，我们可以像处理确定性极限一样处理这些随机符号（从左向右阅读）：
+
+* $o_p(1) + o_p(1) = o_p(1)$
+* $O_p(1) + o_p(1) = O_p(1)$
+* $O_p(1) \cdot o_p(1) = o_p(1)$
+* $(1 + o_p(1))^{-1} = O_p(1)$
+* $O_p(1) + O_p(1) = O_p(1)$
+* $o_p(O_p(1)) = O_p(o_p(1)) = o_p(1)$
+
+---
+
+## 9. 随机代入引理 (Lemma of Stochastic Plug-in)
+
+这是我们在统计推断中推导 Delta 方法 (Delta Method) 和极大似然估计 (MLE) 渐近正态性的核心预备引理。
+
+!!! success "引理 1.13：随机代入引理"
+
+    设 $R: \mathbb{R}^k \to \mathbb{R}$ 是一个满足 $R(0)=0$ 的实函数。设 $\{X_n\}$ 是一列以 0 为概率极限的随机向量（即 $X_n \xrightarrow{P} 0$）。那么对于任意 $p > 0$：
+
+    1. 若当 $h \to 0$ 时有确定性极限 $R(h) = o(||h||^p)$，则 $R(X_n) = o_p(||X_n||^p)$。
+    2. 若当 $h \to 0$ 时有确定性极限 $R(h) = O(||h||^p)$，则 $R(X_n) = O_p(||X_n||^p)$。
+
+    > *注记：这个引理非常强大，它允许我们将确定性微积分中的泰勒展开余项 $o(|x|)$，直接无缝转化为随机变量下的 $o_p(|X_n|)$，而无需担心函数 $R$ 在其他地方是否连续。*
+
+    ??? proof "小 $o_p$ 和 大 $O_p$ 截断证明（点击展开）"
+
+        **证明 (1) 小 $o_p$ 情况**：
+        定义辅助函数：
+        
+        $$
+        g(h) = \begin{cases} \frac{R(h)}{||h||^p}, & h \neq 0 \\ 0, & h = 0 \end{cases}
+        $$
+        
+        则可以写成 $R(X_n) = ||X_n||^p g(X_n)$。要证 $R(X_n) = o_p(||X_n||^p)$，只需证明 $g(X_n) \xrightarrow{P} 0$。
+        由于前提 $R(h) = o(||h||^p)$，所以当 $h \to 0$ 时 $g(h) \to 0 = g(0)$。即 $g(h)$ 在 0 点是连续的。
+        既然已知 $X_n \xrightarrow{P} 0$，通过连续映射定理 (CMT)，立刻得到 $g(X_n) \xrightarrow{P} g(0) = 0$。得证！
+
+        **证明 (2) 大 $O_p$ 情况**：
+        同样利用上面的 $g(h)$。由于 $R(h) = O(||h||^p)$，在 $h=0$ 附近 $g(h)$ 是有界的。
+        即存在 $M > 0$ 和 $\delta > 0$，使得当 $||h|| < \delta$ 时，$|g(h)| \le M$。
+        现在考察事件 $\{|g(X_n)| > M\}$。如果这个事件发生，说明 $X_n$ 必定逃出了半径为 $\delta$ 的安全区域。因此存在集合包含关系：
+        
+        $$
+        \{\omega : |g(X_n(\omega))| > M\} \subset \{\omega : ||X_n(\omega)|| > \delta\}
+        $$
+        
+        取概率测度：
+        
+        $$
+        P(|g(X_n)| > M) \le P(||X_n|| > \delta)
+        $$
+        
+        因为已知 $X_n \xrightarrow{P} 0$，对于任意给定的 $\epsilon > 0$，当 $n$ 足够大时，右侧的 $P(||X_n|| > \delta) < \epsilon$。
+        所以：
+        
+        $$
+        P(|g(X_n)| > M) < \epsilon, \quad \forall n \ge N
+        $$
+        
+        这就完全满足了随机有界 $O_p(1)$ 的定义，即 $g(X_n) = O_p(1)$，从而 $R(X_n) = O_p(||X_n||^p)$。$\square$
+
+!!! tip "综合应用示例：样本方差的渐近分布"
+
+    假设 $X_1, \dots, X_n$ i.i.d. $\sim F(\mu, \sigma^2)$，且四阶矩存在 $E[X^4] < \infty$。推导不偏方差 $S_n^2$ 的极限分布。
+    
+    首先将方差展开：
+    
+    $$
+    S_n^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \overline{X})^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - (\overline{X} - \mu)^2
+    $$
+    
+    对于第一部分，由于四阶矩存在，利用标准中心极限定理：
+    
+    $$
+    \sqrt{n}\left( \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - \sigma^2 \right) \xrightarrow{d} N(0, Var((X_i - \mu)^2)) := N(0, \nu^2)
+    $$
+    
+    对于第二部分，由 CLT 知 $\overline{X} - \mu = O_p(n^{-1/2})$。利用随机代入引理（取 $p=2$），平方后即为：
+    
+    $$
+    (\overline{X} - \mu)^2 = O_p(n^{-1}) = o_p(n^{-1/2})
+    $$
+    
+    因此，当乘以 $\sqrt{n}$ 后：
+    
+    $$
+    \sqrt{n}(\overline{X} - \mu)^2 = o_p(1)
+    $$
+    
+    利用 Slutsky 定理，高阶误差项在极限下消失：
+    
+    $$
+    \sqrt{n}(S_n^2 - \sigma^2) = \sqrt{n}\left( \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - \sigma^2 \right) - \sqrt{n}(\overline{X} - \mu)^2 \xrightarrow{d} N(0, \nu^2) - 0 = N(0, \nu^2)
+    $$

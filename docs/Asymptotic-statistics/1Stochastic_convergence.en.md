@@ -377,3 +377,293 @@ If a sequence of random variables is convergent, does the convergence property s
        
     4. **Affine Transformation of Multivariate Normal**:
        If $X_n \xrightarrow{d} N_p(\mu, \Sigma)$, for any constant matrix $C \in \mathbb{R}^{m \times p}$, we have $C X_n \xrightarrow{d} N_m(C\mu, C\Sigma C^\top)$.
+
+## 5. Relations of Stochastic Convergence
+
+There are strictly defined strong and weak implications among the four types of stochastic convergence. In practical applications, we often need to utilize these relations to transition between convergence in probability and convergence in distribution.
+
+!!! success "Theorem 1.8: Relations of Stochastic Convergence"
+
+    Let $X_n$, $X$, and $Y_n$ be random vectors. Then the following corollaries hold:
+
+    1. **Almost-Sure $\Rightarrow$ in Probability**: If $X_n \xrightarrow{a.s.} X$, then $X_n \xrightarrow{P} X$.
+    2. **in Probability $\Rightarrow$ in Distribution**: If $X_n \xrightarrow{P} X$, then $X_n \xrightarrow{d} X$.
+    3. **Equivalence for Convergence to a Constant**: $X_n \xrightarrow{P} c$ (where $c$ is a constant) if and only if $X_n \xrightarrow{d} c$.
+    4. **Distance Convergence Transfer (Convergence Lemma)**: If $X_n \xrightarrow{d} X$ and $d(X_n, Y_n) \xrightarrow{P} 0$, then $Y_n \xrightarrow{d} X$.
+    5. **Joint Distribution Convergence (1)**: If $X_n \xrightarrow{d} X$ and $Y_n \xrightarrow{P} c$ (constant), then $(X_n, Y_n) \xrightarrow{d} (X, c)$.
+    6. **Joint Distribution Convergence (2)**: If $X_n \xrightarrow{P} X$ and $Y_n \xrightarrow{P} Y$, then $(X_n, Y_n) \xrightarrow{P} (X, Y)$.
+
+    > **Important Note**: Marginal convergence in probability implies joint convergence in probability. However, **marginal convergence in distribution generally does NOT imply joint convergence in distribution** (unless Copulas are used or one converges to a constant, as in property 5).
+
+    ??? proof "Rigorous Proof of Core Properties (Click to expand)"
+
+        **(1) Almost-Sure $\Rightarrow$ in Probability**:
+        Define the sequence of events $A_n = \cup_{m \ge n} \{||X_m - X|| > \epsilon\}$. This sequence of sets is monotonically decreasing.
+        If $X_n(\omega) \to X(\omega)$ for all $\omega \in \Omega$, then $A_n$ decreases to the empty set as $n \to \infty$.
+        If $X_n \xrightarrow{a.s.} X$, by the continuity of probability:
+        
+        $$
+        P(||X_n - X|| > \epsilon) \le P(A_n) \to 0
+        $$
+
+        **(4) Distance Convergence Transfer (Foundation for proofs)**:
+        We prove this using Portmanteau Lemma (iii). For any bounded Lipschitz continuous function $f \in C_{B, Lip}$, let its Lipschitz constant be $L$ and $\sup |f| \le M$.
+        Consider the absolute difference of the expectations, truncated by introducing an indicator function:
+        
+        $$
+        \begin{aligned}
+        |Ef(X_n) - Ef(Y_n)| &\le E\left[ |f(X_n) - f(Y_n)| \cdot \mathbb{I}(||X_n - Y_n|| \le \epsilon) \right] \\
+        &\quad + E\left[ |f(X_n) - f(Y_n)| \cdot \mathbb{I}(||X_n - Y_n|| > \epsilon) \right]
+        \end{aligned}
+        $$
+        
+        For the first part, we bound it using the Lipschitz property as $L \epsilon \cdot P(||X_n - Y_n|| \le \epsilon) \le L \epsilon$;
+        For the second part, we bound it using boundedness as $2M \cdot P(||X_n - Y_n|| > \epsilon)$.
+        Therefore:
+        
+        $$
+        |Ef(X_n) - Ef(Y_n)| \le L\epsilon + 2M \cdot P(||X_n - Y_n|| > \epsilon)
+        $$
+        
+        Since $d(X_n, Y_n) \xrightarrow{P} 0$, the second term goes to 0 as $n \to \infty$. Because $\epsilon$ is arbitrarily small, $Ef(X_n) - Ef(Y_n) \to 0$.
+        Combined with the premise $X_n \xrightarrow{d} X$ (i.e., $Ef(X_n) \to Ef(X)$), we must have $Ef(Y_n) \to Ef(X)$. By the Portmanteau Lemma again, it is proven that $Y_n \xrightarrow{d} X$.
+
+        **(2) in Probability $\Rightarrow$ in Distribution**:
+        Split $X_n$ into $X_n = X + (X_n - X)$.
+        Since trivially $X \xrightarrow{d} X$, and we know $X_n - X \xrightarrow{P} 0$, we can directly apply the newly proven property (4) (letting $X_n$ in property 4 play the role of $X$, and $Y_n$ play the role of $X_n$), immediately yielding $X_n \xrightarrow{d} X$.
+
+        **(3) Equivalence for Convergence to a Constant**:
+        Sufficiency is guaranteed by property (2). To prove necessity ($X_n \xrightarrow{d} c \Rightarrow X_n \xrightarrow{P} c$):
+        The event $\{||X_n - c|| \ge \epsilon\}$ is equivalent to $X_n \in B(c, \epsilon)^c$. This is a closed set.
+        By Portmanteau Lemma (vi):
+        
+        $$
+        \limsup P(||X_n - c|| \ge \epsilon) \le P(c \in B(c, \epsilon)^c) = 0
+        $$
+        
+        Thus the limit is 0, proving convergence in probability.
+
+        **(5) $(X_n, Y_n) \xrightarrow{d} (X, c)$**:
+        Decompose the joint variables as $(X_n, Y_n) = (X_n, c) + (0, Y_n - c)$.
+        Since $Y_n \xrightarrow{P} c$, the error term $(0, Y_n - c) \xrightarrow{P} (0,0)$.
+        By property (4), we only need to prove the main term $(X_n, c) \xrightarrow{d} (X, c)$. For any bivariate continuous bounded function $f(x,y)$, fixing $y=c$ makes the marginal function $f_m(x) = f(x,c)$ also continuous and bounded.
+        Because $X_n \xrightarrow{d} X$, we have $E[f(X_n, c)] = E[f_m(X_n)] \to E[f_m(X)] = E[f(X, c)]$. Proven!
+        
+        **(6) $(X_n, Y_n) \xrightarrow{P} (X, Y)$**:
+        By the triangle inequality $||(X_n, Y_n) - (X, Y)|| \le ||X_n - X|| + ||Y_n - Y||$.
+        
+        $$
+        P(||(X_n, Y_n) - (X, Y)|| > \epsilon) \le P(||X_n - X|| > \epsilon/2) + P(||Y_n - Y|| > \epsilon/2) \to 0
+        $$
+        
+        Proven. $\square$
+
+---
+
+## 6. Slutsky's Theorem
+
+As a direct corollary of Theorem 1.8 and the Continuous Mapping Theorem (CMT), Slutsky's Theorem provides highly convenient criteria for algebraic operations between statistics. It is the cornerstone for constructing asymptotic distributions like the $t$-statistic and Wald statistic.
+
+!!! success "Theorem 1.9: Slutsky's Theorem (Slutsky, 1925)"
+
+    Let $X_n, X, Y_n$ be random vectors or scalar random variables.
+    If $X_n \xrightarrow{d} X$ and $Y_n \xrightarrow{P} c$ (constant), then:
+
+    1. **Addition Rule**: $X_n + Y_n \xrightarrow{d} X + c$
+    2. **Multiplication Rule**: $Y_n X_n \xrightarrow{d} cX$
+    3. **Division Rule**: $Y_n^{-1} X_n \xrightarrow{d} c^{-1}X$ (provided $c \neq 0$ and is invertible for matrices)
+
+    ??? proof "Extremely Concise Proof (Click to expand)"
+
+        According to property (5) of Theorem 1.8, given $X_n \xrightarrow{d} X$ and $Y_n \xrightarrow{P} c$, we can directly deduce their joint distribution convergence:
+        
+        $$
+        (X_n, Y_n) \xrightarrow{d} (X, c)
+        $$
+        
+        Next, construct the bivariate continuous mapping functions $g(x,y) = x+y$, $g(x,y) = yx$, and $g(x,y) = y^{-1}x$ respectively.
+        Applying the Continuous Mapping Theorem (CMT) directly $g(X_n, Y_n) \xrightarrow{d} g(X, c)$, the three rules of Slutsky's Theorem are immediately proven. $\square$
+
+!!! tip "Classic Application: Asymptotic Normality of the $t$-Statistic"
+
+    Let $Y_1, \dots, Y_n$ be i.i.d. samples satisfying $E[Y_1] = 0, E[Y_1^2] = \sigma^2$.
+    We want to derive the limit distribution of the $t$-statistic $t_n := \frac{\sqrt{n}\overline{Y}}{S_n}$, where $S_n^2$ is the sample variance.
+
+    **Step 1: Analyze the Numerator**
+    By the Central Limit Theorem (CLT), the asymptotic distribution of the mean is:
+    
+    $$
+    \sqrt{n}\overline{Y} \xrightarrow{d} N(0, \sigma^2)
+    $$
+    
+    **Step 2: Analyze the Denominator**
+    By the Law of Large Numbers, the sample variance converges in probability to the population variance: $S_n^2 \xrightarrow{P} \sigma^2$. By the mapping theorem ($g(x)=\sqrt{x}$), we get $S_n \xrightarrow{P} \sigma$.
+
+    **Step 3: Apply Slutsky's Theorem**
+    Treat the numerator as $X_n$ and the denominator as $Y_n^{-1}$:
+    
+    $$
+    \frac{\sqrt{n}\overline{Y}}{S_n} \xrightarrow{d} \frac{1}{\sigma} N(0, \sigma^2) \stackrel{d}{=} N(0, 1)
+    $$
+    
+    This theoretically proves that under large samples, the $t$-test can approximately use the critical values of the standard normal distribution.
+
+---
+
+## 7. Tightness & Stochastic Boundedness
+
+When studying whether a sequence of random variables converges, a core question is: "Will they escape to infinity?" This leads to the concept of tightness.
+
+!!! abstract "Definition 1.10: Stochastically Bounded / Tight"
+
+    A sequence $\{X_n\}$ is said to be **stochastically bounded** (or **tight**) if, for any given $\epsilon > 0$, there exists a finite constant $M_\epsilon > 0$ such that for all $n$:
+    
+    $$
+    \sup_n P(||X_n|| > M_\epsilon) < \epsilon
+    $$
+    
+    In asymptotic statistics, we typically denote this property with the big-O notation: **$X_n = O_p(1)$**.
+
+A single random variable $X$ itself is inherently tight (since its distribution function satisfies $F(\infty)=1, F(-\infty)=0$). Furthermore, any set of **finite** random variables is also tight. What truly requires vigilance is the escape of an infinite sequence $\{X_n\}$.
+
+!!! info "Theorem 1.11: Prohorov's Theorem"
+
+    There is an extremely profound topological connection between convergence in distribution and tightness:
+
+    1. If $X_n \xrightarrow{d} X$, then $\{X_n\}$ is **necessarily tight** (i.e., convergence implies boundedness).
+    2. If $\{X_n\}$ is tight, then it **must have a subsequence converging in distribution** $\{X_{n_i}\}$ such that $X_{n_i} \xrightarrow{d} X$ as $n_i \to \infty$. (This can be viewed as the probability space generalization of the Bolzano-Weierstrass theorem in real analysis, which states that "every bounded sequence has a convergent subsequence").
+
+    ??? proof "Rigorous Proof of Theorem 1.11 (1) (Click to expand)"
+
+        Since the limit random variable $X$ is a single random variable, it is tight. For any $\epsilon > 0$, we can find a sufficiently large $M_\epsilon$ that satisfies $P(||X|| = M_\epsilon) = 0$ (avoiding discontinuity points), such that:
+        
+        $$
+        P(||X|| \ge M_\epsilon) < \epsilon
+        $$
+        
+        Consider the closed set $F = \{x : ||x|| \ge M_\epsilon\}$. By Portmanteau Lemma (vi) and $X_n \xrightarrow{d} X$:
+        
+        $$
+        \limsup_{n \to \infty} P(||X_n|| \ge M_\epsilon) \le P(||X|| \ge M_\epsilon) < \epsilon
+        $$
+        
+        Since the limit superior is strictly less than $\epsilon$, there must exist a positive integer $N$ such that for all $n \ge N$:
+        
+        $$
+        P(||X_n|| \ge M_\epsilon) \le 2\epsilon
+        $$
+        
+        For the preceding finite $N-1$ random variables $\{X_1, \dots, X_{N-1}\}$, since a finite set is necessarily tight, we can appropriately enlarge $M_\epsilon$ such that $P(||X_n|| > M_\epsilon) < \epsilon$ holds for all $n \in \mathbb{N}_+$. Thus, the sequence is globally tight. $\square$
+
+---
+
+## 8. Stochastic Order ($o_p$ and $O_p$)
+
+To perform calculus-like Taylor expansions in probability theory, we need a notation system to describe "infinitesimal in probability" and "of the same order in probability".
+
+!!! abstract "Definition 1.12: Stochastic small $o_p$ and large $O_p$"
+
+    Let $\{a_n\}$ be a sequence of constants. For a sequence of random vectors $\{X_n\}$:
+
+    * **Large $O_p$ (Stochastically of order $a_n$)**: If $\frac{X_n}{a_n} = O_p(1)$, meaning $\frac{X_n}{a_n}$ is tight (stochastically bounded), it is denoted as $X_n = O_p(a_n)$.
+    * **Small $o_p$ (Stochastically of smaller order $a_n$)**: If $\frac{X_n}{a_n} \xrightarrow{P} 0$, meaning it decays faster than $a_n$, it is denoted as $X_n = o_p(a_n)$.
+    
+    > *Special case*: $X_n = o_p(1)$ means $X_n \xrightarrow{P} 0$.
+
+When determining the order of a statistic, Chebyshev's Inequality is the most commonly used tool. For instance, if $E[T_n] = \mu_n$ and $Var(T_n) = \sigma_n^2$, then it is guaranteed that $T_n - \mu_n = O_p(\sigma_n)$.
+
+**Rules of Calculus for $o_p$ and $O_p$:**
+When performing asymptotic expansions, we can manipulate these stochastic symbols just like deterministic limits (reading from left to right):
+
+* $o_p(1) + o_p(1) = o_p(1)$
+* $O_p(1) + o_p(1) = O_p(1)$
+* $O_p(1) \cdot o_p(1) = o_p(1)$
+* $(1 + o_p(1))^{-1} = O_p(1)$
+* $O_p(1) + O_p(1) = O_p(1)$
+* $o_p(O_p(1)) = O_p(o_p(1)) = o_p(1)$
+
+---
+
+## 9. Lemma of Stochastic Plug-in
+
+This is the core prerequisite lemma we use in statistical inference to derive the Delta Method and the asymptotic normality of Maximum Likelihood Estimators (MLE).
+
+!!! success "Lemma 1.13: Lemma of Stochastic Plug-in"
+
+    Let $R: \mathbb{R}^k \to \mathbb{R}$ be a real function satisfying $R(0)=0$. Let $\{X_n\}$ be a sequence of random vectors with probability limit 0 (i.e., $X_n \xrightarrow{P} 0$). Then for any $p > 0$:
+
+    1. If the deterministic limit $R(h) = o(||h||^p)$ as $h \to 0$, then $R(X_n) = o_p(||X_n||^p)$.
+    2. If the deterministic limit $R(h) = O(||h||^p)$ as $h \to 0$, then $R(X_n) = O_p(||X_n||^p)$.
+
+    > *Note: This lemma is extremely powerful. It allows us to seamlessly convert the Taylor expansion remainder $o(|x|)$ from deterministic calculus directly into $o_p(|X_n|)$ under random variables, without worrying whether the function $R$ is continuous elsewhere.*
+
+    ??? proof "Proof of $o_p$ and $O_p$ Truncation (Click to expand)"
+
+        **Proof for (1) small $o_p$ case**:
+        Define the auxiliary function:
+        
+        $$
+        g(h) = \begin{cases} \frac{R(h)}{||h||^p}, & h \neq 0 \\ 0, & h = 0 \end{cases}
+        $$
+        
+        Then we can write $R(X_n) = ||X_n||^p g(X_n)$. To prove $R(X_n) = o_p(||X_n||^p)$, we only need to show $g(X_n) \xrightarrow{P} 0$.
+        Due to the premise $R(h) = o(||h||^p)$, as $h \to 0$, $g(h) \to 0 = g(0)$. That is, $g(h)$ is continuous at 0.
+        Since it is known that $X_n \xrightarrow{P} 0$, applying the Continuous Mapping Theorem (CMT), we immediately get $g(X_n) \xrightarrow{P} g(0) = 0$. Proven!
+
+        **Proof for (2) large $O_p$ case**:
+        Similarly use the $g(h)$ from above. Since $R(h) = O(||h||^p)$, $g(h)$ is bounded near $h=0$.
+        This means there exist $M > 0$ and $\delta > 0$ such that when $||h|| < \delta$, $|g(h)| \le M$.
+        Now examine the event $\{|g(X_n)| > M\}$. If this event occurs, it indicates $X_n$ must have escaped the safe region of radius $\delta$. Therefore, the following set inclusion holds:
+        
+        $$
+        \{\omega : |g(X_n(\omega))| > M\} \subset \{\omega : ||X_n(\omega)|| > \delta\}
+        $$
+        
+        Taking the probability measure:
+        
+        $$
+        P(|g(X_n)| > M) \le P(||X_n|| > \delta)
+        $$
+        
+        Because $X_n \xrightarrow{P} 0$, for any given $\epsilon > 0$, when $n$ is sufficiently large, the right side $P(||X_n|| > \delta) < \epsilon$.
+        Thus:
+        
+        $$
+        P(|g(X_n)| > M) < \epsilon, \quad \forall n \ge N
+        $$
+        
+        This perfectly satisfies the definition of being stochastically bounded $O_p(1)$, meaning $g(X_n) = O_p(1)$, and thereby $R(X_n) = O_p(||X_n||^p)$. $\square$
+
+!!! tip "Comprehensive Application Example: Asymptotic Distribution of Sample Variance"
+
+    Suppose $X_1, \dots, X_n$ are i.i.d. $\sim F(\mu, \sigma^2)$ and the fourth moment exists $E[X^4] < \infty$. Derive the limit distribution of the biased variance $S_n^2$.
+    
+    First, expand the variance:
+    
+    $$
+    S_n^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \overline{X})^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - (\overline{X} - \mu)^2
+    $$
+    
+    For the first part, since the fourth moment exists, using the standard Central Limit Theorem:
+    
+    $$
+    \sqrt{n}\left( \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - \sigma^2 \right) \xrightarrow{d} N(0, Var((X_i - \mu)^2)) := N(0, \nu^2)
+    $$
+    
+    For the second part, by CLT we know $\overline{X} - \mu = O_p(n^{-1/2})$. Using the Lemma of Stochastic Plug-in (setting $p=2$), squaring it yields:
+    
+    $$
+    (\overline{X} - \mu)^2 = O_p(n^{-1}) = o_p(n^{-1/2})
+    $$
+    
+    Therefore, when multiplied by $\sqrt{n}$:
+    
+    $$
+    \sqrt{n}(\overline{X} - \mu)^2 = o_p(1)
+    $$
+    
+    Applying Slutsky's Theorem, the higher-order error term vanishes in the limit:
+    
+    $$
+    \sqrt{n}(S_n^2 - \sigma^2) = \sqrt{n}\left( \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - \sigma^2 \right) - \sqrt{n}(\overline{X} - \mu)^2 \xrightarrow{d} N(0, \nu^2) - 0 = N(0, \nu^2)
+    $$
