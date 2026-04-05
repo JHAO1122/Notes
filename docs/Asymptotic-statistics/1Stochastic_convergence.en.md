@@ -196,17 +196,33 @@ Besides the definition via CDF, convergence in distribution can also be equivale
         f_\epsilon(x) = \sum_{j=1}^K f(x_j) \mathbb{I}(x \in I_j)
         $$
         
-        By making the partition sufficiently fine, we can guarantee that $|f(x) - f_\epsilon(x)| < \epsilon$ for all $x \in I$.
-        Using the triangle inequality to decompose the expectation error:
+        Since $f$ is uniformly continuous on the compact set $I$, a sufficiently fine partition ensures that $|f(x) - f_\epsilon(x)| < \epsilon$ for all $x \in I$. By construction, we also have $\sup |f_\epsilon| \le \sup |f| \le 1$.
+        
+        Using indicator functions, we **decompose** the expectation over the entire space based on whether $X_n$ falls into the region $I$:
         
         $$
-        |Ef(X_n) - Ef_\epsilon(X_n)| \le \epsilon + 2P(X_n \in I^c)
+        \begin{aligned}
+        |E[f(X_n)] - E[f_\epsilon(X_n)]| &\le E\left[ |f(X_n) - f_\epsilon(X_n)| \right] \\
+        &= E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] + E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right]
+        \end{aligned}
         $$
         
-        Similarly, for the limit variable:
+        For the first term, since the error is bounded by $\epsilon$ within $I$:
         
         $$
-        |Ef(X) - Ef_\epsilon(X)| \le \epsilon + 2P(X \in I^c) < 3\epsilon
+        E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] < \epsilon \cdot P(X_n \in I) \le \epsilon
+        $$
+        
+        For the second term, using $\sup |f| \le 1$ and $\sup |f_\epsilon| \le 1$, we have $|f - f_\epsilon| \le 2$:
+        
+        $$
+        E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right] \le 2 \cdot P(X_n \in I^c)
+        $$
+        
+        Combining both parts yields the upper bound for the expectation error:
+        
+        $$
+        |E[f(X_n)] - E[f_\epsilon(X_n)]| \le \epsilon + 2P(X_n \in I^c)
         $$
         
         For the simple function part:

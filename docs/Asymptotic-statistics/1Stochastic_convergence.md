@@ -191,11 +191,33 @@
         f_\epsilon(x) = \sum_{j=1}^K f(x_j) \mathbb{I}(x \in I_j)
         $$
         
-        通过足够细的划分，保证在 $I$ 内 $|f(x) - f_\epsilon(x)| < \epsilon$。
-        利用三角不等式拆解期望误差：
+        由于 $f$ 在有界闭集 $I$ 上一致连续，通过足够细的划分，可以保证在 $I$ 内 $|f(x) - f_\epsilon(x)| < \epsilon$。同时，根据构造有 $\sup |f_\epsilon| \le \sup |f| \le 1$。
+        
+        利用指示函数，我们将全空间的期望根据 $X_n$ 是否落入区域 $I$ 进行**分解**：
         
         $$
-        |Ef(X_n) - Ef_\epsilon(X_n)| \le \epsilon + 2P(X_n \in I^c)
+        \begin{aligned}
+        |E[f(X_n)] - E[f_\epsilon(X_n)]| &\le E\left[ |f(X_n) - f_\epsilon(X_n)| \right] \\
+        &= E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] + E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right]
+        \end{aligned}
+        $$
+        
+        对于第一项，由于在 $I$ 内误差受 $\epsilon$ 控制：
+        
+        $$
+        E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] < \epsilon \cdot P(X_n \in I) \le \epsilon
+        $$
+        
+        对于第二项，利用 $\sup |f| \le 1$ 和 $\sup |f_\epsilon| \le 1$，可知 $|f - f_\epsilon| \le 2$：
+        
+        $$
+        E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right] \le 2 \cdot P(X_n \in I^c)
+        $$
+        
+        将两部分合并，即得到该期望误差的上界：
+        
+        $$
+        |E[f(X_n)] - E[f_\epsilon(X_n)]| \le \epsilon + 2P(X_n \in I^c)
         $$
         
         同理对于极限变量：
