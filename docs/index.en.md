@@ -84,7 +84,7 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 All mathematical derivations on this website originate from my personal course-taking (including on-campus courses and recorded lectures from ZJU) and self-study manuscripts. The progress and difficulty are matched to the undergraduate and graduate curricula of the School of Mathematical Sciences at Zhejiang University.
 
-To improve efficiency, the Markdown formatting, LaTeX typesetting, and the translation of the English version were completed with the assistance of Large Language Models (primarily Gemini 3 Pro).
+To improve efficiency, the Markdown formatting, LaTeX typesetting, and the translation of the English version were completed with the assistance of Large Language Models (primarily Gemini 3.1 Pro).
 
 Mathematical derivations inevitably contain typos or blind spots. If you find any errors while reading, or if you share a mutual interest in statistical inference, conformal prediction, probability theory, stochastic processes, or quantitative finance, I would be more than happy to connect!
 
