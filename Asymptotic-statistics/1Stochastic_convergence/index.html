@@ -1081,10 +1081,25 @@ a'X_n \sim AN(a'\mu_n, a'\Sigma_n a)
 <div class="arithmatex">\[
 f_\epsilon(x) = \sum_{j=1}^K f(x_j) \mathbb{I}(x \in I_j)
 \]</div>
-<p>通过足够细的划分，保证在 <span class="arithmatex">\(I\)</span> 内 <span class="arithmatex">\(|f(x) - f_\epsilon(x)| &lt; \epsilon\)</span>。
-利用三角不等式拆解期望误差：</p>
+<p>由于 <span class="arithmatex">\(f\)</span> 在有界闭集 <span class="arithmatex">\(I\)</span> 上一致连续，通过足够细的划分，可以保证在 <span class="arithmatex">\(I\)</span> 内 <span class="arithmatex">\(|f(x) - f_\epsilon(x)| &lt; \epsilon\)</span>。同时，根据构造有 <span class="arithmatex">\(\sup |f_\epsilon| \le \sup |f| \le 1\)</span>。</p>
+<p>利用指示函数，我们将全空间的期望根据 <span class="arithmatex">\(X_n\)</span> 是否落入区域 <span class="arithmatex">\(I\)</span> 进行<strong>分解</strong>：</p>
 <div class="arithmatex">\[
-|Ef(X_n) - Ef_\epsilon(X_n)| \le \epsilon + 2P(X_n \in I^c)
+\begin{aligned}
+|E[f(X_n)] - E[f_\epsilon(X_n)]| &amp;\le E\left[ |f(X_n) - f_\epsilon(X_n)| \right] \\
+&amp;= E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] + E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right]
+\end{aligned}
+\]</div>
+<p>对于第一项，由于在 <span class="arithmatex">\(I\)</span> 内误差受 <span class="arithmatex">\(\epsilon\)</span> 控制：</p>
+<div class="arithmatex">\[
+E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] &lt; \epsilon \cdot P(X_n \in I) \le \epsilon
+\]</div>
+<p>对于第二项，利用 <span class="arithmatex">\(\sup |f| \le 1\)</span> 和 <span class="arithmatex">\(\sup |f_\epsilon| \le 1\)</span>，可知 <span class="arithmatex">\(|f - f_\epsilon| \le 2\)</span>：</p>
+<div class="arithmatex">\[
+E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right] \le 2 \cdot P(X_n \in I^c)
+\]</div>
+<p>将两部分合并，即得到该期望误差的上界：</p>
+<div class="arithmatex">\[
+|E[f(X_n)] - E[f_\epsilon(X_n)]| \le \epsilon + 2P(X_n \in I^c)
 \]</div>
 <p>同理对于极限变量：</p>
 <div class="arithmatex">\[

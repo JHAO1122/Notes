@@ -1081,14 +1081,25 @@ Partition <span class="arithmatex">\(I\)</span> into a finite number of non-over
 <div class="arithmatex">\[
 f_\epsilon(x) = \sum_{j=1}^K f(x_j) \mathbb{I}(x \in I_j)
 \]</div>
-<p>By making the partition sufficiently fine, we can guarantee that <span class="arithmatex">\(|f(x) - f_\epsilon(x)| &lt; \epsilon\)</span> for all <span class="arithmatex">\(x \in I\)</span>.
-Using the triangle inequality to decompose the expectation error:</p>
+<p>Since <span class="arithmatex">\(f\)</span> is uniformly continuous on the compact set <span class="arithmatex">\(I\)</span>, a sufficiently fine partition ensures that <span class="arithmatex">\(|f(x) - f_\epsilon(x)| &lt; \epsilon\)</span> for all <span class="arithmatex">\(x \in I\)</span>. By construction, we also have <span class="arithmatex">\(\sup |f_\epsilon| \le \sup |f| \le 1\)</span>.</p>
+<p>Using indicator functions, we <strong>decompose</strong> the expectation over the entire space based on whether <span class="arithmatex">\(X_n\)</span> falls into the region <span class="arithmatex">\(I\)</span>:</p>
 <div class="arithmatex">\[
-|Ef(X_n) - Ef_\epsilon(X_n)| \le \epsilon + 2P(X_n \in I^c)
+\begin{aligned}
+|E[f(X_n)] - E[f_\epsilon(X_n)]| &amp;\le E\left[ |f(X_n) - f_\epsilon(X_n)| \right] \\
+&amp;= E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] + E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right]
+\end{aligned}
 \]</div>
-<p>Similarly, for the limit variable:</p>
+<p>For the first term, since the error is bounded by <span class="arithmatex">\(\epsilon\)</span> within <span class="arithmatex">\(I\)</span>:</p>
 <div class="arithmatex">\[
-|Ef(X) - Ef_\epsilon(X)| \le \epsilon + 2P(X \in I^c) &lt; 3\epsilon
+E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I) \right] &lt; \epsilon \cdot P(X_n \in I) \le \epsilon
+\]</div>
+<p>For the second term, using <span class="arithmatex">\(\sup |f| \le 1\)</span> and <span class="arithmatex">\(\sup |f_\epsilon| \le 1\)</span>, we have <span class="arithmatex">\(|f - f_\epsilon| \le 2\)</span>:</p>
+<div class="arithmatex">\[
+E\left[ |f(X_n) - f_\epsilon(X_n)| \cdot \mathbb{I}(X_n \in I^c) \right] \le 2 \cdot P(X_n \in I^c)
+\]</div>
+<p>Combining both parts yields the upper bound for the expectation error:</p>
+<div class="arithmatex">\[
+|E[f(X_n)] - E[f_\epsilon(X_n)]| \le \epsilon + 2P(X_n \in I^c)
 \]</div>
 <p>For the simple function part:</p>
 <div class="arithmatex">\[
