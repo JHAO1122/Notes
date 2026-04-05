@@ -60,56 +60,84 @@ Based on this, we can obtain an extremely elegant conclusion that strengthens co
 
 !!! success "Theorem 1.3: Polya's Theorem"
 
-    Assume $X_n \xrightarrow{d} X$, and the distribution function $F(x)$ of the limit random variable $X$ is **continuous**.
+    Suppose $X_n \xrightarrow{d} X$, and the cumulative distribution function (CDF) $F(x)$ of the limiting random variable $X$ is **continuous**. 
     Then, this pointwise convergence automatically upgrades to **uniform convergence**:
     
     $$
-    \sup_x |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
+    \sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
     $$
     
-    ??? proof "Rigorous Proof of Polya's Theorem (Click to expand)"
+    ??? proof "Detailed Proof of Polya's Theorem (Click to expand)"
         
-        This proof uses the classic **Covering Method**.
+        We need to prove that for any $\epsilon > 0$, there exists an $N$ such that for all $n > N$, $\sup_{x \in \mathbb{R}} |F_n(x) - F(x)| < \epsilon$.
+
+        **1. Constructing a Finite Partition**
         
-        For any $\epsilon > 0$, since $F(x)$ is a valid continuous CDF, $\lim_{x \to -\infty} F(x) = 0$ and $\lim_{x \to \infty} F(x) = 1$. We can choose a sufficiently large $M > 0$ such that the tail probabilities are extremely small:
-        
-        $$
-        F(-M) < \frac{\epsilon}{2} \quad \text{and} \quad 1 - F(M) < \frac{\epsilon}{2}
-        $$
-        
-        Because $F$ is continuous on the compact interval $[-M, M]$, it is uniformly continuous. Thus, we can partition $[-M, M]$ into a finite number of grid points $-M = x_0 < x_1 < \dots < x_K = M$ such that for all $i = 1, \dots, K$:
+        Since $F(x)$ is a continuous distribution function, its range is $[0, 1]$. For a given $\epsilon > 0$, we can find a finite number of points $-\infty = x_0 < x_1 < x_2 < \dots < x_K = \infty$ such that:
         
         $$
-        F(x_i) - F(x_{i-1}) < \frac{\epsilon}{2}
+        F(x_i) - F(x_{i-1}) < \frac{\epsilon}{2}, \quad \forall i = 1, \dots, K
         $$
         
-        For any $x \in [-M, M]$, there exists an $i$ such that $x_{i-1} \le x \le x_i$. Due to the monotonicity of CDFs, we can bound the difference:
+        (Note: We define $F(x_0) = 0$ and $F(x_K) = 1$).
+
+        **2. Utilizing Pointwise Convergence**
+        
+        Since $X_n \xrightarrow{d} X$, for each of the finite grid points $x_i$ mentioned above (where $1 \le i \le K-1$), by the definition of convergence in distribution, as $n \to \infty$:
         
         $$
-        F_n(x) - F(x) \le F_n(x_i) - F(x_{i-1}) = F_n(x_i) - F(x_i) + F(x_i) - F(x_{i-1}) \le |F_n(x_i) - F(x_i)| + \frac{\epsilon}{2}
+        F_n(x_i) \rightarrow F(x_i)
         $$
         
-        Similarly, for the lower bound:
+        Because there are only finitely many grid points, there must exist an $N$ such that for all $n > N$ and for all $i=1, \dots, K-1$:
         
         $$
-        F_n(x) - F(x) \ge F_n(x_{i-1}) - F(x_{i}) \ge -|F_n(x_{i-1}) - F(x_{i-1})| - \frac{\epsilon}{2}
+        |F_n(x_i) - F(x_i)| < \frac{\epsilon}{2}
         $$
+
+        **3. The Sandwich Argument via Monotonicity**
         
-        Therefore, the maximum error on the interval $[-M, M]$ is bounded by the grid points:
+        For any arbitrary point $x \in \mathbb{R}$, it must fall within some interval $[x_{i-1}, x_i]$. Utilizing the non-decreasing property of $F_n$ and $F$:
         
-        $$
-        \sup_{x \in [-M, M]} |F_n(x) - F(x)| \le \max_{0 \le i \le K} |F_n(x_i) - F(x_i)| + \frac{\epsilon}{2}
-        $$
-        
-        Because $X_n \xrightarrow{d} X$ and $F$ has no points of discontinuity, for these **finite** $K+1$ grid points, we must have $\max_{i} |F_n(x_i) - F(x_i)| \to 0$ as $n \to \infty$. 
-        
-        The tail regions $(-\infty, -M)$ and $(M, \infty)$ can be bounded similarly using the limits of $F(-M)$ and $1-F(M)$. Thus, by taking the limit superior:
+        * **Upper Bound:**
         
         $$
-        \limsup_{n \to \infty} \sup_x |F_n(x) - F(x)| \le \epsilon
+        F_n(x) - F(x) \le F_n(x_i) - F(x_{i-1}) = [F_n(x_i) - F(x_i)] + [F(x_i) - F(x_{i-1})]
         $$
         
-        Since $\epsilon$ is arbitrary, the uniform convergence over the entire space is proven. $\square$
+        When $n > N$, substituting the results from the previous two steps yields:
+        
+        $$
+        F_n(x) - F(x) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+        $$
+        
+        * **Lower Bound:**
+        
+        $$
+        F_n(x) - F(x) \ge F_n(x_{i-1}) - F(x_i) = [F_n(x_{i-1}) - F(x_{i-1})] - [F(x_i) - F(x_{i-1})]
+        $$
+        
+        When $n > N$, similarly we obtain:
+        
+        $$
+        F_n(x) - F(x) > -\frac{\epsilon}{2} - \frac{\epsilon}{2} = -\epsilon
+        $$
+
+        **4. Conclusion**
+        
+        Combining the upper and lower bounds, for all $x \in \mathbb{R}$, as long as $n > N$, we have:
+        
+        $$
+        |F_n(x) - F(x)| < \epsilon
+        $$
+        
+        This proves that:
+        
+        $$
+        \sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad (n \rightarrow \infty)
+        $$
+        
+        $\square$
 
 The most common type of convergence in statistics is convergence to a normal distribution:
 
