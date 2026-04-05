@@ -34,8 +34,9 @@ Below is the directory for this course:
 ### Part I: Foundations of Stochastic Convergence and Limit Theorems
 
 * [x] [Chapter 1: Data Distributions and Stochastic Convergence](1Stochastic_convergence.en.md) 
-
 * [x] [Chapter 2: Characteristic Functions](2Characteristic_Functions.en.md)
+
+
 ---
 
 ## 📝 Note on the Contents
