@@ -1003,73 +1003,73 @@
 
 
 <h1 id="chapter-2-characteristic-functions">Chapter 2: Characteristic Functions</h1>
-<p>In asymptotic statistical theory, we urgently need powerful tools to derive convergence in distribution (weak convergence). [cite_start]The <strong>Characteristic Function (cf)</strong> is such a "divine weapon," providing a way to examine probability distributions from a <strong>Frequency Domain</strong> perspective and characterizing a distribution perfectly and uniquely[cite: 697, 704].</p>
+<p>In asymptotic statistical theory, we urgently need powerful tools to derive convergence in distribution (weak convergence). The <strong>Characteristic Function (cf)</strong> is such a "divine weapon," providing a way to examine probability distributions from a <strong>Frequency Domain</strong> perspective and characterizing a distribution perfectly and uniquely.</p>
 <hr />
 <h2 id="1-definition-and-basic-properties-of-characteristic-functions">1. Definition and Basic Properties of Characteristic Functions</h2>
 <div class="admonition abstract">
 <p class="admonition-title">Definition 2.1: Characteristic Function</p>
-<p>[cite_start]For any random vector <span class="arithmatex">\(X\)</span> with distribution function <span class="arithmatex">\(F\)</span>, its <strong>characteristic function (cf)</strong> is defined as[cite: 699]:</p>
+<p>For any random vector <span class="arithmatex">\(X\)</span> with distribution function <span class="arithmatex">\(F\)</span>, its <strong>characteristic function (cf)</strong> is defined as:</p>
 <div class="arithmatex">\[
 \phi_X(t) = E[e^{itX}] = \int e^{itx} dF(x)
 \]</div>
-<p>Using Euler's formula, it can be expanded into real and imaginary parts[cite: 701]:</p>
+<p>Using Euler's formula, it can be expanded into real and imaginary parts:</p>
 <div class="arithmatex">\[
 \phi_X(t) = E[\cos tX] + iE[\sin tX], \quad \text{for any } t \in \mathbb{R}
 \]</div>
 <blockquote>
-<p><strong>Note</strong>: Compared to the Moment Generating Function (MGF) <span class="arithmatex">\(M_X(t) = E[e^{tX}]\)</span>, which may not exist for certain distributions (such as the Cauchy distribution), the characteristic function <strong>always exists</strong> for any probability distribution because <span class="arithmatex">\(|e^{itX}| = 1\)</span>[cite: 702, 703].</p>
+<p><strong>Note</strong>: Compared to the Moment Generating Function (MGF) <span class="arithmatex">\(M_X(t) = E[e^{tX}]\)</span>, which may not exist for certain distributions (such as the Cauchy distribution), the characteristic function <strong>always exists</strong> for any probability distribution because <span class="arithmatex">\(|e^{itX}| = 1\)</span>.</p>
 </blockquote>
 </div>
 <p>Characteristic functions inherit many extremely elegant mathematical properties, which play a decisive role in the subsequent derivation of limit theorems.</p>
 <div class="admonition info">
 <p class="admonition-title">Basic Properties of Characteristic Functions (Properties of CFs)</p>
-<p>For a univariate random variable <span class="arithmatex">\(X\)</span>, its characteristic function <span class="arithmatex">\(\phi_X(t)\)</span> satisfies[cite: 710]:</p>
+<p>For a univariate random variable <span class="arithmatex">\(X\)</span>, its characteristic function <span class="arithmatex">\(\phi_X(t)\)</span> satisfies:</p>
 <ul>
 <li>
-<p><strong>(i) Boundedness</strong>: <span class="arithmatex">\(|\phi_X(t)| [cite_start]\le \phi_X(0) = 1\)</span>[cite: 711].</p>
+<p><strong>(i) Boundedness</strong>: <span class="arithmatex">\(|\phi_X(t)| \le \phi_X(0) = 1\)</span>.</p>
 </li>
 <li>
-<p>[cite_start]<strong>(ii) Conjugate Symmetry</strong>: <span class="arithmatex">\(\overline{\phi_X(t)} = \phi_X(-t)\)</span>[cite: 712].</p>
+<p><strong>(ii) Conjugate Symmetry</strong>: <span class="arithmatex">\(\overline{\phi_X(t)} = \phi_X(-t)\)</span>.</p>
 </li>
 <li>
-<p>[cite_start]<strong>(iii) Uniform Continuity</strong>: <span class="arithmatex">\(\phi_X(t)\)</span> is uniformly continuous on <span class="arithmatex">\(\mathbb{R}\)</span>[cite: 713].</p>
+<p><strong>(iii) Uniform Continuity</strong>: <span class="arithmatex">\(\phi_X(t)\)</span> is uniformly continuous on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
 </li>
 <li>
-<p>[cite_start]<strong>(iv) Operational Closure</strong>: <span class="arithmatex">\(\overline{\phi_X}\)</span>, <span class="arithmatex">\(|\phi_X|^2\)</span>, and <span class="arithmatex">\(Re(\phi_X)\)</span> correspond to the characteristic functions of <span class="arithmatex">\(-X\)</span>, <span class="arithmatex">\(X-Y\)</span> (where <span class="arithmatex">\(X, Y\)</span> are i.i.d. following <span class="arithmatex">\(F\)</span>), and the mixture distribution <span class="arithmatex">\((F_X + F_{-X})/2\)</span> respectively[cite: 714].</p>
+<p><strong>(iv) Operational Closure</strong>: <span class="arithmatex">\(\overline{\phi_X}\)</span>, <span class="arithmatex">\(|\phi_X|^2\)</span>, and <span class="arithmatex">\(Re(\phi_X)\)</span> correspond to the characteristic functions of <span class="arithmatex">\(-X\)</span>, <span class="arithmatex">\(X-Y\)</span> (where <span class="arithmatex">\(X, Y\)</span> are i.i.d. following <span class="arithmatex">\(F\)</span>), and the mixture distribution <span class="arithmatex">\((F_X + F_{-X})/2\)</span> respectively.</p>
 </li>
 <li>
-<p><strong>(v) Lattice Distribution Criterion</strong>: If there exists <span class="arithmatex">\(t_0 \neq 0\)</span> s.t. <span class="arithmatex">\(|\phi_X(t_0)| = 1\)</span>, then there must exist <span class="arithmatex">\(a \in \mathbb{R}\)</span> and <span class="arithmatex">\(a \neq 0\)</span> s.t. <span class="arithmatex">\(P(X \in \{a + jh : j \in \mathbb{Z}\}) = 1\)</span>. [cite_start]That is, <span class="arithmatex">\(X\)</span> is a lattice random vector[cite: 716, 717].</p>
+<p><strong>(v) Lattice Distribution Criterion</strong>: If there exists <span class="arithmatex">\(t_0 \neq 0\)</span> s.t. <span class="arithmatex">\(|\phi_X(t_0)| = 1\)</span>, then there must exist <span class="arithmatex">\(a \in \mathbb{R}\)</span> and <span class="arithmatex">\(a \neq 0\)</span> s.t. <span class="arithmatex">\(P(X \in \{a + jh : j \in \mathbb{Z}\}) = 1\)</span>. That is, <span class="arithmatex">\(X\)</span> is a lattice random vector.</p>
 </li>
 <li>
-<p><strong>(vi) Riemann-Lebesgue Lemma</strong>: If <span class="arithmatex">\(F\)</span> is absolutely continuous (i.e., a density function exists), then <span class="arithmatex">\(\lim_{|t|\to\infty} |\phi_X(t)| [cite_start]= 0\)</span>[cite: 725].</p>
+<p><strong>(vi) Riemann-Lebesgue Lemma</strong>: If <span class="arithmatex">\(F\)</span> is absolutely continuous (i.e., a density function exists), then <span class="arithmatex">\(\lim_{|t|\to\infty} |\phi_X(t)| = 0\)</span>.</p>
 </li>
 <li>
-<p>[cite_start]<strong>(vii) Uniqueness and Fourier Inversion</strong>: Two random variables are equal in distribution <span class="arithmatex">\(X \stackrel{d}{=} Y\)</span> if and only if <span class="arithmatex">\(\phi_X(t) = \phi_Y(t)\)</span> for all <span class="arithmatex">\(t\)</span>[cite: 726]. [cite_start]If <span class="arithmatex">\(\phi_X\)</span> is absolutely integrable (i.e., <span class="arithmatex">\(\phi_X \in \mathcal{L}^1(\mathbb{R})\)</span>), then <span class="arithmatex">\(F\)</span> has a continuous density function, which can be obtained by the inverse transform[cite: 728]:</p>
+<p><strong>(vii) Uniqueness and Fourier Inversion</strong>: Two random variables are equal in distribution <span class="arithmatex">\(X \stackrel{d}{=} Y\)</span> if and only if <span class="arithmatex">\(\phi_X(t) = \phi_Y(t)\)</span> for all <span class="arithmatex">\(t\)</span>. If <span class="arithmatex">\(\phi_X\)</span> is absolutely integrable (i.e., <span class="arithmatex">\(\phi_X \in \mathcal{L}^1(\mathbb{R})\)</span>), then <span class="arithmatex">\(F\)</span> has a continuous density function, which can be obtained by the inverse transform:</p>
 </li>
 </ul>
-<p>$$
+<div class="arithmatex">\[
 f(x) = \frac{1}{2\pi} \int e^{-itx} \phi_X(t) dt
-$$ [cite: 729]</p>
+\]</div>
 <details class="proof">
 <summary>Supplementary Proof of the First Four Basic Properties (Click to expand)</summary>
 <p><strong>Proof (i)</strong>:
-Using the absolute value inequality for integrals[cite: 711]:</p>
+Using the absolute value inequality for integrals:</p>
 <div class="arithmatex">\[
 |\phi_X(t)| = \left| E[e^{itX}] \right| \le E[|e^{itX}|] = E[1] = 1 = \phi_X(0)
 \]</div>
 <p><strong>Proof (ii)</strong>:
-By the properties of complex conjugates[cite: 712]:</p>
+By the properties of complex conjugates:</p>
 <div class="arithmatex">\[
 \overline{\phi_X(t)} = \overline{E[\cos tX + i\sin tX]} = E[\cos tX - i\sin tX] = E[\cos(-tX) + i\sin(-tX)] = \phi_X(-t)
 \]</div>
 <p><strong>Proof (iii)</strong>:
-For any <span class="arithmatex">\(t\)</span> and increment <span class="arithmatex">\(h\)</span>[cite: 713]:</p>
+For any <span class="arithmatex">\(t\)</span> and increment <span class="arithmatex">\(h\)</span>:</p>
 <div class="arithmatex">\[
 |\phi_X(t+h) - \phi_X(t)| = \left| E[e^{i(t+h)X} - e^{itX}] \right| \le E\left[ |e^{itX}| \cdot |e^{ihX} - 1| \right] = E[|e^{ihX} - 1|]
 \]</div>
 <p>Since <span class="arithmatex">\(|e^{ihX} - 1| \le 2\)</span> (bounded) and <span class="arithmatex">\(e^{ihX} - 1 \to 0\)</span> as <span class="arithmatex">\(h \to 0\)</span>, by the Dominated Convergence Theorem (DCT), the expectation of the expression tends to 0. Since this limit is independent of <span class="arithmatex">\(t\)</span>, it is uniformly continuous.</p>
 <p><strong>Proof (iv) for the <span class="arithmatex">\(|\phi_X|^2\)</span> property</strong>:
-Let <span class="arithmatex">\(X, Y\)</span> be i.i.d. Then the characteristic function of <span class="arithmatex">\(X-Y\)</span> is[cite: 714]:</p>
+Let <span class="arithmatex">\(X, Y\)</span> be i.i.d. Then the characteristic function of <span class="arithmatex">\(X-Y\)</span> is:</p>
 <div class="arithmatex">\[
 \phi_{X-Y}(t) = E[e^{it(X-Y)}] = E[e^{itX}] E[e^{-itY}] = \phi_X(t) \phi_Y(-t)
 \]</div>
@@ -1081,31 +1081,31 @@ Let <span class="arithmatex">\(X, Y\)</span> be i.i.d. Then the characteristic f
 </div>
 <hr />
 <h2 id="2-multivariate-characteristic-functions">2. Multivariate Characteristic Functions</h2>
-<p>[cite_start]The above concepts can be naturally extended to high-dimensional spaces[cite: 734].</p>
+<p>The above concepts can be naturally extended to high-dimensional spaces.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition: Multivariate Characteristic Function</p>
-<p>Let <span class="arithmatex">\(X\)</span> be a <span class="arithmatex">\(p\)</span>-dimensional random vector. [cite_start]Its characteristic function is defined as[cite: 735]:</p>
-<p>$$
+<p>Let <span class="arithmatex">\(X\)</span> be a <span class="arithmatex">\(p\)</span>-dimensional random vector. Its characteristic function is defined as:</p>
+<div class="arithmatex">\[
 \phi_X(t) = E[e^{it^\top X}] = \int_{\mathbb{R}^p} e^{it^\top x} dF_X(x), \quad \text{for any } t \in \mathbb{R}^p
-$$ [cite: 736]</p>
+\]</div>
 </div>
-<p>[cite_start]Multivariate characteristic functions perfectly inherit the properties of univariate ones and add properties related to matrix calculus[cite: 739, 746]:</p>
+<p>Multivariate characteristic functions perfectly inherit the properties of univariate ones and add properties related to matrix calculus:</p>
 <ul>
 <li>
-<p>[cite_start]<strong>Affine Transformation</strong>: For a scalar <span class="arithmatex">\(b \neq 0\)</span>, <span class="arithmatex">\(\phi_{X/b}(t) = \phi_X(t/b)\)</span>[cite: 752]. [cite_start]For a constant vector <span class="arithmatex">\(c\)</span>, <span class="arithmatex">\(\phi_{X+c}(t) = \exp\{it^\top c\} \phi_X(t)\)</span>[cite: 753].</p>
+<p><strong>Affine Transformation</strong>: For a scalar <span class="arithmatex">\(b \neq 0\)</span>, <span class="arithmatex">\(\phi_{X/b}(t) = \phi_X(t/b)\)</span>. For a constant vector <span class="arithmatex">\(c\)</span>, <span class="arithmatex">\(\phi_{X+c}(t) = \exp\{it^\top c\} \phi_X(t)\)</span>.</p>
 </li>
 <li>
-<p>[cite_start]<strong>Independence and Summation</strong>: If <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are independent, then <span class="arithmatex">\(\phi_{X+Y}(t) = \phi_X(t)\phi_Y(t)\)</span>[cite: 754].</p>
+<p><strong>Independence and Summation</strong>: If <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are independent, then <span class="arithmatex">\(\phi_{X+Y}(t) = \phi_X(t)\phi_Y(t)\)</span>.</p>
 </li>
 <li>
 <p><strong>Relationship between Moments and Derivatives</strong>:</p>
 </li>
-<li>If <span class="arithmatex">\(E\|X\| [cite_start]&lt; \infty\)</span>, then the gradient <span class="arithmatex">\(\nabla \phi_X(t)\)</span> exists and is continuous, and <span class="arithmatex">\(\nabla \phi_X(0) = i\mu\)</span> (where <span class="arithmatex">\(\mu = EX\)</span>)[cite: 755].</li>
+<li>If <span class="arithmatex">\(E\|X\| &lt; \infty\)</span>, then the gradient <span class="arithmatex">\(\nabla \phi_X(t)\)</span> exists and is continuous, and <span class="arithmatex">\(\nabla \phi_X(0) = i\mu\)</span> (where <span class="arithmatex">\(\mu = EX\)</span>).</li>
 <li>
-<p>[cite_start]If <span class="arithmatex">\(E\|X\|^2 &lt; \infty\)</span>, then the Hessian matrix <span class="arithmatex">\(\nabla^2 \phi_X(t)\)</span> exists and is continuous, and <span class="arithmatex">\(\nabla^2 \phi_X(0) = -E[XX^\top]\)</span>[cite: 756].</p>
+<p>If <span class="arithmatex">\(E\|X\|^2 &lt; \infty\)</span>, then the Hessian matrix <span class="arithmatex">\(\nabla^2 \phi_X(t)\)</span> exists and is continuous, and <span class="arithmatex">\(\nabla^2 \phi_X(0) = -E[XX^\top]\)</span>.</p>
 </li>
 <li>
-<p>[cite_start]<strong>Multivariate Normal Distribution Special Case</strong>: If <span class="arithmatex">\(X \sim N_d(\mu, \Sigma)\)</span>, its characteristic function is an extremely elegant quadratic exponential form[cite: 756]:</p>
+<p><strong>Multivariate Normal Distribution Special Case</strong>: If <span class="arithmatex">\(X \sim N_d(\mu, \Sigma)\)</span>, its characteristic function is an extremely elegant quadratic exponential form:</p>
 </li>
 </ul>
 <p>$$
@@ -1113,179 +1113,179 @@ $$ [cite: 736]</p>
   $$</p>
 <hr />
 <h2 id="3-levy-continuity-theorem-and-limit-applications">3. Lévy Continuity Theorem and Limit Applications</h2>
-<p>[cite_start]The most powerful application of characteristic functions is that they convert the <strong>convergence of probability measures (Weak Convergence)</strong> into the <strong>pointwise convergence of complex-valued functions</strong>[cite: 762, 772].</p>
+<p>The most powerful application of characteristic functions is that they convert the <strong>convergence of probability measures (Weak Convergence)</strong> into the <strong>pointwise convergence of complex-valued functions</strong>.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem 2.2: Lévy-Cramér Theorem (Lévy's Continuity Theorem)</p>
-<p>Let <span class="arithmatex">\(\{X_n\}\)</span> and <span class="arithmatex">\(X\)</span> be random vectors in <span class="arithmatex">\(\mathbb{R}^d\)</span>. Then[cite: 763]:</p>
-<p>$$
+<p>Let <span class="arithmatex">\(\{X_n\}\)</span> and <span class="arithmatex">\(X\)</span> be random vectors in <span class="arithmatex">\(\mathbb{R}^d\)</span>. Then:</p>
+<div class="arithmatex">\[
 X_n \xrightarrow{d} X \iff \phi_{X_n}(t) \to \phi_X(t), \quad \forall t \in \mathbb{R}^d
-$$ [cite: 764]</p>
+\]</div>
 <details class="proof">
 <summary>Proof Sketch Based on Portmanteau Lemma (Click to expand)</summary>
 <p><strong><span class="arithmatex">\(\Rightarrow\)</span> Direction</strong>:
-Since the complex exponential function <span class="arithmatex">\(e^{it^\top x} = \cos(t^\top x) + i\sin(t^\top x)\)</span> is <strong>bounded and continuous</strong>[cite: 768].
-Directly applying Portmanteau Lemma (ii): <span class="arithmatex">\(Ef(X_n) \to Ef(X)\)</span> holds for any bounded continuous function <span class="arithmatex">\(f \in C_B\)</span>, thus the characteristic function must converge pointwise[cite: 768].</p>
+Since the complex exponential function <span class="arithmatex">\(e^{it^\top x} = \cos(t^\top x) + i\sin(t^\top x)\)</span> is <strong>bounded and continuous</strong>.
+Directly applying Portmanteau Lemma (ii): <span class="arithmatex">\(Ef(X_n) \to Ef(X)\)</span> holds for any bounded continuous function <span class="arithmatex">\(f \in C_B\)</span>, thus the characteristic function must converge pointwise.</p>
 <p><strong><span class="arithmatex">\(\Leftarrow\)</span> Direction</strong>:
-This is the difficult part of the theorem. The core idea is to first use the continuity of the characteristic function near the origin to prove that the sequence <span class="arithmatex">\(\{X_n\}\)</span> is <strong>Tight</strong>. By Prohorov's Theorem, a tight sequence must have a convergent subsequence. Then, using the uniqueness theorem for characteristic functions, prove that the limit distribution of all convergent subsequences must be the same as the distribution of <span class="arithmatex">\(X\)</span>, thereby concluding that the entire sequence converges in distribution to <span class="arithmatex">\(X\)</span>[cite: 770].</p>
+This is the difficult part of the theorem. The core idea is to first use the continuity of the characteristic function near the origin to prove that the sequence <span class="arithmatex">\(\{X_n\}\)</span> is <strong>Tight</strong>. By Prohorov's Theorem, a tight sequence must have a convergent subsequence. Then, using the uniqueness theorem for characteristic functions, prove that the limit distribution of all convergent subsequences must be the same as the distribution of <span class="arithmatex">\(X\)</span>, thereby concluding that the entire sequence converges in distribution to <span class="arithmatex">\(X\)</span>.</p>
 </details>
 </div>
 <p>With this theorem, proving the Weak Law of Large Numbers (WLLN) and the Central Limit Theorem (CLT) becomes pure algebraic expansion.</p>
 <div class="admonition tip">
 <p class="admonition-title">Application 1: Central Limit Theorem for Poisson Distribution</p>
-<p>Suppose <span class="arithmatex">\(X_1, \dots, X_n\)</span> are independent and identically distributed as <span class="arithmatex">\(Poisson(\lambda)\)</span>[cite: 778].
-We know the characteristic function of <span class="arithmatex">\(X_j\)</span> is <span class="arithmatex">\(\phi_X(t) = \exp\{\lambda(e^{it}-1)\}\)</span>[cite: 779].
-Let <span class="arithmatex">\(\overline{X} = n^{-1}\sum X_i\)</span>. We examine the characteristic function of the standardized statistic <span class="arithmatex">\(\frac{\overline{X} - \lambda}{\sqrt{\lambda/n}}\)</span>[cite: 780]:</p>
+<p>Suppose <span class="arithmatex">\(X_1, \dots, X_n\)</span> are independent and identically distributed as <span class="arithmatex">\(Poisson(\lambda)\)</span>.
+We know the characteristic function of <span class="arithmatex">\(X_j\)</span> is <span class="arithmatex">\(\phi_X(t) = \exp\{\lambda(e^{it}-1)\}\)</span>.
+Let <span class="arithmatex">\(\overline{X} = n^{-1}\sum X_i\)</span>. We examine the characteristic function of the standardized statistic <span class="arithmatex">\(\frac{\overline{X} - \lambda}{\sqrt{\lambda/n}}\)</span>:</p>
 <details class="proof">
 <summary>Derivation Process (Click to expand)</summary>
-<p>Using affine transformation and independence properties[cite: 781]:</p>
+<p>Using affine transformation and independence properties:</p>
 <div class="arithmatex">\[
 \phi_{\frac{\overline{X} - \lambda}{\sqrt{\lambda/n}}}(t) = \exp\{-it\sqrt{n\lambda}\} \cdot \phi_{\overline{X}}\left(\frac{t}{\sqrt{\lambda/n}}\right) = \exp\{-it\sqrt{n\lambda}\} \cdot \phi_X^n\left(\frac{t}{\sqrt{n\lambda}}\right)
 \]</div>
-<p>Substituting the Poisson characteristic function[cite: 781]:</p>
+<p>Substituting the Poisson characteristic function:</p>
 <div class="arithmatex">\[
 = \exp\{-it\sqrt{n\lambda}\} \cdot \exp\left\{ n\lambda \left( e^{\frac{it}{\sqrt{n\lambda}}} - 1 \right) \right\}
 \]</div>
-<p>Perform a Taylor expansion of the internal exponential function <span class="arithmatex">\(e^x = 1 + x + x^2/2 + o(x^2)\)</span>[cite: 781]:</p>
+<p>Perform a Taylor expansion of the internal exponential function <span class="arithmatex">\(e^x = 1 + x + x^2/2 + o(x^2)\)</span>:</p>
 <div class="arithmatex">\[
 = \exp\left\{ -it\sqrt{n\lambda} + n\lambda \left( \frac{it}{\sqrt{n\lambda}} + \frac{i^2 t^2}{2n\lambda} + o\left(\frac{1}{n\lambda}\right) \right) \right\}
 \]</div>
-<p>Expand and cancel the first-order terms[cite: 781]:</p>
+<p>Expand and cancel the first-order terms:</p>
 <div class="arithmatex">\[
 = \exp\left\{ -it\sqrt{n\lambda} + it\sqrt{n\lambda} - \frac{t^2}{2} + o(1) \right\} = \exp\left\{ -t^2/2 + o(1) \right\}
 \]</div>
-<p>As <span class="arithmatex">\(n \to \infty\)</span>, this characteristic function converges to <span class="arithmatex">\(e^{-t^2/2}\)</span>, which is the characteristic function of the standard normal distribution <span class="arithmatex">\(N(0,1)\)</span>[cite: 781].
-Therefore, by Lévy's Continuity Theorem[cite: 782]:</p>
-<p>$$
+<p>As <span class="arithmatex">\(n \to \infty\)</span>, this characteristic function converges to <span class="arithmatex">\(e^{-t^2/2}\)</span>, which is the characteristic function of the standard normal distribution <span class="arithmatex">\(N(0,1)\)</span>.
+Therefore, by Lévy's Continuity Theorem:</p>
+<div class="arithmatex">\[
 \frac{\overline{X} - \lambda}{\sqrt{\lambda/n}} \xrightarrow{d} N(0, 1)
-$$ [cite: 783]</p>
+\]</div>
 </details>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Application 2: Weak Law of Large Numbers (WLLN)</p>
-<p>Let <span class="arithmatex">\(Y_1, \dots, Y_n\)</span> be i.i.d. random variables, and <span class="arithmatex">\(\phi_Y(t)\)</span> be differentiable at <span class="arithmatex">\(t=0\)</span>, with derivative <span class="arithmatex">\(i\mu = \phi'(0)\)</span> (this is equivalent to the existence of a finite first-order moment)[cite: 789]. Then the sample mean <span class="arithmatex">\(\overline{Y} \xrightarrow{P} \mu\)</span>[cite: 790].</p>
+<p>Let <span class="arithmatex">\(Y_1, \dots, Y_n\)</span> be i.i.d. random variables, and <span class="arithmatex">\(\phi_Y(t)\)</span> be differentiable at <span class="arithmatex">\(t=0\)</span>, with derivative <span class="arithmatex">\(i\mu = \phi'(0)\)</span> (this is equivalent to the existence of a finite first-order moment). Then the sample mean <span class="arithmatex">\(\overline{Y} \xrightarrow{P} \mu\)</span>.</p>
 <details class="proof">
 <summary>Derivation Process (Click to expand)</summary>
-<p>Since <span class="arithmatex">\(\phi(0)=1\)</span> and <span class="arithmatex">\(\phi'(0)\)</span> exists, there is a Taylor expansion at <span class="arithmatex">\(t \to 0\)</span>[cite: 791, 792]:</p>
+<p>Since <span class="arithmatex">\(\phi(0)=1\)</span> and <span class="arithmatex">\(\phi'(0)\)</span> exists, there is a Taylor expansion at <span class="arithmatex">\(t \to 0\)</span>:</p>
 <div class="arithmatex">\[
 \phi_Y(t) = 1 + t\phi'(0) + o(t)
 \]</div>
-<p>Examine the characteristic function of the sample mean <span class="arithmatex">\(\overline{Y}\)</span>[cite: 792]:</p>
+<p>Examine the characteristic function of the sample mean <span class="arithmatex">\(\overline{Y}\)</span>:</p>
 <div class="arithmatex">\[
 \phi_{\overline{Y}}(t) = \phi_Y^n\left(\frac{t}{n}\right) = \left( 1 + \frac{t}{n}\phi'(0) + o\left(\frac{t}{n}\right) \right)^n
 \]</div>
-<p>Substituting <span class="arithmatex">\(\phi'(0) = i\mu\)</span>[cite: 792]:</p>
+<p>Substituting <span class="arithmatex">\(\phi'(0) = i\mu\)</span>:</p>
 <div class="arithmatex">\[
 = \left( 1 + \frac{it\mu}{n} + o\left(\frac{1}{n}\right) \right)^n
 \]</div>
-<p>Using the limit formula from calculus <span class="arithmatex">\(\lim_{n \to \infty} (1 + x/n)^n = e^x\)</span>[cite: 792]:</p>
+<p>Using the limit formula from calculus <span class="arithmatex">\(\lim_{n \to \infty} (1 + x/n)^n = e^x\)</span>：</p>
 <div class="arithmatex">\[
 \lim_{n \to \infty} \phi_{\overline{Y}}(t) = e^{it\mu}
 \]</div>
-<p>This is the characteristic function of a degenerate distribution (the constant <span class="arithmatex">\(\mu\)</span>). Therefore <span class="arithmatex">\(\overline{Y} \xrightarrow{d} \mu\)</span>. Since convergence in distribution to a constant is equivalent to convergence in probability, it is proven that <span class="arithmatex">\(\overline{Y} \xrightarrow{P} \mu\)</span>[cite: 793].</p>
+<p>This is the characteristic function of a degenerate distribution (the constant <span class="arithmatex">\(\mu\)</span>). Therefore <span class="arithmatex">\(\overline{Y} \xrightarrow{d} \mu\)</span>. Since convergence in distribution to a constant is equivalent to convergence in probability, it is proven that <span class="arithmatex">\(\overline{Y} \xrightarrow{P} \mu\)</span>.</p>
 </details>
 </div>
 <hr />
 <h2 id="4-moments-and-taylor-expansion-of-characteristic-functions">4. Moments and Taylor Expansion of Characteristic Functions</h2>
-<p>As seen in the previous section, the core of asymptotic theory lies in the <strong>Taylor Expansion of characteristic functions</strong>. [cite_start]This is directly linked to the moments of random variables[cite: 798].</p>
-<p>[cite_start]If the <span class="arithmatex">\(r\)</span>-th moment of the random variable <span class="arithmatex">\(X\)</span> exists, then <span class="arithmatex">\(\phi_X(t)\)</span> is <span class="arithmatex">\(r\)</span>-th order differentiable, and[cite: 799]:</p>
-<p>$$
+<p>As seen in the previous section, the core of asymptotic theory lies in the <strong>Taylor Expansion of characteristic functions</strong>. This is directly linked to the moments of random variables.</p>
+<p>If the <span class="arithmatex">\(r\)</span>-th moment of the random variable <span class="arithmatex">\(X\)</span> exists, then <span class="arithmatex">\(\phi_X(t)\)</span> is <span class="arithmatex">\(r\)</span>-th order differentiable, and:</p>
+<div class="arithmatex">\[
 \phi_X^{(r)}(t) = \int (ix)^r e^{itx} dF(x) = E[(iX)^r e^{itX}]
-[cite_start]$$ [cite: 800]</p>
-<p>[cite_start]This results in the derivative value at the origin directly giving the moment about the origin: <span class="arithmatex">\(\phi_X^{(r)}(0) = i^r E[X^r]\)</span>[cite: 801].</p>
+\]</div>
+<p>This results in the derivative value at the origin directly giving the moment about the origin: <span class="arithmatex">\(\phi_X^{(r)}(0) = i^r E[X^r]\)</span>.</p>
 <div class="admonition info">
 <p class="admonition-title">Theorem 2.3: Expansion of Characteristic Functions</p>
-<p>[cite_start]If <span class="arithmatex">\(E|X|^r &lt; \infty\)</span>, then its characteristic function can be expanded as[cite: 804]:</p>
-<p>$$
+<p>If <span class="arithmatex">\(E|X|^r &lt; \infty\)</span>, then its characteristic function can be expanded as:</p>
+<div class="arithmatex">\[
 \phi_X(t) = \sum_{j=0}^r \frac{(it)^j}{j!} E[X^j] + o(|t|^r)
-$$ [cite: 805]</p>
+\]</div>
 <blockquote>
 <p><strong>Note (The Moment Problem)</strong>:
-The characteristic function determines all moments of <span class="arithmatex">\(X\)</span>. However, conversely, can a sequence of all moments <span class="arithmatex">\(\{m_r := E[X^r]\}_{r=1}^\infty\)</span> uniquely determine the distribution of <span class="arithmatex">\(X\)</span>? [cite: 829]
-This is called the <strong>Moment Problem</strong>. The answer is: <strong>No</strong>. Only when <strong>Carleman's Condition</strong> is satisfied can the distribution be uniquely determined[cite: 829, 830]:</p>
-<p>$$
+The characteristic function determines all moments of <span class="arithmatex">\(X\)</span>. However, conversely, can a sequence of all moments <span class="arithmatex">\(\{m_r := E[X^r]\}_{r=1}^\infty\)</span> uniquely determine the distribution of <span class="arithmatex">\(X\)</span>?
+This is called the <strong>Moment Problem</strong>. The answer is: <strong>No</strong>. Only when <strong>Carleman's Condition</strong> is satisfied can the distribution be uniquely determined:</p>
+<div class="arithmatex">\[
 \sum_{r=1}^\infty m_{2r}^{-\frac{1}{2r}} = +\infty
-$$ [cite: 831]</p>
+\]</div>
 </blockquote>
 </div>
-<p>[cite_start]Using high-order Taylor expansion, we can also prove the Central Limit Theorem in a general case extremely concisely[cite: 810, 811]:</p>
+<p>Using high-order Taylor expansion, we can also prove the Central Limit Theorem in a general case extremely concisely:</p>
 <details class="proof">
 <summary>Proof of the General Central Limit Theorem (CLT) (Click to expand)</summary>
-<p>Suppose <span class="arithmatex">\(X_1, \dots, X_n\)</span> are i.i.d., with mean <span class="arithmatex">\(\mu = E[X]\)</span>, and variance <span class="arithmatex">\(\sigma^2 = E[X^2] &lt; \infty\)</span>[cite: 811].
+<p>Suppose <span class="arithmatex">\(X_1, \dots, X_n\)</span> are i.i.d., with mean <span class="arithmatex">\(\mu = E[X]\)</span>, and variance <span class="arithmatex">\(\sigma^2 = E[X^2] &lt; \infty\)</span>.
 Let the centered variable be <span class="arithmatex">\(Y = X - \mu\)</span>, then <span class="arithmatex">\(E[Y]=0, E[Y^2]=\sigma^2\)</span>.
-Its characteristic function expanded to the second order is[cite: 813]:</p>
+Its characteristic function expanded to the second order is:</p>
 <div class="arithmatex">\[
 \phi_{X-\mu}(t) = 1 + \frac{1}{2}(it)^2 \sigma^2 + o(t^2) = 1 - \frac{t^2 \sigma^2}{2} + o(t^2)
 \]</div>
-<p>For the standardized sum <span class="arithmatex">\(Z_n = \frac{n\overline{X} - n\mu}{\sqrt{n\sigma^2}}\)</span>, its characteristic function is[cite: 814]:</p>
-<p>$$
+<p>For the standardized sum <span class="arithmatex">\(Z_n = \frac{n\overline{X} - n\mu}{\sqrt{n\sigma^2}}\)</span>, its characteristic function is:</p>
+<div class="arithmatex">\[
 \phi_{Z_n}(t) = \phi_{X-\mu}^n\left(\frac{t}{\sigma\sqrt{n}}\right) = \left( 1 - \frac{1}{2}\left(\frac{t}{\sigma\sqrt{n}}\right)^2 \sigma^2 + o\left(\frac{t^2}{\sigma^2 n}\right) \right)^n
-$$ [cite: 815]</p>
-<p>After simplification[cite: 815]:</p>
+\]</div>
+<p>After simplification:</p>
 <div class="arithmatex">\[
 = \left( 1 - \frac{t^2}{2n} + o\left(\frac{1}{n}\right) \right)^n \xrightarrow{n \to \infty} e^{-t^2/2}
 \]</div>
-<p>From Lévy's Continuity Theorem, <span class="arithmatex">\(Z_n \xrightarrow{d} N(0,1)\)</span> is proven[cite: 816].</p>
+<p>From Lévy's Continuity Theorem, <span class="arithmatex">\(Z_n \xrightarrow{d} N(0,1)\)</span> is proven.</p>
 </details>
 <hr />
 <h2 id="5-cumulants-and-edgeworth-expansion">5. Cumulants and Edgeworth Expansion</h2>
-<p>[cite_start]If we continue to expand the characteristic function to higher orders <span class="arithmatex">\((r &gt; 2)\)</span>, for example, to the fourth order[cite: 824, 825]:</p>
-<p>$$
+<p>If we continue to expand the characteristic function to higher orders <span class="arithmatex">\((r &gt; 2)\)</span>, for example, to the fourth order:</p>
+<div class="arithmatex">\[
 \phi_{\frac{\overline{X}-\mu}{\sqrt{\sigma^2/n}}}(t) = \left( 1 - \frac{1}{2}\frac{t^2}{n} - \frac{1}{6}\frac{it^3}{n^{3/2}} \left(\frac{m_3}{\sigma}\right)^3 + \frac{1}{24}\frac{t^4}{n^2} \left(\frac{m_4}{\sigma}\right)^4 + \dots \right)^n
-[cite_start]$$ [cite: 826]</p>
-<p>This leads to extremely complex algebraic expressions. [cite_start]To simplify this expansion for the sum of <span class="arithmatex">\(n\)</span> i.i.d. variables, we introduce <strong>Cumulants (Semi-Invariants)</strong>[cite: 837].</p>
+\]</div>
+<p>This leads to extremely complex algebraic expressions. To simplify this expansion for the sum of <span class="arithmatex">\(n\)</span> i.i.d. variables, we introduce <strong>Cumulants (Semi-Invariants)</strong>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition 2.4: Cumulant Generating Function</p>
-<p>We do not expand <span class="arithmatex">\(\phi_X(t)\)</span> itself, but its logarithm <span class="arithmatex">\(K_X(t) = \log \phi_X(t)\)</span> in a Taylor series. [cite_start]The coefficients <span class="arithmatex">\(\kappa_j\)</span> of the expansion are the <strong>Cumulants</strong>[cite: 839]:</p>
-<p>$$
-K_X(t) := \log \phi_X(t) = \sum_{j \ge 1} \frac{(it)^j}{j!} \kappa_j = \log \left{ 1 + \sum_{j \ge 1} \frac{1}{j!} m_j (it)^j \right}
-$$ [cite: 840]</p>
-<p>Using the series expansion <span class="arithmatex">\(\log(1+x) = x - x^2/2 + x^3/3 - \dots\)</span> to match the coefficients, we can obtain the transformation relationship between moments and cumulants (setting <span class="arithmatex">\(\kappa_1 = m_1 = EX\)</span>)[cite: 840, 841]:</p>
+<p>We do not expand <span class="arithmatex">\(\phi_X(t)\)</span> itself, but its logarithm <span class="arithmatex">\(K_X(t) = \log \phi_X(t)\)</span> in a Taylor series. The coefficients <span class="arithmatex">\(\kappa_j\)</span> of the expansion are the <strong>Cumulants</strong>:</p>
+<div class="arithmatex">\[
+K_X(t) := \log \phi_X(t) = \sum_{j \ge 1} \frac{(it)^j}{j!} \kappa_j = \log \left\{ 1 + \sum_{j \ge 1} \frac{1}{j!} m_j (it)^j \right\}
+\]</div>
+<p>Using the series expansion <span class="arithmatex">\(\log(1+x) = x - x^2/2 + x^3/3 - \dots\)</span> to match the coefficients, we can obtain the transformation relationship between moments and cumulants (setting <span class="arithmatex">\(\kappa_1 = m_1 = EX\)</span>):</p>
 <ul>
-<li>[cite_start]<span class="arithmatex">\(\kappa_2 = m_2 - m_1^2 = E(X - EX)^2 =: c_2\)</span> (i.e., Variance) [cite: 842]</li>
-<li>[cite_start]<span class="arithmatex">\(\kappa_3 = m_3 - 3m_1 m_2 + 2m_1^3 = E(X - EX)^3 =: c_3\)</span> [cite: 842]</li>
-<li>[cite_start]<span class="arithmatex">\(\kappa_4 = m_4 - 4m_1 m_3 - 3m_2^2 + 12m_1^2 m_2 - 6m_1^4 = c_4 - 3c_2^2\)</span> [cite: 843]</li>
+<li><span class="arithmatex">\(\kappa_2 = m_2 - m_1^2 = E(X - EX)^2 =: c_2\)</span> (i.e., Variance)</li>
+<li><span class="arithmatex">\(\kappa_3 = m_3 - 3m_1 m_2 + 2m_1^3 = E(X - EX)^3 =: c_3\)</span></li>
+<li><span class="arithmatex">\(\kappa_4 = m_4 - 4m_1 m_3 - 3m_2^2 + 12m_1^2 m_2 - 6m_1^4 = c_4 - 3c_2^2\)</span></li>
 </ul>
 <blockquote>
-<p>[cite_start]<strong>Note</strong>: Higher-order <span class="arithmatex">\((j &gt; 3)\)</span> cumulants are different from central moments[cite: 844]. [cite_start]For standardized variables <span class="arithmatex">\(Y_i = (X_i - \mu)/\sigma\)</span>, <span class="arithmatex">\(\kappa_1=0, \kappa_2=1\)</span>[cite: 852]. [cite_start]<span class="arithmatex">\(\kappa_3\)</span> is called <strong>Skewness</strong>, and <span class="arithmatex">\(\kappa_4\)</span> is called <strong>Kurtosis</strong>[cite: 853].</p>
+<p><strong>Note</strong>: Higher-order <span class="arithmatex">\((j &gt; 3)\)</span> cumulants are different from central moments. For standardized variables <span class="arithmatex">\(Y_i = (X_i - \mu)/\sigma\)</span>, <span class="arithmatex">\(\kappa_1=0, \kappa_2=1\)</span>. <span class="arithmatex">\(\kappa_3\)</span> is called <strong>Skewness</strong>, and <span class="arithmatex">\(\kappa_4\)</span> is called <strong>Kurtosis</strong>.</p>
 </blockquote>
 </div>
-<p>[cite_start]The great advantage of expanding <span class="arithmatex">\(\log \phi(t)\)</span> is that when independent variables are added, <strong>cumulants are directly linear and additive</strong>[cite: 856].</p>
+<p>The great advantage of expanding <span class="arithmatex">\(\log \phi(t)\)</span> is that when independent variables are added, <strong>cumulants are directly linear and additive</strong>.</p>
 <h3 id="edgeworth-expansion">Edgeworth Expansion</h3>
-<p>[cite_start]Through cumulants, we can write the characteristic function of the standardized sum <span class="arithmatex">\(S_n = \frac{\overline{X}-\mu}{\sqrt{\sigma^2/n}}\)</span> as[cite: 875]:</p>
-<p>$$
-\phi_{S_n}(t) = \phi_Y^n\left(\frac{t}{\sqrt{n}}\right) = \exp\left{ -\frac{t^2}{2} + \sum_{j \ge 3} \kappa_j \frac{(it)^j}{j!} n^{-\frac{j}{2}+1} \right}
-[cite_start]$$ [cite: 867]</p>
-<p>[cite_start]Expanding the exponent terms in powers of <span class="arithmatex">\(n^{-1/2}\)</span>[cite: 867]:</p>
-<p>$$
-= e^{-t^2/2} \left{ 1 + \sum_{j \ge 1} n^{-\frac{j}{2}} r_j(it) \right}
-[cite_start]$$ [cite: 867]</p>
-<p>[cite_start]Where <span class="arithmatex">\(r_j(\cdot)\)</span> is a polynomial with real coefficients, with a maximum degree of <span class="arithmatex">\(3j\)</span> (for example, <span class="arithmatex">\(r_1(u) = \frac{1}{6}\kappa_3 u^3\)</span>)[cite: 868, 869].</p>
+<p>Through cumulants, we can write the characteristic function of the standardized sum <span class="arithmatex">\(S_n = \frac{\overline{X}-\mu}{\sqrt{\sigma^2/n}}\)</span> as:</p>
+<div class="arithmatex">\[
+\phi_{S_n}(t) = \phi_Y^n\left(\frac{t}{\sqrt{n}}\right) = \exp\left\{ -\frac{t^2}{2} + \sum_{j \ge 3} \kappa_j \frac{(it)^j}{j!} n^{-\frac{j}{2}+1} \right\}
+\]</div>
+<p>Expanding the exponent terms in powers of <span class="arithmatex">\(n^{-1/2}\)</span>:</p>
+<div class="arithmatex">\[
+= e^{-t^2/2} \left\{ 1 + \sum_{j \ge 1} n^{-\frac{j}{2}} r_j(it) \right\}
+\]</div>
+<p>Where <span class="arithmatex">\(r_j(\cdot)\)</span> is a polynomial with real coefficients, with a maximum degree of <span class="arithmatex">\(3j\)</span> (for example, <span class="arithmatex">\(r_1(u) = \frac{1}{6}\kappa_3 u^3\)</span>).</p>
 <div class="admonition success">
 <p class="admonition-title">Higher-Order Asymptotic Approximation: Edgeworth Expansion</p>
-<p>[cite_start]Using the idea of Fourier inversion, since the characteristic function can be written as the product of the aforementioned polynomial and the normal characteristic function [cite: 877][cite_start], then the <strong>Cumulative Distribution Function <span class="arithmatex">\(P(S_n \le x)\)</span></strong> must also be written as a modified form of the standard normal CDF <span class="arithmatex">\(\Phi(x)\)</span>[cite: 878, 879]:</p>
-<p>$$
+<p>Using the idea of Fourier inversion, since the characteristic function can be written as the product of the aforementioned polynomial and the normal characteristic function, then the <strong>Cumulative Distribution Function <span class="arithmatex">\(P(S_n \le x)\)</span></strong> must also be written as a modified form of the standard normal CDF <span class="arithmatex">\(\Phi(x)\)</span>:</p>
+<div class="arithmatex">\[
 P(S_n \le x) = \Phi(x) + n^{-\frac{1}{2}} R_1(x) + n^{-1} R_2(x) + \dots
-[cite_start]$$ [cite: 880]</p>
-<p>[cite_start]This is called the <strong>Edgeworth Expansion</strong>[cite: 879]. [cite_start]It provides a more precise convergence rate and finite-sample correction than the simple CLT[cite: 883].</p>
+\]</div>
+<p>This is called the <strong>Edgeworth Expansion</strong>. It provides a more precise convergence rate and finite-sample correction than the simple CLT.</p>
 <details class="proof">
 <summary>Calculation of the Correction Term <span class="arithmatex">\(R_j(x)\)</span> and Hermite Polynomials (Click to expand)</summary>
-<p>[cite_start]To solve for <span class="arithmatex">\(R_j(x)\)</span>, we need to find a function such that its Fourier-Stieltjes transform is exactly equal to <span class="arithmatex">\(e^{-t^2/2} r_j(it)\)</span>[cite: 881]:</p>
-<p>$$
+<p>To solve for <span class="arithmatex">\(R_j(x)\)</span>, we need to find a function such that its Fourier-Stieltjes transform is exactly equal to <span class="arithmatex">\(e^{-t^2/2} r_j(it)\)</span>:</p>
+<div class="arithmatex">\[
 e^{-t^2/2} r_j(it) = \int e^{itx} dR_j(x)
-[cite_start]$$ [cite: 882]</p>
-<p>[cite_start]We use the properties of the standard normal distribution and repeated integration by parts[cite: 889]:</p>
-<p>$$
+\]</div>
+<p>We use the properties of the standard normal distribution and repeated integration by parts:</p>
+<div class="arithmatex">\[
 e^{-t^2/2} = (-it)^{-j} \int e^{itx} d\Phi^{(j)}(x)
-[cite_start]$$ [cite: 890]</p>
-<p>Define the differential operator <span class="arithmatex">\(D = d/dx\)</span>. [cite_start]This inspires us to replace <span class="arithmatex">\(r_j(it)\)</span> with the differential operator polynomial <span class="arithmatex">\(r_j(-D)\)</span> and apply it to <span class="arithmatex">\(\Phi(x)\)</span>[cite: 891]:</p>
-<p>$$
-\int e^{itx} d{r_j(-D)\Phi(x)} = r_j(it) e^{-t^2/2}
-[cite_start]$$ [cite: 893]</p>
-<p>[cite_start]This means[cite: 894]:</p>
+\]</div>
+<p>By treating <span class="arithmatex">\(r_j(it)\)</span> as a differential operator <span class="arithmatex">\(r_j(-D)\)</span> acting on <span class="arithmatex">\(\Phi(x)\)</span> where <span class="arithmatex">\(D = d/dx\)</span>:</p>
+<div class="arithmatex">\[
+\int e^{itx} d\{r_j(-D)\Phi(x)\} = r_j(it) e^{-t^2/2}
+\]</div>
+<p>This implies:</p>
 <div class="arithmatex">\[
 R_j(x) = r_j(-D)\Phi(x)
 \]</div>
-<p>[cite_start]The derivatives of the normal distribution are exactly generated by the famous <strong>Hermite Polynomials <span class="arithmatex">\(He_{j}(x)\)</span></strong>[cite: 895, 897]:</p>
+<p>The derivatives of the normal distribution are exactly generated by the famous <strong>Hermite Polynomials <span class="arithmatex">\(He_{j}(x)\)</span></strong>:</p>
 <div class="arithmatex">\[
 (-D)^j \Phi(x) = -He_{j-1}(x) e^{-t^2/2} \cdot \frac{1}{\sqrt{2\pi}}
 \]</div>
