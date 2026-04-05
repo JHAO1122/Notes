@@ -991,18 +991,58 @@ P(\lim_{n \to \infty} d(X_n, X) = 0) = 1
 <p>假设 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>，且极限随机变量 <span class="arithmatex">\(X\)</span> 的分布函数 <span class="arithmatex">\(F(x)\)</span> 是<strong>连续</strong>的。
 那么，这种逐点收敛会自动升级为<strong>一致收敛</strong>：</p>
 <div class="arithmatex">\[
-\sup_x |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
+\sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
 \]</div>
 <details class="proof">
-<summary>Polya 定理证明思路（点击展开）</summary>
-<p>该证明采用了经典的<strong>有限覆盖法 (Covering Method)</strong>。</p>
-<p>由于 <span class="arithmatex">\(F\)</span> 是一致连续的分布函数，我们在无穷区间上截取一个足够大的 <span class="arithmatex">\([-M, M]\)</span>，使得尾部概率极其微小。
-将 <span class="arithmatex">\([-M, M]\)</span> 进行等宽划分，构造网格点 <span class="arithmatex">\(\{x_i\}_{i=0}^{K+1}\)</span>。</p>
-<p>定义在这些网格点上的最大误差为：</p>
+<summary>Polya 定理详细证明（点击展开）</summary>
+<p>我们需要证明对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，当 <span class="arithmatex">\(n\)</span> 足够大时，<span class="arithmatex">\(\sup_x |F_n(x) - F(x)| &lt; \epsilon\)</span>。</p>
+<p><strong>1. 构造有限划分（Partitioning）</strong></p>
+<p>由于 <span class="arithmatex">\(F(x)\)</span> 是连续分布函数，其值域为 <span class="arithmatex">\([0, 1]\)</span>。对于给定的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，我们可以找到有限个点 <span class="arithmatex">\(-\infty = x_0 &lt; x_1 &lt; x_2 &lt; \dots &lt; x_K = \infty\)</span>，使得：</p>
 <div class="arithmatex">\[
-\Delta_n = \max_{i=0}^{K+1} |F_n(x_i) - F(x_i)|
+F(x_i) - F(x_{i-1}) &lt; \frac{\epsilon}{2}, \quad \forall i = 1, \dots, K
 \]</div>
-<p>因为 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> 且 <span class="arithmatex">\(F\)</span> 无间断点，对于这<strong>有限个</strong>网格点 <span class="arithmatex">\(K\)</span>，当 <span class="arithmatex">\(n \to \infty\)</span> 时必然有 <span class="arithmatex">\(\Delta_n \to 0\)</span>。利用单调性与三角不等式，即可将网格点上的收敛推广到全空间的 <span class="arithmatex">\(\sup\)</span> 一致收敛。<span class="arithmatex">\(\square\)</span></p>
+<p>（注：这里规定 <span class="arithmatex">\(F(x_0) = 0\)</span> 且 <span class="arithmatex">\(F(x_K) = 1\)</span>）。</p>
+<p><strong>2. 利用点点收敛（Pointwise Convergence）</strong></p>
+<p>因为 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>，对于上述每一个有限的网格点 <span class="arithmatex">\(x_i\)</span>（当 <span class="arithmatex">\(1 \le i \le K-1\)</span> 时），根据分布收敛的定义，当 <span class="arithmatex">\(n \to \infty\)</span> 时：</p>
+<div class="arithmatex">\[
+F_n(x_i) \rightarrow F(x_i)
+\]</div>
+<p>由于网格点是有限的，必存在 <span class="arithmatex">\(N\)</span>，使得当 <span class="arithmatex">\(n &gt; N\)</span> 时，对所有 <span class="arithmatex">\(i=1, \dots, K-1\)</span> 均有：</p>
+<div class="arithmatex">\[
+|F_n(x_i) - F(x_i)| &lt; \frac{\epsilon}{2}
+\]</div>
+<p><strong>3. 单调性夹逼（The Sandwich Argument）</strong></p>
+<p>对于轴上任意一点 <span class="arithmatex">\(x\)</span>，它必然落在某个区间 <span class="arithmatex">\([x_{i-1}, x_i]\)</span> 内。利用 <span class="arithmatex">\(F_n\)</span> 和 <span class="arithmatex">\(F\)</span> 的单调不减性：</p>
+<ul>
+<li><strong>上界：</strong></li>
+</ul>
+<div class="arithmatex">\[
+F_n(x) - F(x) \le F_n(x_i) - F(x_{i-1}) = [F_n(x_i) - F(x_i)] + [F(x_i) - F(x_{i-1})]
+\]</div>
+<p>当 <span class="arithmatex">\(n &gt; N\)</span> 时，代入前两步的结论：</p>
+<div class="arithmatex">\[
+F_n(x) - F(x) &lt; \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+\]</div>
+<ul>
+<li><strong>下界：</strong></li>
+</ul>
+<div class="arithmatex">\[
+F_n(x) - F(x) \ge F_n(x_{i-1}) - F(x_i) = [F_n(x_{i-1}) - F(x_{i-1})] - [F(x_i) - F(x_{i-1})]
+\]</div>
+<p>当 <span class="arithmatex">\(n &gt; N\)</span> 时，同理可得：</p>
+<div class="arithmatex">\[
+F_n(x) - F(x) &gt; -\frac{\epsilon}{2} - \frac{\epsilon}{2} = -\epsilon
+\]</div>
+<p><strong>4. 结论</strong></p>
+<p>综合上下界，对于所有 <span class="arithmatex">\(x \in \mathbb{R}\)</span>，只要 <span class="arithmatex">\(n &gt; N\)</span>，就有：</p>
+<div class="arithmatex">\[
+|F_n(x) - F(x)| &lt; \epsilon
+\]</div>
+<p>由此证明了：</p>
+<div class="arithmatex">\[
+\sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad (n \rightarrow \infty)
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <p>统计学中最常见的一种收敛便是向正态分布的收敛：</p>
