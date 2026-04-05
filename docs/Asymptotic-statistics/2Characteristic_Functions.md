@@ -1,4 +1,4 @@
-# 第二章：特征函数 (Characteristic Functions)
+# 第二章：特征函数
 
 在渐近统计理论中，我们迫切需要强有力的工具来推导依分布收敛（弱收敛）。特征函数 (Characteristic Function) 正是这样一种“神兵利器”，它提供了一种从**频域 (Frequency Domain)** 视角审视概率分布的方法，并能完美且唯一地刻画一个分布。
 
