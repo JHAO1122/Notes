@@ -585,6 +585,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-relations-of-stochastic-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Relations of Stochastic Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-slutskys-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Slutsky's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tightness-stochastic-boundedness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tightness &amp; Stochastic Boundedness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-stochastic-order-o_p-and-o_p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Stochastic Order (\(o_p\) and \(O_p\))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-lemma-of-stochastic-plug-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Lemma of Stochastic Plug-in
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -926,6 +981,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-relations-of-stochastic-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Relations of Stochastic Convergence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-slutskys-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Slutsky's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tightness-stochastic-boundedness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tightness &amp; Stochastic Boundedness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-stochastic-order-o_p-and-o_p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Stochastic Order (\(o_p\) and \(O_p\))
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-lemma-of-stochastic-plug-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Lemma of Stochastic Plug-in
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1218,6 +1328,239 @@ P(|g(X_n) - g(X)| &gt; \epsilon) \le P(X \in B_\delta) + P(|X_n - X| \ge \delta)
    If <span class="arithmatex">\(X_n \xrightarrow{d} N_p(\mu, \Sigma)\)</span>, for any constant matrix <span class="arithmatex">\(C \in \mathbb{R}^{m \times p}\)</span>, we have <span class="arithmatex">\(C X_n \xrightarrow{d} N_m(C\mu, C\Sigma C^\top)\)</span>.</p>
 </li>
 </ol>
+</div>
+<h2 id="5-relations-of-stochastic-convergence">5. Relations of Stochastic Convergence</h2>
+<p>There are strictly defined strong and weak implications among the four types of stochastic convergence. In practical applications, we often need to utilize these relations to transition between convergence in probability and convergence in distribution.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.8: Relations of Stochastic Convergence</p>
+<p>Let <span class="arithmatex">\(X_n\)</span>, <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(Y_n\)</span> be random vectors. Then the following corollaries hold:</p>
+<ol>
+<li><strong>Almost-Sure <span class="arithmatex">\(\Rightarrow\)</span> in Probability</strong>: If <span class="arithmatex">\(X_n \xrightarrow{a.s.} X\)</span>, then <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span>.</li>
+<li><strong>in Probability <span class="arithmatex">\(\Rightarrow\)</span> in Distribution</strong>: If <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span>, then <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>.</li>
+<li><strong>Equivalence for Convergence to a Constant</strong>: <span class="arithmatex">\(X_n \xrightarrow{P} c\)</span> (where <span class="arithmatex">\(c\)</span> is a constant) if and only if <span class="arithmatex">\(X_n \xrightarrow{d} c\)</span>.</li>
+<li><strong>Distance Convergence Transfer (Convergence Lemma)</strong>: If <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> and <span class="arithmatex">\(d(X_n, Y_n) \xrightarrow{P} 0\)</span>, then <span class="arithmatex">\(Y_n \xrightarrow{d} X\)</span>.</li>
+<li><strong>Joint Distribution Convergence (1)</strong>: If <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> and <span class="arithmatex">\(Y_n \xrightarrow{P} c\)</span> (constant), then <span class="arithmatex">\((X_n, Y_n) \xrightarrow{d} (X, c)\)</span>.</li>
+<li><strong>Joint Distribution Convergence (2)</strong>: If <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span> and <span class="arithmatex">\(Y_n \xrightarrow{P} Y\)</span>, then <span class="arithmatex">\((X_n, Y_n) \xrightarrow{P} (X, Y)\)</span>.</li>
+</ol>
+<blockquote>
+<p><strong>Important Note</strong>: Marginal convergence in probability implies joint convergence in probability. However, <strong>marginal convergence in distribution generally does NOT imply joint convergence in distribution</strong> (unless Copulas are used or one converges to a constant, as in property 5).</p>
+</blockquote>
+<details class="proof">
+<summary>Rigorous Proof of Core Properties (Click to expand)</summary>
+<p><strong>(1) Almost-Sure <span class="arithmatex">\(\Rightarrow\)</span> in Probability</strong>:
+Define the sequence of events <span class="arithmatex">\(A_n = \cup_{m \ge n} \{||X_m - X|| &gt; \epsilon\}\)</span>. This sequence of sets is monotonically decreasing.
+If <span class="arithmatex">\(X_n(\omega) \to X(\omega)\)</span> for all <span class="arithmatex">\(\omega \in \Omega\)</span>, then <span class="arithmatex">\(A_n\)</span> decreases to the empty set as <span class="arithmatex">\(n \to \infty\)</span>.
+If <span class="arithmatex">\(X_n \xrightarrow{a.s.} X\)</span>, by the continuity of probability:</p>
+<div class="arithmatex">\[
+P(||X_n - X|| &gt; \epsilon) \le P(A_n) \to 0
+\]</div>
+<p><strong>(4) Distance Convergence Transfer (Foundation for proofs)</strong>:
+We prove this using Portmanteau Lemma (iii). For any bounded Lipschitz continuous function <span class="arithmatex">\(f \in C_{B, Lip}\)</span>, let its Lipschitz constant be <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(\sup |f| \le M\)</span>.
+Consider the absolute difference of the expectations, truncated by introducing an indicator function:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|Ef(X_n) - Ef(Y_n)| &amp;\le E\left[ |f(X_n) - f(Y_n)| \cdot \mathbb{I}(||X_n - Y_n|| \le \epsilon) \right] \\
+&amp;\quad + E\left[ |f(X_n) - f(Y_n)| \cdot \mathbb{I}(||X_n - Y_n|| &gt; \epsilon) \right]
+\end{aligned}
+\]</div>
+<p>For the first part, we bound it using the Lipschitz property as <span class="arithmatex">\(L \epsilon \cdot P(||X_n - Y_n|| \le \epsilon) \le L \epsilon\)</span>;
+For the second part, we bound it using boundedness as <span class="arithmatex">\(2M \cdot P(||X_n - Y_n|| &gt; \epsilon)\)</span>.
+Therefore:</p>
+<div class="arithmatex">\[
+|Ef(X_n) - Ef(Y_n)| \le L\epsilon + 2M \cdot P(||X_n - Y_n|| &gt; \epsilon)
+\]</div>
+<p>Since <span class="arithmatex">\(d(X_n, Y_n) \xrightarrow{P} 0\)</span>, the second term goes to 0 as <span class="arithmatex">\(n \to \infty\)</span>. Because <span class="arithmatex">\(\epsilon\)</span> is arbitrarily small, <span class="arithmatex">\(Ef(X_n) - Ef(Y_n) \to 0\)</span>.
+Combined with the premise <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> (i.e., <span class="arithmatex">\(Ef(X_n) \to Ef(X)\)</span>), we must have <span class="arithmatex">\(Ef(Y_n) \to Ef(X)\)</span>. By the Portmanteau Lemma again, it is proven that <span class="arithmatex">\(Y_n \xrightarrow{d} X\)</span>.</p>
+<p><strong>(2) in Probability <span class="arithmatex">\(\Rightarrow\)</span> in Distribution</strong>:
+Split <span class="arithmatex">\(X_n\)</span> into <span class="arithmatex">\(X_n = X + (X_n - X)\)</span>.
+Since trivially <span class="arithmatex">\(X \xrightarrow{d} X\)</span>, and we know <span class="arithmatex">\(X_n - X \xrightarrow{P} 0\)</span>, we can directly apply the newly proven property (4) (letting <span class="arithmatex">\(X_n\)</span> in property 4 play the role of <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(Y_n\)</span> play the role of <span class="arithmatex">\(X_n\)</span>), immediately yielding <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>.</p>
+<p><strong>(3) Equivalence for Convergence to a Constant</strong>:
+Sufficiency is guaranteed by property (2). To prove necessity (<span class="arithmatex">\(X_n \xrightarrow{d} c \Rightarrow X_n \xrightarrow{P} c\)</span>):
+The event <span class="arithmatex">\(\{||X_n - c|| \ge \epsilon\}\)</span> is equivalent to <span class="arithmatex">\(X_n \in B(c, \epsilon)^c\)</span>. This is a closed set.
+By Portmanteau Lemma (vi):</p>
+<div class="arithmatex">\[
+\limsup P(||X_n - c|| \ge \epsilon) \le P(c \in B(c, \epsilon)^c) = 0
+\]</div>
+<p>Thus the limit is 0, proving convergence in probability.</p>
+<p><strong>(5) <span class="arithmatex">\((X_n, Y_n) \xrightarrow{d} (X, c)\)</span></strong>:
+Decompose the joint variables as <span class="arithmatex">\((X_n, Y_n) = (X_n, c) + (0, Y_n - c)\)</span>.
+Since <span class="arithmatex">\(Y_n \xrightarrow{P} c\)</span>, the error term <span class="arithmatex">\((0, Y_n - c) \xrightarrow{P} (0,0)\)</span>.
+By property (4), we only need to prove the main term <span class="arithmatex">\((X_n, c) \xrightarrow{d} (X, c)\)</span>. For any bivariate continuous bounded function <span class="arithmatex">\(f(x,y)\)</span>, fixing <span class="arithmatex">\(y=c\)</span> makes the marginal function <span class="arithmatex">\(f_m(x) = f(x,c)\)</span> also continuous and bounded.
+Because <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>, we have <span class="arithmatex">\(E[f(X_n, c)] = E[f_m(X_n)] \to E[f_m(X)] = E[f(X, c)]\)</span>. Proven!</p>
+<p><strong>(6) <span class="arithmatex">\((X_n, Y_n) \xrightarrow{P} (X, Y)\)</span></strong>:
+By the triangle inequality <span class="arithmatex">\(||(X_n, Y_n) - (X, Y)|| \le ||X_n - X|| + ||Y_n - Y||\)</span>.</p>
+<div class="arithmatex">\[
+P(||(X_n, Y_n) - (X, Y)|| &gt; \epsilon) \le P(||X_n - X|| &gt; \epsilon/2) + P(||Y_n - Y|| &gt; \epsilon/2) \to 0
+\]</div>
+<p>Proven. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="6-slutskys-theorem">6. Slutsky's Theorem</h2>
+<p>As a direct corollary of Theorem 1.8 and the Continuous Mapping Theorem (CMT), Slutsky's Theorem provides highly convenient criteria for algebraic operations between statistics. It is the cornerstone for constructing asymptotic distributions like the <span class="arithmatex">\(t\)</span>-statistic and Wald statistic.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.9: Slutsky's Theorem (Slutsky, 1925)</p>
+<p>Let <span class="arithmatex">\(X_n, X, Y_n\)</span> be random vectors or scalar random variables.
+If <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> and <span class="arithmatex">\(Y_n \xrightarrow{P} c\)</span> (constant), then:</p>
+<ol>
+<li><strong>Addition Rule</strong>: <span class="arithmatex">\(X_n + Y_n \xrightarrow{d} X + c\)</span></li>
+<li><strong>Multiplication Rule</strong>: <span class="arithmatex">\(Y_n X_n \xrightarrow{d} cX\)</span></li>
+<li><strong>Division Rule</strong>: <span class="arithmatex">\(Y_n^{-1} X_n \xrightarrow{d} c^{-1}X\)</span> (provided <span class="arithmatex">\(c \neq 0\)</span> and is invertible for matrices)</li>
+</ol>
+<details class="proof">
+<summary>Extremely Concise Proof (Click to expand)</summary>
+<p>According to property (5) of Theorem 1.8, given <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> and <span class="arithmatex">\(Y_n \xrightarrow{P} c\)</span>, we can directly deduce their joint distribution convergence:</p>
+<div class="arithmatex">\[
+(X_n, Y_n) \xrightarrow{d} (X, c)
+\]</div>
+<p>Next, construct the bivariate continuous mapping functions <span class="arithmatex">\(g(x,y) = x+y\)</span>, <span class="arithmatex">\(g(x,y) = yx\)</span>, and <span class="arithmatex">\(g(x,y) = y^{-1}x\)</span> respectively.
+Applying the Continuous Mapping Theorem (CMT) directly <span class="arithmatex">\(g(X_n, Y_n) \xrightarrow{d} g(X, c)\)</span>, the three rules of Slutsky's Theorem are immediately proven. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Classic Application: Asymptotic Normality of the <span class="arithmatex">\(t\)</span>-Statistic</p>
+<p>Let <span class="arithmatex">\(Y_1, \dots, Y_n\)</span> be i.i.d. samples satisfying <span class="arithmatex">\(E[Y_1] = 0, E[Y_1^2] = \sigma^2\)</span>.
+We want to derive the limit distribution of the <span class="arithmatex">\(t\)</span>-statistic <span class="arithmatex">\(t_n := \frac{\sqrt{n}\overline{Y}}{S_n}\)</span>, where <span class="arithmatex">\(S_n^2\)</span> is the sample variance.</p>
+<p><strong>Step 1: Analyze the Numerator</strong>
+By the Central Limit Theorem (CLT), the asymptotic distribution of the mean is:</p>
+<div class="arithmatex">\[
+\sqrt{n}\overline{Y} \xrightarrow{d} N(0, \sigma^2)
+\]</div>
+<p><strong>Step 2: Analyze the Denominator</strong>
+By the Law of Large Numbers, the sample variance converges in probability to the population variance: <span class="arithmatex">\(S_n^2 \xrightarrow{P} \sigma^2\)</span>. By the mapping theorem (<span class="arithmatex">\(g(x)=\sqrt{x}\)</span>), we get <span class="arithmatex">\(S_n \xrightarrow{P} \sigma\)</span>.</p>
+<p><strong>Step 3: Apply Slutsky's Theorem</strong>
+Treat the numerator as <span class="arithmatex">\(X_n\)</span> and the denominator as <span class="arithmatex">\(Y_n^{-1}\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\sqrt{n}\overline{Y}}{S_n} \xrightarrow{d} \frac{1}{\sigma} N(0, \sigma^2) \stackrel{d}{=} N(0, 1)
+\]</div>
+<p>This theoretically proves that under large samples, the <span class="arithmatex">\(t\)</span>-test can approximately use the critical values of the standard normal distribution.</p>
+</div>
+<hr />
+<h2 id="7-tightness-stochastic-boundedness">7. Tightness &amp; Stochastic Boundedness</h2>
+<p>When studying whether a sequence of random variables converges, a core question is: "Will they escape to infinity?" This leads to the concept of tightness.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definition 1.10: Stochastically Bounded / Tight</p>
+<p>A sequence <span class="arithmatex">\(\{X_n\}\)</span> is said to be <strong>stochastically bounded</strong> (or <strong>tight</strong>) if, for any given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there exists a finite constant <span class="arithmatex">\(M_\epsilon &gt; 0\)</span> such that for all <span class="arithmatex">\(n\)</span>:</p>
+<div class="arithmatex">\[
+\sup_n P(||X_n|| &gt; M_\epsilon) &lt; \epsilon
+\]</div>
+<p>In asymptotic statistics, we typically denote this property with the big-O notation: <strong><span class="arithmatex">\(X_n = O_p(1)\)</span></strong>.</p>
+</div>
+<p>A single random variable <span class="arithmatex">\(X\)</span> itself is inherently tight (since its distribution function satisfies <span class="arithmatex">\(F(\infty)=1, F(-\infty)=0\)</span>). Furthermore, any set of <strong>finite</strong> random variables is also tight. What truly requires vigilance is the escape of an infinite sequence <span class="arithmatex">\(\{X_n\}\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem 1.11: Prohorov's Theorem</p>
+<p>There is an extremely profound topological connection between convergence in distribution and tightness:</p>
+<ol>
+<li>If <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>, then <span class="arithmatex">\(\{X_n\}\)</span> is <strong>necessarily tight</strong> (i.e., convergence implies boundedness).</li>
+<li>If <span class="arithmatex">\(\{X_n\}\)</span> is tight, then it <strong>must have a subsequence converging in distribution</strong> <span class="arithmatex">\(\{X_{n_i}\}\)</span> such that <span class="arithmatex">\(X_{n_i} \xrightarrow{d} X\)</span> as <span class="arithmatex">\(n_i \to \infty\)</span>. (This can be viewed as the probability space generalization of the Bolzano-Weierstrass theorem in real analysis, which states that "every bounded sequence has a convergent subsequence").</li>
+</ol>
+<details class="proof">
+<summary>Rigorous Proof of Theorem 1.11 (1) (Click to expand)</summary>
+<p>Since the limit random variable <span class="arithmatex">\(X\)</span> is a single random variable, it is tight. For any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, we can find a sufficiently large <span class="arithmatex">\(M_\epsilon\)</span> that satisfies <span class="arithmatex">\(P(||X|| = M_\epsilon) = 0\)</span> (avoiding discontinuity points), such that:</p>
+<div class="arithmatex">\[
+P(||X|| \ge M_\epsilon) &lt; \epsilon
+\]</div>
+<p>Consider the closed set <span class="arithmatex">\(F = \{x : ||x|| \ge M_\epsilon\}\)</span>. By Portmanteau Lemma (vi) and <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>:</p>
+<div class="arithmatex">\[
+\limsup_{n \to \infty} P(||X_n|| \ge M_\epsilon) \le P(||X|| \ge M_\epsilon) &lt; \epsilon
+\]</div>
+<p>Since the limit superior is strictly less than <span class="arithmatex">\(\epsilon\)</span>, there must exist a positive integer <span class="arithmatex">\(N\)</span> such that for all <span class="arithmatex">\(n \ge N\)</span>:</p>
+<div class="arithmatex">\[
+P(||X_n|| \ge M_\epsilon) \le 2\epsilon
+\]</div>
+<p>For the preceding finite <span class="arithmatex">\(N-1\)</span> random variables <span class="arithmatex">\(\{X_1, \dots, X_{N-1}\}\)</span>, since a finite set is necessarily tight, we can appropriately enlarge <span class="arithmatex">\(M_\epsilon\)</span> such that <span class="arithmatex">\(P(||X_n|| &gt; M_\epsilon) &lt; \epsilon\)</span> holds for all <span class="arithmatex">\(n \in \mathbb{N}_+\)</span>. Thus, the sequence is globally tight. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="8-stochastic-order-o_p-and-o_p">8. Stochastic Order (<span class="arithmatex">\(o_p\)</span> and <span class="arithmatex">\(O_p\)</span>)</h2>
+<p>To perform calculus-like Taylor expansions in probability theory, we need a notation system to describe "infinitesimal in probability" and "of the same order in probability".</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definition 1.12: Stochastic small <span class="arithmatex">\(o_p\)</span> and large <span class="arithmatex">\(O_p\)</span></p>
+<p>Let <span class="arithmatex">\(\{a_n\}\)</span> be a sequence of constants. For a sequence of random vectors <span class="arithmatex">\(\{X_n\}\)</span>:</p>
+<ul>
+<li><strong>Large <span class="arithmatex">\(O_p\)</span> (Stochastically of order <span class="arithmatex">\(a_n\)</span>)</strong>: If <span class="arithmatex">\(\frac{X_n}{a_n} = O_p(1)\)</span>, meaning <span class="arithmatex">\(\frac{X_n}{a_n}\)</span> is tight (stochastically bounded), it is denoted as <span class="arithmatex">\(X_n = O_p(a_n)\)</span>.</li>
+<li><strong>Small <span class="arithmatex">\(o_p\)</span> (Stochastically of smaller order <span class="arithmatex">\(a_n\)</span>)</strong>: If <span class="arithmatex">\(\frac{X_n}{a_n} \xrightarrow{P} 0\)</span>, meaning it decays faster than <span class="arithmatex">\(a_n\)</span>, it is denoted as <span class="arithmatex">\(X_n = o_p(a_n)\)</span>.</li>
+</ul>
+<blockquote>
+<p><em>Special case</em>: <span class="arithmatex">\(X_n = o_p(1)\)</span> means <span class="arithmatex">\(X_n \xrightarrow{P} 0\)</span>.</p>
+</blockquote>
+</div>
+<p>When determining the order of a statistic, Chebyshev's Inequality is the most commonly used tool. For instance, if <span class="arithmatex">\(E[T_n] = \mu_n\)</span> and <span class="arithmatex">\(Var(T_n) = \sigma_n^2\)</span>, then it is guaranteed that <span class="arithmatex">\(T_n - \mu_n = O_p(\sigma_n)\)</span>.</p>
+<p><strong>Rules of Calculus for <span class="arithmatex">\(o_p\)</span> and <span class="arithmatex">\(O_p\)</span>:</strong>
+When performing asymptotic expansions, we can manipulate these stochastic symbols just like deterministic limits (reading from left to right):</p>
+<ul>
+<li><span class="arithmatex">\(o_p(1) + o_p(1) = o_p(1)\)</span></li>
+<li><span class="arithmatex">\(O_p(1) + o_p(1) = O_p(1)\)</span></li>
+<li><span class="arithmatex">\(O_p(1) \cdot o_p(1) = o_p(1)\)</span></li>
+<li><span class="arithmatex">\((1 + o_p(1))^{-1} = O_p(1)\)</span></li>
+<li><span class="arithmatex">\(O_p(1) + O_p(1) = O_p(1)\)</span></li>
+<li><span class="arithmatex">\(o_p(O_p(1)) = O_p(o_p(1)) = o_p(1)\)</span></li>
+</ul>
+<hr />
+<h2 id="9-lemma-of-stochastic-plug-in">9. Lemma of Stochastic Plug-in</h2>
+<p>This is the core prerequisite lemma we use in statistical inference to derive the Delta Method and the asymptotic normality of Maximum Likelihood Estimators (MLE).</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma 1.13: Lemma of Stochastic Plug-in</p>
+<p>Let <span class="arithmatex">\(R: \mathbb{R}^k \to \mathbb{R}\)</span> be a real function satisfying <span class="arithmatex">\(R(0)=0\)</span>. Let <span class="arithmatex">\(\{X_n\}\)</span> be a sequence of random vectors with probability limit 0 (i.e., <span class="arithmatex">\(X_n \xrightarrow{P} 0\)</span>). Then for any <span class="arithmatex">\(p &gt; 0\)</span>:</p>
+<ol>
+<li>If the deterministic limit <span class="arithmatex">\(R(h) = o(||h||^p)\)</span> as <span class="arithmatex">\(h \to 0\)</span>, then <span class="arithmatex">\(R(X_n) = o_p(||X_n||^p)\)</span>.</li>
+<li>If the deterministic limit <span class="arithmatex">\(R(h) = O(||h||^p)\)</span> as <span class="arithmatex">\(h \to 0\)</span>, then <span class="arithmatex">\(R(X_n) = O_p(||X_n||^p)\)</span>.</li>
+</ol>
+<blockquote>
+<p><em>Note: This lemma is extremely powerful. It allows us to seamlessly convert the Taylor expansion remainder <span class="arithmatex">\(o(|x|)\)</span> from deterministic calculus directly into <span class="arithmatex">\(o_p(|X_n|)\)</span> under random variables, without worrying whether the function <span class="arithmatex">\(R\)</span> is continuous elsewhere.</em></p>
+</blockquote>
+<details class="proof">
+<summary>Proof of <span class="arithmatex">\(o_p\)</span> and <span class="arithmatex">\(O_p\)</span> Truncation (Click to expand)</summary>
+<p><strong>Proof for (1) small <span class="arithmatex">\(o_p\)</span> case</strong>:
+Define the auxiliary function:</p>
+<div class="arithmatex">\[
+g(h) = \begin{cases} \frac{R(h)}{||h||^p}, &amp; h \neq 0 \\ 0, &amp; h = 0 \end{cases}
+\]</div>
+<p>Then we can write <span class="arithmatex">\(R(X_n) = ||X_n||^p g(X_n)\)</span>. To prove <span class="arithmatex">\(R(X_n) = o_p(||X_n||^p)\)</span>, we only need to show <span class="arithmatex">\(g(X_n) \xrightarrow{P} 0\)</span>.
+Due to the premise <span class="arithmatex">\(R(h) = o(||h||^p)\)</span>, as <span class="arithmatex">\(h \to 0\)</span>, <span class="arithmatex">\(g(h) \to 0 = g(0)\)</span>. That is, <span class="arithmatex">\(g(h)\)</span> is continuous at 0.
+Since it is known that <span class="arithmatex">\(X_n \xrightarrow{P} 0\)</span>, applying the Continuous Mapping Theorem (CMT), we immediately get <span class="arithmatex">\(g(X_n) \xrightarrow{P} g(0) = 0\)</span>. Proven!</p>
+<p><strong>Proof for (2) large <span class="arithmatex">\(O_p\)</span> case</strong>:
+Similarly use the <span class="arithmatex">\(g(h)\)</span> from above. Since <span class="arithmatex">\(R(h) = O(||h||^p)\)</span>, <span class="arithmatex">\(g(h)\)</span> is bounded near <span class="arithmatex">\(h=0\)</span>.
+This means there exist <span class="arithmatex">\(M &gt; 0\)</span> and <span class="arithmatex">\(\delta &gt; 0\)</span> such that when <span class="arithmatex">\(||h|| &lt; \delta\)</span>, <span class="arithmatex">\(|g(h)| \le M\)</span>.
+Now examine the event <span class="arithmatex">\(\{|g(X_n)| &gt; M\}\)</span>. If this event occurs, it indicates <span class="arithmatex">\(X_n\)</span> must have escaped the safe region of radius <span class="arithmatex">\(\delta\)</span>. Therefore, the following set inclusion holds:</p>
+<div class="arithmatex">\[
+\{\omega : |g(X_n(\omega))| &gt; M\} \subset \{\omega : ||X_n(\omega)|| &gt; \delta\}
+\]</div>
+<p>Taking the probability measure:</p>
+<div class="arithmatex">\[
+P(|g(X_n)| &gt; M) \le P(||X_n|| &gt; \delta)
+\]</div>
+<p>Because <span class="arithmatex">\(X_n \xrightarrow{P} 0\)</span>, for any given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, when <span class="arithmatex">\(n\)</span> is sufficiently large, the right side <span class="arithmatex">\(P(||X_n|| &gt; \delta) &lt; \epsilon\)</span>.
+Thus:</p>
+<div class="arithmatex">\[
+P(|g(X_n)| &gt; M) &lt; \epsilon, \quad \forall n \ge N
+\]</div>
+<p>This perfectly satisfies the definition of being stochastically bounded <span class="arithmatex">\(O_p(1)\)</span>, meaning <span class="arithmatex">\(g(X_n) = O_p(1)\)</span>, and thereby <span class="arithmatex">\(R(X_n) = O_p(||X_n||^p)\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Comprehensive Application Example: Asymptotic Distribution of Sample Variance</p>
+<p>Suppose <span class="arithmatex">\(X_1, \dots, X_n\)</span> are i.i.d. <span class="arithmatex">\(\sim F(\mu, \sigma^2)\)</span> and the fourth moment exists <span class="arithmatex">\(E[X^4] &lt; \infty\)</span>. Derive the limit distribution of the biased variance <span class="arithmatex">\(S_n^2\)</span>.</p>
+<p>First, expand the variance:</p>
+<div class="arithmatex">\[
+S_n^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \overline{X})^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - (\overline{X} - \mu)^2
+\]</div>
+<p>For the first part, since the fourth moment exists, using the standard Central Limit Theorem:</p>
+<div class="arithmatex">\[
+\sqrt{n}\left( \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - \sigma^2 \right) \xrightarrow{d} N(0, Var((X_i - \mu)^2)) := N(0, \nu^2)
+\]</div>
+<p>For the second part, by CLT we know <span class="arithmatex">\(\overline{X} - \mu = O_p(n^{-1/2})\)</span>. Using the Lemma of Stochastic Plug-in (setting <span class="arithmatex">\(p=2\)</span>), squaring it yields:</p>
+<div class="arithmatex">\[
+(\overline{X} - \mu)^2 = O_p(n^{-1}) = o_p(n^{-1/2})
+\]</div>
+<p>Therefore, when multiplied by <span class="arithmatex">\(\sqrt{n}\)</span>:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\overline{X} - \mu)^2 = o_p(1)
+\]</div>
+<p>Applying Slutsky's Theorem, the higher-order error term vanishes in the limit:</p>
+<div class="arithmatex">\[
+\sqrt{n}(S_n^2 - \sigma^2) = \sqrt{n}\left( \frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2 - \sigma^2 \right) - \sqrt{n}(\overline{X} - \mu)^2 \xrightarrow{d} N(0, \nu^2) - 0 = N(0, \nu^2)
+\]</div>
 </div>
 
 
