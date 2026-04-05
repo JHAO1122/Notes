@@ -988,40 +988,61 @@ P(\lim_{n \to \infty} d(X_n, X) = 0) = 1
 <p>Based on this, we can obtain an extremely elegant conclusion that strengthens convergence in distribution:</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem 1.3: Polya's Theorem</p>
-<p>Assume <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>, and the distribution function <span class="arithmatex">\(F(x)\)</span> of the limit random variable <span class="arithmatex">\(X\)</span> is <strong>continuous</strong>.
+<p>Suppose <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>, and the cumulative distribution function (CDF) <span class="arithmatex">\(F(x)\)</span> of the limiting random variable <span class="arithmatex">\(X\)</span> is <strong>continuous</strong>. 
 Then, this pointwise convergence automatically upgrades to <strong>uniform convergence</strong>:</p>
 <div class="arithmatex">\[
-\sup_x |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
+\sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad \text{as } n \rightarrow \infty
 \]</div>
 <details class="proof">
-<summary>Rigorous Proof of Polya's Theorem (Click to expand)</summary>
-<p>This proof uses the classic <strong>Covering Method</strong>.</p>
-<p>For any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, since <span class="arithmatex">\(F(x)\)</span> is a valid continuous CDF, <span class="arithmatex">\(\lim_{x \to -\infty} F(x) = 0\)</span> and <span class="arithmatex">\(\lim_{x \to \infty} F(x) = 1\)</span>. We can choose a sufficiently large <span class="arithmatex">\(M &gt; 0\)</span> such that the tail probabilities are extremely small:</p>
+<summary>Detailed Proof of Polya's Theorem (Click to expand)</summary>
+<p>We need to prove that for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there exists an <span class="arithmatex">\(N\)</span> such that for all <span class="arithmatex">\(n &gt; N\)</span>, <span class="arithmatex">\(\sup_{x \in \mathbb{R}} |F_n(x) - F(x)| &lt; \epsilon\)</span>.</p>
+<p><strong>1. Constructing a Finite Partition</strong></p>
+<p>Since <span class="arithmatex">\(F(x)\)</span> is a continuous distribution function, its range is <span class="arithmatex">\([0, 1]\)</span>. For a given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, we can find a finite number of points <span class="arithmatex">\(-\infty = x_0 &lt; x_1 &lt; x_2 &lt; \dots &lt; x_K = \infty\)</span> such that:</p>
 <div class="arithmatex">\[
-F(-M) &lt; \frac{\epsilon}{2} \quad \text{and} \quad 1 - F(M) &lt; \frac{\epsilon}{2}
+F(x_i) - F(x_{i-1}) &lt; \frac{\epsilon}{2}, \quad \forall i = 1, \dots, K
 \]</div>
-<p>Because <span class="arithmatex">\(F\)</span> is continuous on the compact interval <span class="arithmatex">\([-M, M]\)</span>, it is uniformly continuous. Thus, we can partition <span class="arithmatex">\([-M, M]\)</span> into a finite number of grid points <span class="arithmatex">\(-M = x_0 &lt; x_1 &lt; \dots &lt; x_K = M\)</span> such that for all <span class="arithmatex">\(i = 1, \dots, K\)</span>:</p>
+<p>(Note: We define <span class="arithmatex">\(F(x_0) = 0\)</span> and <span class="arithmatex">\(F(x_K) = 1\)</span>).</p>
+<p><strong>2. Utilizing Pointwise Convergence</strong></p>
+<p>Since <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>, for each of the finite grid points <span class="arithmatex">\(x_i\)</span> mentioned above (where <span class="arithmatex">\(1 \le i \le K-1\)</span>), by the definition of convergence in distribution, as <span class="arithmatex">\(n \to \infty\)</span>:</p>
 <div class="arithmatex">\[
-F(x_i) - F(x_{i-1}) &lt; \frac{\epsilon}{2}
+F_n(x_i) \rightarrow F(x_i)
 \]</div>
-<p>For any <span class="arithmatex">\(x \in [-M, M]\)</span>, there exists an <span class="arithmatex">\(i\)</span> such that <span class="arithmatex">\(x_{i-1} \le x \le x_i\)</span>. Due to the monotonicity of CDFs, we can bound the difference:</p>
+<p>Because there are only finitely many grid points, there must exist an <span class="arithmatex">\(N\)</span> such that for all <span class="arithmatex">\(n &gt; N\)</span> and for all <span class="arithmatex">\(i=1, \dots, K-1\)</span>:</p>
 <div class="arithmatex">\[
-F_n(x) - F(x) \le F_n(x_i) - F(x_{i-1}) = F_n(x_i) - F(x_i) + F(x_i) - F(x_{i-1}) \le |F_n(x_i) - F(x_i)| + \frac{\epsilon}{2}
+|F_n(x_i) - F(x_i)| &lt; \frac{\epsilon}{2}
 \]</div>
-<p>Similarly, for the lower bound:</p>
+<p><strong>3. The Sandwich Argument via Monotonicity</strong></p>
+<p>For any arbitrary point <span class="arithmatex">\(x \in \mathbb{R}\)</span>, it must fall within some interval <span class="arithmatex">\([x_{i-1}, x_i]\)</span>. Utilizing the non-decreasing property of <span class="arithmatex">\(F_n\)</span> and <span class="arithmatex">\(F\)</span>:</p>
+<ul>
+<li><strong>Upper Bound:</strong></li>
+</ul>
 <div class="arithmatex">\[
-F_n(x) - F(x) \ge F_n(x_{i-1}) - F(x_{i}) \ge -|F_n(x_{i-1}) - F(x_{i-1})| - \frac{\epsilon}{2}
+F_n(x) - F(x) \le F_n(x_i) - F(x_{i-1}) = [F_n(x_i) - F(x_i)] + [F(x_i) - F(x_{i-1})]
 \]</div>
-<p>Therefore, the maximum error on the interval <span class="arithmatex">\([-M, M]\)</span> is bounded by the grid points:</p>
+<p>When <span class="arithmatex">\(n &gt; N\)</span>, substituting the results from the previous two steps yields:</p>
 <div class="arithmatex">\[
-\sup_{x \in [-M, M]} |F_n(x) - F(x)| \le \max_{0 \le i \le K} |F_n(x_i) - F(x_i)| + \frac{\epsilon}{2}
+F_n(x) - F(x) &lt; \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
 \]</div>
-<p>Because <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> and <span class="arithmatex">\(F\)</span> has no points of discontinuity, for these <strong>finite</strong> <span class="arithmatex">\(K+1\)</span> grid points, we must have <span class="arithmatex">\(\max_{i} |F_n(x_i) - F(x_i)| \to 0\)</span> as <span class="arithmatex">\(n \to \infty\)</span>. </p>
-<p>The tail regions <span class="arithmatex">\((-\infty, -M)\)</span> and <span class="arithmatex">\((M, \infty)\)</span> can be bounded similarly using the limits of <span class="arithmatex">\(F(-M)\)</span> and <span class="arithmatex">\(1-F(M)\)</span>. Thus, by taking the limit superior:</p>
+<ul>
+<li><strong>Lower Bound:</strong></li>
+</ul>
 <div class="arithmatex">\[
-\limsup_{n \to \infty} \sup_x |F_n(x) - F(x)| \le \epsilon
+F_n(x) - F(x) \ge F_n(x_{i-1}) - F(x_i) = [F_n(x_{i-1}) - F(x_{i-1})] - [F(x_i) - F(x_{i-1})]
 \]</div>
-<p>Since <span class="arithmatex">\(\epsilon\)</span> is arbitrary, the uniform convergence over the entire space is proven. <span class="arithmatex">\(\square\)</span></p>
+<p>When <span class="arithmatex">\(n &gt; N\)</span>, similarly we obtain:</p>
+<div class="arithmatex">\[
+F_n(x) - F(x) &gt; -\frac{\epsilon}{2} - \frac{\epsilon}{2} = -\epsilon
+\]</div>
+<p><strong>4. Conclusion</strong></p>
+<p>Combining the upper and lower bounds, for all <span class="arithmatex">\(x \in \mathbb{R}\)</span>, as long as <span class="arithmatex">\(n &gt; N\)</span>, we have:</p>
+<div class="arithmatex">\[
+|F_n(x) - F(x)| &lt; \epsilon
+\]</div>
+<p>This proves that:</p>
+<div class="arithmatex">\[
+\sup_{x \in \mathbb{R}} |F_n(x) - F(x)| \rightarrow 0 \quad (n \rightarrow \infty)
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <p>The most common type of convergence in statistics is convergence to a normal distribution:</p>
