@@ -112,12 +112,12 @@ Multivariate characteristic functions perfectly inherit the properties of univar
 
 * **Multivariate Normal Distribution Special Case**: 
 
-  If $X \sim N_d(\mu, \Sigma)$, 
-  its characteristic function is an extremely elegant quadratic exponential form:
+If $X \sim N_d(\mu, \Sigma)$, 
+its characteristic function is an extremely elegant quadratic exponential form:
 
-  $$
-  \phi_X(t) = \exp\left\{ it^\top \mu - \frac{1}{2} t^\top \Sigma t \right\}
-  $$
+$$
+\phi_X(t) = \exp\left\{ it^\top \mu - \frac{1}{2} t^\top \Sigma t \right\}
+$$
 
 ---
 

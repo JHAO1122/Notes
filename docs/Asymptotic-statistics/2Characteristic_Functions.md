@@ -110,11 +110,11 @@
 
 * **多元正态分布特例**：
 
-  若 $X \sim N_d(\mu, \Sigma)$，其特征函数为极其优美的二次型指数形式：
+若 $X \sim N_d(\mu, \Sigma)$，其特征函数为极其优美的二次型指数形式：
 
-  $$
-  \phi_X(t) = \exp\left\{ it^\top \mu - \frac{1}{2} t^\top \Sigma t \right\}
-  $$
+$$
+\phi_X(t) = \exp\left\{ it^\top \mu - \frac{1}{2} t^\top \Sigma t \right\}
+$$
 
 ---
 
