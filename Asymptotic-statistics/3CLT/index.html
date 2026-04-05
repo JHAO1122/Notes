@@ -1,0 +1,1404 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/3CLT/">
+      
+      
+        <link rel="prev" href="../2Characteristic_Functions/">
+      
+      
+        <link rel="next" href="../../Stochastic-Differential-Equation/0Intro/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/Asymptotic-statistics/3CLT/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第三章：中心极限定理 - My Study Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="My Study Notes" class="md-header__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Study Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第三章：中心极限定理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/Asymptotic-statistics/3CLT/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to Jiahao's Academic Space
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0Intro/" class="md-tabs__link">
+          
+  
+  
+  Asymptotic statistics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  Stochastic Differential Equation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Study Notes" class="md-nav__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Study Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Jiahao's Academic Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Asymptotic statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 渐近统计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：数据分布与随机收敛
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：特征函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：中心极限定理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：中心极限定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-double-arrays-a-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 双重数组与复数极限定理 (Double Arrays &amp; A Lemma)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-liapounovs-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 李雅普诺夫中心极限定理 (Liapounov's CLT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lindebergs-telescoping-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 林德伯格嵌套法 (Lindeberg's Telescoping Method)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-null-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 零阵列 (Null Arrays)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lindeberg-feller-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 林德伯格-费勒中心极限定理 (Lindeberg-Feller CLT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-applications-further-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 应用与判定扩展 (Applications &amp; Further Conditions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Differential Equation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Differential Equation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 随机微分方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：条件期望
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：Itô 积分与随机微分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：多元 Itô 积分与随机微分方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-double-arrays-a-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 双重数组与复数极限定理 (Double Arrays &amp; A Lemma)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-liapounovs-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 李雅普诺夫中心极限定理 (Liapounov's CLT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lindebergs-telescoping-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 林德伯格嵌套法 (Lindeberg's Telescoping Method)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-null-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 零阵列 (Null Arrays)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lindeberg-feller-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 林德伯格-费勒中心极限定理 (Lindeberg-Feller CLT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-applications-further-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 应用与判定扩展 (Applications &amp; Further Conditions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">第三章：中心极限定理</h1>
+<p>与经典的经典中心极限定理（要求独立同分布 i.i.d.）不同，本章我们将探索更具一般性的中心极限定理，即随机变量是<strong>独立但不同分布 (independent but not identically distributed, i.n.i.d.)</strong> 的情况。</p>
+<hr />
+<h2 id="1-double-arrays-a-lemma">1. 双重数组与复数极限定理 (Double Arrays &amp; A Lemma)</h2>
+<p>在处理不同分布的随机变量之和时，我们通常将其表示为“双重数组”（或三角阵列）的形式。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义 3.1：双重独立随机向量数组 (Double Array)</p>
+<p>对于每一个 <span class="arithmatex">\(n \ge 1\)</span>，设 <span class="arithmatex">\(\{X_{n1}, X_{n2}, \dots, X_{nk_n}\}\)</span> 是定义在概率空间 <span class="arithmatex">\((\Omega_n, \mathcal{F}_n, P_n)\)</span> 上的一组随机向量，满足对于给定的 <span class="arithmatex">\(n\)</span>，<span class="arithmatex">\(X_{n1}, \dots, X_{nk_n}\)</span> 相互独立，且当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(k_n \to \infty\)</span>。
+那么称 <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> 为一个<strong>双重独立随机向量数组</strong>。</p>
+<p><strong>本章常用记号</strong>：</p>
+<ul>
+<li>期望：<span class="arithmatex">\(\alpha_{nj} = E(X_{nj})\)</span>，行的总期望 <span class="arithmatex">\(\alpha_n = \sum_{j=1}^{k_n} E(X_{nj}) = \sum_{j=1}^{k_n} \alpha_{nj}\)</span></li>
+<li>部分和：<span class="arithmatex">\(S_n = \sum_{j=1}^{k_n} X_{nj}\)</span></li>
+<li>方差：<span class="arithmatex">\(\sigma_{nj}^2 = Var(X_{nj})\)</span>，行的总方差 <span class="arithmatex">\(\sigma_n^2 = \sum_{j=1}^{k_n} \sigma_{nj}^2\)</span></li>
+</ul>
+</div>
+<p>为了处理特征函数的乘积，我们需要引入一个复数序列乘积的极限引理。</p>
+<div class="admonition info">
+<p class="admonition-title">引理 3.2：复数序列的乘积极限</p>
+<p>设 <span class="arithmatex">\(\{\theta_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> 为一个复数双重数组，满足当 <span class="arithmatex">\(n \to \infty\)</span> 时：</p>
+<p><strong>(i)</strong> 均匀趋于 0：<span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \to 0\)</span>
+<strong>(ii)</strong> 绝对和一致有界：<span class="arithmatex">\(\sum_{j=1}^{k_n} |\theta_{nj}| \le M &lt; \infty\)</span>（其中 <span class="arithmatex">\(M\)</span> 与 <span class="arithmatex">\(n\)</span> 无关）
+<strong>(iii)</strong> 和收敛：<span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span>（其中 <span class="arithmatex">\(\theta\)</span> 为有限复数）</p>
+<p>那么其连乘积收敛于指数函数：</p>
+<div class="arithmatex">\[
+\prod_{j=1}^{k_n} (1 + \theta_{nj}) \rightarrow e^\theta
+\]</div>
+<blockquote>
+<p><em>(注：这推广了微积分中经典的 <span class="arithmatex">\(\lim_{n \to \infty} (1 + \theta/n)^n = e^\theta\)</span> 结论，即将 <span class="arithmatex">\(\theta_{nj} \equiv \theta/n\)</span> 代入该引理。)</em></p>
+</blockquote>
+<details class="proof">
+<summary>引理 3.2 的详细证明（点击展开）</summary>
+<p>对于非零复数 <span class="arithmatex">\(z\)</span>，复对数主值定义为 <span class="arithmatex">\(Log~z = \log|z| + i Arg~z\)</span>，其中 <span class="arithmatex">\(Arg~z \in [-\pi, \pi]\)</span>。
+当 <span class="arithmatex">\(|z| &lt; 1\)</span> 时，复对数存在如下泰勒级数展开：</p>
+<div class="arithmatex">\[
+\log(1+z) = \sum_{m=1}^\infty (-1)^{m-1} \frac{z^m}{m}
+\]</div>
+<p>由条件 (i)，存在 <span class="arithmatex">\(n_0\)</span>，使得对所有的 <span class="arithmatex">\(n &gt; n_0\)</span> 有 <span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \le 1/2\)</span>。
+此时 <span class="arithmatex">\(|\theta_{nj}| &lt; 1\)</span> 且 <span class="arithmatex">\(1+\theta_{nj} \neq 0\)</span>。考察其对数展开与一次项的截断误差：</p>
+<div class="arithmatex">\[
+|\log(1+\theta_{nj}) - \theta_{nj}| = \left| \sum_{m \ge 2} (-1)^{m-1} \frac{\theta_{nj}^m}{m} \right| \le \sum_{m \ge 2} \frac{|\theta_{nj}|^m}{m}
+\]</div>
+<p>提取出二次项，并利用等比数列求和界定剩余项：</p>
+<div class="arithmatex">\[
+\le \frac{|\theta_{nj}|^2}{2} \sum_{m=2}^\infty \left(\frac{1}{2}\right)^{m-2} = |\theta_{nj}|^2 &lt; 1
+\]</div>
+<p>由于误差绝对值被界定在 <span class="arithmatex">\(|\theta_{nj}|^2\)</span> 内，我们可以将其写为：</p>
+<div class="arithmatex">\[
+\log(1+\theta_{nj}) = \theta_{nj} + \Lambda_{nj}|\theta_{nj}|^2, \quad \text{其中 } |\Lambda_{nj}| &lt; 1
+\]</div>
+<p>对一行求和：</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} \log(1+\theta_{nj}) = \sum_{j=1}^{k_n} \theta_{nj} + \sum_{j=1}^{k_n} \Lambda_{nj}|\theta_{nj}|^2
+\]</div>
+<p>利用条件 (i) 和 (ii)，估计误差项的总和：</p>
+<div class="arithmatex">\[
+\left| \sum_{j=1}^{k_n} \Lambda_{nj}|\theta_{nj}|^2 \right| \le \max_{1 \le j \le k_n} |\theta_{nj}| \sum_{j=1}^{k_n} |\theta_{nj}| \le \left( \max_{1 \le j \le k_n} |\theta_{nj}| \right) \cdot M \rightarrow 0
+\]</div>
+<p>结合条件 (iii) <span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span>，可得：</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} \log(1+\theta_{nj}) \rightarrow \theta
+\]</div>
+<p>两边同时取复指数映射，引理得证。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="2-liapounovs-clt">2. 李雅普诺夫中心极限定理 (Liapounov's CLT)</h2>
+<p>如果随机变量序列拥有高于二阶的矩，我们可以给出一个非常容易验证的充分条件。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.3：李雅普诺夫 CLT (Liapounov's Theorem)</p>
+<p>对于双重数组 <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span>，定义其三阶中心绝对矩之和为 <span class="arithmatex">\(\Gamma_n = \sum_{j=1}^{k_n} E|X_{nj} - \alpha_{nj}|^3\)</span>，假设对于每个 <span class="arithmatex">\(n\)</span> 该值均有限。
+如果满足<strong>李雅普诺夫条件 (Liapounov's Condition)</strong>：</p>
+<div class="arithmatex">\[
+\frac{\Gamma_n}{\sigma_n^3} = \frac{1}{\sigma_n^3} \sum_{j=1}^{k_n} E|X_{nj} - \alpha_{nj}|^3 \rightarrow 0 \quad \text{as } n \to \infty
+\]</div>
+<p>那么标准化和将依分布收敛于标准正态：</p>
+<div class="arithmatex">\[
+\frac{S_n - \alpha_n}{\sigma_n} \rightarrow N(0,1)
+\]</div>
+<blockquote>
+<p><em>(注：三阶矩可以被放宽到 <span class="arithmatex">\(2+\delta\)</span> 阶矩，其中 <span class="arithmatex">\(\delta &gt; 0\)</span>。)</em></p>
+</blockquote>
+<details class="proof">
+<summary>定理 3.3 的严格证明（点击展开）</summary>
+<p>设 <span class="arithmatex">\(\gamma_{nj} = E|X_{nj} - \alpha_{nj}|^3\)</span>。由 Liapounov 矩不等式可知：</p>
+<div class="arithmatex">\[
+\sigma_{nj} = (E|X_{nj} - \alpha_{nj}|^2)^{1/2} \le (E|X_{nj} - \alpha_{nj}|^3)^{1/3} = \gamma_{nj}^{1/3}
+\]</div>
+<p>所以 <span class="arithmatex">\(\sigma_{nj}^3 \le \gamma_{nj}\)</span>。进而有：</p>
+<div class="arithmatex">\[
+\max_{1 \le j \le k_n} \sigma_{nj}^3 \le \max_{1 \le j \le k_n} \gamma_{nj} \le \sum_{j=1}^{k_n} \gamma_{nj} = \Gamma_n
+\]</div>
+<p>设 <span class="arithmatex">\(\phi_{nj}(t)\)</span> 是标准化变量 <span class="arithmatex">\((X_{nj} - \alpha_{nj})/\sigma_n\)</span> 的特征函数。因为 <span class="arithmatex">\(\gamma_{nj}\)</span> 有限，特征函数可进行三阶泰勒展开：</p>
+<div class="arithmatex">\[
+\phi_{nj}(t) = 1 - \frac{\sigma_{nj}^2 t^2}{2\sigma_n^2} + \frac{\Lambda_{nj}}{6} \frac{\gamma_{nj} t^3}{\sigma_n^3}, \quad \text{其中 } |\Lambda_{nj}| &lt; 1
+\]</div>
+<p>为了应用引理 3.2，我们令 <span class="arithmatex">\(\theta_{nj} = \phi_{nj}(t) - 1\)</span>，并验证它的三个条件：</p>
+<p><strong>验证 (i)</strong>：</p>
+<div class="arithmatex">\[
+\max_j |\phi_{nj}(t) - 1| \le \frac{t^2}{2\sigma_n^2} \max_j \sigma_{nj}^2 + \frac{|t|^3}{6\sigma_n^3} \max_j \gamma_{nj}
+\]</div>
+<p>由于 <span class="arithmatex">\(\sigma_{nj}^2 = (\sigma_{nj}^3)^{2/3} \le (\max_j \sigma_{nj}^3)^{2/3}\)</span>，我们有：</p>
+<div class="arithmatex">\[
+\frac{\max \sigma_{nj}^2}{\sigma_n^2} \le \left( \frac{\max \sigma_{nj}^3}{\sigma_n^3} \right)^{2/3} \le \left( \frac{\Gamma_n}{\sigma_n^3} \right)^{2/3} \rightarrow 0
+\]</div>
+<p>同时 <span class="arithmatex">\(\max_j \gamma_{nj} / \sigma_n^3 \le \Gamma_n / \sigma_n^3 \rightarrow 0\)</span>。因此 <span class="arithmatex">\(\max_j |\theta_{nj}| \to 0\)</span>，条件 (i) 成立。</p>
+<p><strong>验证 (ii)</strong>：</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} |\phi_{nj}(t) - 1| \le \frac{t^2}{2\sigma_n^2} \sum_{j=1}^{k_n} \sigma_{nj}^2 + \frac{|t|^3}{6} \frac{\Gamma_n}{\sigma_n^3} = \frac{t^2}{2} + \frac{|t|^3}{6} \frac{\Gamma_n}{\sigma_n^3} \le M(t)
+\]</div>
+<p>此为有界量，条件 (ii) 成立。</p>
+<p><strong>验证 (iii)</strong>：</p>
+<p>由于误差项之和满足：</p>
+<div class="arithmatex">\[
+\left| \sum_{j=1}^{k_n} \frac{\Lambda_{nj} \gamma_{nj}}{\sigma_n^3} \right| \le \frac{\Gamma_n}{\sigma_n^3} \rightarrow 0
+\]</div>
+<p>因此特征函数偏移量之和的极限为：</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} (\phi_{nj}(t) - 1) = -\frac{t^2}{2} + t^3 \sum_{j=1}^{k_n} \frac{\Lambda_{nj} \gamma_{nj}}{\sigma_n^3} \rightarrow -\frac{t^2}{2}
+\]</div>
+<p>条件 (iii) 成立。</p>
+<p>综上所述，根据引理 3.2，独立标准化变量之和的特征函数满足：</p>
+<div class="arithmatex">\[
+\prod_{j=1}^{k_n} \phi_{nj}(t) = \prod_{j=1}^{k_n} (1 + (\phi_{nj}(t) - 1)) \rightarrow e^{-t^2/2}
+\]</div>
+<p>根据 Lévy-Cramér 连续性定理，结果得证。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<p>对于单一下标的一般序列，该推论同样适用：</p>
+<div class="admonition info">
+<p class="admonition-title">推论 3.4 (单序列)</p>
+<p>设 <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> 是一列独立的随机向量序列。令 <span class="arithmatex">\(\alpha_j = E(X_j)\)</span>，<span class="arithmatex">\(\sigma_j^2 = Var(X_j)\)</span> 且 <span class="arithmatex">\(\gamma_j = E|X_j - \alpha_j|^3 &lt; \infty\)</span>。
+令 <span class="arithmatex">\(P_n = \sum_{j=1}^n \gamma_j\)</span>。如果 <span class="arithmatex">\(P_n / \sigma_n^3 \rightarrow 0\)</span>，则：</p>
+<div class="arithmatex">\[
+\frac{S_n - \sum_{j=1}^n \alpha_j}{\sigma_n} \rightarrow N(0,1)
+\]</div>
+</div>
+<hr />
+<h2 id="3-lindebergs-telescoping-method">3. 林德伯格嵌套法 (Lindeberg's Telescoping Method)</h2>
+<p>在不使用特征函数的情况下，直接运用解析技巧（Stein方法的前身）也可以证明 CLT。</p>
+<p>假设 <span class="arithmatex">\(\alpha_j = 0\)</span>。引入一列服从标准正态分布的辅助随机变量 <span class="arithmatex">\(Y_1, \dots, Y_n\)</span>，使得它们与 <span class="arithmatex">\(X_j\)</span> 相互独立，且 <span class="arithmatex">\(Y_j \sim N(0, \sigma_j^2)\)</span> 匹配前两阶矩。
+令 <span class="arithmatex">\(Y_0 = \sum_{i=1}^n Y_i / \sigma_n \sim N(0,1)\)</span>。</p>
+<p>我们目标是证明对所有有界且具备各阶有界导数的测试函数 <span class="arithmatex">\(f \in C_B^\infty\)</span>：</p>
+<div class="arithmatex">\[
+E\left[f\left(\frac{\sum_{i=1}^n X_i}{\sigma_n}\right)\right] - E[f(Y_0)] \rightarrow 0
+\]</div>
+<p>根据定理 3.5 (Chung 6.1.6)，如果上述期望对所有的测试函数收敛，则概率测度弱收敛。</p>
+<div class="admonition success">
+<p class="admonition-title">基于望远镜展开法的证明核心</p>
+<p>构造混合部分和序列 <span class="arithmatex">\(Z_j\)</span>：
+<span class="arithmatex">\(Z_j = Y_1 + \dots + Y_{j-1} + X_{j+1} + \dots + X_n\)</span> （对于 <span class="arithmatex">\(2 \le j \le n-1\)</span>）。
+边界为 <span class="arithmatex">\(Z_1 = X_2 + \dots + X_n\)</span> 且 <span class="arithmatex">\(Z_n = Y_1 + \dots + Y_{n-1}\)</span>。</p>
+<p>我们将全量差异写成了逐项替换的嵌套和 (Telescoping sum)：</p>
+<div class="arithmatex">\[
+E\left[f\left(\frac{\sum X_i}{\sigma_n}\right)\right] - E\left[f\left(\frac{\sum Y_i}{\sigma_n}\right)\right] = \sum_{i=1}^n \left[ E\left[f\left(\frac{Z_i + X_i}{\sigma_n}\right)\right] - E\left[f\left(\frac{Z_i + Y_i}{\sigma_n}\right)\right] \right]
+\]</div>
+<p>对 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(Z_i/\sigma_n\)</span> 处进行三阶泰勒展开：</p>
+<div class="arithmatex">\[
+f\left(\frac{Z_i + X_i}{\sigma_n}\right) = f\left(\frac{Z_i}{\sigma_n}\right) + f'\left(\frac{Z_i}{\sigma_n}\right)\frac{X_i}{\sigma_n} + \frac{1}{2}f''\left(\frac{Z_i}{\sigma_n}\right)\frac{X_i^2}{\sigma_n^2} + \theta_i^{(1)}\frac{X_i^3}{3!\sigma_n^3}
+\]</div>
+<p>由于 <span class="arithmatex">\(X_i\)</span> 和 <span class="arithmatex">\(Y_i\)</span> 前两阶矩完全相同，取期望后一阶项与二阶项完美抵消。
+只剩下三阶误差项，受三阶导数上界 <span class="arithmatex">\(M\)</span> 限制：</p>
+<div class="arithmatex">\[
+\le \sum_{i=1}^n \frac{M}{3!\sigma_n^3} (\gamma_i + \sqrt{\frac{8}{\pi}}\sigma_i^3) \le \frac{M_1}{6}\frac{\Gamma_n}{\sigma_n^3} \rightarrow 0
+\]</div>
+<p>此方法为 Stein 方法和高维随机向量的高斯逼近提供了基石。</p>
+</div>
+<p>推论 3.6 截断方法预备定理：
+如果存在双重数组 <span class="arithmatex">\(|X_{nj}/\sigma_n| \le M_{nj}\)</span> a.s. 且 <span class="arithmatex">\(\lim_{n \to \infty} \max_j M_{nj} = 0\)</span>，则标准化和收敛于正态分布。</p>
+<hr />
+<h2 id="4-null-arrays">4. 零阵列 (Null Arrays)</h2>
+<p>为了探讨 CLT 成立的充分必要条件，我们需要排除某个单一变量在总体方差中占据统治地位的病态情况。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义 3.7：零阵列</p>
+<p>如果一个双重数组满足：对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \max_{1 \le j \le k_n} P(|X_{nj} - \alpha_{nj}| &gt; \epsilon \sigma_n) = 0
+\]</div>
+<p>那么称该双重数组为<strong>零阵列 (Null array)</strong>。
+这等价于表示每个分量 <span class="arithmatex">\((X_{nj} - \alpha_j)/\sigma_n\)</span> 在 <span class="arithmatex">\(n \to \infty\)</span> 时对于 <span class="arithmatex">\(j\)</span> 是一致依概率退化到 0 的。</p>
+</div>
+<p>利用特征函数，我们可以给出一个非常便于计算的等价刻画：</p>
+<div class="admonition info">
+<p class="admonition-title">命题 3.8：零阵列的特征函数等价形式</p>
+<p>双重数组 <span class="arithmatex">\(\{X_{nj}\}\)</span> 是零阵列，当且仅当对于所有的 <span class="arithmatex">\(t \in \mathbb{R}\)</span>：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \max_{1 \le j \le k_n} |\phi_{nj}(t) - 1| = 0
+\]</div>
+<p>并且此收敛在任意有限区间 <span class="arithmatex">\([-K, K]\)</span> 上是一致的。</p>
+<details class="proof">
+<summary>等价性证明（点击展开）</summary>
+<p><strong>(<span class="arithmatex">\(\Rightarrow\)</span> 方向)</strong>：不失一般性设 <span class="arithmatex">\(\alpha_j = 0\)</span>。
+将期望分解为在阈值 <span class="arithmatex">\(\epsilon\sigma_n\)</span> 内和外的两部分：</p>
+<div class="arithmatex">\[
+|\phi_{nj}(t) - 1| \le E\left[ |e^{itX_{nj}/\sigma_n} - 1| \mathbb{I}(|X_{nj}| &gt; \epsilon\sigma_n) \right] + E\left[ |e^{itX_{nj}/\sigma_n} - 1| \mathbb{I}(|X_{nj}| \le \epsilon\sigma_n) \right]
+\]</div>
+<p>利用不等式 <span class="arithmatex">\(|e^{itu} - 1| \le |tu|\)</span> 和复指数模的界限 2：</p>
+<div class="arithmatex">\[
+\le 2 P(|X_{nj}| &gt; \epsilon\sigma_n) + |t| \epsilon
+\]</div>
+<p>因为是在 <span class="arithmatex">\([-K, K]\)</span> 的有界闭集上：</p>
+<div class="arithmatex">\[
+\sup_{|t|\le K} \max_j |\phi_{nj}(t) - 1| \le 2 \max_j P(|X_{nj}| &gt; \epsilon\sigma_n) + K\epsilon
+\]</div>
+<p>当 <span class="arithmatex">\(n \to \infty\)</span> 第一项由零阵列定义趋于 0，第二项由于 <span class="arithmatex">\(\epsilon\)</span> 任意也可任意小，故一致收敛得证。</p>
+<p><strong>(<span class="arithmatex">\(\Leftarrow\)</span> 方向)</strong>：
+利用经典的特征函数不等式：</p>
+<div class="arithmatex">\[
+P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \frac{1}{\delta} \int_{|t|\le\delta} (1 - \phi_{nj}(t)) dt \le \frac{1}{\delta} \int_{|t|\le\delta} |1 - \phi_{nj}(t)| dt
+\]</div>
+<p>两边取 max 后：</p>
+<div class="arithmatex">\[
+\max_j P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \max_j \frac{1}{\delta} \int_{|t|\le\delta} |1 - \phi_{nj}(t)| dt
+\]</div>
+<p>由积分的有界收敛定理 (BCT) 及已知条件，上式极限趋于 0。命题得证 <span class="arithmatex">\(\square\)</span>。</p>
+</details>
+</div>
+<hr />
+<h2 id="5-lindeberg-feller-clt">5. 林德伯格-费勒中心极限定理 (Lindeberg-Feller CLT)</h2>
+<p>当我们只知道二阶矩存在，而三阶矩不一定存在时，李雅普诺夫条件失效。此时<strong>林德伯格条件 (Lindeberg Condition)</strong> 成为了独立变量 CLT 成立的最精确的充要条件。</p>
+<div class="admonition abstract">
+<p class="admonition-title">定义 3.9：林德伯格条件 (LC)</p>
+<p>对于双重数组 <span class="arithmatex">\(\{X_{nj}\}\)</span>，如果对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，其截尾方差比率满足：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \frac{1}{\sigma_n^2} \sum_{j=1}^{k_n} E \left[ (X_{nj} - \alpha_{nj})^2 \mathbb{I}(|X_{nj} - \alpha_{nj}| &gt; \epsilon \sigma_n) \right] = 0
+\]</div>
+<p>则称该数组满足林德伯格条件。</p>
+</div>
+<p>这引出了整个独立变量渐近分布理论的巅峰之作：</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.11：林德伯格-费勒 CLT (Lindeberg-Feller)</p>
+<p>假设 <span class="arithmatex">\(Var(X_{nj}) = \sigma_{nj}^2 &lt; \infty\)</span>，<span class="arithmatex">\(S_n = \sum_{j=1}^{k_n} X_{nj}\)</span>。那么以下两组命题等价：</p>
+<ul>
+<li><strong>(i)</strong> <span class="arithmatex">\(\frac{S_n - E S_n}{\sigma_n} \rightarrow N(0,1)\)</span> 且 <strong>(ii)</strong> 该双重数组是零阵列。</li>
+<li><strong><span class="arithmatex">\(\Longleftrightarrow\)</span></strong> 该双重数组满足<strong>林德伯格条件 (LC)</strong>。</li>
+</ul>
+<details class="proof">
+<summary>定理核心证明推导（点击展开）</summary>
+<p><strong>(1) 充分性证明：LC <span class="arithmatex">\(\Rightarrow\)</span> CLT 且零阵列</strong></p>
+<p>假设 <span class="arithmatex">\(E(X_{nj})=0\)</span> 且 <span class="arithmatex">\(\sigma_n^2 = 1\)</span>。定义基于截断点 <span class="arithmatex">\(\eta \in (0, 1)\)</span> 的截断随机变量：
+<span class="arithmatex">\(X_{nj}' = X_{nj}\)</span> (若 <span class="arithmatex">\(|X_{nj}| &lt; \eta\)</span>)，否则为 0。</p>
+<p>计算截断后的期望与方差：</p>
+<div class="arithmatex">\[
+|E[X_{nj}']| = \left| \int_{|x|&lt;\eta} x dF_{nj}(x) \right| = \left| -\int_{|x|\ge\eta} x dF_{nj}(x) \right| \le \frac{1}{\eta} \int_{|x|\ge\eta} x^2 dF_{nj}(x)
+\]</div>
+<p>求和后，由于 LC 条件，总期望趋于 0。同时，截断后的方差 <span class="arithmatex">\(\sigma_n'^2 \to 1 = \sigma_n^2\)</span>。
+根据引理 3.10（对角线构造法则），我们可以选取一个单调递增趋于无穷的序列 <span class="arithmatex">\(m_n \to \infty\)</span>，并令 <span class="arithmatex">\(\eta_n = m_n^{-1} \to 0\)</span>。
+利用 <span class="arithmatex">\(\eta_n\)</span> 作为截断阈值，这保证了 <span class="arithmatex">\(|X_{nj}'| \le \eta_n := M_{nj}\)</span>。由于 <span class="arithmatex">\(\max M_{nj} = \eta_n \to 0\)</span>，根据前面推论 3.6 (有界变量 CLT)，我们有 <span class="arithmatex">\((S_n' - ES_n')/\sigma_n' \to N(0,1)\)</span>，故 <span class="arithmatex">\(S_n' \to N(0,1)\)</span>。</p>
+<p>最后评估未截断和与截断和的差异：</p>
+<div class="arithmatex">\[
+P(S_n \neq S_n') \le \sum_{j=1}^{k_n} P(|X_{nj}| \ge \eta_n) \le \sum_{j=1}^{k_n} \frac{1}{\eta_n^2} \int_{|x| &gt; \eta_n} x^2 dF_{nj}(x) \rightarrow 0 \quad \text{(由 LC 保证)}
+\]</div>
+<p>由 Slutsky 定理，由于误差为 <span class="arithmatex">\(o_p(1)\)</span>，最终可得 <span class="arithmatex">\(S_n \to N(0,1)\)</span>。</p>
+<p><strong>(2) 必要性证明：CLT + 零阵列 <span class="arithmatex">\(\Rightarrow\)</span> LC</strong></p>
+<p>由 <span class="arithmatex">\(S_n \xrightarrow{d} N(0,1)\)</span> 可知连乘特征函数的对数：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_{j=1}^{k_n} \log \phi_{nj}(t) = -\frac{t^2}{2}
+\]</div>
+<p>零阵列保证了 <span class="arithmatex">\(\max_j |\phi_{nj}(t) - 1| \to 0\)</span>。利用 <span class="arithmatex">\(\log \phi_{nj}(t)\)</span> 与 <span class="arithmatex">\(\phi_{nj}(t) - 1\)</span> 的等价关系：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_{j=1}^{k_n} (\phi_{nj}(t) - 1) = -\frac{t^2}{2}
+\]</div>
+<p>提取其实部：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_j \int_{-\infty}^{\infty} (1 - \cos tx) dF_{nj}(x) = \frac{t^2}{2}
+\]</div>
+<p>将积分拆分为 <span class="arithmatex">\(|x| \le \eta\)</span> 和 <span class="arithmatex">\(|x| &gt; \eta\)</span> 的两部分，并利用不等式 <span class="arithmatex">\(0 \le 1 - \cos tx \le (tx)^2/2\)</span>：</p>
+<div class="arithmatex">\[
+\frac{t^2}{2} - \sum_j \int_{|x|\le\eta} (1 - \cos tx) dF_{nj}(x) \ge \frac{t^2}{2} \sum_j \int_{|x| \ge \eta} x^2 dF_{nj}(x)
+\]</div>
+<p>通过界定积分外部部分受切比雪夫不等式的控制（<span class="arithmatex">\(\le 2/\eta^2 + \epsilon\)</span>），令 <span class="arithmatex">\(t \to \infty\)</span> 取极限，最后逼出 <span class="arithmatex">\(\sum_{j=1}^{k_n} E[X_{nj}^2 \mathbb{I}(|X_{nj}| &gt; \eta)] \to 0\)</span>，这恰好是林德伯格条件 LC。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="6-applications-further-conditions">6. 应用与判定扩展 (Applications &amp; Further Conditions)</h2>
+<div class="admonition tip">
+<p class="admonition-title">应用示例：普通最小二乘回归 (OLS Regression)</p>
+<p>考虑经典线性回归模型 <span class="arithmatex">\(y_j = x_j \beta + \epsilon_j\)</span>，其中误差项 <span class="arithmatex">\(\epsilon_j \sim (0, \sigma_\epsilon^2)\)</span> 且 i.i.d.。
+设计矩阵满足 <span class="arithmatex">\(\max_{1 \le j \le n} \frac{|x_j|}{a_n} \to 0\)</span>，其中 <span class="arithmatex">\(a_n^2 = \sum_{j=1}^n x_j^2\)</span>。
+OLS 估计量为 <span class="arithmatex">\(\hat{\beta}_{LS} = \sum x_j y_j / a_n^2\)</span>。</p>
+<p>构造标准化双重数组 <span class="arithmatex">\(X_{nj} = \frac{x_j \epsilon_j}{\sqrt{\sum x_j^2}}\)</span>。
+我们将林德伯格条件中的截断积分进行放缩：令 <span class="arithmatex">\(m_n = \max_j |x_j/a_n|\)</span>，</p>
+<div class="arithmatex">\[
+\frac{1}{\sigma_n^2 a_n^2} \sum_{j=1}^n x_j^2 E\left[ \epsilon_j^2 \mathbb{I}(|x_j \epsilon_j / a_n| &gt; \delta \sigma_n) \right] \le \frac{1}{\sigma_\epsilon^2} E\left[ \epsilon_j^2 \mathbb{I}(|\epsilon_j| &gt; \delta \sigma_\epsilon m_n^{-1}) \right]
+\]</div>
+<p>由于 <span class="arithmatex">\(\epsilon_j\)</span> 同分布且二阶矩有限，当 <span class="arithmatex">\(m_n \to 0\)</span> 时，该期望趋于 0。由 Theorem 3.11 立刻得到：</p>
+<div class="arithmatex">\[
+a_n(\hat{\beta}_{LS} - \beta) \xrightarrow{d} N(0, \sigma_\epsilon^2)
+\]</div>
+</div>
+<p>验证 LC 条件时，除了利用有界截断，我们还可以利用高阶矩的存在性，这就是<strong>李雅普诺夫类型条件的扩展</strong>。</p>
+<div class="admonition info">
+<p class="admonition-title">命题 3.12：林德伯格条件的充分判定</p>
+<p>对于双重数组 <span class="arithmatex">\(\{X_{nj}\}\)</span>，如果存在某个实数 <span class="arithmatex">\(\nu &gt; 2\)</span>，满足：</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} E|X_{nj} - \mu_{nj}|^\nu = o(\sigma_n^\nu)
+\]</div>
+<p>那么，该数组必然满足林德伯格条件。</p>
+<details class="proof">
+<summary>证明推导（点击展开）</summary>
+<p>在截尾区域 <span class="arithmatex">\(|t - \mu_{nj}| &gt; \epsilon \sigma_n\)</span> 内，我们对其二阶矩积分进行放缩：</p>
+<div class="arithmatex">\[
+E\left[ (X_{nj} - \mu_{nj})^2 \mathbb{I}(|X_{nj} - \mu_{nj}| &gt; \epsilon \sigma_n) \right] = \int_{|t - \mu_{nj}| &gt; \epsilon \sigma_n} (t - \mu_{nj})^2 dF_{nj}(t)
+\]</div>
+<p>通过强行凑出 <span class="arithmatex">\(\nu\)</span> 次方，提出常数项：</p>
+<div class="arithmatex">\[
+\le (\epsilon \sigma_n)^{2-\nu} \int_{|t - \mu_{nj}| &gt; \epsilon \sigma_n} (t - \mu_{nj})^\nu dF_{nj}(t) \le (\epsilon \sigma_n)^{2-\nu} E|X_{nj} - \mu_{nj}|^\nu
+\]</div>
+<p>求和并除以 <span class="arithmatex">\(\sigma_n^2\)</span>：</p>
+<div class="arithmatex">\[
+\frac{1}{\sigma_n^2} \sum_{j=1}^{k_n} E\left[ \dots \right] \le \epsilon^{2-\nu} \frac{\sum_{j=1}^{k_n} E|X_{nj} - \mu_{nj}|^\nu}{\sigma_n^\nu} \rightarrow 0
+\]</div>
+<p>林德伯格条件得证。<span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

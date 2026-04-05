@@ -1,0 +1,1404 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/3CLT/">
+      
+      
+        <link rel="prev" href="../2Characteristic_Functions/">
+      
+      
+        <link rel="next" href="../../Stochastic-Differential-Equation/0Intro/">
+      
+      
+        
+          <link rel="alternate" href="../../../Asymptotic-statistics/3CLT/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 3: Central Limit Theorem - My Study Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-central-limit-theorem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="My Study Notes" class="md-header__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Study Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 3: Central Limit Theorem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Asymptotic-statistics/3CLT/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to Jiahao's Academic Space
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../0Intro/" class="md-tabs__link">
+          
+  
+  
+  Asymptotic statistics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  Stochastic Differential Equation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="My Study Notes" class="md-nav__button md-logo" aria-label="My Study Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Study Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to Jiahao's Academic Space
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Asymptotic statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Asymptotic Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Data Distributions and Stochastic Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Characteristic Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: Central Limit Theorem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: Central Limit Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-double-arrays-a-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Double Arrays &amp; A Lemma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-liapounovs-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Liapounov's CLT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lindebergs-telescoping-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Lindeberg's Telescoping Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-null-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Null Arrays
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lindeberg-feller-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lindeberg-Feller CLT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-applications-further-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Applications &amp; Further Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stochastic Differential Equation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stochastic Differential Equation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 Stochastic Differential Equations (SDE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1: Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Brownian Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: Stochastic Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: Itô Integral &amp; Stochastic Differential
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-double-arrays-a-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Double Arrays &amp; A Lemma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-liapounovs-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Liapounov's CLT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lindebergs-telescoping-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Lindeberg's Telescoping Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-null-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Null Arrays
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lindeberg-feller-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lindeberg-Feller CLT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-applications-further-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Applications &amp; Further Conditions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-3-central-limit-theorem">Chapter 3: Central Limit Theorem</h1>
+<p>Unlike the classical Central Limit Theorem (which requires independent and identically distributed, i.i.d. variables), in this chapter we will explore a more general Central Limit Theorem, where the random variables are <strong>independent but not identically distributed (i.n.i.d.)</strong>.</p>
+<hr />
+<h2 id="1-double-arrays-a-lemma">1. Double Arrays &amp; A Lemma</h2>
+<p>When dealing with the sum of random variables with different distributions, we usually represent them in the form of a "double array" (or triangular array).</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definition 3.1: Double Array of Independent Random Vectors</p>
+<p>For each <span class="arithmatex">\(n \ge 1\)</span>, let <span class="arithmatex">\(\{X_{n1}, X_{n2}, \dots, X_{nk_n}\}\)</span> be a collection of random vectors defined on a probability space <span class="arithmatex">\((\Omega_n, \mathcal{F}_n, P_n)\)</span>, such that for a given <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(X_{n1}, \dots, X_{nk_n}\)</span> are mutually independent, and <span class="arithmatex">\(k_n \to \infty\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.
+Then <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> is called a <strong>double array of independent random vectors</strong>.</p>
+<p><strong>Common notations in this chapter</strong>:</p>
+<ul>
+<li>Expectation: <span class="arithmatex">\(\alpha_{nj} = E(X_{nj})\)</span>, row total expectation <span class="arithmatex">\(\alpha_n = \sum_{j=1}^{k_n} E(X_{nj}) = \sum_{j=1}^{k_n} \alpha_{nj}\)</span></li>
+<li>Partial sum: <span class="arithmatex">\(S_n = \sum_{j=1}^{k_n} X_{nj}\)</span></li>
+<li>Variance: <span class="arithmatex">\(\sigma_{nj}^2 = Var(X_{nj})\)</span>, row total variance <span class="arithmatex">\(\sigma_n^2 = \sum_{j=1}^{k_n} \sigma_{nj}^2\)</span></li>
+</ul>
+</div>
+<p>To handle the product of characteristic functions, we need to introduce a limit lemma for products of complex sequences.</p>
+<div class="admonition info">
+<p class="admonition-title">Lemma 3.2: Limit of Products of Complex Sequences</p>
+<p>Let <span class="arithmatex">\(\{\theta_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> be a double array of complex numbers satisfying as <span class="arithmatex">\(n \to \infty\)</span>:</p>
+<p><strong>(i)</strong> Uniformly tends to 0: <span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \to 0\)</span>
+<strong>(ii)</strong> Absolute sum is uniformly bounded: <span class="arithmatex">\(\sum_{j=1}^{k_n} |\theta_{nj}| \le M &lt; \infty\)</span> (where <span class="arithmatex">\(M\)</span> is independent of <span class="arithmatex">\(n\)</span>)
+<strong>(iii)</strong> Sum converges: <span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span> (where <span class="arithmatex">\(\theta\)</span> is a finite complex number)</p>
+<p>Then its product converges to the exponential function:</p>
+<div class="arithmatex">\[
+\prod_{j=1}^{k_n} (1 + \theta_{nj}) \rightarrow e^\theta
+\]</div>
+<blockquote>
+<p><em>(Note: This generalizes the classic calculus conclusion <span class="arithmatex">\(\lim_{n \to \infty} (1 + \theta/n)^n = e^\theta\)</span> by substituting <span class="arithmatex">\(\theta_{nj} \equiv \theta/n\)</span> into this lemma.)</em></p>
+</blockquote>
+<details class="proof">
+<summary>Detailed Proof of Lemma 3.2 (Click to expand)</summary>
+<p>For a non-zero complex number <span class="arithmatex">\(z\)</span>, the principal value of the complex logarithm is defined as <span class="arithmatex">\(Log~z = \log|z| + i Arg~z\)</span>, where <span class="arithmatex">\(Arg~z \in [-\pi, \pi]\)</span>.
+When <span class="arithmatex">\(|z| &lt; 1\)</span>, the complex logarithm has the following Taylor series expansion:</p>
+<div class="arithmatex">\[
+\log(1+z) = \sum_{m=1}^\infty (-1)^{m-1} \frac{z^m}{m}
+\]</div>
+<p>From condition (i), there exists <span class="arithmatex">\(n_0\)</span> such that for all <span class="arithmatex">\(n &gt; n_0\)</span>, <span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \le 1/2\)</span>.
+At this time <span class="arithmatex">\(|\theta_{nj}| &lt; 1\)</span> and <span class="arithmatex">\(1+\theta_{nj} \neq 0\)</span>. Consider its logarithmic expansion and the truncation error of the linear term:</p>
+<div class="arithmatex">\[
+|\log(1+\theta_{nj}) - \theta_{nj}| = \left| \sum_{m \ge 2} (-1)^{m-1} \frac{\theta_{nj}^m}{m} \right| \le \sum_{m \ge 2} \frac{|\theta_{nj}|^m}{m}
+\]</div>
+<p>Extract the quadratic term, and use the geometric series sum to bound the remaining terms:</p>
+<div class="arithmatex">\[
+\le \frac{|\theta_{nj}|^2}{2} \sum_{m=2}^\infty \left(\frac{1}{2}\right)^{m-2} = |\theta_{nj}|^2 &lt; 1
+\]</div>
+<p>Since the absolute value of the error is bounded by <span class="arithmatex">\(|\theta_{nj}|^2\)</span>, we can write it as:</p>
+<div class="arithmatex">\[
+\log(1+\theta_{nj}) = \theta_{nj} + \Lambda_{nj}|\theta_{nj}|^2, \quad \text{where } |\Lambda_{nj}| &lt; 1
+\]</div>
+<p>Summing over a row:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} \log(1+\theta_{nj}) = \sum_{j=1}^{k_n} \theta_{nj} + \sum_{j=1}^{k_n} \Lambda_{nj}|\theta_{nj}|^2
+\]</div>
+<p>Using conditions (i) and (ii), estimate the sum of the error terms:</p>
+<div class="arithmatex">\[
+\left| \sum_{j=1}^{k_n} \Lambda_{nj}|\theta_{nj}|^2 \right| \le \max_{1 \le j \le k_n} |\theta_{nj}| \sum_{j=1}^{k_n} |\theta_{nj}| \le \left( \max_{1 \le j \le k_n} |\theta_{nj}| \right) \cdot M \rightarrow 0
+\]</div>
+<p>Combined with condition (iii) <span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span>, we have:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} \log(1+\theta_{nj}) \rightarrow \theta
+\]</div>
+<p>Taking the complex exponential mapping on both sides, the lemma is proven. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="2-liapounovs-clt">2. Liapounov's CLT</h2>
+<p>If the sequence of random variables possesses moments higher than the second order, we can provide a very easily verifiable sufficient condition.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3: Liapounov's Theorem</p>
+<p>For a double array <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span>, define the sum of its third-order absolute central moments as <span class="arithmatex">\(\Gamma_n = \sum_{j=1}^{k_n} E|X_{nj} - \alpha_{nj}|^3\)</span>, assuming this value is finite for each <span class="arithmatex">\(n\)</span>.
+If <strong>Liapounov's Condition</strong> is satisfied:</p>
+<div class="arithmatex">\[
+\frac{\Gamma_n}{\sigma_n^3} = \frac{1}{\sigma_n^3} \sum_{j=1}^{k_n} E|X_{nj} - \alpha_{nj}|^3 \rightarrow 0 \quad \text{as } n \to \infty
+\]</div>
+<p>Then the standardized sum will converge in distribution to the standard normal:</p>
+<div class="arithmatex">\[
+\frac{S_n - \alpha_n}{\sigma_n} \rightarrow N(0,1)
+\]</div>
+<blockquote>
+<p><em>(Note: The third-order moment can be relaxed to the <span class="arithmatex">\((2+\delta)\)</span>-th order moment, where <span class="arithmatex">\(\delta &gt; 0\)</span>.)</em></p>
+</blockquote>
+<details class="proof">
+<summary>Rigorous Proof of Theorem 3.3 (Click to expand)</summary>
+<p>Let <span class="arithmatex">\(\gamma_{nj} = E|X_{nj} - \alpha_{nj}|^3\)</span>. From Liapounov's moment inequality we have:</p>
+<div class="arithmatex">\[
+\sigma_{nj} = (E|X_{nj} - \alpha_{nj}|^2)^{1/2} \le (E|X_{nj} - \alpha_{nj}|^3)^{1/3} = \gamma_{nj}^{1/3}
+\]</div>
+<p>So <span class="arithmatex">\(\sigma_{nj}^3 \le \gamma_{nj}\)</span>. Furthermore:</p>
+<div class="arithmatex">\[
+\max_{1 \le j \le k_n} \sigma_{nj}^3 \le \max_{1 \le j \le k_n} \gamma_{nj} \le \sum_{j=1}^{k_n} \gamma_{nj} = \Gamma_n
+\]</div>
+<p>Let <span class="arithmatex">\(\phi_{nj}(t)\)</span> be the characteristic function of the standardized variable <span class="arithmatex">\((X_{nj} - \alpha_{nj})/\sigma_n\)</span>. Since <span class="arithmatex">\(\gamma_{nj}\)</span> is finite, the characteristic function can be expanded to the third-order Taylor series:</p>
+<div class="arithmatex">\[
+\phi_{nj}(t) = 1 - \frac{\sigma_{nj}^2 t^2}{2\sigma_n^2} + \frac{\Lambda_{nj}}{6} \frac{\gamma_{nj} t^3}{\sigma_n^3}, \quad \text{where } |\Lambda_{nj}| &lt; 1
+\]</div>
+<p>To apply Lemma 3.2, we let <span class="arithmatex">\(\theta_{nj} = \phi_{nj}(t) - 1\)</span>, and verify its three conditions:</p>
+<p><strong>Verify (i)</strong>:</p>
+<div class="arithmatex">\[
+\max_j |\phi_{nj}(t) - 1| \le \frac{t^2}{2\sigma_n^2} \max_j \sigma_{nj}^2 + \frac{|t|^3}{6\sigma_n^3} \max_j \gamma_{nj}
+\]</div>
+<p>Since <span class="arithmatex">\(\sigma_{nj}^2 = (\sigma_{nj}^3)^{2/3} \le (\max_j \sigma_{nj}^3)^{2/3}\)</span>, we have:</p>
+<div class="arithmatex">\[
+\frac{\max \sigma_{nj}^2}{\sigma_n^2} \le \left( \frac{\max \sigma_{nj}^3}{\sigma_n^3} \right)^{2/3} \le \left( \frac{\Gamma_n}{\sigma_n^3} \right)^{2/3} \rightarrow 0
+\]</div>
+<p>Also <span class="arithmatex">\(\max_j \gamma_{nj} / \sigma_n^3 \le \Gamma_n / \sigma_n^3 \rightarrow 0\)</span>. Thus <span class="arithmatex">\(\max_j |\theta_{nj}| \to 0\)</span>, condition (i) holds.</p>
+<p><strong>Verify (ii)</strong>:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} |\phi_{nj}(t) - 1| \le \frac{t^2}{2\sigma_n^2} \sum_{j=1}^{k_n} \sigma_{nj}^2 + \frac{|t|^3}{6} \frac{\Gamma_n}{\sigma_n^3} = \frac{t^2}{2} + \frac{|t|^3}{6} \frac{\Gamma_n}{\sigma_n^3} \le M(t)
+\]</div>
+<p>This is a bounded quantity, condition (ii) holds.</p>
+<p><strong>Verify (iii)</strong>:</p>
+<p>Since the sum of the error terms satisfies:</p>
+<div class="arithmatex">\[
+\left| \sum_{j=1}^{k_n} \frac{\Lambda_{nj} \gamma_{nj}}{\sigma_n^3} \right| \le \frac{\Gamma_n}{\sigma_n^3} \rightarrow 0
+\]</div>
+<p>Therefore, the limit of the sum of the characteristic function offsets is:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} (\phi_{nj}(t) - 1) = -\frac{t^2}{2} + t^3 \sum_{j=1}^{k_n} \frac{\Lambda_{nj} \gamma_{nj}}{\sigma_n^3} \rightarrow -\frac{t^2}{2}
+\]</div>
+<p>Condition (iii) holds.</p>
+<p>In summary, according to Lemma 3.2, the characteristic function of the sum of independent standardized variables satisfies:</p>
+<div class="arithmatex">\[
+\prod_{j=1}^{k_n} \phi_{nj}(t) = \prod_{j=1}^{k_n} (1 + (\phi_{nj}(t) - 1)) \rightarrow e^{-t^2/2}
+\]</div>
+<p>By the Lévy-Cramér continuity theorem, the result is proven. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<p>For a general sequence with a single subscript, this corollary also applies:</p>
+<div class="admonition info">
+<p class="admonition-title">Corollary 3.4 (Single Sequence)</p>
+<p>Let <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> be a sequence of independent random vectors. Let <span class="arithmatex">\(\alpha_j = E(X_j)\)</span>, <span class="arithmatex">\(\sigma_j^2 = Var(X_j)\)</span> and <span class="arithmatex">\(\gamma_j = E|X_j - \alpha_j|^3 &lt; \infty\)</span>.
+Let <span class="arithmatex">\(P_n = \sum_{j=1}^n \gamma_j\)</span>. If <span class="arithmatex">\(P_n / \sigma_n^3 \rightarrow 0\)</span>, then:</p>
+<div class="arithmatex">\[
+\frac{S_n - \sum_{j=1}^n \alpha_j}{\sigma_n} \rightarrow N(0,1)
+\]</div>
+</div>
+<hr />
+<h2 id="3-lindebergs-telescoping-method">3. Lindeberg's Telescoping Method</h2>
+<p>Without using characteristic functions, directly applying analytical techniques (the predecessor of Stein's method) can also prove the CLT.</p>
+<p>Assume <span class="arithmatex">\(\alpha_j = 0\)</span>. Introduce an auxiliary sequence of random variables <span class="arithmatex">\(Y_1, \dots, Y_n\)</span> following standard normal distributions, such that they are independent of <span class="arithmatex">\(X_j\)</span>, and <span class="arithmatex">\(Y_j \sim N(0, \sigma_j^2)\)</span> matching the first two moments.
+Let <span class="arithmatex">\(Y_0 = \sum_{i=1}^n Y_i / \sigma_n \sim N(0,1)\)</span>.</p>
+<p>Our goal is to prove that for all bounded test functions <span class="arithmatex">\(f \in C_B^\infty\)</span> with bounded derivatives of all orders:</p>
+<div class="arithmatex">\[
+E\left[f\left(\frac{\sum_{i=1}^n X_i}{\sigma_n}\right)\right] - E[f(Y_0)] \rightarrow 0
+\]</div>
+<p>According to Theorem 3.5 (Chung 6.1.6), if the above expectation converges for all test functions, then the probability measure converges weakly.</p>
+<div class="admonition success">
+<p class="admonition-title">Core of the Proof Based on Telescoping Expansion</p>
+<p>Construct the mixed partial sum sequence <span class="arithmatex">\(Z_j\)</span>:
+<span class="arithmatex">\(Z_j = Y_1 + \dots + Y_{j-1} + X_{j+1} + \dots + X_n\)</span> (for <span class="arithmatex">\(2 \le j \le n-1\)</span>).
+The boundaries are <span class="arithmatex">\(Z_1 = X_2 + \dots + X_n\)</span> and <span class="arithmatex">\(Z_n = Y_1 + \dots + Y_{n-1}\)</span>.</p>
+<p>We write the total difference as a telescoping sum of term-by-term replacements:</p>
+<div class="arithmatex">\[
+E\left[f\left(\frac{\sum X_i}{\sigma_n}\right)\right] - E\left[f\left(\frac{\sum Y_i}{\sigma_n}\right)\right] = \sum_{i=1}^n \left[ E\left[f\left(\frac{Z_i + X_i}{\sigma_n}\right)\right] - E\left[f\left(\frac{Z_i + Y_i}{\sigma_n}\right)\right] \right]
+\]</div>
+<p>Perform a third-order Taylor expansion on <span class="arithmatex">\(f\)</span> at <span class="arithmatex">\(Z_i/\sigma_n\)</span>:</p>
+<div class="arithmatex">\[
+f\left(\frac{Z_i + X_i}{\sigma_n}\right) = f\left(\frac{Z_i}{\sigma_n}\right) + f'\left(\frac{Z_i}{\sigma_n}\right)\frac{X_i}{\sigma_n} + \frac{1}{2}f''\left(\frac{Z_i}{\sigma_n}\right)\frac{X_i^2}{\sigma_n^2} + \theta_i^{(1)}\frac{X_i^3}{3!\sigma_n^3}
+\]</div>
+<p>Since the first two moments of <span class="arithmatex">\(X_i\)</span> and <span class="arithmatex">\(Y_i\)</span> are completely identical, the first-order and second-order terms perfectly cancel out after taking expectations.
+Only the third-order error term remains, bounded by the supremum <span class="arithmatex">\(M\)</span> of the third derivative:</p>
+<div class="arithmatex">\[
+\le \sum_{i=1}^n \frac{M}{3!\sigma_n^3} \left(\gamma_i + \sqrt{\frac{8}{\pi}}\sigma_i^3\right) \le \frac{M_1}{6}\frac{\Gamma_n}{\sigma_n^3} \rightarrow 0
+\]</div>
+<p>This method provides the cornerstone for Stein's method and Gaussian approximation of high-dimensional random vectors.</p>
+</div>
+<p>Corollary 3.6 Truncation Method Preparation Theorem:
+If there exists a double array <span class="arithmatex">\(|X_{nj}/\sigma_n| \le M_{nj}\)</span> a.s. and <span class="arithmatex">\(\lim_{n \to \infty} \max_j M_{nj} = 0\)</span>, then the standardized sum converges to a normal distribution.</p>
+<hr />
+<h2 id="4-null-arrays">4. Null Arrays</h2>
+<p>To explore the necessary and sufficient conditions for the CLT to hold, we need to rule out the pathological case where a single variable dominates the total variance.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definition 3.7: Null Array</p>
+<p>If a double array satisfies: for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>,</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \max_{1 \le j \le k_n} P(|X_{nj} - \alpha_{nj}| &gt; \epsilon \sigma_n) = 0
+\]</div>
+<p>Then this double array is called a <strong>Null array</strong>.
+This is equivalent to saying that each component <span class="arithmatex">\((X_{nj} - \alpha_j)/\sigma_n\)</span> uniformly degenerates to 0 in probability with respect to <span class="arithmatex">\(j\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.</p>
+</div>
+<p>Using characteristic functions, we can provide a very computationally convenient equivalent characterization:</p>
+<div class="admonition info">
+<p class="admonition-title">Proposition 3.8: Equivalent Characteristic Function Form for Null Arrays</p>
+<p>A double array <span class="arithmatex">\(\{X_{nj}\}\)</span> is a null array if and only if for all <span class="arithmatex">\(t \in \mathbb{R}\)</span>:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \max_{1 \le j \le k_n} |\phi_{nj}(t) - 1| = 0
+\]</div>
+<p>And this convergence is uniform on any finite interval <span class="arithmatex">\([-K, K]\)</span>.</p>
+<details class="proof">
+<summary>Proof of Equivalence (Click to expand)</summary>
+<p><strong>(<span class="arithmatex">\(\Rightarrow\)</span> Direction)</strong>: Without loss of generality, assume <span class="arithmatex">\(\alpha_j = 0\)</span>.
+Decompose the expectation into two parts, inside and outside the threshold <span class="arithmatex">\(\epsilon\sigma_n\)</span>:</p>
+<div class="arithmatex">\[
+|\phi_{nj}(t) - 1| \le E\left[ |e^{itX_{nj}/\sigma_n} - 1| \mathbb{I}(|X_{nj}| &gt; \epsilon\sigma_n) \right] + E\left[ |e^{itX_{nj}/\sigma_n} - 1| \mathbb{I}(|X_{nj}| \le \epsilon\sigma_n) \right]
+\]</div>
+<p>Using the inequality <span class="arithmatex">\(|e^{itu} - 1| \le |tu|\)</span> and the bound 2 for the modulus of complex exponentials:</p>
+<div class="arithmatex">\[
+\le 2 P(|X_{nj}| &gt; \epsilon\sigma_n) + |t| \epsilon
+\]</div>
+<p>Because it is on a bounded closed set <span class="arithmatex">\([-K, K]\)</span>:</p>
+<div class="arithmatex">\[
+\sup_{|t|\le K} \max_j |\phi_{nj}(t) - 1| \le 2 \max_j P(|X_{nj}| &gt; \epsilon\sigma_n) + K\epsilon
+\]</div>
+<p>As <span class="arithmatex">\(n \to \infty\)</span>, the first term goes to 0 by the definition of a null array, and the second term can be arbitrarily small since <span class="arithmatex">\(\epsilon\)</span> is arbitrary. Thus, uniform convergence is proven.</p>
+<p><strong>(<span class="arithmatex">\(\Leftarrow\)</span> Direction)</strong>:
+Using the classic characteristic function inequality:</p>
+<div class="arithmatex">\[
+P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \frac{1}{\delta} \int_{|t|\le\delta} (1 - \phi_{nj}(t)) dt \le \frac{1}{\delta} \int_{|t|\le\delta} |1 - \phi_{nj}(t)| dt
+\]</div>
+<p>Taking max on both sides:</p>
+<div class="arithmatex">\[
+\max_j P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \max_j \frac{1}{\delta} \int_{|t|\le\delta} |1 - \phi_{nj}(t)| dt
+\]</div>
+<p>By the Bounded Convergence Theorem (BCT) for integrals and the given conditions, the limit of the above expression tends to 0. The proposition is proven. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="5-lindeberg-feller-clt">5. Lindeberg-Feller CLT</h2>
+<p>When we only know that the second moment exists, and the third moment may not, Liapounov's condition fails. At this time, the <strong>Lindeberg Condition</strong> becomes the most precise necessary and sufficient condition for the CLT of independent variables to hold.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definition 3.9: Lindeberg Condition (LC)</p>
+<p>For a double array <span class="arithmatex">\(\{X_{nj}\}\)</span>, if for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, its truncated variance ratio satisfies:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \frac{1}{\sigma_n^2} \sum_{j=1}^{k_n} E \left[ (X_{nj} - \alpha_{nj})^2 \mathbb{I}(|X_{nj} - \alpha_{nj}| &gt; \epsilon \sigma_n) \right] = 0
+\]</div>
+<p>Then the array is said to satisfy the Lindeberg condition.</p>
+</div>
+<p>This leads to the pinnacle of the asymptotic distribution theory for independent variables:</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.11: Lindeberg-Feller CLT</p>
+<p>Assume <span class="arithmatex">\(Var(X_{nj}) = \sigma_{nj}^2 &lt; \infty\)</span>, <span class="arithmatex">\(S_n = \sum_{j=1}^{k_n} X_{nj}\)</span>. Then the following two sets of propositions are equivalent:</p>
+<ul>
+<li><strong>(i)</strong> <span class="arithmatex">\(\frac{S_n - E S_n}{\sigma_n} \rightarrow N(0,1)\)</span> and <strong>(ii)</strong> the double array is a null array.</li>
+<li><strong><span class="arithmatex">\(\Longleftrightarrow\)</span></strong> The double array satisfies the <strong>Lindeberg Condition (LC)</strong>.</li>
+</ul>
+<details class="proof">
+<summary>Core Proof Derivation of the Theorem (Click to expand)</summary>
+<p><strong>(1) Sufficiency proof: LC <span class="arithmatex">\(\Rightarrow\)</span> CLT and Null Array</strong></p>
+<p>Assume <span class="arithmatex">\(E(X_{nj})=0\)</span> and <span class="arithmatex">\(\sigma_n^2 = 1\)</span>. Define a truncated random variable based on the truncation point <span class="arithmatex">\(\eta \in (0, 1)\)</span>:
+<span class="arithmatex">\(X_{nj}' = X_{nj}\)</span> (if <span class="arithmatex">\(|X_{nj}| &lt; \eta\)</span>), otherwise 0.</p>
+<p>Calculate the truncated expectation and variance:</p>
+<div class="arithmatex">\[
+|E[X_{nj}']| = \left| \int_{|x|&lt;\eta} x dF_{nj}(x) \right| = \left| -\int_{|x|\ge\eta} x dF_{nj}(x) \right| \le \frac{1}{\eta} \int_{|x|\ge\eta} x^2 dF_{nj}(x)
+\]</div>
+<p>After summation, due to the LC condition, the total expectation tends to 0. Meanwhile, the truncated variance <span class="arithmatex">\(\sigma_n'^2 \to 1 = \sigma_n^2\)</span>.
+According to Lemma 3.10 (diagonal construction rule), we can select a monotonically increasing sequence <span class="arithmatex">\(m_n \to \infty\)</span>, and let <span class="arithmatex">\(\eta_n = m_n^{-1} \to 0\)</span>.
+Using <span class="arithmatex">\(\eta_n\)</span> as the truncation threshold ensures that <span class="arithmatex">\(|X_{nj}'| \le \eta_n := M_{nj}\)</span>. Since <span class="arithmatex">\(\max M_{nj} = \eta_n \to 0\)</span>, according to the previous Corollary 3.6 (CLT for bounded variables), we have <span class="arithmatex">\((S_n' - ES_n')/\sigma_n' \to N(0,1)\)</span>, hence <span class="arithmatex">\(S_n' \to N(0,1)\)</span>.</p>
+<p>Finally, evaluate the difference between the untruncated sum and the truncated sum:</p>
+<div class="arithmatex">\[
+P(S_n \neq S_n') \le \sum_{j=1}^{k_n} P(|X_{nj}| \ge \eta_n) \le \sum_{j=1}^{k_n} \frac{1}{\eta_n^2} \int_{|x| &gt; \eta_n} x^2 dF_{nj}(x) \rightarrow 0 \quad \text{(Guaranteed by LC)}
+\]</div>
+<p>By Slutsky's Theorem, since the error is <span class="arithmatex">\(o_p(1)\)</span>, we finally get <span class="arithmatex">\(S_n \to N(0,1)\)</span>.</p>
+<p><strong>(2) Necessity proof: CLT + Null Array <span class="arithmatex">\(\Rightarrow\)</span> LC</strong></p>
+<p>From <span class="arithmatex">\(S_n \xrightarrow{d} N(0,1)\)</span>, we know the logarithm of the product of characteristic functions:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_{j=1}^{k_n} \log \phi_{nj}(t) = -\frac{t^2}{2}
+\]</div>
+<p>The null array guarantees <span class="arithmatex">\(\max_j |\phi_{nj}(t) - 1| \to 0\)</span>. Using the equivalence relationship between <span class="arithmatex">\(\log \phi_{nj}(t)\)</span> and <span class="arithmatex">\(\phi_{nj}(t) - 1\)</span>:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_{j=1}^{k_n} (\phi_{nj}(t) - 1) = -\frac{t^2}{2}
+\]</div>
+<p>Extracting its real part:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \sum_j \int_{-\infty}^{\infty} (1 - \cos tx) dF_{nj}(x) = \frac{t^2}{2}
+\]</div>
+<p>Split the integral into <span class="arithmatex">\(|x| \le \eta\)</span> and <span class="arithmatex">\(|x| &gt; \eta\)</span>, and use the inequality <span class="arithmatex">\(0 \le 1 - \cos tx \le (tx)^2/2\)</span>:</p>
+<div class="arithmatex">\[
+\frac{t^2}{2} - \sum_j \int_{|x|\le\eta} (1 - \cos tx) dF_{nj}(x) \ge \frac{t^2}{2} \sum_j \int_{|x| \ge \eta} x^2 dF_{nj}(x)
+\]</div>
+<p>By bounding the outer part of the integral with Chebyshev's inequality (<span class="arithmatex">\(\le 2/\eta^2 + \epsilon\)</span>), letting <span class="arithmatex">\(t \to \infty\)</span> to take the limit, we finally force out <span class="arithmatex">\(\sum_{j=1}^{k_n} E[X_{nj}^2 \mathbb{I}(|X_{nj}| &gt; \eta)] \to 0\)</span>, which is exactly the Lindeberg condition LC. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="6-applications-further-conditions">6. Applications &amp; Further Conditions</h2>
+<div class="admonition tip">
+<p class="admonition-title">Application Example: Ordinary Least Squares (OLS) Regression</p>
+<p>Consider the classic linear regression model <span class="arithmatex">\(y_j = x_j \beta + \epsilon_j\)</span>, where error terms <span class="arithmatex">\(\epsilon_j \sim (0, \sigma_\epsilon^2)\)</span> and are i.i.d..
+The design matrix satisfies <span class="arithmatex">\(\max_{1 \le j \le n} \frac{|x_j|}{a_n} \to 0\)</span>, where <span class="arithmatex">\(a_n^2 = \sum_{j=1}^n x_j^2\)</span>.
+The OLS estimator is <span class="arithmatex">\(\hat{\beta}_{LS} = \sum_{j=1}^n x_j y_j / a_n^2\)</span>.</p>
+<p>Construct the standardized double array <span class="arithmatex">\(X_{nj} = \frac{x_j \epsilon_j}{\sqrt{\sum x_j^2}}\)</span>.
+We bound the truncated integral in the Lindeberg condition: let <span class="arithmatex">\(m_n = \max_j |x_j/a_n|\)</span>,</p>
+<div class="arithmatex">\[
+\frac{1}{\sigma_n^2 a_n^2} \sum_{j=1}^n x_j^2 E\left[ \epsilon_j^2 \mathbb{I}(|x_j \epsilon_j / a_n| &gt; \delta \sigma_n) \right] \le \frac{1}{\sigma_\epsilon^2} E\left[ \epsilon_j^2 \mathbb{I}(|\epsilon_j| &gt; \delta \sigma_\epsilon m_n^{-1}) \right]
+\]</div>
+<p>Since <span class="arithmatex">\(\epsilon_j\)</span> are identically distributed with a finite second moment, as <span class="arithmatex">\(m_n \to 0\)</span>, this expectation tends to 0. By Theorem 3.11 we immediately obtain:</p>
+<div class="arithmatex">\[
+a_n(\hat{\beta}_{LS} - \beta) \xrightarrow{d} N(0, \sigma_\epsilon^2)
+\]</div>
+</div>
+<p>When verifying the LC condition, besides using bounded truncation, we can also utilize the existence of higher-order moments. This is the <strong>extension of the Liapounov type condition</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Proposition 3.12: Sufficient Criterion for Lindeberg Condition</p>
+<p>For a double array <span class="arithmatex">\(\{X_{nj}\}\)</span>, if there exists some real number <span class="arithmatex">\(\nu &gt; 2\)</span>, satisfying:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{k_n} E|X_{nj} - \mu_{nj}|^\nu = o(\sigma_n^\nu)
+\]</div>
+<p>Then, this array necessarily satisfies the Lindeberg condition.</p>
+<details class="proof">
+<summary>Proof Derivation (Click to expand)</summary>
+<p>In the truncated region <span class="arithmatex">\(|t - \mu_{nj}| &gt; \epsilon \sigma_n\)</span>, we bound its second moment integral:</p>
+<div class="arithmatex">\[
+E\left[ (X_{nj} - \mu_{nj})^2 \mathbb{I}(|X_{nj} - \mu_{nj}| &gt; \epsilon \sigma_n) \right] = \int_{|t - \mu_{nj}| &gt; \epsilon \sigma_n} (t - \mu_{nj})^2 dF_{nj}(t)
+\]</div>
+<p>By forcing a <span class="arithmatex">\(\nu\)</span>-th power and extracting the constant term:</p>
+<div class="arithmatex">\[
+\le (\epsilon \sigma_n)^{2-\nu} \int_{|t - \mu_{nj}| &gt; \epsilon \sigma_n} (t - \mu_{nj})^\nu dF_{nj}(t) \le (\epsilon \sigma_n)^{2-\nu} E|X_{nj} - \mu_{nj}|^\nu
+\]</div>
+<p>Summing and dividing by <span class="arithmatex">\(\sigma_n^2\)</span>:</p>
+<div class="arithmatex">\[
+\frac{1}{\sigma_n^2} \sum_{j=1}^{k_n} E\left[ \dots \right] \le \epsilon^{2-\nu} \frac{\sum_{j=1}^{k_n} E|X_{nj} - \mu_{nj}|^\nu}{\sigma_n^\nu} \rightarrow 0
+\]</div>
+<p>The Lindeberg condition is proven. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
