@@ -1164,6 +1164,15 @@
 <div class="arithmatex">\[
 E\left[f\left(\frac{\sum_{i=1}^n X_i}{\sigma_n}\right)\right] - E[f(Y_0)] \rightarrow 0
 \]</div>
+<p>需要借助如下定理：</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.5 (Chung 6.1.6)</p>
+<p>设 <span class="arithmatex">\(\{\mu_n\}\)</span> 为一列概率测度。如果对于所有无穷次可微且各阶导数均有界的测试函数 <span class="arithmatex">\(f \in C_B^\infty\)</span>，满足：</p>
+<div class="arithmatex">\[
+\int f(x) \mu_n(dx) \rightarrow \int f(x) \mu(dx)
+\]</div>
+<p>其中 <span class="arithmatex">\(\mu\)</span> 是一个概率测度，那么 <span class="arithmatex">\(\mu_n\)</span> 弱收敛于 <span class="arithmatex">\(\mu\)</span> 。</p>
+</div>
 <p>根据定理 3.5 (Chung 6.1.6)，如果上述期望对所有的测试函数收敛，则概率测度弱收敛。</p>
 <div class="admonition success">
 <p class="admonition-title">基于望远镜展开法的证明核心</p>
@@ -1246,7 +1255,37 @@ P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \fr
 \]</div>
 <p>则称该数组满足林德伯格条件。</p>
 </div>
-<p>这引出了整个独立变量渐近分布理论的巅峰之作：</p>
+<p>这结合下面的引理引出了独立变量渐近分布理论的著名定理：</p>
+<div class="admonition info">
+<p class="admonition-title">引理 3.10 (对角线构造法)</p>
+<p>设 <span class="arithmatex">\(u(m, n)\)</span> 是定义在正整数 <span class="arithmatex">\(m\)</span> 和 <span class="arithmatex">\(n\)</span> 上的函数，满足对于每一个固定的 <span class="arithmatex">\(m\)</span>，有 [cite: 1138, 1139, 1140]：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} u(m, n) = 0
+\]</div>
+<p>那么存在一个单调递增并趋于无穷的序列 <span class="arithmatex">\(\{m_n\}\)</span> (<span class="arithmatex">\(m_n \to \infty\)</span>)，使得 [cite: 1142]：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} u(m_n, n) = 0
+\]</div>
+<details class="proof">
+<summary>引理 3.10 的证明（点击展开）</summary>
+<p>由于对于每个固定的 <span class="arithmatex">\(m\)</span>，<span class="arithmatex">\(\lim_{n \to \infty} u(m, n) = 0\)</span>，因此根据极限定义，必然存在一个下标 <span class="arithmatex">\(n_m\)</span>，使得对于所有的 <span class="arithmatex">\(n \ge n_m\)</span>，都有：</p>
+<div class="arithmatex">\[
+u(m, n_m) \le \frac{1}{m}
+\]</div>
+<p>通过这种方式，我们可以构造出一个严格单调递增并趋于无穷的序列 <span class="arithmatex">\(\{n_m\}_{m \ge 1}\)</span>。</p>
+<p>对于任何满足 <span class="arithmatex">\(n_m \le n &lt; n_{m+1}\)</span> 的 <span class="arithmatex">\(n\)</span>，我们令 <span class="arithmatex">\(m_n \equiv m\)</span>。</p>
+<p>由此，当 <span class="arithmatex">\(n \ge n_m\)</span> 时，根据构造有：</p>
+<div class="arithmatex">\[
+u(m_n, n) = u(m, n) \le \frac{1}{m}
+\]</div>
+<p>由于当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(n_m\)</span> 所对应的索引 <span class="arithmatex">\(m \to \infty\)</span>，因此 <span class="arithmatex">\(m_n\)</span> 也单调递增趋于无穷。
+根据上式夹逼可知 ：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} u(m_n, n) = 0
+\]</div>
+<p>证明完毕。<span class="arithmatex">\(\square\)</span> </p>
+</details>
+</div>
 <div class="admonition success">
 <p class="admonition-title">定理 3.11：林德伯格-费勒 CLT (Lindeberg-Feller)</p>
 <p>假设 <span class="arithmatex">\(Var(X_{nj}) = \sigma_{nj}^2 &lt; \infty\)</span>，<span class="arithmatex">\(S_n = \sum_{j=1}^{k_n} X_{nj}\)</span>。那么以下两组命题等价：</p>
