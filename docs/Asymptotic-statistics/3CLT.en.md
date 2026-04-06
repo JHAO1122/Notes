@@ -1,4 +1,4 @@
-# Chapter 3: Central Limit Theorem
+# Chapter 3: Central Limit Theorem(I)
 
 Unlike the classical Central Limit Theorem (which requires independent and identically distributed, i.i.d. variables), in this chapter we will explore a more general Central Limit Theorem, where the random variables are **independent but not identically distributed (i.n.i.d.)**.
 
