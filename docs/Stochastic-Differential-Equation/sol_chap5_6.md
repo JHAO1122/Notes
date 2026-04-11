@@ -60,6 +60,7 @@ tags:
 ### 习题 2
 **题目**
 设 $W = (W^1, \cdots, W^n)^T$ 是 $n$ 维 Brown 运动。记 $R = |W|$。证明 $R$ 满足如下随机贝塞尔 (Bessel) 方程
+
 $$dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i$$
 
 ??? success "解答 (点击展开)"
@@ -317,6 +318,7 @@ $$dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i$$
 ### 习题 2
 **题目**
 证明 $X(t) = (a\cos W(t), b\sin W(t))^T$ (其中 $a, b$ 是正的常数) 是如下随机微分方程的解
+
 $$dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 & -\frac{a}{b} \\ \frac{b}{a} & 0 \end{pmatrix} X dW$$
 
 ??? success "解答 (点击展开)"
@@ -368,6 +370,7 @@ $$dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 & -\frac{a}{b} \\ \frac{b}{a} & 0 \e
 ### 习题 3
 **题目**
 证明 $X_t = e^{W_t}$ 是如下随机微分方程的一个解：
+
 $$dX_t = \frac{1}{2}X_t dt + X_t dW_t$$
 
 ??? success "解答 (点击展开)"
@@ -399,6 +402,7 @@ $$dX_t = \frac{1}{2}X_t dt + X_t dW_t$$
 ### 习题 4
 **题目**
 求解随机微分方程
+
 $$dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0$$
 
 ??? success "解答 (点击展开)"
@@ -464,6 +468,7 @@ $$dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0$$
 ### 习题 5
 **题目**
 求解随机微分方程
+
 $$dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 > 0$$
 
 ??? success "解答 (点击展开)"

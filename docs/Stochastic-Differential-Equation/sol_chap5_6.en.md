@@ -399,6 +399,7 @@ $$dX_t = \frac{1}{2}X_t dt + X_t dW_t$$
 ### Exercise 4
 **Problem**
 Solve the stochastic differential equation:
+
 $$dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0$$
 
 ??? success "Solution (Click to expand)"

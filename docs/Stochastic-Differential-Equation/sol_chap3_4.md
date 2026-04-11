@@ -231,6 +231,7 @@ $$\frac{dv}{dt} = -\beta v + \dot{W}(t)$$
 
 **题目：**
 利用基于 Riemann 和对 Itô 随机积分的定义方式，证明：
+
 $$\int_0^T W^2(t) dW(t) = \frac{1}{3}W^3(T) - \int_0^T W(t) dt$$
 
 ??? success "解答 (点击展开)"
