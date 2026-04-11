@@ -209,6 +209,7 @@ $\mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)|\mathcal{V}_2] = \mathbb{E}[X]$。
 
 **题目：**
 设 $X$ 和 $\{X_n\}$ 是 $(\Omega, \mathcal{F}, \mathbb{P})$ 上的一列随机变量，对固定的 $1 \leqslant p < \infty$，$\mathbb{E}[|X_n|^p] < +\infty$。假设 $\lim_{n\to\infty}\mathbb{E}[|X_n - X|^p] = 0$，证明：对 $\mathcal{F}$ 的任意子 $\sigma$-域 $\mathcal{V} \subset \mathcal{F}$，成立
+
 $$
 \lim_{n\to\infty}\mathbb{E}\left[\big|\mathbb{E}[X_n|\mathcal{V}] - \mathbb{E}[X|\mathcal{V}]\big|^p\right] = 0.
 $$
