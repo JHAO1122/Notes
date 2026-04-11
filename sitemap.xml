@@ -85,6 +85,27 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/6SDEs/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap1_2/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap1_2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap1_2/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap3_4/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap3_4/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap3_4/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap5_6/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap5_6/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap5_6/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/en/</loc>
         <lastmod>2026-04-11</lastmod>
         <changefreq>daily</changefreq>
@@ -167,5 +188,26 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/6SDEs/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/6SDEs/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap1_2/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap1_2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap1_2/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap3_4/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap3_4/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap3_4/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap5_6/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap5_6/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap5_6/"/>
     </url>
 </urlset>
