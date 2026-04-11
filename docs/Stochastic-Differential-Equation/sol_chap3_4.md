@@ -274,10 +274,10 @@ $$\int_0^T W^2(t) dW(t) = \frac{1}{3}W^3(T) - \int_0^T W(t) dt$$
 
 **题目：**
 对向后积分
-$$(B) \int_0^T W(t) dW(t) \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]$$
+$ \int_0^T W(t) dW(t) \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]$
 其中 $0 = t_0 < t_1 < \cdots < t_n = T$，而 $\delta \doteq \max_i |t_{i+1} - t_i|$。证明：
 
-$$(B) \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
+$$ \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
 
 
 ??? success "解答 (点击展开)"
