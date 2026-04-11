@@ -6,7 +6,7 @@ tags:
   - Graduate Coursework
 ---
 
-# 📈 Stochastic Differential Equations (SDE)
+# 📈 Introduction of Stochastic Differential Equations (SDE)
 
 > **"Probability is not about the odds, but about the flow of information."**
 
