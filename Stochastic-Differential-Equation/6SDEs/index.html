@@ -8,19 +8,17 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/3stochastic_integrate/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/6SDEs/">
       
       
-        <link rel="prev" href="../2Brown_Motion/">
+        <link rel="prev" href="../5SDEs/">
       
-      
-        <link rel="next" href="../4Ito_integrate/">
       
       
         
           <link rel="alternate" href="./" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/3stochastic_integrate/" hreflang="en">
+          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/6SDEs/" hreflang="en">
         
       
       
@@ -29,7 +27,7 @@
     
     
       
-        <title>第三章：随机积分 - My Study Notes</title>
+        <title>第六章：解的存在唯一性定理 - My Study Notes</title>
       
     
     
@@ -124,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第三章：随机积分
+              第六章：解的存在唯一性定理
             
           </span>
         </div>
@@ -177,7 +175,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Stochastic-Differential-Equation/3stochastic_integrate/" hreflang="en" class="md-select__link">
+            <a href="../../en/Stochastic-Differential-Equation/6SDEs/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -706,37 +704,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第三章：随机积分
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../3stochastic_integrate/" class="md-nav__link">
         
   
   
@@ -752,81 +723,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-paley-wiener-zygmund-pwz" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Paley-Wiener-Zygmund (PWZ) 随机积分
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-blt" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 稠定有界线性算子的保范延拓 (BLT 定理)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-quadratic-variation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 布朗运动的二次变差 (Quadratic Variation)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-riemann-ito" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 随机积分的 Riemann 和与 Itô 积分的引出
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-ito" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 严格 Itô 积分的测度论准备
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -892,10 +788,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../6SDEs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：解的存在唯一性定理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -911,6 +834,87 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-existence-and-uniqueness-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 存在唯一性定理 (Existence and Uniqueness Theorem)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-proof-of-the-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 定理的证明 (Proof of the Theorem)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 定理的证明 (Proof of the Theorem)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 唯一性的证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-picard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 存在性的证明 (Picard 迭代法)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-properties-of-the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 解的高阶矩与初值依赖性 (Properties of the Solution)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -950,10 +954,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-paley-wiener-zygmund-pwz" class="md-nav__link">
+  <a href="#1-existence-and-uniqueness-theorem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Paley-Wiener-Zygmund (PWZ) 随机积分
+        1. 存在唯一性定理 (Existence and Uniqueness Theorem)
       
     </span>
   </a>
@@ -961,43 +965,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-blt" class="md-nav__link">
+  <a href="#2-proof-of-the-theorem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 稠定有界线性算子的保范延拓 (BLT 定理)
+        2. 定理的证明 (Proof of the Theorem)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 定理的证明 (Proof of the Theorem)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 唯一性的证明
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-quadratic-variation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-picard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 布朗运动的二次变差 (Quadratic Variation)
+        2.2 存在性的证明 (Picard 迭代法)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-riemann-ito" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 随机积分的 Riemann 和与 Itô 积分的引出
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-ito" class="md-nav__link">
+  <a href="#3-properties-of-the-solution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 严格 Itô 积分的测度论准备
+        3. 解的高阶矩与初值依赖性 (Properties of the Solution)
       
     </span>
   </a>
@@ -1024,235 +1034,153 @@
   
 
 
-<h1 id="_1">第三章：随机积分</h1>
-<p>在经典的微积分中，可以定义黎曼-斯蒂尔杰斯积分 <span class="arithmatex">\(\int g(t) dX(t)\)</span>。但当积分微元变成布朗运动 <span class="arithmatex">\(dW(t)\)</span> 时，由于其样本轨道是粗糙的，不能用传统的方法定义。本节展示从确定性被积函数向随机被积函数跨越的演进过程，并引出 Itô 积分的概念。</p>
-<h2 id="1-paley-wiener-zygmund-pwz">1. Paley-Wiener-Zygmund (PWZ) 随机积分</h2>
-<p>最简单的情形是：被积函数 <span class="arithmatex">\(g(t)\)</span> 是一个普通的确定性函数，而积分变量是布朗运动。</p>
+<h1 id="_1">第六章：解的存在唯一性定理</h1>
+<p>在常微分方程 (ODE) 的理论中，我们通过 Picard 迭代法结合 Lipschitz 条件来证明初值问题 <span class="arithmatex">\(y' = f(x,y), y(x_0)=y_0\)</span> 解的存在唯一性。</p>
+<p>对于随机微分方程 (SDE)，我们面临着包含布朗运动积分的复杂情形：</p>
+<div class="arithmatex">\[
+dX_t = b(X_t, t)dt + \sigma(X_t, t)dW_t, \quad X_0 = x_0
+\]</div>
+<p>为了保证该方程有唯一强解，我们需要对漂移系数 <span class="arithmatex">\(b\)</span> 和扩散系数 <span class="arithmatex">\(\sigma\)</span> 施加类似的限制。本节将详细梳理这一核心定理及其严谨证明。</p>
+<hr />
+<h2 id="1-existence-and-uniqueness-theorem">1. 存在唯一性定理 (Existence and Uniqueness Theorem)</h2>
 <div class="admonition abstract">
-<p class="admonition-title">定义：PWZ 随机积分</p>
-<p>设 <span class="arithmatex">\(W(t)\)</span> 为标准布朗运动。假设 <span class="arithmatex">\(g(t) \in C^1([0, T])\)</span> 是一阶连续可导的确定性函数。
-利用分部积分公式（Integration by Parts），将 <strong>PWZ 随机积分</strong> 定义为：</p>
+<p class="admonition-title">定理：SDE 强解的存在唯一性</p>
+<p>设 <span class="arithmatex">\(T &gt; 0\)</span>，函数 <span class="arithmatex">\(b(x,t): \mathbb{R}^n \times [0,T] \to \mathbb{R}^n\)</span> 和 <span class="arithmatex">\(\sigma(x,t): \mathbb{R}^n \times [0,T] \to \mathbb{R}^{n \times m}\)</span> 满足以下两个基本条件：</p>
+<p><strong>1. 全局利普希茨条件 (Global Lipschitz Condition)</strong>：
+存在常数 <span class="arithmatex">\(L &gt; 0\)</span>，使得对于任意的 <span class="arithmatex">\(x, y \in \mathbb{R}^n\)</span> 和 <span class="arithmatex">\(t \in [0,T]\)</span>，有：</p>
 <div class="arithmatex">\[
-\int_0^T g(t) dW(t) \triangleq g(T)W(T) - g(0)W(0) - \int_0^T g'(t) W(t) dt
+|b(x,t) - b(y,t)| + |\sigma(x,t) - \sigma(y,t)| \le L|x - y|
 \]</div>
-<p>由于 <span class="arithmatex">\(W(0) = 0\)</span> a.s.，上式通常简写为：</p>
+<p><strong>2. 线性增长条件 (Linear Growth Condition)</strong>：
+存在常数 <span class="arithmatex">\(L &gt; 0\)</span>，使得对于任意的 <span class="arithmatex">\(x \in \mathbb{R}^n\)</span> 和 <span class="arithmatex">\(t \in [0,T]\)</span>，有：</p>
 <div class="arithmatex">\[
-\int_0^T g(t) dW(t) = g(T)W(T) - \int_0^T g'(t) W(t) dt
+|b(x,t)|^2 + |\sigma(x,t)|^2 \le L^2(1 + |x|^2)
 \]</div>
-<p>这里右侧的积分是普通的黎曼积分（因为 <span class="arithmatex">\(W(t)\)</span> 的样本轨道是 a.s. 连续的，<span class="arithmatex">\(g'(t)\)</span> 是连续的，所以积分良定）。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">定理：PWZ 积分的核心性质</p>
-<p>对于上述定义的 PWZ 积分，满足以下两个极其重要的性质（也是后续所有随机积分的基石）：</p>
-<p><strong>(1) 期望为零</strong>：</p>
+<p><strong>初始条件</strong>：
+设 <span class="arithmatex">\(\xi\)</span> 是一个与布朗运动 <span class="arithmatex">\(W_t\)</span> 独立的随机变量，且满足二阶矩有限 <span class="arithmatex">\(E|\xi|^2 &lt; \infty\)</span>。</p>
+<p><strong>结论</strong>：
+那么，初值问题 <span class="arithmatex">\(X_t = \xi + \int_0^t b(X_s, s)ds + \int_0^t \sigma(X_s, s)dW_s\)</span> 在区间 <span class="arithmatex">\([0,T]\)</span> 上<strong>存在唯一的平方可积连续强解</strong> <span class="arithmatex">\(X_t\)</span>，且满足：</p>
 <div class="arithmatex">\[
-E\left[ \int_0^T g(t) dW(t) \right] = 0
+E\left[ \sup_{0 \le t \le T} |X_t|^2 \right] &lt; \infty
 \]</div>
-<p><strong>(2) Itô 等距同构 (Itô Isometry)</strong>：</p>
-<div class="arithmatex">\[
-E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt
-\]</div>
-<details class="proof">
-<summary>等距同构性质的严格推导（点击展开）</summary>
-<p>我们直接从 PWZ 积分的定义出发，计算其平方的期望（假设 <span class="arithmatex">\(g(0)=0\)</span> 或为简化书写将其吸收到常数项中，此处采用你手稿中更本质的双重积分法推导）：</p>
-<p>将平方写成双重积分的形式：</p>
-<div class="arithmatex">\[
-E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W(t) dt \int_0^T g'(s)W(s) ds \right]
-\]</div>
-<p>利用 Fubini 定理交换期望与积分的顺序：</p>
-<div class="arithmatex">\[
-= \int_0^T \int_0^T g'(t)g'(s) E[W(t)W(s)] ds dt
-\]</div>
-<p>代入布朗运动的自协方差函数 <span class="arithmatex">\(E[W(t)W(s)] = t \wedge s\)</span>：</p>
-<div class="arithmatex">\[
-= \int_0^T \int_0^T g'(t)g'(s) (t \wedge s) ds dt
-\]</div>
-<p>利用对称性，将积分区域拆分为 <span class="arithmatex">\(s \le t\)</span> 和 <span class="arithmatex">\(t \le s\)</span> 两部分：</p>
-<div class="arithmatex">\[
-= \int_0^T \left( \int_0^t g'(s) g'(t) s \, ds + \int_t^T g'(s) g'(t) t \, ds \right) dt
-\]</div>
-<p>通过分部积分和代数化简（手稿此处略过繁杂代数步骤），上式最终将完美收缩为目标形式：</p>
-<div class="arithmatex">\[
-= \int_0^T g(t)^2 dt \quad \square
-\]</div>
-</details>
 </div>
 <hr />
-<h2 id="2-blt">2. 稠定有界线性算子的保范延拓 (BLT 定理)</h2>
-<p>刚才的 PWZ 积分要求 <span class="arithmatex">\(g(t) \in C^1\)</span>。但在实际应用中，我们需要对更一般的 <span class="arithmatex">\(L^2\)</span> 函数进行积分。这需要借助泛函分析中的工具：<strong>有界线性算子延拓定理 (BLT Theorem)</strong>。</p>
-<div class="admonition abstract">
-<p class="admonition-title">定理：稠定有界线性算子的保范延拓</p>
-<p>设 <span class="arithmatex">\(X, Y\)</span> 为 Banach 空间，<span class="arithmatex">\(S\)</span> 为 <span class="arithmatex">\(X\)</span> 中稠密的线性子空间。
-设 <span class="arithmatex">\(T: S \to Y\)</span> 为一个有界线性算子，即存在常数 <span class="arithmatex">\(C &gt; 0\)</span>，使得对任意 <span class="arithmatex">\(x \in S\)</span>：</p>
-<div class="arithmatex">\[
-\|Tx\|_Y \le C \|x\|_X
-\]</div>
-<p>则存在唯一的有界线性算子 <span class="arithmatex">\(\overline{T}: X \to Y\)</span>，使得对于所有的 <span class="arithmatex">\(x \in S\)</span>，都有 <span class="arithmatex">\(\overline{T}x = Tx\)</span>（即 <span class="arithmatex">\(\overline{T}|_S = T\)</span>）。
-此外，算子的算子范数保持不变：<span class="arithmatex">\(\|\overline{T}\| = \|T\| \le C\)</span>。</p>
+<h2 id="2-proof-of-the-theorem">2. 定理的证明 (Proof of the Theorem)</h2>
+<p>证明分为两大部分：<strong>唯一性</strong>（利用 Gronwall 不等式）和<strong>存在性</strong>（利用 Picard 迭代和 Borel-Cantelli 引理）。</p>
+<h3 id="21">2.1 唯一性的证明</h3>
 <details class="proof">
-<summary>BLT 定理的构造性证明（点击展开）</summary>
-<p><strong>第一步：构造极限映射</strong>
-由于 <span class="arithmatex">\(S\)</span> 在 <span class="arithmatex">\(X\)</span> 中稠密，对于任意的 <span class="arithmatex">\(x \in X\)</span>，必然存在 <span class="arithmatex">\(S\)</span> 中的序列 <span class="arithmatex">\(\{x_n\}\)</span> 使得 <span class="arithmatex">\(x_n \to x\)</span>。
-因为 <span class="arithmatex">\(T\)</span> 在 <span class="arithmatex">\(S\)</span> 上是有界（连续）的，我们考察序列 <span class="arithmatex">\(\{Tx_n\}\)</span> 在 <span class="arithmatex">\(Y\)</span> 中的距离：</p>
+<summary>唯一性证明：Gronwall 不等式的应用（点击展开）</summary>
+<p>假设存在两个解 <span class="arithmatex">\(X_t\)</span> 和 <span class="arithmatex">\(\tilde{X}_t\)</span> 满足相同的初始条件 <span class="arithmatex">\(X_0 = \tilde{X}_0 = \xi\)</span>。</p>
+<p>令误差过程为 <span class="arithmatex">\(Y_t = X_t - \tilde{X}_t\)</span>，则 <span class="arithmatex">\(Y_0 = 0\)</span>。根据方程的积分形式，我们有：</p>
 <div class="arithmatex">\[
-\|Tx_n - Tx_m\|_Y = \|T(x_n - x_m)\|_Y \le C \|x_n - x_m\|_X
+Y_t = \int_0^t [b(X_s, s) - b(\tilde{X}_s, s)]ds + \int_0^t [\sigma(X_s, s) - \sigma(\tilde{X}_s, s)]dW_s
 \]</div>
-<p>由于 <span class="arithmatex">\(\{x_n\}\)</span> 是收敛列，它必然是 Cauchy 列（柯西列）。因此，当 <span class="arithmatex">\(n, m \to \infty\)</span> 时，<span class="arithmatex">\(\|x_n - x_m\|_X \to 0\)</span>。
-这就意味着 <span class="arithmatex">\(\{Tx_n\}\)</span> 是 Banach 空间 <span class="arithmatex">\(Y\)</span> 中的 Cauchy 列。由于 <span class="arithmatex">\(Y\)</span> 是完备的，极限 <span class="arithmatex">\(\lim_{n \to \infty} Tx_n\)</span> 必定存在。我们定义：</p>
+<p>利用基本不等式 <span class="arithmatex">\((a+b)^2 \le 2a^2 + 2b^2\)</span>，两边取绝对值平方并求期望：</p>
 <div class="arithmatex">\[
-\overline{T}x \triangleq \lim_{n \to \infty} Tx_n
+E|Y_t|^2 \le 2E \left| \int_0^t [b(X_s, s) - b(\tilde{X}_s, s)]ds \right|^2 + 2E \left| \int_0^t [\sigma(X_s, s) - \sigma(\tilde{X}_s, s)]dW_s \right|^2
 \]</div>
-<p><strong>第二步：证明定义的合理性（与序列选择无关）</strong>
-假设有另一个序列 <span class="arithmatex">\(x_n' \to x\)</span>，我们需要证明 <span class="arithmatex">\(\lim Tx_n' = \lim Tx_n\)</span>。
-设 <span class="arithmatex">\(y = \lim Tx_n\)</span>，<span class="arithmatex">\(y' = \lim Tx_n'\)</span>。</p>
+<p>对于第一项（黎曼积分），利用 Cauchy-Schwarz 不等式：</p>
 <div class="arithmatex">\[
-\|y - y'\|_Y = \lim_{n \to \infty} \|Tx_n - Tx_n'\|_Y \le C \lim_{n \to \infty} \|x_n - x_n'\|_X = 0
+E \left| \int_0^t [b(X_s, s) - b(\tilde{X}_s, s)]ds \right|^2 \le t E \int_0^t |b(X_s, s) - b(\tilde{X}_s, s)|^2 ds
 \]</div>
-<p>故 <span class="arithmatex">\(y = y'\)</span>，映射 <span class="arithmatex">\(\overline{T}\)</span> 定义良定。</p>
-<p><strong>第三步：证明线性和保范性</strong>
-线性是极限的自然推论。对于保范性，对任意 <span class="arithmatex">\(x \in X\)</span> 及逼近列 <span class="arithmatex">\(x_n \to x\)</span>：</p>
+<p>对于第二项（Itô 积分），利用 Itô 等距同构 (Itô Isometry)：</p>
 <div class="arithmatex">\[
-\|\overline{T}x\|_Y = \lim_{n \to \infty} \|Tx_n\|_Y \le C \lim_{n \to \infty} \|x_n\|_X = C \|x\|_X
+E \left| \int_0^t [\sigma(X_s, s) - \sigma(\tilde{X}_s, s)]dW_s \right|^2 = E \int_0^t |\sigma(X_s, s) - \sigma(\tilde{X}_s, s)|^2 ds
 \]</div>
-<p>故 <span class="arithmatex">\(\overline{T}\)</span> 有界，且范数不超过 <span class="arithmatex">\(C\)</span>。<span class="arithmatex">\(\square\)</span></p>
+<p>将 Lipschitz 条件 <span class="arithmatex">\(|b(X) - b(\tilde{X})|^2 \le L^2 |X - \tilde{X}|^2 = L^2 |Y_s|^2\)</span> 以及 <span class="arithmatex">\(|\sigma(X) - \sigma(\tilde{X})|^2 \le L^2 |Y_s|^2\)</span> 代入上式：</p>
+<div class="arithmatex">\[
+E|Y_t|^2 \le 2t L^2 \int_0^t E|Y_s|^2 ds + 2L^2 \int_0^t E|Y_s|^2 ds \le 2L^2(T+1) \int_0^t E|Y_s|^2 ds
+\]</div>
+<p>令常数 <span class="arithmatex">\(C = 2L^2(T+1)\)</span>，我们得到：</p>
+<div class="arithmatex">\[
+E|Y_t|^2 \le C \int_0^t E|Y_s|^2 ds
+\]</div>
+<p>由于 <span class="arithmatex">\(E|Y_t|^2\)</span> 是非负的，<strong>由 Gronwall 不等式直接可得</strong>，对于所有的 <span class="arithmatex">\(t \in [0,T]\)</span>：</p>
+<div class="arithmatex">\[
+E|Y_t|^2 = 0
+\]</div>
+<p>这意味着对于任意给定的 <span class="arithmatex">\(t\)</span>，几乎必然有 <span class="arithmatex">\(X_t = \tilde{X}_t\)</span>。结合样本路径的连续性，得出这两个解在整个区间 <span class="arithmatex">\([0,T]\)</span> 上是不可区分的 (indistinguishable)。唯一性得证。 <span class="arithmatex">\(\square\)</span></p>
 </details>
-</div>
-<div class="admonition success">
-<p class="admonition-title">应用：PWZ 积分向 <span class="arithmatex">\(L^2\)</span> 空间的延拓</p>
-<p>我们将被积函数空间取为 <span class="arithmatex">\(X = L^2([0, T])\)</span>，积分结果空间取为 <span class="arithmatex">\(Y = L^2(\Omega, P)\)</span>。
-稠密子空间取为 <span class="arithmatex">\(S = C^1([0, T])\)</span>。
-定义算子 <span class="arithmatex">\(T: g \mapsto \int_0^T g(t) dW(t)\)</span>。</p>
-<p>由 Itô 等距同构知，对于任意 <span class="arithmatex">\(g \in S\)</span>：</p>
-<div class="arithmatex">\[
-\|Tg\|_{L^2(\Omega)}^2 = E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt = \|g\|_{L^2([0,T])}^2
-\]</div>
-<p>这意味着算子 <span class="arithmatex">\(T\)</span> 是一致等距的（算子范数 <span class="arithmatex">\(C=1\)</span>）。由 BLT 定理，我们可以将 PWZ 积分完美且唯一地延拓到整个 <span class="arithmatex">\(L^2([0, T])\)</span> 空间。</p>
-</div>
 <hr />
-<h2 id="3-quadratic-variation">3. 布朗运动的二次变差 (Quadratic Variation)</h2>
-<p>不能用传统的黎曼积分处理随机积分的问题根本在于布朗运动轨道的“粗糙性”，即其二次变差性质。</p>
-<p>考虑时间区间 <span class="arithmatex">\([0, T]\)</span> 的一个划分 <span class="arithmatex">\(P = \{0 = t_0 &lt; t_1 &lt; \dots &lt; t_m = T\}\)</span>，网格模长 <span class="arithmatex">\(|P| = \max (t_{k+1} - t_k)\)</span>。</p>
-<div class="admonition info">
-<p class="admonition-title">定理 1：布朗运动的二次变差等于时间 <span class="arithmatex">\(T\)</span></p>
-<p>当网格不断细化 <span class="arithmatex">\(|P| \to 0\)</span> 时，布朗运动增量的平方和在 <span class="arithmatex">\(L^2(\Omega, P)\)</span> 的意义下收敛于 <span class="arithmatex">\(T\)</span>：</p>
-<div class="arithmatex">\[
-\sum_{k=0}^{m-1} (W(t_{k+1}) - W(t_k))^2 \xrightarrow{L^2} T
-\]</div>
+<h3 id="22-picard">2.2 存在性的证明 (Picard 迭代法)</h3>
+<p>存在性的核心思想是构造逼近序列。这一部分的推导逻辑链条较长，需要步步为营。</p>
 <details class="proof">
-<summary>二次变差 <span class="arithmatex">\(L^2\)</span> 收敛的严格推导（点击展开）</summary>
-<p>为了证明 <span class="arithmatex">\(L^2\)</span> 收敛，我们需要证明其与 <span class="arithmatex">\(T\)</span> 的均方误差趋于 0。
-由于 <span class="arithmatex">\(\sum_{k=0}^{m-1} (t_{k+1} - t_k) = T\)</span>，我们可以将目标误差写为：</p>
+<summary>存在性证明：Picard 迭代法（点击展开）</summary>
+<p><strong>步骤 1：构造 Picard 迭代序列</strong></p>
+<p>定义初始近似为 <span class="arithmatex">\(X^{(0)}_t = \xi\)</span>。</p>
+<p>对于 <span class="arithmatex">\(k \ge 0\)</span>，递归地定义：</p>
 <div class="arithmatex">\[
-E\left[ \left( \sum_{k=0}^{m-1} \big((W(t_{k+1}) - W(t_k))^2 - (t_{k+1} - t_k)\big) \right)^2 \right]
+X^{(k+1)}_t = \xi + \int_0^t b(X^{(k)}_s, s)ds + \int_0^t \sigma(X^{(k)}_s, s)dW_s
 \]</div>
-<p>令 <span class="arithmatex">\(\Delta W_k = W(t_{k+1}) - W(t_k)\)</span>，<span class="arithmatex">\(\Delta t_k = t_{k+1} - t_k\)</span>。展开平方项，分为平方项和交叉项：</p>
+<p><strong>步骤 2：证明迭代序列的均方有界性</strong></p>
+<p>我们需要确保序列中每一个元素的二阶矩 <span class="arithmatex">\(E|X^{(k)}_t|^2\)</span> 是有限的。这可以通过数学归纳法和线性增长条件来证明：</p>
 <div class="arithmatex">\[
-= \sum_k E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] + \sum_{k \neq j} E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)\big((\Delta W_j)^2 - \Delta t_j\big) \Big]
+E|X^{(k)}_t|^2 \le C(1 + E|\xi|^2) e^{Ct}
 \]</div>
-<p><strong>关键点 1：交叉项为 0。</strong>
-由于布朗运动具有独立增量性质，当 <span class="arithmatex">\(k \neq j\)</span> 时，<span class="arithmatex">\(\Delta W_k\)</span> 与 <span class="arithmatex">\(\Delta W_j\)</span> 独立。且由于 <span class="arithmatex">\(E[(\Delta W_k)^2] = \Delta t_k\)</span>，每个因式的期望均为 0，故交叉项整体期望为 0。</p>
-<p><strong>关键点 2：平方项的计算。</strong>
-只剩下对角线上的方差项。注意到 <span class="arithmatex">\(\Delta W_k \sim \mathcal{N}(0, \Delta t_k)\)</span>，因此可以标准化表示为 <span class="arithmatex">\(\sqrt{\Delta t_k} Z\)</span>，其中 <span class="arithmatex">\(Z \sim \mathcal{N}(0, 1)\)</span>。</p>
+<p>（此处的推导与唯一性证明中的 Cauchy-Schwarz 和 Itô 等距类似，利用了线性增长条件，笔记中缩写为 <span class="arithmatex">\(E|X^k_t|^2 \le Ce^{ct}\)</span>，此处略去重复步骤）。</p>
+<p><strong>步骤 3：估计相邻迭代项差异的衰减速度</strong></p>
+<p>定义相邻两项的均方误差为 <span class="arithmatex">\(d_k(t) = E|X^{(k+1)}_t - X^{(k)}_t|^2\)</span>。</p>
+<p>利用与唯一性证明完全相同的放缩技巧（Cauchy-Schwarz + Itô Isometry + Lipschitz 条件），可以得到递推关系：</p>
 <div class="arithmatex">\[
-E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] = E\Big[ (\Delta t_k Z^2 - \Delta t_k)^2 \Big] = (\Delta t_k)^2 E[(Z^2 - 1)^2]
+d_k(t) \le 2L^2(T+1) \int_0^t d_{k-1}(s) ds = M \int_0^t d_{k-1}(s) ds
 \]</div>
-<p>由于标准正态分布的四阶矩 <span class="arithmatex">\(E[Z^4] = 3\)</span>，<span class="arithmatex">\(E[Z^2] = 1\)</span>，所以 <span class="arithmatex">\(E[(Z^2 - 1)^2] = 3 - 2(1) + 1 = 2\)</span>。</p>
+<p>其中 <span class="arithmatex">\(M = 2L^2(T+1)\)</span>。</p>
+<p>对于 <span class="arithmatex">\(k=0\)</span> 时：</p>
 <div class="arithmatex">\[
-\text{总误差} = 2 \sum_{k=0}^{m-1} (\Delta t_k)^2
+d_0(t) = E|X^{(1)}_t - X^{(0)}_t|^2 \le M t (1 + E|\xi|^2) = C_0 t
 \]</div>
-<p>我们放大这个和式：提取出一个最大的 <span class="arithmatex">\(\Delta t_k\)</span> 即网格模长 <span class="arithmatex">\(|P|\)</span>：</p>
+<p>不断向后递推积分：</p>
 <div class="arithmatex">\[
-2 \sum_{k=0}^{m-1} (\Delta t_k)^2 \le 2 |P| \sum_{k=0}^{m-1} \Delta t_k = 2 |P| T
+d_k(t) \le M \int_0^t d_{k-1}(s) ds \le M^k C_0 \int_0^t \frac{s^{k-1}}{(k-1)!} ds = C_0 \frac{M^k t^k}{k!}
 \]</div>
-<p>当 <span class="arithmatex">\(|P| \to 0\)</span> 时，<span class="arithmatex">\(2 |P| T \to 0\)</span>。故在 <span class="arithmatex">\(L^2\)</span> 意义下收敛于 <span class="arithmatex">\(T\)</span>。<span class="arithmatex">\(\square\)</span></p>
+<p>这说明误差的期望以极快的速度（阶乘级别）衰减。</p>
+<p><strong>步骤 4：利用 Doob 极大值不等式控制路径上确界</strong></p>
+<p>为了证明一致收敛，我们需要考察路径在整个区间上的最大误差。利用 Doob 鞅不等式 (Doob's Martingale Inequality) 和 Burkholder-Davis-Gundy (BDG) 不等式处理 Itô 积分项的最大值：</p>
+<div class="arithmatex">\[
+E\left[ \sup_{0 \le s \le T} |X^{(k+1)}_s - X^{(k)}_s|^2 \right] \le C_1 \int_0^T E|X^{(k)}_s - X^{(k-1)}_s|^2 ds \le C_2 \frac{(MT)^k}{k!}
+\]</div>
+<p>根据马尔可夫不等式 (Markov's Inequality)：</p>
+<div class="arithmatex">\[
+P\left( \sup_{0 \le t \le T} |X^{(k+1)}_t - X^{(k)}_t| &gt; 2^{-k} \right) \le \frac{E[\sup_{0 \le t \le T} |X^{(k+1)}_t - X^{(k)}_t|^2]}{(2^{-k})^2} \le 2^{2k} C_2 \frac{(MT)^k}{k!}
+\]</div>
+<p><strong>步骤 5：Borel-Cantelli 引理与一致收敛</strong></p>
+<p>由于阶乘的增长速度远快于指数，级数是收敛的：</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty} 2^{2k} C_2 \frac{(MT)^k}{k!} &lt; \infty
+\]</div>
+<p>由 <strong>Borel-Cantelli 引理</strong> 可知，事件 <span class="arithmatex">\(\{\sup_{0 \le t \le T} |X^{(k+1)}_t - X^{(k)}_t| &gt; 2^{-k}\}\)</span> 发生无限次的概率为 0。</p>
+<p>这意味着，对于几乎所有的样本路径 <span class="arithmatex">\(\omega\)</span>，存在一个 <span class="arithmatex">\(K(\omega)\)</span>，当 <span class="arithmatex">\(k &gt; K(\omega)\)</span> 时，<span class="arithmatex">\(\sup_{0 \le t \le T} |X^{(k+1)}_t - X^{(k)}_t| \le 2^{-k}\)</span>。</p>
+<p>由于 <span class="arithmatex">\(\sum 2^{-k}\)</span> 收敛，这保证了级数 <span class="arithmatex">\(\sum (X^{(k+1)}_t - X^{(k)}_t)\)</span> 绝对且一致收敛。因此，极限过程存在：</p>
+<div class="arithmatex">\[
+X_t = X^{(0)}_t + \sum_{k=0}^{\infty} (X^{(k+1)}_t - X^{(k)}_t) = \lim_{k \to \infty} X^{(k)}_t
+\]</div>
+<p>且该收敛在 <span class="arithmatex">\(t \in [0,T]\)</span> 上是一致的，保证了极限过程 <span class="arithmatex">\(X_t\)</span> 是连续的。</p>
+<p><strong>步骤 6：相容性 (Consistency) - 验证极限是解</strong></p>
+<p>最后，需要验证这个几乎必然一致收敛的极限 <span class="arithmatex">\(X_t\)</span> 确实满足原方程。</p>
+<p>在 Picard 迭代公式中对两边取极限 <span class="arithmatex">\(k \to \infty\)</span>。由于 <span class="arithmatex">\(b\)</span> 和 <span class="arithmatex">\(\sigma\)</span> 满足 Lipschitz 连续，结合控制收敛定理 (Dominated Convergence Theorem) 和 Itô 积分的等距同构性质，极限可以穿透积分号：</p>
+<div class="arithmatex">\[
+\int_0^t \sigma(X^{(k)}_s) dW_s \xrightarrow{L^2} \int_0^t \sigma(X_s) dW_s
+\]</div>
+<p>由此验证了 <span class="arithmatex">\(X_t = \xi + \int_0^t b(X_s, s)ds + \int_0^t \sigma(X_s, s)dW_s\)</span>。存在性得证。 <span class="arithmatex">\(\square\)</span></p>
 </details>
-</div>
-<p>这个定理直接导出了一个关于布朗运动性质的推论：</p>
-<div class="admonition success">
-<p class="admonition-title">定理 2：布朗运动处处无界变差 (Infinite Total Variation)</p>
-<p>几乎所有的布朗运动样本轨道 <span class="arithmatex">\(W(t, \omega)\)</span> 在任何区间上的全变差都是无穷大。</p>
-<blockquote>
-<p><strong>反证法极简证明</strong>：如果某条轨道有界的总变差 <span class="arithmatex">\(V_T &lt; \infty\)</span>，那么它的二次变差可以放缩为：
-<span class="arithmatex">\(\sum (\Delta W_k)^2 \le (\max_k |\Delta W_k|) \sum |\Delta W_k| \le (\max_k |\Delta W_k|) \cdot V_T\)</span>
-由于轨道连续，当分割无限细化时 <span class="arithmatex">\(\max |\Delta W_k| \to 0\)</span>。这会导致二次变差趋于 0，与定理 1 中二次变差等于 <span class="arithmatex">\(T &gt; 0\)</span> 产生绝对矛盾！</p>
-</blockquote>
-</div>
 <hr />
-<h2 id="4-riemann-ito">4. 随机积分的 Riemann 和与 Itô 积分的引出</h2>
-<p>那我们如何计算 <span class="arithmatex">\(\int_0^T W(t) dW(t)\)</span>？
-回到黎曼和的定义，我们能观察到一个在经典微积分中不会出现的现象：<strong>取值点的改变，将导致积分结果的巨大改变。</strong></p>
-<p>构造划分 <span class="arithmatex">\(P\)</span>，并在每个子区间 <span class="arithmatex">\([t_k, t_{k+1}]\)</span> 中取一点 <span class="arithmatex">\(\tau_k = (1-\lambda)t_k + \lambda t_{k+1}\)</span> (<span class="arithmatex">\(\lambda \in [0, 1]\)</span>)。
-考察黎曼和：</p>
-<div class="arithmatex">\[
-R_n = \sum_{k=0}^{m-1} W(\tau_k) \big( W(t_{k+1}) - W(t_k) \big)
-\]</div>
+<h2 id="3-properties-of-the-solution">3. 解的高阶矩与初值依赖性 (Properties of the Solution)</h2>
+<p>在笔记的最后部分，提到了解的高阶矩界限以及对初始值的连续依赖性。这是 SDE 理论中非常重要的推论。</p>
 <div class="admonition info">
-<p class="admonition-title">积分结果对 <span class="arithmatex">\(\lambda\)</span> 取值的依赖</p>
-<p>为了清晰展示，我们研究 <span class="arithmatex">\(\lambda = 0\)</span>（取左端点，即 Itô 积分）的特殊情况，此时 <span class="arithmatex">\(\tau_k = t_k\)</span>：</p>
+<p class="admonition-title">性质：高阶矩与依赖性</p>
+<p><strong>1. 高阶矩的界限</strong></p>
+<p>如果初始条件 <span class="arithmatex">\(\xi\)</span> 满足 <span class="arithmatex">\(E|\xi|^{2p} &lt; \infty\)</span> (<span class="arithmatex">\(p \ge 1\)</span>)，那么在全局 Lipschitz 和线性增长条件下，强解 <span class="arithmatex">\(X_t\)</span> 满足：</p>
 <div class="arithmatex">\[
-R_n = \sum_{k=0}^{m-1} W(t_k) \big( W(t_{k+1}) - W(t_k) \big)
+E\left[ \sup_{0 \le t \le T} |X_t|^{2p} \right] \le C(1 + E|\xi|^{2p}) e^{CT}
 \]</div>
-<details class="proof">
-<summary>代数恒等式拆分与 Itô 积分的极限求解（点击展开）</summary>
-<p>这是一个极其巧妙的代数技巧。利用恒等式 <span class="arithmatex">\(a(b-a) = \frac{1}{2}\big( b^2 - a^2 - (b-a)^2 \big)\)</span>，我们将每一项改写：
-令 <span class="arithmatex">\(a = W(t_k), b = W(t_{k+1})\)</span>：</p>
+<p><em>(证明同样利用 Itô 公式、BDG 不等式和 Gronwall 不等式)。</em></p>
+<p><strong>2. 对初值的连续依赖性</strong></p>
+<p>设 <span class="arithmatex">\(X^x_t\)</span> 和 <span class="arithmatex">\(X^y_t\)</span> 分别是初值为 <span class="arithmatex">\(X_0 = x\)</span> 和 <span class="arithmatex">\(X_0 = y\)</span> 的强解，那么它们之间的差异受初值差异的控制：</p>
 <div class="arithmatex">\[
-W(t_k) \big( W(t_{k+1}) - W(t_k) \big) = \frac{1}{2}\big( W(t_{k+1})^2 - W(t_k)^2 \big) - \frac{1}{2}\big( W(t_{k+1}) - W(t_k) \big)^2
+E\left[ \sup_{0 \le t \le T} |X^x_t - X^y_t|^2 \right] \le C |x - y|^2 e^{CT}
 \]</div>
-<p>将所有的项加起来，原和式分裂为两部分 <span class="arithmatex">\(B_1\)</span> 和 <span class="arithmatex">\(B_2\)</span>：</p>
-<div class="arithmatex">\[
-R_n = \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1})^2 - W(t_k)^2 \big) }_{B_1} - \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1}) - W(t_k) \big)^2 }_{B_2}
-\]</div>
-<p><strong>分析 <span class="arithmatex">\(B_1\)</span></strong>：这是一个完美的交错求和（Telescoping sum），中间项全部抵消：</p>
-<div class="arithmatex">\[
-B_1 = \frac{1}{2} \big( W(T)^2 - W(0)^2 \big) = \frac{1}{2} W(T)^2
-\]</div>
-<p><strong>分析 <span class="arithmatex">\(B_2\)</span></strong>：这正是布朗运动的二次变差！根据定理 1，当划分细化时，它在 <span class="arithmatex">\(L^2\)</span> 意义下收敛：</p>
-<div class="arithmatex">\[
-B_2 \xrightarrow{L^2} \frac{1}{2} T
-\]</div>
-<p>综上所述，当 <span class="arithmatex">\(\lambda = 0\)</span> 时（Itô 积分），我们得到：</p>
-<div class="arithmatex">\[
-\int_0^T W(t) dW(t) \triangleq \lim_{|P|\to 0} R_n = \frac{1}{2} W(T)^2 - \frac{1}{2} T
-\]</div>
-<p><em>(注：后面多出来的 <span class="arithmatex">\(-\frac{1}{2}T\)</span> 项称为 Itô 校正项)</em> <span class="arithmatex">\(\square\)</span></p>
-</details>
+<p>这说明 SDE 的解对其初始状态是 Lipschitz 连续依赖的，这在研究马尔可夫半群和偏微分方程 (PDEs) 的联系时具有关键作用。</p>
 </div>
-<p><strong>两种最重要的积分流派：</strong>
-* 当 <span class="arithmatex">\(\lambda = 0\)</span> 时（取左端点），即为 <strong>Itô 积分</strong>，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>。它保持了鞅的性质，常用于金融数学领域。
-* 当 <span class="arithmatex">\(\lambda = 1/2\)</span> 时（取中点），即为 <strong>Stratonovich 积分</strong>，校正项相互抵消，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>，形式上与经典微积分一致，常用于物理和工程领域。</p>
-<hr />
-<h2 id="5-ito">5. 严格 Itô 积分的测度论准备</h2>
-<p>为了将 Itô 积分推广到更一般的随机过程（不只是 <span class="arithmatex">\(W(t)\)</span>），我们需要严格定义什么叫做“不管未来，只看过去”。这需要我们引入流 (Filtration) 和适应过程 (Adapted Process) 的概念。</p>
-<div class="admonition abstract">
-<p class="admonition-title">定义：信息流与 <span class="arithmatex">\(\sigma\)</span>-代数</p>
-<p><strong>1. 布朗运动的自然流</strong>：
-对于任意时刻 <span class="arithmatex">\(t\)</span>，布朗运动历史轨迹产生的信息记为 <span class="arithmatex">\(\sigma\)</span>-代数：</p>
-<div class="arithmatex">\[
-\mathcal{F}_W(t) \triangleq \sigma(\{W(s) \mid 0 \le s \le t\})
-\]</div>
-<p>它包含了直到时刻 <span class="arithmatex">\(t\)</span> 为止布朗运动所有的路径信息。</p>
-<p><strong>2. 未来增量的独立性</strong>：
-我们定义未来的增量信息流 <span class="arithmatex">\(\mathcal{F}^t \triangleq \sigma(\{W(s) - W(t) \mid s &gt; t\})\)</span>。根据布朗运动的独立增量性质，<span class="arithmatex">\(\mathcal{F}^t\)</span> 与历史流 <span class="arithmatex">\(\mathcal{F}_W(t)\)</span> 是<strong>完全独立</strong>的。</p>
-<p><strong>3. 一般信息流 (Filtration)</strong>：
-一族满足以下条件的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\{\mathcal{F}(t)\}_{t \ge 0}\)</span>：
-* <strong>单调性</strong>：<span class="arithmatex">\(\mathcal{F}(s) \subset \mathcal{F}(t)\)</span> 对任意 <span class="arithmatex">\(0 \le s \le t\)</span>（信息不遗忘）。
-* <strong>包含历史</strong>：<span class="arithmatex">\(\mathcal{F}_W(t) \subset \mathcal{F}(t)\)</span>。
-* <strong>未来独立</strong>：增量 <span class="arithmatex">\(W(s) - W(t)\)</span> 与 <span class="arithmatex">\(\mathcal{F}(t)\)</span> 独立。</p>
-</div>
-<p>有了关于“信息”这一概念的数学框架，我们就可以确定哪些随机过程是可以被 Itô 积分的。</p>
-<div class="admonition info">
-<p class="admonition-title">定义：适应过程与循序可测 (Adapted &amp; Progressively Measurable)</p>
-<p><strong>1. 适应过程 (Adapted Process)</strong>：
-若对于每一个固定的时刻 <span class="arithmatex">\(t\)</span>，随机变量 <span class="arithmatex">\(G(t, \omega)\)</span> 都是 <span class="arithmatex">\(\mathcal{F}(t)\)</span>-可测的，则称随机过程 <span class="arithmatex">\(G(t)\)</span> 是关于流 <span class="arithmatex">\(\{\mathcal{F}(t)\}\)</span> 适应的。
-<em>(直观理解：在时刻 <span class="arithmatex">\(t\)</span> 这一刻，你只要知道了所有的历史信息 <span class="arithmatex">\(\mathcal{F}(t)\)</span>，你就知道此时刻 <span class="arithmatex">\(G(t)\)</span> 的值，绝不需要未来的信息。)</em></p>
-<p><strong>2. 循序可测 (Progressively Measurable)</strong>：
-一个更强的条件。映射 <span class="arithmatex">\((s, \omega) \mapsto G(s, \omega)\)</span> 在乘积空间 <span class="arithmatex">\([0, t] \times \Omega\)</span> 上的 <span class="arithmatex">\(\mathcal{B}([0, t]) \otimes \mathcal{F}(t)\)</span> 域上是联合可测的。这保证了在时间区间上的黎曼或勒贝格积分操作是合法的。</p>
-</div>
-<p>在本书后续的构建中，Itô 积分 <span class="arithmatex">\(\int_0^T G(t, \omega) dW(t)\)</span> 将在以下希尔伯特空间中被严格定义：</p>
-<div class="arithmatex">\[
-L^2(\Omega \times [0, T]) = \left\{ G(t, \omega) \text{ 为循序可测过程} \mid E\left[ \int_0^T G(t, \omega)^2 dt \right] &lt; \infty \right\}
-\]</div>
 
 
 
