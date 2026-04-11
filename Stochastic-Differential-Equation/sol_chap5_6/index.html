@@ -1322,8 +1322,8 @@ Y(t) - Y(0) = 2 \int_0^t \sum_{i=1}^n W^i(s) dW^i(s)
 <hr />
 <h3 id="2">习题 2</h3>
 <p><strong>题目</strong>
-设 <span class="arithmatex">\(W = (W^1, \cdots, W^n)^T\)</span> 是 <span class="arithmatex">\(n\)</span> 维 Brown 运动。记 <span class="arithmatex">\(R = |W|\)</span>。证明 <span class="arithmatex">\(R\)</span> 满足如下随机贝塞尔 (Bessel) 方程
-$<span class="arithmatex">\(dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i\)</span>$</p>
+设 <span class="arithmatex">\(W = (W^1, \cdots, W^n)^T\)</span> 是 <span class="arithmatex">\(n\)</span> 维 Brown 运动。记 <span class="arithmatex">\(R = |W|\)</span>。证明 <span class="arithmatex">\(R\)</span> 满足如下随机贝塞尔 (Bessel) 方程</p>
+<div class="arithmatex">\[dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i\]</div>
 <details class="success">
 <summary>解答 (点击展开)</summary>
 <p>这里我们令多元函数 <span class="arithmatex">\(f(x) = |x| = \left(\sum_{i=1}^n (x^i)^2\right)^{1/2}\)</span>。计算其偏导数：</p>
@@ -1502,8 +1502,8 @@ X_2(t) = X_2(0) + X_1(0) W_2(t) + \int_0^t s dW_2(s) + \int_0^t W_1(s) dW_2(s)
 <hr />
 <h3 id="2_1">习题 2</h3>
 <p><strong>题目</strong>
-证明 <span class="arithmatex">\(X(t) = (a\cos W(t), b\sin W(t))^T\)</span> (其中 <span class="arithmatex">\(a, b\)</span> 是正的常数) 是如下随机微分方程的解
-$<span class="arithmatex">\(dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 &amp; -\frac{a}{b} \\ \frac{b}{a} &amp; 0 \end{pmatrix} X dW\)</span>$</p>
+证明 <span class="arithmatex">\(X(t) = (a\cos W(t), b\sin W(t))^T\)</span> (其中 <span class="arithmatex">\(a, b\)</span> 是正的常数) 是如下随机微分方程的解</p>
+<div class="arithmatex">\[dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 &amp; -\frac{a}{b} \\ \frac{b}{a} &amp; 0 \end{pmatrix} X dW\]</div>
 <details class="success">
 <summary>解答 (点击展开)</summary>
 <p>这道题将矩阵形式引入了 SDE。我们将给定的矩阵展开为方程组。
@@ -1538,8 +1538,8 @@ dX^2 = \frac{b}{a}X^1 dW - \frac{1}{2}X^2 dt
 <hr />
 <h3 id="3_1">习题 3</h3>
 <p><strong>题目</strong>
-证明 <span class="arithmatex">\(X_t = e^{W_t}\)</span> 是如下随机微分方程的一个解：
-$<span class="arithmatex">\(dX_t = \frac{1}{2}X_t dt + X_t dW_t\)</span>$</p>
+证明 <span class="arithmatex">\(X_t = e^{W_t}\)</span> 是如下随机微分方程的一个解：</p>
+<div class="arithmatex">\[dX_t = \frac{1}{2}X_t dt + X_t dW_t\]</div>
 <details class="success">
 <summary>解答 (点击展开)</summary>
 <p>这道题是黑尔斯-斯科尔斯 (Black-Scholes) 几何布朗运动模型的最简退化版本。</p>
@@ -1560,8 +1560,8 @@ dX_t = X_t dW_t + \frac{1}{2} X_t dt
 <hr />
 <h3 id="4_1">习题 4</h3>
 <p><strong>题目</strong>
-求解随机微分方程
-$<span class="arithmatex">\(dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0\)</span>$</p>
+求解随机微分方程</p>
+<div class="arithmatex">\[dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0\]</div>
 <details class="success">
 <summary>解答 (点击展开)</summary>
 <p>由于方程的系数显式地包含了时间 <span class="arithmatex">\(t\)</span> 和布朗运动 <span class="arithmatex">\(W_t\)</span>，我们采用<strong>待定函数法</strong> (Guess and Verify)。
@@ -1606,8 +1606,8 @@ X(t) = W(t) + e^t W^2(t)
 <hr />
 <h3 id="5_1">习题 5</h3>
 <p><strong>题目</strong>
-求解随机微分方程
-$<span class="arithmatex">\(dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 &gt; 0\)</span>$</p>
+求解随机微分方程</p>
+<div class="arithmatex">\[dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 &gt; 0\]</div>
 <details class="success">
 <summary>解答 (点击展开)</summary>
 <p>这是一个非常具有挑战性的非线性 SDE。由于方程包含 <span class="arithmatex">\(1/X_t\)</span>，提示我们先利用平方变换来消去分母。</p>
