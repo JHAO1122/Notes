@@ -51,6 +51,7 @@ Below is the detailed directory for the course notes:
 * [x] [Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations](5SDEs.en.md)
 
 * [x] [Chapter 6: Existence and Uniqueness Theorem](6SDEs.en.md)
+
 ### Part III: Applications of SDEs
 
 
