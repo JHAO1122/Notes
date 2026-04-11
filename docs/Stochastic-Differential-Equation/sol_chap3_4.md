@@ -276,8 +276,9 @@ $$\int_0^T W^2(t) dW(t) = \frac{1}{3}W^3(T) - \int_0^T W(t) dt$$
 对向后积分
 $$(B) \int_0^T W(t) dW(t) \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]$$
 其中 $0 = t_0 < t_1 < \cdots < t_n = T$，而 $\delta \doteq \max_i |t_{i+1} - t_i|$。证明：
+
 $$(B) \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
-（右侧第一个积分为标准的 Itô 积分，即向前积分）。
+
 
 ??? success "解答 (点击展开)"
 
@@ -364,6 +365,7 @@ $$(B) \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
 定义二阶积分
 $$\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2$$
 其中 $0 = t_0 < t_1 < \dots < t_n = T$，而 $\delta \doteq \max_i |t_{i+1} - t_i|$。证明：当 $f \in L^2([0,T])$ 时，有
+
 $$\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt$$
 
 ??? success "解答 (点击展开)"
