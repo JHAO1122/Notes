@@ -39,6 +39,8 @@ tags:
 ### Part II: 随机积分和随机微分方程
 * [x] [第三章：随机积分](3stochastic_integrate.md)
 * [x] [第四章：Itô积分](4Ito_integrate.md)
+* [x] [第五章：多元 Itô 积分与随机微分方程](5SDEs.md)
+* [x] [第六章：解的存在唯一性定理](6SDEs.md)
 
 ### Part III: 随机微分方程的应用
 
