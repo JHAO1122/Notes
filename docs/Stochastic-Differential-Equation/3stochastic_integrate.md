@@ -289,8 +289,11 @@ $$
 
     **3. 一般信息流 (Filtration)**：
     一族满足以下条件的 $\sigma$-代数 $\{\mathcal{F}(t)\}_{t \ge 0}$：
+    
     * **单调性**：$\mathcal{F}(s) \subset \mathcal{F}(t)$ 对任意 $0 \le s \le t$（信息不遗忘）。
+    
     * **包含历史**：$\mathcal{F}_W(t) \subset \mathcal{F}(t)$。
+    
     * **未来独立**：增量 $W(s) - W(t)$ 与 $\mathcal{F}(t)$ 独立。
 
 有了关于“信息”这一概念的数学框架，我们就可以确定哪些随机过程是可以被 Itô 积分的。
