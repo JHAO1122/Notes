@@ -15,7 +15,7 @@ tags:
 
 ## Part I: Independence and Conditional Expectation
 
-### Exercise 1: Density Function and Change of Variable for a 1D Continuous Random Variable
+### Exercise 1
 
 **Problem:**
 Let the probability density function of a random variable $X$ be $f(x) = ax(1-x)$ for $x \in (0,1)$, and $f(x)=0$ otherwise.
@@ -71,7 +71,7 @@ Let the probability density function of a random variable $X$ be $f(x) = ax(1-x)
 
 ---
 
-### Exercise 4: Properties of Conditional Expectation for Independent Random Variables
+### Exercise 2
 
 **Problem:**
 Suppose $X$ and $Y$ are independent random variables, $f(x,y)$ is a bounded continuous function, and $F_X$ is the probability distribution function (CDF) of $X$. Prove that:
@@ -131,7 +131,7 @@ Suppose $X$ and $Y$ are independent random variables, $f(x,y)$ is a bounded cont
 
 ---
 
-### Exercise 5: Calculating Conditional Expectation Based on Events
+### Exercise 3
 
 **Problem:**
 Let $A, B$ be two events in a measure space $(\Omega, \mathcal{F}, \mathbb{P})$. Calculate the conditional expectation $\mathbb{E}[\chi_A|\chi_B]$. (Note: $\chi$ represents the indicator function).
@@ -175,7 +175,7 @@ Let $A, B$ be two events in a measure space $(\Omega, \mathcal{F}, \mathbb{P})$.
 
 ---
 
-### Exercise 6: Independent $\sigma$-fields and Conditional Expectation
+### Exercise 4
 
 **Problem:**
 Suppose $\mathcal{V}_1$ and $\mathcal{V}_2$ are two independent $\sigma$-fields, and $X$ is an integrable random variable. Prove that:
@@ -205,7 +205,7 @@ $\mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)|\mathcal{V}_2] = \mathbb{E}[X]$.
 
 ---
 
-### Supplementary Exercise 1: $L^p$ Continuity of Conditional Expectation
+### Exercise 5
 
 **Problem:**
 Let $X$ and $\{X_n\}$ be a sequence of random variables on $(\Omega, \mathcal{F}, \mathbb{P})$. For a fixed $1 \leqslant p < \infty$, suppose $\mathbb{E}[|X_n|^p] < +\infty$. Assume $\lim_{n\to\infty}\mathbb{E}[|X_n - X|^p] = 0$. Prove that for any sub-$\sigma$-field $\mathcal{V} \subset \mathcal{F}$:
@@ -240,7 +240,7 @@ $$
 
 ---
 
-### Supplementary Exercise 2: Calculating Conditional Expectation on a Finite State Space
+### Exercise 6
 
 **Problem:**
 Let $\Omega = \{1, 2, \cdots, 7, 8\}$ and $\mathcal{F} = 2^\Omega$ (the $\sigma$-field of all subsets of $\Omega$). When $i \leqslant 4$, $\mathbb{P}(\{i\}) = 1/10$; when $i > 4$, $\mathbb{P}(\{i\}) = 3/20$.
@@ -305,7 +305,7 @@ Calculate: (1) $X\mathbb{E}[Y]$; (2) $\mathbb{E}[\mathbb{E}[XY|\mathcal{V}]|\mat
 
 ---
 
-### Supplementary Exercise 3: Constructing a Doob Martingale
+### Exercise 7
 
 **Problem:**
 Given a probability space $(\Omega, \mathcal{F}, \mathbb{P})$ and an integrable random variable $X$. Let $\{\mathcal{F}(t)\}_{t \geqslant 0}$ be a filtration of $\sigma$-fields. For $t \geqslant 0$, define $X(t) \doteq \mathbb{E}[X|\mathcal{F}(t)]$. Prove that $X(t)$ is a martingale with respect to $\mathcal{F}(t)$.
@@ -342,7 +342,7 @@ Given a probability space $(\Omega, \mathcal{F}, \mathbb{P})$ and an integrable 
 
 ## Part II: Brownian Motion and its Properties
 
-### P64 Exercise 1: Translation and Scaling Invariance of Brownian Motion
+### Exercise 1
 
 **Problem:**
 Let $W(t)$ be a one-dimensional Brownian motion. Prove that for any fixed $s>0$, $W(t+s)-W(s)$ is a Brownian motion; and for any positive constant $c$, $cW(t/c^2)$ is also a Brownian motion.
@@ -380,7 +380,7 @@ Let $W(t)$ be a one-dimensional Brownian motion. Prove that for any fixed $s>0$,
 
 ---
 
-### P64 Exercise 2: Time-Reversed Brownian Motion
+### Exercise 2
 
 **Problem:**
 Let $W(t)$ be a one-dimensional Brownian motion. Let $\tilde{W}(t) = \begin{cases} tW(1/t), & t > 0, \\ 0, & t = 0. \end{cases}$
@@ -427,7 +427,7 @@ Prove that: $\tilde{W}(t) - \tilde{W}(s) \sim N(0, t-s), \forall 0 < s < t$.
 
 ---
 
-### P70 Exercise 1: Higher-Order Moments of Brownian Motion
+### Exercise 3
 
 **Problem:**
 Let $W(t)$ be a Brownian motion. Prove that: $\mathbb{E}[W^{2k}(t)] = \frac{(2k)!t^k}{2^k k!}, \forall t > 0$.
@@ -470,7 +470,7 @@ Let $W(t)$ be a Brownian motion. Prove that: $\mathbb{E}[W^{2k}(t)] = \frac{(2k)
 
 ---
 
-### P70 Exercise 2: Expectation of an Exponential Brownian Increment
+### Exercise 4
 
 **Problem:**
 Prove that: let $c$ be a constant and $0 < s < t$, then $\mathbb{E}[\exp(c(W(s) - W(t)))] = \exp\left(\frac{1}{2}c^2(t-s)\right)$.
@@ -492,7 +492,7 @@ Prove that: let $c$ be a constant and $0 < s < t$, then $\mathbb{E}[\exp(c(W(s) 
 
 ---
 
-### P70 Exercise 3: Covariance of the Ornstein-Uhlenbeck (O-U) Process
+### Exercise 5
 
 **Problem:**
 Let $U(t) = e^{-t}W(e^{2t})$, show that $\mathbb{E}[U(t)U(s)] = e^{-|t-s|}, \forall t, s \in \mathbb{R}$.
@@ -525,7 +525,7 @@ Let $U(t) = e^{-t}W(e^{2t})$, show that $\mathbb{E}[U(t)U(s)] = e^{-|t-s|}, \for
 
 ---
 
-### P70 Exercise 4: Law of Large Numbers and Asymptotic Behavior of Brownian Motion at Infinity
+### Exercise 6
 
 **Problem:**
 Prove that: almost surely $\lim_{m \to \infty} \frac{W(m)}{m} = 0$.
@@ -567,7 +567,7 @@ Prove that: almost surely $\lim_{m \to \infty} \frac{W(m)}{m} = 0$.
 
 ---
 
-### P70 Exercise 5: Two Extremely Important Brownian Martingales
+### Exercise 7
 
 **Problem:**
 Prove that $W(t)^2 - t$ and $\exp\left(\lambda W_t - \frac{1}{2}\lambda^2 t\right)$ $(\lambda \in \mathbb{R})$ are both martingales with respect to the history $\mathcal{F}(t)$ of $W(t)$.
@@ -649,7 +649,7 @@ Prove that $W(t)^2 - t$ and $\exp\left(\lambda W_t - \frac{1}{2}\lambda^2 t\righ
 
 ---
 
-### P70 Exercise 6: Second Moment of the Riemann Integral of a Brownian Path
+### Exercise 8
 
 **Problem:**
 Let $X(t) = \int_0^t W(s)ds$. Prove that: $\mathbb{E}[X^2(t)] = \frac{t^3}{3}, \forall t > 0$.

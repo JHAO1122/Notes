@@ -15,7 +15,7 @@ tags:
 
 ## Part I: 独立性与条件期望
 
-### 习题 1：一维连续型随机变量的密度函数与变量代换
+### 习题 1
 
 **题目：**
 设随机变量 $X$ 的概率密度函数是 $f(x) = ax(1-x), x \in (0,1)$。除此之外，$f$ 都取零。
@@ -71,7 +71,7 @@ tags:
 
 ---
 
-### 习题 4：独立随机变量的条件期望性质
+### 习题 2
 
 **题目：**
 设 $X, Y$ 是独立的随机变量，$f(x,y)$ 是有界的连续函数，$F_X$ 是 $X$ 的概率分布函数。证明：
@@ -131,7 +131,7 @@ tags:
 
 ---
 
-### 习题 5：基于事件的条件期望计算
+### 习题 3
 
 **题目：**
 设 $A, B$ 是测度空间 $(\Omega, \mathcal{F}, \mathbb{P})$ 中的两个事件，计算条件期望 $\mathbb{E}[\chi_A|\chi_B]$。（注：$\chi$ 为示性函数）
@@ -175,7 +175,7 @@ tags:
 
 ---
 
-### 习题 6：独立 $\sigma$-域与条件期望
+### 习题 4
 
 **题目：**
 设 $\mathcal{V}_1$ 和 $\mathcal{V}_2$ 是两个独立的 $\sigma$-域，$X$ 是个可积的随机变量。证明：
@@ -205,7 +205,7 @@ $\mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)|\mathcal{V}_2] = \mathbb{E}[X]$。
 
 ---
 
-### 补充习题 1：条件期望的 $L^p$ 连续性
+### 习题 5
 
 **题目：**
 设 $X$ 和 $\{X_n\}$ 是 $(\Omega, \mathcal{F}, \mathbb{P})$ 上的一列随机变量，对固定的 $1 \leqslant p < \infty$，$\mathbb{E}[|X_n|^p] < +\infty$。假设 $\lim_{n\to\infty}\mathbb{E}[|X_n - X|^p] = 0$，证明：对 $\mathcal{F}$ 的任意子 $\sigma$-域 $\mathcal{V} \subset \mathcal{F}$，成立
@@ -240,7 +240,7 @@ $$
 
 ---
 
-### 补充习题 2：有限状态空间上的条件期望计算
+### 习题 6
 
 **题目：**
 取 $\Omega = \{1, 2, \cdots, 7, 8\}$，$\mathcal{F} = 2^\Omega$（即 $\Omega$ 的所有子集组成的 $\sigma$-域）。当 $i \leqslant 4$ 时 $\mathbb{P}(\{i\}) = 1/10$，当 $i > 4$ 时 $\mathbb{P}(\{i\}) = 3/20$。
@@ -305,7 +305,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### 补充习题 3：构造 Doob 鞅
+### 习题 7
 
 **题目：**
 给定概率空间 $(\Omega, \mathcal{F}, \mathbb{P})$ 及可积的随机变量 $X$，又设 $\{\mathcal{F}(t)\}_{t \geqslant 0}$ 是一个 $\sigma$-域流。对 $t \geqslant 0$，定义 $X(t) \doteq \mathbb{E}[X|\mathcal{F}(t)]$。证明：$X(t)$ 关于 $\mathcal{F}(t)$ 是一个鞅。
@@ -342,7 +342,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ## Part II: 布朗运动及其性质
 
-### P64 习题 1：布朗运动的平移与尺度缩放不变性
+### 习题 1
 
 **题目：**
 设 $W(t)$ 是一维 Brown 运动，证明对任意固定的 $s>0$，$W(t+s)-W(s)$ 是 Brown 运动；对任意正数 $c$，$cW(t/c^2)$ 也是 Brown 运动。
@@ -380,7 +380,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### P64 习题 2：时间反演布朗运动
+### 习题 2
 
 **题目：**
 设 $W(t)$ 是一维 Brown 运动，记 $\tilde{W}(t) = \begin{cases} tW(1/t), & t > 0, \\ 0, & t = 0. \end{cases}$
@@ -427,7 +427,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### P70 习题 1：布朗运动的高阶矩
+### 习题 3
 
 **题目：**
 设 $W(t)$ 是 Brown 运动，证明：$\mathbb{E}[W^{2k}(t)] = \frac{(2k)!t^k}{2^k k!}, \forall t > 0$。
@@ -470,7 +470,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### P70 习题 2：指数布朗增量的期望
+### 习题 4
 
 **题目：**
 证明：设 $c$ 是常数，$0 < s < t$，那么 $\mathbb{E}[\exp(c(W(s) - W(t)))] = \exp\left(\frac{1}{2}c^2(t-s)\right)$。
@@ -492,7 +492,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### P70 习题 3：Ornstein-Uhlenbeck (O-U) 过程的协方差
+### 习题 5
 
 **题目：**
 设 $U(t) = e^{-t}W(e^{2t})$，则 $\mathbb{E}[U(t)U(s)] = e^{-|t-s|}, \forall t, s \in \mathbb{R}$。
@@ -525,7 +525,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### P70 习题 4：大数定律与布朗运动的无穷远渐近性
+### 习题 6
 
 **题目：**
 证明：几乎必然成立 $\lim_{m \to \infty} \frac{W(m)}{m} = 0$。
@@ -567,7 +567,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### P70 习题 5：两类极其重要的布朗鞅
+### 习题 7
 
 **题目：**
 证明 $W(t)^2 - t$ 和 $\exp\left(\lambda W_t - \frac{1}{2}\lambda^2 t\right)$ $(\lambda \in \mathbb{R})$ 关于 $W(t)$ 的历史 $\mathcal{F}(t)$ 都是鞅。
@@ -649,7 +649,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ---
 
-### P70 习题 6：布朗路径黎曼积分的二阶矩
+### 习题 8
 
 **题目：**
 置 $X(t) = \int_0^t W(s)ds$。证明：$\mathbb{E}[X^2(t)] = \frac{t^3}{3}, \forall t > 0$。
