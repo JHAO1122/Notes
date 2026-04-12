@@ -1,61 +1,58 @@
 # Chapter 1: Conditional Expectation
 
-Before diving into stochastic differential equations, we need to abandon the definition of conditional expectation used in elementary probability theory and strictly define it using the language of measure theory. This is the foundation for our subsequent exploration of martingale theory and stochastic analysis.
+Before starting with stochastic differential equations, we need to abandon the definition of conditional expectation from elementary probability theory and rigorously define conditional expectation using the language of measure theory. This is the foundation for our subsequent exploration of martingale theory and stochastic analysis.
 
-> In measure theory, a $\sigma$-algebra is a mathematical characterization of "information".
-> For a family of subsets $\mathcal{F}$ on a set $\Omega$, it is called a **$\sigma$-algebra** if it satisfies the following conditions:
+> In measure theory, a $\sigma$-algebra is a mathematical characterization of "information."
+> For a family $\mathcal{F}$ of subsets of a set $\Omega$, if it satisfies the following conditions, it is called a **$\sigma$-algebra**:
 >
-> 1. **Contains the sample space**: $\Omega \in \mathcal{F}$.
+> 1.  **Contains the universal set**: $\Omega \in \mathcal{F}$.
 >
-> 2. **Closed under complementation**: If $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$.
+> 2.  **Closed under complements**: If $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$.
 >
-> 3. **Closed under countable unions**: If $A_1, A_2, \dots \in \mathcal{F}$, then $\bigcup_{n=1}^\infty A_n \in \mathcal{F}$.
+> 3.  **Closed under countable unions**: If $A_1, A_2, \dots \in \mathcal{F}$, then $\bigcup_{n=1}^\infty A_n \in \mathcal{F}$.
 
-> Radon-Nikodym Theorem: If a measure $\nu$ is **absolutely continuous** with respect to $P$, denoted as $\nu \ll P$ (i.e., if $P(A)=0$ then $\nu(A)=0$), then there exists a $P$-almost everywhere unique $\mathcal{F}$-measurable function $f: \Omega \to [0, \infty)$ such that for any $A \in \mathcal{F}$:
-> 
+> Radon-Nikodym theorem: If a measure $\nu$ is **absolutely continuous** with respect to $P$, i.e., it satisfies $\nu \ll P$ (if $P(A)=0$ then $\nu(A)=0$), then there exists a $P$-almost everywhere unique $\mathcal{F}$-measurable function $f: \Omega \to [0, \infty)$ such that for any $A \in \mathcal{F}$, we have:
+>
 > $$
 > \nu(A) = \int_A f(\omega) \, dP(\omega)
 > $$
 
-> Radon-Nikodym Derivative: The aforementioned measurable function $f$ is called the **Radon-Nikodym derivative** of $\nu$ with respect to $P$ (also known as the density function of $\nu$), denoted as: $f = \frac{d\nu}{dP}$.
+> Radon-Nikodym derivative: The measurable function $f$ above is called the **Radon-Nikodym derivative** of $\nu$ with respect to $P$ (also known as the density function of $\nu$), denoted as: $f = \frac{d\nu}{dP}$
 
 ## 1. Measure-Theoretic Definition of Conditional Expectation
 
 In classical probability theory, the conditional probability of event $A$ given event $B$ is defined as $P(A|B) \triangleq \frac{P(AB)}{P(B)}.$
 
-The corresponding conditional expectation is $E[X|B] \triangleq \frac{1}{P(B)}\int_B X dP.$
+The corresponding conditional expectation is defined as $E[X|B] \triangleq \frac{1}{P(B)}\int_B X dP.$
 
-However, when a continuous random variable $Y$ is given, the probability of the event $\{Y=y\}$ is 0, making the classical definition invalid.
+However, when conditioning on a continuous random variable $Y$, the probability of the event $\{Y=y\}$ is 0, rendering the classical definition invalid.
 
-In this case, we need to redefine it at the $\sigma$-algebra level using the Radon-Nikodym Theorem.
+In this case, we need to use the Radon-Nikodym theorem to redefine it at the $\sigma$-algebra level.
 
 !!! abstract "Definition: Conditional Expectation"
 
-    Let $X$ be an integrable random variable (i.e., $E[|X|] < \infty$) on the probability space $(\Omega, \mathcal{F}, P)$, and let $\mathcal{G}$ be a sub-$\sigma$-algebra of $\mathcal{F}$ (often denoted as $\mathcal{G} = \sigma(Y)$).
-    We call the random variable $Z$ the **conditional expectation** of $X$ given $\mathcal{G}$, denoted as $E[X|\mathcal{G}] = Z$, if it satisfies the following two conditions:
+    Let $X$ be an integrable random variable on the probability space $(\Omega, \mathcal{F}, P)$ (i.e., $E[|X|] < \infty$), and let $\mathcal{G}$ be a sub-$\sigma$-algebra of $\mathcal{F}$ (often denoted as $\mathcal{G} = \sigma(Y)$).
+    We call a random variable $Z$ the **conditional expectation** of $X$ given $\mathcal{G}$, denoted by $E[X|\mathcal{G}] = Z$, if it satisfies the following two conditions:
 
     **1. Measurability**: $Z$ is a $\mathcal{G}$-measurable random variable.
 
-    **2. Local Averaging Equality (Integral Matching)**: For any $A \in \mathcal{G}$, we have:
+    **2. Local Average Equality (Integral Matching)**: For any $A \in \mathcal{G}$, we have:
 
     $$
     \int_A X dP = \int_A Z dP
     $$
 
-    The existence and uniqueness (in the almost sure, a.s. sense) of such $Z$ are guaranteed by the Radon-Nikodym Theorem.
+    The existence and almost sure (a.s.) uniqueness of such a $Z$ are guaranteed by the Radon-Nikodym theorem.
 
-!!! note "Supplement: Transition Properties from Elementary to Measure-Theoretic Definitions"
-    Based on the $\sigma$-algebra generated by a random variable $Y$, we have the following three intuitive basic properties:
-    
-    1. $E[X|Y] = E[X|\sigma(Y)]$ (Taking the conditional expectation with respect to a random variable is essentially taking it with respect to the $\sigma$-algebra it generates).
-    
-    2. $E\big[E[X|\mathcal{G}]\big] = E[X]$ (Expectation preservation property).
-    
-    3. If $\mathcal{G} = \left\{\Omega, \emptyset\right\}$, then $E[X|\mathcal{G}] = E[X]$ a.s. (A trivial $\sigma$-algebra contains no information).
+!!! note "Note: Transition Properties from Elementary to Measure-Theoretic Definitions"
+    Based on the $\sigma$-algebra generated by the random variable $Y$, we have the following three intuitive fundamental properties:
+    1. $E[X|Y] = E[X|\sigma(Y)]$ (Conditioning on a random variable is essentially conditioning on the $\sigma$-algebra it generates).
+    2. $E\big[E[X|\mathcal{G}]\big] = E[X]$ (Law of total expectation).
+    3. If $\mathcal{G} = \left\{\Omega, \emptyset\right\}$, then $E[X|\mathcal{G}] = X$ a.s. (The trivial $\sigma$-algebra provides no information).
 
 ## 2. Core Properties
 
-> Most of these can be proven directly from the definition or via simple variations.
+> Most definitions, proofs, or simple variations suffice.
 
 Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
 
@@ -67,7 +64,7 @@ Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
     E[aX + bY | \mathcal{G}] = aE[X|\mathcal{G}] + bE[Y|\mathcal{G}] \quad a.s.
     $$
 
-    **2. Expectation Preservation**:
+    **2. Preservation of Expectation**:
 
     If $X$ is $\mathcal{G}$-measurable, then:
 
@@ -75,9 +72,9 @@ Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
     E[X|\mathcal{G}] = X \quad a.s.
     $$
 
-    > *Matches the projection intuition; being measurable means it lies entirely on the hyperplane spanned by $\mathcal{G}$.*
+    > *Consistent with the projection intuition: measurability means it lies entirely within the hyperplane spanned by $\mathcal{G}$.*
 
-    **3. Taking out what is known**:
+    **3. Known as Constant (Taking Out Known Factors)**:
 
     If $X$ is $\mathcal{G}$-measurable, then:
 
@@ -85,7 +82,7 @@ Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
     E[XY|\mathcal{G}] = X E[Y|\mathcal{G}] \quad a.s.
     $$
 
-    **4. Independence implies irrelevance**:
+    **4. Independence Implies Irrelevance**:
 
     If $X$ is independent of $\mathcal{G}$, then:
 
@@ -93,7 +90,7 @@ Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
     E[X|\mathcal{G}] = E[X] \quad a.s.
     $$
 
-    > *Matches the projection intuition; independence means it is orthogonal to the hyperplane spanned by $\mathcal{G}$.*
+    > *Consistent with the projection intuition: independence means it is orthogonal to the hyperplane spanned by $\mathcal{G}$.*
 
     **5. Tower Property**:
 
@@ -107,47 +104,46 @@ Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
 
     ??? proof "Complete Derivation of the Last Three Core Properties"
 
-        **3. Proof for Taking out known factors (Standard Machine)**:
+        **3. Proof of Taking Out Known Factors (Standard Machine)**:
         Step 1: Let $X = \chi_B$ (where $B \in \mathcal{G}$). For any test set $A \in \mathcal{G}$, since $A \cap B \in \mathcal{G}$, we have:
 
         $$
         \int_A \chi_B E[Y|\mathcal{G}] dP = \int_{A \cap B} E[Y|\mathcal{G}] dP = \int_{A \cap B} Y dP = \int_A \chi_B Y dP
         $$
 
-        Step 2: Generalize to simple functions $X = \sum a_i \chi_{B_i}$ by linearity.
-        
-        Step 3: For non-negative measurable functions $X \ge 0, Y \ge 0$, there exists a sequence of non-negative simple functions $X_n \uparrow X$. By the Monotone Convergence Theorem, the limit can be exchanged with the integral. The general case is proven by splitting into positive and negative parts.
+        Step 2: Extend to simple functions $X = \sum a_i \chi_{B_i}$ by linearity.
+        Step 3: For non-negative measurable functions $X \ge 0, Y \ge 0$, there exists a sequence of non-negative simple functions $X_n \uparrow X$. By the Monotone Convergence Theorem, the limit can be exchanged with the integral. The general case follows by splitting into positive and negative parts.
 
-        **4. Proof for Independence implies irrelevance**:
+        **4. Proof of Independence Implies Irrelevance**:
         The constant $E[X]$ is naturally $\mathcal{G}$-measurable. For any $A \in \mathcal{G}$, since $X$ is independent of $\mathcal{G}$, $X$ is independent of the indicator function $\chi_A$:
 
         $$
         \int_A X dP = E[X \cdot \chi_A] = E[X] \cdot E[\chi_A] = E[X] P(A) = \int_A E[X] dP
         $$
 
-        This perfectly satisfies the definition of conditional expectation.
+        This fully satisfies the definition of conditional expectation.
 
         **5. Proof of the Tower Property**:
-        Let $Z = E[X|\mathcal{G}]$. Because the sub-algebras are nested $\mathcal{H} \subset \mathcal{G}$, for any $A \in \mathcal{H}$, it must be true that $A \in \mathcal{G}$.
-        By the definition of $Z$, for this set $A$ we have:
+        Let $Z = E[X|\mathcal{G}]$. Due to the nested sub-algebras $\mathcal{H} \subset \mathcal{G}$, for any $A \in \mathcal{H}$, it must hold that $A \in \mathcal{G}$.
+        By the definition of $Z$, for this set $A$, we have:
 
         $$
         \int_A Z dP = \int_A X dP
         $$
 
-        And by the definition of $E[X|\mathcal{H}]$, for the same $A \in \mathcal{H}$ we have:
+        And by the definition of $E[X|\mathcal{H}]$, for the same $A \in \mathcal{H}$, we have:
 
         $$
         \int_A E[X|\mathcal{H}] dP = \int_A X dP
         $$
 
-        Combining the two equations yields $\int_A Z dP = \int_A E[X|\mathcal{H}] dP$. Since the equality holds for all $A \in \mathcal{H}$, and both are $\mathcal{H}$-measurable, they are equal a.s.
+        Combining the two equations yields $\int_A Z dP = \int_A E[X|\mathcal{H}] dP$. Since this equality holds for all $A \in \mathcal{H}$ and both are $\mathcal{H}$-measurable, they are equal almost surely.
 
-!!! tip "Geometric Interpretation: Orthogonal Projection on $L^2$ Space"
+!!! tip "Geometric Interpretation: Orthogonal Projection in $L^2$ Space"
 
     Conditional expectation has an extremely elegant geometric intuition.
 
-    Consider the square-integrable space $L^2(\Omega, \mathcal{F}, P)$, which is a Hilbert space with the inner product defined as:
+    Consider the square-integrable space $L^2(\Omega, \mathcal{F}, P)$, which is a Hilbert space with inner product defined as:
 
     $$
     (X,Y) = E[XY]
@@ -155,7 +151,7 @@ Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
 
     Since $\mathcal{G} \subset \mathcal{F}$, the subspace $L^2(\Omega, \mathcal{G}, P)$ is also a closed subspace.
 
-    From this perspective, **the conditional expectation $E[X|\mathcal{G}]$ is actually the orthogonal projection of the element $X$ onto the subspace $L^2(\Omega, \mathcal{G}, P)$**.
+    From this perspective, **the conditional expectation $E[X|\mathcal{G}]$ is precisely the orthogonal projection of the element $X$ onto the subspace $L^2(\Omega, \mathcal{G}, P)$**.
 
     It minimizes the mean squared error $E[(X - Z)^2]$ among all $\mathcal{G}$-measurable random variables $Z$:
 
@@ -165,105 +161,104 @@ Let $\mathcal{G}, \mathcal{H}$ be sub-$\sigma$-algebras.
 
 ## 3. Jensen's Inequality
 
-Jensen's inequality is a very important inequality regarding the convexity of functions in advanced probability theory.
+Jensen's inequality is a very important inequality concerning the convexity of functions in advanced probability theory.
 
 !!! success "Theorem: Conditional Jensen's Inequality"
 
-    Let $\Phi: \mathbb{R} \rightarrow \mathbb{R}$ be a convex function, and $E[|\Phi(X)|] < \infty$, then:
+    Let $\Phi: \mathbb{R} \rightarrow \mathbb{R}$ be a convex function, and $E[|\Phi(X)|] < \infty$. Then:
 
     $$
     \Phi(E[X|\mathcal{G}]) \le E[\Phi(X)|\mathcal{G}] \quad a.s.
     $$
 
-    **Proof Idea (Approximation via Simple Functions)**:
-    Utilize the discrete property of convex functions $\Phi(\sum a_i b_i) \le \sum b_i \Phi(a_i)$ (where $b_i \ge 0, \sum b_i = 1$). Since conditional expectation can be viewed as a weighted average, we can construct simple functions using indicator functions for approximation, and prove it utilizing the standard route in real analysis from indicator functions to simple functions and then to measurable functions.
+    **Proof Idea (Based on Simple Function Approximation)**:
+    Utilize the discrete property of convex functions: $\Phi(\sum a_i b_i) \le \sum b_i \Phi(a_i)$ (where $b_i \ge 0, \sum b_i = 1$). Since conditional expectation can be viewed as a kind of weighted average, we can construct simple functions using indicator functions for approximation. The proof follows the standard path in real analysis from indicator functions to simple functions to measurable functions.
 
     ??? proof "Proof of Jensen's Inequality"
         
         **Step 1: Proof for Simple Functions**
-        Suppose $X$ is a simple function, which can be expressed as:
+        Assume $X$ is a simple function, which can be expressed as:
 
         $$
         X = \sum_{i=1}^n a_i \chi_{B_i}
         $$
 
-        where $B_i$ are mutually disjoint and $\bigcup_{i=1}^n B_i = \Omega$.
+        where the $B_i$ are disjoint and $\bigcup_{i=1}^n B_i = \Omega$.
         Taking the conditional expectation with respect to $\mathcal{G}$, by linearity:
 
         $$
         E[X|\mathcal{G}] = \sum_{i=1}^n a_i E[\chi_{B_i}|\mathcal{G}]
         $$
 
-        Let $b_i = E[\chi_{B_i}|\mathcal{G}]$. Obviously $b_i \ge 0$, and $\sum_{i=1}^n b_i = E\big[\sum_{i=1}^n \chi_{B_i} \big| \mathcal{G}\big] = E[1|\mathcal{G}] = 1$.
-        This indicates that $b_i$ forms a set of weights for a convex combination.
-        According to the discrete property of convex functions $\Phi(\sum a_i b_i) \le \sum b_i \Phi(a_i)$, we have:
+        Let $b_i = E[\chi_{B_i}|\mathcal{G}]$. Clearly $b_i \ge 0$, and $\sum_{i=1}^n b_i = E\big[\sum_{i=1}^n \chi_{B_i} \big| \mathcal{G}\big] = E[1|\mathcal{G}] = 1$.
+        This shows that the $b_i$ form a set of convex combination weights.
+        According to the discrete property of convex functions, $\Phi(\sum a_i b_i) \le \sum b_i \Phi(a_i)$, we have:
 
         $$
         \Phi(E[X|\mathcal{G}]) = \Phi\left(\sum_{i=1}^n a_i b_i\right) \le \sum_{i=1}^n b_i \Phi(a_i)
         $$
 
-        Substituting the definition of $b_i$ back:
+        Substituting back the definition of $b_i$:
 
         $$
         \sum_{i=1}^n E[\chi_{B_i}|\mathcal{G}] \Phi(a_i) = E\left[\sum_{i=1}^n \Phi(a_i) \chi_{B_i} \bigg| \mathcal{G}\right] = E[\Phi(X)|\mathcal{G}]
         $$
 
-        Therefore, the conclusion holds for simple functions.
+        Thus, the conclusion holds for simple functions.
 
-        **Step 2: Generalization to General Measurable Functions**
+        **Step 2: Extension to General Measurable Functions**
         For a general integrable random variable $X$, we can find a sequence of simple functions $X_n$ such that $X_n \to X$ a.s.
-        Using the limit process (Dominated Convergence Theorem or Monotone Convergence Theorem), combined with the continuity of $\Phi$ as a convex function, taking the limit on both sides extends the inequality to the general case. $\square$
+        Using a limiting process (dominated convergence theorem or monotone convergence theorem), and combining with the continuity of $\Phi$ as a convex function, taking limits on both sides extends the inequality to the general case. $\square$
 
-## 4. Martingales and Doob's Inequalities
+## 4. Martingale and Doob's Inequality
 
-Before studying stochastic differential equations, we need to transition from discrete time to continuous time, introducing the concepts of filtration and martingales.
+Before studying stochastic differential equations, we need to move from discrete time to continuous time and introduce the concepts of filtration and martingale.
 
-!!! abstract "Definition: Discrete Martingales and Continuous Filtration"
+!!! abstract "Definition: Discrete Martingale and Continuous Filtration"
 
-    **1. Discrete Martingale**:
-    Let $X_1, X_2, \dots$ be a sequence of random variables such that $E[|X_i|] < \infty$. If for any $j > i$, we have:
+    **1. Discrete-Time Martingale**:
+    Let $X_1, X_2, \dots$ be a sequence of random variables satisfying $E[|X_i|] < \infty$. If for any $j > i$, we have:
 
     $$
     E[X_j | X_1, \dots, X_i] = X_i \quad a.s.
     $$
 
-    Then $\{X_n\}$ is called a **discrete martingale**. (Represents a fair game; given historical information, the future expectation equals the present).
+    then $\{X_n\}$ is called a **discrete martingale**. (It represents a fair game: given historical information, the future expectation equals the present value.)
     If $E[X_j | X_1, \dots, X_i] \ge X_i$, it is called a **submartingale**.
 
     **2. Continuous-Time Filtration**:
-    In continuous time $t \in [0, \infty)$, we define a monotonically increasing family of $\sigma$-algebras $\{\mathcal{F}_t\}_{t \ge 0}$, meaning when $s \le t$, $\mathcal{F}_s \subset \mathcal{F}_t$. It represents the "historical information" accumulated over time $t$. (e.g., the natural filtration generated by Brownian motion $\mathcal{F}_t = \sigma(B_s, 0 \le s \le t)$).
+    In continuous time $t \in [0, \infty)$, we define a family of monotonically increasing $\sigma$-algebras $\{\mathcal{F}_t\}_{t \ge 0}$, i.e., for $s \le t$, $\mathcal{F}_s \subset \mathcal{F}_t$. It represents the accumulated "historical information" over time $t$. (For example, the natural filtration generated by Brownian motion: $\mathcal{F}_t = \sigma(B_s, 0 \le s \le t)$).
 
     **3. Continuous Martingale**: Let the stochastic process $\{X_t\}$ be adapted to the filtration $\mathcal{F}_t$. If for any $s \le t$, we have $E[X_t | \mathcal{F}_s] = X_s \ a.s.$, then $\{X_t\}$ is called a **continuous martingale**.
 
-
-In stochastic analysis, we often need to control the maximum value of the entire process along its path (e.g., studying the maximum displacement of Brownian motion). Doob's inequality is the most important tool for solving such problems.
+In stochastic analysis, we often need to control the maximum of the entire process along its path (e.g., studying the maximum displacement of Brownian motion). Doob's inequality becomes the most important tool for solving such problems.
 
 !!! info "Theorem: Doob's Maximal Inequality"
 
-    **(1) Sub-linear Bound**: Let $\{X_n\}_{n=1}^N$ be a non-negative submartingale, then for any $\lambda > 0$:
+    **(1) Sublinear Bound**: Let $\{X_n\}_{n=1}^N$ be a nonnegative submartingale. Then for any $\lambda > 0$:
 
     $$
     P\left(\max_{1 \le k \le n} X_k \ge \lambda\right) \le \frac{1}{\lambda} E[X_n I_{\{\max X_k \ge \lambda\}}] \le \frac{1}{\lambda} E[X_n]
     $$
 
-    > *(Note that its form is similar to Chebyshev's inequality, but its power lies in controlling the maximum value of the entire path, not just a single point)*
+    > *(Note its similarity to Chebyshev's inequality, but its power lies in controlling the maximum of the entire path, not just a single point.)*
 
-    **(2) $L^p$ Maximal Inequality**: Let $p > 1$ and $\frac{1}{p} + \frac{1}{q} = 1$. If $\{X_n\}$ is a non-negative submartingale and $X_n \in L^p$, then:
+    **(2) $L^p$ Maximal Inequality**: Let $p > 1$ and $\frac{1}{p} + \frac{1}{q} = 1$. If $\{X_n\}$ is a nonnegative submartingale and $X_n \in L^p$, then:
 
     $$
     E\left[\max_{1 \le k \le n} X_k^p\right] \le \left(\frac{p}{p-1}\right)^p E[X_n^p]
     $$
 
-    ??? proof "Complete Derivation of Doob's Inequality (including sub-linear bound and $L^p$ bound)"
+    ??? proof "Complete Derivation of Doob's Inequality (Including Sublinear Bound and $L^p$ Bound)"
 
-        **Part 1: Proof of Sub-linear Bound**
-        Let $\{X_n\}$ be a non-negative submartingale. For any $\lambda > 0$, we define the first-passage set $A_k$ (i.e., breaking through $\lambda$ for the first time at moment $k$):
+        **Part 1: Proof of the Sublinear Bound**
+        Let $\{X_n\}$ be a nonnegative submartingale. For any $\lambda > 0$, define the first crossing set $A_k$ (i.e., the first time it exceeds $\lambda$ at time $k$):
 
         $$
         A_k = \{X_1 < \lambda, \dots, X_{k-1} < \lambda, X_k \ge \lambda\}
         $$
 
-        1. Obviously, $A_k$ are mutually disjoint, and their union is exactly the event we want to estimate:
+        1. Clearly, the $A_k$ are disjoint, and their union is exactly the event we want to estimate:
 
         $$
         A = \bigcup_{k=1}^n A_k = \left\{\max_{1 \le k \le n} X_k \ge \lambda\right\}
@@ -275,72 +270,72 @@ In stochastic analysis, we often need to control the maximum value of the entire
         \int_{A_k} X_n dP \ge \int_{A_k} X_k dP
         $$
 
-        3. By the definition of $A_k$, on the set $A_k$ it must be true that $X_k \ge \lambda$, thus:
+        3. By the definition of $A_k$, on the set $A_k$, we must have $X_k \ge \lambda$, so:
 
         $$
         \int_{A_k} X_k dP \ge \int_{A_k} \lambda dP = \lambda P(A_k)
         $$
 
-        4. Summing over all $k = 1, \dots, n$. Since $A_k$ are disjoint unions and $X_n \ge 0$:
+        4. Summing over all $k = 1, \dots, n$. Since the $A_k$ are disjoint and $X_n \ge 0$:
 
         $$
         E[X_n] \ge \int_A X_n dP = \sum_{k=1}^n \int_{A_k} X_n dP \ge \lambda \sum_{k=1}^n P(A_k) = \lambda P(A)
         $$
 
-        From this, we obtain $P(\max X_k \ge \lambda) \le \frac{1}{\lambda} \int_A X_n dP \le \frac{1}{\lambda} E[X_n]$. The sub-linear bound is proven.
+        Thus, we obtain $P(\max X_k \ge \lambda) \le \frac{1}{\lambda} \int_A X_n dP \le \frac{1}{\lambda} E[X_n]$. The sublinear bound is proved.
 
         ---
 
         **Part 2: Derivation of the $L^p$ Bound**
-        Let the maximum value variable be $X^* = \max_{1 \le k \le n} X_k$. Using the integral identity for the expectation of a non-negative random variable:
+        Let the maximum variable be $X^* = \max_{1 \le k \le n} X_k$. Using the integral identity for the expectation of a nonnegative random variable:
 
         $$
         E[(X^*)^p] = \int_0^\infty p \lambda^{p-1} P(X^* \ge \lambda) d\lambda
         $$
 
-        Substitute the tighter bound proven in Part 1, $P(X^* \ge \lambda) \le \frac{1}{\lambda} \int_{\{X^* \ge \lambda\}} X_n dP$:
+        Substitute the tighter bound from Part 1: $P(X^* \ge \lambda) \le \frac{1}{\lambda} \int_{\{X^* \ge \lambda\}} X_n dP$:
 
         $$
         E[(X^*)^p] \le \int_0^\infty p \lambda^{p-2} \left( \int_{\{X^* \ge \lambda\}} X_n dP \right) d\lambda
         $$
 
-        **Key Point 1: Fubini's Theorem to swap integration order**. Integrate with respect to $\lambda$ first (note that the upper limit of integration is bounded by $\lambda \le X^*$):
+        **Key Point 1: Apply Fubini's theorem to swap the order of integration**. Integrate with respect to $\lambda$ first (note the upper limit is constrained by $\lambda \le X^*$):
 
         $$
         = \int_{\Omega} X_n \left( \int_0^{X^*} p \lambda^{p-2} d\lambda \right) dP = \int_{\Omega} X_n \left( \frac{p}{p-1} (X^*)^{p-1} \right) dP
         $$
 
-        Factoring out the constant, we get:
+        Extracting the constant, we get:
 
         $$
         E[(X^*)^p] \le \frac{p}{p-1} E\left[X_n (X^*)^{p-1}\right]
         $$
 
-        **Key Point 2: Hölder's Inequality Isolation**. Apply Hölder's inequality to the product on the right side of the above equation (conjugate exponents $\frac{1}{p} + \frac{1}{q} = 1$):
+        **Key Point 2: Apply Hölder's inequality to separate terms**. Apply Hölder's inequality to the product on the right-hand side (with conjugate exponents $\frac{1}{p} + \frac{1}{q} = 1$):
 
         $$
         E\left[X_n (X^*)^{p-1}\right] \le \left( E[X_n^p] \right)^{\frac{1}{p}} \left( E\left[((X^*)^{p-1})^q\right] \right)^{\frac{1}{q}}
         $$
 
-        Since $\frac{1}{p} + \frac{1}{q} = 1$, we have $q = \frac{p}{p-1}$, and thus in the second factor $(p-1)q = p$:
+        Since $\frac{1}{p} + \frac{1}{q} = 1$, we have $q = \frac{p}{p-1}$, and thus $(p-1)q = p$ in the second factor:
 
         $$
         \left( E\left[((X^*)^{p-1})^q\right] \right)^{\frac{1}{q}} = \left( E[(X^*)^p] \right)^{1 - \frac{1}{p}}
         $$
 
-        Substitute Hölder's result back into the original equation:
+        Substituting the result from Hölder back into the original inequality:
 
         $$
         E[(X^*)^p] \le \frac{p}{p-1} \left( E[X_n^p] \right)^{\frac{1}{p}} \left( E[(X^*)^p] \right)^{1 - \frac{1}{p}}
         $$
 
-        Assuming $E[(X^*)^p] < \infty$ (in a strict proof, this can be handled via truncation), divide both sides by $\left( E[(X^*)^p] \right)^{1 - 1/p}$:
+        Assuming $E[(X^*)^p] < \infty$ (in a rigorous proof, truncation can be used), divide both sides by $\left( E[(X^*)^p] \right)^{1 - 1/p}$:
 
         $$
         \left( E[(X^*)^p] \right)^{\frac{1}{p}} \le \frac{p}{p-1} \left( E[X_n^p] \right)^{\frac{1}{p}}
         $$
 
-        Raise both sides to the power of $p$ to get the final conclusion:
+        Raising both sides to the power $p$ yields the final result:
 
         $$
         E\left[\max_{1 \le k \le n} X_k^p\right] \le \left(\frac{p}{p-1}\right)^p E[X_n^p] \quad \square
@@ -348,9 +343,9 @@ In stochastic analysis, we often need to control the maximum value of the entire
 
 ## 5. Borel-Cantelli Lemmas
 
-When studying the orbital properties of stochastic processes and almost surely (a.s.) convergence, we need a powerful tool that can translate "the series summation of probabilities" into "the frequency of event occurrences". This is the extremely famous Borel-Cantelli Lemma in measure theory.
+When studying the sample path properties of stochastic processes and almost sure (a.s.) convergence, we need a powerful tool that can translate "summation of probabilities" into "frequency of event occurrences". This is the extremely famous Borel-Cantelli Lemma in measure theory.
 
-Before introducing the lemma, we first need to define the "limit superior" of a sequence of events:
+Before introducing the lemma, we need to define the "limit superior" for a sequence of events:
 
 !!! abstract "Definition: Limit Superior of Events"
 
@@ -360,13 +355,13 @@ Before introducing the lemma, we first need to define the "limit superior" of a 
     \limsup_{n \to \infty} A_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k
     $$
 
-    **Probability Intuition**:
-    A sample point $\omega \in \limsup_{n \to \infty} A_n$ if and only if $\omega$ belongs to infinitely many $A_k$. In other words, the limit superior set represents the collection of events that **"occur infinitely often (i.o.)"**.
+    **Probabilistic Intuition**:
+    A sample point $\omega \in \limsup_{n \to \infty} A_n$ if and only if $\omega$ belongs to infinitely many $A_k$. In other words, the limit superior set represents the collection of those events that occur **"infinitely often (abbreviated as i.o.)"**.
     Therefore, we often denote it as $P(A_n \text{ i.o.})$.
 
-The Borel-Cantelli Lemma is divided into two parts, which provide the sufficient and necessary conditions for an event to occur infinitely often, respectively.
+The Borel-Cantelli Lemma consists of two parts, providing sufficient and necessary conditions for events to occur infinitely often, respectively.
 
-!!! info "Theorem: First Borel-Cantelli Lemma (Convergence Part)"
+!!! info "Theorem: Borel-Cantelli First Lemma (Convergence Part)"
 
     If a sequence of events $\{A_n\}_{n=1}^\infty$ satisfies that its probability series converges, i.e.:
 
@@ -374,82 +369,82 @@ The Borel-Cantelli Lemma is divided into two parts, which provide the sufficient
     \sum_{n=1}^\infty P(A_n) < \infty
     $$
 
-    Then the probability that these events occur infinitely often is 0:
+    then the probability that these events occur infinitely often is 0:
 
     $$
     P(\limsup_{n \to \infty} A_n) = 0
     $$
 
-    > *(Note: The First Lemma **does not** require any independence assumption between events; this is an extremely powerful and universal conclusion!)*
+    > *(Note: The First Lemma does **NOT** require any independence assumption among the events. This is an extremely powerful and universal conclusion!)*
 
-    ??? proof "Strict Proof of the First B-C Lemma (Click to expand)"
+    ??? proof "Rigorous Proof of the B-C First Lemma (click to expand)"
 
-        Let $B_n = \bigcup_{k=n}^\infty A_k$. Obviously, the sequence $\{B_n\}$ is a monotonically decreasing sequence of sets, i.e., $B_1 \supset B_2 \supset B_3 \dots$.
-        According to the continuity of probability measure (continuity from above), the probability of the limit superior can be written as the limit of the probabilities:
+        Let $B_n = \bigcup_{k=n}^\infty A_k$. Clearly, the sequence $\{B_n\}$ is a monotonically decreasing sequence of sets, i.e., $B_1 \supset B_2 \supset B_3 \dots$.
+        According to the continuity of the probability measure (continuity from above), the probability of the limit superior can be written as the limit of probabilities:
 
         $$
         P\left( \bigcap_{n=1}^\infty B_n \right) = \lim_{n \to \infty} P(B_n) = \lim_{n \to \infty} P\left( \bigcup_{k=n}^\infty A_k \right)
         $$
 
-        Using the subadditivity of probability (Boole's Inequality), we bound the union:
+        Using the subadditivity of probability (Boole's inequality), we bound the union:
 
         $$
         P\left( \bigcup_{k=n}^\infty A_k \right) \le \sum_{k=n}^\infty P(A_k)
         $$
 
-        Since it is given that the entire infinite series $\sum_{k=1}^\infty P(A_k)$ converges, according to the property of convergent series in calculus, its "Tail sum" must tend to 0 as $n \to \infty$:
+        Since it is known that the entire infinite series $\sum_{k=1}^\infty P(A_k)$ converges, by the property of convergent series in calculus, its "tail sum" must tend to 0 as $n \to \infty$:
 
         $$
         \lim_{n \to \infty} \sum_{k=n}^\infty P(A_k) = 0
         $$
 
-        Combining the upper and lower parts, since probability is non-negative, the Squeeze Theorem yields:
+        Combining the parts above, and since probability is non-negative, by the Squeeze Theorem we obtain:
 
         $$
         P\left( \limsup_{n \to \infty} A_n \right) = 0 \quad \square
         $$
 
-In contrast to the First Lemma, the Second Lemma discusses the situation when the series diverges, but it additionally requires an extremely stringent condition: independence.
+In contrast to the First Lemma, the Second Lemma discusses the situation when the series diverges, but it imposes an extremely stringent additional condition: independence.
 
-!!! success "Theorem: Second Borel-Cantelli Lemma (Divergence Part)"
+!!! success "Theorem: Borel-Cantelli Second Lemma (Divergence Part)"
 
-    If a sequence of events $\{A_n\}_{n=1}^\infty$ is **Mutually Independent**, and its probability series diverges, i.e.:
+    If the sequence of events $\{A_n\}_{n=1}^\infty$ is **Mutually Independent**, and its probability series diverges, i.e.:
 
     $$
     \sum_{n=1}^\infty P(A_n) = \infty
     $$
 
-    Then the probability that these events occur infinitely often is 1:
+    then the probability that these events occur infinitely often is 1:
 
     $$
     P(\limsup_{n \to \infty} A_n) = 1
     $$
 
-    ??? proof "Strict Proof of the Second B-C Lemma (Click to expand)"
+    ??? proof "Rigorous Proof of the B-C Second Lemma (click to expand)"
 
-        Directly proving that the probability of an event occurring is 1 is often quite difficult, so we instead prove that the probability of its complementary event is 0.
-        Using De Morgan's laws, the complement of the limit superior set (i.e., the limit inferior $\liminf$) is:
+        Directly proving that an event has probability 1 is often difficult. Instead, we prove that the probability of its complementary event is 0.
+        Using De Morgan's law, the complement of the limit superior set (i.e., the $\liminf$ limit inferior) is:
 
         $$
         \left( \limsup_{n \to \infty} A_n \right)^c = \left( \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k \right)^c = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k^c
         $$
 
-        This implies that we only need to prove that for any given $n \ge 1$, we have $P\left( \bigcap_{k=n}^\infty A_k^c \right) = 0$.
+        This means we only need to prove that for any given $n \ge 1$, we have $P\left( \bigcap_{k=n}^\infty A_k^c \right) = 0$.
         
-        For any finite integer $m > n$, since the event sequence $\{A_k\}$ is mutually independent, their complements $\{A_k^c\}$ are also mutually independent. Therefore, the probability of the intersection equals the product of the probabilities:
+        For any finite integer $m > n$, since the sequence of events $\{A_k\}$ is mutually independent, their complements $\{A_k^c\}$ are also mutually independent. Therefore, the probability of the intersection equals the product of the probabilities:
 
         $$
         P\left( \bigcap_{k=n}^m A_k^c \right) = \prod_{k=n}^m P(A_k^c) = \prod_{k=n}^m (1 - P(A_k))
         $$
 
-        Here we introduce an elementary inequality extremely commonly used in probability bounds: for any $x \ge 0$, we have $1 - x \le e^{-x}$.
-        Applying this to the continued product above:
+        Here we introduce an elementary inequality that is extremely useful for bounding in probability theory: for any $x \ge 0$, $1 - x \le e^{-x}$.
+        Applying this to the product above:
 
         $$
         \prod_{k=n}^m (1 - P(A_k)) \le \prod_{k=n}^m e^{-P(A_k)} = \exp\left( -\sum_{k=n}^m P(A_k) \right)
         $$
 
-        Now, let $m \to \infty$. Since the given condition states the series $\sum_{k=1}^\infty P(A_k) = \infty$, for any fixed starting term $n$, its partial sum $\sum_{k=n}^\infty P(A_k)$ must also tend to $\infty$.
+        Now, let $m \to \infty$. Since the given condition states $\sum_{k=1}^\infty P(A_k) = \infty$, for any fixed starting index $n$, its partial sum $\sum_{k=n}^\infty P(A_k)$ must also tend to $\infty$.
         Therefore:
 
         $$
@@ -457,10 +452,10 @@ In contrast to the First Lemma, the Second Lemma discusses the situation when th
         $$
 
         By the non-negativity of probability, the probability of this intersection must be 0.
-        Since the probability is 0 for any $n$, the countable union of these measure-zero sets (i.e., the complement of the original set) still has a probability of 0:
+        Since the probability is 0 for any $n$, the countable union of these null sets (i.e., the complement of the original set) still has probability 0:
 
         $$
         P\left( \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k^c \right) \le \sum_{n=1}^\infty P\left( \bigcap_{k=n}^\infty A_k^c \right) = 0
         $$
 
-        Therefore, the probability of the original event occurring is $1 - 0 = 1$. The proof is complete. $\square$
+        Hence, the probability of the original event is $1 - 0 = 1$. Proof complete. $\square$

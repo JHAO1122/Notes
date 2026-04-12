@@ -6,22 +6,22 @@ tags:
   - Exercise Solutions
 ---
 
-# 📝 Selected Exercise Solutions: Multivariate Itô Formula & SDE Solving
+# 📝 Exercise Solutions: Multivariate Itô's Formula and SDE Solving in Practice
 
 !!! abstract "About This Page"
-    This page contains solutions to core exercises from Chapter 5 (Multivariate Itô Formula) and Chapter 6 (Exact Solutions of SDEs) of the *Stochastic Differential Equations* course. The content covers the calculus rules for multi-dimensional Brownian motion, martingale construction, Bessel processes, and advanced techniques such as the integrating factor method for solving complex SDEs.
+    This page contains detailed solutions to key exercises from Chapter 5 (Multivariate Itô's Formula) and Chapter 6 (Exact Solutions of Stochastic Differential Equations) of the *Stochastic Differential Equations* course. The content covers the calculus rules for multi-dimensional Brownian motion, the construction and verification of martingales, Bessel processes, and advanced practical techniques for solving complex SDEs using integrating factor methods and undetermined function methods.
 
 ---
 
-## Part I: Chapter 5 Multivariate Itô Formula & Martingale Verification
+## Part I: Chapter 5 Multidimensional Itô's Formula and Martingale Verification
 
 ### Exercise 1
 **Problem**
-Let $W = (W^1, \dots, W^n)$ be an $n$-dimensional Brownian motion. Prove that $Y(t) = |W(t)|^2 - nt$ ($t \ge 0$) is a martingale.
+Let $W = (W^1, \cdots, W^n)$ be an $n$-dimensional Brownian motion. Prove that $Y(t) = |W(t)|^2 - nt$ ($t \ge 0$) is a martingale.
 
-??? success "Solution (Click to expand)"
+??? success "Solution (click to expand)"
 
-    This problem can be solved directly by applying the multivariate Itô formula to prove that the drift term is zero.
+    This problem can be directly proven using the multidimensional Itô's formula, showing the drift term is zero.
     
     First, expand the squared norm of the $n$-dimensional Brownian motion as the sum of squares of its components:
     
@@ -29,115 +29,117 @@ Let $W = (W^1, \dots, W^n)$ be an $n$-dimensional Brownian motion. Prove that $Y
     |W(t)|^2 = \sum_{i=1}^n (W^i(t))^2
     $$
     
-    Apply the one-dimensional Itô formula to a single component $(W^i(t))^2$:
+    Apply the one-dimensional Itô's formula to a single component $(W^i(t))^2$:
     
     $$
     d((W^i)^2) = 2W^i dW^i + \frac{1}{2} \cdot 2 (dW^i)^2 = 2W^i dW^i + dt
     $$
     
-    Summing over all components, according to the linearity of the differential:
+    Summing over all components, using the linearity of the differential:
     
     $$
     d(|W(t)|^2) = \sum_{i=1}^n d((W^i)^2) = \sum_{i=1}^n (2W^i dW^i + dt) = 2\sum_{i=1}^n W^i dW^i + n dt
     $$
     
-    Now return to the original process $Y(t) = |W(t)|^2 - nt$, and differentiate it:
+    Now consider the original process $Y(t) = |W(t)|^2 - nt$ and compute its differential:
     
     $$
     dY(t) = d(|W(t)|^2) - d(nt) = \left( 2\sum_{i=1}^n W^i dW^i + n dt \right) - n dt = 2\sum_{i=1}^n W^i dW^i
     $$
     
-    Writing this in integral form:
+    Writing it in integral form:
     
     $$
     Y(t) - Y(0) = 2 \int_0^t \sum_{i=1}^n W^i(s) dW^i(s)
     $$
     
-    Since the right-hand side contains only Itô integrals with respect to Brownian motion, and the integrand $2W^i(s)$ is square-integrable over compact intervals, this integral process is a martingale. Thus, $Y(t)$ is also a martingale. The proof is complete.
+    Since the right-hand side consists only of Itô integrals with respect to Brownian motion, and the integrands $2W^i(s)$ are square-integrable on compact intervals, this integral process is a martingale. Therefore, $Y(t)$ is also a martingale. Q.E.D.
 
 ---
 
 ### Exercise 2
 **Problem**
-Let $W = (W^1, \dots, W^n)^T$ be an $n$-dimensional Brownian motion. Denote $R = |W|$. Prove that $R$ satisfies the following Stochastic Bessel Equation:
+Let $W = (W^1, \cdots, W^n)^T$ be an $n$-dimensional Brownian motion. Denote $R = |W|$. Prove that $R$ satisfies the following stochastic Bessel equation:
+
 $$dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i$$
 
-??? success "Solution (Click to expand)"
+??? success "Solution (click to expand)"
 
-    Here we let the multivariate function be $f(x) = |x| = \left(\sum_{i=1}^n (x^i)^2\right)^{1/2}$. Calculate its partial derivatives:
+    Here we define the multivariate function $f(x) = |x| = \left(\sum_{i=1}^n (x^i)^2\right)^{1/2}$. Compute its partial derivatives:
     
-    First-order partial derivative:
+    First-order partial derivatives:
     
     $$
     f_{x^i} = \frac{1}{2} \left(\sum_{j=1}^n (x^j)^2\right)^{-1/2} \cdot 2x^i = \frac{x^i}{|x|} = \frac{x^i}{R}
     $$
     
-    Second-order partial derivative (using the quotient rule):
+    Second-order partial derivatives (using the quotient rule):
     
     $$
     f_{x^i x^i} = \frac{1 \cdot R - x^i \cdot f_{x^i}}{R^2} = \frac{R - x^i (x^i / R)}{R^2} = \frac{1}{R} - \frac{(x^i)^2}{R^3}
     $$
     
-    The multi-dimensional Itô formula requires the Laplacian (the sum of all second-order pure partial derivatives). Summing them up:
+    The multidimensional Itô's formula requires the Laplacian (sum of all second-order pure partials). Summing them:
     
     $$
     \sum_{i=1}^n f_{x^i x^i} = \sum_{i=1}^n \left( \frac{1}{R} - \frac{(x^i)^2}{R^3} \right) = \frac{n}{R} - \frac{\sum_{i=1}^n (x^i)^2}{R^3} = \frac{n}{R} - \frac{R^2}{R^3} = \frac{n-1}{R}
     $$
     
-    Substitute $X_t = W_t$ into the $n$-dimensional Itô formula $df(W_t) = \sum_{i=1}^n f_{x^i} dW^i + \frac{1}{2} \sum_{i=1}^n f_{x^i x^i} dt$ (Note: since Brownian motions in different dimensions are independent, the cross terms $dW^i dW^j = 0$):
+    Substitute $X_t = W_t$ into the $n$-dimensional Itô's formula $df(W_t) = \sum_{i=1}^n f_{x^i} dW^i + \frac{1}{2} \sum_{i=1}^n f_{x^i x^i} dt$ (Note: Since Brownian motions in different dimensions are independent, cross terms $dW^i dW^j = 0$):
     
     $$
     dR = d(|W|) = \sum_{i=1}^n \frac{W^i}{R} dW^i + \frac{1}{2} \left( \frac{n-1}{R} \right) dt
     $$
     
-    Rearranging this gives the classical form of the high-dimensional Bessel process:
+    Rearranging yields the classic form of the high-dimensional Bessel process:
     
     $$
     dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i
     $$
     
-    The proof is complete.
+    Q.E.D.
 
 ---
 
 ### Exercise 3
 **Problem**
-(1) Verify that $X = (\cos W, \sin W)$ is a solution to $dX^1 = -\frac{1}{2}X^1 dt - X^2 dW, \quad dX^2 = -\frac{1}{2}X^2 dt + X^1 dW$.
+(1) Verify that $X = (\cos W, \sin W)$ is a solution to
+$dX^1 = -\frac{1}{2}X^1 dt - X^2 dW, \quad dX^2 = -\frac{1}{2}X^2 dt + X^1 dW$
 (2) Prove that if $X = (X^1, X^2)$ is a solution to the above system, then $|X|$ is a constant independent of time.
 
-??? success "Solution (Click to expand)"
+??? success "Solution (click to expand)"
 
-    **(1) Verification of the Solution**
-    Given $X^1 = \cos W(t)$, applying the one-dimensional Itô formula to it:
+    **(1) Verifying the solution form**
+    Given $X^1 = \cos W(t)$, apply the one-dimensional Itô's formula:
     
     $$
     dX^1 = d(\cos W) = -\sin W dW - \frac{1}{2} \cos W dt = -X^2 dW - \frac{1}{2} X^1 dt
     $$
     
-    Given $X^2 = \sin W(t)$, similarly applying Itô's formula:
+    Given $X^2 = \sin W(t)$, similarly apply Itô's formula:
     
     $$
     dX^2 = d(\sin W) = \cos W dW - \frac{1}{2} \sin W dt = X^1 dW - \frac{1}{2} X^2 dt
     $$
     
-    The calculated results match the SDEs given in the problem exactly, thus $X = (\cos W, \sin W)$ is a solution to the system.
+    The computed results exactly match the SDE given in the problem statement. Therefore, $X = (\cos W, \sin W)$ is a solution to the system.
 
     <br>
 
-    **(2) Proof of Conservation of Norm**
-    We examine the differential of $|X|^2 = (X^1)^2 + (X^2)^2$. By the product rule (or Itô's formula):
+    **(2) Proving norm conservation**
+    Consider the differential of $|X|^2 = (X^1)^2 + (X^2)^2$. By the product rule (or Itô's formula):
     
     $$
     d((X^1)^2) = 2X^1 dX^1 + \langle dX^1, dX^1 \rangle
     $$
     
-    Substitute the system equations and note the quadratic variation $\langle dX^1, dX^1 \rangle = (-X^2)^2 dt = (X^2)^2 dt$:
+    Substitute the system equations, noting the quadratic variation $\langle dX^1, dX^1 \rangle = (-X^2)^2 dt = (X^2)^2 dt$:
     
     $$
     d((X^1)^2) = 2X^1 \left( -\frac{1}{2}X^1 dt - X^2 dW \right) + (X^2)^2 dt = -(X^1)^2 dt - 2X^1 X^2 dW + (X^2)^2 dt
     $$
     
-    Similarly for $X^2$:
+    Similarly, for $X^2$:
     
     $$
     d((X^2)^2) = 2X^2 dX^2 + \langle dX^2, dX^2 \rangle = 2X^2 \left( -\frac{1}{2}X^2 dt + X^1 dW \right) + (X^1)^2 dt
@@ -147,13 +149,13 @@ $$dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i$$
     d((X^2)^2) = -(X^2)^2 dt + 2X^1 X^2 dW + (X^1)^2 dt
     $$
     
-    Summing the two equations:
+    Adding the two equations:
     
     $$
     d(|X|^2) = d((X^1)^2) + d((X^2)^2) = \left[ -(X^1)^2 + (X^2)^2 - (X^2)^2 + (X^1)^2 \right] dt + [-2X^1 X^2 + 2X^1 X^2] dW = 0
     $$
     
-    Since $d(|X|^2) = 0$, this means the squared norm does not change with time. Therefore, $|X|$ is a constant independent of time. The proof is complete.
+    Since $d(|X|^2) = 0$, the squared norm does not change with time, implying $|X|$ is a constant independent of time. Q.E.D.
 
 ---
 
@@ -161,11 +163,11 @@ $$dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i$$
 **Problem**
 Prove that $X(t) = (W(t)+t)\exp\left(-W(t)-\frac{1}{2}t\right)$ is a martingale.
 
-??? success "Solution (Click to expand)"
+??? success "Solution (click to expand)"
 
-    The standard approach for verifying a martingale is: let $X(t) = u(W(t), t)$, expand it using Itô's formula, and prove that the drift term (the $dt$ term) is identically 0.
+    The standard approach to verify a martingale is: Let $X(t) = u(W(t), t)$, expand using Itô's formula, and prove the drift term (the $dt$ term) is identically zero.
     
-    Let the function $u(x, t) = (x+t)\exp\left(-x-\frac{1}{2}t\right)$. We calculate its partial derivatives respectively:
+    Define the function $u(x, t) = (x+t)\exp\left(-x-\frac{1}{2}t\right)$. Compute its partial derivatives:
     
     Derivative with respect to $t$:
     
@@ -173,13 +175,13 @@ Prove that $X(t) = (W(t)+t)\exp\left(-W(t)-\frac{1}{2}t\right)$ is a martingale.
     u_t = \exp\left(-x-\frac{1}{2}t\right) - \frac{1}{2}(x+t)\exp\left(-x-\frac{1}{2}t\right)
     $$
     
-    First-order derivative with respect to $x$:
+    First derivative with respect to $x$:
     
     $$
     u_x = \exp\left(-x-\frac{1}{2}t\right) - (x+t)\exp\left(-x-\frac{1}{2}t\right)
     $$
     
-    Second-order derivative with respect to $x$:
+    Second derivative with respect to $x$:
     
     $$
     u_{xx} = -\exp\left(-x-\frac{1}{2}t\right) - \left[ \exp\left(-x-\frac{1}{2}t\right) - (x+t)\exp\left(-x-\frac{1}{2}t\right) \right]
@@ -189,19 +191,19 @@ Prove that $X(t) = (W(t)+t)\exp\left(-W(t)-\frac{1}{2}t\right)$ is a martingale.
     u_{xx} = -2\exp\left(-x-\frac{1}{2}t\right) + (x+t)\exp\left(-x-\frac{1}{2}t\right)
     $$
     
-    Now we substitute into the Itô drift term formula: $\text{drift} = u_t + \frac{1}{2}u_{xx}$
+    Now substitute into the Itô drift term formula: $drift = u_t + \frac{1}{2}u_{xx}$
     
     $$
     u_t + \frac{1}{2}u_{xx} = \left[ 1 - \frac{1}{2}(x+t) \right] \exp(\dots) + \frac{1}{2} \left[ -2 + (x+t) \right] \exp(\dots)
     $$
     
-    Extracting the common factor $\exp\left(-x-\frac{1}{2}t\right)$:
+    Factor out the common term $\exp\left(-x-\frac{1}{2}t\right)$:
     
     $$
     = \left( 1 - \frac{1}{2}(x+t) - 1 + \frac{1}{2}(x+t) \right) \exp\left(-x-\frac{1}{2}t\right) = 0 \cdot \exp(\dots) = 0
     $$
     
-    Since the drift term $u_t + \frac{1}{2}u_{xx} \equiv 0$, this implies that $dX(t) = u_x dW(t)$. Because there is no $dt$ term, this integral process constitutes a martingale. The proof is complete.
+    Since the drift term $u_t + \frac{1}{2}u_{xx} \equiv 0$, this implies $dX(t) = u_x dW(t)$. As there is no $dt$ term, this integral process constitutes a martingale. Q.E.D.
 
 ---
 
@@ -209,12 +211,12 @@ Prove that $X(t) = (W(t)+t)\exp\left(-W(t)-\frac{1}{2}t\right)$ is a martingale.
 **Problem**
 Prove that the solution to the stochastic differential equation $dX(t) = \frac{1}{3}X(t)^{1/3} dt + X(t)^{2/3} dW(t)$ with initial value $X(0) = x_0 > 0$ is $X(t) = \left( x_0^{1/3} + \frac{1}{3}W(t) \right)^3$.
 
-??? success "Solution (Click to expand)"
+??? success "Solution (click to expand)"
 
-    This is a classic problem to test the "guess and verify" rule.
-    We directly treat the given solution $X(t)$ as a composite function and find its stochastic differential via Itô's formula to see if it matches the SDE in the problem.
+    This problem is a classic example of the "guess-and-verify" method.
+    We directly treat the given solution $X(t)$ as a composite function and compute its stochastic differential via Itô's formula to see if it matches the given SDE.
     
-    Let the auxiliary process be $Y(t) = x_0^{1/3} + \frac{1}{3}W(t)$, so the original solution can be written as $X(t) = Y(t)^3$.
+    Define the auxiliary process $Y(t) = x_0^{1/3} + \frac{1}{3}W(t)$. Then the proposed solution can be written as $X(t) = Y(t)^3$.
     
     First, the differential of the auxiliary process $Y(t)$ is:
     
@@ -228,7 +230,7 @@ Prove that the solution to the stochastic differential equation $dX(t) = \frac{1
     (dY(t))^2 = \left( \frac{1}{3} dW(t) \right)^2 = \frac{1}{9} dt
     $$
     
-    Next, use Itô's formula to expand $f(Y) = Y^3$. Calculate the derivatives: $f'(Y) = 3Y^2$, $f''(Y) = 6Y$.
+    Next, apply Itô's formula to $f(Y) = Y^3$. Compute derivatives: $f'(Y) = 3Y^2$, $f''(Y) = 6Y$.
     
     $$
     dX(t) = d(Y^3) = 3Y^2 dY(t) + \frac{1}{2}(6Y) (dY(t))^2
@@ -244,48 +246,47 @@ Prove that the solution to the stochastic differential equation $dX(t) = \frac{1
     dX(t) = Y^2 dW(t) + \frac{1}{3}Y dt
     $$
     
-    Finally, since $Y(t) = X(t)^{1/3}$, substitute this back to eliminate the auxiliary variable $Y$:
+    Finally, since $Y(t) = X(t)^{1/3}$, substitute back to eliminate the auxiliary variable $Y$:
     
     $$
     dX(t) = (X(t)^{1/3})^2 dW(t) + \frac{1}{3} X(t)^{1/3} dt = X(t)^{2/3} dW(t) + \frac{1}{3} X(t)^{1/3} dt
     $$
     
-    This is completely identical to the SDE given in the problem! Furthermore, when $t=0$, $X(0) = (x_0^{1/3} + 0)^3 = x_0$, so the initial condition is also satisfied. Therefore, the proof is complete.
+    This exactly matches the stochastic differential equation given in the problem! Moreover, at $t=0$, $X(0) = (x_0^{1/3} + 0)^3 = x_0$, satisfying the initial condition. Thus the proof is complete.
 
 ---
 <br>
-
-## Part II: Chapter 6 Solving Stochastic Differential Equations
+## Part II: Chapter 6 Practical Solutions of Stochastic Differential Equations
 
 ### Exercise 1
 **Problem**
-Solve the stochastic differential equations:
+Solve the stochastic differential equations
 (1) $dX = X dt + e^{-t} dW$
 (2) $dX_1 = dt + dW_1, \quad dX_2 = X_1 dW_2$
 
 ??? success "Solution (Click to expand)"
 
-    **(1) Solve $dX_t = X_t dt + e^{-t} dW_t$**
-    This is a linear SDE, so we can use the integrating factor method. Rearranging gives $dX_t - X_t dt = e^{-t} dW_t$.
+    **(1) Solving $dX_t = X_t dt + e^{-t} dW_t$**
+    This is a linear SDE, and we can use the integrating factor method. Rearranging gives $dX_t - X_t dt = e^{-t} dW_t$.
     Consider multiplying by the integrating factor $F_t = e^{-t}$. We examine the differential of the process $Y_t = e^{-t} X_t$:
     
     $$
     dY_t = d(e^{-t}X_t) = -e^{-t}X_t dt + e^{-t}dX_t
     $$
     
-    Substitute $dX_t$ from the original equation:
+    Substituting $dX_t$ from the original equation:
     
     $$
     dY_t = -e^{-t}X_t dt + e^{-t}(X_t dt + e^{-t} dW_t) = -e^{-t}X_t dt + e^{-t}X_t dt + e^{-2t} dW_t = e^{-2t} dW_t
     $$
     
-    Integrate both sides:
+    Integrating both sides:
     
     $$
     Y_t - Y_0 = \int_0^t e^{-2s} dW_s
     $$
     
-    Substitute back $Y_t = e^{-t}X_t$ to get the final solution:
+    Substituting back $Y_t = e^{-t}X_t$, we obtain the final solution:
     
     $$
     e^{-t}X_t = X_0 + \int_0^t e^{-2s} dW_s \implies X(t) = e^t X(0) + \int_0^t e^{t-2s} dW(s)
@@ -293,20 +294,20 @@ Solve the stochastic differential equations:
 
     <br>
 
-    **(2) Solve $dX_1 = dt + dW_1, \quad dX_2 = X_1 dW_2$**
-    This is a hierarchical SDE; solve the first layer first. Integrate the first equation directly:
+    **(2) Solving $dX_1 = dt + dW_1, \quad dX_2 = X_1 dW_2$**
+    This is a hierarchical SDE. First, solve the first layer. Directly integrate the first equation:
     
     $$
     X_1(t) = X_1(0) + \int_0^t ds + \int_0^t dW_1(s) = X_1(0) + t + W_1(t)
     $$
     
-    Substitute the explicit expression found for $X_1(t)$ into the second equation:
+    Substitute the explicit expression for $X_1(t)$ into the second equation:
     
     $$
     dX_2(t) = (X_1(0) + t + W_1(t)) dW_2(t)
     $$
     
-    Integrate directly to get the final solution:
+    Direct integration yields the final solution:
     
     $$
     X_2(t) = X_2(0) + X_1(0) W_2(t) + \int_0^t s dW_2(s) + \int_0^t W_1(s) dW_2(s)
@@ -316,13 +317,14 @@ Solve the stochastic differential equations:
 
 ### Exercise 2
 **Problem**
-Show that $X(t) = (a\cos W(t), b\sin W(t))^T$ (where $a, b$ are positive constants) is a solution to the following stochastic differential equation:
+Prove that $X(t) = (a\cos W(t), b\sin W(t))^T$ (where $a, b$ are positive constants) is a solution to the following stochastic differential equation
+
 $$dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 & -\frac{a}{b} \\ \frac{b}{a} & 0 \end{pmatrix} X dW$$
 
 ??? success "Solution (Click to expand)"
 
-    This problem introduces a matrix form to SDEs. We expand the given matrix into a system of equations.
-    Let the matrix $M = \begin{pmatrix} 0 & -a/b \\ b/a & 0 \end{pmatrix}$, then $MX = \begin{pmatrix} 0 & -a/b \\ b/a & 0 \end{pmatrix} \begin{pmatrix} X^1 \\ X^2 \end{pmatrix} = \begin{pmatrix} -\frac{a}{b}X^2 \\ \frac{b}{a}X^1 \end{pmatrix}$.
+    This problem introduces matrix form into the SDE. We expand the given matrix into a system of equations.
+    Let the matrix $M = \begin{pmatrix} 0 & -a/b \\ b/a & 0 \end{pmatrix}$. Then $MX = \begin{pmatrix} 0 & -a/b \\ b/a & 0 \end{pmatrix} \begin{pmatrix} X^1 \\ X^2 \end{pmatrix} = \begin{pmatrix} -\frac{a}{b}X^2 \\ \frac{b}{a}X^1 \end{pmatrix}$.
     
     Therefore, the original SDE is equivalent to the following two scalar equations:
     
@@ -341,77 +343,78 @@ $$dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 & -\frac{a}{b} \\ \frac{b}{a} & 0 \e
     dX^1 = d(a\cos W) = -a\sin W dW - \frac{1}{2}a\cos W dt
     $$
     
-    Substitute the definitions of $X^1$ and $X^2$ into the right side: since $X^2 = b\sin W$, we have $\sin W = X^2/b$, thus $-a\sin W = -a(X^2/b) = -\frac{a}{b}X^2$.
+    Substituting the definitions of $X^1$ and $X^2$ into the right-hand side: Since $X^2 = b\sin W$, i.e., $\sin W = X^2/b$, we have $-a\sin W = -a(X^2/b) = -\frac{a}{b}X^2$.
     
     $$
     dX^1 = -\frac{a}{b}X^2 dW - \frac{1}{2}X^1 dt
     $$
     
-    This matches the first scalar equation perfectly!
+    This perfectly matches the first scalar equation!
     
-    Verify $X^2$ similarly:
+    Similarly, verify $X^2$:
     
     $$
     dX^2 = d(b\sin W) = b\cos W dW - \frac{1}{2}b\sin W dt
     $$
     
-    Since $X^1 = a\cos W$, we have $\cos W = X^1/a$, thus $b\cos W = \frac{b}{a}X^1$. Substituting this gives:
+    Since $X^1 = a\cos W$, i.e., $\cos W = X^1/a$, we have $b\cos W = \frac{b}{a}X^1$. Substituting:
     
     $$
     dX^2 = \frac{b}{a}X^1 dW - \frac{1}{2}X^2 dt
     $$
     
-    This matches the second scalar equation perfectly. The verification is complete.
+    This perfectly matches the second scalar equation. Verification complete.
 
 ---
 
 ### Exercise 3
 **Problem**
-Show that $X_t = e^{W_t}$ is a solution to the following stochastic differential equation:
+Prove that $X_t = e^{W_t}$ is a solution to the following stochastic differential equation:
+
 $$dX_t = \frac{1}{2}X_t dt + X_t dW_t$$
 
 ??? success "Solution (Click to expand)"
 
     This problem is the simplest degenerate version of the Black-Scholes geometric Brownian motion model.
     
-    Let the function $f(x) = e^x$. Substitute its derivatives $f'(x) = e^x, f''(x) = e^x$ and $W_t$ into Itô's formula:
+    Let the function $f(x) = e^x$. Substituting its derivatives $f'(x) = e^x, f''(x) = e^x$ and $W_t$ into Itô's formula:
     
     $$
     df(W_t) = f'(W_t)dW_t + \frac{1}{2}f''(W_t)(dW_t)^2
     $$
     
-    Since the quadratic variation $(dW_t)^2 = dt$, substitute it into the exponential function:
+    Since the quadratic variation $(dW_t)^2 = dt$, and substituting the exponential function:
     
     $$
     d(e^{W_t}) = e^{W_t} dW_t + \frac{1}{2} e^{W_t} dt
     $$
     
-    Then substitute the definition $X_t = e^{W_t}$ back into the coefficients on the right side:
+    Replacing the coefficients on the right-hand side with the definition $X_t = e^{W_t}$:
     
     $$
     dX_t = X_t dW_t + \frac{1}{2} X_t dt
     $$
     
-    Swapping the order gives $dX_t = \frac{1}{2}X_t dt + X_t dW_t$, which perfectly matches the equation in the problem. The proof is complete.
+    Rearranging the order gives $dX_t = \frac{1}{2}X_t dt + X_t dW_t$, which perfectly matches the equation in the problem. Q.E.D.
 
 ---
 
 ### Exercise 4
 **Problem**
-Solve the stochastic differential equation:
+Solve the stochastic differential equation
 
 $$dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0$$
 
 ??? success "Solution (Click to expand)"
 
-    Since the coefficients of the equation explicitly contain time $t$ and Brownian motion $W_t$, we use the **Guess and Verify** (method of undetermined functions).
-    Assume the solution has the form $X_t = f(t, W_t)$. Expand the multi-variable function $f$ using Itô's formula:
+    Since the coefficients of the equation explicitly contain time $t$ and Brownian motion $W_t$, we use the **Guess and Verify** method.
+    Assume the solution has the form $X_t = f(t, W_t)$. Expand Itô's formula for the multivariate function $f$:
     
     $$
     dX_t = \left( f_t + \frac{1}{2}f_{ww} \right) dt + f_w dW_t
     $$
     
-    Compare this term by term with the given SDE:
+    Compare it term-by-term with the given SDE:
     
     **1. Match the coefficient of $dW_t$:**
     
@@ -419,7 +422,7 @@ $$dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0$$
     f_w(t, w) = 1 + 2e^t w
     $$
     
-    Integrate partially with respect to $w$ to get the structure of the function $f$:
+    Partially integrate with respect to $w$ to obtain the structure of the function $f$:
     
     $$
     f(t, w) = w + e^t w^2 + g(t)
@@ -428,26 +431,26 @@ $$dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0$$
     where $g(t)$ is an undetermined integration constant function depending only on time.
     
     **2. Match the coefficient of $dt$:**
-    First calculate the remaining partial derivatives of the assumed function $f$:
+    First, compute the other partial derivatives of the assumed function $f$:
     $f_t(t, w) = e^t w^2 + g'(t)$
     $f_{ww}(t, w) = 2e^t$
     
-    Substitute them into the drift term, requiring it to equal the $dt$ coefficient of the original equation:
+    Substitute them into the drift term, which must equal the $dt$ coefficient of the original equation:
     
     $$
     f_t + \frac{1}{2}f_{ww} = \left( e^t w^2 + g'(t) \right) + \frac{1}{2}(2e^t) = e^t(1+w^2) + g'(t)
     $$
     
-    And the $dt$ coefficient of the original equation is $e^t(1+w^2)$. Setting them equal:
+    The $dt$ coefficient of the original equation is $e^t(1+w^2)$. Equating the two:
     
     $$
     e^t(1+w^2) + g'(t) = e^t(1+w^2) \implies g'(t) = 0
     $$
     
-    This means $g(t) = C$ (a constant).
+    This implies $g(t) = C$ (a constant).
     
-    **3. Substitute the initial condition:**
-    The form of the solution is determined as $X_t = W_t + e^t W_t^2 + C$.
+    **3. Apply the initial condition:**
+    The solution form is determined as $X_t = W_t + e^t W_t^2 + C$.
     Given $X_0 = 0$, and $W_0 = 0$:
     
     $$
@@ -464,14 +467,15 @@ $$dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0$$
 
 ### Exercise 5
 **Problem**
-Solve the stochastic differential equation:
+Solve the stochastic differential equation
+
 $$dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 > 0$$
 
 ??? success "Solution (Click to expand)"
 
-    This is a highly challenging nonlinear SDE. Since the equation contains $1/X_t$, it suggests that we first use a square transformation to eliminate the denominator.
+    This is a very challenging nonlinear SDE. Since the equation contains $1/X_t$, it suggests we first use a square transformation to eliminate the denominator.
     
-    **Step 1: Variable substitution (Linearization)**
+    **Step 1: Change of variables (Linearization)**
     Let $Y_t = X_t^2$. Apply Itô's formula to it:
     
     $$
@@ -484,23 +488,23 @@ $$dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 > 0$$
     dY_t = 2X_t \left( \frac{1}{X_t}dt + \alpha X_t dW_t \right) + \alpha^2 Y_t dt = 2 dt + 2\alpha Y_t dW_t + \alpha^2 Y_t dt
     $$
     
-    Rearranging gives a linear SDE with respect to $Y_t$:
+    Rearranging yields a linear SDE for $Y_t$:
     
     $$
     dY_t = (2 + \alpha^2 Y_t) dt + 2\alpha Y_t dW_t
     $$
     
     **Step 2: Construct an integrating factor to solve the linear SDE**
-    To eliminate the proportional term of $Y_t$, we construct an integrating factor $F_t$ satisfying $dF_t = F_t ( -\alpha^2 dt - 2\alpha dW_t )$.
-    From the knowledge of geometric Brownian motion, this integrating factor is:
+    To eliminate the proportional term in $Y_t$, we construct an integrating factor $F_t$ satisfying $dF_t = F_t ( -\alpha^2 dt - 2\alpha dW_t )$.
+    Based on knowledge of geometric Brownian motion, this integrating factor is:
     
     $$
     F_t = \exp\left( -2\alpha W_t - \frac{1}{2}(-2\alpha)^2 dt - \alpha^2 dt \right) = \exp\left( -2\alpha W_t + \alpha^2 t \right)
     $$
     
-    (Note: According to Itô expansion, it can be verified that $dF_t = F_t (3\alpha^2 dt - 2\alpha dW_t)$).
-    We now calculate the differential of the product $d(Y_t F_t)$, using the product rule $d(YF) = Y dF + F dY + \langle dY, dF \rangle$:
-    The cross-variation term is $\langle dY_t, dF_t \rangle = (2\alpha Y_t)(-2\alpha F_t) dt = -4\alpha^2 Y_t F_t dt$.
+    (Note: Expanding via Itô's formula verifies $dF_t = F_t (3\alpha^2 dt - 2\alpha dW_t)$).
+    We now compute the differential of the product $d(Y_t F_t)$ using the product rule $d(YF) = Y dF + F dY + \langle dY, dF \rangle$:
+    The cross-variation term $\langle dY_t, dF_t \rangle = (2\alpha Y_t)(-2\alpha F_t) dt = -4\alpha^2 Y_t F_t dt$.
     
     Expanding the calculation:
     
@@ -509,34 +513,34 @@ $$dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 > 0$$
     $$
     
     Observe the coefficient of $dW_t$: $Y_t F_t(-2\alpha) + F_t(2\alpha Y_t) = 0$ (perfect cancellation).
-    Observe the coefficient of $dt$: $Y_t F_t(3\alpha^2) + F_t(2 + \alpha^2 Y_t) - 4\alpha^2 Y_t F_t = Y_t F_t (3\alpha^2 + \alpha^2 - 4\alpha^2) + 2F_t = 2F_t$ (the $Y_t$ term perfectly cancels out).
+    Observe the coefficient of $dt$: $Y_t F_t(3\alpha^2) + F_t(2 + \alpha^2 Y_t) - 4\alpha^2 Y_t F_t = Y_t F_t (3\alpha^2 + \alpha^2 - 4\alpha^2) + 2F_t = 2F_t$ (perfect cancellation of the $Y_t$ term).
     
-    Thus, it elegantly simplifies to:
+    Therefore, it elegantly simplifies to:
     
     $$
     d(Y_t F_t) = 2F_t dt
     $$
     
     **Step 3: Integration and recovery**
-    Integrate the above equation from $0$ to $t$:
+    Integrate the above from $0$ to $t$:
     
     $$
     Y_t F_t - Y_0 F_0 = 2 \int_0^t F_s ds
     $$
     
-    Substitute the initial conditions $Y_0 = x_0^2$ and $F_0 = \exp(0) = 1$, and rearrange to get $Y_t$:
+    Substituting the initial conditions $Y_0 = x_0^2$ and $F_0 = \exp(0) = 1$, and rearranging to solve for $Y_t$:
     
     $$
     Y_t = F_t^{-1} \left( x_0^2 + 2 \int_0^t F_s ds \right)
     $$
     
-    Substitute the explicit expressions for $F_t$ and $F_s$:
+    Substituting the explicit expressions for $F_t$ and $F_s$:
     
     $$
     Y_t = \exp(2\alpha W_t - \alpha^2 t) \left( x_0^2 + 2 \int_0^t \exp(-2\alpha W_s + \alpha^2 s) ds \right)
     $$
     
-    Finally, take the square root to recover $X_t$ (since the problem specifies $X_0 > 0$ and the interior of the integral is always positive, we take the positive root):
+    Finally, take the square root to recover $X_t$ (since the problem specifies $X_0 > 0$ and the integrand is always positive, we take the positive root):
     
     $$
     X(t) = \left[ e^{2\alpha W(t) - \alpha^2 t} \left( x_0^2 + 2 \int_0^t e^{-2\alpha W(s) + \alpha^2 s} ds \right) \right]^{1/2}

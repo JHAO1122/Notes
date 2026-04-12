@@ -6,3 +6,4 @@ __pycache__/
 *.pyc
 translator.py
 migrate_folders.py
+test_model.py
