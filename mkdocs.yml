@@ -62,8 +62,10 @@ plugins:
             "📝 课后习题精解": "📝 Exercise Solutions"
             "📊 渐近统计": "📊 Asymptotic Statistics"
             "第一章：随机收敛": "Ch 1: Stochastic Convergence"
-            "第三章：中心极限定理": "Ch 3: Central Limit Theorem"
-            
+            "第二章：特征函数": "Ch 2: Characteristic Functions"
+            "第三章：中心极限定理（一）": "Ch 3: Central Limit Theorem I"
+            "第四章：中心极限定理（二）": "Ch 4: Central Limit Theorem II"
+
 # ================= 导航栏配置 =================
 # 路径说明：这里只需写 zh/ 下的路径，i18n 插件会自动映射到 en/
 nav:
