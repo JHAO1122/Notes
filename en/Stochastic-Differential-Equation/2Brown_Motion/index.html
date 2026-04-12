@@ -627,10 +627,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-basic-definition-and-properties" class="md-nav__link">
+  <a href="#1-basic-definitions-and-properties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Basic Definition and Properties
+        1. Basic Definitions and Properties
       
     </span>
   </a>
@@ -638,10 +638,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-introducing-white-noise-and-the-sde-prototype" class="md-nav__link">
+  <a href="#2-introducing-white-noise-and-the-prototype-of-sde" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Introducing White Noise and the SDE Prototype
+        2. Introducing White Noise and the Prototype of SDE
       
     </span>
   </a>
@@ -649,10 +649,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-multi-dimensional-brownian-motion-and-core-properties" class="md-nav__link">
+  <a href="#3-multidimensional-brownian-motion-and-core-properties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Multi-dimensional Brownian Motion and Core Properties
+        3. Multidimensional Brownian Motion and Core Properties
       
     </span>
   </a>
@@ -1239,10 +1239,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-basic-definition-and-properties" class="md-nav__link">
+  <a href="#1-basic-definitions-and-properties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Basic Definition and Properties
+        1. Basic Definitions and Properties
       
     </span>
   </a>
@@ -1250,10 +1250,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-introducing-white-noise-and-the-sde-prototype" class="md-nav__link">
+  <a href="#2-introducing-white-noise-and-the-prototype-of-sde" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Introducing White Noise and the SDE Prototype
+        2. Introducing White Noise and the Prototype of SDE
       
     </span>
   </a>
@@ -1261,10 +1261,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-multi-dimensional-brownian-motion-and-core-properties" class="md-nav__link">
+  <a href="#3-multidimensional-brownian-motion-and-core-properties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Multi-dimensional Brownian Motion and Core Properties
+        3. Multidimensional Brownian Motion and Core Properties
       
     </span>
   </a>
@@ -1303,72 +1303,58 @@
 
 
 <h1 id="chapter-2-brownian-motion">Chapter 2: Brownian Motion</h1>
-<p>After establishing the measure-theoretic foundation of conditional expectation and martingale theory, we officially introduce a classic continuous-time stochastic process—<strong>Brownian Motion (BM)</strong>, also known as the Wiener Process. It serves as the foundation for constructing the integration theory of Stochastic Differential Equations (SDEs) (such as Itô Calculus).</p>
-<h2 id="1-basic-definition-and-properties">1. Basic Definition and Properties</h2>
+<p>After establishing the measure-theoretic foundations of conditional expectations and martingale theory, we formally introduce a classic continuous-time stochastic process—<strong>Brownian Motion (BM)</strong>, also known as the Wiener Process. It serves as the foundation for constructing the integral theory of stochastic differential equations (SDEs), such as Itô integration.</p>
+<h2 id="1-basic-definitions-and-properties">1. Basic Definitions and Properties</h2>
 <div class="admonition abstract">
 <p class="admonition-title">Definition: Standard Brownian Motion</p>
-<p>Let <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> be a probability space on which a real-valued stochastic process <span class="arithmatex">\(W = \{W(t), t \ge 0\}\)</span> is defined. If <span class="arithmatex">\(W\)</span> satisfies the following four conditions, it is called a <strong>Standard Brownian Motion</strong>:</p>
-<ul>
-<li>
-<p><strong>1. Initial Zero</strong>: <span class="arithmatex">\(P(W(0) = 0) = 1\)</span> a.s.</p>
-</li>
-<li>
+<p>Let <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> be a probability space, on which a real-valued stochastic process <span class="arithmatex">\(W = \{W(t), t \ge 0\}\)</span> is defined. If <span class="arithmatex">\(W\)</span> satisfies the following four conditions, it is called a <strong>Standard Brownian Motion</strong>:</p>
+<p><strong>1. Initial Zero Point</strong>: <span class="arithmatex">\(P(W(0) = 0) = 1\)</span> a.s.</p>
 <p><strong>2. Independent Increments</strong>: For any time partition <span class="arithmatex">\(0 \le t_1 &lt; t_2 &lt; \dots &lt; t_n\)</span>, the sequence of increments:</p>
-</li>
-</ul>
 <div class="arithmatex">\[
 W(t_1), W(t_2) - W(t_1), \dots, W(t_n) - W(t_{n-1})
 \]</div>
 <p>are mutually independent.</p>
-<ul>
-<li><strong>3. Stationary Gaussian Increments</strong>: For any <span class="arithmatex">\(0 \le s &lt; t\)</span>, the increment follows a normal distribution with mean 0 and variance equal to the time difference:</li>
-</ul>
+<p><strong>3. Stationary Gaussian Increments</strong>: For any <span class="arithmatex">\(0 \le s &lt; t\)</span>, the increment follows a normal distribution with mean 0 and variance equal to the time difference:</p>
 <div class="arithmatex">\[
 W(t) - W(s) \sim \mathcal{N}(0, t-s)
 \]</div>
-<ul>
-<li><strong>4. Continuous Paths</strong>: Almost all sample paths <span class="arithmatex">\(t \mapsto W(t, \omega)\)</span> are continuous (i.e., continuous a.s.).</li>
-</ul>
+<p><strong>4. Continuous Paths</strong>: Almost all sample paths <span class="arithmatex">\(t \mapsto W(t, \omega)\)</span> are continuous (i.e., a.s. continuous).</p>
 </div>
-<p>From the above definition, we can immediately derive the low-order moments and covariance structure of Brownian motion, which are crucial for subsequently deriving the properties of white noise.</p>
+<p>From the above definition, we can immediately derive the low-order moments and covariance structure of Brownian motion, which is key to deriving the properties of white noise later.</p>
 <div class="admonition info">
 <p class="admonition-title">Basic Properties: Moments and Covariance Structure</p>
-<ul>
-<li><strong>1. Mean and Variance</strong>:</li>
-</ul>
-<p>Since <span class="arithmatex">\(W(t) = W(t) - W(0) \sim \mathcal{N}(0, t)\)</span>, it is obvious that:</p>
+<p><strong>1. Mean and Variance</strong>:
+Since <span class="arithmatex">\(W(t) = W(t) - W(0) \sim \mathcal{N}(0, t)\)</span>, we obviously have:</p>
 <div class="arithmatex">\[
 E[W(t)] = 0, \quad Var(W(t)) = t
 \]</div>
-<ul>
-<li><strong>2. Autocovariance</strong>:</li>
-</ul>
-<p>For any <span class="arithmatex">\(s, t \ge 0\)</span>, we have:</p>
+<p><strong>2. Autocovariance Function</strong>:
+For any <span class="arithmatex">\(s, t \ge 0\)</span>, we have:</p>
 <div class="arithmatex">\[
 R(s, t) = Cov(W(s), W(t)) = E[W(s)W(t)] = s \wedge t = \min(s, t)
 \]</div>
 <details class="proof">
-<summary>Derivation of Autocovariance (Click to expand)</summary>
-<p>Without loss of generality, assume <span class="arithmatex">\(0 \le s \le t\)</span>. We split <span class="arithmatex">\(W(t)\)</span> into incremental forms:</p>
+<summary>Derivation of the Autocovariance (click to expand)</summary>
+<p>Without loss of generality, assume <span class="arithmatex">\(0 \le s \le t\)</span>. We decompose <span class="arithmatex">\(W(t)\)</span> into an incremental form:</p>
 <div class="arithmatex">\[
 E[W(s)W(t)] = E\big[W(s) \big( W(t) - W(s) + W(s) \big)\big]
 \]</div>
-<p>Expanding this yields:</p>
+<p>Expanding gives:</p>
 <div class="arithmatex">\[
 = E[W(s)(W(t) - W(s))] + E[W(s)^2]
 \]</div>
-<p>Since Brownian motion has independent increments, <span class="arithmatex">\(W(t) - W(s)\)</span> and <span class="arithmatex">\(W(s) = W(s) - W(0)\)</span> are mutually independent. Moreover, since the mean of the increment is 0, the first term vanishes:</p>
+<p>Due to the independent increments property of Brownian motion, <span class="arithmatex">\(W(t) - W(s)\)</span> and <span class="arithmatex">\(W(s) = W(s) - W(0)\)</span> are independent. Furthermore, since the increments have mean 0, the first term is 0:</p>
 <div class="arithmatex">\[
 = E[W(s)] E[W(t) - W(s)] + Var(W(s)) = 0 + s = s
 \]</div>
-<p>Because we assumed <span class="arithmatex">\(s \le t\)</span>, the general case can be written as <span class="arithmatex">\(s \wedge t\)</span>. <span class="arithmatex">\(\square\)</span></p>
+<p>Since we assumed <span class="arithmatex">\(s \le t\)</span>, the general case can be written as <span class="arithmatex">\(s \wedge t\)</span>. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Joint PDF and Transition Density of Brownian Motion</p>
-<p>The values of Brownian motion at time points <span class="arithmatex">\(0 &lt; t_1 &lt; t_2 &lt; \dots &lt; t_n\)</span>, denoted as <span class="arithmatex">\((W(t_1), \dots, W(t_n))\)</span>, follow a multivariate normal distribution.
-Due to the Markov property, its Joint Probability Density Function (Joint PDF) can be elegantly expressed as a product of <strong>Transition Density Functions</strong>:</p>
-<p>Define the Gaussian transition density (transitioning from spatial point <span class="arithmatex">\(y\)</span> to <span class="arithmatex">\(x\)</span> over time <span class="arithmatex">\(t\)</span>):</p>
+<p class="admonition-title">Joint Probability Density and Transition Density of Brownian Motion</p>
+<p>The values <span class="arithmatex">\((W(t_1), \dots, W(t_n))\)</span> of Brownian motion at time points <span class="arithmatex">\(0 &lt; t_1 &lt; t_2 &lt; \dots &lt; t_n\)</span> follow a multivariate normal distribution.
+Due to the Markov property, its Joint Probability Density (Joint PDF) can be elegantly expressed as a product of <strong>Transition Density Functions</strong>:</p>
+<p>Define the Gaussian transition density (from spatial point <span class="arithmatex">\(y\)</span> to <span class="arithmatex">\(x\)</span> over time <span class="arithmatex">\(t\)</span>):</p>
 <div class="arithmatex">\[
 g(x, t | y) = \frac{1}{\sqrt{2\pi t}} e^{-\frac{|x-y|^2}{2t}}
 \]</div>
@@ -1378,40 +1364,30 @@ p(x_1, t_1; x_2, t_2; \dots; x_n, t_n) = g(x_1, t_1 | 0) g(x_2, t_2 - t_1 | x_1)
 \]</div>
 </div>
 <hr />
-<h2 id="2-introducing-white-noise-and-the-sde-prototype">2. Introducing White Noise and the SDE Prototype</h2>
-<p>When transitioning from Ordinary Differential Equations (ODEs) <span class="arithmatex">\(\frac{dX(t)}{dt} = b(X(t), t)\)</span> to Stochastic Differential Equations (SDEs), we need to add a noise term <span class="arithmatex">\(\xi(t)\)</span>.
-An ideal white noise <span class="arithmatex">\(\xi(t)\)</span> should be completely uncorrelated at different times, meaning its covariance exhibits the property of a Dirac <span class="arithmatex">\(\delta\)</span> function: <span class="arithmatex">\(E[\xi(s)\xi(t)] = \delta(s-t)\)</span>.
-Mathematically, this so-called white noise is precisely the <strong>"formal derivative" of Brownian motion</strong>, denoted as <span class="arithmatex">\(\dot{W}(t)\)</span>.</p>
+<h2 id="2-introducing-white-noise-and-the-prototype-of-sde">2. Introducing White Noise and the Prototype of SDE</h2>
+<p>When transitioning from an ordinary differential equation (ODE) <span class="arithmatex">\(\frac{dX(t)}{dt} = b(X(t), t)\)</span> to a stochastic differential equation (SDE), we need to add a noise term <span class="arithmatex">\(\xi(t)\)</span>.
+The ideal white noise <span class="arithmatex">\(\xi(t)\)</span> should be completely uncorrelated at different times, meaning its covariance exhibits the property of the Dirac <span class="arithmatex">\(\delta\)</span> function: <span class="arithmatex">\(E[\xi(s)\xi(t)] = \delta(s-t)\)</span>.
+Mathematically, this so-called white noise is precisely the <strong>"formal derivative" of Brownian motion</strong> <span class="arithmatex">\(\dot{W}(t)\)</span>.</p>
 <div class="admonition info">
-<p class="admonition-title">Theorem: The Covariance Limit of the Difference Quotient of BM is the <span class="arithmatex">\(\delta\)</span> Function</p>
+<p class="admonition-title">Theorem: The Covariance Limit of the Increment Quotient of Brownian Motion is the <span class="arithmatex">\(\delta\)</span> Function</p>
 <p>Consider the difference quotient process of Brownian motion <span class="arithmatex">\(\xi_h(t) = \frac{W(t+h) - W(t)}{h}\)</span> (<span class="arithmatex">\(h &gt; 0\)</span>).
 As <span class="arithmatex">\(h \to 0\)</span>, its autocovariance function converges to the Dirac <span class="arithmatex">\(\delta\)</span> function in the sense of generalized functions (distributions).</p>
 <details class="proof">
-<summary>Limit Derivation Process (Click to expand)</summary>
-<p>We calculate the covariance <span class="arithmatex">\(E[\xi_h(s) \xi_h(t)]\)</span> of the difference quotient at different times <span class="arithmatex">\(s, t\)</span>.
+<summary>Derivation of the Limit (Click to Expand)</summary>
+<p>We compute the covariance <span class="arithmatex">\(E[\xi_h(s) \xi_h(t)]\)</span> of the difference quotient at different times <span class="arithmatex">\(s, t\)</span>.
 Using the covariance property of Brownian motion <span class="arithmatex">\(E[W(u)W(v)] = u \wedge v\)</span>:</p>
 <div class="arithmatex">\[
 E\left[ \frac{W(s+h)-W(s)}{h} \frac{W(t+h)-W(t)}{h} \right] = \frac{1}{h^2} \Big( (s+h \wedge t+h) - (s \wedge t+h) - (s+h \wedge t) + (s \wedge t) \Big)
 \]</div>
-<p>Assuming <span class="arithmatex">\(s \le t\)</span>, we analyze the non-zero regions of the above equation:</p>
-<ul>
-<li>
-<ol>
-<li>When the time difference <span class="arithmatex">\(|t-s| \ge h\)</span>, the four terms above cancel each other out, resulting in <span class="arithmatex">\(0\)</span>. This indicates that as long as the time interval is greater than <span class="arithmatex">\(h\)</span>, the difference quotient process is uncorrelated.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>When the time difference <span class="arithmatex">\(|t-s| &lt; h\)</span>, there is an overlapping interval. Calculation shows the covariance is:</li>
-</ol>
-</li>
-</ul>
+<p>Assuming <span class="arithmatex">\(s \le t\)</span>, we analyze the non-zero region of the above expression:
+1. When the time difference <span class="arithmatex">\(|t-s| \ge h\)</span>, the four terms cancel each other out, resulting in <span class="arithmatex">\(0\)</span>. This shows that as long as the time interval is greater than <span class="arithmatex">\(h\)</span>, the difference quotient process is uncorrelated.
+2. When the time difference <span class="arithmatex">\(|t-s| &lt; h\)</span>, there is an overlapping interval. The calculation yields the covariance as:</p>
 <div class="arithmatex">\[
 \varphi_h(t-s) = \frac{1}{h^2} (h - |t-s|)
 \]</div>
-<p>This is an isosceles triangle function with a base width of <span class="arithmatex">\(2h\)</span> and a height of <span class="arithmatex">\(\frac{1}{h}\)</span>.
-Obviously, the integral <span class="arithmatex">\(\int_{-\infty}^\infty \varphi_h(x) dx = 1\)</span>.
-As <span class="arithmatex">\(h \to 0\)</span>, this function tends to 0 at non-zero points and approaches infinity at 0, while its integral remains constantly 1. This perfectly aligns with the definition of the Dirac <span class="arithmatex">\(\delta\)</span> function:</p>
+<p>This is an isosceles triangular function with a base width of <span class="arithmatex">\(2h\)</span> and a height of <span class="arithmatex">\(\frac{1}{h}\)</span>.
+Clearly, the integral <span class="arithmatex">\(\int_{-\infty}^\infty \varphi_h(x) dx = 1\)</span>.
+As <span class="arithmatex">\(h \to 0\)</span>, this function tends to 0 at non-zero points, tends to infinity at 0, and its integral remains constant at 1. This is precisely the definition of the Dirac <span class="arithmatex">\(\delta\)</span> function:</p>
 <div class="arithmatex">\[
 \lim_{h \to 0} E[\xi_h(s) \xi_h(t)] = \delta(t-s)
 \]</div>
@@ -1419,163 +1395,141 @@ As <span class="arithmatex">\(h \to 0\)</span>, this function tends to 0 at non-
 </details>
 </div>
 <hr />
-<h2 id="3-multi-dimensional-brownian-motion-and-core-properties">3. Multi-dimensional Brownian Motion and Core Properties</h2>
-<p>In quantitative finance and multi-particle systems, we often face high-dimensional stochastic phenomena.</p>
+<h2 id="3-multidimensional-brownian-motion-and-core-properties">3. Multidimensional Brownian Motion and Core Properties</h2>
+<p>In quantitative finance and multi-particle systems, we often encounter high-dimensional stochastic phenomena.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Definition: Multi-dimensional Brownian Motion (n-dimensional BM)</p>
-<p>An <span class="arithmatex">\(n\)</span>-dimensional Brownian motion is defined as a vector process <span class="arithmatex">\(W(t) = (W^1(t), W^2(t), \dots, W^n(t))^T\)</span>, where:</p>
-<ul>
-<li>
-<ol>
-<li>Each component <span class="arithmatex">\(W^k(t)\)</span> is a standard one-dimensional Brownian motion.</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>The components are mutually independent: i.e., for any <span class="arithmatex">\(k \neq l\)</span>, the <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\sigma(W^k(t), t \ge 0)\)</span> is independent of <span class="arithmatex">\(\sigma(W^l(t), t \ge 0)\)</span>.</li>
-</ol>
-</li>
-</ul>
+<p class="admonition-title">Definition: Multidimensional Brownian Motion (n-dimensional BM)</p>
+<p>An <span class="arithmatex">\(n\)</span>-dimensional Brownian motion is defined as a vector process <span class="arithmatex">\(W(t) = (W^1(t), W^2(t), \dots, W^n(t))^T\)</span>, where:
+1. Each component <span class="arithmatex">\(W^k(t)\)</span> is a standard one-dimensional Brownian motion.
+2. The components are mutually independent: for any <span class="arithmatex">\(k \neq l\)</span>, the <span class="arithmatex">\(\sigma\)</span>-algebras <span class="arithmatex">\(\sigma(W^k(t), t \ge 0)\)</span> and <span class="arithmatex">\(\sigma(W^l(t), t \ge 0)\)</span> are independent.</p>
 <p>The covariance structure between its components is:</p>
 <div class="arithmatex">\[
 E[W^k(t) W^l(s)] = (t \wedge s) \delta_{kl}
 \]</div>
 <p><em>(Here <span class="arithmatex">\(\delta_{kl}\)</span> is the Kronecker delta, not the Dirac <span class="arithmatex">\(\delta\)</span> function)</em></p>
 </div>
-<p>The classical beauty of Brownian motion lies in the fact that it possesses the characteristics of both a <strong>Martingale</strong> and a <strong>Markov Process</strong>.</p>
+<p>The classic nature of Brownian motion lies in its combination of <strong>Martingale</strong> and <strong>Markov Process</strong> characteristics.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem: Brownian Motion is a Continuous Martingale</p>
-<p>Let <span class="arithmatex">\(\{\mathcal{F}_t\}_{t \ge 0}\)</span> be the natural filtration generated by Brownian motion, <span class="arithmatex">\(\mathcal{F}_t = \sigma(W(u), 0 \le u \le t)\)</span>. Then <span class="arithmatex">\(W(t)\)</span> is a martingale.</p>
+<p>Let <span class="arithmatex">\(\{\mathcal{F}_t\}_{t \ge 0}\)</span> be the natural filtration generated by the Brownian motion, <span class="arithmatex">\(\mathcal{F}_t = \sigma(W(u), 0 \le u \le t)\)</span>. Then <span class="arithmatex">\(W(t)\)</span> is a martingale.</p>
 <details class="proof">
-<summary>Proof of Martingale Property (Click to expand)</summary>
+<summary>Proof of Martingale Property (click to expand)</summary>
 <p>For any <span class="arithmatex">\(s \le t\)</span>, we need to prove <span class="arithmatex">\(E[W(t) | \mathcal{F}_s] = W(s)\)</span>.
-Construct independence by splitting the increments:</p>
+Construct independence via increment decomposition:</p>
 <div class="arithmatex">\[
 E[W(t) | \mathcal{F}_s] = E[W(t) - W(s) + W(s) | \mathcal{F}_s]
 \]</div>
-<p>By the linearity property of conditional expectation:</p>
+<p>By the linearity of conditional expectation:</p>
 <div class="arithmatex">\[
 = E[W(t) - W(s) | \mathcal{F}_s] + E[W(s) | \mathcal{F}_s]
 \]</div>
-<p>Because Brownian motion has independent increments, the future increment <span class="arithmatex">\(W(t) - W(s)\)</span> is completely independent of the historical filtration <span class="arithmatex">\(\mathcal{F}_s\)</span>, thus independence implies irrelevance (equals the unconditional expectation);
-Meanwhile, <span class="arithmatex">\(W(s)\)</span> itself is <span class="arithmatex">\(\mathcal{F}_s\)</span>-measurable, so taking out what is known (pull it out directly):</p>
+<p>Because Brownian motion has independent increments, the future increment <span class="arithmatex">\(W(t) - W(s)\)</span> is completely independent of the historical information flow <span class="arithmatex">\(\mathcal{F}_s\)</span>, so independence implies irrelevance (equals the unconditional expectation);
+And <span class="arithmatex">\(W(s)\)</span> itself is <span class="arithmatex">\(\mathcal{F}_s\)</span>-measurable, so it is known as a constant (directly taken out):</p>
 <div class="arithmatex">\[
 = E[W(t) - W(s)] + W(s) = 0 + W(s) = W(s)
 \]</div>
-<p>The proof is complete. <span class="arithmatex">\(\square\)</span></p>
+<p>Q.E.D. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem: Brownian Motion is a Markov Process</p>
-<p>Brownian motion satisfies the Markov property: "the future depends only on the present and is independent of the past".
+<p>Brownian motion satisfies the Markov property: i.e., "the future depends only on the present, not on the past".
 For any Borel set <span class="arithmatex">\(B \in \mathcal{B}(\mathbb{R}^n)\)</span> and <span class="arithmatex">\(s \le t\)</span>:</p>
 <div class="arithmatex">\[
 P(W(t) \in B | \mathcal{F}_s) = P(W(t) \in B | W(s)) \quad a.s.
 \]</div>
 <details class="proof">
-<summary>Strict Measure-Theoretic Proof of Markov Property (Click to expand)</summary>
+<summary>Rigorous Measure-Theoretic Proof of Markov Property (click to expand)</summary>
 <p>Using the indicator function <span class="arithmatex">\(\chi_B\)</span> (or denoted as <span class="arithmatex">\(I_B\)</span>), we can write the probability as a conditional expectation:</p>
 <div class="arithmatex">\[
 P(W(t) \in B | \mathcal{F}_s) = E[\chi_B(W(t)) | \mathcal{F}_s]
 \]</div>
-<p>Introducing increments, let the function be <span class="arithmatex">\(f(x, y) = \chi_B(x + y)\)</span>. Split <span class="arithmatex">\(W(t)\)</span> into <span class="arithmatex">\(W(s)\)</span> and <span class="arithmatex">\(W(t) - W(s)\)</span>:</p>
+<p>Introduce the increment, and define the function <span class="arithmatex">\(f(x, y) = \chi_B(x + y)\)</span>. Decompose <span class="arithmatex">\(W(t)\)</span> into <span class="arithmatex">\(W(s)\)</span> and <span class="arithmatex">\(W(t) - W(s)\)</span>:</p>
 <div class="arithmatex">\[
 E[\chi_B(W(t)) | \mathcal{F}_s] = E[f(W(s), W(t) - W(s)) | \mathcal{F}_s]
 \]</div>
-<p>Here we apply the core lemma of independence and conditional expectation in measure theory (the Freezing Lemma / Substitution Theorem):
-Since <span class="arithmatex">\(W(s)\)</span> is <span class="arithmatex">\(\mathcal{F}_s\)</span>-measurable, and <span class="arithmatex">\(W(t) - W(s)\)</span> is independent of <span class="arithmatex">\(\mathcal{F}_s\)</span>, we can treat <span class="arithmatex">\(W(s)\)</span> as a "frozen" constant <span class="arithmatex">\(x\)</span>, take the unconditional expectation with respect to the other part, and then substitute <span class="arithmatex">\(W(s)\)</span> back in:</p>
+<p>Here we apply a core lemma in measure theory concerning independence and conditional expectation (the freezing lemma/substitution theorem):
+Because <span class="arithmatex">\(W(s)\)</span> is <span class="arithmatex">\(\mathcal{F}_s\)</span>-measurable, and <span class="arithmatex">\(W(t) - W(s)\)</span> is independent of <span class="arithmatex">\(\mathcal{F}_s\)</span>, we can treat <span class="arithmatex">\(W(s)\)</span> as a "frozen" constant <span class="arithmatex">\(x\)</span>, take the unconditional expectation of the other part, and then substitute <span class="arithmatex">\(W(s)\)</span> back:</p>
 <div class="arithmatex">\[
 = E[f(x, W(t) - W(s))]\Big|_{x = W(s)}
 \]</div>
-<p>Let the increment be <span class="arithmatex">\(Z = W(t) - W(s) \sim \mathcal{N}(0, t-s)\)</span>, with its density function <span class="arithmatex">\(g(z)\)</span>. The above equation equals:</p>
+<p>Let the increment <span class="arithmatex">\(Z = W(t) - W(s) \sim \mathcal{N}(0, t-s)\)</span>, with density function <span class="arithmatex">\(g(z)\)</span>. The above expression equals:</p>
 <div class="arithmatex">\[
 = \int_{\mathbb{R}^n} \chi_B(x + z) g(z) dz \Bigg|_{x = W(s)}
 \]</div>
-<p>Using integration by substitution, let <span class="arithmatex">\(y = x + z\)</span>, then <span class="arithmatex">\(dz = dy\)</span>:</p>
+<p>Change variables by letting <span class="arithmatex">\(y = x + z\)</span>, then <span class="arithmatex">\(dz = dy\)</span>:</p>
 <div class="arithmatex">\[
 = \int_B g(y - x) dy \Bigg|_{x = W(s)} = \int_B \frac{1}{\sqrt{2\pi(t-s)}} e^{-\frac{|y - W(s)|^2}{2(t-s)}} dy
 \]</div>
-<p>This integration result obviously depends only on the value of the random variable <span class="arithmatex">\(W(s)\)</span>, and does not depend on any information in <span class="arithmatex">\(\mathcal{F}_s\)</span> prior to time <span class="arithmatex">\(s\)</span>.
-According to the definition of conditional expectation, this is exactly equal to <span class="arithmatex">\(E[\chi_B(W(t)) | W(s)]\)</span>, which is <span class="arithmatex">\(P(W(t) \in B | W(s))\)</span>. <span class="arithmatex">\(\square\)</span></p>
+<p>The result of this integral clearly depends only on the value of the random variable <span class="arithmatex">\(W(s)\)</span>, and not on any information in <span class="arithmatex">\(\mathcal{F}_s\)</span> prior to time <span class="arithmatex">\(s\)</span>.
+By the definition of conditional expectation, this is exactly equal to <span class="arithmatex">\(E[\chi_B(W(t)) | W(s)]\)</span>, i.e., <span class="arithmatex">\(P(W(t) \in B | W(s))\)</span>. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <hr />
 <h2 id="4-kolmogorov-continuity-theorem-and-path-properties">4. Kolmogorov Continuity Theorem and Path Properties</h2>
-<p>The definition of Brownian motion directly assumes "continuous paths". But mathematically we must ask: given consistent finite-dimensional distributions, does there <strong>necessarily exist</strong> a modified version with continuous paths? This requires the extremely powerful Kolmogorov Continuity Theorem.</p>
+<p>The definition of Brownian motion directly assumes "continuous paths." However, mathematically we need to ask: given a consistent set of finite-dimensional distributions, does there <strong>necessarily exist</strong> a modification with continuous paths? This requires the extremely powerful Kolmogorov continuity theorem.</p>
 <p>To quantify the "roughness" of continuity, we introduce Hölder spaces.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition: Hölder Continuous Space <span class="arithmatex">\(C^\gamma\)</span></p>
-<p>If a function <span class="arithmatex">\(f(t)\)</span> satisfies the condition that there exists a constant <span class="arithmatex">\(K &gt; 0\)</span> such that:</p>
+<p>A function <span class="arithmatex">\(f(t)\)</span> is said to be Hölder continuous with exponent <span class="arithmatex">\(\gamma\)</span> if there exists a constant <span class="arithmatex">\(K &gt; 0\)</span> such that:</p>
 <div class="arithmatex">\[
 |f(t) - f(s)| \le K |t - s|^\gamma
 \]</div>
-<p>Then it is said to have Hölder continuity with exponent <span class="arithmatex">\(\gamma\)</span>. Denoted as <span class="arithmatex">\(f \in C^\gamma\)</span>.
-(Note: When <span class="arithmatex">\(\gamma = 1\)</span>, it is Lipschitz continuous. The path of Brownian motion is extremely rough; it is nowhere differentiable, hence it cannot achieve Lipschitz continuity).</p>
+<p>It is denoted as <span class="arithmatex">\(f \in C^\gamma\)</span>.
+(Note: When <span class="arithmatex">\(\gamma = 1\)</span>, this is Lipschitz continuity. The paths of Brownian motion are extremely rough; they are nowhere differentiable, thus not Lipschitz continuous).</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Theorem: Kolmogorov Continuity Theorem</p>
-<p>Let <span class="arithmatex">\(X(t)\)</span> be a stochastic process defined on the interval <span class="arithmatex">\([0, T]\)</span>. If there exist constants <span class="arithmatex">\(\alpha &gt; 0, \beta &gt; 0, C &gt; 0\)</span> such that for all <span class="arithmatex">\(s, t \in [0, T]\)</span>:</p>
+<p>Let <span class="arithmatex">\(X(t)\)</span> be a stochastic process defined on an interval <span class="arithmatex">\([0, T]\)</span>. If there exist constants <span class="arithmatex">\(\alpha &gt; 0, \beta &gt; 0, C &gt; 0\)</span> such that for all <span class="arithmatex">\(s, t \in [0, T]\)</span>:</p>
 <div class="arithmatex">\[
 E[|X(t) - X(s)|^\beta] \le C |t - s|^{1+\alpha}
 \]</div>
-<p>Then there exists a modification of <span class="arithmatex">\(X(t)\)</span> that has continuous sample paths. Furthermore, for any <span class="arithmatex">\(\gamma \in \left(0, \frac{\alpha}{\beta}\right)\)</span>, the sample paths of this modification are almost surely (a.s.) locally <span class="arithmatex">\(\gamma\)</span>-Hölder continuous.</p>
+<p>then <span class="arithmatex">\(X(t)\)</span> has a modification with continuous sample paths. Furthermore, for any <span class="arithmatex">\(\gamma \in \left(0, \frac{\alpha}{\beta}\right)\)</span>, the sample paths of this modification are almost surely (a.s.) locally <span class="arithmatex">\(\gamma\)</span>-Hölder continuous.</p>
 <details class="proof">
-<summary>Core Proof Idea (Based on Borel-Cantelli Lemma) (Click to expand)</summary>
-<p>The rigorous proof of the theorem is quite tedious, but its core mechanism is very elegant.</p>
-<ul>
-<li><strong>1. Consider dyadic rational points</strong>: We take dyadic grid points <span class="arithmatex">\(t_i = \frac{i}{2^n}\)</span> on the interval.
-Consider the probability event <span class="arithmatex">\(A_n\)</span> where the increment between two adjacent points is too large:</li>
-</ul>
+<summary>Core Proof Idea (Based on the Borel-Cantelli Lemma) (Click to expand)</summary>
+<p>The rigorous proof of the theorem is quite involved, but its core mechanism is elegant.</p>
+<p><strong>1. Examine dyadic rational points:</strong> Consider the dyadic grid points on the interval: <span class="arithmatex">\(t_i = \frac{i}{2^n}\)</span>.
+Define the event <span class="arithmatex">\(A_n\)</span> where the increment between adjacent points is too large:</p>
 <div class="arithmatex">\[
 A_n = \left\{ \omega : \max_{0 \le i &lt; 2^n} \left| X\left(\frac{i+1}{2^n}\right) - X\left(\frac{i}{2^n}\right) \right| &gt; \left(\frac{1}{2^n}\right)^\gamma \right\}
 \]</div>
-<ul>
-<li><strong>2. Use Chebyshev/Markov Inequality to bound</strong>:</li>
-</ul>
+<p><strong>2. Bound using Chebyshev/Markov inequality:</strong></p>
 <div class="arithmatex">\[
 P(A_n) \le \sum_{i=0}^{2^n-1} P\left( |X_{i+1} - X_i| &gt; 2^{-n\gamma} \right) \le \sum_{i=0}^{2^n-1} \frac{E[|X_{i+1} - X_i|^\beta]}{2^{-n\gamma\beta}}
 \]</div>
-<p>Substitute the condition given by the theorem <span class="arithmatex">\(E[|X_{i+1} - X_i|^\beta] \le C (2^{-n})^{1+\alpha}\)</span>, we obtain:</p>
+<p>Substituting the condition given in the theorem, <span class="arithmatex">\(E[|X_{i+1} - X_i|^\beta] \le C (2^{-n})^{1+\alpha}\)</span>, yields:</p>
 <div class="arithmatex">\[
 P(A_n) \le 2^n \cdot C 2^{-n(1+\alpha)} \cdot 2^{n\gamma\beta} = C 2^{-n(\alpha - \gamma\beta)}
 \]</div>
-<ul>
-<li><strong>3. Apply the Borel-Cantelli Lemma</strong>:
-Since we chose <span class="arithmatex">\(\gamma &lt; \frac{\alpha}{\beta}\)</span>, we have <span class="arithmatex">\(\alpha - \gamma\beta &gt; 0\)</span>. This is a geometric series with a common ratio less than 1, therefore:</li>
-</ul>
+<p><strong>3. Apply the Borel-Cantelli Lemma:</strong>
+Since we chose <span class="arithmatex">\(\gamma &lt; \frac{\alpha}{\beta}\)</span>, we have <span class="arithmatex">\(\alpha - \gamma\beta &gt; 0\)</span>. This forms a geometric series with ratio less than 1, therefore:</p>
 <div class="arithmatex">\[
 \sum_{n=1}^\infty P(A_n) &lt; \infty
 \]</div>
-<p>By the Borel-Cantelli Lemma (First Lemma), we know <span class="arithmatex">\(P(\limsup A_n) = 0\)</span>. That is, almost surely, there exists <span class="arithmatex">\(N(\omega)\)</span> such that for all <span class="arithmatex">\(n \ge N(\omega)\)</span>, the increments on the dyadic grid are tightly bounded within <span class="arithmatex">\(2^{-n\gamma}\)</span>. Through uniform convergence, this guarantees the Hölder continuity of the limit process. <span class="arithmatex">\(\square\)</span></p>
+<p>By the Borel-Cantelli Lemma (the first lemma), <span class="arithmatex">\(P(\limsup A_n) = 0\)</span>. That is, almost surely, there exists <span class="arithmatex">\(N(\omega)\)</span> such that for all <span class="arithmatex">\(n \ge N(\omega)\)</span>, the increments on the dyadic grid are tightly controlled within <span class="arithmatex">\(2^{-n\gamma}\)</span>. Through uniform convergence, this guarantees the Hölder continuity of the limiting process. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p>Later, applying this theorem to the continuity analysis of Brownian motion yields its important <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> property.</p>
+<p>We then apply this theorem to the continuity analysis of Brownian motion, obtaining its important <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> property.</p>
 <div class="admonition success">
 <p class="admonition-title">Conclusion: The Hölder Roughness of Brownian Motion Paths is <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span></p>
-<p>The sample path of Brownian motion <span class="arithmatex">\(W(t)\)</span> is almost everywhere <span class="arithmatex">\(\gamma\)</span>-Hölder continuous, for any <span class="arithmatex">\(\gamma \in \left(0, \frac{1}{2}\right)\)</span>.
-(i.e., it infinitely approaches <span class="arithmatex">\(1/2\)</span>-Hölder continuity, but cannot reach <span class="arithmatex">\(1/2\)</span>).</p>
+<p>The sample paths of Brownian motion <span class="arithmatex">\(W(t)\)</span> are almost everywhere <span class="arithmatex">\(\gamma\)</span>-Hölder continuous for any <span class="arithmatex">\(\gamma \in \left(0, \frac{1}{2}\right)\)</span>.
+(That is, it approaches <span class="arithmatex">\(1/2\)</span>-Hölder continuity arbitrarily closely, but does not achieve <span class="arithmatex">\(1/2\)</span>).</p>
 <details class="proof">
-<summary>Derivation Process (Using Gaussian Moments) (Click to expand)</summary>
-<p>Since the increment of Brownian motion is <span class="arithmatex">\(W(t) - W(s) \sim \mathcal{N}(0, |t-s|)\)</span>, we know that the high-order even moments of the normal distribution have clear formulas.
-For an even power <span class="arithmatex">\(2m\)</span> (<span class="arithmatex">\(m \in \mathbb{N}\)</span>):</p>
+<summary>Derivation (Using Gaussian Moments) (Click to expand)</summary>
+<p>Since the increment of Brownian motion <span class="arithmatex">\(W(t) - W(s) \sim \mathcal{N}(0, |t-s|)\)</span>, we know the explicit formula for higher even moments of the normal distribution.
+For even powers <span class="arithmatex">\(2m\)</span> (<span class="arithmatex">\(m \in \mathbb{N}\)</span>):</p>
 <div class="arithmatex">\[
 E[|W(t) - W(s)|^{2m}] = (2m-1)!! \big( Var(W(t)-W(s)) \big)^m = (2m-1)!! |t - s|^m
 \]</div>
-<p>This perfectly matches the conditions of the Kolmogorov Continuity Theorem. We set:</p>
-<ul>
-<li>
-<p><span class="arithmatex">\(\beta = 2m\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(1 + \alpha = m \implies \alpha = m - 1\)</span></p>
-</li>
-</ul>
-<p>According to the theorem, the Hölder exponent <span class="arithmatex">\(\gamma\)</span> of the path must satisfy:</p>
+<p>This perfectly matches the condition of the Kolmogorov continuity theorem. Let:
+- <span class="arithmatex">\(\beta = 2m\)</span>
+- <span class="arithmatex">\(1 + \alpha = m \implies \alpha = m - 1\)</span></p>
+<p>According to the theorem, the Hölder exponent <span class="arithmatex">\(\gamma\)</span> of the paths must satisfy:</p>
 <div class="arithmatex">\[
 \gamma &lt; \frac{\alpha}{\beta} = \frac{m - 1}{2m} = \frac{1}{2} - \frac{1}{2m}
 \]</div>
-<p>Since this property holds for all positive integers <span class="arithmatex">\(m\)</span>, we can let <span class="arithmatex">\(m \to \infty\)</span>, at which point <span class="arithmatex">\(\frac{1}{2m} \to 0\)</span>.
-Therefore, for any <span class="arithmatex">\(\gamma\)</span> strictly less than <span class="arithmatex">\(\frac{1}{2}\)</span>, Brownian motion is <span class="arithmatex">\(\gamma\)</span>-Hölder continuous. Furthermore, this leads to the conclusion that <strong>Brownian motion paths are <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> continuous</strong>. <span class="arithmatex">\(\square\)</span></p>
+<p>Since this holds for all positive integers <span class="arithmatex">\(m\)</span>, we can let <span class="arithmatex">\(m \to \infty\)</span>, where <span class="arithmatex">\(\frac{1}{2m} \to 0\)</span>.
+Therefore, for any <span class="arithmatex">\(\gamma\)</span> strictly less than <span class="arithmatex">\(\frac{1}{2}\)</span>, Brownian motion is <span class="arithmatex">\(\gamma\)</span>-Hölder continuous. Consequently, we arrive at the conclusion that <strong>Brownian motion paths are <span class="arithmatex">\(C^{\frac{1}{2}-}\)</span> continuous</strong>. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 

@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-3-central-limit-theoremi" class="md-skip">
+        <a href="#chapter-3-central-limit-theorem-part-i" class="md-skip">
           Skip to content
         </a>
       
@@ -1114,10 +1114,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-double-arrays-a-lemma" class="md-nav__link">
+  <a href="#1-double-arrays-a-lemma-on-complex-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Double Arrays &amp; A Lemma
+        1. Double Arrays &amp; A Lemma on Complex Limits
       
     </span>
   </a>
@@ -1125,10 +1125,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-liapounovs-clt" class="md-nav__link">
+  <a href="#2-liapounovs-central-limit-theorem-liapounovs-clt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Liapounov's CLT
+        2. Liapounov's Central Limit Theorem (Liapounov's CLT)
       
     </span>
   </a>
@@ -1158,10 +1158,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-lindeberg-feller-clt" class="md-nav__link">
+  <a href="#5-lindeberg-feller-central-limit-theorem-lindeberg-feller-clt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Lindeberg-Feller CLT
+        5. Lindeberg-Feller Central Limit Theorem (Lindeberg-Feller CLT)
       
     </span>
   </a>
@@ -1258,10 +1258,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-double-arrays-a-lemma" class="md-nav__link">
+  <a href="#1-double-arrays-a-lemma-on-complex-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Double Arrays &amp; A Lemma
+        1. Double Arrays &amp; A Lemma on Complex Limits
       
     </span>
   </a>
@@ -1269,10 +1269,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-liapounovs-clt" class="md-nav__link">
+  <a href="#2-liapounovs-central-limit-theorem-liapounovs-clt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Liapounov's CLT
+        2. Liapounov's Central Limit Theorem (Liapounov's CLT)
       
     </span>
   </a>
@@ -1302,10 +1302,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-lindeberg-feller-clt" class="md-nav__link">
+  <a href="#5-lindeberg-feller-central-limit-theorem-lindeberg-feller-clt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Lindeberg-Feller CLT
+        5. Lindeberg-Feller Central Limit Theorem (Lindeberg-Feller CLT)
       
     </span>
   </a>
@@ -1343,14 +1343,14 @@
   
 
 
-<h1 id="chapter-3-central-limit-theoremi">Chapter 3: Central Limit Theorem(I)</h1>
-<p>Unlike the classical Central Limit Theorem (which requires independent and identically distributed, i.i.d. variables), in this chapter we will explore a more general Central Limit Theorem, where the random variables are <strong>independent but not identically distributed (i.n.i.d.)</strong>.</p>
+<h1 id="chapter-3-central-limit-theorem-part-i">Chapter 3: Central Limit Theorem (Part I)</h1>
+<p>Unlike the classical central limit theorem (which requires independent and identically distributed, i.i.d., variables), this chapter explores more general central limit theorems, specifically the case where random variables are <strong>independent but not identically distributed (i.n.i.d.)</strong>.</p>
 <hr />
-<h2 id="1-double-arrays-a-lemma">1. Double Arrays &amp; A Lemma</h2>
-<p>When dealing with the sum of random variables with different distributions, we usually represent them in the form of a "double array" (or triangular array).</p>
+<h2 id="1-double-arrays-a-lemma-on-complex-limits">1. Double Arrays &amp; A Lemma on Complex Limits</h2>
+<p>When dealing with sums of random variables from different distributions, we often represent them in the form of a "double array" (or triangular array).</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition 3.1: Double Array of Independent Random Vectors</p>
-<p>For each <span class="arithmatex">\(n \ge 1\)</span>, let <span class="arithmatex">\(\{X_{n1}, X_{n2}, \dots, X_{nk_n}\}\)</span> be a collection of random vectors defined on a probability space <span class="arithmatex">\((\Omega_n, \mathcal{F}_n, P_n)\)</span>, such that for a given <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(X_{n1}, \dots, X_{nk_n}\)</span> are mutually independent, and <span class="arithmatex">\(k_n \to \infty\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.
+<p>For each <span class="arithmatex">\(n \ge 1\)</span>, let <span class="arithmatex">\(\{X_{n1}, X_{n2}, \dots, X_{nk_n}\}\)</span> be a set of random vectors defined on a probability space <span class="arithmatex">\((\Omega_n, \mathcal{F}_n, P_n)\)</span>, such that for a given <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(X_{n1}, \dots, X_{nk_n}\)</span> are mutually independent, and <span class="arithmatex">\(k_n \to \infty\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.
 Then <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> is called a <strong>double array of independent random vectors</strong>.</p>
 <p><strong>Common notations in this chapter</strong>:</p>
 <ul>
@@ -1359,19 +1359,19 @@ Then <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> 
 <li>Variance: <span class="arithmatex">\(\sigma_{nj}^2 = Var(X_{nj})\)</span>, row total variance <span class="arithmatex">\(\sigma_n^2 = \sum_{j=1}^{k_n} \sigma_{nj}^2\)</span></li>
 </ul>
 </div>
-<p>To handle the product of characteristic functions, we need to introduce a limit lemma for products of complex sequences.</p>
+<p>To handle products of characteristic functions, we need to introduce a lemma on the limit of products of complex sequences.</p>
 <div class="admonition info">
 <p class="admonition-title">Lemma 3.2: Limit of Products of Complex Sequences</p>
-<p>Let <span class="arithmatex">\(\{\theta_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> be a double array of complex numbers satisfying as <span class="arithmatex">\(n \to \infty\)</span>:</p>
-<p><strong>(i)</strong> Uniformly tends to 0: <span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \to 0\)</span>
-<strong>(ii)</strong> Absolute sum is uniformly bounded: <span class="arithmatex">\(\sum_{j=1}^{k_n} |\theta_{nj}| \le M &lt; \infty\)</span> (where <span class="arithmatex">\(M\)</span> is independent of <span class="arithmatex">\(n\)</span>)
-<strong>(iii)</strong> Sum converges: <span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span> (where <span class="arithmatex">\(\theta\)</span> is a finite complex number)</p>
-<p>Then its product converges to the exponential function:</p>
+<p>Let <span class="arithmatex">\(\{\theta_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span> be a double array of complex numbers satisfying, as <span class="arithmatex">\(n \to \infty\)</span>:</p>
+<p><strong>(i)</strong> Uniform convergence to 0: <span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \to 0\)</span>
+<strong>(ii)</strong> Uniformly bounded absolute sum: <span class="arithmatex">\(\sum_{j=1}^{k_n} |\theta_{nj}| \le M &lt; \infty\)</span> (where <span class="arithmatex">\(M\)</span> is independent of <span class="arithmatex">\(n\)</span>)
+<strong>(iii)</strong> Sum convergence: <span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span> (where <span class="arithmatex">\(\theta\)</span> is a finite complex number)</p>
+<p>Then their product converges to the exponential function:</p>
 <div class="arithmatex">\[
 \prod_{j=1}^{k_n} (1 + \theta_{nj}) \rightarrow e^\theta
 \]</div>
 <blockquote>
-<p><em>(Note: This generalizes the classic calculus conclusion <span class="arithmatex">\(\lim_{n \to \infty} (1 + \theta/n)^n = e^\theta\)</span> by substituting <span class="arithmatex">\(\theta_{nj} \equiv \theta/n\)</span> into this lemma.)</em></p>
+<p><em>(Note: This generalizes the classical calculus result <span class="arithmatex">\(\lim_{n \to \infty} (1 + \theta/n)^n = e^\theta\)</span>, which corresponds to substituting <span class="arithmatex">\(\theta_{nj} \equiv \theta/n\)</span> into this lemma.)</em></p>
 </blockquote>
 <details class="proof">
 <summary>Detailed Proof of Lemma 3.2 (Click to expand)</summary>
@@ -1380,16 +1380,16 @@ When <span class="arithmatex">\(|z| &lt; 1\)</span>, the complex logarithm has t
 <div class="arithmatex">\[
 \log(1+z) = \sum_{m=1}^\infty (-1)^{m-1} \frac{z^m}{m}
 \]</div>
-<p>From condition (i), there exists <span class="arithmatex">\(n_0\)</span> such that for all <span class="arithmatex">\(n &gt; n_0\)</span>, <span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \le 1/2\)</span>.
-At this time <span class="arithmatex">\(|\theta_{nj}| &lt; 1\)</span> and <span class="arithmatex">\(1+\theta_{nj} \neq 0\)</span>. Consider its logarithmic expansion and the truncation error of the linear term:</p>
+<p>By condition (i), there exists <span class="arithmatex">\(n_0\)</span> such that for all <span class="arithmatex">\(n &gt; n_0\)</span>, <span class="arithmatex">\(\max_{1 \le j \le k_n} |\theta_{nj}| \le 1/2\)</span>.
+Then <span class="arithmatex">\(|\theta_{nj}| &lt; 1\)</span> and <span class="arithmatex">\(1+\theta_{nj} \neq 0\)</span>. Consider the truncation error between its logarithmic expansion and the linear term:</p>
 <div class="arithmatex">\[
 |\log(1+\theta_{nj}) - \theta_{nj}| = \left| \sum_{m \ge 2} (-1)^{m-1} \frac{\theta_{nj}^m}{m} \right| \le \sum_{m \ge 2} \frac{|\theta_{nj}|^m}{m}
 \]</div>
-<p>Extract the quadratic term, and use the geometric series sum to bound the remaining terms:</p>
+<p>Extracting the quadratic term and bounding the remainder using a geometric series:</p>
 <div class="arithmatex">\[
 \le \frac{|\theta_{nj}|^2}{2} \sum_{m=2}^\infty \left(\frac{1}{2}\right)^{m-2} = |\theta_{nj}|^2 &lt; 1
 \]</div>
-<p>Since the absolute value of the error is bounded by <span class="arithmatex">\(|\theta_{nj}|^2\)</span>, we can write it as:</p>
+<p>Since the absolute error is bounded by <span class="arithmatex">\(|\theta_{nj}|^2\)</span>, we can write:</p>
 <div class="arithmatex">\[
 \log(1+\theta_{nj}) = \theta_{nj} + \Lambda_{nj}|\theta_{nj}|^2, \quad \text{where } |\Lambda_{nj}| &lt; 1
 \]</div>
@@ -1397,50 +1397,50 @@ At this time <span class="arithmatex">\(|\theta_{nj}| &lt; 1\)</span> and <span 
 <div class="arithmatex">\[
 \sum_{j=1}^{k_n} \log(1+\theta_{nj}) = \sum_{j=1}^{k_n} \theta_{nj} + \sum_{j=1}^{k_n} \Lambda_{nj}|\theta_{nj}|^2
 \]</div>
-<p>Using conditions (i) and (ii), estimate the sum of the error terms:</p>
+<p>Using conditions (i) and (ii), estimate the total error term:</p>
 <div class="arithmatex">\[
 \left| \sum_{j=1}^{k_n} \Lambda_{nj}|\theta_{nj}|^2 \right| \le \max_{1 \le j \le k_n} |\theta_{nj}| \sum_{j=1}^{k_n} |\theta_{nj}| \le \left( \max_{1 \le j \le k_n} |\theta_{nj}| \right) \cdot M \rightarrow 0
 \]</div>
-<p>Combined with condition (iii) <span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span>, we have:</p>
+<p>Combined with condition (iii) <span class="arithmatex">\(\sum_{j=1}^{k_n} \theta_{nj} \to \theta\)</span>, we obtain:</p>
 <div class="arithmatex">\[
 \sum_{j=1}^{k_n} \log(1+\theta_{nj}) \rightarrow \theta
 \]</div>
-<p>Taking the complex exponential mapping on both sides, the lemma is proven. <span class="arithmatex">\(\square\)</span></p>
+<p>Taking the complex exponential on both sides completes the proof. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <hr />
-<h2 id="2-liapounovs-clt">2. Liapounov's CLT</h2>
+<h2 id="2-liapounovs-central-limit-theorem-liapounovs-clt">2. Liapounov's Central Limit Theorem (Liapounov's CLT)</h2>
 <p>If the sequence of random variables possesses moments higher than the second order, we can provide a very easily verifiable sufficient condition.</p>
 <div class="admonition success">
-<p class="admonition-title">Theorem 3.3: Liapounov's Theorem</p>
-<p>For a double array <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span>, define the sum of its third-order absolute central moments as <span class="arithmatex">\(\Gamma_n = \sum_{j=1}^{k_n} E|X_{nj} - \alpha_{nj}|^3\)</span>, assuming this value is finite for each <span class="arithmatex">\(n\)</span>.
-If <strong>Liapounov's Condition</strong> is satisfied:</p>
+<p class="admonition-title">Theorem 3.3: Liapounov's CLT (Liapounov's Theorem)</p>
+<p>For the double array <span class="arithmatex">\(\{X_{nj} : 1 \le j \le k_n\}_{n \ge 1}\)</span>, define the sum of their third-order central absolute moments as <span class="arithmatex">\(\Gamma_n = \sum_{j=1}^{k_n} E|X_{nj} - \alpha_{nj}|^3\)</span>, assuming this value is finite for each <span class="arithmatex">\(n\)</span>.
+If the <strong>Liapounov's Condition</strong> is satisfied:</p>
 <div class="arithmatex">\[
 \frac{\Gamma_n}{\sigma_n^3} = \frac{1}{\sigma_n^3} \sum_{j=1}^{k_n} E|X_{nj} - \alpha_{nj}|^3 \rightarrow 0 \quad \text{as } n \to \infty
 \]</div>
-<p>Then the standardized sum will converge in distribution to the standard normal:</p>
+<p>then the standardized sum converges in distribution to the standard normal:</p>
 <div class="arithmatex">\[
 \frac{S_n - \alpha_n}{\sigma_n} \rightarrow N(0,1)
 \]</div>
 <blockquote>
-<p><em>(Note: The third-order moment can be relaxed to the <span class="arithmatex">\((2+\delta)\)</span>-th order moment, where <span class="arithmatex">\(\delta &gt; 0\)</span>.)</em></p>
+<p><em>(Note: The third-order moment can be relaxed to a <span class="arithmatex">\(2+\delta\)</span> order moment, where <span class="arithmatex">\(\delta &gt; 0\)</span>.)</em></p>
 </blockquote>
 <details class="proof">
-<summary>Rigorous Proof of Theorem 3.3 (Click to expand)</summary>
-<p>Let <span class="arithmatex">\(\gamma_{nj} = E|X_{nj} - \alpha_{nj}|^3\)</span>. From Liapounov's moment inequality we have:</p>
+<summary>Rigorous Proof of Theorem 3.3 (click to expand)</summary>
+<p>Let <span class="arithmatex">\(\gamma_{nj} = E|X_{nj} - \alpha_{nj}|^3\)</span>. By Liapounov's moment inequality:</p>
 <div class="arithmatex">\[
 \sigma_{nj} = (E|X_{nj} - \alpha_{nj}|^2)^{1/2} \le (E|X_{nj} - \alpha_{nj}|^3)^{1/3} = \gamma_{nj}^{1/3}
 \]</div>
-<p>So <span class="arithmatex">\(\sigma_{nj}^3 \le \gamma_{nj}\)</span>. Furthermore:</p>
+<p>So <span class="arithmatex">\(\sigma_{nj}^3 \le \gamma_{nj}\)</span>. Consequently:</p>
 <div class="arithmatex">\[
 \max_{1 \le j \le k_n} \sigma_{nj}^3 \le \max_{1 \le j \le k_n} \gamma_{nj} \le \sum_{j=1}^{k_n} \gamma_{nj} = \Gamma_n
 \]</div>
-<p>Let <span class="arithmatex">\(\phi_{nj}(t)\)</span> be the characteristic function of the standardized variable <span class="arithmatex">\((X_{nj} - \alpha_{nj})/\sigma_n\)</span>. Since <span class="arithmatex">\(\gamma_{nj}\)</span> is finite, the characteristic function can be expanded to the third-order Taylor series:</p>
+<p>Let <span class="arithmatex">\(\phi_{nj}(t)\)</span> be the characteristic function of the standardized variable <span class="arithmatex">\((X_{nj} - \alpha_{nj})/\sigma_n\)</span>. Since <span class="arithmatex">\(\gamma_{nj}\)</span> is finite, the characteristic function can be expanded to the third order via Taylor series:</p>
 <div class="arithmatex">\[
 \phi_{nj}(t) = 1 - \frac{\sigma_{nj}^2 t^2}{2\sigma_n^2} + \frac{\Lambda_{nj}}{6} \frac{\gamma_{nj} t^3}{\sigma_n^3}, \quad \text{where } |\Lambda_{nj}| &lt; 1
 \]</div>
-<p>To apply Lemma 3.2, we let <span class="arithmatex">\(\theta_{nj} = \phi_{nj}(t) - 1\)</span>, and verify its three conditions:</p>
-<p><strong>Verify (i)</strong>:</p>
+<p>To apply Lemma 3.2, we set <span class="arithmatex">\(\theta_{nj} = \phi_{nj}(t) - 1\)</span> and verify its three conditions:</p>
+<p><strong>Verification of (i)</strong>:</p>
 <div class="arithmatex">\[
 \max_j |\phi_{nj}(t) - 1| \le \frac{t^2}{2\sigma_n^2} \max_j \sigma_{nj}^2 + \frac{|t|^3}{6\sigma_n^3} \max_j \gamma_{nj}
 \]</div>
@@ -1448,18 +1448,18 @@ If <strong>Liapounov's Condition</strong> is satisfied:</p>
 <div class="arithmatex">\[
 \frac{\max \sigma_{nj}^2}{\sigma_n^2} \le \left( \frac{\max \sigma_{nj}^3}{\sigma_n^3} \right)^{2/3} \le \left( \frac{\Gamma_n}{\sigma_n^3} \right)^{2/3} \rightarrow 0
 \]</div>
-<p>Also <span class="arithmatex">\(\max_j \gamma_{nj} / \sigma_n^3 \le \Gamma_n / \sigma_n^3 \rightarrow 0\)</span>. Thus <span class="arithmatex">\(\max_j |\theta_{nj}| \to 0\)</span>, condition (i) holds.</p>
-<p><strong>Verify (ii)</strong>:</p>
+<p>Also <span class="arithmatex">\(\max_j \gamma_{nj} / \sigma_n^3 \le \Gamma_n / \sigma_n^3 \rightarrow 0\)</span>. Therefore <span class="arithmatex">\(\max_j |\theta_{nj}| \to 0\)</span>, condition (i) holds.</p>
+<p><strong>Verification of (ii)</strong>:</p>
 <div class="arithmatex">\[
 \sum_{j=1}^{k_n} |\phi_{nj}(t) - 1| \le \frac{t^2}{2\sigma_n^2} \sum_{j=1}^{k_n} \sigma_{nj}^2 + \frac{|t|^3}{6} \frac{\Gamma_n}{\sigma_n^3} = \frac{t^2}{2} + \frac{|t|^3}{6} \frac{\Gamma_n}{\sigma_n^3} \le M(t)
 \]</div>
 <p>This is a bounded quantity, condition (ii) holds.</p>
-<p><strong>Verify (iii)</strong>:</p>
-<p>Since the sum of the error terms satisfies:</p>
+<p><strong>Verification of (iii)</strong>:</p>
+<p>Since the sum of error terms satisfies:</p>
 <div class="arithmatex">\[
 \left| \sum_{j=1}^{k_n} \frac{\Lambda_{nj} \gamma_{nj}}{\sigma_n^3} \right| \le \frac{\Gamma_n}{\sigma_n^3} \rightarrow 0
 \]</div>
-<p>Therefore, the limit of the sum of the characteristic function offsets is:</p>
+<p>Therefore, the limit of the sum of characteristic function offsets is:</p>
 <div class="arithmatex">\[
 \sum_{j=1}^{k_n} (\phi_{nj}(t) - 1) = -\frac{t^2}{2} + t^3 \sum_{j=1}^{k_n} \frac{\Lambda_{nj} \gamma_{nj}}{\sigma_n^3} \rightarrow -\frac{t^2}{2}
 \]</div>
@@ -1482,14 +1482,23 @@ Let <span class="arithmatex">\(P_n = \sum_{j=1}^n \gamma_j\)</span>. If <span cl
 </div>
 <hr />
 <h2 id="3-lindebergs-telescoping-method">3. Lindeberg's Telescoping Method</h2>
-<p>Without using characteristic functions, directly applying analytical techniques (the predecessor of Stein's method) can also prove the CLT.</p>
-<p>Assume <span class="arithmatex">\(\alpha_j = 0\)</span>. Introduce an auxiliary sequence of random variables <span class="arithmatex">\(Y_1, \dots, Y_n\)</span> following standard normal distributions, such that they are independent of <span class="arithmatex">\(X_j\)</span>, and <span class="arithmatex">\(Y_j \sim N(0, \sigma_j^2)\)</span> matching the first two moments.
+<p>The CLT can also be proved directly using analytical techniques (a precursor to the Stein method) without using characteristic functions.</p>
+<p>Assume <span class="arithmatex">\(\alpha_j = 0\)</span>. Introduce a sequence of auxiliary random variables <span class="arithmatex">\(Y_1, \dots, Y_n\)</span> following a standard normal distribution, such that they are independent of the <span class="arithmatex">\(X_j\)</span>, and <span class="arithmatex">\(Y_j \sim N(0, \sigma_j^2)\)</span> matches the first two moments.
 Let <span class="arithmatex">\(Y_0 = \sum_{i=1}^n Y_i / \sigma_n \sim N(0,1)\)</span>.</p>
 <p>Our goal is to prove that for all bounded test functions <span class="arithmatex">\(f \in C_B^\infty\)</span> with bounded derivatives of all orders:</p>
 <div class="arithmatex">\[
 E\left[f\left(\frac{\sum_{i=1}^n X_i}{\sigma_n}\right)\right] - E[f(Y_0)] \rightarrow 0
 \]</div>
-<p>According to Theorem 3.5 (Chung 6.1.6), if the above expectation converges for all test functions, then the probability measure converges weakly.</p>
+<p>We rely on the following theorem:</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.5 (Chung 6.1.6)</p>
+<p>Let <span class="arithmatex">\(\{\mu_n\}\)</span> be a sequence of probability measures. If for all infinitely differentiable test functions <span class="arithmatex">\(f \in C_B^\infty\)</span> with bounded derivatives of all orders, we have:</p>
+<div class="arithmatex">\[
+\int f(x) \mu_n(dx) \rightarrow \int f(x) \mu(dx)
+\]</div>
+<p>where <span class="arithmatex">\(\mu\)</span> is a probability measure, then <span class="arithmatex">\(\mu_n\)</span> converges weakly to <span class="arithmatex">\(\mu\)</span>.</p>
+</div>
+<p>According to Theorem 3.5 (Chung 6.1.6), if the above expectation converges for all test functions, then the probability measures converge weakly.</p>
 <div class="admonition success">
 <p class="admonition-title">Core of the Proof Based on Telescoping Expansion</p>
 <p>Construct the mixed partial sum sequence <span class="arithmatex">\(Z_j\)</span>:
@@ -1499,79 +1508,110 @@ The boundaries are <span class="arithmatex">\(Z_1 = X_2 + \dots + X_n\)</span> a
 <div class="arithmatex">\[
 E\left[f\left(\frac{\sum X_i}{\sigma_n}\right)\right] - E\left[f\left(\frac{\sum Y_i}{\sigma_n}\right)\right] = \sum_{i=1}^n \left[ E\left[f\left(\frac{Z_i + X_i}{\sigma_n}\right)\right] - E\left[f\left(\frac{Z_i + Y_i}{\sigma_n}\right)\right] \right]
 \]</div>
-<p>Perform a third-order Taylor expansion on <span class="arithmatex">\(f\)</span> at <span class="arithmatex">\(Z_i/\sigma_n\)</span>:</p>
+<p>Perform a third-order Taylor expansion of <span class="arithmatex">\(f\)</span> at <span class="arithmatex">\(Z_i/\sigma_n\)</span>:</p>
 <div class="arithmatex">\[
 f\left(\frac{Z_i + X_i}{\sigma_n}\right) = f\left(\frac{Z_i}{\sigma_n}\right) + f'\left(\frac{Z_i}{\sigma_n}\right)\frac{X_i}{\sigma_n} + \frac{1}{2}f''\left(\frac{Z_i}{\sigma_n}\right)\frac{X_i^2}{\sigma_n^2} + \theta_i^{(1)}\frac{X_i^3}{3!\sigma_n^3}
 \]</div>
-<p>Since the first two moments of <span class="arithmatex">\(X_i\)</span> and <span class="arithmatex">\(Y_i\)</span> are completely identical, the first-order and second-order terms perfectly cancel out after taking expectations.
-Only the third-order error term remains, bounded by the supremum <span class="arithmatex">\(M\)</span> of the third derivative:</p>
+<p>Since <span class="arithmatex">\(X_i\)</span> and <span class="arithmatex">\(Y_i\)</span> have identical first two moments, the first and second-order terms cancel perfectly upon taking expectations.
+Only the third-order error term remains, bounded by the upper bound <span class="arithmatex">\(M\)</span> of the third derivative:</p>
 <div class="arithmatex">\[
-\le \sum_{i=1}^n \frac{M}{3!\sigma_n^3} \left(\gamma_i + \sqrt{\frac{8}{\pi}}\sigma_i^3\right) \le \frac{M_1}{6}\frac{\Gamma_n}{\sigma_n^3} \rightarrow 0
+\le \sum_{i=1}^n \frac{M}{3!\sigma_n^3} (\gamma_i + \sqrt{\frac{8}{\pi}}\sigma_i^3) \le \frac{M_1}{6}\frac{\Gamma_n}{\sigma_n^3} \rightarrow 0
 \]</div>
-<p>This method provides the cornerstone for Stein's method and Gaussian approximation of high-dimensional random vectors.</p>
+<p>This method provides the foundation for the Stein method and Gaussian approximation for high-dimensional random vectors.</p>
 </div>
-<p>Corollary 3.6 Truncation Method Preparation Theorem:
-If there exists a double array <span class="arithmatex">\(|X_{nj}/\sigma_n| \le M_{nj}\)</span> a.s. and <span class="arithmatex">\(\lim_{n \to \infty} \max_j M_{nj} = 0\)</span>, then the standardized sum converges to a normal distribution.</p>
+<div class="admonition info">
+<p class="admonition-title">Corollary 3.6 Preliminary Theorem for Truncation Method</p>
+<p>If there exists a double array <span class="arithmatex">\(|X_{nj}/\sigma_n| \le M_{nj}\)</span> a.s. and <span class="arithmatex">\(\lim_{n \to \infty} \max_j M_{nj} = 0\)</span>, then the standardized sum converges to a normal distribution.</p>
+</div>
 <hr />
 <h2 id="4-null-arrays">4. Null Arrays</h2>
-<p>To explore the necessary and sufficient conditions for the CLT to hold, we need to rule out the pathological case where a single variable dominates the total variance.</p>
+<p>To explore the sufficient and necessary conditions for the CLT to hold, we need to exclude pathological cases where a single variable dominates the overall variance.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition 3.7: Null Array</p>
-<p>If a double array satisfies: for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>,</p>
+<p>A double array is called a <strong>null array</strong> if for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>,</p>
 <div class="arithmatex">\[
 \lim_{n \to \infty} \max_{1 \le j \le k_n} P(|X_{nj} - \alpha_{nj}| &gt; \epsilon \sigma_n) = 0
 \]</div>
-<p>Then this double array is called a <strong>Null array</strong>.
-This is equivalent to saying that each component <span class="arithmatex">\((X_{nj} - \alpha_j)/\sigma_n\)</span> uniformly degenerates to 0 in probability with respect to <span class="arithmatex">\(j\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.</p>
+<p>This is equivalent to saying each component <span class="arithmatex">\((X_{nj} - \alpha_j)/\sigma_n\)</span> converges in probability to 0 uniformly in <span class="arithmatex">\(j\)</span> as <span class="arithmatex">\(n \to \infty\)</span>.</p>
 </div>
-<p>Using characteristic functions, we can provide a very computationally convenient equivalent characterization:</p>
+<p>Using characteristic functions, we can give a very convenient equivalent characterization:</p>
 <div class="admonition info">
-<p class="admonition-title">Proposition 3.8: Equivalent Characteristic Function Form for Null Arrays</p>
+<p class="admonition-title">Proposition 3.8: Equivalent Form via Characteristic Functions</p>
 <p>A double array <span class="arithmatex">\(\{X_{nj}\}\)</span> is a null array if and only if for all <span class="arithmatex">\(t \in \mathbb{R}\)</span>:</p>
 <div class="arithmatex">\[
 \lim_{n \to \infty} \max_{1 \le j \le k_n} |\phi_{nj}(t) - 1| = 0
 \]</div>
-<p>And this convergence is uniform on any finite interval <span class="arithmatex">\([-K, K]\)</span>.</p>
+<p>and this convergence is uniform on any finite interval <span class="arithmatex">\([-K, K]\)</span>.</p>
 <details class="proof">
-<summary>Proof of Equivalence (Click to expand)</summary>
-<p><strong>(<span class="arithmatex">\(\Rightarrow\)</span> Direction)</strong>: Without loss of generality, assume <span class="arithmatex">\(\alpha_j = 0\)</span>.
-Decompose the expectation into two parts, inside and outside the threshold <span class="arithmatex">\(\epsilon\sigma_n\)</span>:</p>
+<summary>Proof of Equivalence (click to expand)</summary>
+<p><strong>(<span class="arithmatex">\(\Rightarrow\)</span> direction)</strong>: Without loss of generality, assume <span class="arithmatex">\(\alpha_j = 0\)</span>.
+Decompose the expectation into parts inside and outside the threshold <span class="arithmatex">\(\epsilon\sigma_n\)</span>:</p>
 <div class="arithmatex">\[
 |\phi_{nj}(t) - 1| \le E\left[ |e^{itX_{nj}/\sigma_n} - 1| \mathbb{I}(|X_{nj}| &gt; \epsilon\sigma_n) \right] + E\left[ |e^{itX_{nj}/\sigma_n} - 1| \mathbb{I}(|X_{nj}| \le \epsilon\sigma_n) \right]
 \]</div>
-<p>Using the inequality <span class="arithmatex">\(|e^{itu} - 1| \le |tu|\)</span> and the bound 2 for the modulus of complex exponentials:</p>
+<p>Using the inequality <span class="arithmatex">\(|e^{itu} - 1| \le |tu|\)</span> and the bound 2 for the modulus of the complex exponential:</p>
 <div class="arithmatex">\[
 \le 2 P(|X_{nj}| &gt; \epsilon\sigma_n) + |t| \epsilon
 \]</div>
-<p>Because it is on a bounded closed set <span class="arithmatex">\([-K, K]\)</span>:</p>
+<p>Since we are on the bounded closed set <span class="arithmatex">\([-K, K]\)</span>:</p>
 <div class="arithmatex">\[
 \sup_{|t|\le K} \max_j |\phi_{nj}(t) - 1| \le 2 \max_j P(|X_{nj}| &gt; \epsilon\sigma_n) + K\epsilon
 \]</div>
-<p>As <span class="arithmatex">\(n \to \infty\)</span>, the first term goes to 0 by the definition of a null array, and the second term can be arbitrarily small since <span class="arithmatex">\(\epsilon\)</span> is arbitrary. Thus, uniform convergence is proven.</p>
-<p><strong>(<span class="arithmatex">\(\Leftarrow\)</span> Direction)</strong>:
-Using the classic characteristic function inequality:</p>
+<p>As <span class="arithmatex">\(n \to \infty\)</span>, the first term tends to 0 by the definition of a null array, and the second term can be made arbitrarily small because <span class="arithmatex">\(\epsilon\)</span> is arbitrary, thus proving uniform convergence.</p>
+<p><strong>(<span class="arithmatex">\(\Leftarrow\)</span> direction)</strong>:
+Using the classical characteristic function inequality:</p>
 <div class="arithmatex">\[
 P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \frac{1}{\delta} \int_{|t|\le\delta} (1 - \phi_{nj}(t)) dt \le \frac{1}{\delta} \int_{|t|\le\delta} |1 - \phi_{nj}(t)| dt
 \]</div>
-<p>Taking max on both sides:</p>
+<p>Taking the max on both sides:</p>
 <div class="arithmatex">\[
 \max_j P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \max_j \frac{1}{\delta} \int_{|t|\le\delta} |1 - \phi_{nj}(t)| dt
 \]</div>
-<p>By the Bounded Convergence Theorem (BCT) for integrals and the given conditions, the limit of the above expression tends to 0. The proposition is proven. <span class="arithmatex">\(\square\)</span></p>
+<p>By the Bounded Convergence Theorem (BCT) for integrals and the given condition, the limit of the above expression tends to 0. The proposition is proved <span class="arithmatex">\(\square\)</span>.</p>
 </details>
 </div>
 <hr />
-<h2 id="5-lindeberg-feller-clt">5. Lindeberg-Feller CLT</h2>
-<p>When we only know that the second moment exists, and the third moment may not, Liapounov's condition fails. At this time, the <strong>Lindeberg Condition</strong> becomes the most precise necessary and sufficient condition for the CLT of independent variables to hold.</p>
+<h2 id="5-lindeberg-feller-central-limit-theorem-lindeberg-feller-clt">5. Lindeberg-Feller Central Limit Theorem (Lindeberg-Feller CLT)</h2>
+<p>When we only know that the second moment exists, while the third moment may not exist, the Lyapunov condition fails. At this point, the <strong>Lindeberg Condition (LC)</strong> becomes the most precise necessary and sufficient condition for the CLT of independent variables to hold.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition 3.9: Lindeberg Condition (LC)</p>
 <p>For a double array <span class="arithmatex">\(\{X_{nj}\}\)</span>, if for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, its truncated variance ratio satisfies:</p>
 <div class="arithmatex">\[
 \lim_{n \to \infty} \frac{1}{\sigma_n^2} \sum_{j=1}^{k_n} E \left[ (X_{nj} - \alpha_{nj})^2 \mathbb{I}(|X_{nj} - \alpha_{nj}| &gt; \epsilon \sigma_n) \right] = 0
 \]</div>
-<p>Then the array is said to satisfy the Lindeberg condition.</p>
+<p>then the array is said to satisfy the Lindeberg condition.</p>
 </div>
-<p>This leads to the pinnacle of the asymptotic distribution theory for independent variables:</p>
+<p>This, combined with the following lemma, leads to the famous theorem in the asymptotic distribution theory of independent variables:</p>
+<div class="admonition info">
+<p class="admonition-title">Lemma 3.10 (Diagonal Construction Method)</p>
+<p>Let <span class="arithmatex">\(u(m, n)\)</span> be a function defined on positive integers <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(n\)</span>, such that for each fixed <span class="arithmatex">\(m\)</span>, we have:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} u(m, n) = 0
+\]</div>
+<p>Then there exists a monotonically increasing sequence <span class="arithmatex">\(\{m_n\}\)</span> tending to infinity (<span class="arithmatex">\(m_n \to \infty\)</span>), such that:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} u(m_n, n) = 0
+\]</div>
+<details class="proof">
+<summary>Proof of Lemma 3.10 (click to expand)</summary>
+<p>Since for each fixed <span class="arithmatex">\(m\)</span>, <span class="arithmatex">\(\lim_{n \to \infty} u(m, n) = 0\)</span>, by the definition of limit, there must exist an index <span class="arithmatex">\(n_m\)</span> such that for all <span class="arithmatex">\(n \ge n_m\)</span>, we have:</p>
+<div class="arithmatex">\[
+u(m, n_m) \le \frac{1}{m}
+\]</div>
+<p>In this way, we can construct a strictly monotonic increasing sequence <span class="arithmatex">\(\{n_m\}_{m \ge 1}\)</span> that tends to infinity.</p>
+<p>For any <span class="arithmatex">\(n\)</span> satisfying <span class="arithmatex">\(n_m \le n &lt; n_{m+1}\)</span>, we set <span class="arithmatex">\(m_n \equiv m\)</span>.</p>
+<p>Thus, when <span class="arithmatex">\(n \ge n_m\)</span>, by construction we have:</p>
+<div class="arithmatex">\[
+u(m_n, n) = u(m, n) \le \frac{1}{m}
+\]</div>
+<p>Since as <span class="arithmatex">\(n \to \infty\)</span>, the index <span class="arithmatex">\(m\)</span> corresponding to <span class="arithmatex">\(n_m\)</span> tends to infinity, <span class="arithmatex">\(m_n\)</span> also monotonically increases to infinity.
+By the squeeze theorem from the above inequality, we have:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} u(m_n, n) = 0
+\]</div>
+<p>Proof complete. <span class="arithmatex">\(\square\)</span></p>
+</details>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Theorem 3.11: Lindeberg-Feller CLT</p>
 <p>Assume <span class="arithmatex">\(Var(X_{nj}) = \sigma_{nj}^2 &lt; \infty\)</span>, <span class="arithmatex">\(S_n = \sum_{j=1}^{k_n} X_{nj}\)</span>. Then the following two sets of propositions are equivalent:</p>
@@ -1580,28 +1620,28 @@ P\left(\left|\frac{X_{nj}}{\sigma_n}\right| &gt; \frac{2}{\delta}\right) \le \fr
 <li><strong><span class="arithmatex">\(\Longleftrightarrow\)</span></strong> The double array satisfies the <strong>Lindeberg Condition (LC)</strong>.</li>
 </ul>
 <details class="proof">
-<summary>Core Proof Derivation of the Theorem (Click to expand)</summary>
-<p><strong>(1) Sufficiency proof: LC <span class="arithmatex">\(\Rightarrow\)</span> CLT and Null Array</strong></p>
-<p>Assume <span class="arithmatex">\(E(X_{nj})=0\)</span> and <span class="arithmatex">\(\sigma_n^2 = 1\)</span>. Define a truncated random variable based on the truncation point <span class="arithmatex">\(\eta \in (0, 1)\)</span>:
+<summary>Core Proof Derivation of the Theorem (click to expand)</summary>
+<p><strong>(1) Sufficiency Proof: LC <span class="arithmatex">\(\Rightarrow\)</span> CLT and Null Array</strong></p>
+<p>Assume <span class="arithmatex">\(E(X_{nj})=0\)</span> and <span class="arithmatex">\(\sigma_n^2 = 1\)</span>. Define truncated random variables based on a truncation point <span class="arithmatex">\(\eta \in (0, 1)\)</span>:
 <span class="arithmatex">\(X_{nj}' = X_{nj}\)</span> (if <span class="arithmatex">\(|X_{nj}| &lt; \eta\)</span>), otherwise 0.</p>
-<p>Calculate the truncated expectation and variance:</p>
+<p>Compute the expectation and variance after truncation:</p>
 <div class="arithmatex">\[
 |E[X_{nj}']| = \left| \int_{|x|&lt;\eta} x dF_{nj}(x) \right| = \left| -\int_{|x|\ge\eta} x dF_{nj}(x) \right| \le \frac{1}{\eta} \int_{|x|\ge\eta} x^2 dF_{nj}(x)
 \]</div>
-<p>After summation, due to the LC condition, the total expectation tends to 0. Meanwhile, the truncated variance <span class="arithmatex">\(\sigma_n'^2 \to 1 = \sigma_n^2\)</span>.
-According to Lemma 3.10 (diagonal construction rule), we can select a monotonically increasing sequence <span class="arithmatex">\(m_n \to \infty\)</span>, and let <span class="arithmatex">\(\eta_n = m_n^{-1} \to 0\)</span>.
-Using <span class="arithmatex">\(\eta_n\)</span> as the truncation threshold ensures that <span class="arithmatex">\(|X_{nj}'| \le \eta_n := M_{nj}\)</span>. Since <span class="arithmatex">\(\max M_{nj} = \eta_n \to 0\)</span>, according to the previous Corollary 3.6 (CLT for bounded variables), we have <span class="arithmatex">\((S_n' - ES_n')/\sigma_n' \to N(0,1)\)</span>, hence <span class="arithmatex">\(S_n' \to N(0,1)\)</span>.</p>
+<p>Summing over <span class="arithmatex">\(j\)</span>, due to the LC condition, the total expectation tends to 0. Meanwhile, the truncated variance <span class="arithmatex">\(\sigma_n'^2 \to 1 = \sigma_n^2\)</span>.
+According to Lemma 3.10 (diagonal construction principle), we can select a monotonically increasing sequence <span class="arithmatex">\(m_n \to \infty\)</span> and set <span class="arithmatex">\(\eta_n = m_n^{-1} \to 0\)</span>.
+Using <span class="arithmatex">\(\eta_n\)</span> as the truncation threshold ensures <span class="arithmatex">\(|X_{nj}'| \le \eta_n := M_{nj}\)</span>. Since <span class="arithmatex">\(\max M_{nj} = \eta_n \to 0\)</span>, by the earlier Corollary 3.6 (CLT for bounded variables), we have <span class="arithmatex">\((S_n' - ES_n')/\sigma_n' \to N(0,1)\)</span>, hence <span class="arithmatex">\(S_n' \to N(0,1)\)</span>.</p>
 <p>Finally, evaluate the difference between the untruncated sum and the truncated sum:</p>
 <div class="arithmatex">\[
-P(S_n \neq S_n') \le \sum_{j=1}^{k_n} P(|X_{nj}| \ge \eta_n) \le \sum_{j=1}^{k_n} \frac{1}{\eta_n^2} \int_{|x| &gt; \eta_n} x^2 dF_{nj}(x) \rightarrow 0 \quad \text{(Guaranteed by LC)}
+P(S_n \neq S_n') \le \sum_{j=1}^{k_n} P(|X_{nj}| \ge \eta_n) \le \sum_{j=1}^{k_n} \frac{1}{\eta_n^2} \int_{|x| &gt; \eta_n} x^2 dF_{nj}(x) \rightarrow 0 \quad \text{(guaranteed by LC)}
 \]</div>
-<p>By Slutsky's Theorem, since the error is <span class="arithmatex">\(o_p(1)\)</span>, we finally get <span class="arithmatex">\(S_n \to N(0,1)\)</span>.</p>
-<p><strong>(2) Necessity proof: CLT + Null Array <span class="arithmatex">\(\Rightarrow\)</span> LC</strong></p>
+<p>By Slutsky's theorem, since the error is <span class="arithmatex">\(o_p(1)\)</span>, we finally obtain <span class="arithmatex">\(S_n \to N(0,1)\)</span>.</p>
+<p><strong>(2) Necessity Proof: CLT + Null Array <span class="arithmatex">\(\Rightarrow\)</span> LC</strong></p>
 <p>From <span class="arithmatex">\(S_n \xrightarrow{d} N(0,1)\)</span>, we know the logarithm of the product of characteristic functions:</p>
 <div class="arithmatex">\[
 \lim_{n \to \infty} \sum_{j=1}^{k_n} \log \phi_{nj}(t) = -\frac{t^2}{2}
 \]</div>
-<p>The null array guarantees <span class="arithmatex">\(\max_j |\phi_{nj}(t) - 1| \to 0\)</span>. Using the equivalence relationship between <span class="arithmatex">\(\log \phi_{nj}(t)\)</span> and <span class="arithmatex">\(\phi_{nj}(t) - 1\)</span>:</p>
+<p>The null array guarantees <span class="arithmatex">\(\max_j |\phi_{nj}(t) - 1| \to 0\)</span>. Using the equivalence between <span class="arithmatex">\(\log \phi_{nj}(t)\)</span> and <span class="arithmatex">\(\phi_{nj}(t) - 1\)</span>:</p>
 <div class="arithmatex">\[
 \lim_{n \to \infty} \sum_{j=1}^{k_n} (\phi_{nj}(t) - 1) = -\frac{t^2}{2}
 \]</div>
@@ -1609,53 +1649,53 @@ P(S_n \neq S_n') \le \sum_{j=1}^{k_n} P(|X_{nj}| \ge \eta_n) \le \sum_{j=1}^{k_n
 <div class="arithmatex">\[
 \lim_{n \to \infty} \sum_j \int_{-\infty}^{\infty} (1 - \cos tx) dF_{nj}(x) = \frac{t^2}{2}
 \]</div>
-<p>Split the integral into <span class="arithmatex">\(|x| \le \eta\)</span> and <span class="arithmatex">\(|x| &gt; \eta\)</span>, and use the inequality <span class="arithmatex">\(0 \le 1 - \cos tx \le (tx)^2/2\)</span>:</p>
+<p>Split the integral into two parts: <span class="arithmatex">\(|x| \le \eta\)</span> and <span class="arithmatex">\(|x| &gt; \eta\)</span>, and use the inequality <span class="arithmatex">\(0 \le 1 - \cos tx \le (tx)^2/2\)</span>:</p>
 <div class="arithmatex">\[
 \frac{t^2}{2} - \sum_j \int_{|x|\le\eta} (1 - \cos tx) dF_{nj}(x) \ge \frac{t^2}{2} \sum_j \int_{|x| \ge \eta} x^2 dF_{nj}(x)
 \]</div>
-<p>By bounding the outer part of the integral with Chebyshev's inequality (<span class="arithmatex">\(\le 2/\eta^2 + \epsilon\)</span>), letting <span class="arithmatex">\(t \to \infty\)</span> to take the limit, we finally force out <span class="arithmatex">\(\sum_{j=1}^{k_n} E[X_{nj}^2 \mathbb{I}(|X_{nj}| &gt; \eta)] \to 0\)</span>, which is exactly the Lindeberg condition LC. <span class="arithmatex">\(\square\)</span></p>
+<p>By bounding the outer part of the integral controlled by Chebyshev's inequality (<span class="arithmatex">\(\le 2/\eta^2 + \epsilon\)</span>), taking the limit as <span class="arithmatex">\(t \to \infty\)</span>, we finally force <span class="arithmatex">\(\sum_{j=1}^{k_n} E[X_{nj}^2 \mathbb{I}(|X_{nj}| &gt; \eta)] \to 0\)</span>, which is precisely the Lindeberg condition LC. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 <hr />
 <h2 id="6-applications-further-conditions">6. Applications &amp; Further Conditions</h2>
 <div class="admonition tip">
-<p class="admonition-title">Application Example: Ordinary Least Squares (OLS) Regression</p>
-<p>Consider the classic linear regression model <span class="arithmatex">\(y_j = x_j \beta + \epsilon_j\)</span>, where error terms <span class="arithmatex">\(\epsilon_j \sim (0, \sigma_\epsilon^2)\)</span> and are i.i.d..
+<p class="admonition-title">Application Example: Ordinary Least Squares Regression (OLS Regression)</p>
+<p>Consider the classical linear regression model <span class="arithmatex">\(y_j = x_j \beta + \epsilon_j\)</span>, where the error terms <span class="arithmatex">\(\epsilon_j \sim (0, \sigma_\epsilon^2)\)</span> and are i.i.d.
 The design matrix satisfies <span class="arithmatex">\(\max_{1 \le j \le n} \frac{|x_j|}{a_n} \to 0\)</span>, where <span class="arithmatex">\(a_n^2 = \sum_{j=1}^n x_j^2\)</span>.
-The OLS estimator is <span class="arithmatex">\(\hat{\beta}_{LS} = \sum_{j=1}^n x_j y_j / a_n^2\)</span>.</p>
+The OLS estimator is <span class="arithmatex">\(\hat{\beta}_{LS} = \sum x_j y_j / a_n^2\)</span>.</p>
 <p>Construct the standardized double array <span class="arithmatex">\(X_{nj} = \frac{x_j \epsilon_j}{\sqrt{\sum x_j^2}}\)</span>.
 We bound the truncated integral in the Lindeberg condition: let <span class="arithmatex">\(m_n = \max_j |x_j/a_n|\)</span>,</p>
 <div class="arithmatex">\[
 \frac{1}{\sigma_n^2 a_n^2} \sum_{j=1}^n x_j^2 E\left[ \epsilon_j^2 \mathbb{I}(|x_j \epsilon_j / a_n| &gt; \delta \sigma_n) \right] \le \frac{1}{\sigma_\epsilon^2} E\left[ \epsilon_j^2 \mathbb{I}(|\epsilon_j| &gt; \delta \sigma_\epsilon m_n^{-1}) \right]
 \]</div>
-<p>Since <span class="arithmatex">\(\epsilon_j\)</span> are identically distributed with a finite second moment, as <span class="arithmatex">\(m_n \to 0\)</span>, this expectation tends to 0. By Theorem 3.11 we immediately obtain:</p>
+<p>Since the <span class="arithmatex">\(\epsilon_j\)</span> are identically distributed and have finite second moments, this expectation tends to 0 as <span class="arithmatex">\(m_n \to 0\)</span>. By Theorem 3.11, we immediately obtain:</p>
 <div class="arithmatex">\[
 a_n(\hat{\beta}_{LS} - \beta) \xrightarrow{d} N(0, \sigma_\epsilon^2)
 \]</div>
 </div>
-<p>When verifying the LC condition, besides using bounded truncation, we can also utilize the existence of higher-order moments. This is the <strong>extension of the Liapounov type condition</strong>.</p>
+<p>When verifying the LC condition, besides using bounded truncation, we can also utilize the existence of higher-order moments, which is an <strong>extension of the Lyapunov-type condition</strong>.</p>
 <div class="admonition info">
-<p class="admonition-title">Proposition 3.12: Sufficient Criterion for Lindeberg Condition</p>
-<p>For a double array <span class="arithmatex">\(\{X_{nj}\}\)</span>, if there exists some real number <span class="arithmatex">\(\nu &gt; 2\)</span>, satisfying:</p>
+<p class="admonition-title">Proposition 3.12: Sufficient Criterion for the Lindeberg Condition</p>
+<p>For a double array <span class="arithmatex">\(\{X_{nj}\}\)</span>, if there exists some real number <span class="arithmatex">\(\nu &gt; 2\)</span> such that:</p>
 <div class="arithmatex">\[
 \sum_{j=1}^{k_n} E|X_{nj} - \mu_{nj}|^\nu = o(\sigma_n^\nu)
 \]</div>
-<p>Then, this array necessarily satisfies the Lindeberg condition.</p>
+<p>then the array necessarily satisfies the Lindeberg condition.</p>
 <details class="proof">
-<summary>Proof Derivation (Click to expand)</summary>
-<p>In the truncated region <span class="arithmatex">\(|t - \mu_{nj}| &gt; \epsilon \sigma_n\)</span>, we bound its second moment integral:</p>
+<summary>Proof Derivation (click to expand)</summary>
+<p>In the truncation region <span class="arithmatex">\(|t - \mu_{nj}| &gt; \epsilon \sigma_n\)</span>, we bound the second-moment integral:</p>
 <div class="arithmatex">\[
 E\left[ (X_{nj} - \mu_{nj})^2 \mathbb{I}(|X_{nj} - \mu_{nj}| &gt; \epsilon \sigma_n) \right] = \int_{|t - \mu_{nj}| &gt; \epsilon \sigma_n} (t - \mu_{nj})^2 dF_{nj}(t)
 \]</div>
-<p>By forcing a <span class="arithmatex">\(\nu\)</span>-th power and extracting the constant term:</p>
+<p>By forcibly introducing the <span class="arithmatex">\(\nu\)</span>-th power and extracting a constant factor:</p>
 <div class="arithmatex">\[
 \le (\epsilon \sigma_n)^{2-\nu} \int_{|t - \mu_{nj}| &gt; \epsilon \sigma_n} (t - \mu_{nj})^\nu dF_{nj}(t) \le (\epsilon \sigma_n)^{2-\nu} E|X_{nj} - \mu_{nj}|^\nu
 \]</div>
-<p>Summing and dividing by <span class="arithmatex">\(\sigma_n^2\)</span>:</p>
+<p>Summing over <span class="arithmatex">\(j\)</span> and dividing by <span class="arithmatex">\(\sigma_n^2\)</span>:</p>
 <div class="arithmatex">\[
 \frac{1}{\sigma_n^2} \sum_{j=1}^{k_n} E\left[ \dots \right] \le \epsilon^{2-\nu} \frac{\sum_{j=1}^{k_n} E|X_{nj} - \mu_{nj}|^\nu}{\sigma_n^\nu} \rightarrow 0
 \]</div>
-<p>The Lindeberg condition is proven. <span class="arithmatex">\(\square\)</span></p>
+<p>The Lindeberg condition is thus proved. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
 

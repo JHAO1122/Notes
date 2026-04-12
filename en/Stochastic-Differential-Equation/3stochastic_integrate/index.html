@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-3-stochastic-integral" class="md-skip">
+        <a href="#chapter-3-stochastic-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -688,10 +688,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-the-riemann-sum-of-stochastic-integrals-and-the-derivation-of-the-ito-integral" class="md-nav__link">
+  <a href="#4-riemann-sums-for-stochastic-integrals-and-the-derivation-of-the-ito-integral" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. The Riemann Sum of Stochastic Integrals and the Derivation of the Itô Integral
+        4. Riemann Sums for Stochastic Integrals and the Derivation of the Itô Integral
       
     </span>
   </a>
@@ -699,10 +699,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-measure-theoretic-preparation-for-the-rigorous-ito-integral" class="md-nav__link">
+  <a href="#5-measure-theoretic-preparation-for-the-strict-ito-integral" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Measure-Theoretic Preparation for the Rigorous Itô Integral
+        5. Measure-Theoretic Preparation for the Strict Itô Integral
       
     </span>
   </a>
@@ -1283,10 +1283,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-the-riemann-sum-of-stochastic-integrals-and-the-derivation-of-the-ito-integral" class="md-nav__link">
+  <a href="#4-riemann-sums-for-stochastic-integrals-and-the-derivation-of-the-ito-integral" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. The Riemann Sum of Stochastic Integrals and the Derivation of the Itô Integral
+        4. Riemann Sums for Stochastic Integrals and the Derivation of the Itô Integral
       
     </span>
   </a>
@@ -1294,10 +1294,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-measure-theoretic-preparation-for-the-rigorous-ito-integral" class="md-nav__link">
+  <a href="#5-measure-theoretic-preparation-for-the-strict-ito-integral" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Measure-Theoretic Preparation for the Rigorous Itô Integral
+        5. Measure-Theoretic Preparation for the Strict Itô Integral
       
     </span>
   </a>
@@ -1324,42 +1324,42 @@
   
 
 
-<h1 id="chapter-3-stochastic-integral">Chapter 3: Stochastic Integral</h1>
-<p>In classical calculus, one can define the Riemann-Stieltjes integral <span class="arithmatex">\(\int g(t) dX(t)\)</span>. However, when the integration differential becomes Brownian motion <span class="arithmatex">\(dW(t)\)</span>, traditional methods fail because its sample paths are too rough. This chapter demonstrates the evolutionary process of transitioning from deterministic integrands to stochastic integrands, leading to the concept of the Itô integral.</p>
+<h1 id="chapter-3-stochastic-integration">Chapter 3: Stochastic Integration</h1>
+<p>In classical calculus, the Riemann-Stieltjes integral <span class="arithmatex">\(\int g(t) dX(t)\)</span> can be defined. However, when the differential element becomes Brownian motion <span class="arithmatex">\(dW(t)\)</span>, traditional methods cannot be applied due to the roughness of its sample paths. This section demonstrates the progression from deterministic integrands to stochastic integrands and introduces the concept of the Itô integral.</p>
 <h2 id="1-paley-wiener-zygmund-pwz-stochastic-integral">1. Paley-Wiener-Zygmund (PWZ) Stochastic Integral</h2>
-<p>The simplest case is when the integrand <span class="arithmatex">\(g(t)\)</span> is an ordinary deterministic function, while the integration variable is Brownian motion.</p>
+<p>The simplest case is when the integrand <span class="arithmatex">\(g(t)\)</span> is an ordinary deterministic function, and the variable of integration is Brownian motion.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Definition: PWZ Stochastic Integral</p>
-<p>Let <span class="arithmatex">\(W(t)\)</span> be a standard Brownian motion. Assume <span class="arithmatex">\(g(t) \in C^1([0, T])\)</span> is a continuously differentiable deterministic function.
-Using integration by parts, the <strong>PWZ Stochastic Integral</strong> is defined as:</p>
+<p>Let <span class="arithmatex">\(W(t)\)</span> be a standard Brownian motion. Assume <span class="arithmatex">\(g(t) \in C^1([0, T])\)</span> is a deterministic function that is continuously differentiable.
+Using the integration by parts formula, the <strong>PWZ stochastic integral</strong> is defined as:</p>
 <div class="arithmatex">\[
 \int_0^T g(t) dW(t) \triangleq g(T)W(T) - g(0)W(0) - \int_0^T g'(t) W(t) dt
 \]</div>
-<p>Since <span class="arithmatex">\(W(0) = 0\)</span> a.s., the above equation is usually abbreviated as:</p>
+<p>Since <span class="arithmatex">\(W(0) = 0\)</span> a.s., the above formula is usually simplified to:</p>
 <div class="arithmatex">\[
 \int_0^T g(t) dW(t) = g(T)W(T) - \int_0^T g'(t) W(t) dt
 \]</div>
-<p>The integral on the right side is an ordinary Riemann integral (since the sample path of <span class="arithmatex">\(W(t)\)</span> is continuous a.s. and <span class="arithmatex">\(g'(t)\)</span> is continuous, the integral is well-defined).</p>
+<p>The integral on the right-hand side here is an ordinary Riemann integral (because the sample paths of <span class="arithmatex">\(W(t)\)</span> are a.s. continuous, and <span class="arithmatex">\(g'(t)\)</span> is continuous, so the integral is well-defined).</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Theorem: Core Properties of the PWZ Integral</p>
-<p>The PWZ integral defined above satisfies the following two extremely important properties (which serve as the cornerstone for all subsequent stochastic integrals):</p>
-<p><strong>1. Zero Expectation</strong>:</p>
+<p>For the PWZ integral defined above, the following two extremely important properties hold (they are also the cornerstone for all subsequent stochastic integrals):</p>
+<p><strong>(1) Zero Mean</strong>:</p>
 <div class="arithmatex">\[
 E\left[ \int_0^T g(t) dW(t) \right] = 0
 \]</div>
-<p><strong>2. Itô Isometry</strong>:</p>
+<p><strong>(2) Itô Isometry</strong>:</p>
 <div class="arithmatex">\[
 E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt
 \]</div>
 <details class="proof">
-<summary>Rigorous Derivation of Itô Isometry (Click to expand)</summary>
-<p>We start directly from the definition of the PWZ integral and calculate the expectation of its square (assuming <span class="arithmatex">\(g(0)=0\)</span> or absorbing it into a constant term for simplicity. Here we use the more essential double integral method from your manuscript):</p>
+<summary>Rigorous Derivation of the Isometry Property (Click to Expand)</summary>
+<p>We start directly from the definition of the PWZ integral and compute the expectation of its square (assuming <span class="arithmatex">\(g(0)=0\)</span> or absorbing it into a constant term for simplicity; here we use the more fundamental double integral method from your manuscript):</p>
 <p>Write the square in the form of a double integral:</p>
 <div class="arithmatex">\[
 E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W(t) dt \int_0^T g'(s)W(s) ds \right]
 \]</div>
-<p>Use Fubini's Theorem to swap the order of expectation and integration:</p>
+<p>Use Fubini's theorem to interchange the order of expectation and integration:</p>
 <div class="arithmatex">\[
 = \int_0^T \int_0^T g'(t)g'(s) E[W(t)W(s)] ds dt
 \]</div>
@@ -1371,7 +1371,7 @@ E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W
 <div class="arithmatex">\[
 = \int_0^T \left( \int_0^t g'(s) g'(t) s \, ds + \int_t^T g'(s) g'(t) t \, ds \right) dt
 \]</div>
-<p>Through integration by parts and algebraic simplification (skipping the tedious algebraic steps from the manuscript here), the above equation perfectly collapses into the target form:</p>
+<p>Through integration by parts and algebraic simplification (the manuscript skips the cumbersome algebraic steps here), the above expression ultimately contracts perfectly to the target form:</p>
 <div class="arithmatex">\[
 = \int_0^T g(t)^2 dt \quad \square
 \]</div>
@@ -1379,38 +1379,38 @@ E\left[ \left( \int_0^T g'(t)W(t) dt \right)^2 \right] = E\left[ \int_0^T g'(t)W
 </div>
 <hr />
 <h2 id="2-norm-preserving-extension-of-densely-defined-bounded-linear-operators-blt-theorem">2. Norm-Preserving Extension of Densely Defined Bounded Linear Operators (BLT Theorem)</h2>
-<p>The PWZ integral just discussed requires <span class="arithmatex">\(g(t) \in C^1\)</span>. However, in practical applications, we need to integrate over more general <span class="arithmatex">\(L^2\)</span> functions. This requires a tool from functional analysis: the <strong>Bounded Linear Transformation (BLT) Theorem</strong>.</p>
+<p>The previous PWZ integral required <span class="arithmatex">\(g(t) \in C^1\)</span>. However, in practical applications, we need to integrate more general <span class="arithmatex">\(L^2\)</span> functions. This requires the use of tools from functional analysis: the <strong>Bounded Linear Transformation Theorem (BLT Theorem)</strong>.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Theorem: Norm-Preserving Extension of Bounded Linear Operators</p>
-<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be Banach spaces, and <span class="arithmatex">\(S\)</span> be a dense linear subspace of <span class="arithmatex">\(X\)</span>.
-Let <span class="arithmatex">\(T: S \to Y\)</span> be a bounded linear operator, meaning there exists a constant <span class="arithmatex">\(C &gt; 0\)</span> such that for any <span class="arithmatex">\(x \in S\)</span>:</p>
+<p class="admonition-title">Theorem: Norm-Preserving Extension of Densely Defined Bounded Linear Operators</p>
+<p>Let <span class="arithmatex">\(X, Y\)</span> be Banach spaces, and let <span class="arithmatex">\(S\)</span> be a dense linear subspace of <span class="arithmatex">\(X\)</span>.
+Let <span class="arithmatex">\(T: S \to Y\)</span> be a bounded linear operator, i.e., there exists a constant <span class="arithmatex">\(C &gt; 0\)</span> such that for any <span class="arithmatex">\(x \in S\)</span>:</p>
 <div class="arithmatex">\[
 \|Tx\|_Y \le C \|x\|_X
 \]</div>
 <p>Then there exists a unique bounded linear operator <span class="arithmatex">\(\overline{T}: X \to Y\)</span> such that for all <span class="arithmatex">\(x \in S\)</span>, <span class="arithmatex">\(\overline{T}x = Tx\)</span> (i.e., <span class="arithmatex">\(\overline{T}|_S = T\)</span>).
-Furthermore, the operator norm remains unchanged: <span class="arithmatex">\(\|\overline{T}\| = \|T\| \le C\)</span>.</p>
+Furthermore, the operator norm is preserved: <span class="arithmatex">\(\|\overline{T}\| = \|T\| \le C\)</span>.</p>
 <details class="proof">
 <summary>Constructive Proof of the BLT Theorem (Click to expand)</summary>
-<p><strong>Step 1: Constructing the Limit Mapping</strong>
+<p><strong>Step 1: Constructing the limit map</strong>
 Since <span class="arithmatex">\(S\)</span> is dense in <span class="arithmatex">\(X\)</span>, for any <span class="arithmatex">\(x \in X\)</span>, there must exist a sequence <span class="arithmatex">\(\{x_n\}\)</span> in <span class="arithmatex">\(S\)</span> such that <span class="arithmatex">\(x_n \to x\)</span>.
 Because <span class="arithmatex">\(T\)</span> is bounded (continuous) on <span class="arithmatex">\(S\)</span>, we examine the distance of the sequence <span class="arithmatex">\(\{Tx_n\}\)</span> in <span class="arithmatex">\(Y\)</span>:</p>
 <div class="arithmatex">\[
 \|Tx_n - Tx_m\|_Y = \|T(x_n - x_m)\|_Y \le C \|x_n - x_m\|_X
 \]</div>
-<p>Since <span class="arithmatex">\(\{x_n\}\)</span> is a convergent sequence, it must be a Cauchy sequence. Therefore, as <span class="arithmatex">\(n, m \to \infty\)</span>, <span class="arithmatex">\(\|x_n - x_m\|_X \to 0\)</span>.
-This implies that <span class="arithmatex">\(\{Tx_n\}\)</span> is a Cauchy sequence in the Banach space <span class="arithmatex">\(Y\)</span>. Because <span class="arithmatex">\(Y\)</span> is complete, the limit <span class="arithmatex">\(\lim_{n \to \infty} Tx_n\)</span> must exist. We define:</p>
+<p>Since <span class="arithmatex">\(\{x_n\}\)</span> is a convergent sequence, it is necessarily a Cauchy sequence. Therefore, as <span class="arithmatex">\(n, m \to \infty\)</span>, <span class="arithmatex">\(\|x_n - x_m\|_X \to 0\)</span>.
+This implies that <span class="arithmatex">\(\{Tx_n\}\)</span> is a Cauchy sequence in the Banach space <span class="arithmatex">\(Y\)</span>. Since <span class="arithmatex">\(Y\)</span> is complete, the limit <span class="arithmatex">\(\lim_{n \to \infty} Tx_n\)</span> must exist. We define:</p>
 <div class="arithmatex">\[
 \overline{T}x \triangleq \lim_{n \to \infty} Tx_n
 \]</div>
-<p><strong>Step 2: Proving the Well-definedness (Independence of Sequence Choice)</strong>
+<p><strong>Step 2: Proving the well-definedness of the map (independence of sequence choice)</strong>
 Suppose there is another sequence <span class="arithmatex">\(x_n' \to x\)</span>. We need to prove <span class="arithmatex">\(\lim Tx_n' = \lim Tx_n\)</span>.
-Let <span class="arithmatex">\(y = \lim Tx_n\)</span> and <span class="arithmatex">\(y' = \lim Tx_n'\)</span>.</p>
+Let <span class="arithmatex">\(y = \lim Tx_n\)</span>, <span class="arithmatex">\(y' = \lim Tx_n'\)</span>.</p>
 <div class="arithmatex">\[
 \|y - y'\|_Y = \lim_{n \to \infty} \|Tx_n - Tx_n'\|_Y \le C \lim_{n \to \infty} \|x_n - x_n'\|_X = 0
 \]</div>
-<p>Thus <span class="arithmatex">\(y = y'\)</span>, making the mapping <span class="arithmatex">\(\overline{T}\)</span> well-defined.</p>
-<p><strong>Step 3: Proving Linearity and Norm-Preservation</strong>
-Linearity is a natural corollary of the limit. For norm-preservation, for any <span class="arithmatex">\(x \in X\)</span> and its approximating sequence <span class="arithmatex">\(x_n \to x\)</span>:</p>
+<p>Hence <span class="arithmatex">\(y = y'\)</span>, and the map <span class="arithmatex">\(\overline{T}\)</span> is well-defined.</p>
+<p><strong>Step 3: Proving linearity and norm preservation</strong>
+Linearity is a natural consequence of limits. For norm preservation, for any <span class="arithmatex">\(x \in X\)</span> and an approximating sequence <span class="arithmatex">\(x_n \to x\)</span>:</p>
 <div class="arithmatex">\[
 \|\overline{T}x\|_Y = \lim_{n \to \infty} \|Tx_n\|_Y \le C \lim_{n \to \infty} \|x_n\|_X = C \|x\|_X
 \]</div>
@@ -1418,143 +1418,146 @@ Linearity is a natural corollary of the limit. For norm-preservation, for any <s
 </details>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Application: Extension of the PWZ Integral to <span class="arithmatex">\(L^2\)</span> Space</p>
-<p>We take the space of integrands as <span class="arithmatex">\(X = L^2([0, T])\)</span>, and the space of integral results as <span class="arithmatex">\(Y = L^2(\Omega, P)\)</span>.
-The dense subspace is chosen as <span class="arithmatex">\(S = C^1([0, T])\)</span>.
+<p class="admonition-title">Application: Extension of PWZ Integral to <span class="arithmatex">\(L^2\)</span> Space</p>
+<p>We take the space of integrand functions as <span class="arithmatex">\(X = L^2([0, T])\)</span>, and the space of integral results as <span class="arithmatex">\(Y = L^2(\Omega, P)\)</span>.
+The dense subspace is taken as <span class="arithmatex">\(S = C^1([0, T])\)</span>.
 Define the operator <span class="arithmatex">\(T: g \mapsto \int_0^T g(t) dW(t)\)</span>.</p>
-<p>From Itô Isometry, we know that for any <span class="arithmatex">\(g \in S\)</span>:</p>
+<p>By the Itô isometry, for any <span class="arithmatex">\(g \in S\)</span>:</p>
 <div class="arithmatex">\[
 \|Tg\|_{L^2(\Omega)}^2 = E\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g(t)^2 dt = \|g\|_{L^2([0,T])}^2
 \]</div>
-<p>This means the operator <span class="arithmatex">\(T\)</span> is an isometric isomorphism (operator norm <span class="arithmatex">\(C=1\)</span>). By the BLT Theorem, we can perfectly and uniquely extend the PWZ integral to the entire <span class="arithmatex">\(L^2([0, T])\)</span> space.</p>
+<p>This means the operator <span class="arithmatex">\(T\)</span> is an isometry (operator norm <span class="arithmatex">\(C=1\)</span>). By the BLT Theorem, we can perfectly and uniquely extend the PWZ integral to the entire <span class="arithmatex">\(L^2([0, T])\)</span> space.</p>
 </div>
 <hr />
 <h2 id="3-quadratic-variation-of-brownian-motion">3. Quadratic Variation of Brownian Motion</h2>
-<p>The fundamental reason traditional Riemann integrals cannot handle stochastic integrals lies in the "roughness" of Brownian motion paths, specifically its quadratic variation property.</p>
-<p>Consider a partition <span class="arithmatex">\(P = \{0 = t_0 &lt; t_1 &lt; \dots &lt; t_m = T\}\)</span> of the time interval <span class="arithmatex">\([0, T]\)</span>, with the mesh size denoted as <span class="arithmatex">\(|P| = \max (t_{k+1} - t_k)\)</span>.</p>
+<p>The fundamental reason why traditional Riemann integration cannot handle stochastic integration lies in the "roughness" of Brownian motion paths, specifically its quadratic variation property.</p>
+<p>Consider a partition <span class="arithmatex">\(P = \{0 = t_0 &lt; t_1 &lt; \dots &lt; t_m = T\}\)</span> of the time interval <span class="arithmatex">\([0, T]\)</span>, with mesh size <span class="arithmatex">\(|P| = \max (t_{k+1} - t_k)\)</span>.</p>
 <div class="admonition info">
-<p class="admonition-title">Theorem 1: The Quadratic Variation of Brownian Motion Equals Time <span class="arithmatex">\(T\)</span></p>
-<p>As the mesh size approaches zero (<span class="arithmatex">\(|P| \to 0\)</span>), the sum of the squared increments of Brownian motion converges to <span class="arithmatex">\(T\)</span> in the sense of <span class="arithmatex">\(L^2(\Omega, P)\)</span>:</p>
+<p class="admonition-title">Theorem 1: The quadratic variation of Brownian motion equals time <span class="arithmatex">\(T\)</span></p>
+<p>As the mesh is refined <span class="arithmatex">\(|P| \to 0\)</span>, the sum of squared increments of Brownian motion converges to <span class="arithmatex">\(T\)</span> in the sense of <span class="arithmatex">\(L^2(\Omega, P)\)</span>:</p>
 <div class="arithmatex">\[
 \sum_{k=0}^{m-1} (W(t_{k+1}) - W(t_k))^2 \xrightarrow{L^2} T
 \]</div>
 <details class="proof">
-<summary>Rigorous Derivation of <span class="arithmatex">\(L^2\)</span> Convergence of Quadratic Variation (Click to expand)</summary>
-<p>To prove <span class="arithmatex">\(L^2\)</span> convergence, we need to show that its mean squared error from <span class="arithmatex">\(T\)</span> approaches 0.
+<summary>Rigorous derivation of <span class="arithmatex">\(L^2\)</span> convergence for quadratic variation (click to expand)</summary>
+<p>To prove <span class="arithmatex">\(L^2\)</span> convergence, we need to show that its mean square error with respect to <span class="arithmatex">\(T\)</span> tends to 0.
 Since <span class="arithmatex">\(\sum_{k=0}^{m-1} (t_{k+1} - t_k) = T\)</span>, we can write the target error as:</p>
 <div class="arithmatex">\[
 E\left[ \left( \sum_{k=0}^{m-1} \big((W(t_{k+1}) - W(t_k))^2 - (t_{k+1} - t_k)\big) \right)^2 \right]
 \]</div>
-<p>Let <span class="arithmatex">\(\Delta W_k = W(t_{k+1}) - W(t_k)\)</span> and <span class="arithmatex">\(\Delta t_k = t_{k+1} - t_k\)</span>. Expanding the squared term separates it into squared terms and cross terms:</p>
+<p>Let <span class="arithmatex">\(\Delta W_k = W(t_{k+1}) - W(t_k)\)</span>, <span class="arithmatex">\(\Delta t_k = t_{k+1} - t_k\)</span>. Expanding the square term, it splits into squared terms and cross terms:</p>
 <div class="arithmatex">\[
 = \sum_k E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] + \sum_{k \neq j} E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)\big((\Delta W_j)^2 - \Delta t_j\big) \Big]
 \]</div>
-<p><strong>Key Point 1: Cross Terms are Zero.</strong>
-Due to the independent increments property of Brownian motion, when <span class="arithmatex">\(k \neq j\)</span>, <span class="arithmatex">\(\Delta W_k\)</span> is independent of <span class="arithmatex">\(\Delta W_j\)</span>. Furthermore, since <span class="arithmatex">\(E[(\Delta W_k)^2] = \Delta t_k\)</span>, the expectation of each factor is 0, making the overall expectation of the cross terms 0.</p>
-<p><strong>Key Point 2: Calculation of Squared Terms.</strong>
-Only the variance terms on the diagonal remain. Note that <span class="arithmatex">\(\Delta W_k \sim \mathcal{N}(0, \Delta t_k)\)</span>, so it can be standardized as <span class="arithmatex">\(\sqrt{\Delta t_k} Z\)</span>, where <span class="arithmatex">\(Z \sim \mathcal{N}(0, 1)\)</span>.</p>
+<p><strong>Key Point 1: Cross terms are 0.</strong>
+Due to the independent increments property of Brownian motion, when <span class="arithmatex">\(k \neq j\)</span>, <span class="arithmatex">\(\Delta W_k\)</span> and <span class="arithmatex">\(\Delta W_j\)</span> are independent. Furthermore, since <span class="arithmatex">\(E[(\Delta W_k)^2] = \Delta t_k\)</span>, the expectation of each factor is 0, so the overall expectation of the cross terms is 0.</p>
+<p><strong>Key Point 2: Calculation of squared terms.</strong>
+Only the variance terms on the diagonal remain. Note that <span class="arithmatex">\(\Delta W_k \sim \mathcal{N}(0, \Delta t_k)\)</span>, so it can be expressed in standardized form as <span class="arithmatex">\(\sqrt{\Delta t_k} Z\)</span>, where <span class="arithmatex">\(Z \sim \mathcal{N}(0, 1)\)</span>.</p>
 <div class="arithmatex">\[
 E\Big[ \big((\Delta W_k)^2 - \Delta t_k\big)^2 \Big] = E\Big[ (\Delta t_k Z^2 - \Delta t_k)^2 \Big] = (\Delta t_k)^2 E[(Z^2 - 1)^2]
 \]</div>
-<p>Since the fourth moment of the standard normal distribution is <span class="arithmatex">\(E[Z^4] = 3\)</span> and <span class="arithmatex">\(E[Z^2] = 1\)</span>, we have <span class="arithmatex">\(E[(Z^2 - 1)^2] = 3 - 2(1) + 1 = 2\)</span>.</p>
+<p>Since the fourth moment of the standard normal distribution is <span class="arithmatex">\(E[Z^4] = 3\)</span>, and <span class="arithmatex">\(E[Z^2] = 1\)</span>, we have <span class="arithmatex">\(E[(Z^2 - 1)^2] = 3 - 2(1) + 1 = 2\)</span>.</p>
 <div class="arithmatex">\[
-\text{Total Error} = 2 \sum_{k=0}^{m-1} (\Delta t_k)^2
+\text{Total error} = 2 \sum_{k=0}^{m-1} (\Delta t_k)^2
 \]</div>
-<p>We bound this summation by extracting the largest <span class="arithmatex">\(\Delta t_k\)</span>, which is the mesh size <span class="arithmatex">\(|P|\)</span>:</p>
+<p>We bound this sum: extract the largest <span class="arithmatex">\(\Delta t_k\)</span>, which is the mesh size <span class="arithmatex">\(|P|\)</span>:</p>
 <div class="arithmatex">\[
 2 \sum_{k=0}^{m-1} (\Delta t_k)^2 \le 2 |P| \sum_{k=0}^{m-1} \Delta t_k = 2 |P| T
 \]</div>
-<p>As <span class="arithmatex">\(|P| \to 0\)</span>, <span class="arithmatex">\(2 |P| T \to 0\)</span>. Thus, it converges to <span class="arithmatex">\(T\)</span> in the <span class="arithmatex">\(L^2\)</span> sense. <span class="arithmatex">\(\square\)</span></p>
+<p>As <span class="arithmatex">\(|P| \to 0\)</span>, <span class="arithmatex">\(2 |P| T \to 0\)</span>. Therefore, it converges to <span class="arithmatex">\(T\)</span> in the <span class="arithmatex">\(L^2\)</span> sense. <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p>This theorem directly leads to a corollary regarding the properties of Brownian motion:</p>
+<p>This theorem directly leads to a corollary about the nature of Brownian motion:</p>
 <div class="admonition success">
-<p class="admonition-title">Theorem 2: Brownian Motion has Infinite Total Variation Everywhere</p>
-<p>Almost all sample paths of Brownian motion <span class="arithmatex">\(W(t, \omega)\)</span> have an infinite total variation on any interval.</p>
+<p class="admonition-title">Theorem 2: Brownian motion has infinite total variation almost surely</p>
+<p>Almost every sample path <span class="arithmatex">\(W(t, \omega)\)</span> of Brownian motion has infinite total variation on any interval.</p>
 <blockquote>
-<p><strong>Minimalist Proof by Contradiction</strong>: If a certain path has a bounded total variation <span class="arithmatex">\(V_T &lt; \infty\)</span>, then its quadratic variation can be bounded by:
+<p><strong>Proof by contradiction (extremely concise):</strong> If a certain path had bounded total variation <span class="arithmatex">\(V_T &lt; \infty\)</span>, then its quadratic variation could be bounded as:
 <span class="arithmatex">\(\sum (\Delta W_k)^2 \le (\max_k |\Delta W_k|) \sum |\Delta W_k| \le (\max_k |\Delta W_k|) \cdot V_T\)</span>
-Because the path is continuous, as the partition becomes infinitely fine, <span class="arithmatex">\(\max |\Delta W_k| \to 0\)</span>. This would cause the quadratic variation to tend to 0, which absolutely contradicts Theorem 1 where the quadratic variation equals <span class="arithmatex">\(T &gt; 0\)</span>!</p>
+Since the path is continuous, <span class="arithmatex">\(\max |\Delta W_k| \to 0\)</span> as the partition is infinitely refined. This would force the quadratic variation to tend to 0, creating an absolute contradiction with Theorem 1 where the quadratic variation equals <span class="arithmatex">\(T &gt; 0\)</span>!</p>
 </blockquote>
 </div>
 <hr />
-<h2 id="4-the-riemann-sum-of-stochastic-integrals-and-the-derivation-of-the-ito-integral">4. The Riemann Sum of Stochastic Integrals and the Derivation of the Itô Integral</h2>
-<p>So how do we calculate <span class="arithmatex">\(\int_0^T W(t) dW(t)\)</span>?
-Returning to the definition of the Riemann sum, we observe a phenomenon that does not occur in classical calculus: <strong>changing the evaluation point leads to drastically different integration results.</strong></p>
-<p>Construct a partition <span class="arithmatex">\(P\)</span>, and select a point <span class="arithmatex">\(\tau_k = (1-\lambda)t_k + \lambda t_{k+1}\)</span> (<span class="arithmatex">\(\lambda \in [0, 1]\)</span>) in each sub-interval <span class="arithmatex">\([t_k, t_{k+1}]\)</span>.
+<h2 id="4-riemann-sums-for-stochastic-integrals-and-the-derivation-of-the-ito-integral">4. Riemann Sums for Stochastic Integrals and the Derivation of the Itô Integral</h2>
+<p>So how do we compute <span class="arithmatex">\(\int_0^T W(t) dW(t)\)</span>?
+Returning to the definition of Riemann sums, we can observe a phenomenon that does not appear in classical calculus: <strong>Changing the evaluation point leads to a significant change in the integral result.</strong></p>
+<p>Construct a partition <span class="arithmatex">\(P\)</span>, and in each subinterval <span class="arithmatex">\([t_k, t_{k+1}]\)</span>, take a point <span class="arithmatex">\(\tau_k = (1-\lambda)t_k + \lambda t_{k+1}\)</span> (<span class="arithmatex">\(\lambda \in [0, 1]\)</span>).
 Examine the Riemann sum:</p>
 <div class="arithmatex">\[
 R_n = \sum_{k=0}^{m-1} W(\tau_k) \big( W(t_{k+1}) - W(t_k) \big)
 \]</div>
 <div class="admonition info">
 <p class="admonition-title">Dependence of the Integral Result on the Value of <span class="arithmatex">\(\lambda\)</span></p>
-<p>For clarity, we examine the special case where <span class="arithmatex">\(\lambda = 0\)</span> (taking the left endpoint, i.e., the Itô integral), where <span class="arithmatex">\(\tau_k = t_k\)</span>:</p>
+<p>For clarity, we study the special case <span class="arithmatex">\(\lambda = 0\)</span> (taking the left endpoint, i.e., the Itô integral), where <span class="arithmatex">\(\tau_k = t_k\)</span>:</p>
 <div class="arithmatex">\[
 R_n = \sum_{k=0}^{m-1} W(t_k) \big( W(t_{k+1}) - W(t_k) \big)
 \]</div>
 <details class="proof">
-<summary>Algebraic Identity Splitting and Limit Evaluation of the Itô Integral (Click to expand)</summary>
-<p>This is an extremely clever algebraic trick. Using the identity <span class="arithmatex">\(a(b-a) = \frac{1}{2}\big( b^2 - a^2 - (b-a)^2 \big)\)</span>, we rewrite each term by letting <span class="arithmatex">\(a = W(t_k)\)</span> and <span class="arithmatex">\(b = W(t_{k+1})\)</span>:</p>
+<summary>Algebraic Identity Splitting and Limit Calculation for the Itô Integral (Click to Expand)</summary>
+<p>This is an extremely clever algebraic trick. Using the identity <span class="arithmatex">\(a(b-a) = \frac{1}{2}\big( b^2 - a^2 - (b-a)^2 \big)\)</span>, we rewrite each term:
+Let <span class="arithmatex">\(a = W(t_k), b = W(t_{k+1})\)</span>:</p>
 <div class="arithmatex">\[
 W(t_k) \big( W(t_{k+1}) - W(t_k) \big) = \frac{1}{2}\big( W(t_{k+1})^2 - W(t_k)^2 \big) - \frac{1}{2}\big( W(t_{k+1}) - W(t_k) \big)^2
 \]</div>
-<p>Summing all the terms, the original sum splits into two parts, <span class="arithmatex">\(B_1\)</span> and <span class="arithmatex">\(B_2\)</span>:</p>
+<p>Summing all terms, the original sum splits into two parts <span class="arithmatex">\(B_1\)</span> and <span class="arithmatex">\(B_2\)</span>:</p>
 <div class="arithmatex">\[
 R_n = \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1})^2 - W(t_k)^2 \big) }_{B_1} - \underbrace{ \frac{1}{2} \sum_{k=0}^{m-1} \big( W(t_{k+1}) - W(t_k) \big)^2 }_{B_2}
 \]</div>
-<p><strong>Analyzing <span class="arithmatex">\(B_1\)</span></strong>: This is a perfect telescoping sum, where all intermediate terms cancel out:</p>
+<p><strong>Analyzing <span class="arithmatex">\(B_1\)</span></strong>: This is a perfect telescoping sum, where all intermediate terms cancel:</p>
 <div class="arithmatex">\[
 B_1 = \frac{1}{2} \big( W(T)^2 - W(0)^2 \big) = \frac{1}{2} W(T)^2
 \]</div>
-<p><strong>Analyzing <span class="arithmatex">\(B_2\)</span></strong>: This is precisely the quadratic variation of Brownian motion! According to Theorem 1, as the partition becomes finer, it converges in the <span class="arithmatex">\(L^2\)</span> sense:</p>
+<p><strong>Analyzing <span class="arithmatex">\(B_2\)</span></strong>: This is precisely the quadratic variation of Brownian motion! According to Theorem 1, as the partition is refined, it converges in the <span class="arithmatex">\(L^2\)</span> sense:</p>
 <div class="arithmatex">\[
 B_2 \xrightarrow{L^2} \frac{1}{2} T
 \]</div>
-<p>In conclusion, when <span class="arithmatex">\(\lambda = 0\)</span> (the Itô integral), we obtain:</p>
+<p>In summary, when <span class="arithmatex">\(\lambda = 0\)</span> (Itô integral), we obtain:</p>
 <div class="arithmatex">\[
 \int_0^T W(t) dW(t) \triangleq \lim_{|P|\to 0} R_n = \frac{1}{2} W(T)^2 - \frac{1}{2} T
 \]</div>
-<p><em>(Note: The extra <span class="arithmatex">\(-\frac{1}{2}T\)</span> term added later is called the Itô correction term)</em> <span class="arithmatex">\(\square\)</span></p>
+<p><em>(Note: The extra term <span class="arithmatex">\(-\frac{1}{2}T\)</span> that appears later is called the Itô correction term.)</em> <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p><strong>The two most important schools of integration:</strong></p>
-<ul>
-<li>
-<p>When <span class="arithmatex">\(\lambda = 0\)</span> (taking the left endpoint), it is the <strong>Itô Integral</strong>, yielding <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>. It preserves the martingale property and is commonly used in mathematical finance.</p>
-</li>
-<li>
-<p>When <span class="arithmatex">\(\lambda = 1/2\)</span> (taking the midpoint), it is the <strong>Stratonovich Integral</strong>. The correction terms cancel out, yielding <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>, which is formally consistent with classical calculus and is commonly used in physics and engineering.</p>
-</li>
-</ul>
+<p><strong>The Two Most Important Schools of Integration:</strong>
+* When <span class="arithmatex">\(\lambda = 0\)</span> (taking the left endpoint), it is the <strong>Itô integral</strong>, with result <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>. It preserves the martingale property and is commonly used in financial mathematics.
+* When <span class="arithmatex">\(\lambda = 1/2\)</span> (taking the midpoint), it is the <strong>Stratonovich integral</strong>, where the correction terms cancel out, resulting in <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>, which formally aligns with classical calculus and is often used in physics and engineering.</p>
 <hr />
-<h2 id="5-measure-theoretic-preparation-for-the-rigorous-ito-integral">5. Measure-Theoretic Preparation for the Rigorous Itô Integral</h2>
-<p>To generalize the Itô integral to more general stochastic processes (not just <span class="arithmatex">\(W(t)\)</span>), we need to strictly define what it means to "ignore the future and only look at the past." This requires introducing the concepts of Filtration and Adapted Processes.</p>
+<h2 id="5-measure-theoretic-preparation-for-the-strict-ito-integral">5. Measure-Theoretic Preparation for the Strict Itô Integral</h2>
+<p>To extend the Itô integral to more general stochastic processes (not just <span class="arithmatex">\(W(t)\)</span>), we need to rigorously define what it means to "look only at the past, not the future." This requires us to introduce the concepts of a <strong>filtration</strong> and an <strong>adapted process</strong>.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Definition: Information Filtration and <span class="arithmatex">\(\sigma\)</span>-Algebra</p>
+<p class="admonition-title">Definition: Information Flow and <span class="arithmatex">\(\sigma\)</span>-algebra</p>
 <p><strong>1. Natural Filtration of Brownian Motion</strong>:
-For any time <span class="arithmatex">\(t\)</span>, the information generated by the historical trajectory of Brownian motion is denoted by the <span class="arithmatex">\(\sigma\)</span>-algebra:</p>
+For any time <span class="arithmatex">\(t\)</span>, the information generated by the historical path of Brownian motion is denoted by the <span class="arithmatex">\(\sigma\)</span>-algebra:</p>
 <div class="arithmatex">\[
 \mathcal{F}_W(t) \triangleq \sigma(\{W(s) \mid 0 \le s \le t\})
 \]</div>
-<p>It contains all the path information of the Brownian motion up to time <span class="arithmatex">\(t\)</span>.</p>
+<p>It contains all path information of the Brownian motion up to time <span class="arithmatex">\(t\)</span>.</p>
 <p><strong>2. Independence of Future Increments</strong>:
-We define the future increment information filtration as <span class="arithmatex">\(\mathcal{F}^t \triangleq \sigma(\{W(s) - W(t) \mid s &gt; t\})\)</span>. According to the independent increments property of Brownian motion, <span class="arithmatex">\(\mathcal{F}^t\)</span> is <strong>completely independent</strong> of the historical filtration <span class="arithmatex">\(\mathcal{F}_W(t)\)</span>.</p>
-<p><strong>3. General Filtration</strong>:
-A family of <span class="arithmatex">\(\sigma\)</span>-algebras <span class="arithmatex">\(\{\mathcal{F}(t)\}_{t \ge 0}\)</span> satisfying the following conditions:
-* <strong>Monotonicity</strong>: <span class="arithmatex">\(\mathcal{F}(s) \subset \mathcal{F}(t)\)</span> for any <span class="arithmatex">\(0 \le s \le t\)</span> (information is not forgotten).
-* <strong>Contains History</strong>: <span class="arithmatex">\(\mathcal{F}_W(t) \subset \mathcal{F}(t)\)</span>.
-* <strong>Future Independence</strong>: The increment <span class="arithmatex">\(W(s) - W(t)\)</span> is independent of <span class="arithmatex">\(\mathcal{F}(t)\)</span>.</p>
+We define the future increment information flow <span class="arithmatex">\(\mathcal{F}^t \triangleq \sigma(\{W(s) - W(t) \mid s &gt; t\})\)</span>. According to the independent increments property of Brownian motion, <span class="arithmatex">\(\mathcal{F}^t\)</span> is <strong>completely independent</strong> of the historical flow <span class="arithmatex">\(\mathcal{F}_W(t)\)</span>.</p>
+<p><strong>3. General Information Flow (Filtration)</strong>:
+A family of <span class="arithmatex">\(\sigma\)</span>-algebras <span class="arithmatex">\(\{\mathcal{F}(t)\}_{t \ge 0}\)</span> satisfying the following conditions:</p>
+<ul>
+<li>
+<p><strong>Monotonicity</strong>: <span class="arithmatex">\(\mathcal{F}(s) \subset \mathcal{F}(t)\)</span> for any <span class="arithmatex">\(0 \le s \le t\)</span> (information is not forgotten).</p>
+</li>
+<li>
+<p><strong>Contains History</strong>: <span class="arithmatex">\(\mathcal{F}_W(t) \subset \mathcal{F}(t)\)</span>.</p>
+</li>
+<li>
+<p><strong>Future Independence</strong>: The increment <span class="arithmatex">\(W(s) - W(t)\)</span> is independent of <span class="arithmatex">\(\mathcal{F}(t)\)</span>.</p>
+</li>
+</ul>
 </div>
-<p>With the mathematical framework for the concept of "information" established, we can determine which stochastic processes can be integrated using Itô's calculus.</p>
+<p>With this mathematical framework for the concept of "information," we can determine which stochastic processes can be integrated using the Itô integral.</p>
 <div class="admonition info">
 <p class="admonition-title">Definition: Adapted Process and Progressively Measurable</p>
 <p><strong>1. Adapted Process</strong>:
-If for every fixed time <span class="arithmatex">\(t\)</span>, the random variable <span class="arithmatex">\(G(t, \omega)\)</span> is <span class="arithmatex">\(\mathcal{F}(t)\)</span>-measurable, then the stochastic process <span class="arithmatex">\(G(t)\)</span> is said to be adapted to the filtration <span class="arithmatex">\(\{\mathcal{F}(t)\}\)</span>.
-<em>(Intuitive understanding: At time <span class="arithmatex">\(t\)</span>, as long as you know all the historical information <span class="arithmatex">\(\mathcal{F}(t)\)</span>, you know the value of <span class="arithmatex">\(G(t)\)</span> at this moment, and you absolutely do not need future information.)</em></p>
+If for each fixed time <span class="arithmatex">\(t\)</span>, the random variable <span class="arithmatex">\(G(t, \omega)\)</span> is <span class="arithmatex">\(\mathcal{F}(t)\)</span>-measurable, then the stochastic process <span class="arithmatex">\(G(t)\)</span> is said to be <strong>adapted</strong> to the filtration <span class="arithmatex">\(\{\mathcal{F}(t)\}\)</span>.
+<em>(Intuitive understanding: At time <span class="arithmatex">\(t\)</span>, if you know all historical information <span class="arithmatex">\(\mathcal{F}(t)\)</span>, you know the value of <span class="arithmatex">\(G(t)\)</span> at that moment, without needing any future information.)</em></p>
 <p><strong>2. Progressively Measurable</strong>:
-A stronger condition. The mapping <span class="arithmatex">\((s, \omega) \mapsto G(s, \omega)\)</span> is jointly measurable on the product space <span class="arithmatex">\([0, t] \times \Omega\)</span> with respect to the <span class="arithmatex">\(\mathcal{B}([0, t]) \otimes \mathcal{F}(t)\)</span> field. This guarantees that operations like Riemann or Lebesgue integration over a time interval are legitimate.</p>
+A stronger condition. The mapping <span class="arithmatex">\((s, \omega) \mapsto G(s, \omega)\)</span> is jointly measurable with respect to the product <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{B}([0, t]) \otimes \mathcal{F}(t)\)</span> on the product space <span class="arithmatex">\([0, t] \times \Omega\)</span>. This ensures that Riemann or Lebesgue integration over time intervals is well-defined.</p>
 </div>
-<p>In the subsequent construction of this book, the Itô integral <span class="arithmatex">\(\int_0^T G(t, \omega) dW(t)\)</span> will be rigorously defined in the following Hilbert space:</p>
+<p>In the subsequent construction in this book, the Itô integral <span class="arithmatex">\(\int_0^T G(t, \omega) dW(t)\)</span> will be rigorously defined in the following Hilbert space:</p>
 <div class="arithmatex">\[
 L^2(\Omega \times [0, T]) = \left\{ G(t, \omega) \text{ is a progressively measurable process} \mid E\left[ \int_0^T G(t, \omega)^2 dt \right] &lt; \infty \right\}
 \]</div>

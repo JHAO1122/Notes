@@ -148,6 +148,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/3CLT/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/4CLT/</loc>
+        <lastmod>2026-04-12</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/4CLT/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/4CLT/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/0Intro/</loc>
         <lastmod>2026-04-12</lastmod>
         <changefreq>daily</changefreq>
@@ -216,12 +223,5 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap5_6/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap5_6/"/>
-    </url>
-    <url>
-        <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/4CLT/</loc>
-        <lastmod>2026-04-12</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/4CLT/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/4CLT/"/>
     </url>
 </urlset>

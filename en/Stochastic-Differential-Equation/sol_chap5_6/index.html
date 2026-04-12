@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#selected-exercise-solutions-multivariate-ito-formula-sde-solving" class="md-skip">
+        <a href="#exercise-solutions-multivariate-itos-formula-and-sde-solving-in-practice" class="md-skip">
           Skip to content
         </a>
       
@@ -886,15 +886,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#part-i-chapter-5-multivariate-ito-formula-martingale-verification" class="md-nav__link">
+  <a href="#part-i-chapter-5-multidimensional-itos-formula-and-martingale-verification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part I: Chapter 5 Multivariate Itô Formula &amp; Martingale Verification
+        Part I: Chapter 5 Multidimensional Itô's Formula and Martingale Verification
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part I: Chapter 5 Multivariate Itô Formula &amp; Martingale Verification">
+    <nav class="md-nav" aria-label="Part I: Chapter 5 Multidimensional Itô&#39;s Formula and Martingale Verification">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -958,15 +958,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-ii-chapter-6-solving-stochastic-differential-equations" class="md-nav__link">
+  <a href="#part-ii-chapter-6-practical-solutions-of-stochastic-differential-equations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part II: Chapter 6 Solving Stochastic Differential Equations
+        Part II: Chapter 6 Practical Solutions of Stochastic Differential Equations
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part II: Chapter 6 Solving Stochastic Differential Equations">
+    <nav class="md-nav" aria-label="Part II: Chapter 6 Practical Solutions of Stochastic Differential Equations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1339,15 +1339,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#part-i-chapter-5-multivariate-ito-formula-martingale-verification" class="md-nav__link">
+  <a href="#part-i-chapter-5-multidimensional-itos-formula-and-martingale-verification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part I: Chapter 5 Multivariate Itô Formula &amp; Martingale Verification
+        Part I: Chapter 5 Multidimensional Itô's Formula and Martingale Verification
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part I: Chapter 5 Multivariate Itô Formula &amp; Martingale Verification">
+    <nav class="md-nav" aria-label="Part I: Chapter 5 Multidimensional Itô&#39;s Formula and Martingale Verification">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1411,15 +1411,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-ii-chapter-6-solving-stochastic-differential-equations" class="md-nav__link">
+  <a href="#part-ii-chapter-6-practical-solutions-of-stochastic-differential-equations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part II: Chapter 6 Solving Stochastic Differential Equations
+        Part II: Chapter 6 Practical Solutions of Stochastic Differential Equations
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part II: Chapter 6 Solving Stochastic Differential Equations">
+    <nav class="md-nav" aria-label="Part II: Chapter 6 Practical Solutions of Stochastic Differential Equations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1502,153 +1502,154 @@
   
 
 
-<h1 id="selected-exercise-solutions-multivariate-ito-formula-sde-solving">📝 Selected Exercise Solutions: Multivariate Itô Formula &amp; SDE Solving</h1>
+<h1 id="exercise-solutions-multivariate-itos-formula-and-sde-solving-in-practice">📝 Exercise Solutions: Multivariate Itô's Formula and SDE Solving in Practice</h1>
 <div class="admonition abstract">
 <p class="admonition-title">About This Page</p>
-<p>This page contains solutions to core exercises from Chapter 5 (Multivariate Itô Formula) and Chapter 6 (Exact Solutions of SDEs) of the <em>Stochastic Differential Equations</em> course. The content covers the calculus rules for multi-dimensional Brownian motion, martingale construction, Bessel processes, and advanced techniques such as the integrating factor method for solving complex SDEs.</p>
+<p>This page contains detailed solutions to key exercises from Chapter 5 (Multivariate Itô's Formula) and Chapter 6 (Exact Solutions of Stochastic Differential Equations) of the <em>Stochastic Differential Equations</em> course. The content covers the calculus rules for multi-dimensional Brownian motion, the construction and verification of martingales, Bessel processes, and advanced practical techniques for solving complex SDEs using integrating factor methods and undetermined function methods.</p>
 </div>
 <hr />
-<h2 id="part-i-chapter-5-multivariate-ito-formula-martingale-verification">Part I: Chapter 5 Multivariate Itô Formula &amp; Martingale Verification</h2>
+<h2 id="part-i-chapter-5-multidimensional-itos-formula-and-martingale-verification">Part I: Chapter 5 Multidimensional Itô's Formula and Martingale Verification</h2>
 <h3 id="exercise-1">Exercise 1</h3>
 <p><strong>Problem</strong>
-Let <span class="arithmatex">\(W = (W^1, \dots, W^n)\)</span> be an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion. Prove that <span class="arithmatex">\(Y(t) = |W(t)|^2 - nt\)</span> (<span class="arithmatex">\(t \ge 0\)</span>) is a martingale.</p>
+Let <span class="arithmatex">\(W = (W^1, \cdots, W^n)\)</span> be an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion. Prove that <span class="arithmatex">\(Y(t) = |W(t)|^2 - nt\)</span> (<span class="arithmatex">\(t \ge 0\)</span>) is a martingale.</p>
 <details class="success">
-<summary>Solution (Click to expand)</summary>
-<p>This problem can be solved directly by applying the multivariate Itô formula to prove that the drift term is zero.</p>
+<summary>Solution (click to expand)</summary>
+<p>This problem can be directly proven using the multidimensional Itô's formula, showing the drift term is zero.</p>
 <p>First, expand the squared norm of the <span class="arithmatex">\(n\)</span>-dimensional Brownian motion as the sum of squares of its components:</p>
 <div class="arithmatex">\[
 |W(t)|^2 = \sum_{i=1}^n (W^i(t))^2
 \]</div>
-<p>Apply the one-dimensional Itô formula to a single component <span class="arithmatex">\((W^i(t))^2\)</span>:</p>
+<p>Apply the one-dimensional Itô's formula to a single component <span class="arithmatex">\((W^i(t))^2\)</span>:</p>
 <div class="arithmatex">\[
 d((W^i)^2) = 2W^i dW^i + \frac{1}{2} \cdot 2 (dW^i)^2 = 2W^i dW^i + dt
 \]</div>
-<p>Summing over all components, according to the linearity of the differential:</p>
+<p>Summing over all components, using the linearity of the differential:</p>
 <div class="arithmatex">\[
 d(|W(t)|^2) = \sum_{i=1}^n d((W^i)^2) = \sum_{i=1}^n (2W^i dW^i + dt) = 2\sum_{i=1}^n W^i dW^i + n dt
 \]</div>
-<p>Now return to the original process <span class="arithmatex">\(Y(t) = |W(t)|^2 - nt\)</span>, and differentiate it:</p>
+<p>Now consider the original process <span class="arithmatex">\(Y(t) = |W(t)|^2 - nt\)</span> and compute its differential:</p>
 <div class="arithmatex">\[
 dY(t) = d(|W(t)|^2) - d(nt) = \left( 2\sum_{i=1}^n W^i dW^i + n dt \right) - n dt = 2\sum_{i=1}^n W^i dW^i
 \]</div>
-<p>Writing this in integral form:</p>
+<p>Writing it in integral form:</p>
 <div class="arithmatex">\[
 Y(t) - Y(0) = 2 \int_0^t \sum_{i=1}^n W^i(s) dW^i(s)
 \]</div>
-<p>Since the right-hand side contains only Itô integrals with respect to Brownian motion, and the integrand <span class="arithmatex">\(2W^i(s)\)</span> is square-integrable over compact intervals, this integral process is a martingale. Thus, <span class="arithmatex">\(Y(t)\)</span> is also a martingale. The proof is complete.</p>
+<p>Since the right-hand side consists only of Itô integrals with respect to Brownian motion, and the integrands <span class="arithmatex">\(2W^i(s)\)</span> are square-integrable on compact intervals, this integral process is a martingale. Therefore, <span class="arithmatex">\(Y(t)\)</span> is also a martingale. Q.E.D.</p>
 </details>
 <hr />
 <h3 id="exercise-2">Exercise 2</h3>
 <p><strong>Problem</strong>
-Let <span class="arithmatex">\(W = (W^1, \dots, W^n)^T\)</span> be an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion. Denote <span class="arithmatex">\(R = |W|\)</span>. Prove that <span class="arithmatex">\(R\)</span> satisfies the following Stochastic Bessel Equation:
-$<span class="arithmatex">\(dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i\)</span>$</p>
+Let <span class="arithmatex">\(W = (W^1, \cdots, W^n)^T\)</span> be an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion. Denote <span class="arithmatex">\(R = |W|\)</span>. Prove that <span class="arithmatex">\(R\)</span> satisfies the following stochastic Bessel equation:</p>
+<div class="arithmatex">\[dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i\]</div>
 <details class="success">
-<summary>Solution (Click to expand)</summary>
-<p>Here we let the multivariate function be <span class="arithmatex">\(f(x) = |x| = \left(\sum_{i=1}^n (x^i)^2\right)^{1/2}\)</span>. Calculate its partial derivatives:</p>
-<p>First-order partial derivative:</p>
+<summary>Solution (click to expand)</summary>
+<p>Here we define the multivariate function <span class="arithmatex">\(f(x) = |x| = \left(\sum_{i=1}^n (x^i)^2\right)^{1/2}\)</span>. Compute its partial derivatives:</p>
+<p>First-order partial derivatives:</p>
 <div class="arithmatex">\[
 f_{x^i} = \frac{1}{2} \left(\sum_{j=1}^n (x^j)^2\right)^{-1/2} \cdot 2x^i = \frac{x^i}{|x|} = \frac{x^i}{R}
 \]</div>
-<p>Second-order partial derivative (using the quotient rule):</p>
+<p>Second-order partial derivatives (using the quotient rule):</p>
 <div class="arithmatex">\[
 f_{x^i x^i} = \frac{1 \cdot R - x^i \cdot f_{x^i}}{R^2} = \frac{R - x^i (x^i / R)}{R^2} = \frac{1}{R} - \frac{(x^i)^2}{R^3}
 \]</div>
-<p>The multi-dimensional Itô formula requires the Laplacian (the sum of all second-order pure partial derivatives). Summing them up:</p>
+<p>The multidimensional Itô's formula requires the Laplacian (sum of all second-order pure partials). Summing them:</p>
 <div class="arithmatex">\[
 \sum_{i=1}^n f_{x^i x^i} = \sum_{i=1}^n \left( \frac{1}{R} - \frac{(x^i)^2}{R^3} \right) = \frac{n}{R} - \frac{\sum_{i=1}^n (x^i)^2}{R^3} = \frac{n}{R} - \frac{R^2}{R^3} = \frac{n-1}{R}
 \]</div>
-<p>Substitute <span class="arithmatex">\(X_t = W_t\)</span> into the <span class="arithmatex">\(n\)</span>-dimensional Itô formula <span class="arithmatex">\(df(W_t) = \sum_{i=1}^n f_{x^i} dW^i + \frac{1}{2} \sum_{i=1}^n f_{x^i x^i} dt\)</span> (Note: since Brownian motions in different dimensions are independent, the cross terms <span class="arithmatex">\(dW^i dW^j = 0\)</span>):</p>
+<p>Substitute <span class="arithmatex">\(X_t = W_t\)</span> into the <span class="arithmatex">\(n\)</span>-dimensional Itô's formula <span class="arithmatex">\(df(W_t) = \sum_{i=1}^n f_{x^i} dW^i + \frac{1}{2} \sum_{i=1}^n f_{x^i x^i} dt\)</span> (Note: Since Brownian motions in different dimensions are independent, cross terms <span class="arithmatex">\(dW^i dW^j = 0\)</span>):</p>
 <div class="arithmatex">\[
 dR = d(|W|) = \sum_{i=1}^n \frac{W^i}{R} dW^i + \frac{1}{2} \left( \frac{n-1}{R} \right) dt
 \]</div>
-<p>Rearranging this gives the classical form of the high-dimensional Bessel process:</p>
+<p>Rearranging yields the classic form of the high-dimensional Bessel process:</p>
 <div class="arithmatex">\[
 dR = \frac{n-1}{2R} dt + \sum_{i=1}^n \frac{W^i}{R} dW^i
 \]</div>
-<p>The proof is complete.</p>
+<p>Q.E.D.</p>
 </details>
 <hr />
 <h3 id="exercise-3">Exercise 3</h3>
 <p><strong>Problem</strong>
-(1) Verify that <span class="arithmatex">\(X = (\cos W, \sin W)\)</span> is a solution to <span class="arithmatex">\(dX^1 = -\frac{1}{2}X^1 dt - X^2 dW, \quad dX^2 = -\frac{1}{2}X^2 dt + X^1 dW\)</span>.
+(1) Verify that <span class="arithmatex">\(X = (\cos W, \sin W)\)</span> is a solution to
+<span class="arithmatex">\(dX^1 = -\frac{1}{2}X^1 dt - X^2 dW, \quad dX^2 = -\frac{1}{2}X^2 dt + X^1 dW\)</span>
 (2) Prove that if <span class="arithmatex">\(X = (X^1, X^2)\)</span> is a solution to the above system, then <span class="arithmatex">\(|X|\)</span> is a constant independent of time.</p>
 <details class="success">
-<summary>Solution (Click to expand)</summary>
-<p><strong>(1) Verification of the Solution</strong>
-Given <span class="arithmatex">\(X^1 = \cos W(t)\)</span>, applying the one-dimensional Itô formula to it:</p>
+<summary>Solution (click to expand)</summary>
+<p><strong>(1) Verifying the solution form</strong>
+Given <span class="arithmatex">\(X^1 = \cos W(t)\)</span>, apply the one-dimensional Itô's formula:</p>
 <div class="arithmatex">\[
 dX^1 = d(\cos W) = -\sin W dW - \frac{1}{2} \cos W dt = -X^2 dW - \frac{1}{2} X^1 dt
 \]</div>
-<p>Given <span class="arithmatex">\(X^2 = \sin W(t)\)</span>, similarly applying Itô's formula:</p>
+<p>Given <span class="arithmatex">\(X^2 = \sin W(t)\)</span>, similarly apply Itô's formula:</p>
 <div class="arithmatex">\[
 dX^2 = d(\sin W) = \cos W dW - \frac{1}{2} \sin W dt = X^1 dW - \frac{1}{2} X^2 dt
 \]</div>
-<p>The calculated results match the SDEs given in the problem exactly, thus <span class="arithmatex">\(X = (\cos W, \sin W)\)</span> is a solution to the system.</p>
+<p>The computed results exactly match the SDE given in the problem statement. Therefore, <span class="arithmatex">\(X = (\cos W, \sin W)\)</span> is a solution to the system.</p>
 <p><br></p>
-<p><strong>(2) Proof of Conservation of Norm</strong>
-We examine the differential of <span class="arithmatex">\(|X|^2 = (X^1)^2 + (X^2)^2\)</span>. By the product rule (or Itô's formula):</p>
+<p><strong>(2) Proving norm conservation</strong>
+Consider the differential of <span class="arithmatex">\(|X|^2 = (X^1)^2 + (X^2)^2\)</span>. By the product rule (or Itô's formula):</p>
 <div class="arithmatex">\[
 d((X^1)^2) = 2X^1 dX^1 + \langle dX^1, dX^1 \rangle
 \]</div>
-<p>Substitute the system equations and note the quadratic variation <span class="arithmatex">\(\langle dX^1, dX^1 \rangle = (-X^2)^2 dt = (X^2)^2 dt\)</span>:</p>
+<p>Substitute the system equations, noting the quadratic variation <span class="arithmatex">\(\langle dX^1, dX^1 \rangle = (-X^2)^2 dt = (X^2)^2 dt\)</span>:</p>
 <div class="arithmatex">\[
 d((X^1)^2) = 2X^1 \left( -\frac{1}{2}X^1 dt - X^2 dW \right) + (X^2)^2 dt = -(X^1)^2 dt - 2X^1 X^2 dW + (X^2)^2 dt
 \]</div>
-<p>Similarly for <span class="arithmatex">\(X^2\)</span>:</p>
+<p>Similarly, for <span class="arithmatex">\(X^2\)</span>:</p>
 <div class="arithmatex">\[
 d((X^2)^2) = 2X^2 dX^2 + \langle dX^2, dX^2 \rangle = 2X^2 \left( -\frac{1}{2}X^2 dt + X^1 dW \right) + (X^1)^2 dt
 \]</div>
 <div class="arithmatex">\[
 d((X^2)^2) = -(X^2)^2 dt + 2X^1 X^2 dW + (X^1)^2 dt
 \]</div>
-<p>Summing the two equations:</p>
+<p>Adding the two equations:</p>
 <div class="arithmatex">\[
 d(|X|^2) = d((X^1)^2) + d((X^2)^2) = \left[ -(X^1)^2 + (X^2)^2 - (X^2)^2 + (X^1)^2 \right] dt + [-2X^1 X^2 + 2X^1 X^2] dW = 0
 \]</div>
-<p>Since <span class="arithmatex">\(d(|X|^2) = 0\)</span>, this means the squared norm does not change with time. Therefore, <span class="arithmatex">\(|X|\)</span> is a constant independent of time. The proof is complete.</p>
+<p>Since <span class="arithmatex">\(d(|X|^2) = 0\)</span>, the squared norm does not change with time, implying <span class="arithmatex">\(|X|\)</span> is a constant independent of time. Q.E.D.</p>
 </details>
 <hr />
 <h3 id="exercise-4">Exercise 4</h3>
 <p><strong>Problem</strong>
 Prove that <span class="arithmatex">\(X(t) = (W(t)+t)\exp\left(-W(t)-\frac{1}{2}t\right)\)</span> is a martingale.</p>
 <details class="success">
-<summary>Solution (Click to expand)</summary>
-<p>The standard approach for verifying a martingale is: let <span class="arithmatex">\(X(t) = u(W(t), t)\)</span>, expand it using Itô's formula, and prove that the drift term (the <span class="arithmatex">\(dt\)</span> term) is identically 0.</p>
-<p>Let the function <span class="arithmatex">\(u(x, t) = (x+t)\exp\left(-x-\frac{1}{2}t\right)\)</span>. We calculate its partial derivatives respectively:</p>
+<summary>Solution (click to expand)</summary>
+<p>The standard approach to verify a martingale is: Let <span class="arithmatex">\(X(t) = u(W(t), t)\)</span>, expand using Itô's formula, and prove the drift term (the <span class="arithmatex">\(dt\)</span> term) is identically zero.</p>
+<p>Define the function <span class="arithmatex">\(u(x, t) = (x+t)\exp\left(-x-\frac{1}{2}t\right)\)</span>. Compute its partial derivatives:</p>
 <p>Derivative with respect to <span class="arithmatex">\(t\)</span>:</p>
 <div class="arithmatex">\[
 u_t = \exp\left(-x-\frac{1}{2}t\right) - \frac{1}{2}(x+t)\exp\left(-x-\frac{1}{2}t\right)
 \]</div>
-<p>First-order derivative with respect to <span class="arithmatex">\(x\)</span>:</p>
+<p>First derivative with respect to <span class="arithmatex">\(x\)</span>:</p>
 <div class="arithmatex">\[
 u_x = \exp\left(-x-\frac{1}{2}t\right) - (x+t)\exp\left(-x-\frac{1}{2}t\right)
 \]</div>
-<p>Second-order derivative with respect to <span class="arithmatex">\(x\)</span>:</p>
+<p>Second derivative with respect to <span class="arithmatex">\(x\)</span>:</p>
 <div class="arithmatex">\[
 u_{xx} = -\exp\left(-x-\frac{1}{2}t\right) - \left[ \exp\left(-x-\frac{1}{2}t\right) - (x+t)\exp\left(-x-\frac{1}{2}t\right) \right]
 \]</div>
 <div class="arithmatex">\[
 u_{xx} = -2\exp\left(-x-\frac{1}{2}t\right) + (x+t)\exp\left(-x-\frac{1}{2}t\right)
 \]</div>
-<p>Now we substitute into the Itô drift term formula: <span class="arithmatex">\(\text{drift} = u_t + \frac{1}{2}u_{xx}\)</span></p>
+<p>Now substitute into the Itô drift term formula: <span class="arithmatex">\(drift = u_t + \frac{1}{2}u_{xx}\)</span></p>
 <div class="arithmatex">\[
 u_t + \frac{1}{2}u_{xx} = \left[ 1 - \frac{1}{2}(x+t) \right] \exp(\dots) + \frac{1}{2} \left[ -2 + (x+t) \right] \exp(\dots)
 \]</div>
-<p>Extracting the common factor <span class="arithmatex">\(\exp\left(-x-\frac{1}{2}t\right)\)</span>:</p>
+<p>Factor out the common term <span class="arithmatex">\(\exp\left(-x-\frac{1}{2}t\right)\)</span>:</p>
 <div class="arithmatex">\[
 = \left( 1 - \frac{1}{2}(x+t) - 1 + \frac{1}{2}(x+t) \right) \exp\left(-x-\frac{1}{2}t\right) = 0 \cdot \exp(\dots) = 0
 \]</div>
-<p>Since the drift term <span class="arithmatex">\(u_t + \frac{1}{2}u_{xx} \equiv 0\)</span>, this implies that <span class="arithmatex">\(dX(t) = u_x dW(t)\)</span>. Because there is no <span class="arithmatex">\(dt\)</span> term, this integral process constitutes a martingale. The proof is complete.</p>
+<p>Since the drift term <span class="arithmatex">\(u_t + \frac{1}{2}u_{xx} \equiv 0\)</span>, this implies <span class="arithmatex">\(dX(t) = u_x dW(t)\)</span>. As there is no <span class="arithmatex">\(dt\)</span> term, this integral process constitutes a martingale. Q.E.D.</p>
 </details>
 <hr />
 <h3 id="exercise-5">Exercise 5</h3>
 <p><strong>Problem</strong>
 Prove that the solution to the stochastic differential equation <span class="arithmatex">\(dX(t) = \frac{1}{3}X(t)^{1/3} dt + X(t)^{2/3} dW(t)\)</span> with initial value <span class="arithmatex">\(X(0) = x_0 &gt; 0\)</span> is <span class="arithmatex">\(X(t) = \left( x_0^{1/3} + \frac{1}{3}W(t) \right)^3\)</span>.</p>
 <details class="success">
-<summary>Solution (Click to expand)</summary>
-<p>This is a classic problem to test the "guess and verify" rule.
-We directly treat the given solution <span class="arithmatex">\(X(t)\)</span> as a composite function and find its stochastic differential via Itô's formula to see if it matches the SDE in the problem.</p>
-<p>Let the auxiliary process be <span class="arithmatex">\(Y(t) = x_0^{1/3} + \frac{1}{3}W(t)\)</span>, so the original solution can be written as <span class="arithmatex">\(X(t) = Y(t)^3\)</span>.</p>
+<summary>Solution (click to expand)</summary>
+<p>This problem is a classic example of the "guess-and-verify" method.
+We directly treat the given solution <span class="arithmatex">\(X(t)\)</span> as a composite function and compute its stochastic differential via Itô's formula to see if it matches the given SDE.</p>
+<p>Define the auxiliary process <span class="arithmatex">\(Y(t) = x_0^{1/3} + \frac{1}{3}W(t)\)</span>. Then the proposed solution can be written as <span class="arithmatex">\(X(t) = Y(t)^3\)</span>.</p>
 <p>First, the differential of the auxiliary process <span class="arithmatex">\(Y(t)\)</span> is:</p>
 <div class="arithmatex">\[
 dY(t) = \frac{1}{3} dW(t)
@@ -1657,7 +1658,7 @@ dY(t) = \frac{1}{3} dW(t)
 <div class="arithmatex">\[
 (dY(t))^2 = \left( \frac{1}{3} dW(t) \right)^2 = \frac{1}{9} dt
 \]</div>
-<p>Next, use Itô's formula to expand <span class="arithmatex">\(f(Y) = Y^3\)</span>. Calculate the derivatives: <span class="arithmatex">\(f'(Y) = 3Y^2\)</span>, <span class="arithmatex">\(f''(Y) = 6Y\)</span>.</p>
+<p>Next, apply Itô's formula to <span class="arithmatex">\(f(Y) = Y^3\)</span>. Compute derivatives: <span class="arithmatex">\(f'(Y) = 3Y^2\)</span>, <span class="arithmatex">\(f''(Y) = 6Y\)</span>.</p>
 <div class="arithmatex">\[
 dX(t) = d(Y^3) = 3Y^2 dY(t) + \frac{1}{2}(6Y) (dY(t))^2
 \]</div>
@@ -1668,51 +1669,51 @@ dX(t) = 3Y^2 \left( \frac{1}{3} dW(t) \right) + 3Y \left( \frac{1}{9} dt \right)
 <div class="arithmatex">\[
 dX(t) = Y^2 dW(t) + \frac{1}{3}Y dt
 \]</div>
-<p>Finally, since <span class="arithmatex">\(Y(t) = X(t)^{1/3}\)</span>, substitute this back to eliminate the auxiliary variable <span class="arithmatex">\(Y\)</span>:</p>
+<p>Finally, since <span class="arithmatex">\(Y(t) = X(t)^{1/3}\)</span>, substitute back to eliminate the auxiliary variable <span class="arithmatex">\(Y\)</span>:</p>
 <div class="arithmatex">\[
 dX(t) = (X(t)^{1/3})^2 dW(t) + \frac{1}{3} X(t)^{1/3} dt = X(t)^{2/3} dW(t) + \frac{1}{3} X(t)^{1/3} dt
 \]</div>
-<p>This is completely identical to the SDE given in the problem! Furthermore, when <span class="arithmatex">\(t=0\)</span>, <span class="arithmatex">\(X(0) = (x_0^{1/3} + 0)^3 = x_0\)</span>, so the initial condition is also satisfied. Therefore, the proof is complete.</p>
+<p>This exactly matches the stochastic differential equation given in the problem! Moreover, at <span class="arithmatex">\(t=0\)</span>, <span class="arithmatex">\(X(0) = (x_0^{1/3} + 0)^3 = x_0\)</span>, satisfying the initial condition. Thus the proof is complete.</p>
 </details>
 <hr />
 <p><br></p>
-<h2 id="part-ii-chapter-6-solving-stochastic-differential-equations">Part II: Chapter 6 Solving Stochastic Differential Equations</h2>
+<h2 id="part-ii-chapter-6-practical-solutions-of-stochastic-differential-equations">Part II: Chapter 6 Practical Solutions of Stochastic Differential Equations</h2>
 <h3 id="exercise-1_1">Exercise 1</h3>
 <p><strong>Problem</strong>
-Solve the stochastic differential equations:
+Solve the stochastic differential equations
 (1) <span class="arithmatex">\(dX = X dt + e^{-t} dW\)</span>
 (2) <span class="arithmatex">\(dX_1 = dt + dW_1, \quad dX_2 = X_1 dW_2\)</span></p>
 <details class="success">
 <summary>Solution (Click to expand)</summary>
-<p><strong>(1) Solve <span class="arithmatex">\(dX_t = X_t dt + e^{-t} dW_t\)</span></strong>
-This is a linear SDE, so we can use the integrating factor method. Rearranging gives <span class="arithmatex">\(dX_t - X_t dt = e^{-t} dW_t\)</span>.
+<p><strong>(1) Solving <span class="arithmatex">\(dX_t = X_t dt + e^{-t} dW_t\)</span></strong>
+This is a linear SDE, and we can use the integrating factor method. Rearranging gives <span class="arithmatex">\(dX_t - X_t dt = e^{-t} dW_t\)</span>.
 Consider multiplying by the integrating factor <span class="arithmatex">\(F_t = e^{-t}\)</span>. We examine the differential of the process <span class="arithmatex">\(Y_t = e^{-t} X_t\)</span>:</p>
 <div class="arithmatex">\[
 dY_t = d(e^{-t}X_t) = -e^{-t}X_t dt + e^{-t}dX_t
 \]</div>
-<p>Substitute <span class="arithmatex">\(dX_t\)</span> from the original equation:</p>
+<p>Substituting <span class="arithmatex">\(dX_t\)</span> from the original equation:</p>
 <div class="arithmatex">\[
 dY_t = -e^{-t}X_t dt + e^{-t}(X_t dt + e^{-t} dW_t) = -e^{-t}X_t dt + e^{-t}X_t dt + e^{-2t} dW_t = e^{-2t} dW_t
 \]</div>
-<p>Integrate both sides:</p>
+<p>Integrating both sides:</p>
 <div class="arithmatex">\[
 Y_t - Y_0 = \int_0^t e^{-2s} dW_s
 \]</div>
-<p>Substitute back <span class="arithmatex">\(Y_t = e^{-t}X_t\)</span> to get the final solution:</p>
+<p>Substituting back <span class="arithmatex">\(Y_t = e^{-t}X_t\)</span>, we obtain the final solution:</p>
 <div class="arithmatex">\[
 e^{-t}X_t = X_0 + \int_0^t e^{-2s} dW_s \implies X(t) = e^t X(0) + \int_0^t e^{t-2s} dW(s)
 \]</div>
 <p><br></p>
-<p><strong>(2) Solve <span class="arithmatex">\(dX_1 = dt + dW_1, \quad dX_2 = X_1 dW_2\)</span></strong>
-This is a hierarchical SDE; solve the first layer first. Integrate the first equation directly:</p>
+<p><strong>(2) Solving <span class="arithmatex">\(dX_1 = dt + dW_1, \quad dX_2 = X_1 dW_2\)</span></strong>
+This is a hierarchical SDE. First, solve the first layer. Directly integrate the first equation:</p>
 <div class="arithmatex">\[
 X_1(t) = X_1(0) + \int_0^t ds + \int_0^t dW_1(s) = X_1(0) + t + W_1(t)
 \]</div>
-<p>Substitute the explicit expression found for <span class="arithmatex">\(X_1(t)\)</span> into the second equation:</p>
+<p>Substitute the explicit expression for <span class="arithmatex">\(X_1(t)\)</span> into the second equation:</p>
 <div class="arithmatex">\[
 dX_2(t) = (X_1(0) + t + W_1(t)) dW_2(t)
 \]</div>
-<p>Integrate directly to get the final solution:</p>
+<p>Direct integration yields the final solution:</p>
 <div class="arithmatex">\[
 X_2(t) = X_2(0) + X_1(0) W_2(t) + \int_0^t s dW_2(s) + \int_0^t W_1(s) dW_2(s)
 \]</div>
@@ -1720,12 +1721,12 @@ X_2(t) = X_2(0) + X_1(0) W_2(t) + \int_0^t s dW_2(s) + \int_0^t W_1(s) dW_2(s)
 <hr />
 <h3 id="exercise-2_1">Exercise 2</h3>
 <p><strong>Problem</strong>
-Show that <span class="arithmatex">\(X(t) = (a\cos W(t), b\sin W(t))^T\)</span> (where <span class="arithmatex">\(a, b\)</span> are positive constants) is a solution to the following stochastic differential equation:
-$<span class="arithmatex">\(dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 &amp; -\frac{a}{b} \\ \frac{b}{a} &amp; 0 \end{pmatrix} X dW\)</span>$</p>
+Prove that <span class="arithmatex">\(X(t) = (a\cos W(t), b\sin W(t))^T\)</span> (where <span class="arithmatex">\(a, b\)</span> are positive constants) is a solution to the following stochastic differential equation</p>
+<div class="arithmatex">\[dX = -\frac{1}{2}X dt + \begin{pmatrix} 0 &amp; -\frac{a}{b} \\ \frac{b}{a} &amp; 0 \end{pmatrix} X dW\]</div>
 <details class="success">
 <summary>Solution (Click to expand)</summary>
-<p>This problem introduces a matrix form to SDEs. We expand the given matrix into a system of equations.
-Let the matrix <span class="arithmatex">\(M = \begin{pmatrix} 0 &amp; -a/b \\ b/a &amp; 0 \end{pmatrix}\)</span>, then <span class="arithmatex">\(MX = \begin{pmatrix} 0 &amp; -a/b \\ b/a &amp; 0 \end{pmatrix} \begin{pmatrix} X^1 \\ X^2 \end{pmatrix} = \begin{pmatrix} -\frac{a}{b}X^2 \\ \frac{b}{a}X^1 \end{pmatrix}\)</span>.</p>
+<p>This problem introduces matrix form into the SDE. We expand the given matrix into a system of equations.
+Let the matrix <span class="arithmatex">\(M = \begin{pmatrix} 0 &amp; -a/b \\ b/a &amp; 0 \end{pmatrix}\)</span>. Then <span class="arithmatex">\(MX = \begin{pmatrix} 0 &amp; -a/b \\ b/a &amp; 0 \end{pmatrix} \begin{pmatrix} X^1 \\ X^2 \end{pmatrix} = \begin{pmatrix} -\frac{a}{b}X^2 \\ \frac{b}{a}X^1 \end{pmatrix}\)</span>.</p>
 <p>Therefore, the original SDE is equivalent to the following two scalar equations:</p>
 <div class="arithmatex">\[
 dX^1 = -\frac{1}{2}X^1 dt - \frac{a}{b}X^2 dW
@@ -1738,80 +1739,80 @@ Apply Itô's formula to <span class="arithmatex">\(X^1\)</span>:</p>
 <div class="arithmatex">\[
 dX^1 = d(a\cos W) = -a\sin W dW - \frac{1}{2}a\cos W dt
 \]</div>
-<p>Substitute the definitions of <span class="arithmatex">\(X^1\)</span> and <span class="arithmatex">\(X^2\)</span> into the right side: since <span class="arithmatex">\(X^2 = b\sin W\)</span>, we have <span class="arithmatex">\(\sin W = X^2/b\)</span>, thus <span class="arithmatex">\(-a\sin W = -a(X^2/b) = -\frac{a}{b}X^2\)</span>.</p>
+<p>Substituting the definitions of <span class="arithmatex">\(X^1\)</span> and <span class="arithmatex">\(X^2\)</span> into the right-hand side: Since <span class="arithmatex">\(X^2 = b\sin W\)</span>, i.e., <span class="arithmatex">\(\sin W = X^2/b\)</span>, we have <span class="arithmatex">\(-a\sin W = -a(X^2/b) = -\frac{a}{b}X^2\)</span>.</p>
 <div class="arithmatex">\[
 dX^1 = -\frac{a}{b}X^2 dW - \frac{1}{2}X^1 dt
 \]</div>
-<p>This matches the first scalar equation perfectly!</p>
-<p>Verify <span class="arithmatex">\(X^2\)</span> similarly:</p>
+<p>This perfectly matches the first scalar equation!</p>
+<p>Similarly, verify <span class="arithmatex">\(X^2\)</span>:</p>
 <div class="arithmatex">\[
 dX^2 = d(b\sin W) = b\cos W dW - \frac{1}{2}b\sin W dt
 \]</div>
-<p>Since <span class="arithmatex">\(X^1 = a\cos W\)</span>, we have <span class="arithmatex">\(\cos W = X^1/a\)</span>, thus <span class="arithmatex">\(b\cos W = \frac{b}{a}X^1\)</span>. Substituting this gives:</p>
+<p>Since <span class="arithmatex">\(X^1 = a\cos W\)</span>, i.e., <span class="arithmatex">\(\cos W = X^1/a\)</span>, we have <span class="arithmatex">\(b\cos W = \frac{b}{a}X^1\)</span>. Substituting:</p>
 <div class="arithmatex">\[
 dX^2 = \frac{b}{a}X^1 dW - \frac{1}{2}X^2 dt
 \]</div>
-<p>This matches the second scalar equation perfectly. The verification is complete.</p>
+<p>This perfectly matches the second scalar equation. Verification complete.</p>
 </details>
 <hr />
 <h3 id="exercise-3_1">Exercise 3</h3>
 <p><strong>Problem</strong>
-Show that <span class="arithmatex">\(X_t = e^{W_t}\)</span> is a solution to the following stochastic differential equation:
-$<span class="arithmatex">\(dX_t = \frac{1}{2}X_t dt + X_t dW_t\)</span>$</p>
+Prove that <span class="arithmatex">\(X_t = e^{W_t}\)</span> is a solution to the following stochastic differential equation:</p>
+<div class="arithmatex">\[dX_t = \frac{1}{2}X_t dt + X_t dW_t\]</div>
 <details class="success">
 <summary>Solution (Click to expand)</summary>
 <p>This problem is the simplest degenerate version of the Black-Scholes geometric Brownian motion model.</p>
-<p>Let the function <span class="arithmatex">\(f(x) = e^x\)</span>. Substitute its derivatives <span class="arithmatex">\(f'(x) = e^x, f''(x) = e^x\)</span> and <span class="arithmatex">\(W_t\)</span> into Itô's formula:</p>
+<p>Let the function <span class="arithmatex">\(f(x) = e^x\)</span>. Substituting its derivatives <span class="arithmatex">\(f'(x) = e^x, f''(x) = e^x\)</span> and <span class="arithmatex">\(W_t\)</span> into Itô's formula:</p>
 <div class="arithmatex">\[
 df(W_t) = f'(W_t)dW_t + \frac{1}{2}f''(W_t)(dW_t)^2
 \]</div>
-<p>Since the quadratic variation <span class="arithmatex">\((dW_t)^2 = dt\)</span>, substitute it into the exponential function:</p>
+<p>Since the quadratic variation <span class="arithmatex">\((dW_t)^2 = dt\)</span>, and substituting the exponential function:</p>
 <div class="arithmatex">\[
 d(e^{W_t}) = e^{W_t} dW_t + \frac{1}{2} e^{W_t} dt
 \]</div>
-<p>Then substitute the definition <span class="arithmatex">\(X_t = e^{W_t}\)</span> back into the coefficients on the right side:</p>
+<p>Replacing the coefficients on the right-hand side with the definition <span class="arithmatex">\(X_t = e^{W_t}\)</span>:</p>
 <div class="arithmatex">\[
 dX_t = X_t dW_t + \frac{1}{2} X_t dt
 \]</div>
-<p>Swapping the order gives <span class="arithmatex">\(dX_t = \frac{1}{2}X_t dt + X_t dW_t\)</span>, which perfectly matches the equation in the problem. The proof is complete.</p>
+<p>Rearranging the order gives <span class="arithmatex">\(dX_t = \frac{1}{2}X_t dt + X_t dW_t\)</span>, which perfectly matches the equation in the problem. Q.E.D.</p>
 </details>
 <hr />
 <h3 id="exercise-4_1">Exercise 4</h3>
 <p><strong>Problem</strong>
-Solve the stochastic differential equation:</p>
+Solve the stochastic differential equation</p>
 <div class="arithmatex">\[dX_t = e^t(1+W_t^2)dt + (1+2e^t W_t)dW_t, \quad X_0 = 0\]</div>
 <details class="success">
 <summary>Solution (Click to expand)</summary>
-<p>Since the coefficients of the equation explicitly contain time <span class="arithmatex">\(t\)</span> and Brownian motion <span class="arithmatex">\(W_t\)</span>, we use the <strong>Guess and Verify</strong> (method of undetermined functions).
-Assume the solution has the form <span class="arithmatex">\(X_t = f(t, W_t)\)</span>. Expand the multi-variable function <span class="arithmatex">\(f\)</span> using Itô's formula:</p>
+<p>Since the coefficients of the equation explicitly contain time <span class="arithmatex">\(t\)</span> and Brownian motion <span class="arithmatex">\(W_t\)</span>, we use the <strong>Guess and Verify</strong> method.
+Assume the solution has the form <span class="arithmatex">\(X_t = f(t, W_t)\)</span>. Expand Itô's formula for the multivariate function <span class="arithmatex">\(f\)</span>:</p>
 <div class="arithmatex">\[
 dX_t = \left( f_t + \frac{1}{2}f_{ww} \right) dt + f_w dW_t
 \]</div>
-<p>Compare this term by term with the given SDE:</p>
+<p>Compare it term-by-term with the given SDE:</p>
 <p><strong>1. Match the coefficient of <span class="arithmatex">\(dW_t\)</span>:</strong></p>
 <div class="arithmatex">\[
 f_w(t, w) = 1 + 2e^t w
 \]</div>
-<p>Integrate partially with respect to <span class="arithmatex">\(w\)</span> to get the structure of the function <span class="arithmatex">\(f\)</span>:</p>
+<p>Partially integrate with respect to <span class="arithmatex">\(w\)</span> to obtain the structure of the function <span class="arithmatex">\(f\)</span>:</p>
 <div class="arithmatex">\[
 f(t, w) = w + e^t w^2 + g(t)
 \]</div>
 <p>where <span class="arithmatex">\(g(t)\)</span> is an undetermined integration constant function depending only on time.</p>
 <p><strong>2. Match the coefficient of <span class="arithmatex">\(dt\)</span>:</strong>
-First calculate the remaining partial derivatives of the assumed function <span class="arithmatex">\(f\)</span>:
+First, compute the other partial derivatives of the assumed function <span class="arithmatex">\(f\)</span>:
 <span class="arithmatex">\(f_t(t, w) = e^t w^2 + g'(t)\)</span>
 <span class="arithmatex">\(f_{ww}(t, w) = 2e^t\)</span></p>
-<p>Substitute them into the drift term, requiring it to equal the <span class="arithmatex">\(dt\)</span> coefficient of the original equation:</p>
+<p>Substitute them into the drift term, which must equal the <span class="arithmatex">\(dt\)</span> coefficient of the original equation:</p>
 <div class="arithmatex">\[
 f_t + \frac{1}{2}f_{ww} = \left( e^t w^2 + g'(t) \right) + \frac{1}{2}(2e^t) = e^t(1+w^2) + g'(t)
 \]</div>
-<p>And the <span class="arithmatex">\(dt\)</span> coefficient of the original equation is <span class="arithmatex">\(e^t(1+w^2)\)</span>. Setting them equal:</p>
+<p>The <span class="arithmatex">\(dt\)</span> coefficient of the original equation is <span class="arithmatex">\(e^t(1+w^2)\)</span>. Equating the two:</p>
 <div class="arithmatex">\[
 e^t(1+w^2) + g'(t) = e^t(1+w^2) \implies g'(t) = 0
 \]</div>
-<p>This means <span class="arithmatex">\(g(t) = C\)</span> (a constant).</p>
-<p><strong>3. Substitute the initial condition:</strong>
-The form of the solution is determined as <span class="arithmatex">\(X_t = W_t + e^t W_t^2 + C\)</span>.
+<p>This implies <span class="arithmatex">\(g(t) = C\)</span> (a constant).</p>
+<p><strong>3. Apply the initial condition:</strong>
+The solution form is determined as <span class="arithmatex">\(X_t = W_t + e^t W_t^2 + C\)</span>.
 Given <span class="arithmatex">\(X_0 = 0\)</span>, and <span class="arithmatex">\(W_0 = 0\)</span>:</p>
 <div class="arithmatex">\[
 0 = 0 + e^0(0)^2 + C \implies C = 0
@@ -1824,12 +1825,12 @@ X(t) = W(t) + e^t W^2(t)
 <hr />
 <h3 id="exercise-5_1">Exercise 5</h3>
 <p><strong>Problem</strong>
-Solve the stochastic differential equation:
-$<span class="arithmatex">\(dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 &gt; 0\)</span>$</p>
+Solve the stochastic differential equation</p>
+<div class="arithmatex">\[dX_t = \frac{1}{X_t}dt + \alpha X_t dW_t, \quad X_0 = x_0 &gt; 0\]</div>
 <details class="success">
 <summary>Solution (Click to expand)</summary>
-<p>This is a highly challenging nonlinear SDE. Since the equation contains <span class="arithmatex">\(1/X_t\)</span>, it suggests that we first use a square transformation to eliminate the denominator.</p>
-<p><strong>Step 1: Variable substitution (Linearization)</strong>
+<p>This is a very challenging nonlinear SDE. Since the equation contains <span class="arithmatex">\(1/X_t\)</span>, it suggests we first use a square transformation to eliminate the denominator.</p>
+<p><strong>Step 1: Change of variables (Linearization)</strong>
 Let <span class="arithmatex">\(Y_t = X_t^2\)</span>. Apply Itô's formula to it:</p>
 <div class="arithmatex">\[
 dY_t = 2X_t dX_t + (dX_t)^2
@@ -1838,43 +1839,43 @@ dY_t = 2X_t dX_t + (dX_t)^2
 <div class="arithmatex">\[
 dY_t = 2X_t \left( \frac{1}{X_t}dt + \alpha X_t dW_t \right) + \alpha^2 Y_t dt = 2 dt + 2\alpha Y_t dW_t + \alpha^2 Y_t dt
 \]</div>
-<p>Rearranging gives a linear SDE with respect to <span class="arithmatex">\(Y_t\)</span>:</p>
+<p>Rearranging yields a linear SDE for <span class="arithmatex">\(Y_t\)</span>:</p>
 <div class="arithmatex">\[
 dY_t = (2 + \alpha^2 Y_t) dt + 2\alpha Y_t dW_t
 \]</div>
 <p><strong>Step 2: Construct an integrating factor to solve the linear SDE</strong>
-To eliminate the proportional term of <span class="arithmatex">\(Y_t\)</span>, we construct an integrating factor <span class="arithmatex">\(F_t\)</span> satisfying <span class="arithmatex">\(dF_t = F_t ( -\alpha^2 dt - 2\alpha dW_t )\)</span>.
-From the knowledge of geometric Brownian motion, this integrating factor is:</p>
+To eliminate the proportional term in <span class="arithmatex">\(Y_t\)</span>, we construct an integrating factor <span class="arithmatex">\(F_t\)</span> satisfying <span class="arithmatex">\(dF_t = F_t ( -\alpha^2 dt - 2\alpha dW_t )\)</span>.
+Based on knowledge of geometric Brownian motion, this integrating factor is:</p>
 <div class="arithmatex">\[
 F_t = \exp\left( -2\alpha W_t - \frac{1}{2}(-2\alpha)^2 dt - \alpha^2 dt \right) = \exp\left( -2\alpha W_t + \alpha^2 t \right)
 \]</div>
-<p>(Note: According to Itô expansion, it can be verified that <span class="arithmatex">\(dF_t = F_t (3\alpha^2 dt - 2\alpha dW_t)\)</span>).
-We now calculate the differential of the product <span class="arithmatex">\(d(Y_t F_t)\)</span>, using the product rule <span class="arithmatex">\(d(YF) = Y dF + F dY + \langle dY, dF \rangle\)</span>:
-The cross-variation term is <span class="arithmatex">\(\langle dY_t, dF_t \rangle = (2\alpha Y_t)(-2\alpha F_t) dt = -4\alpha^2 Y_t F_t dt\)</span>.</p>
+<p>(Note: Expanding via Itô's formula verifies <span class="arithmatex">\(dF_t = F_t (3\alpha^2 dt - 2\alpha dW_t)\)</span>).
+We now compute the differential of the product <span class="arithmatex">\(d(Y_t F_t)\)</span> using the product rule <span class="arithmatex">\(d(YF) = Y dF + F dY + \langle dY, dF \rangle\)</span>:
+The cross-variation term <span class="arithmatex">\(\langle dY_t, dF_t \rangle = (2\alpha Y_t)(-2\alpha F_t) dt = -4\alpha^2 Y_t F_t dt\)</span>.</p>
 <p>Expanding the calculation:</p>
 <div class="arithmatex">\[
 d(Y_t F_t) = Y_t F_t(3\alpha^2 dt - 2\alpha dW_t) + F_t\left[ (2 + \alpha^2 Y_t) dt + 2\alpha Y_t dW_t \right] - 4\alpha^2 Y_t F_t dt
 \]</div>
 <p>Observe the coefficient of <span class="arithmatex">\(dW_t\)</span>: <span class="arithmatex">\(Y_t F_t(-2\alpha) + F_t(2\alpha Y_t) = 0\)</span> (perfect cancellation).
-Observe the coefficient of <span class="arithmatex">\(dt\)</span>: <span class="arithmatex">\(Y_t F_t(3\alpha^2) + F_t(2 + \alpha^2 Y_t) - 4\alpha^2 Y_t F_t = Y_t F_t (3\alpha^2 + \alpha^2 - 4\alpha^2) + 2F_t = 2F_t\)</span> (the <span class="arithmatex">\(Y_t\)</span> term perfectly cancels out).</p>
-<p>Thus, it elegantly simplifies to:</p>
+Observe the coefficient of <span class="arithmatex">\(dt\)</span>: <span class="arithmatex">\(Y_t F_t(3\alpha^2) + F_t(2 + \alpha^2 Y_t) - 4\alpha^2 Y_t F_t = Y_t F_t (3\alpha^2 + \alpha^2 - 4\alpha^2) + 2F_t = 2F_t\)</span> (perfect cancellation of the <span class="arithmatex">\(Y_t\)</span> term).</p>
+<p>Therefore, it elegantly simplifies to:</p>
 <div class="arithmatex">\[
 d(Y_t F_t) = 2F_t dt
 \]</div>
 <p><strong>Step 3: Integration and recovery</strong>
-Integrate the above equation from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(t\)</span>:</p>
+Integrate the above from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(t\)</span>:</p>
 <div class="arithmatex">\[
 Y_t F_t - Y_0 F_0 = 2 \int_0^t F_s ds
 \]</div>
-<p>Substitute the initial conditions <span class="arithmatex">\(Y_0 = x_0^2\)</span> and <span class="arithmatex">\(F_0 = \exp(0) = 1\)</span>, and rearrange to get <span class="arithmatex">\(Y_t\)</span>:</p>
+<p>Substituting the initial conditions <span class="arithmatex">\(Y_0 = x_0^2\)</span> and <span class="arithmatex">\(F_0 = \exp(0) = 1\)</span>, and rearranging to solve for <span class="arithmatex">\(Y_t\)</span>:</p>
 <div class="arithmatex">\[
 Y_t = F_t^{-1} \left( x_0^2 + 2 \int_0^t F_s ds \right)
 \]</div>
-<p>Substitute the explicit expressions for <span class="arithmatex">\(F_t\)</span> and <span class="arithmatex">\(F_s\)</span>:</p>
+<p>Substituting the explicit expressions for <span class="arithmatex">\(F_t\)</span> and <span class="arithmatex">\(F_s\)</span>:</p>
 <div class="arithmatex">\[
 Y_t = \exp(2\alpha W_t - \alpha^2 t) \left( x_0^2 + 2 \int_0^t \exp(-2\alpha W_s + \alpha^2 s) ds \right)
 \]</div>
-<p>Finally, take the square root to recover <span class="arithmatex">\(X_t\)</span> (since the problem specifies <span class="arithmatex">\(X_0 &gt; 0\)</span> and the interior of the integral is always positive, we take the positive root):</p>
+<p>Finally, take the square root to recover <span class="arithmatex">\(X_t\)</span> (since the problem specifies <span class="arithmatex">\(X_0 &gt; 0\)</span> and the integrand is always positive, we take the positive root):</p>
 <div class="arithmatex">\[
 X(t) = \left[ e^{2\alpha W(t) - \alpha^2 t} \left( x_0^2 + 2 \int_0^t e^{-2\alpha W(s) + \alpha^2 s} ds \right) \right]^{1/2}
 \]</div>
