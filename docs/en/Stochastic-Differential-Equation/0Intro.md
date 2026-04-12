@@ -37,20 +37,20 @@ Below is the detailed directory for the course notes:
 
 ### Part I: Probability Theory and Brownian Motion
 
-* [x] [Chapter 1: Conditional Expectation](1conditional_expectation.en.md)
+* [x] [Chapter 1: Conditional Expectation](1conditional_expectation.md)
 
-* [x] [Chapter 2: Brownian Motion](2Brown_Motion.en.md)
+* [x] [Chapter 2: Brownian Motion](2Brown_Motion.md)
 
 
 ### Part II: Stochastic Integration and SDEs
 
-* [x] [Chapter 3: Stochastic Integration](3stochastic_integrate.en.md)
+* [x] [Chapter 3: Stochastic Integration](3stochastic_integrate.md)
 
-* [x] [Chapter 4: Itô Integration](4Ito_integrate.en.md)
+* [x] [Chapter 4: Itô Integration](4Ito_integrate.md)
 
-* [x] [Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations](5SDEs.en.md)
+* [x] [Chapter 5: Multivariate Itô Integral and Stochastic Differential Equations](5SDEs.md)
 
-* [x] [Chapter 6: Existence and Uniqueness Theorem](6SDEs.en.md)
+* [x] [Chapter 6: Existence and Uniqueness Theorem](6SDEs.md)
 
 ### Part III: Applications of SDEs
 

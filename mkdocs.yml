@@ -53,7 +53,7 @@ nav:
   - 🏠 Home: zh/index.md
   
   - 📈 随机微分方程 (SDE):
-      - 课程概览: zh/Stochastic-Differential-Equation/0index.md
+      - 课程概览: zh/Stochastic-Differential-Equation/0Intro.md
       - 📖 笔记:
           - 第一章：条件期望: zh/Stochastic-Differential-Equation/1conditional_expectation.md
           - 第二章：布朗运动: zh/Stochastic-Differential-Equation/2Brown_Motion.md
@@ -67,10 +67,12 @@ nav:
           - Chapter 5-6: zh/Stochastic-Differential-Equation/sol_chap5_6.md
 
   - 📊 渐近统计:
-      - 第一章：随机收敛: zh/Asymptotic-statistics/1Stochastic_convergence.md
-      - 第二章：特征函数: zh/Asymptotic-statistics/2Characteristic_Functions.md
-      - 第三章：中心极限定理（一）: zh/Asymptotic-statistics/3CLT.md
-      - 第四章：中心极限定理（二）: zh/Asymptotic-statistics/4CLT.md
+      - 课程概览: zh/Asymptotic-statistics/0Intro.md
+      - 📖 笔记:
+          - 第一章：随机收敛: zh/Asymptotic-statistics/1Stochastic_convergence.md
+          - 第二章：特征函数: zh/Asymptotic-statistics/2Characteristic_Functions.md
+          - 第三章：中心极限定理（一）: zh/Asymptotic-statistics/3CLT.md
+          - 第四章：中心极限定理（二）: zh/Asymptotic-statistics/4CLT.md
 
 # ================= 扩展配置 =================
 extra_javascript:
