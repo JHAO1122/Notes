@@ -46,13 +46,27 @@ plugins:
         - locale: en
           name: English
           build: true
-
+          nav_translations:
+            "🏠 首页": "🏠 Home"
+            "📈 随机微分方程": "📈 Stochastic Differential Equations"
+            "课程概览": "Course Overview"
+            "📖 核心笔记": "📖 Core Notes"
+            "第一章：条件期望": "Ch 1: Conditional Expectation"
+            "第二章：布朗运动": "Ch 2: Brownian Motion"
+            "第三章：随机积分": "Ch 3: Stochastic Integrals"
+            "第四章：Itô 积分": "Ch 4: Itô Integrals"
+            "第五章：多元 Itô 积分": "Ch 5: Multivariate Itô Calculus"
+            "第六章：解的存在唯一性": "Ch 6: Existence & Uniqueness"
+            "📝 课后习题精解": "📝 Exercise Solutions"
+            "📊 渐近统计": "📊 Asymptotic Statistics"
+            "第一章：随机收敛": "Ch 1: Stochastic Convergence"
+            "第三章：中心极限定理": "Ch 3: Central Limit Theorem"
 # ================= 导航栏配置 =================
 # 路径说明：这里只需写 zh/ 下的路径，i18n 插件会自动映射到 en/
 nav:
-  - 🏠 Home: zh/index.md
+  - 🏠 首页: zh/index.md
   
-  - 📈 随机微分方程 (SDE):
+  - 📈 随机微分方程:
       - 课程概览: zh/Stochastic-Differential-Equation/0Intro.md
       - 📖 笔记:
           - 第一章：条件期望: zh/Stochastic-Differential-Equation/1conditional_expectation.md
