@@ -2,3 +2,7 @@ site/
 __pycache__/
 .pytest_cache/
 .DS_Store
+.env
+*.pyc
+translator.py
+migrate_folders.py

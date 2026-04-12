@@ -1,16 +1,21 @@
-site_name: My Study Notes
+site_name: Jiahao's Academic Space
 site_url: https://jhao1122.github.io/Notes/ 
 repo_url: https://github.com/jhao1122/Notes   
 repo_name: jhao1122/Notes
 
+# ================= 主题配置 =================
 theme:
   name: material
+  language: zh 
   features:
-    - navigation.tabs  
-    - navigation.sections 
-    - navigation.top 
-    - search.suggest 
-    - content.code.copy 
+    - navigation.tabs           # 开启顶部大类导航标签
+    - navigation.sections       # 侧边栏分组显示
+    - navigation.top            # 开启回到顶部按钮
+    - navigation.tracking       # 滚动时自动定位侧边栏
+    - search.suggest            # 搜索建议
+    - content.code.copy         # 代码块复制按钮
+    # - navigation.expand       # ⭐ 注意：这行被注释掉了，这样侧边栏就不会默认全部展开
+  
   palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -26,23 +31,13 @@ theme:
       toggle:
         icon: material/brightness-4
         title: 切换到浅色模式
-  language: zh 
 
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
-  
-markdown_extensions:
-  - admonition          
-  - pymdownx.details    
-  - pymdownx.superfences 
-  - pymdownx.arithmatex: 
-      generic: true
-
+# ================= 插件配置 =================
 plugins:
   - search
   - i18n:
-      default_language: zh
+      docs_structure: folder    # ⭐ 核心：对应你现在的 docs/zh 和 docs/en 结构
+      fallback_to_default: true
       languages:
         - locale: zh
           name: 中文
@@ -52,9 +47,44 @@ plugins:
           name: English
           build: true
 
+# ================= 导航栏配置 =================
+# 路径说明：这里只需写 zh/ 下的路径，i18n 插件会自动映射到 en/
+nav:
+  - 🏠 Home: zh/index.md
+  
+  - 📈 随机微分方程 (SDE):
+      - 课程概览: zh/Stochastic-Differential-Equation/0index.md
+      - 📖 笔记:
+          - 第一章：条件期望: zh/Stochastic-Differential-Equation/1conditional_expectation.md
+          - 第二章：布朗运动: zh/Stochastic-Differential-Equation/2Brown_Motion.md
+          - 第三章：随机积分: zh/Stochastic-Differential-Equation/3stochastic_integrate.md
+          - 第四章：Itô 积分: zh/Stochastic-Differential-Equation/4Ito_integrate.md
+          - 第五章：多元 Itô 积分: zh/Stochastic-Differential-Equation/5SDEs.md
+          - 第六章：解的存在唯一性: zh/Stochastic-Differential-Equation/6SDEs.md
+      - 📝 习题:
+          - Chapter 1-2: zh/Stochastic-Differential-Equation/sol_chap1_2.md
+          - Chapter 3-4: zh/Stochastic-Differential-Equation/sol_chap3_4.md
+          - Chapter 5-6: zh/Stochastic-Differential-Equation/sol_chap5_6.md
 
+  - 📊 渐近统计:
+      - 第一章：随机收敛: zh/Asymptotic-statistics/1Stochastic_convergence.md
+      - 第二章：特征函数: zh/Asymptotic-statistics/2Characteristic_Functions.md
+      - 第三章：中心极限定理（一）: zh/Asymptotic-statistics/3CLT.md
+      - 第四章：中心极限定理（二）: zh/Asymptotic-statistics/4CLT.md
+
+# ================= 扩展配置 =================
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
+  
+markdown_extensions:
+  - admonition          # 提示框 (!!! info)
+  - pymdownx.details    # 折叠框 (??? success)
+  - pymdownx.superfences # 支持嵌套
+  - pymdownx.arithmatex: # 数学公式支持
+      generic: true
 
 extra:
   analytics:
     provider: google
-    property: G-MPD6ZGWYW1  
+    property: G-MPD6ZGWYW1
