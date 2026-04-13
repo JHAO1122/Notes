@@ -36,8 +36,6 @@ theme:
 # ================= 插件配置 =================
 plugins:
   - search
-  - tags:
-      tags_file: zh/tags.md
   - blog:
       blog_dir: blog        # 博客文件存放位置
       post_excerpt: optional # 自动提取摘要
@@ -56,7 +54,6 @@ plugins:
           nav_translations:
             "🏠 首页": "🏠 Home"
             "✍️ 随笔": "✍️ Blog"
-            "🏷️ 标签": "🏷️ Tags"
             "📚 笔记库": "📚 Course Notes"
             "📖 笔记": "📖 Notes"
             "📝 习题": "📝 Exercises"
@@ -108,7 +105,6 @@ nav:
               - 第三章：中心极限定理（一）: zh/Asymptotic-statistics/3CLT.md
               - 第四章：中心极限定理（二）: zh/Asymptotic-statistics/4CLT.md
 
-  - 🏷️ 标签: zh/tags.md
 
 # ================= 扩展配置 =================
 extra_javascript:
