@@ -1573,11 +1573,21 @@ z(t, \alpha) = \begin{cases} \tan\left(\frac{\pi \alpha}{2}\right), &amp; \text{
 <p class="admonition-title">定义 3.20 (<span class="arithmatex">\(\alpha\)</span>-稳定分布)</p>
 <p>公式中的参数 <span class="arithmatex">\(\alpha\)</span> 被称为<strong>特征指数 (characteristic exponent)</strong>。对应的分布被称为 <strong><span class="arithmatex">\(\alpha\)</span>-稳定分布 (<span class="arithmatex">\(\alpha\)</span>-stable)</strong>。</p>
 </div>
-<p><strong>关于参数的 Remark：</strong>
-* <span class="arithmatex">\(\alpha = 2\)</span> 对应正态分布 <span class="arithmatex">\(N(\gamma, 2c)\)</span>。
-* <span class="arithmatex">\(\alpha = 1, \beta = 0\)</span> 对应对称 Cauchy 分布。
-* <span class="arithmatex">\(\beta\)</span> 描述了分布的偏度。当 <span class="arithmatex">\(\beta = 0\)</span> 时，特征函数是实值的，说明分布是对称的。
-* 稳定分布在统计推断中存在困难，因为很难模拟，且极大似然估计难以直接写出，通常需要借助<strong>经验特征函数 (Empirical Characteristic Functions)</strong> 进行参数估计。</p>
+<p><strong>关于参数的 Remark：</strong></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\alpha = 2\)</span> 对应正态分布 <span class="arithmatex">\(N(\gamma, 2c)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\alpha = 1, \beta = 0\)</span> 对应对称 Cauchy 分布。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\beta\)</span> 描述了分布的偏度。当 <span class="arithmatex">\(\beta = 0\)</span> 时，特征函数是实值的，说明分布是对称的。</p>
+</li>
+<li>
+<p>稳定分布在统计推断中存在困难，因为很难模拟，且极大似然估计难以直接写出，通常需要借助<strong>经验特征函数 (Empirical Characteristic Functions)</strong> 进行参数估计。</p>
+</li>
+</ul>
 <hr />
 <h2 id="4-domain-of-attraction-da">4. 吸引域 (Domain of Attraction, DA)</h2>
 <p>给定一个 <span class="arithmatex">\(\alpha\)</span>-稳定分布 <span class="arithmatex">\(G_\alpha\)</span>，我们需要知道什么样的原始分布 <span class="arithmatex">\(F\)</span>，在经过怎样的标准化 <span class="arithmatex">\(b_n &gt; 0\)</span> 和中心化 <span class="arithmatex">\(a_n\)</span> 后，其样本和的极限会落入 <span class="arithmatex">\(G_\alpha\)</span>？</p>
@@ -1597,24 +1607,30 @@ b_n^{-1} (S_n - a_n) \xrightarrow{d} G_\alpha
 <li><strong>正态分布的吸引域 <span class="arithmatex">\(DA(2)\)</span>:</strong> <span class="arithmatex">\(F \in DA(2)\)</span> 当且仅当 <span class="arithmatex">\(L(x) = \int_{|y|&lt;x} y^2 dF(y)\)</span> 是缓变函数。
    这等价于尾部概率满足：</li>
 </ol>
-<p>$$
-   P(|X| &gt; x) = o\left( x^{-2} \int_{|y|&lt;x} y^2 dF(y) \right) \quad \text{当 } x \rightarrow \infty
-   $$</p>
+<div class="arithmatex">\[
+P(|X| &gt; x) = o\left( x^{-2} \int_{|y|&lt;x} y^2 dF(y) \right) \quad \text{当 } x \rightarrow \infty
+\]</div>
 <p>特别地，<strong>所有二阶矩有限 (<span class="arithmatex">\(E(X^2) &lt; \infty\)</span>) 的分布都属于正态分布的吸引域</strong>。</p>
 <ol>
 <li><strong><span class="arithmatex">\(\alpha &lt; 2\)</span> 稳定分布的吸引域 <span class="arithmatex">\(DA(\alpha)\)</span>:</strong>
    <span class="arithmatex">\(F \in DA(\alpha)\)</span> 当且仅当它的左右尾部具有 Pareto 衰减性质：</li>
 </ol>
-<p>$$
-   F(-x) = \frac{c_1 + o(1)}{x^\alpha} L(x), \quad 1 - F(x) = \frac{c_2 + o(1)}{x^\alpha} L(x) \quad \text{当 } x \rightarrow \infty
-   $$</p>
+<div class="arithmatex">\[
+F(-x) = \frac{c_1 + o(1)}{x^\alpha} L(x), \quad 1 - F(x) = \frac{c_2 + o(1)}{x^\alpha} L(x) \quad \text{当 } x \rightarrow \infty
+\]</div>
 <p>其中 <span class="arithmatex">\(c_1, c_2 \ge 0\)</span> 且 <span class="arithmatex">\(c_1 + c_2 &gt; 0\)</span>。</p>
 </div>
 <p><strong>推论 3.24 (矩的性质)：</strong>
-如果 <span class="arithmatex">\(X \in DA(\alpha)\)</span>，那么：
-* 对于 <span class="arithmatex">\(\delta &lt; \alpha\)</span>，有 <span class="arithmatex">\(E(|X|^\delta) &lt; \infty\)</span>。
-* 对于 <span class="arithmatex">\(\delta &gt; \alpha\)</span> (且 <span class="arithmatex">\(\alpha &lt; 2\)</span>)，有 <span class="arithmatex">\(E(|X|^\delta) = \infty\)</span>。
+如果 <span class="arithmatex">\(X \in DA(\alpha)\)</span>，那么：</p>
+<ul>
+<li>
+<p>对于 <span class="arithmatex">\(\delta &lt; \alpha\)</span>，有 <span class="arithmatex">\(E(|X|^\delta) &lt; \infty\)</span>。</p>
+</li>
+<li>
+<p>对于 <span class="arithmatex">\(\delta &gt; \alpha\)</span> (且 <span class="arithmatex">\(\alpha &lt; 2\)</span>)，有 <span class="arithmatex">\(E(|X|^\delta) = \infty\)</span>。
 （这也意味着如果 <span class="arithmatex">\(\alpha &lt; 2\)</span>，则方差必然无穷大；如果 <span class="arithmatex">\(\alpha \le 1\)</span>，则均值也无穷大）。</p>
+</li>
+</ul>
 <hr />
 <h3 id="42">4.2 标准化与中心化常数的选取</h3>
 <p><strong>命题 3.25 (标准化常数 <span class="arithmatex">\(b_n\)</span>):</strong>
@@ -1638,15 +1654,15 @@ a_n = n \int_{|y| \le b_n} y dF(y)
 <ol>
 <li>如果 <span class="arithmatex">\(E(X^2) &lt; \infty\)</span>，那么：</li>
 </ol>
-<p>$$
-   \frac{S_n - n\mu}{\sigma \sqrt{n}} \xrightarrow{d} N(0,1)
-   $$</p>
+<div class="arithmatex">\[
+\frac{S_n - n\mu}{\sigma \sqrt{n}} \xrightarrow{d} N(0,1)
+\]</div>
 <ol>
 <li>如果 <span class="arithmatex">\(E(X^2) = \infty\)</span> 且 <span class="arithmatex">\(\alpha = 2\)</span>；或者 <span class="arithmatex">\(\alpha &lt; 2\)</span>，那么：</li>
 </ol>
-<p>$$
-   \frac{S_n - a_n}{n^{1/\alpha} L_1(n)} \xrightarrow{d} G_\alpha
-   $$</p>
+<div class="arithmatex">\[
+\frac{S_n - a_n}{n^{1/\alpha} L_1(n)} \xrightarrow{d} G_\alpha
+\]</div>
 <p>其中 <span class="arithmatex">\(G_\alpha\)</span> 是某个 <span class="arithmatex">\(\alpha\)</span>-稳定分布，<span class="arithmatex">\(L_1\)</span> 是适当的缓变函数。</p>
 </div>
 <div class="admonition info">
@@ -1656,9 +1672,9 @@ a_n = n \int_{|y| \le b_n} y dF(y)
 <li><span class="arithmatex">\(F \in DNA(2)\)</span> 当且仅当 <span class="arithmatex">\(E(X^2) &lt; \infty\)</span>。</li>
 <li>当 <span class="arithmatex">\(\alpha &lt; 2\)</span> 时，<span class="arithmatex">\(F \in DNA(\alpha)\)</span> 当且仅当尾部严格服从幂律衰减（即没有额外的缓变函数干扰）：</li>
 </ul>
-<p>$$
-  F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
-  $$</p>
+<div class="arithmatex">\[
+F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
+\]</div>
 <p>特别地，每一个 <span class="arithmatex">\(\alpha\)</span>-稳定分布都属于它自己的正规吸引域。</p>
 </div>
 

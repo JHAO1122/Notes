@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#central-limit-theorem-ii-m-dependent-sequences-and-stable-distributions" class="md-skip">
+        <a href="#central-limit-theorem-part-ii-m-dependent-sequences-and-stable-distributions" class="md-skip">
           Skip to content
         </a>
       
@@ -1140,10 +1140,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-clt-for-m-dependent-random-variable-sequences" class="md-nav__link">
+  <a href="#1-central-limit-theorem-for-m-dependent-random-variable-sequences" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. CLT for \(m\)-Dependent Random Variable Sequences
+        1. Central Limit Theorem for \(m\)-Dependent Random Variable Sequences
       
     </span>
   </a>
@@ -1202,10 +1202,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-characterization-of-the-domain-of-attraction" class="md-nav__link">
+  <a href="#41-characterization-of-domains-of-attraction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 Characterization of the Domain of Attraction
+        4.1 Characterization of Domains of Attraction
       
     </span>
   </a>
@@ -1213,10 +1213,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-selection-of-standardization-and-centering-constants" class="md-nav__link">
+  <a href="#42-selection-of-normalization-and-centering-constants" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 Selection of Standardization and Centering Constants
+        4.2 Selection of Normalization and Centering Constants
       
     </span>
   </a>
@@ -1290,10 +1290,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-clt-for-m-dependent-random-variable-sequences" class="md-nav__link">
+  <a href="#1-central-limit-theorem-for-m-dependent-random-variable-sequences" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. CLT for \(m\)-Dependent Random Variable Sequences
+        1. Central Limit Theorem for \(m\)-Dependent Random Variable Sequences
       
     </span>
   </a>
@@ -1352,10 +1352,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-characterization-of-the-domain-of-attraction" class="md-nav__link">
+  <a href="#41-characterization-of-domains-of-attraction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 Characterization of the Domain of Attraction
+        4.1 Characterization of Domains of Attraction
       
     </span>
   </a>
@@ -1363,10 +1363,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-selection-of-standardization-and-centering-constants" class="md-nav__link">
+  <a href="#42-selection-of-normalization-and-centering-constants" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 Selection of Standardization and Centering Constants
+        4.2 Selection of Normalization and Centering Constants
       
     </span>
   </a>
@@ -1409,35 +1409,36 @@
   
 
 
-<h1 id="central-limit-theorem-ii-m-dependent-sequences-and-stable-distributions">Central Limit Theorem (II): <span class="arithmatex">\(m\)</span>-dependent Sequences and Stable Distributions</h1>
-<p>This section moves beyond the traditional constraints of "Independent and Identically Distributed (i.i.d.)" assumptions in the classical Central Limit Theorem. First, we investigate the CLT for <strong><span class="arithmatex">\(m\)</span>-dependent sequences</strong>, which exhibit local dependence. Subsequently, we generalize these one-dimensional results to the multivariate case via the <strong>Cramér-Wold theorem</strong>. Finally, we delve into the generalized forms of limit distributions—<strong>Stable Distributions</strong>—and their associated <strong>Domains of Attraction (DA)</strong>.</p>
+<h1 id="central-limit-theorem-part-ii-m-dependent-sequences-and-stable-distributions">Central Limit Theorem (Part II): <span class="arithmatex">\(m\)</span>-Dependent Sequences and Stable Distributions</h1>
+<p>This section will break through the limitation of "independent and identically distributed (i.i.d.)" in the traditional Central Limit Theorem. First, we explore the Central Limit Theorem for <strong><span class="arithmatex">\(m\)</span>-dependent sequences</strong> with local dependence; then, we extend the one-dimensional results to multiple dimensions via the <strong>Cramér-Wold theorem</strong>; finally, we delve into the generalized form of limit distributions—<strong>Stable Distributions</strong>—and their <strong>Domain of Attraction (DA)</strong>.</p>
 <hr />
-<h2 id="1-clt-for-m-dependent-random-variable-sequences">1. CLT for <span class="arithmatex">\(m\)</span>-Dependent Random Variable Sequences</h2>
-<p>In practical applications (such as time series analysis), data often exhibit serial dependence. We first consider the simplest form of dependence structure: local dependence.</p>
+<h2 id="1-central-limit-theorem-for-m-dependent-random-variable-sequences">1. Central Limit Theorem for <span class="arithmatex">\(m\)</span>-Dependent Random Variable Sequences</h2>
+<p>In practical applications (such as time series analysis), data often exhibit serial correlation. We first consider the simplest form of dependence structure: local dependence.</p>
 <div class="admonition info">
-<p class="admonition-title">Definition 3.13: <span class="arithmatex">\(m\)</span>-Dependent Sequence</p>
-<p>A sequence of random variables <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> is called <strong><span class="arithmatex">\(m\)</span>-dependent</strong> if there exists a positive integer <span class="arithmatex">\(m\)</span> such that for any <span class="arithmatex">\(n \ge 1\)</span> and <span class="arithmatex">\(j \ge m\)</span>, the random variable <span class="arithmatex">\(X_{n+j}\)</span> is independent of the <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{F}_n = \sigma\{X_i, 1 \le i \le n\}\)</span> generated by the first <span class="arithmatex">\(n\)</span> variables.</p>
-<p><em>Example: The moving average model of order <span class="arithmatex">\(q\)</span>, MA(<span class="arithmatex">\(q\)</span>), is a <span class="arithmatex">\((q+1)\)</span>-dependent sequence.</em></p>
+<p class="admonition-title">Definition 3.13: <span class="arithmatex">\(m\)</span>-dependent sequence</p>
 </div>
+<p>A sequence of random variables <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> is called <strong><span class="arithmatex">\(m\)</span>-dependent</strong> if there exists a positive integer <span class="arithmatex">\(m\)</span> such that for any <span class="arithmatex">\(n \ge 1\)</span> and <span class="arithmatex">\(j \ge m\)</span>, the random variable <span class="arithmatex">\(X_{n+j}\)</span> is independent of the <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{F}_n = \sigma\{X_i, 1 \le i \le n\}\)</span> generated by the first <span class="arithmatex">\(n\)</span> variables.</p>
+<p><em>Example: The moving average model of order <span class="arithmatex">\(q\)</span>, MA(<span class="arithmatex">\(q\)</span>), is a <span class="arithmatex">\(q+1\)</span>-dependent sequence.</em></p>
 <div class="admonition success">
-<p class="admonition-title">Theorem 3.14 (CLT for <span class="arithmatex">\(m\)</span>-Dependent Sequences)</p>
-<p>Let <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> be an <span class="arithmatex">\(m\)</span>-dependent sequence. Assume these random variables are <strong>uniformly bounded</strong> (i.e., there exists a constant <span class="arithmatex">\(M\)</span> such that <span class="arithmatex">\(\sup_n |X_n| \le M\)</span>).
-Denote <span class="arithmatex">\(S_n = \sum_{i=1}^n X_i\)</span>, <span class="arithmatex">\(\sigma_n^2 = Var(S_n)\)</span>. If the variance growth condition holds:</p>
+<p class="admonition-title">Theorem 3.14 (CLT for <span class="arithmatex">\(m\)</span>-dependent sequences)</p>
+</div>
+<p>Let <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> be an <span class="arithmatex">\(m\)</span>-dependent sequence. Assume the random variables are <strong>uniformly bounded</strong> (i.e., there exists a constant <span class="arithmatex">\(M\)</span> such that <span class="arithmatex">\(\sup_n |X_n| \le M\)</span>).<br />
+Denote <span class="arithmatex">\(S_n = \sum_{i=1}^n X_i\)</span>, <span class="arithmatex">\(\sigma_n^2 = \operatorname{Var}(S_n)\)</span>. If the variance growth condition  </p>
 <div class="arithmatex">\[
 \frac{\sigma_n}{m n^{1/3}} \rightarrow \infty \quad \text{as } n \rightarrow \infty
 \]</div>
-<p>and <span class="arithmatex">\(m = o(n^{1/3})\)</span>, then:</p>
+<p>holds, and <span class="arithmatex">\(m = o(n^{1/3})\)</span>, then  </p>
 <div class="arithmatex">\[
 \frac{S_n - E(S_n)}{\sigma_n} \xrightarrow{d} N(0,1)
 \]</div>
-<p><em>(Note: The "uniformly bounded" assumption can be removed by introducing the Lindeberg condition; see S. Janson (2021))</em>.</p>
-</div>
+<p><em>(Note: By introducing the Lindeberg condition, the assumption of "uniform boundedness" can be removed. For details, see S. Janson (2021)).</em></p>
 <details class="proof">
 <summary>Proof of Theorem 3.14: Blocking Technique (Click to expand)</summary>
-<p><strong>Core Idea:</strong> Partition the entire sequence into alternating "large blocks" and "small blocks". Due to <span class="arithmatex">\(m\)</span>-dependence, as long as the gap between large blocks (the length of small blocks) is at least <span class="arithmatex">\(m\)</span>, the large blocks are mutually independent.</p>
+</details>
+<p><strong>Core Idea:</strong> Partition the entire sequence into alternating "large blocks" and "small blocks". Due to <span class="arithmatex">\(m\)</span>-dependence, as long as the gap between large blocks (the length of the small blocks) is at least <span class="arithmatex">\(m\)</span>, the large blocks are mutually independent.</p>
 <p>Without loss of generality, assume <span class="arithmatex">\(E(X_j) = 0\)</span>. Since the sequence is uniformly bounded, there exists <span class="arithmatex">\(M\)</span> such that <span class="arithmatex">\(\sup_n |X_n| \le M\)</span>.</p>
 <p><strong>Step 1: Construct Large and Small Blocks</strong></p>
-<p>Let the length of a large block be <span class="arithmatex">\(k = [n^{1/3}]\)</span>, and the length of a small block be <span class="arithmatex">\(m\)</span>.
+<p>Let the large block length be <span class="arithmatex">\(k = [n^{1/3}]\)</span>, and the small block length be <span class="arithmatex">\(m\)</span>.
 Then the total number of blocks is <span class="arithmatex">\(p_n = [\frac{n}{k+m}] = O(n^{2/3})\)</span>. Denote <span class="arithmatex">\(B_j = j(k+m)\)</span>.</p>
 <p>We construct:
 * <strong>Large blocks:</strong> <span class="arithmatex">\(Y_j = X_{B_{j-1}+1} + \cdots + X_{B_{j-1}+k}\)</span> (total <span class="arithmatex">\(p_n\)</span> blocks)
@@ -1448,7 +1449,7 @@ Then the total number of blocks is <span class="arithmatex">\(p_n = [\frac{n}{k+
 <div class="arithmatex">\[
 S_n = \sum_{j=1}^{p_n} Y_j + \sum_{j=1}^{p_n} Z_j + R_p := S_n' + S_n'' + S_n'''
 \]</div>
-<p><strong>Step 2: Control the Variances of Small and Residual Blocks</strong></p>
+<p><strong>Step 2: Control the Variance of Small and Residual Blocks</strong></p>
 <p>Since <span class="arithmatex">\(\sup_j |X_j| \le M\)</span>, we have the covariance bound <span class="arithmatex">\(|E(X_j X_l)| \le M^2\)</span>.
 For the residual block <span class="arithmatex">\(S_n'''\)</span>:</p>
 <div class="arithmatex">\[
@@ -1476,13 +1477,13 @@ S_n'' = O_p(p_n^{1/2} m) = O_p(n^{1/3} m)
 <div class="arithmatex">\[
 \frac{S_n}{\sigma_n} = \frac{S_n'}{\sigma_n} + o_p(1) = \frac{\sigma_n'}{\sigma_n} \frac{S_n'}{\sigma_n'} + o_p(1)
 \]</div>
-<p>where <span class="arithmatex">\(\sigma_n'^2 = Var(S_n')\)</span>. It now suffices to prove that <span class="arithmatex">\(\sigma_n'^2 / \sigma_n^2 \rightarrow 1\)</span> and <span class="arithmatex">\(S_n' / \sigma_n' \xrightarrow{d} N(0,1)\)</span>.</p>
+<p>where <span class="arithmatex">\(\sigma_n'^2 = Var(S_n')\)</span>. It now suffices to prove <span class="arithmatex">\(\sigma_n'^2 / \sigma_n^2 \rightarrow 1\)</span> and <span class="arithmatex">\(S_n' / \sigma_n' \xrightarrow{d} N(0,1)\)</span>.</p>
 <p><strong>Step 4: Asymptotic Equivalence of Variances</strong></p>
 <p>Expanding the variance of <span class="arithmatex">\(S_n\)</span>:</p>
 <div class="arithmatex">\[
 E(S_n^2) = E(S_n'^2) + E(S_n''^2) + E(S_n'''^2) + 2E(S_n' S_n'') + \dots
 \]</div>
-<p>Due to <span class="arithmatex">\(m\)</span>-dependence, most cross-covariances are zero:</p>
+<p>Due to <span class="arithmatex">\(m\)</span>-dependence, most cross-covariances are 0:</p>
 <div class="arithmatex">\[
 E(S_n' S_n'') = \sum_{j,l=1}^{p_n} Cov(Y_j, Z_l) = \sum_{j=1}^{p_n} [Cov(Y_j, Z_j) + Cov(Y_j, Z_{j-1})] \le 2p_n (mM)^2
 \]</div>
@@ -1497,9 +1498,8 @@ Because <span class="arithmatex">\(|Y_j| \le kM = O(n^{1/3}) = o(\sigma_n')\)</s
 <div class="arithmatex">\[
 \frac{1}{\sigma_n'^2} \sum_{j=1}^{p_n} E\left[ Y_j^2 \mathbb{I}(|Y_j| \ge \eta \sigma_n') \right] \rightarrow 0
 \]</div>
-<p>Therefore, the Lindeberg condition holds. By the Lindeberg-Feller CLT, we obtain <span class="arithmatex">\(S_n' / \sigma_n' \xrightarrow{d} N(0,1)\)</span>.
-Combining with Slutsky's theorem, the final result is proved. <span class="arithmatex">\(\square\)</span></p>
-</details>
+<p>Thus, the Lindeberg condition holds. By the Lindeberg-Feller CLT, we have <span class="arithmatex">\(S_n' / \sigma_n' \xrightarrow{d} N(0,1)\)</span>.
+Combining with Slutsky's theorem, the final conclusion is proven. <span class="arithmatex">\(\square\)</span></p>
 <hr />
 <h2 id="2-multidimensional-central-limit-theorem-and-cramer-wold-theorem">2. Multidimensional Central Limit Theorem and Cramér-Wold Theorem</h2>
 <p>To extend the one-dimensional central limit theorem to multidimensional random vectors, we rely on the Cramér-Wold theorem. Its core idea is: <strong>The weak convergence of a multidimensional random vector is equivalent to the weak convergence of its projection onto any one-dimensional direction.</strong></p>
@@ -1512,7 +1512,7 @@ X_n \xrightarrow{d} X \iff a^T X_n \xrightarrow{d} a^T X, \quad \forall a \in \m
 </div>
 <details class="proof">
 <summary>Proof of the Cramér-Wold Theorem (click to expand)</summary>
-<p>"<span class="arithmatex">\(\implies\)</span>": This follows directly from the Continuous Mapping Theorem, because the inner product function <span class="arithmatex">\(g(x) = a^T x\)</span> is continuous.</p>
+<p>"<span class="arithmatex">\(\implies\)</span>": This follows directly from the Continuous Mapping Theorem, since the inner product function <span class="arithmatex">\(g(x) = a^T x\)</span> is continuous.</p>
 <p>"<span class="arithmatex">\(\impliedby\)</span>": Use the characteristic function. Let <span class="arithmatex">\(X_n = (X_{n1}, \dots, X_{nd})^T\)</span>.
 Take any <span class="arithmatex">\(c = (c_1, \dots, c_d)^T \in \mathbb{R}^d\)</span>. The given condition implies:</p>
 <div class="arithmatex">\[
@@ -1543,19 +1543,19 @@ For <span class="arithmatex">\(c^T X_n\)</span>, its characteristic function at 
 </div>
 <hr />
 <h2 id="3-stable-distributions">3. Stable Distributions</h2>
-<p>For sequences that are independent and identically distributed with finite variance, their standardized sums converge to a normal distribution. A natural question is: <strong>If we relax the condition of finite variance, to which non-degenerate distributions can the standardized sums still converge?</strong>
-(Think of the example of the Cauchy distribution).</p>
+<p>For independent and identically distributed sequences with finite variance, their standardized sums converge to the normal distribution. A natural question is: <strong>If we relax the condition of finite variance, to which non-degenerate distributions can the standardized sums still converge?</strong>
+(Think of the example of the Cauchy distribution.)</p>
 <p>This leads to the concept of stable distributions.</p>
 <div class="admonition info">
 <p class="admonition-title">Definition 3.17: Stable Distribution</p>
-<p>A distribution <span class="arithmatex">\(F\)</span> is called <strong>stable</strong>, if for independent random variables <span class="arithmatex">\(X_1, X_2\)</span> following <span class="arithmatex">\(F\)</span>, and for any non-negative constants <span class="arithmatex">\(c_1, c_2\)</span>, there exist constants <span class="arithmatex">\(a(c_1, c_2)\)</span> and <span class="arithmatex">\(b(c_1, c_2) &gt; 0\)</span> such that:</p>
+<p>A distribution <span class="arithmatex">\(F\)</span> is called <strong>stable</strong>, if for independent random variables <span class="arithmatex">\(X_1, X_2\)</span> following <span class="arithmatex">\(F\)</span>, and any non-negative constants <span class="arithmatex">\(c_1, c_2\)</span>, there exist constants <span class="arithmatex">\(a(c_1, c_2)\)</span> and <span class="arithmatex">\(b(c_1, c_2) &gt; 0\)</span> such that:</p>
 <div class="arithmatex">\[
 c_1 X_1 + c_2 X_2 \stackrel{d}{=} b(c_1, c_2) X + a(c_1, c_2)
 \]</div>
 <p>where <span class="arithmatex">\(X \sim F\)</span> and is independent of <span class="arithmatex">\(X_1, X_2\)</span>.</p>
 </div>
 <p><strong>Theorem 3.18 (Limit Property of Stable Distributions):</strong>
-The family of non-degenerate stable distributions is exactly equivalent to the family of all possible <strong>non-degenerate limit distributions</strong> of sums of i.i.d. random variables after appropriate centering and standardization.</p>
+The family of non-degenerate stable distributions is exactly equivalent to the family of all possible <strong>non-degenerate limit distributions</strong> of sums of i.i.d. random variables after appropriate centering and scaling.</p>
 <h3 id="31-spectral-representation-of-stable-distributions">3.1 Spectral Representation of Stable Distributions</h3>
 <p>Since, except for a few special cases (normal distribution, Cauchy distribution, Lévy distribution), stable distributions do not have closed-form analytic probability density functions, we typically characterize them through their characteristic functions.</p>
 <div class="admonition success">
@@ -1564,20 +1564,30 @@ The family of non-degenerate stable distributions is exactly equivalent to the f
 <div class="arithmatex">\[
 \phi_X(t) = E(e^{itX}) = \exp\left\{ i\gamma t - c|t|^\alpha (1 - i\beta \text{sgn}(t) z(t, \alpha)) \right\}
 \]</div>
-<p>where the parameter ranges are: location parameter <span class="arithmatex">\(\gamma \in \mathbb{R}\)</span>, scale parameter <span class="arithmatex">\(c &gt; 0\)</span>, characteristic exponent <span class="arithmatex">\(\alpha \in (0, 2]\)</span>, skewness parameter <span class="arithmatex">\(\beta \in [-1, 1]\)</span>. And:</p>
+<p>where the parameter ranges are: location parameter <span class="arithmatex">\(\gamma \in \mathbb{R}\)</span>, scale parameter <span class="arithmatex">\(c &gt; 0\)</span>, characteristic exponent <span class="arithmatex">\(\alpha \in (0, 2]\)</span>, and skewness parameter <span class="arithmatex">\(\beta \in [-1, 1]\)</span>. Additionally:</p>
 <div class="arithmatex">\[
 z(t, \alpha) = \begin{cases} \tan\left(\frac{\pi \alpha}{2}\right), &amp; \text{if } \alpha \ne 1 \\ -\frac{2}{\pi} \ln|t|, &amp; \text{if } \alpha = 1 \end{cases}
 \]</div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Definition 3.20 (<span class="arithmatex">\(\alpha\)</span>-Stable Distribution)</p>
-<p>The parameter <span class="arithmatex">\(\alpha\)</span> in the formula is called the <strong>characteristic exponent</strong>. The corresponding distribution is called an <strong><span class="arithmatex">\(\alpha\)</span>-stable distribution</strong>.</p>
+<p>The parameter <span class="arithmatex">\(\alpha\)</span> in the formula is called the <strong>characteristic exponent</strong>. The corresponding distribution is referred to as an <strong><span class="arithmatex">\(\alpha\)</span>-stable distribution</strong>.</p>
 </div>
-<p><strong>Remarks on the parameters:</strong>
-* <span class="arithmatex">\(\alpha = 2\)</span> corresponds to the normal distribution <span class="arithmatex">\(N(\gamma, 2c)\)</span>.
-* <span class="arithmatex">\(\alpha = 1, \beta = 0\)</span> corresponds to the symmetric Cauchy distribution.
-* <span class="arithmatex">\(\beta\)</span> describes the skewness of the distribution. When <span class="arithmatex">\(\beta = 0\)</span>, the characteristic function is real-valued, indicating the distribution is symmetric.
-* Stable distributions present difficulties in statistical inference because they are hard to simulate, and maximum likelihood estimation is difficult to write directly. Typically, parameter estimation relies on <strong>Empirical Characteristic Functions</strong>.</p>
+<p><strong>Remarks on the Parameters:</strong></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\alpha = 2\)</span> corresponds to the normal distribution <span class="arithmatex">\(N(\gamma, 2c)\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\alpha = 1, \beta = 0\)</span> corresponds to the symmetric Cauchy distribution.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\beta\)</span> describes the skewness of the distribution. When <span class="arithmatex">\(\beta = 0\)</span>, the characteristic function is real-valued, indicating the distribution is symmetric.</p>
+</li>
+<li>
+<p>Stable distributions present difficulties in statistical inference because they are hard to simulate, and maximum likelihood estimation is not straightforward to write directly. Typically, parameter estimation relies on <strong>Empirical Characteristic Functions</strong>.</p>
+</li>
+</ul>
 <hr />
 <h2 id="4-domain-of-attraction-da">4. Domain of Attraction (DA)</h2>
 <p>Given an <span class="arithmatex">\(\alpha\)</span>-stable distribution <span class="arithmatex">\(G_\alpha\)</span>, we need to know what kind of original distribution <span class="arithmatex">\(F\)</span>, after what kind of standardization <span class="arithmatex">\(b_n &gt; 0\)</span> and centering <span class="arithmatex">\(a_n\)</span>, will have its sample sum limit fall into <span class="arithmatex">\(G_\alpha\)</span>?</p>
@@ -1589,36 +1599,42 @@ b_n^{-1} (S_n - a_n) \xrightarrow{d} G_\alpha
 \]</div>
 <p>then the distribution <span class="arithmatex">\(F\)</span> is said to belong to the <strong>Domain of Attraction</strong> of <span class="arithmatex">\(G_\alpha\)</span>, denoted as <span class="arithmatex">\(X \in DA(G_\alpha)\)</span> or <span class="arithmatex">\(X \in DA(\alpha)\)</span>.</p>
 </div>
-<h3 id="41-characterization-of-the-domain-of-attraction">4.1 Characterization of the Domain of Attraction</h3>
-<p>To characterize the domain of attraction, the concept of a <strong>Slowly varying function</strong> is needed: A function <span class="arithmatex">\(L\)</span> is called slowly varying if for all <span class="arithmatex">\(t &gt; 0\)</span>, <span class="arithmatex">\(\lim_{x \to \infty} L(tx)/L(x) = 1\)</span>.</p>
+<h3 id="41-characterization-of-domains-of-attraction">4.1 Characterization of Domains of Attraction</h3>
+<p>To characterize the domain of attraction, the concept of a <strong>slowly varying function</strong> is needed: a function <span class="arithmatex">\(L\)</span> is called slowly varying if for all <span class="arithmatex">\(t &gt; 0\)</span>, <span class="arithmatex">\(\lim_{x \to \infty} L(tx)/L(x) = 1\)</span>.</p>
 <div class="admonition success">
-<p class="admonition-title">Theorem 3.22 and Corollary 3.23 (Characterization of the Domain of Attraction)</p>
+<p class="admonition-title">Theorem 3.22 and Corollary 3.23 (Characterization of Domains of Attraction)</p>
 <ol>
 <li><strong>Domain of attraction of the normal distribution <span class="arithmatex">\(DA(2)\)</span>:</strong> <span class="arithmatex">\(F \in DA(2)\)</span> if and only if <span class="arithmatex">\(L(x) = \int_{|y|&lt;x} y^2 dF(y)\)</span> is a slowly varying function.
-   This is equivalent to the tail probabilities satisfying:</li>
+   This is equivalent to the tail probability satisfying:</li>
 </ol>
-<p>$$
-   P(|X| &gt; x) = o\left( x^{-2} \int_{|y|&lt;x} y^2 dF(y) \right) \quad \text{as } x \rightarrow \infty
-   $$</p>
+<div class="arithmatex">\[
+P(|X| &gt; x) = o\left( x^{-2} \int_{|y|&lt;x} y^2 dF(y) \right) \quad \text{as } x \rightarrow \infty
+\]</div>
 <p>In particular, <strong>all distributions with finite second moment (<span class="arithmatex">\(E(X^2) &lt; \infty\)</span>) belong to the domain of attraction of the normal distribution</strong>.</p>
 <ol>
-<li><strong>Domain of attraction of <span class="arithmatex">\(\alpha\)</span>-stable distributions with <span class="arithmatex">\(\alpha &lt; 2\)</span>, <span class="arithmatex">\(DA(\alpha)\)</span>:</strong>
-   <span class="arithmatex">\(F \in DA(\alpha)\)</span> if and only if its left and right tails have Pareto decay:</li>
+<li><strong>Domain of attraction of the <span class="arithmatex">\(\alpha &lt; 2\)</span> stable distribution <span class="arithmatex">\(DA(\alpha)\)</span>:</strong>
+   <span class="arithmatex">\(F \in DA(\alpha)\)</span> if and only if its left and right tails exhibit Pareto-type decay:</li>
 </ol>
-<p>$$
-   F(-x) = \frac{c_1 + o(1)}{x^\alpha} L(x), \quad 1 - F(x) = \frac{c_2 + o(1)}{x^\alpha} L(x) \quad \text{as } x \rightarrow \infty
-   $$</p>
+<div class="arithmatex">\[
+F(-x) = \frac{c_1 + o(1)}{x^\alpha} L(x), \quad 1 - F(x) = \frac{c_2 + o(1)}{x^\alpha} L(x) \quad \text{as } x \rightarrow \infty
+\]</div>
 <p>where <span class="arithmatex">\(c_1, c_2 \ge 0\)</span> and <span class="arithmatex">\(c_1 + c_2 &gt; 0\)</span>.</p>
 </div>
 <p><strong>Corollary 3.24 (Properties of Moments):</strong>
-If <span class="arithmatex">\(X \in DA(\alpha)\)</span>, then:
-* For <span class="arithmatex">\(\delta &lt; \alpha\)</span>, <span class="arithmatex">\(E(|X|^\delta) &lt; \infty\)</span>.
-* For <span class="arithmatex">\(\delta &gt; \alpha\)</span> (and <span class="arithmatex">\(\alpha &lt; 2\)</span>), <span class="arithmatex">\(E(|X|^\delta) = \infty\)</span>.
-(This also implies that if <span class="arithmatex">\(\alpha &lt; 2\)</span>, the variance is necessarily infinite; if <span class="arithmatex">\(\alpha \le 1\)</span>, the mean is also infinite).</p>
+If <span class="arithmatex">\(X \in DA(\alpha)\)</span>, then:</p>
+<ul>
+<li>
+<p>For <span class="arithmatex">\(\delta &lt; \alpha\)</span>, <span class="arithmatex">\(E(|X|^\delta) &lt; \infty\)</span>.</p>
+</li>
+<li>
+<p>For <span class="arithmatex">\(\delta &gt; \alpha\)</span> (and <span class="arithmatex">\(\alpha &lt; 2\)</span>), <span class="arithmatex">\(E(|X|^\delta) = \infty\)</span>.
+(This also implies that if <span class="arithmatex">\(\alpha &lt; 2\)</span>, the variance is necessarily infinite; if <span class="arithmatex">\(\alpha \le 1\)</span>, the mean is also infinite.)</p>
+</li>
+</ul>
 <hr />
-<h3 id="42-selection-of-standardization-and-centering-constants">4.2 Selection of Standardization and Centering Constants</h3>
-<p><strong>Proposition 3.25 (Standardization constant <span class="arithmatex">\(b_n\)</span>):</strong>
-For <span class="arithmatex">\(F \in DA(\alpha)\)</span>, the standardization constant <span class="arithmatex">\(b_n\)</span> can be chosen as the unique solution to the following equation:</p>
+<h3 id="42-selection-of-normalization-and-centering-constants">4.2 Selection of Normalization and Centering Constants</h3>
+<p><strong>Proposition 3.25 (Normalization constant <span class="arithmatex">\(b_n\)</span>):</strong>
+For <span class="arithmatex">\(F \in DA(\alpha)\)</span>, the normalization constant <span class="arithmatex">\(b_n\)</span> can be chosen as the unique solution to the following equation:</p>
 <div class="arithmatex">\[
 G(b_n) + K(b_n) = n^{-1}, \quad n \ge 1
 \]</div>
@@ -1638,27 +1654,27 @@ a_n = n \int_{|y| \le b_n} y dF(y)
 <ol>
 <li>If <span class="arithmatex">\(E(X^2) &lt; \infty\)</span>, then:</li>
 </ol>
-<p>$$
-   \frac{S_n - n\mu}{\sigma \sqrt{n}} \xrightarrow{d} N(0,1)
-   $$</p>
+<div class="arithmatex">\[
+\frac{S_n - n\mu}{\sigma \sqrt{n}} \xrightarrow{d} N(0,1)
+\]</div>
 <ol>
 <li>If <span class="arithmatex">\(E(X^2) = \infty\)</span> and <span class="arithmatex">\(\alpha = 2\)</span>; or if <span class="arithmatex">\(\alpha &lt; 2\)</span>, then:</li>
 </ol>
-<p>$$
-   \frac{S_n - a_n}{n^{1/\alpha} L_1(n)} \xrightarrow{d} G_\alpha
-   $$</p>
+<div class="arithmatex">\[
+\frac{S_n - a_n}{n^{1/\alpha} L_1(n)} \xrightarrow{d} G_\alpha
+\]</div>
 <p>where <span class="arithmatex">\(G_\alpha\)</span> is some <span class="arithmatex">\(\alpha\)</span>-stable distribution, and <span class="arithmatex">\(L_1\)</span> is an appropriate slowly varying function.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Definition 3.28 and Corollary 3.29: Domain of Normal Attraction (DNA)</p>
-<p>Note that the denominator in the general CLT contains a slowly varying function <span class="arithmatex">\(L_1(n)\)</span>. If, in the limit, the normalization constant can be taken directly as a <strong>pure power form</strong> <span class="arithmatex">\(b_n = c n^{1/\alpha}\)</span> (i.e., <span class="arithmatex">\(L_1(n)\)</span> degenerates to a constant), we say the distribution belongs to the <strong>Domain of Normal Attraction (DNA)</strong>, denoted as <span class="arithmatex">\(F \in DNA(G_\alpha)\)</span>.</p>
+<p>Note that the denominator in the general CLT contains the slowly varying function <span class="arithmatex">\(L_1(n)\)</span>. If, in the limit, the normalization constant can be taken directly as a <strong>pure power form</strong> <span class="arithmatex">\(b_n = c n^{1/\alpha}\)</span> (i.e., <span class="arithmatex">\(L_1(n)\)</span> degenerates to a constant), we say the distribution belongs to the <strong>Domain of Normal Attraction (DNA)</strong>, denoted as <span class="arithmatex">\(F \in DNA(G_\alpha)\)</span>.</p>
 <ul>
 <li><span class="arithmatex">\(F \in DNA(2)\)</span> if and only if <span class="arithmatex">\(E(X^2) &lt; \infty\)</span>.</li>
-<li>When <span class="arithmatex">\(\alpha &lt; 2\)</span>, <span class="arithmatex">\(F \in DNA(\alpha)\)</span> if and only if the tail decays strictly according to a power law (i.e., without interference from additional slowly varying functions):</li>
+<li>When <span class="arithmatex">\(\alpha &lt; 2\)</span>, <span class="arithmatex">\(F \in DNA(\alpha)\)</span> if and only if the tail strictly follows a power-law decay (i.e., without additional slowly varying function interference):</li>
 </ul>
-<p>$$
-  F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
-  $$</p>
+<div class="arithmatex">\[
+F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
+\]</div>
 <p>In particular, every <span class="arithmatex">\(\alpha\)</span>-stable distribution belongs to its own domain of normal attraction.</p>
 </div>
 
