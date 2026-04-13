@@ -52,6 +52,13 @@ Below is the detailed directory for the course notes:
 
 ### Part III: Applications of SDEs
 
+### Part IV: 📝 Selected Solutions
+
+* [x] [Chapter 1-2 Solutions： Conditional Expectation and Brownian Motion](sol_chap1_2.md)
+
+* [x] [Chapter 3-4 Solutions： Stochastic Integrals and Itô's Formula](sol_chap3_4.md)
+
+* [x] [Chapter 5-6 Solutions： ultivariate Itô's Formula and SDE Solving in Practice](sol_chap5_6.md)
 
 ---
 
