@@ -36,6 +36,8 @@ theme:
 # ================= 插件配置 =================
 plugins:
   - search
+  - tags:
+      tags_file: zh/tags.md
   - blog:
       blog_dir: blog        # 博客文件存放位置
       post_excerpt: optional # 自动提取摘要
@@ -53,7 +55,9 @@ plugins:
           build: true
           nav_translations:
             "🏠 首页": "🏠 Home"
-            "✍️ 博客": "✍️ Blog"
+            "✍️ 随笔": "✍️ Blog"
+            "🏷️ 标签": "🏷️ Tags"
+            "📚 笔记库": "📚 Course Notes"
             "📖 笔记": "📖 Notes"
             "📝 习题": "📝 Exercises"
             "📈 随机微分方程": "📈 Stochastic Differential Equations"
@@ -76,36 +80,42 @@ plugins:
 # 路径说明：这里只需写 zh/ 下的路径，i18n 插件会自动映射到 en/
 nav:
   - 🏠 首页: zh/index.md
-
-  - ✍️ 博客: zh/blog/index.md
   
-  - 📈 随机微分方程:
-      - 课程概览: zh/Stochastic-Differential-Equation/0Intro.md
-      - 📖 笔记:
-          - 第一章：条件期望: zh/Stochastic-Differential-Equation/1conditional_expectation.md
-          - 第二章：布朗运动: zh/Stochastic-Differential-Equation/2Brown_Motion.md
-          - 第三章：随机积分: zh/Stochastic-Differential-Equation/3stochastic_integrate.md
-          - 第四章：Itô 积分: zh/Stochastic-Differential-Equation/4Ito_integrate.md
-          - 第五章：多元 Itô 积分: zh/Stochastic-Differential-Equation/5SDEs.md
-          - 第六章：解的存在唯一性: zh/Stochastic-Differential-Equation/6SDEs.md
-      - 📝 习题:
-          - Chapter 1-2: zh/Stochastic-Differential-Equation/sol_chap1_2.md
-          - Chapter 3-4: zh/Stochastic-Differential-Equation/sol_chap3_4.md
-          - Chapter 5-6: zh/Stochastic-Differential-Equation/sol_chap5_6.md
+  - ✍️ 随笔: zh/blog/index.md
+  
+  - 📚 笔记库:
+      - 📈 随机微分方程:
+          - 课程概览: zh/Stochastic-Differential-Equation/0Intro.md
+          - 📖 笔记:
+              - 第一章：条件期望: zh/Stochastic-Differential-Equation/1conditional_expectation.md
+              - 第二章：布朗运动: zh/Stochastic-Differential-Equation/2Brown_Motion.md
+              - 第三章：随机积分: zh/Stochastic-Differential-Equation/3stochastic_integrate.md
+              - 第四章：Itô 积分: zh/Stochastic-Differential-Equation/4Ito_integrate.md
+              - 第五章：多元 Itô 积分: zh/Stochastic-Differential-Equation/5SDEs.md
+              - 第六章：解的存在唯一性: zh/Stochastic-Differential-Equation/6SDEs.md
+          - 📝 习题:
+              - Chapter 1-2: zh/Stochastic-Differential-Equation/sol_chap1_2.md
+              - Chapter 3-4: zh/Stochastic-Differential-Equation/sol_chap3_4.md
+              - Chapter 5-6: zh/Stochastic-Differential-Equation/sol_chap5_6.md
+              
+      - 📊 渐近统计:
+          - 课程概览: zh/Asymptotic-statistics/0Intro.md
+          - 📖 笔记:
+              - 第一章：随机收敛: zh/Asymptotic-statistics/1Stochastic_convergence.md
+              - 第二章：特征函数: zh/Asymptotic-statistics/2Characteristic_Functions.md
+              - 第三章：中心极限定理（一）: zh/Asymptotic-statistics/3CLT.md
+              - 第四章：中心极限定理（二）: zh/Asymptotic-statistics/4CLT.md
 
-  - 📊 渐近统计:
-      - 课程概览: zh/Asymptotic-statistics/0Intro.md
-      - 📖 笔记:
-          - 第一章：随机收敛: zh/Asymptotic-statistics/1Stochastic_convergence.md
-          - 第二章：特征函数: zh/Asymptotic-statistics/2Characteristic_Functions.md
-          - 第三章：中心极限定理（一）: zh/Asymptotic-statistics/3CLT.md
-          - 第四章：中心极限定理（二）: zh/Asymptotic-statistics/4CLT.md
+  - 🏷️ 标签: zh/tags.md
 
 # ================= 扩展配置 =================
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
   
+extra_css:
+  - stylesheets/custom.css
+
 markdown_extensions:
   - admonition          # 提示框 (!!! info)
   - pymdownx.details    # 折叠框 (??? success)
