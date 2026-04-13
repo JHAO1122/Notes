@@ -36,6 +36,10 @@ theme:
 # ================= 插件配置 =================
 plugins:
   - search
+  - blog:
+      blog_dir: blog        # 博客文件存放位置
+      post_excerpt: optional # 自动提取摘要
+      pagination: true
   - i18n:
       docs_structure: folder    # ⭐ 核心：对应你现在的 docs/zh 和 docs/en 结构
       fallback_to_default: true
