@@ -15,13 +15,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/"/>
     </url>
     <url>
-        <loc>https://jhao1122.github.io/Notes/tags/</loc>
-        <lastmod>2026-04-13</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/tags/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/tags/"/>
-    </url>
-    <url>
         <loc>https://jhao1122.github.io/Notes/Asymptotic-statistics/0Intro/</loc>
         <lastmod>2026-04-13</lastmod>
         <changefreq>daily</changefreq>
@@ -139,13 +132,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/"/>
-    </url>
-    <url>
-        <loc>https://jhao1122.github.io/Notes/en/tags/</loc>
-        <lastmod>2026-04-13</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/tags/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/tags/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/0Intro/</loc>
