@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#detailed-solutions-to-exercises-stochastic-integration-and-itos-formula" class="md-skip">
+        <a href="#detailed-solutions-to-exercises-stochastic-integrals-and-itos-formula" class="md-skip">
           Skip to content
         </a>
       
@@ -1602,10 +1602,10 @@
   
 
 
-<h1 id="detailed-solutions-to-exercises-stochastic-integration-and-itos-formula">📝 Detailed Solutions to Exercises: Stochastic Integration and Itô's Formula</h1>
+<h1 id="detailed-solutions-to-exercises-stochastic-integrals-and-itos-formula">📝 Detailed Solutions to Exercises: Stochastic Integrals and Itô's Formula</h1>
 <div class="admonition abstract">
 <p class="admonition-title">About This Page</p>
-<p>This page contains detailed solutions to key exercises from Chapter 3 (Stochastic Integration) and Chapter 4 (Itô Integration and Itô's Formula) of the <em>Stochastic Differential Equations</em> course. The content covers core techniques such as integral calculations with Brownian motion, the Itô isometry, quadratic variation processes, and solving stochastic differential equations using Itô's formula.</p>
+<p>This page contains detailed solutions to key exercises from Chapter 3 (Stochastic Integrals) and Chapter 4 (Itô Integrals and Itô's Formula) of the <em>Stochastic Differential Equations</em> course. The content covers core techniques such as integral calculations with respect to Brownian motion, the Itô isometry, quadratic variation processes, and solving stochastic differential equations using Itô's formula.</p>
 </div>
 <hr />
 <h2 id="part-i-chapter-3-computation-of-stochastic-integrals">Part I: Chapter 3: Computation of Stochastic Integrals</h2>
@@ -1614,33 +1614,33 @@
 Find the stochastic integral <span class="arithmatex">\(\int_0^t s dW(s)\)</span>, and compute its expectation and variance.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p><strong>1. Find the stochastic integral:</strong></p>
+<p><strong>1. Finding the stochastic integral:</strong></p>
 <p>Using integration by parts, let <span class="arithmatex">\(g(s) = s\)</span>, then:</p>
 <div class="arithmatex">\[
 \int_0^t s dW(s) = sW(s) \Big|_0^t - \int_0^t W(s) ds = tW(t) - \int_0^t W(s) ds
 \]</div>
 <p><br></p>
-<p><strong>2. Compute the expectation:</strong></p>
+<p><strong>2. Computing the expectation:</strong></p>
 <p>Using the linearity of expectation and the zero-mean property of Brownian motion:</p>
 <div class="arithmatex">\[
-\mathbb{E}\left[ \int_0^t s dW(s) \right] = t\mathbb{E}[W(t)] - \int_0^t \mathbb{E}[W(s)] ds = t \cdot 0 - \int_0^t 0 ds = 0
+\mathbb{E}\left[ \int_0^t s dW(s) \right = t\mathbb{E}[W(t) - \int_0^t \mathbb{E}[W(s) ds = t \cdot 0 - \int_0^t 0 ds = 0
 \]</div>
 <p><br></p>
-<p><strong>3. Compute the variance:</strong></p>
-<p>By the Itô isometry principle, for a deterministic function <span class="arithmatex">\(g(s) \in L^2([0,t])\)</span>, the variance of its integral with respect to Brownian motion equals the Riemann integral of the square of the function:</p>
+<p><strong>3. Computing the variance:</strong></p>
+<p>By the Itô isometry principle, for a deterministic function <span class="arithmatex">\(g(s) \in L^2([0,t)\)</span>, the variance of its integral with respect to Brownian motion equals the Riemann integral of the square of the function:</p>
 <div class="arithmatex">\[
-Var\left[ \int_0^t s dW(s) \right] = \mathbb{E}\left[ \left( \int_0^t s dW(s) \right)^2 \right] - \left( \mathbb{E}\left[ \int_0^t s dW(s) \right] \right)^2
+Var\left[ \int_0^t s dW(s) \right = \mathbb{E}\left[ \left( \int_0^t s dW(s) \right)^2 \right - \left( \mathbb{E}\left[ \int_0^t s dW(s) \right \right)^2
 \]</div>
 <p>Since the expectation is 0, the variance is the second moment:</p>
 <div class="arithmatex">\[
-= \mathbb{E}\left[ \int_0^t s^2 ds \right] = \int_0^t s^2 ds = \frac{1}{3}t^3
+= \mathbb{E}\left[ \int_0^t s^2 ds \right = \int_0^t s^2 ds = \frac{1}{3}t^3
 \]</div>
 <p><em>Note: Since the integrand is a deterministic function, this stochastic integral follows a normal distribution <span class="arithmatex">\(N(0, \frac{1}{3}t^3)\)</span>.</em></p>
 </details>
 <hr />
 <h3 id="exercise-2">Exercise 2</h3>
 <p><strong>Problem:</strong>
-Let the function <span class="arithmatex">\(g: [0, T] \to \mathbb{R}\)</span> be continuously differentiable, with <span class="arithmatex">\(g(0) = g(T) = 0\)</span>. Find the probability density function of <span class="arithmatex">\(\int_0^T g(t) dW(t)\)</span>.</p>
+Let the function <span class="arithmatex">\(g: [0, T \to \mathbb{R}\)</span> be continuously differentiable, with <span class="arithmatex">\(g(0) = g(T) = 0\)</span>. Find the probability density function of <span class="arithmatex">\(\int_0^T g(t) dW(t)\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p><strong>Step 1: Compute the expectation</strong>
@@ -1650,13 +1650,13 @@ Using integration by parts and the boundary conditions <span class="arithmatex">
 \]</div>
 <p>Taking the expectation:</p>
 <div class="arithmatex">\[
-\mathbb{E}\left[ \int_0^T g(t) dW(t) \right] = \mathbb{E}\left[ - \int_0^T g'(t)W(t) dt \right] = - \int_0^T g'(t)\mathbb{E}[W(t)] dt = 0
+\mathbb{E}\left[ \int_0^T g(t) dW(t) \right = \mathbb{E}\left[ - \int_0^T g'(t)W(t) dt \right = - \int_0^T g'(t)\mathbb{E}[W(t) dt = 0
 \]</div>
 <p><br></p>
 <p><strong>Step 2: Compute the variance</strong>
-By Itô's isometry (since <span class="arithmatex">\(g(t)\)</span> is a deterministic continuous function, it certainly belongs to the <span class="arithmatex">\(L^2([0,T])\)</span> space):</p>
+By the Itô isometry (since <span class="arithmatex">\(g(t)\)</span> is a deterministic continuous function, it certainly belongs to the <span class="arithmatex">\(L^2([0,T)\)</span> space):</p>
 <div class="arithmatex">\[
-Var\left[ \int_0^T g(t) dW(t) \right] = \mathbb{E}\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right] = \int_0^T g^2(t) dt
+Var\left[ \int_0^T g(t) dW(t) \right = \mathbb{E}\left[ \left( \int_0^T g(t) dW(t) \right)^2 \right = \int_0^T g^2(t) dt
 \]</div>
 <p><br></p>
 <p><strong>Step 3: Determine the distribution type and density function</strong>
@@ -1672,69 +1672,75 @@ f_I(x) = \frac{1}{\sqrt{2\pi \int_0^T g^2(t) dt}} \exp\left( - \frac{x^2}{2 \int
 </details>
 <hr />
 <h3 id="exercise-3">Exercise 3</h3>
-<p><strong>Problem:</strong><br />
-To explain Brownian motion from the perspective of Newtonian mechanics, Langevin (1872–1946) proposed the following (stochastic) differential equation describing the velocity of a particle in a liquid:  </p>
-<div class="arithmatex">\[\frac{dv}{dt} = -\beta v + \dot{W}(t)\]</div>
-<p>where <span class="arithmatex">\(-\beta v\)</span> represents the frictional resistance experienced by the particle (<span class="arithmatex">\(\beta\)</span> is a positive constant), and the white noise <span class="arithmatex">\(\dot{W}(t)\)</span> describes the random impulsive forces acting on the particle.  </p>
-<p>(1) Show that the solution to this equation is<br />
-$<span class="arithmatex">\(v(t) = v_0 e^{-\beta t} + W(t) - \beta \int_0^t e^{-\beta(t-s)} W(s) ds,\)</span>$<br />
-and hence the trajectory of a particle starting from the origin is<br />
-$<span class="arithmatex">\(x_\beta(t) = \int_0^t e^{-\beta(t-s)} W(s) ds.\)</span>$  </p>
-<p>(2) Compute the expectation and variance of <span class="arithmatex">\(v(t)\)</span> and <span class="arithmatex">\(x(t)\)</span>.  </p>
-<p>(3) Prove that<br />
-$<span class="arithmatex">\(\lim_{\beta \to \infty} \beta x_\beta(t) = W(t).\)</span>$</p>
+<p><strong>Problem:</strong>
+To explain Brownian motion from the perspective of Newtonian mechanics, Langevin (1872–1946) proposed the following (stochastic) differential equation describing the velocity of a particle in a liquid:
+$<span class="arithmatex">\(\frac{dv}{dt} = -\beta v + \dot{W}(t)\)</span>$
+where <span class="arithmatex">\(-\beta v\)</span> represents the frictional resistance experienced by the particle (<span class="arithmatex">\(\beta\)</span> is a positive constant), and the white noise <span class="arithmatex">\(\dot{W}(t)\)</span> describes the random impulsive forces acting on the particle.
+(1) Show that the solution to this equation is <span class="arithmatex">\(v(t) = v_0 e^{-\beta t} + W(t) - \beta \int_0^t e^{-\beta(t-s)} W(s) ds\)</span>, and hence the path of a particle starting from the origin is <span class="arithmatex">\(x_\beta(t) = \int_0^t e^{-\beta(t-s)} W(s) ds\)</span>;
+(2) Compute the expectation and variance of <span class="arithmatex">\(v(t)\)</span> and <span class="arithmatex">\(x(t)\)</span>;
+(3) Prove that <span class="arithmatex">\(\lim_{\beta \to \infty} \beta x_\beta(t) = W(t)\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
 </details>
-<p><strong>(1) Verifying the form of the solution</strong><br />
-Substitute the given solution <span class="arithmatex">\( v(t) \)</span> into the original differential equation for verification. Differentiate the solution:</p>
-<div class="arithmatex">\[
+<p><strong>(1) Verifying the Form of the Solution</strong>
+    Substitute the given solution <span class="arithmatex">\(v(t)\)</span> into the original differential equation for verification. Differentiate the solution:</p>
+<pre><code>$$
 \frac{dv(t)}{dt} = \frac{d}{dt} \left( v_0 e^{-\beta t} + W(t) - \beta \int_0^t e^{-\beta(t-s)} W(s) ds \right)
-\]</div>
-<p>Using the Leibniz rule for differentiation under the integral sign:</p>
-<div class="arithmatex">\[
+$$
+
+Using the differentiation rule for integrals with variable upper limits (Leibniz Rule):
+
+$$
 = -\beta v_0 e^{-\beta t} + \dot{W}(t) - \beta \left( e^{-\beta(t-t)}W(t) + \int_0^t -\beta e^{-\beta(t-s)} W(s) ds \right)
-\]</div>
-<div class="arithmatex">\[
+$$
+
+$$
 = -\beta v_0 e^{-\beta t} + \dot{W}(t) - \beta W(t) + \beta^2 \int_0^t e^{-\beta(t-s)} W(s) ds
-\]</div>
-<p>Now multiply <span class="arithmatex">\( v(t) \)</span> by <span class="arithmatex">\( -\beta \)</span>:</p>
-<div class="arithmatex">\[
+$$
+
+Then multiply $v(t)$ by $-\beta$:
+
+$$
 -\beta v(t) = -\beta \left( v_0 e^{-\beta t} + W(t) - \beta \int_0^t e^{-\beta(t-s)} W(s) ds \right)
-\]</div>
-<div class="arithmatex">\[
+$$
+
+$$
 = -\beta v_0 e^{-\beta t} - \beta W(t) + \beta^2 \int_0^t e^{-\beta(t-s)} W(s) ds
-\]</div>
-<p>Comparing the two expressions, it is clear that:</p>
-<div class="arithmatex">\[
+$$
+
+Comparing the two expressions, it is clear that:
+
+$$
 \frac{dv(t)}{dt} = -\beta v(t) + \dot{W}(t)
-\]</div>
-<p>Thus, the equation holds. For the displacement <span class="arithmatex">\( x(t) = \int_0^t v(s) ds \)</span>, simplify the form using integration by parts:<br />
-Through stochastic differential equation theory, the more standard expression for the displacement of the Ornstein–Uhlenbeck process is <span class="arithmatex">\( x_\beta(t) = \int_0^t e^{-\beta(t-s)} W(s) ds \)</span>.</p>
+$$
+
+The equation holds. For the displacement $x(t) = \int_0^t v(s) ds$, simplify the form using integration by parts:
+According to stochastic differential equation theory, the more standard expression for the displacement of the O-U process is $x_\beta(t) = \int_0^t e^{-\beta(t-s)} W(s) ds$.
+</code></pre>
 <p><br></p>
 <p><strong>(2) Computing Expectation and Variance</strong></p>
 <p>For <span class="arithmatex">\(v(t)\)</span>:</p>
 <div class="arithmatex">\[
-\mathbb{E}[v(t)] = v_0 e^{-\beta t} + \mathbb{E}[W(t)] - \beta \int_0^t e^{-\beta(t-s)} \mathbb{E}[W(s)] ds = v_0 e^{-\beta t}
+\mathbb{E}[v(t) = v_0 e^{-\beta t} + \mathbb{E}[W(t) - \beta \int_0^t e^{-\beta(t-s)} \mathbb{E}[W(s) ds = v_0 e^{-\beta t}
 \]</div>
 <p>Since another equivalent form of <span class="arithmatex">\(v(t)\)</span> is <span class="arithmatex">\(v(t) = v_0 e^{-\beta t} + \int_0^t e^{-\beta(t-s)} dW(s)\)</span>, we compute the variance using Itô's isometry:</p>
 <div class="arithmatex">\[
-Var[v(t)] = \mathbb{E}\left[ \left( \int_0^t e^{-\beta(t-s)} dW(s) \right)^2 \right] = \int_0^t e^{-2\beta(t-s)} ds = \frac{1 - e^{-2\beta t}}{2\beta}
+Var[v(t) = \mathbb{E}\left[ \left( \int_0^t e^{-\beta(t-s)} dW(s) \right)^2 \right = \int_0^t e^{-2\beta(t-s)} ds = \frac{1 - e^{-2\beta t}}{2\beta}
 \]</div>
 <p>For <span class="arithmatex">\(x_\beta(t)\)</span>:</p>
 <div class="arithmatex">\[
-\mathbb{E}[x_\beta(t)] = \mathbb{E}\left[ \int_0^t e^{-\beta(t-s)} W(s) ds \right] = \int_0^t e^{-\beta(t-s)} \mathbb{E}[W(s)] ds = 0
+\mathbb{E}[x_\beta(t) = \mathbb{E}\left[ \int_0^t e^{-\beta(t-s)} W(s) ds \right = \int_0^t e^{-\beta(t-s)} \mathbb{E}[W(s) ds = 0
 \]</div>
 <p>Using Fubini's theorem to interchange the order of integration (similar to the technique in Chapter 2 exercises) to compute the variance:</p>
 <div class="arithmatex">\[
-Var[x_\beta(t)] = \mathbb{E}\left[ \left( \int_0^t e^{-\beta(t-s)} W(s) ds \right)^2 \right] = \int_0^t \int_0^t e^{-\beta(t-u)}e^{-\beta(t-v)} \mathbb{E}[W(u)W(v)] du dv
+Var[x_\beta(t) = \mathbb{E}\left[ \left( \int_0^t e^{-\beta(t-s)} W(s) ds \right)^2 \right = \int_0^t \int_0^t e^{-\beta(t-u)}e^{-\beta(t-v)} \mathbb{E}[W(u)W(v) du dv
 \]</div>
 <p>After simplification, we obtain:</p>
 <div class="arithmatex">\[
 = \frac{t}{\beta^2} - \frac{3 - 4e^{-\beta t} + e^{-2\beta t}}{2\beta^3}
 \]</div>
 <p><br></p>
-<p><strong>(3) Proof of the Limit</strong></p>
+<p><strong>(3) Proving the Limit</strong></p>
 <p>Consider <span class="arithmatex">\(\beta x_\beta(t)\)</span>:</p>
 <div class="arithmatex">\[
 \beta x_\beta(t) = \beta \int_0^t e^{-\beta(t-s)} W(s) ds
@@ -1748,7 +1754,7 @@ Var[x_\beta(t)] = \mathbb{E}\left[ \left( \int_0^t e^{-\beta(t-s)} W(s) ds \righ
 \]</div>
 <p>As <span class="arithmatex">\(\beta \to \infty\)</span>, examine the mean-square limit of the error term:</p>
 <div class="arithmatex">\[
-\lim_{\beta \to \infty} \mathbb{E}\left[ \left( \int_0^t e^{-\beta(t-s)} dW(s) \right)^2 \right] = \lim_{\beta \to \infty} \int_0^t e^{-2\beta(t-s)} ds = \lim_{\beta \to \infty} \frac{1 - e^{-2\beta t}}{2\beta} = 0
+\lim_{\beta \to \infty} \mathbb{E}\left[ \left( \int_0^t e^{-\beta(t-s)} dW(s) \right)^2 \right = \lim_{\beta \to \infty} \int_0^t e^{-2\beta(t-s)} ds = \lim_{\beta \to \infty} \frac{1 - e^{-2\beta t}}{2\beta} = 0
 \]</div>
 <p>Since the error term converges to 0 in the <span class="arithmatex">\(L^2\)</span> sense, it follows almost surely (or in mean-square sense) that:</p>
 <div class="arithmatex">\[
@@ -1771,7 +1777,7 @@ Consider the function <span class="arithmatex">\(f(t, x) = \frac{1}{3}x^3\)</spa
 <div class="arithmatex">\[
 d\left( \frac{1}{3}W^3(t) \right) = 0 dt + W^2(t) dW(t) + \frac{1}{2} \cdot 2W(t) dt
 \]</div>
-<p>where the quadratic variation rule for Brownian motion <span class="arithmatex">\((dW_t)^2 = dt\)</span> is used. Simplifying yields:</p>
+<p>Here, the quadratic variation rule for Brownian motion <span class="arithmatex">\((dW_t)^2 = dt\)</span> is used. Simplifying yields:</p>
 <div class="arithmatex">\[
 d\left( \frac{1}{3}W^3(t) \right) = W^2(t) dW(t) + W(t) dt
 \]</div>
@@ -1789,27 +1795,27 @@ d\left( \frac{1}{3}W^3(t) \right) = W^2(t) dW(t) + W(t) dt
 <h3 id="exercise-2_1">Exercise 2</h3>
 <p><strong>Problem:</strong>
 For the backward integral
-$ \int_0^T W(t) dW(t) \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]$
+$ \int_0^T W(t) dW(t) \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)$
 where <span class="arithmatex">\(0 = t_0 &lt; t_1 &lt; \cdots &lt; t_n = T\)</span>, and <span class="arithmatex">\(\delta \doteq \max_i |t_{i+1} - t_i|\)</span>. Prove:</p>
 <div class="arithmatex">\[ \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T\]</div>
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p>Perform an identity transformation on the definition of the backward integral to construct the form of the standard Itô integral:</p>
 <div class="arithmatex">\[
-I_B = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]
+I_B = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)
 \]</div>
 <p>In the summation term, we artificially add and subtract <span class="arithmatex">\(W(t_i)\)</span>:</p>
 <div class="arithmatex">\[
-= \lim_{\delta \to 0} \sum_{i=0}^{n-1} \big( W(t_i) + W(t_{i+1}) - W(t_i) \big) [W(t_{i+1}) - W(t_i)]
+= \lim_{\delta \to 0} \sum_{i=0}^{n-1} \big( W(t_i) + W(t_{i+1}) - W(t_i) \big) [W(t_{i+1}) - W(t_i)
 \]</div>
 <p>Expand the parentheses:</p>
 <div class="arithmatex">\[
-= \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i)[W(t_{i+1}) - W(t_i)] + \lim_{\delta \to 0} \sum_{i=0}^{n-1} [W(t_{i+1}) - W(t_i)]^2
+= \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i)[W(t_{i+1}) - W(t_i) + \lim_{\delta \to 0} \sum_{i=0}^{n-1} [W(t_{i+1}) - W(t_i)^2
 \]</div>
 <p>Observe these two terms:
-* The first term is exactly the discrete definition of the standard <strong>Itô integral</strong> (taking the left endpoint in each subinterval):
+* The first term is precisely the discrete definition of the standard <strong>Itô integral</strong> (taking the left endpoint in each subinterval):
   $<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)\)</span>$
-* The second term is exactly the <strong>Quadratic Variation</strong> of Brownian motion over the interval <span class="arithmatex">\([0,T]\)</span>. It is known from the properties of Brownian motion that its quadratic variation converges in mean square to the length of the interval:
+* The second term is precisely the <strong>Quadratic Variation</strong> of Brownian motion over the interval <span class="arithmatex">\([0,T\)</span>. It is known from the properties of Brownian motion that its quadratic variation converges in mean square to the length of the interval:
   $<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T\)</span>$</p>
 <p>Combining the two parts, we obtain the proof:</p>
 <div class="arithmatex">\[
@@ -1821,22 +1827,22 @@ I_B = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]
 <h2 id="part-iii-advanced-applications-of-stochastic-integration-and-itos-formula">Part III: Advanced Applications of Stochastic Integration and Itô's Formula</h2>
 <h3 id="exercise-1_2">Exercise 1</h3>
 <p><strong>Problem</strong>
-Let <span class="arithmatex">\(W(t)\)</span> be an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion. Prove: <span class="arithmatex">\(\mathbb{E}[|W(t) - W(s)|^4] = (2n + n^2)(t-s)^2\)</span>.</p>
+Let <span class="arithmatex">\(W(t)\)</span> be an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion. Prove: <span class="arithmatex">\(\mathbb{E}[|W(t) - W(s)|^4 = (2n + n^2)(t-s)^2\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>This problem cleverly utilizes the relationship between the standard normal distribution and the chi-squared distribution.</p>
-<p>Given that <span class="arithmatex">\(W(t)\)</span> is an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion, we examine its increments over the time interval <span class="arithmatex">\([s, t]\)</span>.
+<p>This problem cleverly utilizes the relationship between the standard normal distribution and the chi-square distribution.</p>
+<p>Given that <span class="arithmatex">\(W(t)\)</span> is an <span class="arithmatex">\(n\)</span>-dimensional Brownian motion, we examine its increments over the time interval <span class="arithmatex">\([s, t\)</span>.
 Let <span class="arithmatex">\(X_i = W_i(t) - W_i(s)\)</span>, where <span class="arithmatex">\(i = 1, 2, \dots, n\)</span> denotes each dimension.
 According to the properties of Brownian motion, the increments in each dimension are independent and identically distributed, and <span class="arithmatex">\(X_i \sim N(0, t-s)\)</span>.</p>
 <p>To standardize, let <span class="arithmatex">\(Z_i = \frac{X_i}{\sqrt{t-s}}\)</span>, then <span class="arithmatex">\(Z_i \sim N(0, 1)\)</span>, and they are mutually independent.
-Let <span class="arithmatex">\(Q = \sum_{i=1}^n Z_i^2\)</span>. By definition, <span class="arithmatex">\(Q\)</span> follows a chi-squared distribution with <span class="arithmatex">\(n\)</span> degrees of freedom, i.e., <span class="arithmatex">\(Q \sim \chi^2(n)\)</span>.</p>
-<p>For the chi-squared distribution <span class="arithmatex">\(\chi^2(n)\)</span>, we know its expectation and variance are:</p>
+Let <span class="arithmatex">\(Q = \sum_{i=1}^n Z_i^2\)</span>. By definition, <span class="arithmatex">\(Q\)</span> follows a chi-square distribution with <span class="arithmatex">\(n\)</span> degrees of freedom, i.e., <span class="arithmatex">\(Q \sim \chi^2(n)\)</span>.</p>
+<p>For the chi-square distribution <span class="arithmatex">\(\chi^2(n)\)</span>, we know its expectation and variance are:</p>
 <div class="arithmatex">\[
-\mathbb{E}[Q] = n, \quad Var(Q) = 2n
+\mathbb{E}[Q = n, \quad Var(Q) = 2n
 \]</div>
 <p>From this, we can compute the second raw moment of <span class="arithmatex">\(Q\)</span>:</p>
 <div class="arithmatex">\[
-\mathbb{E}[Q^2] = Var(Q) + (\mathbb{E}[Q])^2 = 2n + n^2
+\mathbb{E}[Q^2 = Var(Q) + (\mathbb{E}[Q)^2 = 2n + n^2
 \]</div>
 <p>Returning to the original expression, consider the fourth moment of the increment:</p>
 <div class="arithmatex">\[
@@ -1844,87 +1850,87 @@ Let <span class="arithmatex">\(Q = \sum_{i=1}^n Z_i^2\)</span>. By definition, <
 \]</div>
 <p>Taking the expectation on both sides:</p>
 <div class="arithmatex">\[
-\mathbb{E}[|W(t) - W(s)|^4] = (t-s)^2 \mathbb{E}[Q^2] = (2n + n^2)(t-s)^2
+\mathbb{E}[|W(t) - W(s)|^4 = (t-s)^2 \mathbb{E}[Q^2 = (2n + n^2)(t-s)^2
 \]</div>
 <p>The conclusion is proven.</p>
 </details>
 <hr />
 <h3 id="exercise-2_2">Exercise 2</h3>
-<p><strong>Problem</strong><br />
-Define the second-order integral<br />
-$<span class="arithmatex">\(\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2\)</span>$<br />
-where <span class="arithmatex">\(0 = t_0 &lt; t_1 &lt; \dots &lt; t_n = T\)</span>, and <span class="arithmatex">\(\delta \doteq \max_i |t_{i+1} - t_i|\)</span>. Prove that when <span class="arithmatex">\(f \in L^2([0,T])\)</span>, we have  </p>
-<div class="arithmatex">\[\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt\]</div>
+<p><strong>Problem</strong>
+Define the second-order integral
+$<span class="arithmatex">\(\int_0^T f(t) [dW(t)^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)^2\)</span>$
+where <span class="arithmatex">\(0 = t_0 &lt; t_1 &lt; \dots &lt; t_n = T\)</span>, and <span class="arithmatex">\(\delta \doteq \max_i |t_{i+1} - t_i|\)</span>. Prove that when <span class="arithmatex">\(f \in L^2([0,T)\)</span>, we have</p>
+<div class="arithmatex">\[\int_0^T f(t) [dW(t)^2 = \int_0^T f(t) dt\]</div>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>This problem aims to prove the rigorous equality <span class="arithmatex">\((dW_t)^2 = dt\)</span> in the integral sense.<br />
-We will prove the limit in the mean-square (<span class="arithmatex">\(L^2\)</span>) sense.  </p>
-<p>Let <span class="arithmatex">\(\Delta t_i = t_{i+1} - t_i\)</span>, <span class="arithmatex">\(\Delta W_i = W(t_{i+1}) - W(t_i)\)</span>.<br />
-Denote the left-hand discrete sum as <span class="arithmatex">\(S_n = \sum_{i=0}^{n-1} f(t_i)(\Delta W_i)^2\)</span>, and the right-hand target integral as <span class="arithmatex">\(I = \int_0^T f(t)dt \approx \sum_{i=0}^{n-1} f(t_i)\Delta t_i\)</span>.  </p>
-<p>Examine the mean-square error of their difference:  </p>
+<p>This problem aims to prove the rigorous validity of the quadratic variation of Brownian motion <span class="arithmatex">\((dW_t)^2 = dt\)</span> in the integral sense.
+We will prove this limit in the mean-square (<span class="arithmatex">\(L^2\)</span>) sense.</p>
+<p>Let <span class="arithmatex">\(\Delta t_i = t_{i+1} - t_i\)</span>, <span class="arithmatex">\(\Delta W_i = W(t_{i+1}) - W(t_i)\)</span>.
+Denote the left-hand discrete sum as <span class="arithmatex">\(S_n = \sum_{i=0}^{n-1} f(t_i)(\Delta W_i)^2\)</span>, and the right-hand target integral as <span class="arithmatex">\(I = \int_0^T f(t)dt \approx \sum_{i=0}^{n-1} f(t_i)\Delta t_i\)</span>.</p>
+<p>Examine the mean-square error of their difference:</p>
 <div class="arithmatex">\[
-\mathbb{E}\left[ \left( S_n - \sum_{i=0}^{n-1} f(t_i)\Delta t_i \right)^2 \right] = \mathbb{E}\left[ \left( \sum_{i=0}^{n-1} f(t_i) ((\Delta W_i)^2 - \Delta t_i) \right)^2 \right]
+\mathbb{E}\left[ \left( S_n - \sum_{i=0}^{n-1} f(t_i)\Delta t_i \right)^2 \right = \mathbb{E}\left[ \left( \sum_{i=0}^{n-1} f(t_i) ((\Delta W_i)^2 - \Delta t_i) \right)^2 \right
 \]</div>
-<p>Since Brownian increments over non-overlapping intervals are independent, the expectation of cross terms (<span class="arithmatex">\(i \ne j\)</span>) can be decomposed:  </p>
+<p>Since Brownian increments over non-overlapping intervals are independent, the expectation of cross terms (<span class="arithmatex">\(i \ne j\)</span>) can be decomposed:</p>
 <div class="arithmatex">\[
-\mathbb{E}[((\Delta W_i)^2 - \Delta t_i)((\Delta W_j)^2 - \Delta t_j)] = \mathbb{E}[(\Delta W_i)^2 - \Delta t_i] \cdot \mathbb{E}[(\Delta W_j)^2 - \Delta t_j] = 0 \cdot 0 = 0
+\mathbb{E}[((\Delta W_i)^2 - \Delta t_i)((\Delta W_j)^2 - \Delta t_j) = \mathbb{E}[(\Delta W_i)^2 - \Delta t_i \cdot \mathbb{E}[(\Delta W_j)^2 - \Delta t_j = 0 \cdot 0 = 0
 \]</div>
-<p>Therefore, after expanding the square, only the squared terms remain:  </p>
+<p>Therefore, after expanding the square, only the squared terms remain:</p>
 <div class="arithmatex">\[
-= \sum_{i=0}^{n-1} f^2(t_i) \mathbb{E}[((\Delta W_i)^2 - \Delta t_i)^2]
+= \sum_{i=0}^{n-1} f^2(t_i) \mathbb{E}[((\Delta W_i)^2 - \Delta t_i)^2
 \]</div>
-<p>Compute the single-term expectation using the fourth moment of <span class="arithmatex">\(N(0, \Delta t_i)\)</span>: <span class="arithmatex">\(\mathbb{E}[(\Delta W_i)^4] = 3(\Delta t_i)^2\)</span>:  </p>
+<p>Compute the single-term expectation, using the fourth moment of <span class="arithmatex">\(N(0, \Delta t_i)\)</span>: <span class="arithmatex">\(\mathbb{E}[(\Delta W_i)^4 = 3(\Delta t_i)^2\)</span>:</p>
 <div class="arithmatex">\[
-\mathbb{E}[(\Delta W_i)^4 - 2\Delta t_i(\Delta W_i)^2 + (\Delta t_i)^2] = 3\Delta t_i^2 - 2\Delta t_i^2 + \Delta t_i^2 = 2\Delta t_i^2
+\mathbb{E}[(\Delta W_i)^4 - 2\Delta t_i(\Delta W_i)^2 + (\Delta t_i)^2 = 3\Delta t_i^2 - 2\Delta t_i^2 + \Delta t_i^2 = 2\Delta t_i^2
 \]</div>
-<p>Substitute back into the original expression and bound one <span class="arithmatex">\(\Delta t_i\)</span> by the maximum step size <span class="arithmatex">\(\delta\)</span>:  </p>
+<p>Substitute back into the original expression, and bound one <span class="arithmatex">\(\Delta t_i\)</span> by the maximum step size <span class="arithmatex">\(\delta\)</span>:</p>
 <div class="arithmatex">\[
 = \sum_{i=0}^{n-1} f^2(t_i) 2\Delta t_i^2 \le 2\delta \sum_{i=0}^{n-1} f^2(t_i)\Delta t_i
 \]</div>
-<p>As <span class="arithmatex">\(\delta \to 0\)</span>, since <span class="arithmatex">\(f \in L^2([0,T])\)</span>, <span class="arithmatex">\(\sum f^2(t_i)\Delta t_i \to \int_0^T f^2(t)dt &lt; \infty\)</span>.<br />
-Thus, the factor <span class="arithmatex">\(\delta\)</span> in front ensures the entire limit tends to <span class="arithmatex">\(0\)</span>. Mean-square convergence is proved, i.e.,  </p>
+<p>As <span class="arithmatex">\(\delta \to 0\)</span>, since <span class="arithmatex">\(f \in L^2([0,T)\)</span>, <span class="arithmatex">\(\sum f^2(t_i)\Delta t_i \to \int_0^T f^2(t)dt &lt; \infty\)</span>.
+Thus, the factor <span class="arithmatex">\(\delta\)</span> in front will drive the entire limit to <span class="arithmatex">\(0\)</span>. Mean-square convergence is proven, i.e.:</p>
 <div class="arithmatex">\[
-\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt
+\int_0^T f(t) [dW(t)^2 = \int_0^T f(t) dt
 \]</div>
 </details>
 <hr />
 <h3 id="exercise-3_1">Exercise 3</h3>
 <p><strong>Problem</strong>
-Let <span class="arithmatex">\(f \in L^2([0, T])\)</span> and <span class="arithmatex">\(\int_0^T f(s) dW(s) = 0\)</span>. Prove: <span class="arithmatex">\(f\)</span> is almost everywhere zero.</p>
+Let <span class="arithmatex">\(f \in L^2([0, T)\)</span> and <span class="arithmatex">\(\int_0^T f(s) dW(s) = 0\)</span>. Prove: <span class="arithmatex">\(f\)</span> is almost everywhere zero.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p>This problem utilizes the Itô isometry and basic properties of Lebesgue integration from real analysis.</p>
 <p>Since <span class="arithmatex">\(\int_0^T f(s) dW(s) = 0\)</span> holds almost surely, the second moment of this random variable must be 0:</p>
 <div class="arithmatex">\[
-\mathbb{E}\left[ \left( \int_0^T f(s) dW(s) \right)^2 \right] = \mathbb{E}[0^2] = 0
+\mathbb{E}\left[ \left( \int_0^T f(s) dW(s) \right)^2 \right = \mathbb{E}[0^2 = 0
 \]</div>
-<p>On the other hand, by the Itô isometry, the second moment of the stochastic integral equals the Lebesgue integral of the square of the integrand:</p>
+<p>On the other hand, according to the Itô isometry, the second moment of the stochastic integral equals the Lebesgue integral of the square of the integrand:</p>
 <div class="arithmatex">\[
-\mathbb{E}\left[ \left( \int_0^T f(s) dW(s) \right)^2 \right] = \mathbb{E}\left[ \int_0^T f^2(s) ds \right]
+\mathbb{E}\left[ \left( \int_0^T f(s) dW(s) \right)^2 \right = \mathbb{E}\left[ \int_0^T f^2(s) ds \right
 \]</div>
 <p>Since <span class="arithmatex">\(f(s)\)</span> is a deterministic function, its expectation is itself. Combining the two equations yields:</p>
 <div class="arithmatex">\[
 \int_0^T f^2(s) ds = 0
 \]</div>
-<p>By a fundamental theorem of real analysis, since the integrand <span class="arithmatex">\(f^2(s) \ge 0\)</span> always holds and its Lebesgue integral over <span class="arithmatex">\([0,T]\)</span> is <span class="arithmatex">\(0\)</span>, this implies that <span class="arithmatex">\(f^2(s)\)</span> must be zero almost everywhere (a.e.) on <span class="arithmatex">\([0,T]\)</span>.</p>
+<p>By a fundamental theorem of real analysis, since the integrand <span class="arithmatex">\(f^2(s) \ge 0\)</span> always holds and its Lebesgue integral over <span class="arithmatex">\([0,T\)</span> is <span class="arithmatex">\(0\)</span>, this implies that <span class="arithmatex">\(f^2(s)\)</span> must be zero almost everywhere (a.e.) on <span class="arithmatex">\([0,T\)</span>.</p>
 <p>Consequently: <span class="arithmatex">\(f(s) = 0\)</span> almost everywhere. Q.E.D.</p>
 </details>
 <hr />
 <h3 id="exercise-4">Exercise 4</h3>
-<p><strong>Problem</strong><br />
-Prove that <span class="arithmatex">\( Y(t) = e^{t/2} \cos(W(t)) \)</span> is a martingale.</p>
+<p><strong>Problem</strong>
+Prove that <span class="arithmatex">\(Y(t) = e^{t/2} \cos(W(t))\)</span> is a martingale.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>To prove that a process is a martingale, the most direct method is to use Itô's formula to show that its differential contains no drift term (i.e., the coefficient of the <span class="arithmatex">\( dt \)</span> term is zero).</p>
-<p>Define the bivariate function <span class="arithmatex">\( u(t, x) = e^{t/2} \cos(x) \)</span>, and compute its partial derivatives with respect to <span class="arithmatex">\( t \)</span> and <span class="arithmatex">\( x \)</span>:
-* <span class="arithmatex">\( u_t = \frac{1}{2} e^{t/2} \cos(x) \)</span>
-* <span class="arithmatex">\( u_x = -e^{t/2} \sin(x) \)</span>
-* <span class="arithmatex">\( u_{xx} = -e^{t/2} \cos(x) \)</span></p>
-<p>Substitute <span class="arithmatex">\( X(t) = W(t) \)</span> into Itô's formula <span class="arithmatex">\( dY_t = (u_t + \frac{1}{2} u_{xx})dt + u_x dW(t) \)</span>:</p>
+<p>To prove that a process is a martingale, the most direct method is to use Itô's formula to show that its differential contains no drift term (i.e., the coefficient of the <span class="arithmatex">\(dt\)</span> term is 0).</p>
+<p>Define the bivariate function <span class="arithmatex">\(u(t, x) = e^{t/2} \cos(x)\)</span>, and compute its partial derivatives with respect to <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(x\)</span>:
+* <span class="arithmatex">\(u_t = \frac{1}{2} e^{t/2} \cos(x)\)</span>
+* <span class="arithmatex">\(u_x = -e^{t/2} \sin(x)\)</span>
+* <span class="arithmatex">\(u_{xx} = -e^{t/2} \cos(x)\)</span></p>
+<p>Substitute <span class="arithmatex">\(X(t) = W(t)\)</span> into Itô's formula <span class="arithmatex">\(dY_t = (u_t + \frac{1}{2} u_{xx})dt + u_x dW(t)\)</span>:</p>
 <div class="arithmatex">\[
 dY(t) = \left( \frac{1}{2} e^{t/2} \cos(W(t)) - \frac{1}{2} e^{t/2} \cos(W(t)) \right) dt - e^{t/2} \sin(W(t)) dW(t)
 \]</div>
-<p>It is clear that the two terms containing <span class="arithmatex">\( dt \)</span> cancel perfectly:</p>
+<p>It is clear that the two terms containing <span class="arithmatex">\(dt\)</span> cancel perfectly:</p>
 <div class="arithmatex">\[
 dY(t) = -e^{t/2} \sin(W(t)) dW(t)
 \]</div>
@@ -1932,8 +1938,8 @@ dY(t) = -e^{t/2} \sin(W(t)) dW(t)
 <div class="arithmatex">\[
 Y(t) = Y(0) - \int_0^t e^{s/2} \sin(W(s)) dW(s)
 \]</div>
-<p>Since the right-hand side is an Itô integral involving only <span class="arithmatex">\( dW(s) \)</span>, and the integrand is bounded (satisfying the <span class="arithmatex">\( L^2 \)</span> admissibility condition), the Itô integral itself is a martingale.
-Therefore, the process <span class="arithmatex">\( Y(t) \)</span> is also a martingale. Q.E.D.</p>
+<p>Since the right-hand side is an Itô integral involving only <span class="arithmatex">\(dW(s)\)</span>, and the integrand is bounded (satisfying the <span class="arithmatex">\(L^2\)</span> admissibility condition), the Itô integral itself is a martingale.
+Therefore, the process <span class="arithmatex">\(Y(t)\)</span> is also a martingale. Q.E.D.</p>
 </details>
 <hr />
 <h3 id="exercise-5">Exercise 5</h3>
@@ -1943,18 +1949,18 @@ Prove:<br />
 2. <span class="arithmatex">\(\int_0^T W^3 dW = \frac{1}{4}W(T)^4 - \frac{3}{2} \int_0^T W^2 dt\)</span>  </p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>Both proofs are based on the reverse application of Itô's formula, i.e., "first guess the higher-order term, then expand using Itô's formula and rearrange."  </p>
-<p><strong>(1) Proof of the first formula</strong>  </p>
-<p>Let the function <span class="arithmatex">\(f(x) = \frac{1}{3}x^3\)</span>. Compute its derivatives: <span class="arithmatex">\(f'(x) = x^2\)</span>, <span class="arithmatex">\(f''(x) = 2x\)</span>.<br />
-Substitute <span class="arithmatex">\(W(t)\)</span> into Itô's formula:  </p>
+<p>Both proofs are essentially reverse applications of Itô's formula, i.e., "first guess the higher-order term, then expand using Itô's formula and rearrange."</p>
+<p><strong>(1) Proof of the first equality</strong>  </p>
+<p>Define the function <span class="arithmatex">\(f(x) = \frac{1}{3}x^3\)</span>. Compute its derivatives: <span class="arithmatex">\(f'(x) = x^2\)</span>, <span class="arithmatex">\(f''(x) = 2x\)</span>.<br />
+Apply Itô's formula to <span class="arithmatex">\(W(t)\)</span>:  </p>
 <div class="arithmatex">\[
 d\left( \frac{1}{3}W^3(t) \right) = W^2(t) dW(t) + \frac{1}{2}(2W(t)) (dW(t))^2
 \]</div>
-<p>By the quadratic variation rule <span class="arithmatex">\((dW(t))^2 = dt\)</span>:  </p>
+<p>Using the quadratic variation rule <span class="arithmatex">\((dW(t))^2 = dt\)</span>:  </p>
 <div class="arithmatex">\[
 d\left( \frac{1}{3}W^3(t) \right) = W^2(t) dW(t) + W(t) dt
 \]</div>
-<p>Integrate both sides over <span class="arithmatex">\([0, T]\)</span>, noting that <span class="arithmatex">\(W(0) = 0\)</span>:  </p>
+<p>Integrate both sides over <span class="arithmatex">\([0, T\)</span>, noting that <span class="arithmatex">\(W(0) = 0\)</span>:  </p>
 <div class="arithmatex">\[
 \frac{1}{3}W^3(T) - 0 = \int_0^T W^2(t) dW(t) + \int_0^T W(t) dt
 \]</div>
@@ -1962,18 +1968,18 @@ d\left( \frac{1}{3}W^3(t) \right) = W^2(t) dW(t) + W(t) dt
 <div class="arithmatex">\[
 \int_0^T W^2(t) dW(t) = \frac{1}{3}W^3(T) - \int_0^T W(t) dt
 \]</div>
-<p><br>  </p>
-<p><strong>(2) Proof of the second formula</strong>  </p>
-<p>Similarly, let the function <span class="arithmatex">\(g(x) = \frac{1}{4}x^4\)</span>. Compute its derivatives: <span class="arithmatex">\(g'(x) = x^3\)</span>, <span class="arithmatex">\(g''(x) = 3x^2\)</span>.<br />
-Substitute into Itô's formula:  </p>
+<p><br></p>
+<p><strong>(2) Proof of the second equality</strong>  </p>
+<p>Similarly, define <span class="arithmatex">\(g(x) = \frac{1}{4}x^4\)</span>. Compute its derivatives: <span class="arithmatex">\(g'(x) = x^3\)</span>, <span class="arithmatex">\(g''(x) = 3x^2\)</span>.<br />
+Apply Itô's formula:  </p>
 <div class="arithmatex">\[
 d\left( \frac{1}{4}W^4(t) \right) = W^3(t) dW(t) + \frac{1}{2}(3W^2(t)) dt
 \]</div>
-<p>Integrate both sides over <span class="arithmatex">\([0, T]\)</span>:  </p>
+<p>Integrate both sides over <span class="arithmatex">\([0, T\)</span>:  </p>
 <div class="arithmatex">\[
 \frac{1}{4}W^4(T) - 0 = \int_0^T W^3(t) dW(t) + \frac{3}{2}\int_0^T W^2(t) dt
 \]</div>
-<p>Rearranging gives:  </p>
+<p>Rearranging yields:  </p>
 <div class="arithmatex">\[
 \int_0^T W^3(t) dW(t) = \frac{1}{4}W^4(T) - \frac{3}{2}\int_0^T W^2(t) dt
 \]</div>
@@ -1981,133 +1987,142 @@ d\left( \frac{1}{4}W^4(t) \right) = W^3(t) dW(t) + \frac{1}{2}(3W^2(t)) dt
 <hr />
 <h3 id="exercise-6">Exercise 6</h3>
 <p><strong>Problem</strong>
-Prove that <span class="arithmatex">\(\mathbb{E}[e^{\int_0^T g dW}] = e^{\frac{1}{2} \int_0^T g^2 ds}\)</span>.</p>
+Prove that <span class="arithmatex">\(\mathbb{E}[e^{\int_0^T g dW} = e^{\frac{1}{2} \int_0^T g^2 ds}\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p>This problem can be elegantly solved by analyzing the distributional properties of the Itô integral, directly utilizing the moment-generating function of the normal distribution.</p>
 <p>Let the random variable <span class="arithmatex">\(X = \int_0^T g(s) dW(s)\)</span>.
 Since <span class="arithmatex">\(g(s)\)</span> is a deterministic function of time (non-random), this Itô integral is a linear superposition of a Gaussian process, so <span class="arithmatex">\(X\)</span> still follows a normal distribution.</p>
 <p>According to the properties of stochastic integrals:
-* Expectation: <span class="arithmatex">\(\mathbb{E}[X] = \mathbb{E}[\int_0^T g dW] = 0\)</span>
-* Variance: By Itô isometry, <span class="arithmatex">\(Var(X) = \mathbb{E}[X^2] = \int_0^T g^2(s) ds\)</span></p>
+* Expectation: <span class="arithmatex">\(\mathbb{E}[X = \mathbb{E}[\int_0^T g dW = 0\)</span>
+* Variance: By Itô isometry, <span class="arithmatex">\(Var(X) = \mathbb{E}[X^2 = \int_0^T g^2(s) ds\)</span></p>
 <p>Therefore, <span class="arithmatex">\(X \sim N(0, \sigma^2)\)</span>, where <span class="arithmatex">\(\sigma^2 = \int_0^T g^2(s) ds\)</span>.</p>
-<p>The required <span class="arithmatex">\(\mathbb{E}[e^X]\)</span> in the original problem is precisely the value of the moment-generating function <span class="arithmatex">\(M_X(u) = \mathbb{E}[e^{uX}]\)</span> of the random variable <span class="arithmatex">\(X\)</span> at <span class="arithmatex">\(u=1\)</span>.
+<p>The quantity required in the original problem, <span class="arithmatex">\(\mathbb{E}[e^X\)</span>, is precisely the value of the moment-generating function <span class="arithmatex">\(M_X(u) = \mathbb{E}[e^{uX}\)</span> of the random variable <span class="arithmatex">\(X\)</span> evaluated at <span class="arithmatex">\(u=1\)</span>.
 For a normal distribution <span class="arithmatex">\(N(\mu, \sigma^2)\)</span>, its moment-generating function formula is <span class="arithmatex">\(M_X(u) = \exp(\mu u + \frac{1}{2}\sigma^2 u^2)\)</span>.</p>
 <p>Substituting <span class="arithmatex">\(\mu = 0, u = 1, \sigma^2 = \int_0^T g^2 ds\)</span>, we immediately obtain:</p>
 <div class="arithmatex">\[
-\mathbb{E}[e^{\int_0^T g dW}] = \exp\left( 0 + \frac{1}{2} \int_0^T g^2(s) ds \cdot 1^2 \right) = e^{\frac{1}{2} \int_0^T g^2 ds}
+\mathbb{E}[e^{\int_0^T g dW} = \exp\left( 0 + \frac{1}{2} \int_0^T g^2(s) ds \cdot 1^2 \right) = e^{\frac{1}{2} \int_0^T g^2 ds}
 \]</div>
-<p>Q.E.D.</p>
+<p>This completes the proof.</p>
 </details>
 <hr />
 <h3 id="exercise-7">Exercise 7</h3>
-<p><strong>Problem</strong><br />
-Let <span class="arithmatex">\( u = u(x, t) \)</span> satisfy the parabolic partial differential equation <span class="arithmatex">\( u_t + \frac{1}{2}u_{xx} = 0 \)</span>. Prove: <span class="arithmatex">\( \mathbb{E}[u(W(t), t)] = u(0, 0) \)</span>.</p>
+<p><strong>Problem</strong>
+Let <span class="arithmatex">\(u = u(x, t)\)</span> satisfy the parabolic partial differential equation <span class="arithmatex">\(u_t + \frac{1}{2}u_{xx} = 0\)</span>. Prove: <span class="arithmatex">\(\mathbb{E}[u(W(t), t) = u(0, 0)\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>This problem is a classic exercise that establishes a profound connection between partial differential equations (PDEs) and stochastic processes (SDEs), representing the simplest form of the Feynman-Kac formula.</p>
-<p>Define the stochastic process <span class="arithmatex">\( Y(t) = u(W(t), t) \)</span>. Apply the multivariate Itô formula to expand the differential of <span class="arithmatex">\( Y(t) \)</span>:</p>
+<p>This problem is a classic exercise establishing the profound connection between partial differential equations (PDEs) and stochastic processes (SDEs), i.e., the simplest form of the Feynman-Kac formula.</p>
+<p>Define the stochastic process <span class="arithmatex">\(Y(t) = u(W(t), t)\)</span>. Apply the multivariate Itô formula to expand the differential of <span class="arithmatex">\(Y(t)\)</span>:</p>
 <div class="arithmatex">\[
 dY(t) = \frac{\partial u}{\partial t} dt + \frac{\partial u}{\partial x} dW(t) + \frac{1}{2}\frac{\partial^2 u}{\partial x^2} (dW(t))^2
 \]</div>
-<p>Substitute the quadratic variation <span class="arithmatex">\( (dW)^2 = dt \)</span> and combine the <span class="arithmatex">\( dt \)</span> terms:</p>
+<p>Substitute the quadratic variation <span class="arithmatex">\((dW)^2 = dt\)</span> and combine the <span class="arithmatex">\(dt\)</span> terms:</p>
 <div class="arithmatex">\[
 dY(t) = \left( u_t + \frac{1}{2}u_{xx} \right) dt + u_x dW(t)
 \]</div>
-<p>Since the given condition states that <span class="arithmatex">\( u(x, t) \)</span> satisfies <span class="arithmatex">\( u_t + \frac{1}{2}u_{xx} = 0 \)</span>, the drift term is exactly zero. The differential equation simplifies to a pure diffusion:</p>
+<p>Since the given condition states that <span class="arithmatex">\(u(x, t)\)</span> satisfies <span class="arithmatex">\(u_t + \frac{1}{2}u_{xx} = 0\)</span>, the drift term is strictly 0. The differential equation simplifies to pure diffusion:</p>
 <div class="arithmatex">\[
 dY(t) = u_x(W(t), t) dW(t)
 \]</div>
-<p>Rewrite it in integral form:</p>
+<p>Write it in integral form:</p>
 <div class="arithmatex">\[
 Y(t) - Y(0) = \int_0^t u_x(W(s), s) dW(s)
 \]</div>
-<p>Take the expectation on both sides. Since the expectation of the Itô integral on the right-hand side is zero:</p>
+<p>Take the expectation on both sides. Since the expectation of the Itô integral on the right-hand side is 0:</p>
 <div class="arithmatex">\[
-\mathbb{E}[Y(t)] - \mathbb{E}[Y(0)] = 0 \implies \mathbb{E}[Y(t)] = \mathbb{E}[Y(0)]
+\mathbb{E}[Y(t) - \mathbb{E}[Y(0) = 0 \implies \mathbb{E}[Y(t) = \mathbb{E}[Y(0)
 \]</div>
-<p>Substitute back the definition of <span class="arithmatex">\( Y(t) \)</span>, noting that at the initial time, Brownian motion satisfies <span class="arithmatex">\( W(0) = 0 \)</span> almost surely:</p>
+<p>Substitute back the definition of <span class="arithmatex">\(Y(t)\)</span>, and note that at the initial time, Brownian motion satisfies <span class="arithmatex">\(W(0) = 0\)</span> almost surely:</p>
 <div class="arithmatex">\[
-\mathbb{E}[u(W(t), t)] = \mathbb{E}[u(W(0), 0)] = u(0, 0)
+\mathbb{E}[u(W(t), t) = \mathbb{E}[u(W(0), 0) = u(0, 0)
 \]</div>
 <p>The conclusion is proven.</p>
 </details>
 <hr />
 <h3 id="exercise-8">Exercise 8</h3>
-<p><strong>Problem</strong><br />
-1. Prove that <span class="arithmatex">\(e^{W(t)} = 1 + \frac{1}{2}\int_0^t e^{W(s)} ds + \int_0^t e^{W(s)} dW(s)\)</span>;<br />
-2. Prove that <span class="arithmatex">\(\mathbb{E}[e^{W(t)}] = 1 + \frac{1}{2}\int_0^t \mathbb{E}[e^{W(s)}] ds\)</span>, and hence <span class="arithmatex">\(\mathbb{E}[e^{W(t)}] = e^{t/2}\)</span>;<br />
-3. Compute <span class="arithmatex">\(\mathbb{E}[e^{iW(t)}]\)</span>, as well as the variances of <span class="arithmatex">\(e^{W(t)}, \sin W(t), \cos W(t)\)</span>.</p>
+<p><strong>Problem</strong>
+1. Prove that <span class="arithmatex">\(e^{W(t)} = 1 + \frac{1}{2}\int_0^t e^{W(s)} ds + \int_0^t e^{W(s)} dW(s)\)</span>;
+2. Prove that <span class="arithmatex">\(\mathbb{E}[e^{W(t)} = 1 + \frac{1}{2}\int_0^t \mathbb{E}[e^{W(s)} ds\)</span>, and hence <span class="arithmatex">\(\mathbb{E}[e^{W(t)} = e^{t/2}\)</span>;
+3. Compute <span class="arithmatex">\(\mathbb{E}[e^{iW(t)}\)</span>, and the variances of <span class="arithmatex">\(e^{W(t)}, \sin W(t), \cos W(t)\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
 </details>
 <p><strong>(1) SDE Form Verification</strong>
-Let <span class="arithmatex">\(f(x) = e^x\)</span>. Substituting <span class="arithmatex">\(W(t)\)</span> into Itô's formula <span class="arithmatex">\(df(W_t) = f'(W_t)dW_t + \frac{1}{2}f''(W_t)dt\)</span>:</p>
-<div class="arithmatex">\[
+    Let <span class="arithmatex">\(f(x) = e^x\)</span>. Substituting <span class="arithmatex">\(W(t)\)</span> into Itô's formula <span class="arithmatex">\(df(W_t) = f'(W_t)dW_t + \frac{1}{2}f''(W_t)dt\)</span>:</p>
+<pre><code>$$
 d(e^{W(t)}) = e^{W(t)}dW(t) + \frac{1}{2}e^{W(t)}dt
-\]</div>
-<p>Integrating both sides over <span class="arithmatex">\([0,t]\)</span> and using <span class="arithmatex">\(e^{W(0)} = e^0 = 1\)</span>:</p>
-<div class="arithmatex">\[
+$$
+
+Integrating both sides over $[0,t$ and using $e^{W(0)} = e^0 = 1$:
+
+$$
 e^{W(t)} - 1 = \int_0^t e^{W(s)} dW(s) + \frac{1}{2}\int_0^t e^{W(s)} ds
-\]</div>
-<p>Rearranging terms proves the first part.</p>
+$$
+
+Rearranging the terms proves the first part.
+</code></pre>
 <p><br></p>
-<p><strong>(2) Solving the Ordinary Differential Equation for the Expectation</strong><br />
-Take the expectation on both sides of the result from part (1). Since the Itô integral <span class="arithmatex">\(\int_0^t e^{W(s)} dW(s)\)</span> has expectation zero under suitable regularity conditions, we use Fubini’s theorem to interchange the expectation with the Riemann integral:</p>
-<div class="arithmatex">\[
-\mathbb{E}[e^{W(t)}] = 1 + \frac{1}{2}\int_0^t \mathbb{E}[e^{W(s)}] ds
-\]</div>
-<p>Let <span class="arithmatex">\(m(t) = \mathbb{E}[e^{W(t)}]\)</span>. The above equation becomes the integral equation <span class="arithmatex">\(m(t) = 1 + \frac{1}{2}\int_0^t m(s) ds\)</span>.<br />
-Differentiating it yields the initial value problem ODE:</p>
-<div class="arithmatex">\[
+<p><strong>(2) Solving the Ordinary Differential Equation for the Expectation</strong>
+    Take the expectation on both sides of the result from part (1). Since the Itô integral <span class="arithmatex">\(\int_0^t e^{W(s)} dW(s)\)</span> has expectation 0 under suitable regularity conditions, and using Fubini's theorem to interchange the expectation with the Riemann integral sign:</p>
+<pre><code>$$
+\mathbb{E}[e^{W(t)} = 1 + \frac{1}{2}\int_0^t \mathbb{E}[e^{W(s)} ds
+$$
+
+Let $m(t) = \mathbb{E}[e^{W(t)}$. The above equation becomes the integral equation $m(t) = 1 + \frac{1}{2}\int_0^t m(s) ds$.
+Differentiating it yields the initial value problem ODE:
+
+$$
 m'(t) = \frac{1}{2}m(t), \quad m(0) = 1
-\]</div>
-<p>Solving this ordinary differential equation immediately gives:</p>
-<div class="arithmatex">\[
-m(t) = \mathbb{E}[e^{W(t)}] = e^{t/2}
-\]</div>
+$$
+
+Solving this ordinary differential equation immediately gives:
+
+$$
+m(t) = \mathbb{E}[e^{W(t)} = e^{t/2}
+$$
+</code></pre>
 <p><br></p>
 <p><strong>(3) Characteristic Function and Trigonometric Variance Calculation</strong></p>
-<p><em>Compute <span class="arithmatex">\(\mathbb{E}[e^{iW(t)}]\)</span> (characteristic function):</em>
+<p><em>Compute <span class="arithmatex">\(\mathbb{E}[e^{iW(t)}\)</span> (characteristic function):</em>
 Again, apply Itô's formula to the complex-valued process <span class="arithmatex">\(Y(t) = e^{iW(t)}\)</span>:</p>
 <div class="arithmatex">\[
 dY(t) = i e^{iW(t)} dW(t) + \frac{1}{2}(i)^2 e^{iW(t)} dt = i Y(t) dW(t) - \frac{1}{2} Y(t) dt
 \]</div>
-<p>Taking expectation and differentiating, let <span class="arithmatex">\(m_2(t) = \mathbb{E}[Y(t)]\)</span>, we obtain the ODE: <span class="arithmatex">\(m_2'(t) = -\frac{1}{2}m_2(t)\)</span> with <span class="arithmatex">\(m_2(0)=1\)</span>.
+<p>Taking expectation and differentiating, let <span class="arithmatex">\(m_2(t) = \mathbb{E}[Y(t)\)</span>, we obtain the ODE: <span class="arithmatex">\(m_2'(t) = -\frac{1}{2}m_2(t)\)</span> with <span class="arithmatex">\(m_2(0)=1\)</span>.
 Solving gives:</p>
 <div class="arithmatex">\[
-\mathbb{E}[e^{iW(t)}] = e^{-t/2}
+\mathbb{E}[e^{iW(t)} = e^{-t/2}
 \]</div>
 <p><em>Compute the variance of <span class="arithmatex">\(e^{W(t)}\)</span>:</em>
-By the definition of variance, <span class="arithmatex">\(Var(e^{W(t)}) = \mathbb{E}[(e^{W(t)})^2] - (\mathbb{E}[e^{W(t)}])^2 = \mathbb{E}[e^{2W(t)}] - e^t\)</span>.
-Treating <span class="arithmatex">\(2W(t)\)</span> as the case with parameter <span class="arithmatex">\(2\)</span>, from the moment generating function result we have <span class="arithmatex">\(\mathbb{E}[e^{2W(t)}] = e^{4t/2} = e^{2t}\)</span>.</p>
+By the definition of variance, <span class="arithmatex">\(Var(e^{W(t)}) = \mathbb{E}[(e^{W(t)})^2 - (\mathbb{E}[e^{W(t)})^2 = \mathbb{E}[e^{2W(t)} - e^t\)</span>.
+Treating <span class="arithmatex">\(2W(t)\)</span> as the case with parameter <span class="arithmatex">\(2\)</span>, from the moment generating function result we have <span class="arithmatex">\(\mathbb{E}[e^{2W(t)} = e^{4t/2} = e^{2t}\)</span>.</p>
 <div class="arithmatex">\[
 Var(e^{W(t)}) = e^{2t} - e^t
 \]</div>
 <p><em>Compute the variances of <span class="arithmatex">\(\sin W(t), \cos W(t)\)</span>:</em>
-By Euler's formula, <span class="arithmatex">\(\mathbb{E}[e^{iW(t)}] = \mathbb{E}[\cos W(t)] + i\mathbb{E}[\sin W(t)] = e^{-t/2}\)</span>. Comparing real and imaginary parts:</p>
+By Euler's formula, <span class="arithmatex">\(\mathbb{E}[e^{iW(t)} = \mathbb{E}[\cos W(t) + i\mathbb{E}[\sin W(t) = e^{-t/2}\)</span>. Comparing real and imaginary parts:</p>
 <div class="arithmatex">\[
-\mathbb{E}[\cos W(t)] = e^{-t/2}, \quad \mathbb{E}[\sin W(t)] = 0
+\mathbb{E}[\cos W(t) = e^{-t/2}, \quad \mathbb{E}[\sin W(t) = 0
 \]</div>
-<p>Similarly, letting the parameter be <span class="arithmatex">\(2i\)</span>, we have <span class="arithmatex">\(\mathbb{E}[e^{2iW(t)}] = e^{-(2i)^2 t/(-2)} = e^{-2t}\)</span>, i.e.:</p>
+<p>Similarly, letting the parameter be <span class="arithmatex">\(2i\)</span>, we have <span class="arithmatex">\(\mathbb{E}[e^{2iW(t)} = e^{-(2i)^2 t/(-2)} = e^{-2t}\)</span>, i.e.:</p>
 <div class="arithmatex">\[
-\mathbb{E}[\cos 2W(t)] = e^{-2t}, \quad \mathbb{E}[\sin 2W(t)] = 0
+\mathbb{E}[\cos 2W(t) = e^{-2t}, \quad \mathbb{E}[\sin 2W(t) = 0
 \]</div>
 <p>Using the double-angle formulas to reduce powers:</p>
 <div class="arithmatex">\[
-\mathbb{E}[\sin^2 W(t)] = \mathbb{E}\left[ \frac{1 - \cos 2W(t)}{2} \right] = \frac{1 - e^{-2t}}{2}
+\mathbb{E}[\sin^2 W(t) = \mathbb{E}\left[ \frac{1 - \cos 2W(t)}{2} \right = \frac{1 - e^{-2t}}{2}
 \]</div>
 <div class="arithmatex">\[
-\mathbb{E}[\cos^2 W(t)] = \mathbb{E}\left[ \frac{1 + \cos 2W(t)}{2} \right] = \frac{1 + e^{-2t}}{2}
+\mathbb{E}[\cos^2 W(t) = \mathbb{E}\left[ \frac{1 + \cos 2W(t)}{2} \right = \frac{1 + e^{-2t}}{2}
 \]</div>
 <p>Finally, substituting into the variance formula:</p>
 <div class="arithmatex">\[
-Var(\sin W(t)) = \mathbb{E}[\sin^2] - (\mathbb{E}[\sin])^2 = \frac{1 - e^{-2t}}{2} - 0 = \frac{1 - e^{-2t}}{2}
+Var(\sin W(t)) = \mathbb{E}[\sin^2 - (\mathbb{E}[\sin)^2 = \frac{1 - e^{-2t}}{2} - 0 = \frac{1 - e^{-2t}}{2}
 \]</div>
-<p>$$
-Var(\cos W(t)) = \mathbb{E}[\cos^2] - (\mathbb{E}[\cos])^2 = \frac{1 + e^{-2t}}{2} - (e^{-t/2})^2 = \frac{1 - e^{-2t}}{2}
-$$
-<em>(Note: The manuscript here cleverly utilizes known results for trigonometric moments of the normal distribution.)</em></p>
+<div class="arithmatex">\[
+Var(\cos W(t)) = \mathbb{E}[\cos^2 - (\mathbb{E}[\cos)^2 = \frac{1 + e^{-2t}}{2} - (e^{-t/2})^2 = \frac{1 - e^{-2t}}{2}
+\]</div>
+<p><em>(Note: The manuscript here cleverly utilizes known results for trigonometric moments of the normal distribution.)</em></p>
 
 
 
