@@ -62,6 +62,8 @@ plugins:
             "📝 习题": "📝 Exercises"
             "📈 随机微分方程": "📈 Stochastic Differential Equations"
             "课程概览": "Course Overview"
+            "随机微分方程课程概览": "SDE Course Overview"
+            "渐近统计课程概览": "Asymptotic Statistics Course Overview"
             "📖 核心笔记": "📖 Core Notes"
             "第一章：条件期望": "Ch 1: Conditional Expectation"
             "第二章：布朗运动": "Ch 2: Brownian Motion"
@@ -85,7 +87,7 @@ nav:
   
   - 📚 笔记库:
       - 📈 随机微分方程:
-          - 课程概览: zh/Stochastic-Differential-Equation/0Intro.md
+          - 随机微分方程课程概览: zh/Stochastic-Differential-Equation/0Intro.md
           - 📖 笔记:
               - 第一章：条件期望: zh/Stochastic-Differential-Equation/1conditional_expectation.md
               - 第二章：布朗运动: zh/Stochastic-Differential-Equation/2Brown_Motion.md
@@ -94,12 +96,12 @@ nav:
               - 第五章：多元 Itô 积分: zh/Stochastic-Differential-Equation/5SDEs.md
               - 第六章：解的存在唯一性: zh/Stochastic-Differential-Equation/6SDEs.md
           - 📝 习题:
-              - Chapter 1-2: zh/Stochastic-Differential-Equation/sol_chap1_2.md
-              - Chapter 3-4: zh/Stochastic-Differential-Equation/sol_chap3_4.md
-              - Chapter 5-6: zh/Stochastic-Differential-Equation/sol_chap5_6.md
+              - SDE Chapter 1-2: zh/Stochastic-Differential-Equation/sol_chap1_2.md
+              - SDE Chapter 3-4: zh/Stochastic-Differential-Equation/sol_chap3_4.md
+              - SDE Chapter 5-6: zh/Stochastic-Differential-Equation/sol_chap5_6.md
               
       - 📊 渐近统计:
-          - 课程概览: zh/Asymptotic-statistics/0Intro.md
+          - 渐近统计课程概览: zh/Asymptotic-statistics/0Intro.md
           - 📖 笔记:
               - 第一章：随机收敛: zh/Asymptotic-statistics/1Stochastic_convergence.md
               - 第二章：特征函数: zh/Asymptotic-statistics/2Characteristic_Functions.md
