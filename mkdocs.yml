@@ -6,6 +6,7 @@ repo_name: jhao1122/Notes
 # ================= 主题配置 =================
 theme:
   name: material
+  custom_dir: overrides
   language: zh 
   features:
     - navigation.tabs           # 开启顶部大类导航标签
