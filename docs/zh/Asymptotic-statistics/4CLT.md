@@ -234,9 +234,13 @@
     公式中的参数 $\alpha$ 被称为**特征指数 (characteristic exponent)**。对应的分布被称为 **$\alpha$-稳定分布 ($\alpha$-stable)**。
 
 **关于参数的 Remark：**
+
 * $\alpha = 2$ 对应正态分布 $N(\gamma, 2c)$。
+
 * $\alpha = 1, \beta = 0$ 对应对称 Cauchy 分布。
+
 * $\beta$ 描述了分布的偏度。当 $\beta = 0$ 时，特征函数是实值的，说明分布是对称的。
+
 * 稳定分布在统计推断中存在困难，因为很难模拟，且极大似然估计难以直接写出，通常需要借助**经验特征函数 (Empirical Characteristic Functions)** 进行参数估计。
 
 ---
@@ -264,24 +268,26 @@
     1. **正态分布的吸引域 $DA(2)$:** $F \in DA(2)$ 当且仅当 $L(x) = \int_{|y|<x} y^2 dF(y)$ 是缓变函数。
        这等价于尾部概率满足：
        
-       $$
-       P(|X| > x) = o\left( x^{-2} \int_{|y|<x} y^2 dF(y) \right) \quad \text{当 } x \rightarrow \infty
-       $$
+    $$
+    P(|X| > x) = o\left( x^{-2} \int_{|y|<x} y^2 dF(y) \right) \quad \text{当 } x \rightarrow \infty
+    $$
        
        特别地，**所有二阶矩有限 ($E(X^2) < \infty$) 的分布都属于正态分布的吸引域**。
        
     2. **$\alpha < 2$ 稳定分布的吸引域 $DA(\alpha)$:**
        $F \in DA(\alpha)$ 当且仅当它的左右尾部具有 Pareto 衰减性质：
        
-       $$
-       F(-x) = \frac{c_1 + o(1)}{x^\alpha} L(x), \quad 1 - F(x) = \frac{c_2 + o(1)}{x^\alpha} L(x) \quad \text{当 } x \rightarrow \infty
-       $$
+    $$
+    F(-x) = \frac{c_1 + o(1)}{x^\alpha} L(x), \quad 1 - F(x) = \frac{c_2 + o(1)}{x^\alpha} L(x) \quad \text{当 } x \rightarrow \infty
+    $$
        
        其中 $c_1, c_2 \ge 0$ 且 $c_1 + c_2 > 0$。
 
 **推论 3.24 (矩的性质)：**
 如果 $X \in DA(\alpha)$，那么：
+
 * 对于 $\delta < \alpha$，有 $E(|X|^\delta) < \infty$。
+
 * 对于 $\delta > \alpha$ (且 $\alpha < 2$)，有 $E(|X|^\delta) = \infty$。
 （这也意味着如果 $\alpha < 2$，则方差必然无穷大；如果 $\alpha \le 1$，则均值也无穷大）。
 
@@ -318,15 +324,15 @@ $$
     
     1. 如果 $E(X^2) < \infty$，那么：
        
-       $$
-       \frac{S_n - n\mu}{\sigma \sqrt{n}} \xrightarrow{d} N(0,1)
-       $$
+    $$
+    \frac{S_n - n\mu}{\sigma \sqrt{n}} \xrightarrow{d} N(0,1)
+    $$
        
     2. 如果 $E(X^2) = \infty$ 且 $\alpha = 2$；或者 $\alpha < 2$，那么：
        
-       $$
-       \frac{S_n - a_n}{n^{1/\alpha} L_1(n)} \xrightarrow{d} G_\alpha
-       $$
+    $$
+    \frac{S_n - a_n}{n^{1/\alpha} L_1(n)} \xrightarrow{d} G_\alpha
+    $$
        
        其中 $G_\alpha$ 是某个 $\alpha$-稳定分布，$L_1$ 是适当的缓变函数。
 
@@ -337,8 +343,8 @@ $$
     * $F \in DNA(2)$ 当且仅当 $E(X^2) < \infty$。
     * 当 $\alpha < 2$ 时，$F \in DNA(\alpha)$ 当且仅当尾部严格服从幂律衰减（即没有额外的缓变函数干扰）：
       
-      $$
-      F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
-      $$
+    $$
+    F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
+    $$
 
     特别地，每一个 $\alpha$-稳定分布都属于它自己的正规吸引域。
