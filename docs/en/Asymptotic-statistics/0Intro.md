@@ -1,7 +1,6 @@
 ---
 tags:
-  - Mathematical Statistics
-  - Asymptotic Theory
+  - Asymptotic Statistic
   - Graduate Course
 ---
 

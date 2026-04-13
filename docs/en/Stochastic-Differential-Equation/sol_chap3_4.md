@@ -1,7 +1,5 @@
 ---
 tags:
-  - Probability Theory
-  - Stochastic Processes
   - Stochastic Differential Equations
   - Homework Exercises
 ---
