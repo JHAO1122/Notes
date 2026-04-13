@@ -32,6 +32,8 @@ tags:
 ### Part I: 随机收敛与极限定理基础
 * [x] [第一章：数据分布与随机收敛](1Stochastic_convergence.md) 
 * [x] [第二章：特征函数](2Characteristic_Functions.md)
+* [x] [第三章：中心极限定理（一）](3CLT.md)
+* [x] [第四章：中心极限定理（二）](4CLT.md)
 
 
 

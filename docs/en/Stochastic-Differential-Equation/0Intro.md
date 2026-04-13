@@ -52,6 +52,8 @@ Below is the detailed directory for the course notes:
 
 ### Part III: Applications of SDEs
 
+* [x] [Chapter 7: Option Pricing](7Option_Pricing.md)
+
 ### Part IV: 📝 Selected Solutions
 
 * [x] [Chapter 1-2 Solutions： Conditional Expectation and Brownian Motion](sol_chap1_2.md)
