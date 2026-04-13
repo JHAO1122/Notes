@@ -99,6 +99,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/6SDEs/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/7Option_Pricing/</loc>
+        <lastmod>2026-04-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/7Option_Pricing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/7Option_Pricing/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap1_2/</loc>
         <lastmod>2026-04-13</lastmod>
         <changefreq>daily</changefreq>
@@ -216,6 +223,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/6SDEs/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/6SDEs/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/7Option_Pricing/</loc>
+        <lastmod>2026-04-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/7Option_Pricing/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/7Option_Pricing/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap1_2/</loc>
