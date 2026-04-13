@@ -1,0 +1,52 @@
+/* =========================================
+   🏷️ 标签页 (Tags) 极客美化样式
+   ========================================= */
+
+/* 把默认的丑陋大标题变成精美的 3D 胶囊 */
+.md-typeset h2 .md-tag {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 25px; /* 圆角矩形，形成胶囊状 */
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); /* 极客渐变色 */
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 底部阴影，增加立体感 */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* 丝滑的动画过渡 */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 鼠标悬浮时的动态效果（呼吸感） */
+.md-typeset h2 .md-tag:hover {
+  transform: translateY(-3px) scale(1.02); /* 鼠标放上去时，胶囊会微微放大并上浮 */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* 阴影加深，感觉像飘起来了 */
+  filter: brightness(1.1);
+}
+
+/* 美化标签下方的文章列表，让它们更紧凑 */
+.md-typeset h2 + ul {
+  background-color: var(--md-default-fg-color--lightest);
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 10px 10px 30px;
+  margin-bottom: 2rem;
+}
+
+/* 移除列表中无聊的小圆点 */
+.md-typeset h2 + ul li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+/* 给列表项的链接增加悬浮效果 */
+.md-typeset h2 + ul li a {
+  color: var(--md-typeset-a-color);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.md-typeset h2 + ul li a:hover {
+  color: var(--md-accent-fg-color);
+  text-decoration: underline;
+}
