@@ -113,6 +113,20 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/sol_chap5_6/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/blog/</loc>
+        <lastmod>2026-04-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/blog/</loc>
+        <lastmod>2026-04-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/en/</loc>
         <lastmod>2026-04-13</lastmod>
         <changefreq>daily</changefreq>
