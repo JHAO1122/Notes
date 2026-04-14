@@ -52,7 +52,7 @@ Below is the detailed directory for the course notes:
 
 ### Part III: Applications of SDEs
 
-* [x] [Chapter 7: Option Pricing](7Option_Pricing.md)
+* [ ] [Chapter 7: Option Pricing](7Option_Pricing.md)
 
 ### Part IV: 📝 Selected Solutions
 

@@ -317,7 +317,7 @@ Using characteristic functions, we can give a very convenient equivalent charact
 
 ## 5. Lindeberg-Feller Central Limit Theorem (Lindeberg-Feller CLT)
 
-When we only know that the second moment exists, while the third moment may not exist, the Lyapunov condition fails. At this point, the **Lindeberg Condition (LC)** becomes the most precise necessary and sufficient condition for the CLT of independent variables to hold.
+When we only know that the second moment exists, while the third moment may not exist, the Lyapunov condition fails. At this point, the **Lindeberg Condition (LC)** becomes the most precise sufficient condition for the CLT of independent variables to hold.
 
 !!! abstract "Definition 3.9: Lindeberg Condition (LC)"
 

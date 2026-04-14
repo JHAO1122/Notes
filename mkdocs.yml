@@ -120,6 +120,9 @@ markdown_extensions:
   - admonition          # 提示框 (!!! info)
   - pymdownx.details    # 折叠框 (??? success)
   - pymdownx.superfences # 支持嵌套
+  - pymdownx.tasklist:
+      custom_checkbox: true  # 使用自定义样式（通常更好看）
+      clickable_checkbox: false # 如果你不想让别人在网页上点它，设为 false
   - pymdownx.arithmatex: # 数学公式支持
       generic: true
 
