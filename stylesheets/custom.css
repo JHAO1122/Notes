@@ -50,3 +50,13 @@
   color: var(--md-accent-fg-color);
   text-decoration: underline;
 }
+
+/* 让卡片内的内容间距更紧凑 */
+.md-typeset .grid.cards > li {
+  padding: 0.8rem;
+}
+
+/* 去掉卡片中间的横线（如果你不喜欢那条线的话） */
+.md-typeset .grid.cards > li hr {
+  display: none;
+}
