@@ -91,6 +91,18 @@
 
 我不仅会和概率测度与统计方法打交道，我还是一个狂热的足球迷（Visca el Barça!）。我的人生清单之一是看一场西班牙或阿根廷的世界杯淘汰赛或者巴塞罗那在诺坎普球场的欧冠比赛。
 
+## 📚 快速导航 (Quick Navigation)
+
+<div class="grid cards" markdown>
+
+-   :material-chart-line:{ .lg .middle } __随机微分方程__
+    [:octicons-arrow-right-24: 进入阅读](Stochastic-Differential-Equation/0Intro.md)
+
+-   :material-calculator:{ .lg .middle } __渐近统计__
+    [:octicons-arrow-right-24: 进入阅读](Asymptotic-statistics/0Intro.md)
+
+</div>
+
 * **Email**: jiahaot1122@gmail.com
 * **GitHub**: [@jhao1122](https://github.com/jhao1122)
 

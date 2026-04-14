@@ -94,6 +94,19 @@ If you find these notes helpful or inspiring, please consider giving this projec
 
 Beyond probability measures and statistical methods, I am a passionate football fan (*Visca el Barça!*). One of my bucket list items is to attend a World Cup knockout match involving Spain or Argentina, or a UEFA Champions League match featuring FC Barcelona at the Camp Nou.
 
+## 📚 Quick Navigation
+
+<div class="grid cards" markdown>
+
+-   :material-chart-line:{ .lg .middle } __Stochastic Differential Equations__
+    [:octicons-arrow-right-24: Enter](Stochastic-Differential-Equation/0Intro.md)
+
+-   :material-calculator:{ .lg .middle } __Asymptotic Statistics__
+    [:octicons-arrow-right-24: Enter](Asymptotic-statistics/0Intro.md)
+
+</div>
+
+
 * **Email**: jiahaot1122@gmail.com
 
 * **GitHub**: [@jhao1122](https://github.com/jhao1122)

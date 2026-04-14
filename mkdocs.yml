@@ -120,11 +120,17 @@ markdown_extensions:
   - admonition          # 提示框 (!!! info)
   - pymdownx.details    # 折叠框 (??? success)
   - pymdownx.superfences # 支持嵌套
+  - attr_list  # 必须添加这个，否则图标的大小和位置设置不生效
+  - md_in_html
+  - pymdownx.blocks.caption
   - pymdownx.tasklist:
       custom_checkbox: true  # 使用自定义样式（通常更好看）
       clickable_checkbox: false # 如果你不想让别人在网页上点它，设为 false
   - pymdownx.arithmatex: # 数学公式支持
       generic: true
+  - pymdownx.emoji:          # ⭐ 必须添加：否则 :material-xxx: 无法渲染成图标
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra:
   analytics:
