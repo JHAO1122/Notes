@@ -20,15 +20,15 @@ theme:
   palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: white
+      accent: grey
       toggle:
         icon: material/brightness-7
         title: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: white
       toggle:
         icon: material/brightness-4
         title: 切换到浅色模式
@@ -36,10 +36,6 @@ theme:
 # ================= 插件配置 =================
 plugins:
   - search
-  - blog:
-      blog_dir: blog        # 博客文件存放位置
-      post_excerpt: optional # 自动提取摘要
-      pagination: true
   - i18n:
       docs_structure: folder    # ⭐ 核心：对应你现在的 docs/zh 和 docs/en 结构
       fallback_to_default: true
@@ -75,14 +71,27 @@ plugins:
             "第二章：特征函数": "Ch 2: Characteristic Functions"
             "第三章：中心极限定理（一）": "Ch 3: Central Limit Theorem I"
             "第四章：中心极限定理（二）": "Ch 4: Central Limit Theorem II"
+  - encryptcontent:
+      title: "🔒 我的树洞"
+      summary: "希望我们有心照不宣的默契。请输入暗号以解密："
+      placeholder: "请输入密码"
+      decryption_button: "验证并解锁"
+      decryption_failure_message: "看来我们没有那么默契，即将强制退出..."
+  # - blog:
+  #     blog_dir: blog        # 博客文件存放位置
+  #     post_excerpt: optional # 自动提取摘要
+  #     pagination: true
 
 # ================= 导航栏配置 =================
 # 路径说明：这里只需写 zh/ 下的路径，i18n 插件会自动映射到 en/
 nav:
   - 🏠 首页: zh/index.md
   
-  - ✍️ 随笔: zh/blog/index.md
-  
+  - ✍️ 随笔:
+      - 🍃 碎碎念（介绍）: zh/blog/index.md
+      - 📁 往期博文:
+          - 男人的一生只哭十一次: zh/blog/posts/private/2026-4-15.md
+
   - 📚 笔记库:
       - 📈 随机微分方程:
           - 随机微分方程课程概览: zh/Stochastic-Differential-Equation/0Intro.md
@@ -112,7 +121,8 @@ nav:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js
-  
+  - javascripts/security.js
+
 extra_css:
   - stylesheets/custom.css
 
@@ -123,6 +133,7 @@ markdown_extensions:
   - attr_list  # 必须添加这个，否则图标的大小和位置设置不生效
   - md_in_html
   - pymdownx.blocks.caption
+  - pymdownx.progressbar
   - pymdownx.tasklist:
       custom_checkbox: true  # 使用自定义样式（通常更好看）
       clickable_checkbox: false # 如果你不想让别人在网页上点它，设为 false

@@ -7,3 +7,5 @@ __pycache__/
 translator.py
 migrate_folders.py
 test_model.py
+docs/zh/blog/posts/private/
+encryptcontent.cache

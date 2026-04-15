@@ -60,3 +60,194 @@
 .md-typeset .grid.cards > li hr {
   display: none;
 }
+
+
+/* ================= 随笔专属“信纸”排版 ================= */
+.blog-post-style {
+    font-family: "LXGW WenKai", "Microsoft YaHei", serif; /* 切换到更温和的衬线体/楷体 */
+    font-size: 1.05rem; /* 字体稍微放大，适合阅读长文 */
+    line-height: 2.0; /* 呼吸感极强的行高 */
+    letter-spacing: 0.03em;
+    color: #2c3e50; /* 墨蓝色字体，比纯黑更护眼 */
+    background-color: #fcfaf5; /* 淡淡的米黄色羊皮纸底色 */
+    padding: 2.5rem 3.5rem; /* 留出宽裕的页边距 */
+    border-radius: 12px; /* 圆角边框 */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03); /* 极其轻微的立体阴影 */
+    max-width: 48em; /* 收窄阅读宽度，拒绝屏幕拉满的“表格感” */
+    margin: 2rem auto; /* 居中显示 */
+}
+
+/* 让随笔里的提示框也变得温和，融入背景 */
+.blog-post-style .admonition.info {
+    border-left-color: #a50044; /* 注入巴萨红！ */
+    background-color: rgba(165, 0, 68, 0.04); /* 极其淡的红底色 */
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+/* 进度条的红蓝信仰定制 */
+.blog-post-style .progress {
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.blog-post-style .progress-bar {
+    background-color: #a50044; /* 进度条填充为巴萨红 */
+    border-radius: 6px;
+}
+
+/* 进度条基础样式 */
+.md-typeset .progress {
+  height: 0.8rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: #eee; /* 底色 */
+  border-radius: 0.4rem;
+}
+
+/* 进度条填充颜色（红蓝信仰色） */
+.md-typeset .progress-bar {
+  background-color: #a50044; /* 巴萨红 */
+  border-radius: 0.4rem;
+  height: 100%;
+  transition: width 0.6s ease;
+}
+
+/* 进度条上的文字 */
+.md-typeset .progress-label {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 0.5rem;
+  line-height: 0.8rem;
+}
+
+/* ================= 随笔专属：洗掉 Admonition 的学术味 ================= */
+
+/* 1. 基础设定：去掉所有生硬的阴影和边框 */
+.blog-post-style .admonition {
+    box-shadow: none !important;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    margin: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==================================
+   改造一：针对 abstract（欧冠历年出局记录）
+   设计目标：变成类似“旧票根”或“回忆清单”的手账感
+   ================================== */
+.blog-post-style .admonition.abstract {
+    background-color: #fbfaf8; /* 极浅的羊皮纸灰底 */
+    border: 1px dashed #d1cbbd; /* 虚线边框，增加手写记录感 */
+    padding: 1.5rem 2rem;
+}
+
+/* 改造标题栏：去掉底色，去掉图标 */
+.blog-post-style .admonition.abstract > .admonition-title {
+    background-color: transparent; 
+    border-bottom: 1px solid #e8e4d9;
+    color: #7a7369; /* 褪色感字体 */
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0 0 0.8rem 0;
+    margin-bottom: 1rem;
+}
+
+/* 🔪 极其重要：砍掉默认的图标！ */
+.blog-post-style .admonition.abstract > .admonition-title::before {
+    display: none; 
+}
+
+/* 调整列表行高，让那十一年的记录看起来像一首散文诗 */
+.blog-post-style .admonition.abstract ul {
+    line-height: 2.4;
+    color: #555;
+}
+
+
+/* ==================================
+   改造二：针对 tip（一语成谶）
+   设计目标：变成类似“内心独白”或“书籍摘抄”的引言块
+   ================================== */
+.blog-post-style .admonition.tip {
+    background-color: rgba(165, 0, 68, 0.02); /* 极其淡的巴萨红背景 */
+    border-left: 3px solid #a50044; /* 左侧留一条极简的红线 */
+    padding: 1.2rem 1.8rem;
+    font-style: italic; /* 斜体，增加文学感 */
+    color: #444;
+}
+
+/* 改造标题：变成小字体的导语 */
+.blog-post-style .admonition.tip > .admonition-title {
+    background-color: transparent;
+    color: #a50044;
+    padding: 0;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    font-style: normal; /* 标题不斜体 */
+    opacity: 0.8;
+}
+
+/* 🔪 砍掉 Tip 的灯泡图标 */
+.blog-post-style .admonition.tip > .admonition-title::before {
+    display: none; 
+}
+
+/* 加一个巨大的、半透明的背景引号装饰（氛围感拉满） */
+.blog-post-style .admonition.tip::after {
+    content: "”";
+    font-size: 8rem;
+    color: rgba(165, 0, 68, 0.04);
+    position: absolute;
+    bottom: -40px;
+    right: 20px;
+    font-family: Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* ==================================
+   改造三：针对 info 和 note (默认的深蓝框框)
+   设计目标：洗去“API文档味”，变成“柔和的蓝色便利贴 / 书签”
+   ================================== */
+
+.blog-post-style .admonition.info,
+.blog-post-style .admonition.note {
+    background-color: #f2f7fb; /* 极柔和的云朵蓝/婴儿蓝背景 */
+    border: none; /* 彻底去掉硬朗的边框 */
+    border-left: 4px solid #5fa6ea; /* 只保留左侧一条温柔的蓝线 */
+    border-radius: 2px 12px 12px 2px; /* 左边微直角，右边大圆角，模拟书签的形状 */
+    padding: 1.2rem 1.8rem;
+    box-shadow: 0 4px 15px rgba(95, 166, 234, 0.08); /* 极其轻微、带一点蓝色的呼吸阴影 */
+    margin: 2rem 0;
+}
+
+/* 改造标题栏：去掉深蓝色的死板底色，让它融入背景 */
+.blog-post-style .admonition.info > .admonition-title,
+.blog-post-style .admonition.note > .admonition-title {
+    background-color: transparent; /* 核心：干掉死板的底色！ */
+    color: #3b80c1; /* 标题变成清透的克莱因蓝 */
+    padding: 0 0 0.6rem 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(95, 166, 234, 0.2); /* 标题下方加一条极淡的分割线 */
+}
+
+/* 改造图标：保留图标，但让它变成水彩般的半透明感 */
+.blog-post-style .admonition.info > .admonition-title::before,
+.blog-post-style .admonition.note > .admonition-title::before {
+    background-color: #5fa6ea; 
+    opacity: 0.7; /* 降低饱和度和攻击性 */
+    transform: scale(0.9); /* 稍微缩小一点图标，显得更精致 */
+}
+
+/* 让蓝框框里的文字行高更舒适，颜色更柔和 */
+.blog-post-style .admonition.info p,
+.blog-post-style .admonition.note p {
+    color: #4a5568; 
+    line-height: 1.9;
+}
