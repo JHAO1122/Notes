@@ -251,3 +251,27 @@
     color: #4a5568; 
     line-height: 1.9;
 }
+
+/* 鼠标浮动到回到顶部按钮时，火箭抖动 */
+[data-md-component="top"]:hover {
+    animation: rocket-shake 0.5s infinite;
+}
+@keyframes rocket-shake {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(1px,-1px); }
+    50% { transform: translate(-1px,-2px); }
+    75% { transform: translate(1px,0); }
+    100% { transform: translate(0,0); }
+}
+
+/* 强制显示回到顶部按钮，并涂成巴萨红 */
+[data-md-component="top"] {
+  background-color: #a50044 !important; /* 核心：巴萨红 */
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 鼠标放上去稍微变暗一点 */
+[data-md-component="top"]:hover {
+  background-color: #820035 !important;
+}

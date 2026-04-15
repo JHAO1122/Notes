@@ -8,6 +8,9 @@ theme:
   name: material
   custom_dir: overrides
   language: zh 
+  icon:
+    repo: fontawesome/brands/github       # 让右上角的 GitHub 链接带上图标
+    back_to_top: material/rocket-launch
   features:
     - navigation.tabs           # 开启顶部大类导航标签
     - navigation.sections       # 侧边栏分组显示
@@ -16,7 +19,8 @@ theme:
     - search.suggest            # 搜索建议
     - content.code.copy         # 代码块复制按钮
     # - navigation.expand       # ⭐ 注意：这行被注释掉了，这样侧边栏就不会默认全部展开
-  
+    - navigation.instant
+
   palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
