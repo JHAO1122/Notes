@@ -1,5 +1,7 @@
-<div style="width: 100%; height: 250px; overflow: hidden; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-  <img src="assets/camp_nou.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" alt="Mes Que Un Club">
+<div style="width: 100%; height: 180px; overflow: hidden; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" markdown>
+
+![Mes Que Un Club](assets/camp_nou.jpg){: style="width: 100%; height: 180px; object-fit: cover; object-position: center 85%;" }
+
 </div>
 
 # ✍️ 个人随笔

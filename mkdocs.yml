@@ -19,7 +19,7 @@ theme:
     - search.suggest            # 搜索建议
     - content.code.copy         # 代码块复制按钮
     # - navigation.expand       # ⭐ 注意：这行被注释掉了，这样侧边栏就不会默认全部展开
-    - navigation.instant
+    # - navigation.instant
 
   palette: 
     - media: "(prefers-color-scheme: light)"
