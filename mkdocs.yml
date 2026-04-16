@@ -106,7 +106,7 @@ nav:
               - 第四章：Itô 积分: zh/Stochastic-Differential-Equation/4Ito_integrate.md
               - 第五章：多元 Itô 积分: zh/Stochastic-Differential-Equation/5SDEs.md
               - 第六章：解的存在唯一性: zh/Stochastic-Differential-Equation/6SDEs.md
-              - 第七章：期权定价: zh/Stochastic-Differential-Equation/7Option_Pricing.md
+              - 第七章：期权定价与停时: zh/Stochastic-Differential-Equation/7Option_Pricing.md
           - 📝 习题:
               - SDE Chapter 1-2: zh/Stochastic-Differential-Equation/sol_chap1_2.md
               - SDE Chapter 3-4: zh/Stochastic-Differential-Equation/sol_chap3_4.md
