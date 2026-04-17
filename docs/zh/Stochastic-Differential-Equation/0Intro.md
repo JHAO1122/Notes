@@ -41,7 +41,7 @@ tags:
 * [x] [第六章：解的存在唯一性定理](6SDEs.md)
 
 ### Part III: 随机微分方程的应用
-* [ ] [第七章：期权定价](7Option_Pricing.md)
+* [x] [第七章：期权定价与停时](7Option_Pricing.md)
 
 ### Part IV: 📝 课后习题精解 (Selected Solutions)
 * [x] [Chapter 1-2 Solutions：条件期望与布朗运动性质](sol_chap1_2.md)
