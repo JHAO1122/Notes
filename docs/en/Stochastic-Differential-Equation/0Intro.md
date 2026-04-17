@@ -62,6 +62,8 @@ Below is the detailed directory for the course notes:
 
 * [x] [Chapter 5-6 Solutions： ultivariate Itô's Formula and SDE Solving in Practice](sol_chap5_6.md)
 
+* [x] [Chapter 7 Solutions: Option Pricing and Stopping Times](sol_chap7.md)
+
 ---
 
 ## 📝 Notes & Formatting Details

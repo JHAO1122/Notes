@@ -4,7 +4,7 @@ tags:
   - Exercise Solutions
 ---
 
-# 📝 Exercise Solutions: Stopping Times, PDEs, and Option Pricing
+# 📝 Exercise Solutions: Option Pricing and Stopping Times
 
 !!! abstract "About This Page"
     This page contains the core exercise solutions for Chapter 7 of the *Stochastic Differential Equations* course, focusing on stopping time theory, hitting probabilities of high-dimensional Brownian motion, and European option pricing (Black-Scholes model). The content covers rigorous proofs for stopping times, deriving Dirichlet boundary value problems using martingale properties, and the complete derivation of the Put option formula using the fundamental solution of the heat equation (Gaussian kernel).
