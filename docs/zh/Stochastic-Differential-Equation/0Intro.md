@@ -47,10 +47,12 @@ tags:
 * [x] [Chapter 1-2 Solutions：条件期望与布朗运动性质](sol_chap1_2.md)
 * [x] [Chapter 3-4 Solutions：Itô 等距与二次变差计算](sol_chap3_4.md)
 * [x] [Chapter 5-6 Solutions：多元 Itô 公式与 SDE 求解实战](sol_chap5_6.md)
+* [x] [Chapter 7 Solutions: 期权定价与停时](sol_chap7.md)
+
 ---
 
 ## 📝 关于笔记的说明
 
-!!! warning "Work in Progress"
-    本页面内容正在持续建设中。
+!!! success "Construction Complete"
+    本页面内容基本已建设完毕。
     笔记中的长篇定理与习题解答均采用了 `折叠框` 设计，如发现 Typo，欢迎通过 Issue 或直接联系我指正！

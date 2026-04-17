@@ -68,7 +68,7 @@ plugins:
             "第四章：Itô 积分": "Ch 4: Itô Integrals"
             "第五章：多元 Itô 积分": "Ch 5: Multivariate Itô Calculus"
             "第六章：解的存在唯一性": "Ch 6: Existence & Uniqueness"
-            "第七章：期权定价": "Ch 7: Option Pricing"
+            "第七章：期权定价与停时": "Ch 7: Option Pricing and Stopping Times"
             "📝 课后习题精解": "📝 Exercise Solutions"
             "📊 渐近统计": "📊 Asymptotic Statistics"
             "第一章：随机收敛": "Ch 1: Stochastic Convergence"
@@ -111,6 +111,7 @@ nav:
               - SDE Chapter 1-2: zh/Stochastic-Differential-Equation/sol_chap1_2.md
               - SDE Chapter 3-4: zh/Stochastic-Differential-Equation/sol_chap3_4.md
               - SDE Chapter 5-6: zh/Stochastic-Differential-Equation/sol_chap5_6.md
+              - SDE Chapter 7: zh/Stochastic-Differential-Equation/sol_chap7.md
               
       - 📊 渐近统计:
           - 渐近统计课程概览: zh/Asymptotic-statistics/0Intro.md

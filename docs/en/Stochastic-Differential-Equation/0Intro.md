@@ -66,6 +66,7 @@ Below is the detailed directory for the course notes:
 
 ## 📝 Notes & Formatting Details
 
-!!! warning "Work in Progress"
-    The content of this section is currently under continuous construction. 
-    Long theorems within the notes utilize `collapsible blocks` for better readability. If you encounter any typos or errors, please feel free to open an Issue or contact me directly for correction!
+!!! success "Construction Complete"
+    This page is now substantially complete. 
+    Long theorems and exercise solutions in the notes feature a `folded box` design. 
+    If you spot any typos, please feel free to raise an Issue or contact me directly for corrections!
