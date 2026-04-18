@@ -8,7 +8,7 @@
 
 ## 👨‍💻 About Me
 
-Welcome to my academic notes homepage! I am an undergraduate student majoring in Statistics at the School of Mathematical Sciences, Zhejiang University (ZJU). Prior to this, I was a student in the Physics program of the Qiushi Science Class at Chu Kochen Honors College. I later transferred to the School of Mathematical Sciences driven by personal interest and long-term career goals.
+Welcome to my academic notes homepage! I am an undergraduate student majoring in Statistics at the [School of Mathematical Sciences](http://www.math.zju.edu.cn/), Zhejiang University (ZJU). Prior to this, I was a student in the Physics program of the Qiushi Science Class at [Chu Kochen Honors College](http://ckc.zju.edu.cn/). I later transferred to the School of Mathematical Sciences driven by personal interest and long-term career goals.
 
 Currently, my research interests focus on the following fields:
 
@@ -88,7 +88,6 @@ To improve efficiency, the Markdown formatting, LaTeX typesetting, and the trans
 
 Mathematical derivations inevitably contain typos or blind spots. If you find any errors while reading, or if you share a mutual interest in statistical inference, conformal prediction, probability theory, stochastic processes, or quantitative finance, I would be more than happy to connect!
 
-If you find these notes helpful or inspiring, please consider giving this project a ⭐ (Star) in the top right corner. It is the greatest encouragement for my commitment to open-source and documentation!
 
 ## 🌍 Beyond Math
 
