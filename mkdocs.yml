@@ -75,6 +75,7 @@ plugins:
             "第二章：特征函数": "Ch 2: Characteristic Functions"
             "第三章：中心极限定理（一）": "Ch 3: Central Limit Theorem I"
             "第四章：中心极限定理（二）": "Ch 4: Central Limit Theorem II"
+            "第五章：弱相依数据与混合条件": "Ch 5: Weakly Dependent Data and Mixing Conditions"
   - encryptcontent:
       title: "🔒 我的树洞"
       summary: "希望我们有心照不宣的默契。请输入暗号以解密："
@@ -120,6 +121,7 @@ nav:
               - 第二章：特征函数: zh/Asymptotic-statistics/2Characteristic_Functions.md
               - 第三章：中心极限定理（一）: zh/Asymptotic-statistics/3CLT.md
               - 第四章：中心极限定理（二）: zh/Asymptotic-statistics/4CLT.md
+              - 第五章：弱相依数据与混合条件: zh/Asymptotic-statistics/5Weakly_Dep.md
 
 
 # ================= 扩展配置 =================
