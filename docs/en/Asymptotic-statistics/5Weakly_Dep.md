@@ -1,4 +1,4 @@
-# Chapter 5: Weakly Dependent Data and Mixing Conditions
+# Chapter 5: Weakly Dependent Data I
 
 In classical limit theory, we usually assume that data is independent and identically distributed (i.i.d.). However, in practical applications (e.g., daily, weekly, or yearly sampled financial time series), data often exhibits serial correlation. This chapter explores stationary time series, various **Mixing Coefficients** that characterize data dependence, and a series of crucial covariance inequalities under weakly dependent conditions.
 

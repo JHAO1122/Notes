@@ -40,10 +40,11 @@ Below is the directory for this course:
 
 * [x] [Chapter 4: Central Limit Theorem (Part II)](4CLT.md)
 
-### Part II: Weakly Dependent Data and Stationary Process 
+### Part II: Weakly Dependent Data
 
-* [x] [Chapter 5: Weakly Dependent Data and Mixing Conditions](5Weakly_Dep.md)
+* [x] [Chapter 5: Weakly Dependent Data I](5Weakly_Dep.md)
 
+* [x] [Chapter 6: Weakly Dependent Data II](6Stantionary_process.md)
 
 ## 📝 Note on the Contents
 
