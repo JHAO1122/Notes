@@ -1,1 +1,52 @@
-# Personal study notes. Work in progress.
+# 🌿 Jiahao's Academic Garden
+
+[![Built with MkDocs](https://img.shields.io/badge/Built_with-MkDocs-blue.svg)](https://www.mkdocs.org/)
+[![Material for MkDocs](https://img.shields.io/badge/Material-for_MkDocs-526DD8.svg)](https://squidfunk.github.io/mkdocs-material/)
+
+Welcome to my personal academic space. This is a **Personal Notes Base** built with [MkDocs](https://www.mkdocs.org/). The purpose of this site is to crystallize the derivation processes of core courses for future reference and to record my journey exploring fields such as probability and statistics.
+
+---
+
+## 🗺️ Site Map
+
+Currently, the site is divided into two core sections:
+
+### 📚 Knowledge Base
+
+* **[Completed] Stochastic Differential Equations**
+  * Covers core theories including Brownian Motion, Itô Calculus, SDE solutions, Black-Scholes pricing, and the Feynman-Kac formula.
+  * Includes detailed solutions to exercises.
+
+* **[In Progress] Asymptotic Statistics**
+  * Covers advanced statistical theories such as weak convergence, CLT for dependent data, and asymptotic inference methods.
+
+### ✒️ Essays
+
+This is a place for passion and sentiment. No formulas, no derivations. For academic content, please refer to the Notes Base.
+
+---
+
+## 🛠️ Tech Stack
+
+Built with a static site generator, balancing reading experience and maintenance costs.
+
+* **Framework**: [MkDocs](https://www.mkdocs.org/)
+* **Theme**: [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+* **Math Rendering**: MathJax
+* **Others**: Utilizing Admonitions (`??? success`) and other tools to optimize the experience of reading long mathematical proofs.
+
+---
+
+## 👨‍💻 About the Author
+
+Currently an undergraduate student at the School of Mathematical Sciences, Zhejiang University.
+Deeply interested in High-dimensional Inference, Conformal Prediction, Probability & Stochastic Processes, and Quantitative Finance.
+
+* **Email**: jiahaot1122@gmail.com
+* **GitHub**: [@JHAO1122](https://github.com/JHAO1122)
+
+---
+
+## 📄 Copyright
+
+Commercial use of any content from this site is strictly prohibited without the author's explicit permission. Please cite the source when reposting or quoting.
