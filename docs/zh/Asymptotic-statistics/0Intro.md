@@ -39,6 +39,8 @@ tags:
 * [x] [第五章：弱相依数据（一）](5Weakly_Dep.md)
 * [x] [第五章：弱相依数据（二）](6Stantionary_process.md)
 
+### Part III: 统计推断的渐近方法
+* [x] [第七章：Delta方法](7Delta_Method.md)
 
 ---
 

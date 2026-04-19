@@ -46,6 +46,10 @@ Below is the directory for this course:
 
 * [x] [Chapter 6: Weakly Dependent Data II](6Stantionary_process.md)
 
+### Part III: Asymptotic Inference Tools
+
+* [x] [Chapter 7: Delta Method](7Delta_Method.md)
+
 ## 📝 Note on the Contents
 
 !!! warning "Work in Progress"
