@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,35 +8,33 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/4CLT/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/6Stantionary_process/">
       
       
-        <link rel="prev" href="../3CLT/">
+        <link rel="prev" href="../5Weakly_Dep/">
       
-      
-        <link rel="next" href="../5Weakly_Dep/">
       
       
         
-          <link rel="alternate" href="./" hreflang="zh">
+          <link rel="alternate" href="../../../Asymptotic-statistics/6Stantionary_process/" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Asymptotic-statistics/4CLT/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>第四章：中心极限定理（二） - Jiahao's Academic Space</title>
+        <title>Ch 6: Weakly Dependent Data II - Jiahao's Academic Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,8 +90,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#m-" class="md-skip">
-          跳转至
+        <a href="#chapter-6-weakly-dependent-data-ii" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -105,8 +103,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -126,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第四章：中心极限定理（二）
+              Ch 6: Weakly Dependent Data II
             
           </span>
         </div>
@@ -166,20 +164,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="zh" class="md-select__link">
+            <a href="../../../Asymptotic-statistics/6Stantionary_process/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Asymptotic-statistics/4CLT/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -200,16 +198,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -222,7 +220,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -234,7 +232,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -255,7 +253,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -265,13 +263,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         
   
   
     
   
-  🏠 首页
+  🏠 Home
 
       </a>
     </li>
@@ -290,7 +288,7 @@
           
   
   
-  ✍️ 随笔
+  ✍️ Blog
 
         </a>
       </li>
@@ -321,7 +319,7 @@
           
   
   
-  📚 笔记库
+  📚 Course Notes
 
         </a>
       </li>
@@ -352,9 +350,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -364,7 +362,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -384,14 +382,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🏠 首页
+    🏠 Home
   
 
     
@@ -434,7 +432,7 @@
   <span class="md-ellipsis">
     
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
     
@@ -450,7 +448,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
           </label>
@@ -621,7 +619,7 @@
   <span class="md-ellipsis">
     
   
-    📚 笔记库
+    📚 Course Notes
   
 
     
@@ -637,7 +635,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📚 笔记库
+    📚 Course Notes
   
 
           </label>
@@ -676,7 +674,7 @@
   <span class="md-ellipsis">
     
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
     
@@ -692,7 +690,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
           </label>
@@ -712,7 +710,7 @@
   <span class="md-ellipsis">
     
   
-    随机微分方程课程概览
+    SDE Course Overview
   
 
     
@@ -756,7 +754,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -772,7 +770,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -792,7 +790,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：条件期望
+    Ch 1: Conditional Expectation
   
 
     
@@ -820,7 +818,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：布朗运动
+    Ch 2: Brownian Motion
   
 
     
@@ -848,7 +846,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分
+    Ch 3: Stochastic Integrals
   
 
     
@@ -876,7 +874,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分
+    Ch 4: Itô Integrals
   
 
     
@@ -904,7 +902,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：多元 Itô 积分
+    Ch 5: Multivariate Itô Calculus
   
 
     
@@ -932,7 +930,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：解的存在唯一性
+    Ch 6: Existence & Uniqueness
   
 
     
@@ -960,7 +958,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：期权定价与停时
+    Ch 7: Option Pricing and Stopping Times
   
 
     
@@ -1012,7 +1010,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -1028,7 +1026,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1197,7 +1195,7 @@
   <span class="md-ellipsis">
     
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
     
@@ -1213,7 +1211,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
           </label>
@@ -1233,7 +1231,7 @@
   <span class="md-ellipsis">
     
   
-    渐近统计课程概览
+    Asymptotic Statistics Course Overview
   
 
     
@@ -1279,7 +1277,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1295,7 +1293,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1315,7 +1313,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：随机收敛
+    Ch 1: Stochastic Convergence
   
 
     
@@ -1343,7 +1341,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：特征函数
+    Ch 2: Characteristic Functions
   
 
     
@@ -1371,7 +1369,63 @@
   <span class="md-ellipsis">
     
   
-    第三章：中心极限定理（一）
+    Ch 3: Central Limit Theorem I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Central Limit Theorem II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Weakly Dependent Data I
   
 
     
@@ -1408,7 +1462,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：中心极限定理（二）
+    Ch 6: Weakly Dependent Data II
   
 
     
@@ -1426,7 +1480,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：中心极限定理（二）
+    Ch 6: Weakly Dependent Data II
   
 
     
@@ -1438,7 +1492,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1447,49 +1501,49 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-m-clt" class="md-nav__link">
+  <a href="#4-weakly-dependent-stationary-processes-and-the-central-limit-theorem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. \(m\)-相依随机变量序列的 CLT
+        4. Weakly Dependent Stationary Processes and the Central Limit Theorem
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-cramer-wold" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 多维中心极限定理与 Cramér-Wold 定理
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-stable-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 稳定分布 (Stable Distributions)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 稳定分布 (Stable Distributions)">
+    <nav class="md-nav" aria-label="4. Weakly Dependent Stationary Processes and the Central Limit Theorem">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-spectral-representation" class="md-nav__link">
+  <a href="#41-definition-of-weak-dependence-and-long-memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 稳定分布的谱表示 (Spectral Representation)
+        4.1 Definition of Weak Dependence and Long Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-asymptotic-variance-of-strongly-mixing-processes-and-the-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Asymptotic Variance of Strongly Mixing Processes and the CLT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-coupling-method-exponential-inequalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Coupling Method &amp; Exponential Inequalities
       
     </span>
   </a>
@@ -1502,22 +1556,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-domain-of-attraction-da" class="md-nav__link">
+  <a href="#5-spectral-method-for-estimating-long-run-covariance-sigma2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 吸引域 (Domain of Attraction, DA)
+        5. Spectral Method for Estimating Long-Run Covariance \(\sigma^2\)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 吸引域 (Domain of Attraction, DA)">
+    <nav class="md-nav" aria-label="5. Spectral Method for Estimating Long-Run Covariance \(\sigma^2\)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
+  <a href="#51-periodograms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 吸引域的特征刻画
+        5.1 Periodograms
       
     </span>
   </a>
@@ -1525,10 +1579,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
+  <a href="#52-asymptotic-distribution-of-the-periodogram-for-linear-processes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 标准化与中心化常数的选取
+        5.2 Asymptotic Distribution of the Periodogram for Linear Processes
       
     </span>
   </a>
@@ -1541,13 +1595,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-dna" class="md-nav__link">
+  <a href="#6-nonparametric-kernel-smoothing-estimation-of-spectral-density" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 广义中心极限定理与正规吸引域 (DNA)
+        6. Nonparametric Kernel Smoothing Estimation of Spectral Density
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6. Nonparametric Kernel Smoothing Estimation of Spectral Density">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-constructing-the-log-periodogram-regression-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Constructing the Log-Periodogram Regression Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-nadaraya-watson-nw-kernel-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Nadaraya-Watson (NW) Kernel Estimator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1555,62 +1637,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5Weakly_Dep/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第五章：弱相依数据（一）
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../6Stantionary_process/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第六章：弱相依数据（二）
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1652,7 +1678,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1661,49 +1687,49 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-m-clt" class="md-nav__link">
+  <a href="#4-weakly-dependent-stationary-processes-and-the-central-limit-theorem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. \(m\)-相依随机变量序列的 CLT
+        4. Weakly Dependent Stationary Processes and the Central Limit Theorem
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-cramer-wold" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 多维中心极限定理与 Cramér-Wold 定理
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-stable-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 稳定分布 (Stable Distributions)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 稳定分布 (Stable Distributions)">
+    <nav class="md-nav" aria-label="4. Weakly Dependent Stationary Processes and the Central Limit Theorem">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-spectral-representation" class="md-nav__link">
+  <a href="#41-definition-of-weak-dependence-and-long-memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 稳定分布的谱表示 (Spectral Representation)
+        4.1 Definition of Weak Dependence and Long Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-asymptotic-variance-of-strongly-mixing-processes-and-the-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Asymptotic Variance of Strongly Mixing Processes and the CLT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-coupling-method-exponential-inequalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Coupling Method &amp; Exponential Inequalities
       
     </span>
   </a>
@@ -1716,22 +1742,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-domain-of-attraction-da" class="md-nav__link">
+  <a href="#5-spectral-method-for-estimating-long-run-covariance-sigma2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 吸引域 (Domain of Attraction, DA)
+        5. Spectral Method for Estimating Long-Run Covariance \(\sigma^2\)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 吸引域 (Domain of Attraction, DA)">
+    <nav class="md-nav" aria-label="5. Spectral Method for Estimating Long-Run Covariance \(\sigma^2\)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
+  <a href="#51-periodograms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 吸引域的特征刻画
+        5.1 Periodograms
       
     </span>
   </a>
@@ -1739,10 +1765,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
+  <a href="#52-asymptotic-distribution-of-the-periodogram-for-linear-processes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 标准化与中心化常数的选取
+        5.2 Asymptotic Distribution of the Periodogram for Linear Processes
       
     </span>
   </a>
@@ -1755,13 +1781,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-dna" class="md-nav__link">
+  <a href="#6-nonparametric-kernel-smoothing-estimation-of-spectral-density" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 广义中心极限定理与正规吸引域 (DNA)
+        6. Nonparametric Kernel Smoothing Estimation of Spectral Density
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6. Nonparametric Kernel Smoothing Estimation of Spectral Density">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-constructing-the-log-periodogram-regression-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Constructing the Log-Periodogram Regression Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-nadaraya-watson-nw-kernel-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Nadaraya-Watson (NW) Kernel Estimator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1786,274 +1840,232 @@
   
 
 
-<h1 id="m-">中心极限定理（二）：<span class="arithmatex">\(m\)</span>-相依序列与稳定分布</h1>
-<p>本节将突破传统中心极限定理中“独立同分布 (i.i.d.)”的限制，首先探讨具有局部依赖性的 <strong><span class="arithmatex">\(m\)</span>-相依序列 (m-dependent sequence)</strong> 的中心极限定理；随后通过 <strong>Cramér-Wold 定理</strong> 将一维结论推广到多维；最后深入研究极限分布的广义形式——<strong>稳定分布 (Stable Distributions)</strong> 以及它们的<strong>吸引域 (Domain of Attraction, DA)</strong>。</p>
-<hr />
-<h2 id="1-m-clt">1. <span class="arithmatex">\(m\)</span>-相依随机变量序列的 CLT</h2>
-<p>在实际应用中（如时间序列分析），数据往往存在序列相关性。我们首先考虑一种最简单的相依结构：局部相依。</p>
+<h1 id="chapter-6-weakly-dependent-data-ii">Chapter 6: Weakly Dependent Data II</h1>
+<h2 id="4-weakly-dependent-stationary-processes-and-the-central-limit-theorem">4. Weakly Dependent Stationary Processes and the Central Limit Theorem</h2>
+<p>Through the mixing coefficients and covariance inequalities introduced previously, we can now formally define the phenomena of "weak dependence" and "long memory" in time series, and establish the Central Limit Theorem (CLT) for mixing processes.</p>
+<h3 id="41-definition-of-weak-dependence-and-long-memory">4.1 Definition of Weak Dependence and Long Memory</h3>
+<p>Suppose <span class="arithmatex">\(\{X_i\}\)</span> is a weakly stationary process with finite second moments. Let its autocovariance function be denoted as <span class="arithmatex">\(\gamma(j) = Cov(X_i, X_{i+j})\)</span>.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 3.13：<span class="arithmatex">\(m\)</span>-相依序列 (<span class="arithmatex">\(m\)</span>-dependent sequence)</p>
-<p>一个随机变量序列 <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> 被称为 <strong><span class="arithmatex">\(m\)</span>-相依的 (<span class="arithmatex">\(m\)</span>-dependent)</strong>，如果存在一个正整数 <span class="arithmatex">\(m\)</span>，使得对于任意的 <span class="arithmatex">\(n \ge 1\)</span> 和 <span class="arithmatex">\(j \ge m\)</span>，随机变量 <span class="arithmatex">\(X_{n+j}\)</span> 独立于由前 <span class="arithmatex">\(n\)</span> 个变量生成的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{F}_n = \sigma\{X_i, 1 \le i \le n\}\)</span>。</p>
-<p><em>例子：阶数为 <span class="arithmatex">\(q\)</span> 的滑动平均模型 MA(<span class="arithmatex">\(q\)</span>) 是一个 <span class="arithmatex">\(q+1\)</span> 相依序列。</em></p>
+<p class="admonition-title">Definition 4.8: Weakly Dependent &amp; Long Memory</p>
+<p>If the autocovariance is absolutely summable:</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty} |\gamma(k)| &lt; \infty
+\]</div>
+<p>Then the process is said to be <strong>weakly dependent</strong> (or a short memory process).</p>
+<p>If the absolute sum of the autocovariance diverges:</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty} |\gamma(k)| = \infty
+\]</div>
+<p>Then the process is said to be a <strong>long memory process</strong>.</p>
 </div>
+<p><strong>Relationship between Mixing Coefficients and Weak Dependence:</strong></p>
+<p>Let <span class="arithmatex">\(\alpha(k)\)</span> be the strong mixing (<span class="arithmatex">\(\alpha\)</span>-mixing) coefficient on the <span class="arithmatex">\(\sigma\)</span>-algebra generated by <span class="arithmatex">\(\{X_i\}_{i \in \mathbb{Z}}\)</span>.
+According to Davydov's Inequality (Lemma 4.7, taking <span class="arithmatex">\(r=q\)</span>), if there exists <span class="arithmatex">\(q &gt; 2\)</span> such that <span class="arithmatex">\(E|X_i|^q &lt; \infty\)</span>, and for <span class="arithmatex">\(p = \frac{q}{q-2}\)</span> the series convergence condition <span class="arithmatex">\(\sum_{k=0}^{\infty} \alpha^{1/p}(k) &lt; \infty\)</span> is satisfied, then:</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty} |\gamma(k)| \le 2p \|X\|_q^2 \sum_{k=0}^{\infty} \alpha^{1/p}(k) &lt; \infty
+\]</div>
+<p>This indicates that a process satisfying this decay rate of mixing is necessarily <strong>weakly dependent (short memory)</strong>.
+Particularly, if the process is <strong>Geometric Strong Mixing (GSM)</strong>, i.e., <span class="arithmatex">\(\alpha(k) \le C\rho^k\)</span> (where <span class="arithmatex">\(\rho \in (0,1)\)</span>), then:</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty} \alpha^{1/p}(k) \le C \sum_{k=0}^{\infty} \rho^{k/p} = \frac{C}{1 - \rho^{1/p}} &lt; \infty
+\]</div>
+<p>This automatically guarantees weak dependence. In general, to ensure the convergence of the series, we only need the mixing coefficients to satisfy a polynomial decay <span class="arithmatex">\(\alpha(k) \sim k^{-p(1+\eta)}\)</span> (<span class="arithmatex">\(\eta &gt; 0\)</span>).</p>
+<hr />
+<h3 id="42-asymptotic-variance-of-strongly-mixing-processes-and-the-clt">4.2 Asymptotic Variance of Strongly Mixing Processes and the CLT</h3>
+<p>When applying the Central Limit Theorem, the limit of the variance of the sample mean is a core quantity.</p>
 <div class="admonition success">
-<p class="admonition-title">定理 3.14 (<span class="arithmatex">\(m\)</span>-相依序列的 CLT)</p>
-<p>设 <span class="arithmatex">\(\{X_n\}_{n \ge 1}\)</span> 是一个 <span class="arithmatex">\(m\)</span>-相依序列。假设这些随机变量是<strong>一致有界的 (uniformly bounded)</strong>（即存在常数 <span class="arithmatex">\(M\)</span> 使得 <span class="arithmatex">\(\sup_n |X_n| \le M\)</span>）。
-记 <span class="arithmatex">\(S_n = \sum_{i=1}^n X_i\)</span>，<span class="arithmatex">\(\sigma_n^2 = Var(S_n)\)</span>。如果满足方差增长条件：</p>
+<p class="admonition-title">Lemma 4.9 (Asymptotic Variance of Strongly Mixing Processes)</p>
+<p>Let <span class="arithmatex">\(\{X_t\}_{t \in \mathbb{Z}}\)</span> be a zero-mean, real-valued weakly stationary process. Assume there exists <span class="arithmatex">\(r &gt; 2\)</span> such that:</p>
 <div class="arithmatex">\[
-\frac{\sigma_n}{m n^{1/3}} \rightarrow \infty \quad \text{当 } n \rightarrow \infty
+\sup_{t \in \mathbb{Z}} E|X_t|^r &lt; \infty, \quad \sum_{k \ge 1} \alpha(k)^{1 - \frac{2}{r}} &lt; +\infty
 \]</div>
-<p>并且 <span class="arithmatex">\(m = o(n^{1/3})\)</span>，那么有：</p>
+<p>Then, the series <span class="arithmatex">\(\sum_{k \in \mathbb{Z}} \gamma(k)\)</span> converges absolutely to a non-negative constant <span class="arithmatex">\(\sigma^2\)</span>. Moreover, the variance of the partial sum <span class="arithmatex">\(S_n = \sum_{t=1}^n X_t\)</span> satisfies:</p>
 <div class="arithmatex">\[
-\frac{S_n - E(S_n)}{\sigma_n} \xrightarrow{d} N(0,1)
-\]</div>
-<p><em>(注：通过引入 Lindeberg 条件，可以去掉“一致有界”的假设，详见 S. Janson (2021))</em>。</p>
-</div>
-<details class="proof">
-<summary>定理 3.14 的证明：分块技术 (Blocking Technique)（点击展开）</summary>
-<p><strong>核心思想：</strong> 将整个序列划分为“大块”和“小块”交替的形式。由于 <span class="arithmatex">\(m\)</span>-相依性，只要大块之间的间隔（小块的长度）大于等于 <span class="arithmatex">\(m\)</span>，大块之间就是相互独立的。</p>
-<p>不失一般性，假设 <span class="arithmatex">\(E(X_j) = 0\)</span>。由于序列一致有界，存在 <span class="arithmatex">\(M\)</span> 使得 <span class="arithmatex">\(\sup_n |X_n| \le M\)</span>。</p>
-<p><strong>第一步：构造大块与小块</strong></p>
-<p>令大块的长度为 <span class="arithmatex">\(k = [n^{1/3}]\)</span>，小块的长度为 <span class="arithmatex">\(m\)</span>。
-则总的块数为 <span class="arithmatex">\(p_n = [\frac{n}{k+m}] = O(n^{2/3})\)</span>。记 <span class="arithmatex">\(B_j = j(k+m)\)</span>。</p>
-<p>我们构造：
-* <strong>大块 (Large blocks):</strong> <span class="arithmatex">\(Y_j = X_{B_{j-1}+1} + \cdots + X_{B_{j-1}+k}\)</span> （共 <span class="arithmatex">\(p_n\)</span> 块）
-* <strong>小块 (Small blocks):</strong> <span class="arithmatex">\(Z_j = X_{B_{j-1}+k+1} + \cdots + X_{B_j}\)</span> （共 <span class="arithmatex">\(p_n\)</span> 块）
-* <strong>剩余块 (Residual block):</strong> <span class="arithmatex">\(R_p = X_{B_{p_n}+1} + \cdots + X_n\)</span></p>
-<p>由于当 <span class="arithmatex">\(n\)</span> 足够大时 <span class="arithmatex">\(k \gg m\)</span>，且大块 <span class="arithmatex">\(Y_j\)</span> 之间的间隔为 <span class="arithmatex">\(m\)</span>，因此序列 <span class="arithmatex">\(\{Y_j\}_{j=1}^{p_n}\)</span> 相互独立。同理，<span class="arithmatex">\(\{Z_j\}_{j=1}^{p_n}\)</span> 也相互独立。</p>
-<p>我们将总和分解为三部分：</p>
-<div class="arithmatex">\[
-S_n = \sum_{j=1}^{p_n} Y_j + \sum_{j=1}^{p_n} Z_j + R_p := S_n' + S_n'' + S_n'''
-\]</div>
-<p><strong>第二步：控制小块和剩余块的方差</strong></p>
-<p>由于 <span class="arithmatex">\(\sup_j |X_j| \le M\)</span>，我们有协方差界 <span class="arithmatex">\(|E(X_j X_l)| \le M^2\)</span>。
-对于剩余块 <span class="arithmatex">\(S_n'''\)</span>：</p>
-<div class="arithmatex">\[
-Var(S_n''') = E[(S_n''')^2] = \left| \sum_{j,l} E(X_{\dots} X_{\dots}) \right| \le (n - p_n(k+m))^2 M^2 \le (k+m)^2 M^2
-\]</div>
-<p>因此，依概率有界：</p>
-<div class="arithmatex">\[
-S_n''' = O_p(\sqrt{Var(S_n''')}) = O_p(k+m) = O_p(n^{1/3})
-\]</div>
-<p>同理，对于小块之和 <span class="arithmatex">\(S_n''\)</span>：</p>
-<div class="arithmatex">\[
-E[Z_j^2] = E\left[ \left(\sum X_{\dots}\right)^2 \right] \le m^2 M^2
-\]</div>
-<p>由于 <span class="arithmatex">\(Z_j\)</span> 相互独立，有 <span class="arithmatex">\(Var(S_n'') = \sum Var(Z_j) \le p_n m^2 M^2\)</span>。从而：</p>
-<div class="arithmatex">\[
-S_n'' = O_p(p_n^{1/2} m) = O_p(n^{1/3} m)
-\]</div>
-<p><strong>第三步：证明小块和剩余块可以忽略</strong></p>
-<p>利用题设条件 <span class="arithmatex">\(\sigma_n / (m n^{1/3}) \rightarrow \infty\)</span>，我们有：</p>
-<div class="arithmatex">\[
-\frac{S_n''}{\sigma_n} = \frac{S_n''}{m n^{1/3}} \times \frac{m n^{1/3}}{\sigma_n} = O_p(1) \cdot o(1) = o_p(1)
-\]</div>
-<p>同理，因为 <span class="arithmatex">\(k = O(n^{1/3})\)</span>，有 <span class="arithmatex">\(S_n''' / \sigma_n = o_p(1)\)</span>。</p>
-<p>因此，总和的标准化形式可以写为：</p>
-<div class="arithmatex">\[
-\frac{S_n}{\sigma_n} = \frac{S_n'}{\sigma_n} + o_p(1) = \frac{\sigma_n'}{\sigma_n} \frac{S_n'}{\sigma_n'} + o_p(1)
-\]</div>
-<p>其中 <span class="arithmatex">\(\sigma_n'^2 = Var(S_n')\)</span>。接下来只需要证明 <span class="arithmatex">\(\sigma_n'^2 / \sigma_n^2 \rightarrow 1\)</span> 且 <span class="arithmatex">\(S_n' / \sigma_n' \xrightarrow{d} N(0,1)\)</span>。</p>
-<p><strong>第四步：方差渐近等价</strong></p>
-<p>展开 <span class="arithmatex">\(S_n\)</span> 的方差：</p>
-<div class="arithmatex">\[
-E(S_n^2) = E(S_n'^2) + E(S_n''^2) + E(S_n'''^2) + 2E(S_n' S_n'') + \dots
-\]</div>
-<p>其中交叉项由于 <span class="arithmatex">\(m\)</span>-相依性，大部分协方差为 0：</p>
-<div class="arithmatex">\[
-E(S_n' S_n'') = \sum_{j,l=1}^{p_n} Cov(Y_j, Z_l) = \sum_{j=1}^{p_n} [Cov(Y_j, Z_j) + Cov(Y_j, Z_{j-1})] \le 2p_n (mM)^2
-\]</div>
-<p>综合各项误差的阶数，可以得到：</p>
-<div class="arithmatex">\[
-\left| 1 - \frac{\sigma_n'^2}{\sigma_n^2} \right| = O\left( \frac{m^2 n^{2/3}}{\sigma_n^2} \right) \rightarrow 0
-\]</div>
-<p>故 <span class="arithmatex">\(\sigma_n'^2 / \sigma_n^2 \rightarrow 1\)</span>。</p>
-<p><strong>第五步：大块的中心极限定理</strong></p>
-<p>由于大块 <span class="arithmatex">\(Y_j\)</span> 之间是相互独立的，我们可以对 <span class="arithmatex">\(\{Y_j\}\)</span> 验证 Lindeberg 条件。
-由于 <span class="arithmatex">\(|Y_j| \le kM = O(n^{1/3}) = o(\sigma_n')\)</span>，对于任意 <span class="arithmatex">\(\eta &gt; 0\)</span>，当 <span class="arithmatex">\(n\)</span> 足够大时，指示函数 <span class="arithmatex">\(\mathbb{I}(|Y_j| \ge \eta \sigma_n')\)</span> 将恒为 0：</p>
-<div class="arithmatex">\[
-\frac{1}{\sigma_n'^2} \sum_{j=1}^{p_n} E\left[ Y_j^2 \mathbb{I}(|Y_j| \ge \eta \sigma_n') \right] \rightarrow 0
-\]</div>
-<p>因此 Lindeberg 条件成立。由 Lindeberg-Feller CLT，我们得到 <span class="arithmatex">\(S_n' / \sigma_n' \xrightarrow{d} N(0,1)\)</span>。
-结合 Slutsky 定理，最终结论得证。 <span class="arithmatex">\(\square\)</span></p>
-</details>
-<hr />
-<h2 id="2-cramer-wold">2. 多维中心极限定理与 Cramér-Wold 定理</h2>
-<p>为了将一维的中心极限定理推广到多维随机向量，我们借助 Cramér-Wold 定理。它的核心思想是：<strong>多维随机向量的弱收敛，等价于其在任意一维方向上投影的弱收敛。</strong></p>
-<div class="admonition info">
-<p class="admonition-title">定理 3.15：Cramér-Wold 定理</p>
-<p>设 <span class="arithmatex">\(X_n\)</span> 是 <span class="arithmatex">\(\mathbb{R}^d\)</span> 中的随机向量序列，<span class="arithmatex">\(X\)</span> 是随机向量。则 <span class="arithmatex">\(X_n\)</span> 依分布收敛于 <span class="arithmatex">\(X\)</span> 当且仅当对于任意的线性组合方向 <span class="arithmatex">\(a \in \mathbb{R}^d\)</span>，都有：</p>
-<div class="arithmatex">\[
-X_n \xrightarrow{d} X \iff a^T X_n \xrightarrow{d} a^T X, \quad \forall a \in \mathbb{R}^d
+\lim_{n \rightarrow \infty} n Var\left(\frac{S_n}{n}\right) = \sigma^2
 \]</div>
 </div>
 <details class="proof">
-<summary>Cramér-Wold 定理的证明（点击展开）</summary>
-<p>"<span class="arithmatex">\(\implies\)</span>"：由连续映射定理 (Continuous Mapping Theorem) 显然成立，因为内积函数 <span class="arithmatex">\(g(x) = a^T x\)</span> 是连续函数。</p>
-<p>"<span class="arithmatex">\(\impliedby\)</span>"：利用特征函数 (Characteristic Function)。设 <span class="arithmatex">\(X_n = (X_{n1}, \dots, X_{nd})^T\)</span>。
-任取 <span class="arithmatex">\(c = (c_1, \dots, c_d)^T \in \mathbb{R}^d\)</span>。已知条件意味着：</p>
+<summary>Proof of Lemma 4.9 (Click to expand)</summary>
+<p>First, we use Davydov's Inequality (Lemma 4.7) to study the absolute convergence of the series <span class="arithmatex">\(\sum_{k \in \mathbb{Z}} \gamma(k)\)</span>.
+Taking <span class="arithmatex">\(q = r\)</span> in Lemma 4.7, according to the parameter relationship <span class="arithmatex">\(\frac{1}{q} + \frac{1}{r} = 1 - \frac{1}{p}\)</span>, we solve for <span class="arithmatex">\(p\)</span>:</p>
 <div class="arithmatex">\[
-c^T X_n = c_1 X_{n1} + \dots + c_d X_{nd} \xrightarrow{d} c_1 X_1 + \dots + c_d X_d = c^T X
+\frac{1}{p} = 1 - \frac{2}{r} \implies p = \frac{r}{r-2}
 \]</div>
-<p>根据 Lévy 连续性定理，一维随机变量的弱收敛意味着其特征函数逐点收敛。
-对于 <span class="arithmatex">\(c^T X_n\)</span>，其在参数 <span class="arithmatex">\(t\)</span> 处的特征函数为：</p>
+<p>Substituting this into Davydov's Inequality, we obtain the bound for the covariance <span class="arithmatex">\(\gamma(k) = Cov(X_0, X_k)\)</span>:</p>
 <div class="arithmatex">\[
-\phi_{c^T X_n}(t) = E\left[ e^{it(c_1 X_{n1} + \dots + c_d X_{nd})} \right]
+|\gamma(k)| \le \frac{2r}{r-2} (E|X_0|^r)^{2/r} (2\alpha(k))^{1 - 2/r}
 \]</div>
-<p>特别地，取 <span class="arithmatex">\(t=1\)</span>，则有：</p>
+<p>Since the given condition states that <span class="arithmatex">\(\sum_{k \ge 1} \alpha(k)^{1 - 2/r} &lt; +\infty\)</span>, by the comparison test, the series <span class="arithmatex">\(\sum_{k \in \mathbb{Z}} |\gamma(k)|\)</span> converges absolutely.</p>
+<p>Next, we examine the variance of the standardized sum. Since <span class="arithmatex">\(\{X_t\}\)</span> is weakly stationary, we can expand its variance:</p>
 <div class="arithmatex">\[
-\lim_{n \rightarrow \infty} E\left[ e^{i(c_1 X_{n1} + \dots + c_d X_{nd})} \right] = E\left[ e^{i(c_1 X_1 + \dots + c_d X_d)} \right]
+n Var\left(\frac{S_n}{n}\right) = n^{-1} \sum_{0 \le s, t \le n-1} Cov(X_s, X_t) = \sum_{k=-(n-1)}^{n-1} \left( 1 - \frac{|k|}{n} \right) \gamma(k)
 \]</div>
-<p>这恰好就是多维随机向量 <span class="arithmatex">\(X_n\)</span> 在 <span class="arithmatex">\(c\)</span> 处的联合特征函数 <span class="arithmatex">\(\phi_n(c_1, \dots, c_d)\)</span>。即：</p>
+<p>Because <span class="arithmatex">\(\gamma(k)\)</span> is absolutely summable, according to the Dominated Convergence Theorem (or Kronecker's Lemma), as <span class="arithmatex">\(n \rightarrow \infty\)</span>, the weight <span class="arithmatex">\(\left( 1 - \frac{|k|}{n} \right) \rightarrow 1\)</span>. Therefore:</p>
 <div class="arithmatex">\[
-\lim_{n \rightarrow \infty} \phi_n(c) = \phi_X(c), \quad \forall c \in \mathbb{R}^d
+\lim_{n \rightarrow \infty} n Var\left(\frac{S_n}{n}\right) = \sum_{k=-\infty}^{\infty} \gamma(k) = \sigma^2 \ge 0
 \]</div>
-<p>联合特征函数处处收敛，由多维 Lévy 连续性定理，即证 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>。 <span class="arithmatex">\(\square\)</span></p>
+<p>The non-negativity of the variance guarantees that the limit <span class="arithmatex">\(\sigma^2 \ge 0\)</span>. The proof is complete. <span class="arithmatex">\(\square\)</span></p>
 </details>
-<p>利用 Cramér-Wold 定理，多维 i.i.d. 序列的 CLT 就变得非常直接：</p>
+<p>With the guarantee of the asymptotic variance, we can directly state the Central Limit Theorem for <span class="arithmatex">\(\alpha\)</span>-mixing processes:</p>
 <div class="admonition success">
-<p class="admonition-title">定理 3.16 (多元中心极限定理 Multivariate CLT)</p>
-<p>设 <span class="arithmatex">\(X_1, X_2, \dots\)</span> 是 i.i.d. 的 <span class="arithmatex">\(d\)</span> 维随机向量，具有均值向量 <span class="arithmatex">\(\mu\)</span> 和有限的协方差矩阵 <span class="arithmatex">\(\Sigma\)</span>。记 <span class="arithmatex">\(\overline{X}_n = \frac{1}{n} \sum_{i=1}^n X_i\)</span>，则：</p>
+<p class="admonition-title">Theorem 4.13 (CLT for <span class="arithmatex">\(\alpha\)</span>-mixing processes)</p>
+<p>Let <span class="arithmatex">\(\{X_t\}_{t \in \mathbb{Z}}\)</span> be a zero-mean, real-valued strictly stationary process. Assume there exists <span class="arithmatex">\(r &gt; 2\)</span> and <span class="arithmatex">\(\beta &gt; 0\)</span> such that:</p>
 <div class="arithmatex">\[
-\sqrt{n}(\overline{X}_n - \mu) \xrightarrow{d} N_d(0, \Sigma)
+E|X_t|^r &lt; \infty, \quad \alpha(k) \le a k^{-\beta}
+\]</div>
+<p>Where the constant <span class="arithmatex">\(a &gt; 0\)</span> and the decay order <span class="arithmatex">\(\beta &gt; r / (r - 2)\)</span>. If the long-run variance <span class="arithmatex">\(\sigma^2 = \sum_{k=-\infty}^{\infty} \gamma(k) &gt; 0\)</span>, then we have:</p>
+<div class="arithmatex">\[
+\frac{S_n}{\sigma \sqrt{n}} \xrightarrow{d} N(0, 1)
 \]</div>
 </div>
 <hr />
-<h2 id="3-stable-distributions">3. 稳定分布 (Stable Distributions)</h2>
-<p>对于独立同分布且方差有限的序列，其标准化的和收敛于正态分布。一个自然的问题是：<strong>如果我们放宽方差有限的条件，标准化的和还能收敛到哪些非退化的分布？</strong>
-（想想 Cauchy 分布的例子）。</p>
-<p>这就引出了稳定分布的概念。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 3.17：稳定分布 (Stable Distribution)</p>
-<p>一个分布 <span class="arithmatex">\(F\)</span> 被称为是<strong>稳定的 (Stable)</strong>，如果对于独立且服从 <span class="arithmatex">\(F\)</span> 的随机变量 <span class="arithmatex">\(X_1, X_2\)</span>，以及任意非负常数 <span class="arithmatex">\(c_1, c_2\)</span>，都存在常数 <span class="arithmatex">\(a(c_1, c_2)\)</span> 和 <span class="arithmatex">\(b(c_1, c_2) &gt; 0\)</span>，使得：</p>
-<div class="arithmatex">\[
-c_1 X_1 + c_2 X_2 \stackrel{d}{=} b(c_1, c_2) X + a(c_1, c_2)
-\]</div>
-<p>其中 <span class="arithmatex">\(X \sim F\)</span> 且独立于 <span class="arithmatex">\(X_1, X_2\)</span>。</p>
-</div>
-<p><strong>定理 3.18 (稳定分布的极限性质)：</strong>
-非退化的稳定分布族，恰好等价于所有可能的、通过适当中心化和标准化后的 i.i.d. 随机变量之和的<strong>非退化极限分布族</strong>。</p>
-<h3 id="31-spectral-representation">3.1 稳定分布的谱表示 (Spectral Representation)</h3>
-<p>由于除了极少数情况（正态分布、Cauchy 分布、Lévy 分布），稳定分布没有闭式解析的概率密度函数，我们通常通过特征函数来刻画它们。</p>
+<h3 id="43-coupling-method-exponential-inequalities">4.3 Coupling Method &amp; Exponential Inequalities</h3>
+<p>To prove complex mixing limit theorems, statisticians invented the <strong>Coupling Method</strong>. Its core idea is constructively replacing dependent stationary random sequences with <strong>independent</strong> sequences that have the same distribution, thereby allowing the use of established conclusions for independent sequences.</p>
 <div class="admonition success">
-<p class="admonition-title">定理 3.19 (稳定分布的特征函数)</p>
-<p>一个稳定分布的特征函数具有如下形式：</p>
+<p class="admonition-title">Lemma 4.10 (Bradley's Lemma / Coupling Lemma)</p>
+<p>Let <span class="arithmatex">\((X, Y)\)</span> be a random vector taking values in <span class="arithmatex">\(\mathbb{R}^d \times \mathbb{R}\)</span>, and for some <span class="arithmatex">\(p \in [1, \infty)\)</span> let <span class="arithmatex">\(Y \in L^p(P)\)</span>.
+Let <span class="arithmatex">\(c\)</span> be a real number such that <span class="arithmatex">\(\|Y+c\|_p &gt; 0\)</span>, and <span class="arithmatex">\(\xi \in (0, \|Y+c\|_p]\)</span>. Then, there exists an auxiliary random variable <span class="arithmatex">\(Y^*\)</span> satisfying:</p>
+<ol>
+<li><span class="arithmatex">\(P_{Y^*} = P_Y\)</span> (i.e., <span class="arithmatex">\(Y^*\)</span> and <span class="arithmatex">\(Y\)</span> have the same distribution), and <span class="arithmatex">\(Y^*\)</span> is independent of <span class="arithmatex">\(X\)</span>.</li>
+<li>The distance between them is controlled by the mixing coefficient:</li>
+</ol>
 <div class="arithmatex">\[
-\phi_X(t) = E(e^{itX}) = \exp\left\{ i\gamma t - c|t|^\alpha (1 - i\beta \text{sgn}(t) z(t, \alpha)) \right\}
-\]</div>
-<p>其中参数范围为：位置参数 <span class="arithmatex">\(\gamma \in \mathbb{R}\)</span>，尺度参数 <span class="arithmatex">\(c &gt; 0\)</span>，特征指数 <span class="arithmatex">\(\alpha \in (0, 2]\)</span>，偏度参数 <span class="arithmatex">\(\beta \in [-1, 1]\)</span>。并且有：</p>
-<div class="arithmatex">\[
-z(t, \alpha) = \begin{cases} \tan\left(\frac{\pi \alpha}{2}\right), &amp; \text{if } \alpha \ne 1 \\ -\frac{2}{\pi} \ln|t|, &amp; \text{if } \alpha = 1 \end{cases}
+P(|Y - Y^*| &gt; \xi) \le 11 \left( \xi^{-1} \|Y+c\|_p \right)^{\frac{p}{2p+1}} \{ \alpha(\sigma(X), \sigma(Y)) \}^{\frac{2p}{2p+1}}
 \]</div>
 </div>
-<div class="admonition info">
-<p class="admonition-title">定义 3.20 (<span class="arithmatex">\(\alpha\)</span>-稳定分布)</p>
-<p>公式中的参数 <span class="arithmatex">\(\alpha\)</span> 被称为<strong>特征指数 (characteristic exponent)</strong>。对应的分布被称为 <strong><span class="arithmatex">\(\alpha\)</span>-稳定分布 (<span class="arithmatex">\(\alpha\)</span>-stable)</strong>。</p>
-</div>
-<p><strong>关于参数的 Remark：</strong></p>
+<p>Utilizing Bradley's Lemma, we can extend classical exponential inequalities for independent sequences (such as Hoeffding's and Bernstein's inequalities) to mixing sequences.</p>
+<p><strong>Review: Classical Inequalities for Independent Sequences (Theorem 4.11)</strong>
+Let <span class="arithmatex">\(X_1, \dots, X_n\)</span> be independent zero-mean random variables, and <span class="arithmatex">\(S_n = \sum X_i\)</span>.</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(\alpha = 2\)</span> 对应正态分布 <span class="arithmatex">\(N(\gamma, 2c)\)</span>。</p>
+<p><strong>Hoeffding's Inequality</strong>: If <span class="arithmatex">\(a_i \le X_i \le b_i\)</span>, then <span class="arithmatex">\(P(|S_n| \ge t) \le 2 \exp\left\{ -\frac{2t^2}{\sum (b_i - a_i)^2} \right\}\)</span>.</p>
 </li>
 <li>
-<p><span class="arithmatex">\(\alpha = 1, \beta = 0\)</span> 对应对称 Cauchy 分布。</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\beta\)</span> 描述了分布的偏度。当 <span class="arithmatex">\(\beta = 0\)</span> 时，特征函数是实值的，说明分布是对称的。</p>
-</li>
-<li>
-<p>稳定分布在统计推断中存在困难，因为很难模拟，且极大似然估计难以直接写出，通常需要借助<strong>经验特征函数 (Empirical Characteristic Functions)</strong> 进行参数估计。</p>
+<p><strong>Bernstein's Inequality</strong>: If Cramér's condition <span class="arithmatex">\(E|X_i|^p \le c^{p-2} p! EX_i^2 &lt; \infty\)</span> is satisfied, then <span class="arithmatex">\(P(|S_n| \ge t) \le 2 \exp\left\{ -\frac{2t^2}{4\sum EX_i^2 + 2ct} \right\}\)</span>.</p>
 </li>
 </ul>
+<p><strong>Extension: Exponential Inequalities for Mixing Sequences (Theorem 4.12, Bosq 1998)</strong>
+For a zero-mean real-valued process <span class="arithmatex">\((X_t)\)</span>, if it is uniformly bounded <span class="arithmatex">\(\sup_t \|X_t\|_\infty \le b\)</span>. Then for integer <span class="arithmatex">\(q \in [1, n/2]\)</span> and <span class="arithmatex">\(\epsilon &gt; 0\)</span>:</p>
+<div class="arithmatex">\[
+P(|S_n| \ge n\epsilon) \le 4 \exp\left(-\frac{\epsilon^2}{8b^2} q\right) + 22 \left(1 + \frac{4b}{\epsilon}\right)^{1/2} q \alpha\left(\left[\frac{n}{2q}\right]\right)
+\]</div>
+<p><em>(Note: The first term of this inequality is similar to the exponential decay of independent sequences, while the second term is a penalty introduced by the dependence, controlled by the <span class="arithmatex">\(\alpha\)</span>-mixing coefficient.)</em></p>
 <hr />
-<h2 id="4-domain-of-attraction-da">4. 吸引域 (Domain of Attraction, DA)</h2>
-<p>给定一个 <span class="arithmatex">\(\alpha\)</span>-稳定分布 <span class="arithmatex">\(G_\alpha\)</span>，我们需要知道什么样的原始分布 <span class="arithmatex">\(F\)</span>，在经过怎样的标准化 <span class="arithmatex">\(b_n &gt; 0\)</span> 和中心化 <span class="arithmatex">\(a_n\)</span> 后，其样本和的极限会落入 <span class="arithmatex">\(G_\alpha\)</span>？</p>
+<h2 id="5-spectral-method-for-estimating-long-run-covariance-sigma2">5. Spectral Method for Estimating Long-Run Covariance <span class="arithmatex">\(\sigma^2\)</span></h2>
+<p>Previously, we defined the long-run covariance in the CLT as <span class="arithmatex">\(\sigma^2 = \sum_{k=-\infty}^{\infty} \gamma(k)\)</span>. In actual data, we need a consistent estimator for it. The frequency domain method (spectral analysis) provides an extremely elegant perspective for this.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 3.21：吸引域 (Domain of Attraction)</p>
-<p>如果对于 i.i.d. 且服从分布 <span class="arithmatex">\(F\)</span> 的随机变量之和 <span class="arithmatex">\(S_n = \sum_{i=1}^n X_i\)</span>，存在常数 <span class="arithmatex">\(a_n \in \mathbb{R}\)</span> 和 <span class="arithmatex">\(b_n &gt; 0\)</span>，使得：</p>
+<p class="admonition-title">Definition &amp; Theorem 4.14: Spectral Density Function</p>
+<p>Define the <strong>spectral density function</strong> <span class="arithmatex">\(f(\lambda)\)</span> of a time series <span class="arithmatex">\(\{X_t\}\)</span> as the Fourier Transform of the autocovariance function <span class="arithmatex">\(\gamma(k)\)</span>:
+For frequency <span class="arithmatex">\(\lambda \in (-\pi, \pi)\)</span>:</p>
 <div class="arithmatex">\[
-b_n^{-1} (S_n - a_n) \xrightarrow{d} G_\alpha
+f(\lambda) = \frac{1}{2\pi} \sum_{k=-\infty}^{\infty} \gamma(k) \exp(-ik\lambda)
 \]</div>
-<p>则称分布 <span class="arithmatex">\(F\)</span> 属于 <span class="arithmatex">\(G_\alpha\)</span> 的<strong>吸引域 (Domain of Attraction)</strong>，记为 <span class="arithmatex">\(X \in DA(G_\alpha)\)</span> 或 <span class="arithmatex">\(X \in DA(\alpha)\)</span>。</p>
+<p>If <span class="arithmatex">\(\sum |\gamma(k)| &lt; \infty\)</span>, the process has a spectral density <span class="arithmatex">\(f(\lambda)\)</span>. Particularly, at frequency <span class="arithmatex">\(\lambda = 0\)</span>:</p>
+<div class="arithmatex">\[
+\sum_{k=-\infty}^{\infty} \gamma(k) = 2\pi f(0)
+\]</div>
 </div>
-<h3 id="41">4.1 吸引域的特征刻画</h3>
-<p>为了刻画吸引域，需要用到<strong>缓变函数 (Slowly varying function)</strong> 的概念：若函数 <span class="arithmatex">\(L\)</span> 满足对所有 <span class="arithmatex">\(t &gt; 0\)</span> 都有 <span class="arithmatex">\(\lim_{x \to \infty} L(tx)/L(x) = 1\)</span>，则称 <span class="arithmatex">\(L\)</span> 为缓变函数。</p>
+<p><strong>Core Idea:</strong> The problem of estimating the long-run variance <span class="arithmatex">\(\sigma^2\)</span> is equivalent to estimating the value of the spectral density at zero frequency, <span class="arithmatex">\(2\pi f(0)\)</span>.</p>
+<h3 id="51-periodograms">5.1 Periodograms</h3>
+<p>To estimate the spectral density, we introduce the concept of the periodogram. Given a sample <span class="arithmatex">\(\{X_1, \dots, X_n\}\)</span>, at its Fourier frequencies <span class="arithmatex">\(\omega_j = 2\pi j / n \in [-\pi, \pi]\)</span>, the periodogram is defined as:</p>
+<div class="arithmatex">\[
+l_n(\omega_j) = \frac{1}{n} \left| \sum_{t=1}^n X_t e^{-it\omega_j} \right|^2, \quad j \in T = \{0, \pm 1, \dots, \pm [n/2]\}
+\]</div>
+<p>It can be equivalently expanded as the Fourier transform of the sample autocovariance function <span class="arithmatex">\(\hat{\gamma}(k)\)</span>:</p>
+<div class="arithmatex">\[
+\begin{cases} 
+l_n(0) = n|\overline{X}|^2 \\ 
+l_n(\omega_j) = \sum_{|k|&lt;n} \hat{\gamma}(k) e^{-ik\omega_j} &amp; \text{if } \omega_j \ne 0 
+\end{cases}
+\]</div>
+<p>Where <span class="arithmatex">\(\hat{\gamma}(k) = n^{-1} \sum_{t=1}^{n-|k|} (X_t - \overline{X})(X_{t+|k|} - \overline{X})\)</span>.</p>
+<p>To analyze it on a continuous frequency domain, we define the <strong>Extended Periodogram</strong> <span class="arithmatex">\(I_n(\omega)\)</span>: For any <span class="arithmatex">\(\omega \in [-\pi, \pi]\)</span>, <span class="arithmatex">\(I_n(\omega)\)</span> is defined as the value of <span class="arithmatex">\(l_n(\omega_k)\)</span> at the Fourier frequency closest to <span class="arithmatex">\(\omega\)</span> (i.e., a step function).</p>
 <div class="admonition success">
-<p class="admonition-title">定理 3.22 与 推论 3.23 (吸引域的刻画)</p>
-<ol>
-<li><strong>正态分布的吸引域 <span class="arithmatex">\(DA(2)\)</span>:</strong> <span class="arithmatex">\(F \in DA(2)\)</span> 当且仅当 <span class="arithmatex">\(L(x) = \int_{|y|&lt;x} y^2 dF(y)\)</span> 是缓变函数。
-   这等价于尾部概率满足：</li>
-</ol>
+<p class="admonition-title">Proposition 4.16 (Expected Properties of Periodograms)</p>
+<p>If <span class="arithmatex">\(\{X_t\}\)</span> is a stationary sequence with mean <span class="arithmatex">\(\mu\)</span> and absolutely summable autocovariances, then:</p>
 <div class="arithmatex">\[
-P(|X| &gt; x) = o\left( x^{-2} \int_{|y|&lt;x} y^2 dF(y) \right) \quad \text{当 } x \rightarrow \infty
+E(I_n(0)) - n\mu^2 \rightarrow 2\pi f(0)
 \]</div>
-<p>特别地，<strong>所有二阶矩有限 (<span class="arithmatex">\(E(X^2) &lt; \infty\)</span>) 的分布都属于正态分布的吸引域</strong>。</p>
-<ol>
-<li><strong><span class="arithmatex">\(\alpha &lt; 2\)</span> 稳定分布的吸引域 <span class="arithmatex">\(DA(\alpha)\)</span>:</strong>
-   <span class="arithmatex">\(F \in DA(\alpha)\)</span> 当且仅当它的左右尾部具有 Pareto 衰减性质：</li>
-</ol>
+<p>For non-zero frequencies <span class="arithmatex">\(\omega \ne 0\)</span>:</p>
 <div class="arithmatex">\[
-F(-x) = \frac{c_1 + o(1)}{x^\alpha} L(x), \quad 1 - F(x) = \frac{c_2 + o(1)}{x^\alpha} L(x) \quad \text{当 } x \rightarrow \infty
+E(l_n(\omega)) \rightarrow 2\pi f(\omega)
 \]</div>
-<p>其中 <span class="arithmatex">\(c_1, c_2 \ge 0\)</span> 且 <span class="arithmatex">\(c_1 + c_2 &gt; 0\)</span>。</p>
+<p>Particularly, if the true mean <span class="arithmatex">\(\mu = 0\)</span>, then <span class="arithmatex">\(E(I_n(\omega))\)</span> uniformly converges to <span class="arithmatex">\(2\pi f(\omega)\)</span> on <span class="arithmatex">\([-\pi, \pi]\)</span>.</p>
 </div>
-<p><strong>推论 3.24 (矩的性质)：</strong>
-如果 <span class="arithmatex">\(X \in DA(\alpha)\)</span>，那么：</p>
+<details class="proof">
+<summary>Proof of Proposition 4.16 (Click to expand)</summary>
+<p>First, for the zero frequency <span class="arithmatex">\(\omega = 0\)</span>:</p>
+<div class="arithmatex">\[
+E(l_n(0)) - n\mu^2 = n E(\overline{X}^2) - n\mu^2 = n Var(\overline{X}) = n Var(S_n/n)
+\]</div>
+<p>From the conclusion of Lemma 4.9, as <span class="arithmatex">\(n \rightarrow \infty\)</span>, the above expression converges to <span class="arithmatex">\(\sum_{k=-\infty}^{\infty} \gamma(k) = 2\pi f(0)\)</span>.</p>
+<p>Now consider <span class="arithmatex">\(\omega \in (0, \pi]\)</span>. Using the equivalent representation of <span class="arithmatex">\(l_n(\omega)\)</span> to expand its expectation:</p>
+<div class="arithmatex">\[
+E(l_n(\omega)) = \sum_{|k|&lt;n} \left( 1 - \frac{|k|}{n} \right) \gamma(k) e^{-ik g(n,\omega)}
+\]</div>
+<p>Where <span class="arithmatex">\(g(n,\omega)\)</span> is the Fourier frequency closest to <span class="arithmatex">\(\omega\)</span>.
+Since the autocovariance <span class="arithmatex">\(\gamma(\cdot)\)</span> is absolutely summable, the sequence <span class="arithmatex">\(\sum_{|k|&lt;n} \left( 1 - \frac{|k|}{n} \right) \gamma(k) e^{-ik\lambda}\)</span> uniformly converges to its Fourier transform <span class="arithmatex">\(2\pi f(\lambda)\)</span>.</p>
+<p>Moreover, since <span class="arithmatex">\(g(n,\omega) \rightarrow \omega\)</span> as <span class="arithmatex">\(n \to \infty\)</span>, we have:</p>
+<div class="arithmatex">\[
+E(l_n(\omega)) \rightarrow 2\pi f(\omega)
+\]</div>
+<p>If <span class="arithmatex">\(\mu=0\)</span>, utilizing the uniform continuity of <span class="arithmatex">\(f\)</span> on the closed interval <span class="arithmatex">\([-\pi, \pi]\)</span>, we can obtain the uniform convergence conclusion. The proof is complete. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="52-asymptotic-distribution-of-the-periodogram-for-linear-processes">5.2 Asymptotic Distribution of the Periodogram for Linear Processes</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.17</p>
+<p>Let <span class="arithmatex">\(\{X_t\}\)</span> be a linear process <span class="arithmatex">\(X_t = \sum \psi_j \epsilon_{t-j}\)</span> with <span class="arithmatex">\(\sum |\psi_j| &lt; \infty\)</span> and <span class="arithmatex">\(\epsilon_t \sim i.i.d.\ F(0, \sigma^2)\)</span>.
+If the spectral density <span class="arithmatex">\(f(\lambda) &gt; 0\)</span>, then for <span class="arithmatex">\(m\)</span> distinct frequencies <span class="arithmatex">\(0 &lt; \lambda_1 &lt; \dots &lt; \lambda_m &lt; \pi\)</span>, the random vector:</p>
+<div class="arithmatex">\[
+(I_n(\lambda_1), \dots, I_n(\lambda_m))^T
+\]</div>
+<p>converges in distribution to a vector composed of <strong>independent Exponential Distribution</strong> random variables, where the <span class="arithmatex">\(i\)</span>-th component has a mean of <span class="arithmatex">\(2\pi f(\lambda_i)\)</span>.</p>
+</div>
+<p><em>(Note: This theorem not only provides the limit distribution but also indicates that the periodograms at different frequencies are asymptotically uncorrelated, which lays the foundation for subsequent frequency-domain regression.)</em></p>
+<hr />
+<h2 id="6-nonparametric-kernel-smoothing-estimation-of-spectral-density">6. Nonparametric Kernel Smoothing Estimation of Spectral Density</h2>
+<p>Theorem 4.17 reveals a serious issue: <strong>A single periodogram <span class="arithmatex">\(I_n(\omega)\)</span> is not a consistent estimator of the spectral density <span class="arithmatex">\(2\pi f(\omega)\)</span></strong>.
+(Because its limit is an exponential distribution with non-zero variance, rather than degenerating into a constant). Moreover, when <span class="arithmatex">\(\mu \ne 0\)</span>, <span class="arithmatex">\(I_n(0)\)</span> is even biased.</p>
+<p><strong>Solution:</strong> Since the periodograms at different frequencies <span class="arithmatex">\(\omega_j\)</span> are asymptotically independent and their expectations fluctuate around the true spectral density <span class="arithmatex">\(f(\omega)\)</span>, we can perform a <strong>locally weighted averaging</strong> of the periodograms at adjacent frequencies. This is the core idea of <strong>Nonparametric Kernel Regression</strong>.</p>
+<h3 id="61-constructing-the-log-periodogram-regression-model">6.1 Constructing the Log-Periodogram Regression Model</h3>
+<p>We can write the relationship of the periodograms as a multiplicative model:</p>
+<div class="arithmatex">\[
+I_n(\omega_j) = 2\pi f(\omega_j) e_j + R_j \quad \text{for } j \in T \setminus \{0\}
+\]</div>
+<p>Where <span class="arithmatex">\(\{e_j\}\)</span> are independent <span class="arithmatex">\(Exp(1)\)</span> random variables, and <span class="arithmatex">\(\{R_j\}\)</span> are higher-order negligible terms.
+Taking the natural logarithm on both sides transforms it into a standard additive nonparametric regression model:</p>
+<div class="arithmatex">\[
+\log\left(\frac{l_n(\omega_j)}{2\pi}\right) = \log(f(\omega_j)) + \log(e_j)
+\]</div>
+<p>Knowing the properties of the logarithm of an exponential distribution: <span class="arithmatex">\(E(\log(e_j)) = -0.57721\)</span> (Euler's constant) and <span class="arithmatex">\(Var(\log(e_j)) = \pi^2/6\)</span>.
+By centering, let:</p>
 <ul>
 <li>
-<p>对于 <span class="arithmatex">\(\delta &lt; \alpha\)</span>，有 <span class="arithmatex">\(E(|X|^\delta) &lt; \infty\)</span>。</p>
+<p><span class="arithmatex">\(\eta_j = \log(e_j) + 0.57721\)</span> (zero-mean, i.i.d. error terms with variance <span class="arithmatex">\(\pi^2/6\)</span>)</p>
 </li>
 <li>
-<p>对于 <span class="arithmatex">\(\delta &gt; \alpha\)</span> (且 <span class="arithmatex">\(\alpha &lt; 2\)</span>)，有 <span class="arithmatex">\(E(|X|^\delta) = \infty\)</span>。
-（这也意味着如果 <span class="arithmatex">\(\alpha &lt; 2\)</span>，则方差必然无穷大；如果 <span class="arithmatex">\(\alpha \le 1\)</span>，则均值也无穷大）。</p>
+<p><span class="arithmatex">\(W_j = \log\left(\frac{l_n(\omega_j)}{2\pi}\right) + 0.57721\)</span> (the new response variable)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(m(\omega) = \log(f(\omega))\)</span> (the unknown target smoothing function)</p>
 </li>
 </ul>
-<hr />
-<h3 id="42">4.2 标准化与中心化常数的选取</h3>
-<p><strong>命题 3.25 (标准化常数 <span class="arithmatex">\(b_n\)</span>):</strong>
-对于 <span class="arithmatex">\(F \in DA(\alpha)\)</span>，标准化常数 <span class="arithmatex">\(b_n\)</span> 可以选为如下方程的唯一解：</p>
+<p>Thus, we obtain a fixed-design nonparametric regression model:</p>
 <div class="arithmatex">\[
-G(b_n) + K(b_n) = n^{-1}, \quad n \ge 1
+W_j = m(\omega_j) + \eta_j, \quad j \in T \setminus \{0\}
 \]</div>
-<p>其中 <span class="arithmatex">\(G(x) = P(|X| &gt; x)\)</span>，且 <span class="arithmatex">\(K(x) = x^{-2} \int_{|y| \le x} y^2 dF(y)\)</span>。
-如果 <span class="arithmatex">\(E(X^2) &lt; \infty\)</span>，那么 <span class="arithmatex">\(b_n \sim \sigma \sqrt{n}\)</span>。如果 <span class="arithmatex">\(\alpha &lt; 2\)</span>，<span class="arithmatex">\(b_n\)</span> 的形式通常为 <span class="arithmatex">\(n^{1/\alpha} L(n)\)</span>。</p>
-<p><strong>命题 3.26 (中心化常数 <span class="arithmatex">\(a_n\)</span>):</strong>
-中心化常数可以选为：</p>
+<h3 id="62-nadaraya-watson-nw-kernel-estimator">6.2 Nadaraya-Watson (NW) Kernel Estimator</h3>
+<p>Now our goal is to estimate <span class="arithmatex">\(m(0) = \log(f(0))\)</span> through kernel smoothing.
+Given a kernel function <span class="arithmatex">\(K(\cdot)\)</span> and a smoothing bandwidth <span class="arithmatex">\(b\)</span>, the NW estimator for <span class="arithmatex">\(m(\omega)\)</span> is defined as:</p>
 <div class="arithmatex">\[
-a_n = n \int_{|y| \le b_n} y dF(y)
+\hat{m}_b(\omega) = \frac{\sum_{j \in T} K\left(\frac{\omega - \omega_j}{b}\right) W_j}{\sum_{j \in T} K\left(\frac{\omega - \omega_j}{b}\right)}
 \]</div>
-<hr />
-<h2 id="5-dna">5. 广义中心极限定理与正规吸引域 (DNA)</h2>
-<p>综合以上性质，我们得到最一般形式的中心极限定理：</p>
-<div class="admonition success">
-<p class="admonition-title">定理 3.27 (一般中心极限定理 General CLT)</p>
-<p>假设 <span class="arithmatex">\(F \in DA(\alpha)\)</span>，其中 <span class="arithmatex">\(\alpha \in (0, 2]\)</span>。</p>
-<ol>
-<li>如果 <span class="arithmatex">\(E(X^2) &lt; \infty\)</span>，那么：</li>
-</ol>
+<p>Where the bandwidth must satisfy the asymptotic conditions: as <span class="arithmatex">\(n \rightarrow \infty\)</span>, <span class="arithmatex">\(b \rightarrow 0\)</span> and <span class="arithmatex">\(nb \rightarrow \infty\)</span>.</p>
+<p>Finally, through an inverse exponential transformation, we can obtain a consistent estimator for the long-run covariance (the spectral density at zero frequency):</p>
 <div class="arithmatex">\[
-\frac{S_n - n\mu}{\sigma \sqrt{n}} \xrightarrow{d} N(0,1)
+\hat{f}(0) = \exp(\hat{m}_b(0))
 \]</div>
-<ol>
-<li>如果 <span class="arithmatex">\(E(X^2) = \infty\)</span> 且 <span class="arithmatex">\(\alpha = 2\)</span>；或者 <span class="arithmatex">\(\alpha &lt; 2\)</span>，那么：</li>
-</ol>
-<div class="arithmatex">\[
-\frac{S_n - a_n}{n^{1/\alpha} L_1(n)} \xrightarrow{d} G_\alpha
-\]</div>
-<p>其中 <span class="arithmatex">\(G_\alpha\)</span> 是某个 <span class="arithmatex">\(\alpha\)</span>-稳定分布，<span class="arithmatex">\(L_1\)</span> 是适当的缓变函数。</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">定义 3.28 与 推论 3.29：正规吸引域 (Domain of Normal Attraction, DNA)</p>
-<p>注意到一般 CLT 的分母中包含缓变函数 <span class="arithmatex">\(L_1(n)\)</span>。如果在极限中，标准化常数可以直接取<strong>纯幂次形式</strong> <span class="arithmatex">\(b_n = c n^{1/\alpha}\)</span>（即 <span class="arithmatex">\(L_1(n)\)</span> 退化为常数），我们就称该分布属于 <strong>正规吸引域 (DNA)</strong>，记为 <span class="arithmatex">\(F \in DNA(G_\alpha)\)</span>。</p>
-<ul>
-<li><span class="arithmatex">\(F \in DNA(2)\)</span> 当且仅当 <span class="arithmatex">\(E(X^2) &lt; \infty\)</span>。</li>
-<li>当 <span class="arithmatex">\(\alpha &lt; 2\)</span> 时，<span class="arithmatex">\(F \in DNA(\alpha)\)</span> 当且仅当尾部严格服从幂律衰减（即没有额外的缓变函数干扰）：</li>
-</ul>
-<div class="arithmatex">\[
-F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
-\]</div>
-<p>特别地，每一个 <span class="arithmatex">\(\alpha\)</span>-稳定分布都属于它自己的正规吸引域。</p>
-</div>
+<p>With <span class="arithmatex">\(\hat{f}(0)\)</span>, we successfully acquire the long-run variance <span class="arithmatex">\(\sigma^2 = 2\pi \hat{f}(0)\)</span> required for the CLT standardization, thereby closing the loop on the entire asymptotic inference framework for weakly dependent data.</p>
 
 
 
@@ -2098,7 +2110,7 @@ F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -2130,16 +2142,16 @@ F(-x) \sim c_1 x^{-\alpha}, \quad 1 - F(x) \sim c_2 x^{-\alpha}
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/security.js"></script>
+        <script src="../../../javascripts/security.js"></script>
       
     
   </body>
