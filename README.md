@@ -9,9 +9,9 @@ Welcome to my personal academic space. This is a **Personal Notes Base** built w
 
 ## 🗺️ Site Map
 
-Currently, the site is divided into two core sections:
+Currently, [the site](https://jhao1122.github.io/Notes/) is divided into two core sections:
 
-### 📚 Knowledge Base
+### 📚 Notes Base
 
 * **[Completed] Stochastic Differential Equations**
   * Covers core theories including Brownian Motion, Itô Calculus, SDE solutions, Black-Scholes pricing, and the Feynman-Kac formula.
