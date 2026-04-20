@@ -26,6 +26,7 @@
 
 !!! info "停时 (Stopping Time)"
     一个取值为 $\mathbb{N} \cup \{\infty\}$ 的随机变量 $T$，若对任意 $n$，事件 $\{T \le n\}$ 完全由 $\mathcal{F}_n$ 决定（即发生与否仅依赖于当下的信息），则称 $T$ 为停时。
+    
     * **示例**：首中时 $\inf\{n: S_n = 0\}$ 是停时。
 
 ??? success "可选停时定理 (Optional Stopping Theorem)"

@@ -26,6 +26,7 @@ This module focuses on content related to stochastic processes.
 
 !!! info "Stopping Time"
     A random variable $T$ taking values in $\mathbb{N} \cup \{\infty\}$ is called a stopping time if, for any $n$, the event $\{T \le n\}$ is completely determined by $\mathcal{F}_n$ (i.e., whether it occurs depends only on the information available up to that time).
+    
     * **Example**: The first hitting time $\inf\{n: S_n = 0\}$ is a stopping time.
 
 ??? success "Optional Stopping Theorem"
