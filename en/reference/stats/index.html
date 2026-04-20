@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mathematical-statistics" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1616,6 +1621,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1633,6 +1658,64 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-hypothesis-testing-and-confusion-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Hypothesis Testing and Confusion Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Hypothesis Testing and Confusion Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-frontiers-multiple-testing-and-fdr-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Frontiers: Multiple Testing and FDR Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1775,6 +1858,55 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-hypothesis-testing-and-confusion-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Hypothesis Testing and Confusion Matrix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Hypothesis Testing and Confusion Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modern-frontiers-multiple-testing-and-fdr-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Frontiers: Multiple Testing and FDR Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1795,9 +1927,97 @@
   
 
 
-  <h1>📖 Mathematical Statistics</h1>
-
-
+<h1 id="mathematical-statistics">📖 Mathematical Statistics</h1>
+<p>This module continuously compiles core foundational concepts related to mathematical statistics.</p>
+<hr />
+<h2 id="1-hypothesis-testing-and-confusion-matrix">1. Hypothesis Testing and Confusion Matrix</h2>
+<p>Under the frequentist Neyman-Pearson framework, hypothesis testing is essentially a process of making a binary decision about the true parameter space based on a sample.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Hypothesis Testing Confusion Matrix</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">True State \ Model Prediction</th>
+<th style="text-align: left;">Accept <span class="arithmatex">\(H_0\)</span> (Do not reject)</th>
+<th style="text-align: left;">Reject <span class="arithmatex">\(H_0\)</span> (Reject, Discover)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(H_0\)</span> is True</strong> (Null is True)</td>
+<td style="text-align: left;">✅ Correct Inference (True Negative, <span class="arithmatex">\(1-\alpha\)</span>)</td>
+<td style="text-align: left;">❌ <strong>Type I Error</strong> (False Positive, <span class="arithmatex">\(\alpha\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(H_1\)</span> is True</strong> (Alt is True)</td>
+<td style="text-align: left;">❌ <strong>Type II Error</strong> (False Negative, <span class="arithmatex">\(\beta\)</span>)</td>
+<td style="text-align: left;">✅ <strong>Statistical Power</strong> (True Positive, Power: <span class="arithmatex">\(1-\beta\)</span>)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="core-concepts-quick-reference">Core Concepts Quick Reference</h3>
+<div class="admonition info">
+<p class="admonition-title">Type I Error (False Positive)</p>
+<ul>
+<li><strong>Definition</strong>: The null hypothesis <span class="arithmatex">\(H_0\)</span> is true, but it is incorrectly rejected. </li>
+<li><strong>Mathematical Expression</strong>: <span class="arithmatex">\(\alpha = P(\text{Reject } H_0 \mid H_0 \text{ is True}) = \frac{FP}{FP+TN}\)</span></li>
+<li><strong>Alias</strong>: The <strong>Significance Level</strong> (or size) of the test. In classical statistics, we usually strictly control <span class="arithmatex">\(\alpha\)</span> first (e.g., set to <span class="arithmatex">\(0.05\)</span>).</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Type II Error (False Negative)</p>
+<ul>
+<li><strong>Definition</strong>: The alternative hypothesis <span class="arithmatex">\(H_1\)</span> is true, but we fail to reject <span class="arithmatex">\(H_0\)</span>. </li>
+<li><strong>Mathematical Expression</strong>: <span class="arithmatex">\(\beta = P(\text{Accept } H_0 \mid H_1 \text{ is True}) = \frac{FN}{TP+FN}\)</span></li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Statistical Power</p>
+<ul>
+<li><strong>Definition</strong>: The probability of correctly rejecting <span class="arithmatex">\(H_0\)</span> when the alternative hypothesis <span class="arithmatex">\(H_1\)</span> is true. It represents the test's ability to detect a true effect.</li>
+<li><strong>Mathematical Expression</strong>: <span class="arithmatex">\(\text{Power} = 1 - \beta = P(\text{Reject } H_0 \mid H_1 \text{ is True}) = \frac{TP}{TP+FN}\)</span></li>
+<li><strong>Intuition</strong>: Given a fixed <span class="arithmatex">\(\alpha\)</span>, we aim to find a testing method that maximizes the Power (i.e., the Uniformly Most Powerful test, UMP).</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">p-value</p>
+<ul>
+<li><strong>Definition</strong>: The probability of observing the current sample statistic (or a more extreme one) given that the null hypothesis <span class="arithmatex">\(H_0\)</span> is true.</li>
+<li><strong>Pitfall</strong>: A p-value is <strong>absolutely not</strong> the "probability that the null hypothesis is true" (i.e., <span class="arithmatex">\(p \ne P(H_0 \mid \text{Data})\)</span>). It reflects the <strong>degree of inconsistency between the data and the null hypothesis</strong>. The smaller the p-value, the stronger the evidence to reject <span class="arithmatex">\(H_0\)</span>.</li>
+</ul>
+</div>
+<hr />
+<h3 id="modern-frontiers-multiple-testing-and-fdr-control">Modern Frontiers: Multiple Testing and FDR Control</h3>
+<p>In modern high-dimensional statistics, we often need to perform thousands or even millions of tests simultaneously. At this point, traditional <span class="arithmatex">\(\alpha\)</span> control completely fails.</p>
+<details class="note">
+<summary>The Multiple Testing Problem</summary>
+<p>Suppose we independently test <span class="arithmatex">\(m\)</span> completely ineffective factors (i.e., all <span class="arithmatex">\(m\)</span> null hypotheses <span class="arithmatex">\(H_0\)</span> hold), with the significance level of a single test set to <span class="arithmatex">\(\alpha = 0.05\)</span>.</p>
+<p>Then the probability of making at least one Type I error (Family-Wise Error Rate, FWER) is:</p>
+<div class="arithmatex">\[
+\text{FWER} = P(V \ge 1) = 1 - (1 - \alpha)^m
+\]</div>
+<p>When <span class="arithmatex">\(m = 100\)</span>, <span class="arithmatex">\(\text{FWER} \approx 0.994\)</span>. This means that as long as enough factors are tested, seemingly significant "false signals" will inevitably be unearthed. This introduces the concept of FDR.</p>
+</details>
+<details class="success">
+<summary>False Discovery Rate (FDR)</summary>
+<p>Introduced by Benjamini and Hochberg in 1995, it is the core concept of high-dimensional inference.</p>
+<ul>
+<li><strong>Definition</strong>: The <strong>expected value</strong> of the proportion of incorrect rejections (i.e., Type I errors <span class="arithmatex">\(V\)</span>) among all rejected null hypotheses (i.e., all discoveries claimed to have a significant effect <span class="arithmatex">\(R\)</span>).</li>
+</ul>
+<div class="arithmatex">\[
+\text{FDR} = E\left[ \frac{V}{\max(R, 1)} \right] = \frac{FP}{TP+FP}
+\]</div>
+<ul>
+<li><strong>Benjamini-Hochberg (BH) Procedure</strong>:<ol>
+<li>Sort the p-values of the <span class="arithmatex">\(m\)</span> hypotheses in ascending order: <span class="arithmatex">\(p_{(1)} \le p_{(2)} \le \dots \le p_{(m)}\)</span>.</li>
+<li>Find the largest integer <span class="arithmatex">\(k\)</span> such that <span class="arithmatex">\(p_{(k)} \le \frac{k}{m} \alpha\)</span>.</li>
+<li>Reject the first <span class="arithmatex">\(k\)</span> null hypotheses (i.e., <span class="arithmatex">\(H_{(1)}, \dots, H_{(k)}\)</span>).</li>
+<li><strong>Theorem</strong>: Under the assumption of independence (or positive dependence), this procedure strictly controls the FDR at <span class="arithmatex">\(\le \alpha\)</span>.</li>
+</ol>
+</li>
+</ul>
+</details>
 
 
 
