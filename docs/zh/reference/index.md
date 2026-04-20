@@ -8,15 +8,15 @@
 
 本速查手册按知识模块划分为以下核心领域：
 
-### [🎲 概率论 (Probability Theory)](prob.md)
+### [🎲 概率论](prob.md)
 
-### [📖 数理统计 (Mathematical Statistics)](stats.md)
+### [📖 数理统计](stats.md)
 
-### [📏 测度论基础 (Measure Theory)](measure.md)
+### [📏 测度论基础](measure.md)
 
-### [🔢 线性代数 (Linear Algebra)](linalg.md)
+### [🔢 线性代数](linalg.md)
 
-### [🌊 随机过程 (Stochastic Processes)](stochastic.md)
+### [🌊 随机过程](stochastic.md)
 
 ---
 
@@ -27,11 +27,3 @@
     2.  **欢迎勘误**：由于内容多为个人整理，难免存在笔误（Typo）或理解偏差。如果您在阅读过程中发现任何问题，欢迎通过 [GitHub Issue](https://github.com/jhao1122/Notes/issues) 提醒我修正。
 
 ---
-
-## 🚀 快速跳转
-
----
-
-<p align="center">
-  <b>坚持夯实地基，是为了在更高处看风景。</b>
-</p>
