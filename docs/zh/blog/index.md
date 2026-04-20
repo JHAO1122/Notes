@@ -33,6 +33,33 @@
 
 
 
+<div style="background-color: rgba(67, 161, 213, 0.05); border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 20px 0; border: 1px solid rgba(67, 161, 213, 0.2);">
+  <h3 style="margin-top: 0; font-weight: 600;">⭐⭐⭐ 距离阿根廷捧起大力神杯已过去</h3>
+  <div id="arg-countup" style="display: flex; justify-content: center; gap: 20px; font-size: 1.6rem; font-weight: bold; color: #43A1D5; margin-top: 15px;">
+    <div><span id="arg-days">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">天</span></div>
+    <div><span id="arg-hours">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">时</span></div>
+    <div><span id="arg-minutes">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">分</span></div>
+    <div><span id="arg-seconds">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">秒</span></div>
+  </div>
+  <div style="margin-top: 10px; font-size: 0.85rem; color: #D4AF37;">"Muchachos, ahora nos volvimos a ilusionar..."</div>
+</div>
+
+<script>
+  // 锁定北京时间：2022年12月19日 02:00:00 (夺冠捧杯时刻)
+  const argDate = new Date("2022-12-19T02:00:00+08:00").getTime();
+  
+  setInterval(function() {
+    const now = new Date().getTime();
+    const distance = now - argDate; // 注意：这里是现在减去过去
+    
+    document.getElementById("arg-days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("arg-hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+    document.getElementById("arg-minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+    document.getElementById("arg-seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+  }, 1000);
+</script>
+
+
 <div style="background-color: rgba(128, 128, 128, 0.05); border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 20px 0; border: 1px solid rgba(128,128,128,0.2);">
   <h3 style="margin-top: 0; font-weight: 600;">🏆 距离 2026 美加墨世界杯开幕还有</h3>
   <div id="world-cup-countdown" style="display: flex; justify-content: center; gap: 20px; font-size: 1.6rem; font-weight: bold; color: #D32F2F; margin-top: 15px;">
