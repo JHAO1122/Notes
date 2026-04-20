@@ -21,7 +21,13 @@ theme:
     # - navigation.expand       # ⭐ 注意：这行被注释掉了，这样侧边栏就不会默认全部展开
     # - navigation.instant
 
-  palette: 
+palette: 
+    - scheme: slate
+      primary: black
+      accent: white
+      toggle:
+        icon: material/brightness-4
+        title: 切换到浅色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white
@@ -29,13 +35,6 @@ theme:
       toggle:
         icon: material/brightness-7
         title: 切换到深色模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: white
-      toggle:
-        icon: material/brightness-4
-        title: 切换到浅色模式
 
 # ================= 插件配置 =================
 plugins:
