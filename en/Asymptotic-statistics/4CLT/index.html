@@ -2091,9 +2091,11 @@ Denote <span class="arithmatex">\(S_n = \sum_{i=1}^n X_i\)</span>, <span class="
 <p><strong>Step 1: Construct Large and Small Blocks</strong></p>
 <p>Let the large block length be <span class="arithmatex">\(k = [n^{1/3}]\)</span>, and the small block length be <span class="arithmatex">\(m\)</span>.
 Then the total number of blocks is <span class="arithmatex">\(p_n = [\frac{n}{k+m}] = O(n^{2/3})\)</span>. Denote <span class="arithmatex">\(B_j = j(k+m)\)</span>.</p>
-<p>We construct:
-* <strong>Large blocks:</strong> <span class="arithmatex">\(Y_j = X_{B_{j-1}+1} + \cdots + X_{B_{j-1}+k}\)</span> (total <span class="arithmatex">\(p_n\)</span> blocks)</p>
+<p>We construct:</p>
 <ul>
+<li>
+<p><strong>Large blocks:</strong> <span class="arithmatex">\(Y_j = X_{B_{j-1}+1} + \cdots + X_{B_{j-1}+k}\)</span> (total <span class="arithmatex">\(p_n\)</span> blocks)</p>
+</li>
 <li>
 <p><strong>Small blocks:</strong> <span class="arithmatex">\(Z_j = X_{B_{j-1}+k+1} + \cdots + X_{B_j}\)</span> (total <span class="arithmatex">\(p_n\)</span> blocks)</p>
 </li>
