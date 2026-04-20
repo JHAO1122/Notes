@@ -41,7 +41,7 @@
 
 在现代高维统计中，我们往往需要同时进行成千上万次检验。此时传统的 $\alpha$ 控制会彻底失效。
 
-??? note "多重检验的灾难 (The Multiple Testing Problem)"
+??? note "多重检验的问题 (The Multiple Testing Problem)"
     假设我们独立测试了 $m$ 个完全无效的因子（即 $m$ 个 $H_0$ 均成立），设单次检验的显著性水平为 $\alpha = 0.05$。
     
     那么至少犯一次第一类错误的概率（Family-Wise Error Rate, FWER）为：
