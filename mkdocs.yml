@@ -78,6 +78,12 @@ plugins:
             "第五章：弱相依数据（一）": "Ch 5: Weakly Dependent Data I"
             "第六章：弱相依数据（二）": "Ch 6: Weakly Dependent Data II"
             "第七章： Delta 方法": "Ch 7: Delta Method"
+            "🛠️ 知识速查": "🛠️ Quick Reference"
+            "📖 数理统计": "📖 Mathematical Statistics"
+            "🎲 概率论": "🎲 Probability Theory"
+            "📏 测度论基础": "📏 Measure Theory"
+            "🔢 线性代数": "🔢 Linear Algebra"
+            "🌊 随机过程": "🌊 Stochastic Processes"
   - encryptcontent:
       title: "🔒 我的树洞"
       summary: "希望我们有心照不宣的默契。请输入暗号以解密："
@@ -126,7 +132,13 @@ nav:
               - 第五章：弱相依数据（一）: zh/Asymptotic-statistics/5Weakly_Dep.md
               - 第六章：弱相依数据（二）: zh/Asymptotic-statistics/6Stantionary_process.md
               - 第七章： Delta 方法: zh/Asymptotic-statistics/7Delta_Method.md
-
+  - 🛠️ 知识速查:
+      - 🛠️ 知识速查: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
+      - 📖 数理统计: zh/reference/stats.md
+      - 🎲 概率论: zh/reference/prob.md
+      - 📏 测度论基础: zh/reference/measure.md
+      - 🔢 线性代数: zh/reference/linalg.md
+      - 🌊 随机过程: zh/reference/stochastic.md
 # ================= 扩展配置 =================
 extra_javascript:
   - javascripts/mathjax.js
