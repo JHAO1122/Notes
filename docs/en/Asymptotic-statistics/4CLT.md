@@ -43,10 +43,11 @@ In practical applications (such as time series analysis), data often exhibit ser
     Then the total number of blocks is $p_n = [\frac{n}{k+m}] = O(n^{2/3})$. Denote $B_j = j(k+m)$.
 
     We construct:
+    
     * **Large blocks:** $Y_j = X_{B_{j-1}+1} + \cdots + X_{B_{j-1}+k}$ (total $p_n$ blocks)
 
     * **Small blocks:** $Z_j = X_{B_{j-1}+k+1} + \cdots + X_{B_j}$ (total $p_n$ blocks)
-    
+
     * **Residual block:** $R_p = X_{B_{p_n}+1} + \cdots + X_n$
 
     Since $k \gg m$ for sufficiently large $n$, and the gap between large blocks $Y_j$ is $m$, the sequence $\{Y_j\}_{j=1}^{p_n}$ is mutually independent. Similarly, $\{Z_j\}_{j=1}^{p_n}$ is also mutually independent.

@@ -43,6 +43,7 @@
     则总的块数为 $p_n = [\frac{n}{k+m}] = O(n^{2/3})$。记 $B_j = j(k+m)$。
     
     我们构造：
+    
     * **大块 (Large blocks):** $Y_j = X_{B_{j-1}+1} + \cdots + X_{B_{j-1}+k}$ （共 $p_n$ 块）
 
     * **小块 (Small blocks):** $Z_j = X_{B_{j-1}+k+1} + \cdots + X_{B_j}$ （共 $p_n$ 块）
