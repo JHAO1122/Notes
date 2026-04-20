@@ -44,7 +44,9 @@
     
     我们构造：
     * **大块 (Large blocks):** $Y_j = X_{B_{j-1}+1} + \cdots + X_{B_{j-1}+k}$ （共 $p_n$ 块）
+
     * **小块 (Small blocks):** $Z_j = X_{B_{j-1}+k+1} + \cdots + X_{B_j}$ （共 $p_n$ 块）
+    
     * **剩余块 (Residual block):** $R_p = X_{B_{p_n}+1} + \cdots + X_n$
     
     由于当 $n$ 足够大时 $k \gg m$，且大块 $Y_j$ 之间的间隔为 $m$，因此序列 $\{Y_j\}_{j=1}^{p_n}$ 相互独立。同理，$\{Z_j\}_{j=1}^{p_n}$ 也相互独立。
