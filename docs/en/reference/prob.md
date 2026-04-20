@@ -2,7 +2,7 @@
 
 This module covers core inequalities in probability theory, convergence theory of random variables, and large sample limit theorems.
 
-## 1. Core Probability Inequalities (Inequalities)
+## 1. Core Probability Inequalities
 
 !!! info "Markov's Inequality"
     For a non-negative random variable $X \ge 0$ and any $a > 0$:
@@ -33,7 +33,7 @@ This module covers core inequalities in probability theory, convergence theory o
 
 ---
 
-## 2. Convergence of Random Variables (Modes of Convergence)
+## 2. Convergence of Random Variables
 
 !!! abstract "Definitions of Four Modes of Convergence"
     1. **Convergence in Probability ($X_n \xrightarrow{P} X$)**: For any $\epsilon > 0$, $\lim_{n \to \infty} P(|X_n - X| > \epsilon) = 0$.
@@ -53,7 +53,7 @@ This module covers core inequalities in probability theory, convergence theory o
 
 ---
 
-## 3. Law of Large Numbers and Central Limit Theorem (Limit Theorems)
+## 3. Law of Large Numbers and Central Limit Theorem 
 
 !!! info "Khinchin's Weak Law of Large Numbers (WLLN)"
     Let $X_1, X_2, \dots, X_n$ be a sequence of **independent and identically distributed (i.i.d.)** random variables with finite expectation $E[X_i] = \mu$ (i.e., $E[|X_1|] < \infty$).
@@ -88,7 +88,7 @@ This module covers core inequalities in probability theory, convergence theory o
 
 ---
 
-## 4. Quick Reference Table for Common Distributions (Common Distributions)
+## 4. Quick Reference Table for Common Distributions 
 
 | Distribution Name | Notation | Expectation $E[X]$ | Variance $Var(X)$ | PDF/PMF | Characteristic Function $\phi_X(t)$ | Moment Generating Function $M_X(t)$ |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
