@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#stochastic-processes" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1726,6 +1731,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 随机过程
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1743,6 +1768,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、 条件期望的代数性质 (Conditional Expectation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#martingales-and-stopping-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、 鞅与停时 (Martingales and Stopping Times)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、 鞅的核心极限定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1773,6 +1850,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、 条件期望的代数性质 (Conditional Expectation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#martingales-and-stopping-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、 鞅与停时 (Martingales and Stopping Times)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、 鞅的核心极限定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1793,9 +1913,69 @@
   
 
 
-  <h1>🌊 随机过程</h1>
-
-
+<h1 id="stochastic-processes">🌊 Stochastic Processes</h1>
+<p>本模块聚焦随机过程的相关内容。</p>
+<h2 id="conditional-expectation">一、 条件期望的代数性质 (Conditional Expectation)</h2>
+<div class="admonition abstract">
+<p class="admonition-title">核心运算性质</p>
+<p>条件期望 <span class="arithmatex">\(E[X \mid \mathcal{F}]\)</span> 本身是一个关于 <span class="arithmatex">\(\mathcal{F}\)</span> 可测的随机变量。</p>
+<ol>
+<li><strong>提出已知性 (Pulling out knowns)</strong>：若 <span class="arithmatex">\(Y\)</span> 是 <span class="arithmatex">\(\mathcal{F}\)</span> 可测的，则 <span class="arithmatex">\(E[XY \mid \mathcal{F}] = Y E[X \mid \mathcal{F}]\)</span>。</li>
+<li><strong>塔牌性质 (Tower Property)</strong>：若 <span class="arithmatex">\(\mathcal{F}_1 \subset \mathcal{F}_2\)</span>，则 <span class="arithmatex">\(E[E[X \mid \mathcal{F}_2] \mid \mathcal{F}_1] = E[X \mid \mathcal{F}_1]\)</span>。</li>
+<li><strong>Jensen 不等式</strong>：对于凸函数 <span class="arithmatex">\(\phi\)</span>，有 <span class="arithmatex">\(\phi(E[X \mid \mathcal{F}]) \le E[\phi(X) \mid \mathcal{F}]\)</span>。<strong>该不等式常用于证明凸函数的鞅为下鞅</strong>。</li>
+</ol>
+</div>
+<hr />
+<h2 id="martingales-and-stopping-times">二、 鞅与停时 (Martingales and Stopping Times)</h2>
+<div class="admonition info">
+<p class="admonition-title">鞅的定义 (Martingale)</p>
+<p>适应于信息流 <span class="arithmatex">\(\mathcal{F}_n\)</span> 的可积序列 <span class="arithmatex">\(X_n\)</span>，满足：</p>
+<div class="arithmatex">\[ 
+E[X_{n+1} \mid \mathcal{F}_n] = X_n 
+\]</div>
+<p>（若为 <span class="arithmatex">\(\ge\)</span> 则为下鞅 Submartingale，若为 <span class="arithmatex">\(\le\)</span> 则为上鞅 Supermartingale）。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">停时 (Stopping Time)</p>
+<p>一个取值为 <span class="arithmatex">\(\mathbb{N} \cup \{\infty\}\)</span> 的随机变量 <span class="arithmatex">\(T\)</span>，若对任意 <span class="arithmatex">\(n\)</span>，事件 <span class="arithmatex">\(\{T \le n\}\)</span> 完全由 <span class="arithmatex">\(\mathcal{F}_n\)</span> 决定（即发生与否仅依赖于当下的信息），则称 <span class="arithmatex">\(T\)</span> 为停时。
+* <strong>示例</strong>：首中时 <span class="arithmatex">\(\inf\{n: S_n = 0\}\)</span> 是停时。</p>
+</div>
+<details class="success">
+<summary>可选停时定理 (Optional Stopping Theorem)</summary>
+<p>在一定条件下，鞅在停时 <span class="arithmatex">\(T\)</span> 处的期望等于其初始期望：<span class="arithmatex">\(E[X_T] = E[X_0]\)</span>。满足以下<strong>任一</strong>条件即可成立：</p>
+<ol>
+<li><strong>时间有界</strong>：停时 <span class="arithmatex">\(T\)</span> 几乎处处有界（即存在常数 <span class="arithmatex">\(N\)</span> 使 <span class="arithmatex">\(P(T \le N) = 1\)</span>）。</li>
+<li><strong>过程一致有界</strong>：对所有 <span class="arithmatex">\(n \le T\)</span>，存在常数 <span class="arithmatex">\(M\)</span> 使得 <span class="arithmatex">\(|X_n| \le M\)</span> 几乎处处成立。</li>
+<li><strong>期望时间有限且增量有界</strong>：<span class="arithmatex">\(E[T] &lt; \infty\)</span>，且鞅的单步增量有界（<span class="arithmatex">\(|X_m - X_n| \le C\)</span>）。</li>
+</ol>
+</details>
+<hr />
+<h2 id="_1">三、 鞅的核心极限定理</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Doob 极大值不等式 (Doob's Maximal Inequality)</p>
+<p>对于非负下鞅 <span class="arithmatex">\(X_n\)</span>（或鞅的绝对值），其历史最大值的尾概率受末尾期望控制：</p>
+<div class="arithmatex">\[ 
+\lambda P(\max_{1\le k\le n} X_k \ge \lambda) \le E[X_n I(\max_{1\le k\le n} X_k \ge \lambda)] \le E[X_n] 
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Doob 鞅收敛定理 (Doob's Convergence Theorem)</p>
+<p>若 <span class="arithmatex">\(X_n\)</span> 为下鞅，且其正部期望一致有界（即 <span class="arithmatex">\(\sup_n E[X_n^+] &lt; \infty\)</span>），则存在一个可积的随机变量 <span class="arithmatex">\(X\)</span>，使得：</p>
+<div class="arithmatex">\[ 
+X_n \xrightarrow{a.s.} X 
+\]</div>
+<ul>
+<li>注意：仅保证几乎处处收敛，不保证 <span class="arithmatex">\(L^1\)</span> 收敛。若需 <span class="arithmatex">\(E[X_n] \to E[X]\)</span>，必须外加<strong>一致可积性 (Uniform Integrability)</strong> 条件。</li>
+</ul>
+</div>
+<details class="note">
+<summary>Doob-Meyer 分解定理</summary>
+<p>任何一个下鞅 <span class="arithmatex">\(X_n\)</span> 都可以被唯一分解为一个鞅 <span class="arithmatex">\(M_n\)</span> 和一个非减的可预测序列 (Predictable sequence) <span class="arithmatex">\(A_n\)</span> 的和：</p>
+<div class="arithmatex">\[ 
+X_n = M_n + A_n 
+\]</div>
+<p>其中 <span class="arithmatex">\(A_n\)</span> 可预测意味着 <span class="arithmatex">\(A_n\)</span> 在 <span class="arithmatex">\(n-1\)</span> 时刻就已经完全已知（即 <span class="arithmatex">\(\mathcal{F}_{n-1}\)</span> 可测）。</p>
+</details>
 
 
 

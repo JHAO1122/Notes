@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#stochastic-processes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1726,6 +1731,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1743,6 +1768,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-algebraic-properties-of-conditional-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Algebraic Properties of Conditional Expectation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-martingales-and-stopping-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Martingales and Stopping Times
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-core-limit-theorems-of-martingales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Core Limit Theorems of Martingales
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1773,6 +1850,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-algebraic-properties-of-conditional-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Algebraic Properties of Conditional Expectation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-martingales-and-stopping-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Martingales and Stopping Times
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-core-limit-theorems-of-martingales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Core Limit Theorems of Martingales
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1793,9 +1913,69 @@
   
 
 
-  <h1>🌊 Stochastic Processes</h1>
-
-
+<h1 id="stochastic-processes">🌊 Stochastic Processes</h1>
+<p>This module focuses on content related to stochastic processes.</p>
+<h2 id="1-algebraic-properties-of-conditional-expectation">1. Algebraic Properties of Conditional Expectation</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Core Computational Properties</p>
+<p>The conditional expectation <span class="arithmatex">\(E[X \mid \mathcal{F}]\)</span> itself is a random variable measurable with respect to <span class="arithmatex">\(\mathcal{F}\)</span>.</p>
+<ol>
+<li><strong>Pulling out knowns</strong>: If <span class="arithmatex">\(Y\)</span> is <span class="arithmatex">\(\mathcal{F}\)</span>-measurable, then <span class="arithmatex">\(E[XY \mid \mathcal{F}] = Y E[X \mid \mathcal{F}]\)</span>.</li>
+<li><strong>Tower Property</strong>: If <span class="arithmatex">\(\mathcal{F}_1 \subset \mathcal{F}_2\)</span>, then <span class="arithmatex">\(E[E[X \mid \mathcal{F}_2] \mid \mathcal{F}_1] = E[X \mid \mathcal{F}_1]\)</span>.</li>
+<li><strong>Jensen's Inequality</strong>: For a convex function <span class="arithmatex">\(\phi\)</span>, we have <span class="arithmatex">\(\phi(E[X \mid \mathcal{F}]) \le E[\phi(X) \mid \mathcal{F}]\)</span>. <strong>This inequality is often used to prove that a convex function of a martingale is a submartingale</strong>.</li>
+</ol>
+</div>
+<hr />
+<h2 id="2-martingales-and-stopping-times">2. Martingales and Stopping Times</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Martingale</p>
+<p>An integrable sequence <span class="arithmatex">\(X_n\)</span> adapted to the filtration <span class="arithmatex">\(\mathcal{F}_n\)</span>, satisfying:</p>
+<div class="arithmatex">\[ 
+E[X_{n+1} \mid \mathcal{F}_n] = X_n 
+\]</div>
+<p>(If it is <span class="arithmatex">\(\ge\)</span>, it is a Submartingale; if it is <span class="arithmatex">\(\le\)</span>, it is a Supermartingale).</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Stopping Time</p>
+<p>A random variable <span class="arithmatex">\(T\)</span> taking values in <span class="arithmatex">\(\mathbb{N} \cup \{\infty\}\)</span> is called a stopping time if, for any <span class="arithmatex">\(n\)</span>, the event <span class="arithmatex">\(\{T \le n\}\)</span> is completely determined by <span class="arithmatex">\(\mathcal{F}_n\)</span> (i.e., whether it occurs depends only on the information available up to that time).
+* <strong>Example</strong>: The first hitting time <span class="arithmatex">\(\inf\{n: S_n = 0\}\)</span> is a stopping time.</p>
+</div>
+<details class="success">
+<summary>Optional Stopping Theorem</summary>
+<p>Under certain conditions, the expectation of a martingale at a stopping time <span class="arithmatex">\(T\)</span> is equal to its initial expectation: <span class="arithmatex">\(E[X_T] = E[X_0]\)</span>. It holds if <strong>any one</strong> of the following conditions is met:</p>
+<ol>
+<li><strong>Bounded time</strong>: The stopping time <span class="arithmatex">\(T\)</span> is almost surely bounded (i.e., there exists a constant <span class="arithmatex">\(N\)</span> such that <span class="arithmatex">\(P(T \le N) = 1\)</span>).</li>
+<li><strong>Uniformly bounded process</strong>: For all <span class="arithmatex">\(n \le T\)</span>, there exists a constant <span class="arithmatex">\(M\)</span> such that <span class="arithmatex">\(|X_n| \le M\)</span> almost surely.</li>
+<li><strong>Finite expected time and bounded increments</strong>: <span class="arithmatex">\(E[T] &lt; \infty\)</span>, and the single-step increments of the martingale are bounded (<span class="arithmatex">\(|X_m - X_n| \le C\)</span>).</li>
+</ol>
+</details>
+<hr />
+<h2 id="3-core-limit-theorems-of-martingales">3. Core Limit Theorems of Martingales</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Doob's Maximal Inequality</p>
+<p>For a non-negative submartingale <span class="arithmatex">\(X_n\)</span> (or the absolute value of a martingale), the tail probability of its running maximum is bounded by its final expectation:</p>
+<div class="arithmatex">\[ 
+\lambda P(\max_{1\le k\le n} X_k \ge \lambda) \le E[X_n I(\max_{1\le k\le n} X_k \ge \lambda)] \le E[X_n] 
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Doob's Martingale Convergence Theorem</p>
+<p>If <span class="arithmatex">\(X_n\)</span> is a submartingale and the supremum of its positive part's expectation is bounded (i.e., <span class="arithmatex">\(\sup_n E[X_n^+] &lt; \infty\)</span>), then there exists an integrable random variable <span class="arithmatex">\(X\)</span> such that:</p>
+<div class="arithmatex">\[ 
+X_n \xrightarrow{a.s.} X 
+\]</div>
+<ul>
+<li>Note: This only guarantees almost sure convergence, not <span class="arithmatex">\(L^1\)</span> convergence. If <span class="arithmatex">\(E[X_n] \to E[X]\)</span> is required, the condition of <strong>Uniform Integrability (UI)</strong> must be added.</li>
+</ul>
+</div>
+<details class="note">
+<summary>Doob-Meyer Decomposition Theorem</summary>
+<p>Any submartingale <span class="arithmatex">\(X_n\)</span> can be uniquely decomposed into the sum of a martingale <span class="arithmatex">\(M_n\)</span> and a non-decreasing predictable sequence <span class="arithmatex">\(A_n\)</span>:</p>
+<div class="arithmatex">\[ 
+X_n = M_n + A_n 
+\]</div>
+<p>Here, <span class="arithmatex">\(A_n\)</span> being predictable means that <span class="arithmatex">\(A_n\)</span> is completely known at time <span class="arithmatex">\(n-1\)</span> (i.e., it is <span class="arithmatex">\(\mathcal{F}_{n-1}\)</span>-measurable).</p>
+</details>
 
 
 

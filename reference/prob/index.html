@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#probability-theory" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1644,6 +1649,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎲 概率论
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1661,6 +1686,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inequalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、 核心概率不等式 (Inequalities)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes-of-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、 随机变量的收敛性 (Modes of Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limit-theorems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、 大数定律与中心极限定理 (Limit Theorems)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、 常见概率分布速查表 (Common Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1775,6 +1863,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inequalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、 核心概率不等式 (Inequalities)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modes-of-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、 随机变量的收敛性 (Modes of Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limit-theorems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、 大数定律与中心极限定理 (Limit Theorems)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、 常见概率分布速查表 (Common Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1795,9 +1937,161 @@
   
 
 
-  <h1>🎲 概率论</h1>
-
-
+<h1 id="probability-theory">🎲 Probability Theory</h1>
+<p>本模块涵盖了概率论中的核心不等式、随机变量的收敛性理论以及大样本极限定理。</p>
+<h2 id="inequalities">一、 核心概率不等式 (Inequalities)</h2>
+<div class="admonition info">
+<p class="admonition-title">Markov 不等式</p>
+<p>对于非负随机变量 <span class="arithmatex">\(X \ge 0\)</span> 及任意 <span class="arithmatex">\(a &gt; 0\)</span>：</p>
+<div class="arithmatex">\[
+P(X \ge a) \le \frac{E[X]}{a}
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Chebyshev 不等式</p>
+<p>对于任意随机变量 <span class="arithmatex">\(X\)</span> 及 <span class="arithmatex">\(a &gt; 0\)</span>：</p>
+<div class="arithmatex">\[
+P(|X - E[X]| \ge a) \le \frac{Var(X)}{a^2}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Kolmogorov 极大值不等式</p>
+<p>若 <span class="arithmatex">\(X_1, \dots, X_n\)</span> 独立同分布且均值为 0，方差有限：</p>
+<div class="arithmatex">\[
+P\left(\max_{1\le k\le n} \left|\sum_{i=1}^k X_i\right| \ge \lambda\right) \le \frac{1}{\lambda^2} \sum_{i=1}^n Var(X_i)
+\]</div>
+</div>
+<details class="note">
+<summary>Borel-Cantelli 引理</summary>
+<p>记事件序列 <span class="arithmatex">\(\{A_n\}\)</span> 无限次发生（infinitely often, i.o.）为 <span class="arithmatex">\(\limsup A_n\)</span>：</p>
+<ol>
+<li><strong>第一引理</strong>：若 <span class="arithmatex">\(\sum_{n=1}^\infty P(A_n) &lt; \infty\)</span>，则 <span class="arithmatex">\(P(A_n \text{ i.o.}) = 0\)</span>。</li>
+<li><strong>第二引理</strong>：若 <span class="arithmatex">\(\{A_n\}\)</span> <strong>相互独立</strong>，且 <span class="arithmatex">\(\sum_{n=1}^\infty P(A_n) = \infty\)</span>，则 <span class="arithmatex">\(P(A_n \text{ i.o.}) = 1\)</span>。</li>
+</ol>
+</details>
+<hr />
+<h2 id="modes-of-convergence">二、 随机变量的收敛性 (Modes of Convergence)</h2>
+<div class="admonition abstract">
+<p class="admonition-title">四种收敛定义</p>
+<ol>
+<li><strong>依概率收敛 (<span class="arithmatex">\(X_n \xrightarrow{P} X\)</span>)</strong>：对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，有 <span class="arithmatex">\(\lim_{n \to \infty} P(|X_n - X| &gt; \epsilon) = 0\)</span>。</li>
+<li><strong>几乎处处收敛 (<span class="arithmatex">\(X_n \xrightarrow{a.s.} X\)</span>)</strong>：<span class="arithmatex">\(P(\lim_{n \to \infty} X_n = X) = 1\)</span>。</li>
+<li><strong><span class="arithmatex">\(L^p\)</span> 收敛 (<span class="arithmatex">\(X_n \xrightarrow{L^p} X\)</span>)</strong>：<span class="arithmatex">\(\lim_{n \to \infty} E[|X_n - X|^p] = 0\)</span>。</li>
+<li><strong>依分布收敛 (<span class="arithmatex">\(X_n \xrightarrow{d} X\)</span>)</strong>：<ul>
+<li><strong>定义</strong>：对于极限分布函数 <span class="arithmatex">\(F(x)\)</span> 的所有连续点 <span class="arithmatex">\(x\)</span>，满足 <span class="arithmatex">\(\lim_{n \to \infty} F_n(x) = F(x)\)</span>。</li>
+<li><strong>Lévy 连续性定理</strong>：<span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> 当且仅当其特征函数 <span class="arithmatex">\(\phi_{X_n}(t) \to \phi_X(t)\)</span> 对每个 <span class="arithmatex">\(t\)</span> 成立，且 <span class="arithmatex">\(\phi_X(t)\)</span> 在 <span class="arithmatex">\(t=0\)</span> 处连续。</li>
+</ul>
+</li>
+</ol>
+</div>
+<details class="tip">
+<summary>收敛性之间的转换关系 (Important!)</summary>
+<ul>
+<li><strong>蕴含链</strong>：<span class="arithmatex">\(L^p \implies P \implies d\)</span> 以及 <span class="arithmatex">\(a.s. \implies P \implies d\)</span>。</li>
+<li><strong>反向转换补充</strong>：<ul>
+<li><strong><span class="arithmatex">\(P \to L^p\)</span></strong>：若 <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span> 且 <span class="arithmatex">\(\{|X_n|^p\}\)</span> 是<strong>一致可积 (Uniformly Integrable, UI)</strong> 的，则有 <span class="arithmatex">\(X_n \xrightarrow{L^p} X\)</span>。</li>
+<li><strong><span class="arithmatex">\(P \to a.s.\)</span></strong>：若 <span class="arithmatex">\(X_n \xrightarrow{P} X\)</span>，则必定存在<strong>子序列</strong> <span class="arithmatex">\(\{n_k\}\)</span> 使得 <span class="arithmatex">\(X_{n_k} \xrightarrow{a.s.} X\)</span>。</li>
+<li><strong><span class="arithmatex">\(d \to P\)</span></strong>：若极限分布 <span class="arithmatex">\(X=c\)</span> 是一个退化的常数，则依分布收敛可推回依概率收敛。</li>
+</ul>
+</li>
+<li><strong>Slutsky 定理</strong>：若 <span class="arithmatex">\(X_n \xrightarrow{d} X\)</span> 且 <span class="arithmatex">\(Y_n \xrightarrow{P} c\)</span>（常数），则 <span class="arithmatex">\(X_n Y_n \xrightarrow{d} cX\)</span>，<span class="arithmatex">\(X_n + Y_n \xrightarrow{d} X + c\)</span>。</li>
+</ul>
+</details>
+<hr />
+<h2 id="limit-theorems">三、 大数定律与中心极限定理 (Limit Theorems)</h2>
+<div class="admonition info">
+<p class="admonition-title">辛钦大数定律 (Khinchin's WLLN)</p>
+<p>设 <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span> 是<strong>独立同分布 (i.i.d.)</strong> 的随机变量序列，且其期望 <span class="arithmatex">\(E[X_i] = \mu\)</span> 有限（<span class="arithmatex">\(E[|X_1|] &lt; \infty\)</span>）。
+则样本均值<strong>依概率收敛</strong>于 <span class="arithmatex">\(\mu\)</span>：</p>
+<div class="arithmatex">\[
+\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{P} \mu \quad (n \to \infty)
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Kolmogorov 强大数定律 (SLLN)</p>
+<p>若 <span class="arithmatex">\(X_i\)</span> i.i.d.，则 <span class="arithmatex">\(E[|X_1|] &lt; \infty\)</span> 是 <span class="arithmatex">\(\bar{X}_n \xrightarrow{a.s.} E[X]\)</span> 的充要条件。</p>
+</div>
+<details class="success">
+<summary>中心极限定理 (CLT) 与成立条件</summary>
+<p>对于独立但不一定同分布的序列 <span class="arithmatex">\(X_1, X_2, \dots\)</span>，记 <span class="arithmatex">\(E[X_i]=\mu_i, Var(X_i)=\sigma_i^2\)</span>，<span class="arithmatex">\(S_n^2 = \sum_{i=1}^n \sigma_i^2\)</span>。
+标准化后的和为 <span class="arithmatex">\(Z_n = \frac{1}{S_n} \sum_{i=1}^n (X_i - \mu_i)\)</span>。</p>
+<ul>
+<li><strong>Lindeberg 条件（充要条件）</strong>：对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，满足：</li>
+</ul>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \frac{1}{S_n^2} \sum_{i=1}^n E[(X_i - \mu_i)^2 I(|X_i - \mu_i| &gt; \epsilon S_n)] = 0
+\]</div>
+<p><em>(直觉：保证了序列中没有任何单个随机变量的尾部极值在总方差中占主导地位)</em></p>
+<ul>
+<li><strong>Lyapunov 条件（充分条件）</strong>：若存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得：</li>
+</ul>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \frac{1}{S_n^{2+\delta}} \sum_{i=1}^n E[|X_i - \mu_i|^{2+\delta}] = 0
+\]</div>
+<p><em>(说明：Lyapunov 条件往往更容易验证，因为只要高阶矩存在并满足该极限，通过简单的积分放缩就能直接推导出 Lindeberg 条件成立，从而 <span class="arithmatex">\(Z_n \xrightarrow{d} N(0,1)\)</span>)</em></p>
+</details>
+<hr />
+<h2 id="common-distributions">四、 常见概率分布速查表 (Common Distributions)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">分布名称</th>
+<th style="text-align: left;">记号</th>
+<th style="text-align: left;">期望 <span class="arithmatex">\(E[X]\)</span></th>
+<th style="text-align: left;">方差 <span class="arithmatex">\(Var(X)\)</span></th>
+<th style="text-align: left;">概率密度/质量函数 (PDF/PMF)</th>
+<th style="text-align: left;">特征函数 <span class="arithmatex">\(\phi_X(t)\)</span></th>
+<th style="text-align: left;">矩母函数 <span class="arithmatex">\(M_X(t)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>正态分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(N(\mu, \sigma^2)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\mu\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\sigma^2\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(e^{it\mu - \frac{1}{2}\sigma^2 t^2}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(e^{t\mu + \frac{1}{2}\sigma^2 t^2}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>指数分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(Exp(\lambda)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\lambda}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\lambda^2}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\lambda e^{-\lambda x} \quad (x \ge 0)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{\lambda}{\lambda - it}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{\lambda}{\lambda - t} \quad (t &lt; \lambda)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>均匀分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(U(a, b)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{a+b}{2}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{(b-a)^2}{12}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{b-a} \quad (a \le x \le b)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{e^{itb} - e^{ita}}{it(b-a)}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\frac{e^{tb} - e^{ta}}{t(b-a)}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>泊松分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(Pois(\lambda)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\lambda\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\lambda\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(e^{-\lambda} \frac{\lambda^k}{k!} \quad (k \in \mathbb{N})\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(e^{\lambda(e^{it} - 1)}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(e^{\lambda(e^t - 1)}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>二项分布</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(Bin(n, p)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(np\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(np(1-p)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\binom{n}{k} p^k (1-p)^{n-k}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\((1 - p + pe^{it})^n\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\((1 - p + pe^t)^n\)</span></td>
+</tr>
+</tbody>
+</table>
 
 
 
