@@ -204,6 +204,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/reference/stochastic/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/research/arxiv_papers/</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/research/arxiv_papers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/research/arxiv_papers/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/en/</loc>
         <lastmod>2026-04-21</lastmod>
         <changefreq>daily</changefreq>
@@ -405,5 +412,12 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-15/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/private/2026-4-15/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/research/arxiv_papers/</loc>
+        <lastmod>2026-04-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/research/arxiv_papers/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/research/arxiv_papers/"/>
     </url>
 </urlset>
