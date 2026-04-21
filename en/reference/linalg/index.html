@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#linear-algebra" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1700,6 +1705,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 Linear Algebra
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1717,6 +1742,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-matrix-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Matrix Calculus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Matrix Calculus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-method-matrix-differential-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (1) Core Method: Matrix Differential Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trace-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (2) Trace Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-determinant-and-inverse-matrix-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (3) Determinant and Inverse Matrix Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-eigenvalue-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (4) Eigenvalue Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1775,6 +1880,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-matrix-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Matrix Calculus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Matrix Calculus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-method-matrix-differential-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (1) Core Method: Matrix Differential Method
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trace-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (2) Trace Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-determinant-and-inverse-matrix-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (3) Determinant and Inverse Matrix Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-eigenvalue-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (4) Eigenvalue Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1795,9 +1971,238 @@
   
 
 
-  <h1>🔢 Linear Algebra</h1>
-
-
+<h1 id="linear-algebra">🔢 Linear Algebra</h1>
+<p>This module currently focuses on content related to <strong>Linear Algebra</strong>.</p>
+<h2 id="1-matrix-calculus">1. Matrix Calculus</h2>
+<p>Matrix calculus has always been the most challenging topic for me. I encountered it repeatedly in courses like <em>Regression Analysis</em>, <em>Multivariate Statistical Analysis</em>, and <em>Practical Algorithms for Optimization</em>, yet I never organized it systematically. After losing 15 points on a major matrix derivation problem during the <em>Practical Algorithms for Optimization</em> final exam due to time constraints and cumbersome summation notation, I decided to consolidate these methods, specifically focusing on the more elegant <strong>Matrix Differential Method</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Layout Convention</p>
+<p>This reference sheet consistently adopts the <strong>Denominator Layout</strong>, which is most common in machine learning and optimization.
+That is: for a scalar <span class="arithmatex">\(f\)</span> with respect to an <span class="arithmatex">\(m \times n\)</span> matrix <span class="arithmatex">\(X\)</span>, the derivative <span class="arithmatex">\(\frac{\partial f}{\partial X}\)</span> has the same dimensions as <span class="arithmatex">\(X\)</span> (<span class="arithmatex">\(m \times n\)</span>).</p>
+</div>
+<hr />
+<h3 id="1-core-method-matrix-differential-method">(1) Core Method: Matrix Differential Method</h3>
+<p>The traditional approach of taking partial derivatives element-wise is prone to errors within complex summation symbols. A more elegant alternative is to use the <strong>Total Differential</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Connection Between Differential and Derivative</p>
+<p>The total differential <span class="arithmatex">\(df\)</span> of a scalar function <span class="arithmatex">\(f(X)\)</span> can always be expressed as the trace of the product of a certain matrix and <span class="arithmatex">\(dX\)</span>:</p>
+<div class="arithmatex">\[
+df = \text{tr}\left( \left(\frac{\partial f}{\partial X}\right)^T dX \right)
+\]</div>
+<p><strong>The Four-Step Method:</strong></p>
+<ol>
+<li>Compute the total differential <span class="arithmatex">\(df\)</span>.</li>
+<li>Simplify using trace properties to reach the form <span class="arithmatex">\(\text{tr}(M^T dX)\)</span>.</li>
+<li>Remove the <span class="arithmatex">\(\text{tr}\)</span> and <span class="arithmatex">\(dX\)</span>; the remaining matrix <span class="arithmatex">\(M\)</span> is the derivative <span class="arithmatex">\(\frac{\partial f}{\partial X}\)</span>.</li>
+</ol>
+</div>
+<details class="note">
+<summary>Basic Rules of Matrix Differentials</summary>
+<ul>
+<li><strong>Addition/Subtraction</strong>: <span class="arithmatex">\(d(X \pm Y) = dX \pm dY\)</span></li>
+<li><strong>Product Rule</strong>: <span class="arithmatex">\(d(XY) = (dX)Y + X(dY)\)</span></li>
+<li><strong>Transpose</strong>: <span class="arithmatex">\(d(X^T) = (dX)^T\)</span></li>
+<li><strong>Trace</strong>: <span class="arithmatex">\(d(\text{tr}(X)) = \text{tr}(dX)\)</span></li>
+<li><strong>Cyclic Property of Trace</strong>: <span class="arithmatex">\(\text{tr}(ABC) = \text{tr}(CAB) = \text{tr}(BCA)\)</span></li>
+<li><strong>Invariance under Transpose</strong>: <span class="arithmatex">\(\text{tr}(A) = \text{tr}(A^T)\)</span></li>
+</ul>
+</details>
+<hr />
+<h3 id="2-trace-derivatives">(2) Trace Derivatives</h3>
+<p>Trace derivatives are frequently required when deriving OLS (Ordinary Least Squares) or constructing loss functions.</p>
+<div class="admonition success">
+<p class="admonition-title">Common Trace Derivative Formulas</p>
+<p>Let <span class="arithmatex">\(X\)</span> be the variable matrix, and <span class="arithmatex">\(A, B\)</span> be constant matrices:</p>
+<ol>
+<li>
+<div class="arithmatex">\[\frac{\partial \text{tr}(AX)}{\partial X} = A^T\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\frac{\partial \text{tr}(AXB)}{\partial X} = A^T B^T\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\frac{\partial \text{tr}(X^TAX)}{\partial X} = (A + A^T)X\]</div>
+</li>
+</ol>
+<p><em>(Special Case: If <span class="arithmatex">\(A\)</span> is symmetric, the result simplifies to <span class="arithmatex">\(2AX\)</span>)</em></p>
+</div>
+<details class="note">
+<summary>Derivation: <span class="arithmatex">\(\frac{\partial \text{tr}(AX)}{\partial X}\)</span></summary>
+<p>Let <span class="arithmatex">\(f = \text{tr}(AX)\)</span>. Compute the differential:</p>
+<div class="arithmatex">\[
+df = d(\text{tr}(AX)) = \text{tr}(d(AX)) = \text{tr}(A dX)
+\]</div>
+<p>To match the form <span class="arithmatex">\(\text{tr}(M^T dX)\)</span>, observe that <span class="arithmatex">\(\text{tr}(A dX) = \text{tr}((A^T)^T dX)\)</span>. Thus, <span class="arithmatex">\(M^T = A \implies M = A^T\)</span>.</p>
+<p>Therefore: <span class="arithmatex">\(\frac{\partial f}{\partial X} = A^T\)</span>.</p>
+</details>
+<details class="note">
+<summary>Derivation: <span class="arithmatex">\(\frac{\partial \text{tr}(X^TAX)}{\partial X}\)</span></summary>
+<p>Let <span class="arithmatex">\(f = \text{tr}(X^TAX)\)</span>. Compute the differential (using the product rule <span class="arithmatex">\(d(UV) = (dU)V + U(dV)\)</span>):</p>
+<div class="arithmatex">\[
+df = \text{tr}(d(X^T) AX + X^T d(AX)) = \text{tr}((dX)^T AX) + \text{tr}(X^T A dX)
+\]</div>
+<p>Using the transpose invariance <span class="arithmatex">\(\text{tr}(M) = \text{tr}(M^T)\)</span> for the first term:</p>
+<div class="arithmatex">\[
+\text{tr}((dX)^T AX) = \text{tr}(((dX)^T AX)^T) = \text{tr}(X^T A^T dX)
+\]</div>
+<p>Combining the terms:</p>
+<div class="arithmatex">\[
+df = \text{tr}(X^T A^T dX) + \text{tr}(X^T A dX) = \text{tr}((X^T A^T + X^T A) dX)
+\]</div>
+<p>Factorizing and using the cyclic property to match <span class="arithmatex">\(\text{tr}(M^T dX)\)</span>:</p>
+<div class="arithmatex">\[
+df = \text{tr}( (X^T(A^T + A)) dX ) = \text{tr}( ((A^T + A)^T X)^T dX )
+\]</div>
+<p>Thus, <span class="arithmatex">\(M = (A^T + A)^T X = (A + A^T)X\)</span>.</p>
+</details>
+<hr />
+<h3 id="3-determinant-and-inverse-matrix-derivatives">(3) Determinant and Inverse Matrix Derivatives</h3>
+<p>In Maximum Likelihood Estimation (MLE), especially involving the covariance matrix <span class="arithmatex">\(\Sigma\)</span> of a multivariate normal distribution, derivatives of determinants and inverses are essential.</p>
+<div class="admonition success">
+<p class="admonition-title">Inverse and Determinant Derivative Formulas</p>
+<p>Let <span class="arithmatex">\(X\)</span> be an invertible square matrix:</p>
+<ol>
+<li>
+<p><strong>Inverse Matrix Differential</strong>: <span class="arithmatex">\(d(X^{-1}) = -X^{-1} (dX) X^{-1}\)</span></p>
+</li>
+<li>
+<p><strong>Determinant Differential (Jacobi's Formula)</strong>: <span class="arithmatex">\(d|X| = |X| \text{tr}(X^{-1} dX)\)</span></p>
+</li>
+<li>
+<p><strong>Derivative of the Determinant</strong>: <span class="arithmatex">\(\frac{\partial |X|}{\partial X} = |X| (X^{-1})^T\)</span></p>
+</li>
+<li>
+<p><strong>Derivative of the Log-Determinant</strong>: <span class="arithmatex">\(\frac{\partial \ln |X|}{\partial X} = (X^{-1})^T\)</span></p>
+</li>
+</ol>
+</div>
+<details class="note">
+<summary>Derivation: Differential of the Inverse <span class="arithmatex">\(d(X^{-1})\)</span></summary>
+<p>Starting from the identity <span class="arithmatex">\(XX^{-1} = I\)</span>, take the differential of both sides:</p>
+<div class="arithmatex">\[
+d(XX^{-1}) = d(I) \implies (dX)X^{-1} + X d(X^{-1}) = 0
+\]</div>
+<p>Rearranging and left-multiplying by <span class="arithmatex">\(X^{-1}\)</span>:</p>
+<div class="arithmatex">\[
+X d(X^{-1}) = -(dX)X^{-1} \implies d(X^{-1}) = -X^{-1}(dX)X^{-1}
+\]</div>
+</details>
+<details class="note">
+<summary>Determinant Derivative <span class="arithmatex">\(d|X|\)</span> (Cofactor Summation Method)</summary>
+<p>This derivation bridges the gap between scalar summation, the adjugate matrix, and the matrix trace.</p>
+<p><strong>1. Element-wise derivative: <span class="arithmatex">\(\frac{\partial |X|}{\partial x_{ij}} = C_{ij}\)</span></strong>
+According to the <strong>Laplace Expansion</strong>, expanding along the <span class="arithmatex">\(i\)</span>-th row:</p>
+<div class="arithmatex">\[|X| = \sum_{k=1}^n x_{ik} C_{ik}\]</div>
+<p>Since the calculation of the cofactor <span class="arithmatex">\(C_{ik}\)</span> does not include any elements from the <span class="arithmatex">\(i\)</span>-th row, <span class="arithmatex">\(C_{ik}\)</span> is treated as a constant with respect to <span class="arithmatex">\(x_{ij}\)</span>. Taking the derivative:</p>
+<div class="arithmatex">\[\frac{\partial |X|}{\partial x_{ij}} = \frac{\partial}{\partial x_{ij}} (x_{i1}C_{i1} + \dots + x_{ij}C_{ij} + \dots + x_{in}C_{in}) = C_{ij}\]</div>
+<p><strong>Conclusion</strong>: The partial derivative of the determinant with respect to an element is its corresponding cofactor.</p>
+<p><strong>2. Converting Differential to Trace: <span class="arithmatex">\(d|X| = \text{tr}(X^* dX)\)</span></strong>
+Using the definition of the total differential and the adjugate matrix <span class="arithmatex">\(X^*\)</span> (where <span class="arithmatex">\((X^*)_{ji} = C_{ij}\)</span>):</p>
+<div class="arithmatex">\[
+d|X| = \sum_{i=1}^n \sum_{j=1}^n \frac{\partial |X|}{\partial x_{ij}} dx_{ij} = \sum_{i=1}^n \sum_{j=1}^n C_{ij} dx_{ij}
+\]</div>
+<p>Rewriting this as the sum of the diagonal elements of a matrix product:</p>
+<div class="arithmatex">\[
+d|X| = \sum_{j=1}^n \left( \sum_{i=1}^n (X^*)_{ji} (dX)_{ij} \right) = \text{tr}(X^* dX)
+\]</div>
+<p><strong>3. Deriving Jacobi's Formula: <span class="arithmatex">\(d|X| = |X| \text{tr}(X^{-1} dX)\)</span></strong>
+Substituting the relationship <span class="arithmatex">\(X^* = |X| X^{-1}\)</span>:</p>
+<div class="arithmatex">\[d|X| = \text{tr}(|X| X^{-1} dX) = |X| \text{tr}(X^{-1} dX)\]</div>
+<p>This is <strong>Jacobi's Formula</strong>, relating the rate of change of the determinant to the inverse and trace of the matrix.</p>
+<p><strong>4. Gradient of the Log-Determinant <span class="arithmatex">\(\frac{\partial \ln |X|}{\partial X}\)</span></strong>
+Compute the total differential for <span class="arithmatex">\(f = \ln |X|\)</span> and substitute Jacobi's Formula:</p>
+<div class="arithmatex">\[df = d(\ln |X|) = \frac{1}{|X|} d|X| = \text{tr}(X^{-1} dX)\]</div>
+<p>Comparing this to the standard form <span class="arithmatex">\(df = \text{tr}\left( \left(\frac{\partial f}{\partial X}\right)^T dX \right)\)</span>:</p>
+<p>$<span class="arithmatex">\(\left( \frac{\partial \ln |X|}{\partial X} \right)^T = X^{-1} \implies \frac{\partial \ln |X|}{\partial X} = (X^{-1})^T\)</span>$.</p>
+<p><em>(Note: If <span class="arithmatex">\(X\)</span> is symmetric, the result simplifies to <span class="arithmatex">\(X^{-1}\)</span>)</em></p>
+</details>
+<details class="note">
+<summary>Determinant Derivative <span class="arithmatex">\(d|X|\)</span> (Matrix Differential Method)</summary>
+<p>This derivation is entirely independent of element-wise Laplace expansion, utilizing only the multiplicative properties of determinants and the linearity of the trace.</p>
+<p><strong>Core Lemma (Infinitesimal around Identity):</strong>
+For an infinitesimal perturbation <span class="arithmatex">\(dE\)</span> to the identity matrix <span class="arithmatex">\(I\)</span>:</p>
+<div class="arithmatex">\[|I + dE| = 1 + \text{tr}(dE) + o(\|dE\|)\]</div>
+<p><strong>Intuition</strong>: If <span class="arithmatex">\(dE\)</span> has eigenvalues <span class="arithmatex">\(\lambda_i\)</span>, then <span class="arithmatex">\(|I+dE| = \prod (1+\lambda_i) = 1 + \sum \lambda_i + \dots = 1 + \text{tr}(dE)\)</span>.</p>
+<p><strong>General Case Derivation for <span class="arithmatex">\(X\)</span>:</strong>
+To calculate <span class="arithmatex">\(d|X| = |X + dX| - |X|\)</span>, we factor out <span class="arithmatex">\(X\)</span> to construct the identity form:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|X + dX| &amp;= |X(I + X^{-1}dX)| \\
+&amp;= |X| \cdot |I + X^{-1}dX|
+\end{aligned}
+\]</div>
+<p>Substituting the lemma with <span class="arithmatex">\(dE = X^{-1}dX\)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|X + dX| &amp;= |X| \cdot (1 + \text{tr}(X^{-1}dX)) \\
+&amp;= |X| + |X|\text{tr}(X^{-1}dX)
+\end{aligned}
+\]</div>
+<p>By the definition of the differential <span class="arithmatex">\(d|X| = |X + dX| - |X|\)</span>, we immediately obtain:</p>
+<div class="arithmatex">\[d|X| = |X|\text{tr}(X^{-1}dX)\]</div>
+</details>
+<details class="note">
+<summary>Derivation: Gradient of the Determinant <span class="arithmatex">\(\frac{\partial |X|}{\partial X}\)</span></summary>
+<p>Let <span class="arithmatex">\(f = |X|\)</span>. According to Jacobi's Formula, the differential is:</p>
+<div class="arithmatex">\[
+df = |X| \text{tr}(X^{-1} dX)
+\]</div>
+<p>Rewriting this into the inner product form of the trace:</p>
+<div class="arithmatex">\[
+df = \text{tr}(|X| X^{-1} dX) = \text{tr}( (|X| (X^{-1})^T)^T dX )
+\]</div>
+<p>Comparing to <span class="arithmatex">\(df = \text{tr}(M^T dX)\)</span>, we obtain:</p>
+<div class="arithmatex">\[
+\frac{\partial |X|}{\partial X} = |X| (X^{-1})^T
+\]</div>
+</details>
+<hr />
+<h3 id="4-eigenvalue-derivatives">(4) Eigenvalue Derivatives</h3>
+<p>Highly important for deriving Principal Component Analysis (PCA) or studying perturbations of covariance matrices.</p>
+<div class="admonition success">
+<p class="admonition-title">Eigenvalue Derivative Formula</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a square matrix with a non-zero eigenvalue <span class="arithmatex">\(\lambda\)</span>, its corresponding <strong>right eigenvector</strong> <span class="arithmatex">\(u\)</span> (<span class="arithmatex">\(Xu = \lambda u\)</span>), and its <strong>left eigenvector</strong> <span class="arithmatex">\(v\)</span> (<span class="arithmatex">\(v^T X = \lambda v^T\)</span>).</p>
+<p>Assuming the eigenvectors are normalized such that <span class="arithmatex">\(v^T u = 1\)</span>, the derivative of the eigenvalue <span class="arithmatex">\(\lambda\)</span> with respect to <span class="arithmatex">\(X\)</span> is:</p>
+<div class="arithmatex">\[
+\frac{\partial \lambda}{\partial X} = v u^T
+\]</div>
+<p><em>(Note: If <span class="arithmatex">\(X\)</span> is a real symmetric matrix, the left and right eigenvectors are identical (<span class="arithmatex">\(u=v\)</span>), and the derivative is <span class="arithmatex">\(uu^T\)</span>)</em></p>
+</div>
+<details class="note">
+<summary>Derivation: <span class="arithmatex">\(\frac{\partial \lambda}{\partial X}\)</span></summary>
+<p>Start from the definition of the right eigenvector:</p>
+<div class="arithmatex">\[
+Xu = \lambda u
+\]</div>
+<p>Take the total differential of both sides:</p>
+<div class="arithmatex">\[
+(dX)u + X(du) = (d\lambda)u + \lambda(du)
+\]</div>
+<p>Left-multiply both sides by the left eigenvector <span class="arithmatex">\(v^T\)</span>:</p>
+<div class="arithmatex">\[
+v^T(dX)u + v^TX(du) = v^T(d\lambda)u + v^T\lambda(du)
+\]</div>
+<p>Since <span class="arithmatex">\(v^T\)</span> is the left eigenvector (<span class="arithmatex">\(v^TX = \lambda v^T\)</span>), substitute this into the second term on the left:</p>
+<div class="arithmatex">\[
+v^T(dX)u + \lambda v^T(du) = d\lambda (v^Tu) + \lambda v^T(du)
+\]</div>
+<p>The terms <span class="arithmatex">\(\lambda v^T(du)\)</span> on both sides cancel out:</p>
+<div class="arithmatex">\[
+v^T(dX)u = d\lambda (v^Tu) \implies d\lambda = \frac{v^T(dX)u}{v^Tu}
+\]</div>
+<p>Since the trace of a scalar is itself, we can apply <span class="arithmatex">\(\text{tr}\)</span> and the cyclic property:</p>
+<div class="arithmatex">\[
+d\lambda = \text{tr}\left( \frac{v^T(dX)u}{v^Tu} \right) = \text{tr}\left( \frac{u v^T}{v^Tu} dX \right)
+\]</div>
+<p>Extracting the scalar <span class="arithmatex">\(v^T u\)</span> and comparing to the standard form <span class="arithmatex">\(df = \text{tr}(M^T dX)\)</span>:</p>
+<div class="arithmatex">\[
+M^T = \frac{u v^T}{v^Tu} \implies M = \frac{v u^T}{v^Tu}
+\]</div>
+<p>Given the normalization <span class="arithmatex">\(v^Tu = 1\)</span>, the final result is:</p>
+<div class="arithmatex">\[
+\frac{\partial \lambda}{\partial X} = v u^T
+\]</div>
+</details>
 
 
 

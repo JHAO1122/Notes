@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#linear-algebra" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1700,6 +1705,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 线性代数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1717,6 +1742,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、矩阵求导
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、矩阵求导">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （一）核心方法：矩阵微分法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （二） 迹的求导 (Trace Derivatives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determinant-inverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （三）行列式与逆矩阵的求导 (Determinant &amp; Inverse)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenvalue-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （四）特征值的求导 (Eigenvalue Derivatives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1775,6 +1880,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、矩阵求导
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、矩阵求导">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （一）核心方法：矩阵微分法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （二） 迹的求导 (Trace Derivatives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determinant-inverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （三）行列式与逆矩阵的求导 (Determinant &amp; Inverse)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenvalue-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        （四）特征值的求导 (Eigenvalue Derivatives)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1795,9 +1971,252 @@
   
 
 
-  <h1>🔢 线性代数</h1>
-
-
+<h1 id="linear-algebra">🔢 线性代数 (Linear Algebra)</h1>
+<p>本模块目前聚焦于<strong>线性代数</strong>的相关内容。</p>
+<h2 id="_1">一、矩阵求导</h2>
+<p>矩阵求导的方法一直是笔者在学习过程中最头疼的点。在笔者上过的回归分析、多元统计分析以及优化实用算法中都或多或少接触过矩阵求导，但是从未进行过系统地整理。因在<em>优化实用算法</em>期末考试中深陷繁琐的求和指标而痛失 15 分后，笔者痛定思痛，系统整理矩阵求导的方法，并使用更加简单的矩阵微分方法。</p>
+<div class="admonition warning">
+<p class="admonition-title">布局约定 (Layout Convention)</p>
+<p>本速查表统一采用机器学习与优化领域最常用的<strong>分母布局 (Denominator Layout)</strong>。
+即：标量 <span class="arithmatex">\(f\)</span> 对矩阵 <span class="arithmatex">\(X_{m \times n}\)</span> 的导数 <span class="arithmatex">\(\frac{\partial f}{\partial X}\)</span>，其维度与 <span class="arithmatex">\(X\)</span> 保持一致，同为 <span class="arithmatex">\(m \times n\)</span>。</p>
+</div>
+<hr />
+<h3 id="_2">（一）核心方法：矩阵微分法</h3>
+<p>传统的对元素求偏导非常容易在求和符号中迷失。更优雅的做法是使用<strong>全微分 (Differential)</strong>。</p>
+<div class="admonition info">
+<p class="admonition-title">微分与导数的核心联系</p>
+<p>标量函数 <span class="arithmatex">\(f(X)\)</span> 的全微分 <span class="arithmatex">\(df\)</span> 总是可以表示为某个矩阵与 <span class="arithmatex">\(dX\)</span> 乘积的迹 (Trace)：</p>
+<div class="arithmatex">\[
+df = \text{tr}\left( \left(\frac{\partial f}{\partial X}\right)^T dX \right)
+\]</div>
+<p><strong>四步法：</strong></p>
+<ol>
+<li>
+<p>求全微分 <span class="arithmatex">\(df\)</span>。</p>
+</li>
+<li>
+<p>利用迹的性质化简，凑成 <span class="arithmatex">\(\text{tr}(M^T dX)\)</span> 的形式。</p>
+</li>
+<li>
+<p>扒掉 <span class="arithmatex">\(\text{tr}\)</span> 和 <span class="arithmatex">\(dX\)</span>，剩下的 <span class="arithmatex">\(M\)</span> 就是导数 <span class="arithmatex">\(\frac{\partial f}{\partial X}\)</span>。</p>
+</li>
+</ol>
+</div>
+<details class="note">
+<summary>矩阵微分的基本运算法则</summary>
+<ul>
+<li><strong>加减法</strong>：<span class="arithmatex">\(d(X \pm Y) = dX \pm dY\)</span></li>
+<li><strong>乘法</strong>：<span class="arithmatex">\(d(XY) = (dX)Y + X(dY)\)</span></li>
+<li><strong>转置</strong>：<span class="arithmatex">\(d(X^T) = (dX)^T\)</span></li>
+<li><strong>迹</strong>：<span class="arithmatex">\(d(\text{tr}(X)) = \text{tr}(dX)\)</span></li>
+<li><strong>迹的轮换对称性</strong>：<span class="arithmatex">\(\text{tr}(ABC) = \text{tr}(CAB) = \text{tr}(BCA)\)</span></li>
+<li><strong>迹的转置不变性</strong>：<span class="arithmatex">\(\text{tr}(A) = \text{tr}(A^T)\)</span></li>
+</ul>
+</details>
+<hr />
+<h3 id="trace-derivatives">（二） 迹的求导 (Trace Derivatives)</h3>
+<p>在推导 OLS (最小二乘法) 或构建损失函数时，经常需要对迹求导。</p>
+<div class="admonition success">
+<p class="admonition-title">常见迹的导数公式</p>
+<p>设 <span class="arithmatex">\(X\)</span> 为变量矩阵，<span class="arithmatex">\(A, B\)</span> 为常量矩阵：</p>
+<ol>
+<li>
+<div class="arithmatex">\[\frac{\partial \text{tr}(AX)}{\partial X} = A^T\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\frac{\partial \text{tr}(AXB)}{\partial X} = A^T B^T\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\frac{\partial \text{tr}(X^TAX)}{\partial X} = (A + A^T)X\]</div>
+</li>
+</ol>
+<p><em>(特例：若 <span class="arithmatex">\(A\)</span> 是对称矩阵，则结果为 <span class="arithmatex">\(2AX\)</span>)</em></p>
+</div>
+<details class="note">
+<summary>推导过程：<span class="arithmatex">\(\frac{\partial \text{tr}(AX)}{\partial X}\)</span></summary>
+<p>令 <span class="arithmatex">\(f = \text{tr}(AX)\)</span>，求微分：</p>
+<div class="arithmatex">\[
+df = d(\text{tr}(AX)) = \text{tr}(d(AX)) = \text{tr}(A dX)
+\]</div>
+<p>为了凑成 <span class="arithmatex">\(\text{tr}(M^T dX)\)</span> 的形式，由于 <span class="arithmatex">\(\text{tr}(A dX) = \text{tr}((A^T)^T dX)\)</span>，所以 <span class="arithmatex">\(M^T = A \implies M = A^T\)</span>。</p>
+<p>故：<span class="arithmatex">\(\frac{\partial f}{\partial X} = A^T\)</span>。</p>
+</details>
+<details class="note">
+<summary>推导过程：<span class="arithmatex">\(\frac{\partial \text{tr}(X^TAX)}{\partial X}\)</span></summary>
+<p>令 <span class="arithmatex">\(f = \text{tr}(X^TAX)\)</span>，求微分（利用乘法法则 <span class="arithmatex">\(d(UV) = dU V + U dV\)</span>）：</p>
+<div class="arithmatex">\[
+df = \text{tr}(d(X^T) AX + X^T d(AX)) = \text{tr}((dX)^T AX) + \text{tr}(X^T A dX)
+\]</div>
+<p>利用迹的转置不变性 <span class="arithmatex">\(\text{tr}(M) = \text{tr}(M^T)\)</span>，处理第一项：</p>
+<div class="arithmatex">\[
+\text{tr}((dX)^T AX) = \text{tr}(((dX)^T AX)^T) = \text{tr}(X^T A^T dX)
+\]</div>
+<p>将两项合并：</p>
+<div class="arithmatex">\[
+df = \text{tr}(X^T A^T dX) + \text{tr}(X^T A dX) = \text{tr}((X^T A^T + X^T A) dX)
+\]</div>
+<p>提取公因式并利用迹的轮换对称性凑成 <span class="arithmatex">\(\text{tr}(M^T dX)\)</span>：</p>
+<div class="arithmatex">\[
+df = \text{tr}( (X^T(A^T + A)) dX ) = \text{tr}( ((A^T + A)^T X)^T dX )
+\]</div>
+<p>故 <span class="arithmatex">\(M = (A^T + A)^T X = (A + A^T)X\)</span>。</p>
+</details>
+<hr />
+<h3 id="determinant-inverse">（三）行列式与逆矩阵的求导 (Determinant &amp; Inverse)</h3>
+<p>在极大似然估计 (MLE) 中，如果涉及多元正态分布的协方差矩阵 <span class="arithmatex">\(\Sigma\)</span>，必考行列式和逆的求导。</p>
+<div class="admonition success">
+<p class="admonition-title">逆矩阵与行列式的导数公式</p>
+<p>设 <span class="arithmatex">\(X\)</span> 为可逆方阵：</p>
+<ol>
+<li>
+<p><strong>逆矩阵微分</strong>： <span class="arithmatex">\(d(X^{-1}) = -X^{-1} (dX) X^{-1}\)</span></p>
+</li>
+<li>
+<p><strong>行列式微分 (Jacobi's Formula)</strong>： <span class="arithmatex">\(d|X| = |X| \text{tr}(X^{-1} dX)\)</span></p>
+</li>
+<li>
+<p><strong>行列式的导数</strong>： <span class="arithmatex">\(\frac{\partial |X|}{\partial X} = |X| (X^{-1})^T\)</span></p>
+</li>
+<li>
+<p><strong>对数行列式的导数</strong>：<span class="arithmatex">\(\frac{\partial \ln |X|}{\partial X} = (X^{-1})^T\)</span></p>
+</li>
+</ol>
+</div>
+<details class="note">
+<summary>推导过程：逆矩阵的微分 <span class="arithmatex">\(d(X^{-1})\)</span></summary>
+<p>从恒等式 <span class="arithmatex">\(XX^{-1} = I\)</span> 出发，两边同时求微分：</p>
+<div class="arithmatex">\[
+d(XX^{-1}) = d(I) \implies (dX)X^{-1} + X d(X^{-1}) = 0
+\]</div>
+<p>移项并左乘 <span class="arithmatex">\(X^{-1}\)</span>：</p>
+<div class="arithmatex">\[
+X d(X^{-1}) = -(dX)X^{-1} \implies d(X^{-1}) = -X^{-1}(dX)X^{-1}
+\]</div>
+</details>
+<details class="note">
+<summary>行列式求导 <span class="arithmatex">\(d|X|\)</span>（代数余子式求和法）</summary>
+<p>本推导旨在打通标量求和、伴随矩阵与矩阵迹（Trace）之间的联系。</p>
+<ol>
+<li>元素级求导：<span class="arithmatex">\(\frac{\partial |X|}{\partial x_{ij}} = C_{ij}\)</span>
+根据行列式的 <strong>Laplace 展开</strong>，沿第 <span class="arithmatex">\(i\)</span> 行展开有：</li>
+</ol>
+<div class="arithmatex">\[|X| = \sum_{k=1}^n x_{ik} C_{ik}\]</div>
+<p>由于代数余子式 <span class="arithmatex">\(C_{ik}\)</span> 的计算不包含第 <span class="arithmatex">\(i\)</span> 行的任何元素，因此对 <span class="arithmatex">\(x_{ij}\)</span> 而言，<span class="arithmatex">\(C_{ik}\)</span> 均为常数。求导得：</p>
+<div class="arithmatex">\[\frac{\partial |X|}{\partial x_{ij}} = \frac{\partial}{\partial x_{ij}} (x_{i1}C_{i1} + \dots + x_{ij}C_{ij} + \dots + x_{in}C_{in}) = C_{ij}\]</div>
+<p><strong>结论</strong>：行列式对某个元素的偏导数等于该位置的代数余子式。</p>
+<ol>
+<li>微分与迹的转换：<span class="arithmatex">\(d|X| = \text{tr}(X^* dX)\)</span>
+利用全微分定义与伴随矩阵 <span class="arithmatex">\(X^*\)</span> 的定义（<span class="arithmatex">\((X^*)_{ji} = C_{ij}\)</span>）：</li>
+</ol>
+<div class="arithmatex">\[
+d|X| = \sum_{i=1}^n \sum_{j=1}^n \frac{\partial |X|}{\partial x_{ij}} dx_{ij} = \sum_{i=1}^n \sum_{j=1}^n C_{ij} dx_{ij}
+\]</div>
+<p>将其写为矩阵乘积的对角线元素求和形式：</p>
+<div class="arithmatex">\[
+d|X| = \sum_{j=1}^n \left( \sum_{i=1}^n (X^*)_{ji} (dX)_{ij} \right) = \text{tr}(X^* dX)
+\]</div>
+<ol>
+<li>导出 Jacobi 公式：<span class="arithmatex">\(d|X| = |X| \text{tr}(X^{-1} dX)\)</span>
+利用逆矩阵与伴随矩阵的经典关系 <span class="arithmatex">\(X^* = |X| X^{-1}\)</span>，代入上式：</li>
+</ol>
+<div class="arithmatex">\[d|X| = \text{tr}(|X| X^{-1} dX) = |X| \text{tr}(X^{-1} dX)\]</div>
+<p>这便是 <strong>Jacobi's Formula</strong>，它将行列式的变化率与矩阵的逆和迹联系了起来。</p>
+<ol>
+<li>对数行列式的梯度 <span class="arithmatex">\(\frac{\partial \ln |X|}{\partial X}\)</span>
+对 <span class="arithmatex">\(f = \ln |X|\)</span> 求全微分，并代入 Jacobi 公式：</li>
+</ol>
+<div class="arithmatex">\[df = d(\ln |X|) = \frac{1}{|X|} d|X| = \text{tr}(X^{-1} dX)\]</div>
+<p>对比矩阵微分标准型 <span class="arithmatex">\(df = \text{tr}\left( \left(\frac{\partial f}{\partial X}\right)^T dX \right)\)</span>：</p>
+<div class="arithmatex">\[\left( \frac{\partial \ln |X|}{\partial X} \right)^T = X^{-1} \implies \frac{\partial \ln |X|}{\partial X} = (X^{-1})^T\]</div>
+<p><em>(注：若 <span class="arithmatex">\(X\)</span> 为对称矩阵，则结果简化为 <span class="arithmatex">\(X^{-1}\)</span>)</em></p>
+</details>
+<details class="note">
+<summary>行列式求导 <span class="arithmatex">\(d|X|\)</span>（矩阵微分法）</summary>
+<p>本推导完全脱离元素级的 Laplace 展开，仅利用行列式的乘法性质与迹的线性性质。</p>
+<p>核心引理（单位矩阵处的微元）：
+对于单位矩阵 <span class="arithmatex">\(I\)</span> 的一个无穷小扰动 <span class="arithmatex">\(dE\)</span>，其行列式满足：</p>
+<div class="arithmatex">\[|I + dE| = 1 + \text{tr}(dE) + o(\|dE\|)\]</div>
+<p><strong>直觉理解</strong>：若 <span class="arithmatex">\(dE\)</span> 的特征值为 <span class="arithmatex">\(\lambda_i\)</span>，则 <span class="arithmatex">\(|I+dE| = \prod (1+\lambda_i) = 1 + \sum \lambda_i + \dots = 1 + \text{tr}(dE)\)</span>。</p>
+<p>一般矩阵 <span class="arithmatex">\(X\)</span> 的全微分推导：
+我们要计算 <span class="arithmatex">\(d|X| = |X + dX| - |X|\)</span>。利用行列式的乘法性质，强制提取 <span class="arithmatex">\(X\)</span> 构造单位矩阵形式：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|X + dX| &amp;= |X(I + X^{-1}dX)| \\
+&amp;= |X| \cdot |I + X^{-1}dX|
+\end{aligned}
+\]</div>
+<p>令微元 <span class="arithmatex">\(dE = X^{-1}dX\)</span>，代入上述引理：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|X + dX| &amp;= |X| \cdot (1 + \text{tr}(X^{-1}dX)) \\
+&amp;= |X| + |X|\text{tr}(X^{-1}dX)
+\end{aligned}
+\]</div>
+<p>由微分定义 <span class="arithmatex">\(d|X| = |X + dX| - |X|\)</span>，立即得到：</p>
+<div class="arithmatex">\[d|X| = |X|\text{tr}(X^{-1}dX)\]</div>
+</details>
+<details class="note">
+<summary>推导过程：行列式的导数 <span class="arithmatex">\(\frac{\partial |X|}{\partial X}\)</span></summary>
+<p>令 <span class="arithmatex">\(f = |X|\)</span>。根据雅可比公式 (Jacobi's Formula)，行列式的微分为：</p>
+<div class="arithmatex">\[
+df = |X| \text{tr}(X^{-1} dX)
+\]</div>
+<p>将上式重写为迹的内积形式：</p>
+<div class="arithmatex">\[
+df = \text{tr}(|X| X^{-1} dX) = \text{tr}( (|X| (X^{-1})^T)^T dX )
+\]</div>
+<p>对照 <span class="arithmatex">\(df = \text{tr}(M^T dX)\)</span>，即可得到：</p>
+<div class="arithmatex">\[
+\frac{\partial |X|}{\partial X} = |X| (X^{-1})^T
+\]</div>
+</details>
+<hr />
+<h3 id="eigenvalue-derivatives">（四）特征值的求导 (Eigenvalue Derivatives)</h3>
+<p>在推导主成分分析 (PCA) 或研究协方差矩阵的扰动时，极其重要。</p>
+<div class="admonition success">
+<p class="admonition-title">特征值的导数公式</p>
+<p>设方阵 <span class="arithmatex">\(X\)</span> 有非零特征值 <span class="arithmatex">\(\lambda\)</span>，其对应的<strong>右特征向量</strong>为 <span class="arithmatex">\(u\)</span> (<span class="arithmatex">\(Xu = \lambda u\)</span>)，<strong>左特征向量</strong>为 <span class="arithmatex">\(v\)</span> (<span class="arithmatex">\(v^T X = \lambda v^T\)</span>)。</p>
+<p>假设左右特征向量已经归一化满足 <span class="arithmatex">\(v^T u = 1\)</span>，则特征值 <span class="arithmatex">\(\lambda\)</span> 对矩阵 <span class="arithmatex">\(X\)</span> 的导数为：</p>
+<div class="arithmatex">\[
+\frac{\partial \lambda}{\partial X} = v u^T
+\]</div>
+<p><em>(注意：若 <span class="arithmatex">\(X\)</span> 是实对称矩阵，则左、右特征向量相等，即 <span class="arithmatex">\(u=v\)</span>，此时导数为 <span class="arithmatex">\(uu^T\)</span>)</em></p>
+</div>
+<details class="note">
+<summary>推导过程：<span class="arithmatex">\(\frac{\partial \lambda}{\partial X}\)</span></summary>
+<p>从右特征向量的定义式出发：</p>
+<div class="arithmatex">\[
+Xu = \lambda u
+\]</div>
+<p>对两边同时求全微分：</p>
+<div class="arithmatex">\[
+(dX)u + X(du) = (d\lambda)u + \lambda(du)
+\]</div>
+<p>在等式两边同时<strong>左乘</strong>左特征向量 <span class="arithmatex">\(v^T\)</span>：</p>
+<div class="arithmatex">\[
+v^T(dX)u + v^TX(du) = v^T(d\lambda)u + v^T\lambda(du)
+\]</div>
+<p>因为 <span class="arithmatex">\(v^T\)</span> 是左特征向量，满足 <span class="arithmatex">\(v^TX = \lambda v^T\)</span>，代入上式左边第二项：</p>
+<div class="arithmatex">\[
+v^T(dX)u + \lambda v^T(du) = d\lambda (v^Tu) + \lambda v^T(du)
+\]</div>
+<p>等式两边的 <span class="arithmatex">\(\lambda v^T(du)\)</span> 刚好抵消！我们得到：</p>
+<div class="arithmatex">\[
+v^T(dX)u = d\lambda (v^Tu) \implies d\lambda = \frac{v^T(dX)u}{v^Tu}
+\]</div>
+<p>由于标量的迹等于其自身，我们可以加上 <span class="arithmatex">\(\text{tr}\)</span> 并利用轮换对称性：</p>
+<div class="arithmatex">\[
+d\lambda = \text{tr}\left( \frac{v^T(dX)u}{v^Tu} \right) = \text{tr}\left( \frac{u v^T}{v^Tu} dX \right)
+\]</div>
+<p>由于 <span class="arithmatex">\(v^T u\)</span> 只是一个标量，若将其提取出来并与标准形式 <span class="arithmatex">\(df = \text{tr}(M^T dX)\)</span> 对比：</p>
+<div class="arithmatex">\[
+M^T = \frac{u v^T}{v^Tu} \implies M = \frac{v u^T}{v^Tu}
+\]</div>
+<p>如果事先约定 <span class="arithmatex">\(v^Tu = 1\)</span>，则最终结果简化为：</p>
+<div class="arithmatex">\[
+\frac{\partial \lambda}{\partial X} = v u^T
+\]</div>
+</details>
 
 
 
