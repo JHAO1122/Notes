@@ -2186,12 +2186,10 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">AI 核心解读</p>
-<p>该论文的创新点在于：  </p>
+<p>该论文的创新点在于：<br />
+1. 揭示了传统特征重要性方法因无限制置换导致外推误差的根本缺陷，并提出三种新方法（条件模型依赖、高斯变换Knockoffs、受限ALE图设计）从理论上解决该问题。<br />
+2. 通过理论与数值实验证明，所提策略能有效减少或消除外推误差，从而提升特征重要性评估的可靠性。</p>
 </div>
-<ol>
-<li>揭示了传统特征重要性方法因无限制置换导致外推误差的根本缺陷，并提出三种新方法（条件模型依赖、高斯变换Knockoffs、受限ALE图设计）从理论上解决该问题。  </li>
-<li>通过理论与数值实验证明，所提策略能有效减少或消除外推误差，从而提升特征重要性评估的可靠性。</li>
-</ol>
 <h3 id="-xplainfi-feature-importance-and-statistical-inference-for-machine-learning-in-r">- [ ] xplainfi: Feature Importance and Statistical Inference for Machine Learning in R</h3>
 <ul>
 <li><strong>分类</strong>: Knockoff | <strong>日期</strong>: 2026-03-16</li>
@@ -2199,12 +2197,10 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">AI 核心解读</p>
-<p>该论文的创新点在于：  </p>
+<p>该论文的创新点在于：<br />
+1. 推出了首个在R语言中集成<strong>条件特征重要性分析</strong>与<strong>统计推断框架</strong>的综合性工具包，填补了现有方法在条件性采样与统计检验方面的空白。<br />
+2. 提供了<strong>模块化的条件采样架构</strong>（如对抗随机森林、基于Knockoff的采样器等），支持连续与混合数据的可解释性分析，并实现了多种统计推断方法（如方差校正置信区间）。</p>
 </div>
-<ol>
-<li>推出了首个在R语言中集成<strong>条件特征重要性分析</strong>与<strong>统计推断框架</strong>的综合性工具包，填补了现有方法在条件性采样与统计检验方面的空白。  </li>
-<li>提供了<strong>模块化的条件采样架构</strong>（如对抗随机森林、基于Knockoff的采样器等），支持连续与混合数据的可解释性分析，并实现了多种统计推断方法（如方差校正置信区间）。</li>
-</ol>
 <h3 id="-distribution-free-screening-of-spatially-variable-genes-in-spatial-transcriptomics">- [ ] Distribution-free screening of spatially variable genes in spatial transcriptomics</h3>
 <ul>
 <li><strong>分类</strong>: Knockoff | <strong>日期</strong>: 2026-03-10</li>
@@ -2223,11 +2219,9 @@
 <p class="admonition-title">AI 核心解读</p>
 <ol>
 <li>针对聚类数据（如重复测量数据）中观测水平与群组水平变量混杂的问题，创新性地提出将原始预测变量分解为群组均值与组内偏差两部分，并分别在两个层次上独立进行变量选择。  </li>
-</ol>
-</div>
-<ol>
 <li>通过模拟研究验证了该方法在控制错误发现率与提高检验功效上的有效性，尤其证明分层处理的knockoff方法优于直接使用全数据集的传统方法（如Lasso）。</li>
 </ol>
+</div>
 <h3 id="-improving-the-adjusted-benjamini-hochberg-method-using-e-values-in-knockoff-assisted-variable-selection">- [ ] Improving the adjusted Benjamini--Hochberg method using e-values in knockoff-assisted variable selection</h3>
 <ul>
 <li><strong>分类</strong>: Knockoff | <strong>日期</strong>: 2026-02-12</li>
@@ -2237,11 +2231,9 @@
 <p class="admonition-title">AI 核心解读</p>
 <ol>
 <li>将Sarkar和Tang（2022）的knockoff辅助变量选择方法重新解释为一种未归一化的e值加权Benjamini-Hochberg程序，并在此基础上引入有界p值到e值的校准器，实现了更精细灵活的权重分配。  </li>
-</ol>
-</div>
-<ol>
 <li>提出了三种基于e值加权的FDR控制程序，在仿真和真实数据（如HIV-1耐药性分析）中均显示出更优的检验功效，尤其在低目标FDR、信号稀少且微弱的场景下性能提升显著。</li>
 </ol>
+</div>
 <h3 id="-conformal-robust-set-estimation">- [ ] Conformal Robust Set Estimation</h3>
 <ul>
 <li><strong>分类</strong>: Conformal | <strong>日期</strong>: 2026-04-20</li>
@@ -2258,12 +2250,10 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">AI 核心解读</p>
-<p>该论文的创新点在于：  </p>
+<p>该论文的创新点在于：<br />
+1. 首次将在线共形预测的<strong>部分反馈</strong>问题（仅当真实标签落入预测集时才被观测）建模为<strong>对抗性半赌博机问题</strong>，通过将候选预测集视为“臂”并利用对抗性赌博机算法实现长期覆盖率保证。<br />
+2. 通过<strong>显式建立学习器遗憾与覆盖率之间的理论联系</strong>，在无需分布假设的对抗性环境中实现了对错误覆盖率的控制，并在独立同分布与非独立同分布场景中验证了方法的有效性。</p>
 </div>
-<ol>
-<li>首次将在线共形预测的<strong>部分反馈</strong>问题（仅当真实标签落入预测集时才被观测）建模为<strong>对抗性半赌博机问题</strong>，通过将候选预测集视为“臂”并利用对抗性赌博机算法实现长期覆盖率保证。  </li>
-<li>通过<strong>显式建立学习器遗憾与覆盖率之间的理论联系</strong>，在无需分布假设的对抗性环境中实现了对错误覆盖率的控制，并在独立同分布与非独立同分布场景中验证了方法的有效性。</li>
-</ol>
 <h3 id="-rewind-il-online-failure-detection-and-state-respawning-for-imitation-learning">- [ ] Rewind-IL: Online Failure Detection and State Respawning for Imitation Learning</h3>
 <ul>
 <li><strong>分类</strong>: Conformal | <strong>日期</strong>: 2026-04-17</li>
