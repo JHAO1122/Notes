@@ -1,1 +1,62 @@
-{}
+{
+    "2604.11253v1": {
+        "title": "Trustworthy Feature Importance Avoids Unrestricted Permutations",
+        "date": "2026-04-13",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2603.15306v1": {
+        "title": "xplainfi: Feature Importance and Statistical Inference for Machine Learning in R",
+        "date": "2026-03-16",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2603.09061v1": {
+        "title": "Distribution-free screening of spatially variable genes in spatial transcriptomics",
+        "date": "2026-03-10",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2602.19398v1": {
+        "title": "Variable selection via knockoffs for clustered data",
+        "date": "2026-02-23",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2602.11610v1": {
+        "title": "Improving the adjusted Benjamini--Hochberg method using e-values in knockoff-assisted variable selection",
+        "date": "2026-02-12",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2604.18441v1": {
+        "title": "Conformal Robust Set Estimation",
+        "date": "2026-04-20",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.17984v1": {
+        "title": "Online Conformal Prediction with Adversarial Semi-bandit Feedback via Regret Minimization",
+        "date": "2026-04-20",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.16683v1": {
+        "title": "Rewind-IL: Online Failure Detection and State Respawning for Imitation Learning",
+        "date": "2026-04-17",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.16677v1": {
+        "title": "ReconVLA: An Uncertainty-Guided and Failure-Aware Vision-Language-Action Framework for Robotic Control",
+        "date": "2026-04-17",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.16217v1": {
+        "title": "Beyond Surface Statistics: Robust Conformal Prediction for LLMs via Internal Representations",
+        "date": "2026-04-17",
+        "tag": "Conformal",
+        "status": "todo"
+    }
+}
