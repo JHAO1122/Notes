@@ -22,20 +22,30 @@ def save_db(db):
         json.dump(db, f, ensure_ascii=False, indent=4)
 
 def get_ai_summary(title, abstract):
-    # (同之前的 AI 摘要函数)
-    prompt = f"你是统计学专家，请用两句中文概括该论文创新点：\n标题: {title}\n摘要: {abstract}"
-    response = client_ds.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3
+    # 强化 Prompt，要求 AI 站在数院统计系的视角
+    prompt = (
+        "你是一个深耕数理统计领域的专家。请用两句中文概括该论文创新点，"
+        "重点突出其统计推导、构造的评分函数或理论性质，不要泛泛而谈应用场景。"
+        f"\n标题: {title}\n摘要: {abstract}"
     )
-    return response.choices[0].message.content
+    try:
+        response = client_ds.chat.completions.create(
+            model="deepseek-chat",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"AI 总结生成失败: {e}"
 
 # 1. 运行抓取
 db = load_db()
+
+# --- 关键修改：加入统计学分类过滤 (stat.ME=方法论, stat.TH=理论, stat.ML=统计机器学习) ---
+# 这样可以过滤掉大量的 cs.RO (机器人) 或 cs.AI (工程应用) 的水文
 queries = {
-    "Knockoff": "all:knockoff",
-    "Conformal": 'all:"conformal prediction"'
+    "Knockoff": "all:knockoff AND (cat:stat.ME OR cat:stat.TH OR cat:stat.ML)",
+    "Conformal": 'all:"conformal prediction" AND (cat:stat.ME OR cat:stat.TH OR cat:stat.ML)'
 }
 
 new_entries = ""
@@ -44,33 +54,36 @@ for tag, q in queries.items():
     for result in arxiv.Client().results(search):
         paper_id = result.entry_id.split('/')[-1]
         
-        # 去重逻辑
         if paper_id in db:
             continue
             
-        print(f"New Paper Found: {result.title}")
+        print(f"New Academic Paper Found: {result.title}")
         summary = get_ai_summary(result.title, result.summary)
         
-        # 记录到数据库
         db[paper_id] = {
             "title": result.title,
             "date": str(result.published.date()),
             "tag": tag,
-            "status": "todo" # 初始状态
+            "status": "todo"
         }
         
-        # 构造 Markdown 条目 (使用 Task List 语法)
-        new_entries += f"### - [ ] {result.title} \n"
+        # --- 格式修正：严格处理 MkDocs 的缩进和换行 ---
+        new_entries += f"### - [ ] {result.title} \n\n" # 标题后留空行
         new_entries += f"- **分类**: {tag} | **日期**: {result.published.date()}\n"
-        new_entries += f"- **链接**: [PDF]({result.entry_id})\n"
-        new_entries += f"!!! note \"AI 核心解读\"\n    {summary}\n\n"
+        new_entries += f"- **链接**: [PDF]({result.entry_id})\n\n" # 列表后留空行
+        new_entries += f'!!! note "AI 核心解读"\n\n' # 注意：此处必须有两个回车
+        new_entries += f"    {summary}\n\n" # 必须是 4 个空格缩进，且前后留白
 
-# 2. 更新文件（追加到页面顶部，保留旧内容）
+# 2. 更新文件
 if new_entries:
     old_content = ""
     if os.path.exists(MD_PATH):
         with open(MD_PATH, "r", encoding="utf-8") as f:
-            old_content = f.read().split("---")[-1] # 保留分割线后的历史记录
+            content = f.read()
+            if "---" in content:
+                old_content = content.split("---")[-1]
+            else:
+                old_content = content
 
     header = f"# 🛰️ Research Frontier\n\n> 更新于: {datetime.now().strftime('%Y-%m-%d')}\n\n---\n"
     with open(MD_PATH, "w", encoding="utf-8") as f:
