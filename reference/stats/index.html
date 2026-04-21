@@ -1713,6 +1713,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 次序统计量 (Order Statistics)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 次序统计量 (Order Statistics)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心分布公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要性质与结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joint-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个次序统计量的联合分布 (Joint Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极差与中位数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1906,6 +1967,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 次序统计量 (Order Statistics)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 次序统计量 (Order Statistics)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心分布公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要性质与结论
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joint-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个次序统计量的联合分布 (Joint Distributions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极差与中位数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2018,6 +2140,131 @@
 </li>
 </ul>
 </details>
+<hr />
+<h2 id="2-order-statistics">2. 次序统计量 (Order Statistics)</h2>
+<p>设 <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span> 是取自总体分布 <span class="arithmatex">\(F(x)\)</span> 及概率密度 <span class="arithmatex">\(f(x)\)</span> 的 i.i.d. 样本。将其按升序排列为 <span class="arithmatex">\(X_{(1)} \le X_{(2)} \le \dots \le X_{(n)}\)</span>，则称 <span class="arithmatex">\(X_{(k)}\)</span> 为第 <span class="arithmatex">\(k\)</span> 阶次序统计量。</p>
+<h3 id="_2">核心分布公式</h3>
+<div class="admonition info">
+<p class="admonition-title">单个阶统计量的概率密度 (PDF of <span class="arithmatex">\(X_{(k)}\)</span>)</p>
+<p>第 <span class="arithmatex">\(k\)</span> 阶次序统计量 <span class="arithmatex">\(X_{(k)}\)</span> 的概率密度函数为：</p>
+<div class="arithmatex">\[f_{(k)}(x) = \frac{n!}{(k-1)!(n-k)!} [F(x)]^{k-1} [1-F(x)]^{n-k} f(x)\]</div>
+</div>
+<details class="note">
+<summary>直观推导：多项分布视角 (Heuristic Derivation)</summary>
+<p>考虑在 <span class="arithmatex">\(x\)</span> 附近的一个微小区间 <span class="arithmatex">\([x, x+dx]\)</span>。<span class="arithmatex">\(X_{(k)}\)</span> 落在该区间的事件等价于：</p>
+<ol>
+<li>
+<p>恰好有 <strong>1 个</strong> 样本落在 <span class="arithmatex">\([x, x+dx]\)</span>，概率约为 <span class="arithmatex">\(f(x)dx\)</span>。</p>
+</li>
+<li>
+<p>恰好有 <strong><span class="arithmatex">\(k-1\)</span> 个</strong> 样本落在 <span class="arithmatex">\((-\infty, x)\)</span>，概率为 <span class="arithmatex">\([F(x)]^{k-1}\)</span>。</p>
+</li>
+<li>
+<p>剩余的 <strong><span class="arithmatex">\(n-k\)</span> 个</strong> 样本落在 <span class="arithmatex">\((x+dx, \infty)\)</span>，概率为 <span class="arithmatex">\([1-F(x)]^{n-k}\)</span>。</p>
+</li>
+</ol>
+<p>利用多项系数进行排列组合，总方案数为 <span class="arithmatex">\(\frac{n!}{(k-1)! \cdot 1! \cdot (n-k)!}\)</span>。将所有项相乘并约去 <span class="arithmatex">\(dx\)</span>，即得上述 PDF 公式。</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">极大值与极小值的分布 (Special Cases)</p>
+<p>在可靠性工程和极值理论中最为常用：</p>
+<ul>
+<li>
+<p><strong>最小值 <span class="arithmatex">\(X_{(1)}\)</span></strong>：<span class="arithmatex">\(f_{(1)}(x) = n[1-F(x)]^{n-1} f(x)\)</span></p>
+</li>
+<li>
+<p><strong>最大值 <span class="arithmatex">\(X_{(n)}\)</span></strong>：<span class="arithmatex">\(f_{(n)}(x) = n[F(x)]^{n-1} f(x)\)</span></p>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="_3">重要性质与结论</h3>
+<div class="admonition abstract">
+<p class="admonition-title">联合分布 (Joint Distribution)</p>
+<p>所有次序统计量的联合概率密度函数为：</p>
+<div class="arithmatex">\[f_{(1), \dots, (n)}(x_1, \dots, x_n) = \begin{cases} n! \prod_{i=1}^n f(x_i) &amp; x_1 &lt; x_2 &lt; \dots &lt; x_n \\ 0 &amp; \text{otherwise} \end{cases}\]</div>
+<p><em>(直觉：这相当于将原样本的联合密度在有序空间上进行了 <span class="arithmatex">\(n!\)</span> 倍的“堆叠”)。</em></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">均匀分布的桥梁作用 (The Uniform Connection)</p>
+<p>设 <span class="arithmatex">\(U_{(k)}\)</span> 是来自 <span class="arithmatex">\(U(0, 1)\)</span> 的次序统计量，则：</p>
+<ol>
+<li>
+<p><strong>Beta 分布</strong>：<span class="arithmatex">\(U_{(k)} \sim \text{Beta}(k, n-k+1)\)</span>。</p>
+</li>
+<li>
+<p><strong>期望与方差</strong>：<span class="arithmatex">\(E[U_{(k)}] = \frac{k}{n+1}\)</span>，这对理解分位数（Quantile）的估计非常重要。</p>
+</li>
+<li>
+<p><strong>概率积分变换</strong>：对于任何连续分布 <span class="arithmatex">\(F(x)\)</span>，有 <span class="arithmatex">\(F(X_{(k)}) \overset{d}{=} U_{(k)}\)</span>。</p>
+</li>
+</ol>
+</div>
+<hr />
+<h3 id="joint-distributions">多个次序统计量的联合分布 (Joint Distributions)</h3>
+<p>在非参数推断和生存分析中，我们经常需要研究某几个特定位次的观测值之间的关系。</p>
+<div class="admonition success">
+<p class="admonition-title">任意两个次序统计量的联合密度 (<span class="arithmatex">\(i &lt; j\)</span>)</p>
+<p>设 <span class="arithmatex">\(1 \le i &lt; j \le n\)</span>，则 <span class="arithmatex">\(X_{(i)}\)</span> 和 <span class="arithmatex">\(X_{(j)}\)</span> 的联合概率密度函数为：</p>
+<div class="arithmatex">\[f_{(i),(j)}(u, v) = \frac{n!}{(i-1)!(j-i-1)!(n-j)!} [F(u)]^{i-1} f(u) [F(v)-F(u)]^{j-i-1} f(v) [1-F(v)]^{n-j}\]</div>
+<p>其中 <span class="arithmatex">\(u &lt; v\)</span>，否则密度为 0。</p>
+</div>
+<details class="note">
+<summary>多项式逻辑推导 (Multinomial Heuristic)</summary>
+<p>想象 <span class="arithmatex">\(n\)</span> 个样本点被划分为 <strong>5 个不同的区间</strong>：</p>
+<ol>
+<li>
+<p><span class="arithmatex">\((-\infty, u)\)</span>：包含 <span class="arithmatex">\(i-1\)</span> 个点，概率 <span class="arithmatex">\(F(u)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\([u, u+du]\)</span>：包含 <strong>1 个点</strong>（即 <span class="arithmatex">\(X_{(i)}\)</span>），概率 <span class="arithmatex">\(f(u)du\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\((u+du, v)\)</span>：包含 <span class="arithmatex">\(j-i-1\)</span> 个点，概率 <span class="arithmatex">\(F(v)-F(u)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\([v, v+dv]\)</span>：包含 <strong>1 个点</strong>（即 <span class="arithmatex">\(X_{(j)}\)</span>），概率 <span class="arithmatex">\(f(v)dv\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\((v+dv, \infty)\)</span>：包含 <span class="arithmatex">\(n-j\)</span> 个点，概率 <span class="arithmatex">\(1-F(v)\)</span>。</p>
+</li>
+</ol>
+<p>根据多项分布的概率公式，排列组合数即为 <span class="arithmatex">\(\frac{n!}{(i-1)! 1! (j-i-1)! 1! (n-j)!}\)</span>。将各区间的概率及其对应的幂次相乘，约去 <span class="arithmatex">\(du, dv\)</span>，立得上述公式。该逻辑可推广至任意 <span class="arithmatex">\(k\)</span> 个次序统计量的联合分布。</p>
+</details>
+<hr />
+<h3 id="_4">极差与中位数</h3>
+<details class="note">
+<summary>样本极差 (Sample Range) 的分布</summary>
+<p>定义极差 <span class="arithmatex">\(R = X_{(n)} - X_{(1)}\)</span>。对于 <span class="arithmatex">\(U(0, 1)\)</span> 分布，极差的 PDF 为：</p>
+<div class="arithmatex">\[f_R(r) = n(n-1)r^{n-2}(1-r), \quad 0 &lt; r &lt; 1\]</div>
+<p><em>(推导需要先写出 <span class="arithmatex">\(X_{(1)}\)</span> 和 <span class="arithmatex">\(X_{(n)}\)</span> 的联合分布，再做变量代换)。</em></p>
+</details>
+<details class="note">
+<summary>核心推导步骤：从联合分布到边际分布</summary>
+<p><strong>第一步：写出 <span class="arithmatex">\(X_{(1)}\)</span> 和 <span class="arithmatex">\(X_{(n)}\)</span> 的联合分布</strong>
+令上述联合公式中的 <span class="arithmatex">\(i=1, j=n\)</span>，得到：</p>
+<div class="arithmatex">\[f_{(1),(n)}(u, v) = n(n-1) [F(v)-F(u)]^{n-2} f(u) f(v), \quad u &lt; v\]</div>
+<p><strong>第二步：变量代换 (Bivariate Transformation)</strong>
+引入极差 <span class="arithmatex">\(R\)</span> 和辅助变量（通常选最小观测值）<span class="arithmatex">\(V\)</span>：</p>
+<div class="arithmatex">\[\begin{cases} R = X_{(n)} - X_{(1)} \\ V = X_{(1)} \end{cases} \implies \begin{cases} X_{(1)} = V \\ X_{(n)} = R + V \end{cases}\]</div>
+<p>计算雅可比行列式：<span class="arithmatex">\(|J| = \left| \frac{\partial(u, v)}{\partial(r, v)} \right| = \det \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 1 \end{pmatrix} = |-1| = 1\)</span>。</p>
+<p><strong>第三步：求 <span class="arithmatex">\(R\)</span> 和 <span class="arithmatex">\(V\)</span> 的联合密度</strong></p>
+<div class="arithmatex">\[f_{R,V}(r, v) = f_{(1),(n)}(v, r+v) \cdot |J| = n(n-1) [F(r+v)-F(v)]^{n-2} f(v) f(r+v)\]</div>
+<p><strong>第四步：对 <span class="arithmatex">\(V\)</span> 积分求 <span class="arithmatex">\(R\)</span> 的边际密度</strong></p>
+<div class="arithmatex">\[f_R(r) = \int_{-\infty}^{\infty} n(n-1) [F(r+v)-F(v)]^{n-2} f(v) f(r+v) dv, \quad r &gt; 0\]</div>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">渐近性质 (Asymptotic Property)</p>
+<p>当 <span class="arithmatex">\(n \to \infty\)</span> 时：</p>
+<ul>
+<li>
+<p><strong>样本中位数</strong>：在一定条件下趋于正态分布（基于中心极限定理的变体）。</p>
+</li>
+<li>
+<p><strong>样本极值</strong>：趋于三种极值分布之一（Gumbel, Fréchet, 或 Weibull），这是极值理论（EVT）的核心。</p>
+</li>
+</ul>
+</div>
 
 
 

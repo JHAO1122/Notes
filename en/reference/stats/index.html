@@ -1713,6 +1713,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Order Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Order Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-distribution-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Distribution Formulas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-properties-and-conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Properties and Conclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joint-distributions-of-multiple-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joint Distributions of Multiple Order Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-and-median" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range and Median
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1906,6 +1967,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Order Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Order Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-distribution-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Distribution Formulas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-properties-and-conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Properties and Conclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#joint-distributions-of-multiple-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joint Distributions of Multiple Order Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-and-median" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range and Median
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1931,7 +2053,7 @@
 <p>This module continuously compiles core foundational concepts related to mathematical statistics.</p>
 <hr />
 <h2 id="1-hypothesis-testing-and-confusion-matrix">1. Hypothesis Testing and Confusion Matrix</h2>
-<p>Under the frequentist Neyman-Pearson framework, hypothesis testing is essentially a process of making a binary decision about the true parameter space based on a sample.</p>
+<p>Under the frequentist Neyman-Pearson framework, hypothesis testing is essentially a binary decision-making process based on a sample regarding the true parameter space.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Hypothesis Testing Confusion Matrix</p>
 <table>
@@ -1960,64 +2082,189 @@
 <div class="admonition info">
 <p class="admonition-title">Type I Error (False Positive)</p>
 <ul>
-<li><strong>Definition</strong>: The null hypothesis <span class="arithmatex">\(H_0\)</span> is true, but it is incorrectly rejected. </li>
+<li><strong>Definition</strong>: The null hypothesis <span class="arithmatex">\(H_0\)</span> is true, but it is incorrectly rejected. Also known as a "false alarm."</li>
 <li><strong>Mathematical Expression</strong>: <span class="arithmatex">\(\alpha = P(\text{Reject } H_0 \mid H_0 \text{ is True}) = \frac{FP}{FP+TN}\)</span></li>
-<li><strong>Alias</strong>: The <strong>Significance Level</strong> (or size) of the test. In classical statistics, we usually strictly control <span class="arithmatex">\(\alpha\)</span> first (e.g., set to <span class="arithmatex">\(0.05\)</span>).</li>
+<li><strong>Alias</strong>: The <strong>Significance Level</strong> of the test. In classical statistics, we usually strictly control <span class="arithmatex">\(\alpha\)</span> first (e.g., setting it to <span class="arithmatex">\(0.05\)</span>).</li>
 </ul>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Type II Error (False Negative)</p>
 <ul>
-<li><strong>Definition</strong>: The alternative hypothesis <span class="arithmatex">\(H_1\)</span> is true, but we fail to reject <span class="arithmatex">\(H_0\)</span>. </li>
+<li><strong>Definition</strong>: The alternative hypothesis <span class="arithmatex">\(H_1\)</span> is true, but we fail to reject <span class="arithmatex">\(H_0\)</span>. Also known as a "miss."</li>
 <li><strong>Mathematical Expression</strong>: <span class="arithmatex">\(\beta = P(\text{Accept } H_0 \mid H_1 \text{ is True}) = \frac{FN}{TP+FN}\)</span></li>
 </ul>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Statistical Power</p>
 <ul>
-<li><strong>Definition</strong>: The probability of correctly rejecting <span class="arithmatex">\(H_0\)</span> when the alternative hypothesis <span class="arithmatex">\(H_1\)</span> is true. It represents the test's ability to detect a true effect.</li>
+<li><strong>Definition</strong>: The probability of correctly rejecting <span class="arithmatex">\(H_0\)</span> when the alternative hypothesis <span class="arithmatex">\(H_1\)</span> is true. It represents the ability of the test to detect a true effect.</li>
 <li><strong>Mathematical Expression</strong>: <span class="arithmatex">\(\text{Power} = 1 - \beta = P(\text{Reject } H_0 \mid H_1 \text{ is True}) = \frac{TP}{TP+FN}\)</span></li>
-<li><strong>Intuition</strong>: Given a fixed <span class="arithmatex">\(\alpha\)</span>, we aim to find a testing method that maximizes the Power (i.e., the Uniformly Most Powerful test, UMP).</li>
+<li><strong>Intuition</strong>: Given a fixed <span class="arithmatex">\(\alpha\)</span>, we aim to find testing methods that maximize Power (i.e., the Uniformly Most Powerful test, or UMP test).</li>
 </ul>
 </div>
 <div class="admonition info">
 <p class="admonition-title">p-value</p>
 <ul>
-<li><strong>Definition</strong>: The probability of observing the current sample statistic (or a more extreme one) given that the null hypothesis <span class="arithmatex">\(H_0\)</span> is true.</li>
+<li><strong>Definition</strong>: The probability of observing the current sample statistic (or one more extreme) given that the null hypothesis <span class="arithmatex">\(H_0\)</span> is true.</li>
 <li><strong>Pitfall</strong>: A p-value is <strong>absolutely not</strong> the "probability that the null hypothesis is true" (i.e., <span class="arithmatex">\(p \ne P(H_0 \mid \text{Data})\)</span>). It reflects the <strong>degree of inconsistency between the data and the null hypothesis</strong>. The smaller the p-value, the stronger the evidence to reject <span class="arithmatex">\(H_0\)</span>.</li>
 </ul>
 </div>
 <hr />
 <h3 id="modern-frontiers-multiple-testing-and-fdr-control">Modern Frontiers: Multiple Testing and FDR Control</h3>
-<p>In modern high-dimensional statistics, we often need to perform thousands or even millions of tests simultaneously. At this point, traditional <span class="arithmatex">\(\alpha\)</span> control completely fails.</p>
+<p>In modern high-dimensional statistics, we often need to perform thousands of tests simultaneously. In such cases, traditional <span class="arithmatex">\(\alpha\)</span> control fails completely.</p>
 <details class="note">
 <summary>The Multiple Testing Problem</summary>
-<p>Suppose we independently test <span class="arithmatex">\(m\)</span> completely ineffective factors (i.e., all <span class="arithmatex">\(m\)</span> null hypotheses <span class="arithmatex">\(H_0\)</span> hold), with the significance level of a single test set to <span class="arithmatex">\(\alpha = 0.05\)</span>.</p>
+<p>Suppose we independently test <span class="arithmatex">\(m\)</span> completely ineffective factors (i.e., <span class="arithmatex">\(m\)</span> null hypotheses <span class="arithmatex">\(H_0\)</span> all hold), with a single-test significance level of <span class="arithmatex">\(\alpha = 0.05\)</span>.</p>
 <p>Then the probability of making at least one Type I error (Family-Wise Error Rate, FWER) is:</p>
 <div class="arithmatex">\[
 \text{FWER} = P(V \ge 1) = 1 - (1 - \alpha)^m
 \]</div>
-<p>When <span class="arithmatex">\(m = 100\)</span>, <span class="arithmatex">\(\text{FWER} \approx 0.994\)</span>. This means that as long as enough factors are tested, seemingly significant "false signals" will inevitably be unearthed. This introduces the concept of FDR.</p>
+<p>When <span class="arithmatex">\(m = 100\)</span>, <span class="arithmatex">\(\text{FWER} \approx 0.994\)</span>. This means that if you test enough factors, you are almost guaranteed to find seemingly significant "spurious signals." This necessitates the concept of FDR.</p>
 </details>
 <details class="success">
-<summary>False Discovery Rate (FDR)</summary>
-<p>Introduced by Benjamini and Hochberg in 1995, it is the core concept of high-dimensional inference.</p>
+<summary>FDR (False Discovery Rate)</summary>
+<p>Proposed by Benjamini and Hochberg in 1995, this is a core concept in high-dimensional inference.</p>
 <ul>
-<li><strong>Definition</strong>: The <strong>expected value</strong> of the proportion of incorrect rejections (i.e., Type I errors <span class="arithmatex">\(V\)</span>) among all rejected null hypotheses (i.e., all discoveries claimed to have a significant effect <span class="arithmatex">\(R\)</span>).</li>
+<li><strong>Definition</strong>: The <strong>expected value</strong> of the proportion of incorrect rejections (Type I errors <span class="arithmatex">\(V\)</span>) among all rejected null hypotheses (total discoveries <span class="arithmatex">\(R\)</span>).</li>
 </ul>
 <div class="arithmatex">\[
 \text{FDR} = E\left[ \frac{V}{\max(R, 1)} \right] = \frac{FP}{TP+FP}
 \]</div>
 <ul>
-<li><strong>Benjamini-Hochberg (BH) Procedure</strong>:<ol>
+<li><strong>BH Procedure (Benjamini-Hochberg Procedure)</strong>:<ol>
 <li>Sort the p-values of the <span class="arithmatex">\(m\)</span> hypotheses in ascending order: <span class="arithmatex">\(p_{(1)} \le p_{(2)} \le \dots \le p_{(m)}\)</span>.</li>
 <li>Find the largest integer <span class="arithmatex">\(k\)</span> such that <span class="arithmatex">\(p_{(k)} \le \frac{k}{m} \alpha\)</span>.</li>
 <li>Reject the first <span class="arithmatex">\(k\)</span> null hypotheses (i.e., <span class="arithmatex">\(H_{(1)}, \dots, H_{(k)}\)</span>).</li>
-<li><strong>Theorem</strong>: Under the assumption of independence (or positive dependence), this procedure strictly controls the FDR at <span class="arithmatex">\(\le \alpha\)</span>.</li>
+<li><strong>Theorem</strong>: Under the assumption of independence (or positive dependence), this procedure strictly controls the FDR <span class="arithmatex">\(\le \alpha\)</span>.</li>
 </ol>
 </li>
 </ul>
 </details>
+<hr />
+<h2 id="2-order-statistics">2. Order Statistics</h2>
+<p>Let <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span> be i.i.d. samples from a population with distribution <span class="arithmatex">\(F(x)\)</span> and density <span class="arithmatex">\(f(x)\)</span>. Arranging them in ascending order <span class="arithmatex">\(X_{(1)} \le X_{(2)} \le \dots \le X_{(n)}\)</span>, we call <span class="arithmatex">\(X_{(k)}\)</span> the <span class="arithmatex">\(k\)</span>-th order statistic.</p>
+<h3 id="core-distribution-formulas">Core Distribution Formulas</h3>
+<div class="admonition info">
+<p class="admonition-title">PDF of a Single Order Statistic (<span class="arithmatex">\(X_{(k)}\)</span>)</p>
+<p>The probability density function of the <span class="arithmatex">\(k\)</span>-th order statistic <span class="arithmatex">\(X_{(k)}\)</span> is:</p>
+<div class="arithmatex">\[f_{(k)}(x) = \frac{n!}{(k-1)!(n-k)!} [F(x)]^{k-1} [1-F(x)]^{n-k} f(x)\]</div>
+</div>
+<details class="note">
+<summary>Heuristic Derivation: Multinomial Perspective</summary>
+<p>Consider a tiny interval <span class="arithmatex">\([x, x+dx]\)</span> around <span class="arithmatex">\(x\)</span>. The event that <span class="arithmatex">\(X_{(k)}\)</span> falls in this interval is equivalent to:</p>
+<ol>
+<li>
+<p>Exactly <strong>1 sample</strong> falls in <span class="arithmatex">\([x, x+dx]\)</span>, with probability approximately <span class="arithmatex">\(f(x)dx\)</span>.</p>
+</li>
+<li>
+<p>Exactly <strong><span class="arithmatex">\(k-1\)</span> samples</strong> fall in <span class="arithmatex">\((-\infty, x)\)</span>, with probability <span class="arithmatex">\([F(x)]^{k-1}\)</span>.</p>
+</li>
+<li>
+<p>The remaining <strong><span class="arithmatex">\(n-k\)</span> samples</strong> fall in <span class="arithmatex">\((x+dx, \infty)\)</span>, with probability <span class="arithmatex">\([1-F(x)]^{n-k}\)</span>.</p>
+</li>
+</ol>
+<p>Using multinomial coefficients for permutations, the total number of ways is <span class="arithmatex">\(\frac{n!}{(k-1)! \cdot 1! \cdot (n-k)!}\)</span>. Multiplying these terms and canceling <span class="arithmatex">\(dx\)</span> yields the PDF formula above.</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Distributions of Extrema (Special Cases)</p>
+<p>Most commonly used in reliability engineering and extreme value theory:</p>
+<ul>
+<li>
+<p><strong>Minimum <span class="arithmatex">\(X_{(1)}\)</span></strong>: <span class="arithmatex">\(f_{(1)}(x) = n[1-F(x)]^{n-1} f(x)\)</span></p>
+</li>
+<li>
+<p><strong>Maximum <span class="arithmatex">\(X_{(n)}\)</span></strong>: <span class="arithmatex">\(f_{(n)}(x) = n[F(x)]^{n-1} f(x)\)</span></p>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="important-properties-and-conclusions">Important Properties and Conclusions</h3>
+<div class="admonition abstract">
+<p class="admonition-title">Joint Distribution</p>
+<p>The joint probability density function of all order statistics is:</p>
+<div class="arithmatex">\[f_{(1), \dots, (n)}(x_1, \dots, x_n) = \begin{cases} n! \prod_{i=1}^n f(x_i) &amp; x_1 &lt; x_2 &lt; \dots &lt; x_n \\ 0 &amp; \text{otherwise} \end{cases}\]</div>
+<p><em>(Intuition: This is equivalent to "stacking" the joint density of the original sample <span class="arithmatex">\(n!\)</span> times over the ordered space).</em></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The Uniform Connection</p>
+<p>Let <span class="arithmatex">\(U_{(k)}\)</span> be the <span class="arithmatex">\(k\)</span>-th order statistic from a <span class="arithmatex">\(U(0, 1)\)</span> distribution, then:</p>
+<ol>
+<li>
+<p><strong>Beta Distribution</strong>: <span class="arithmatex">\(U_{(k)} \sim \text{Beta}(k, n-k+1)\)</span>.</p>
+</li>
+<li>
+<p><strong>Expectation and Variance</strong>: <span class="arithmatex">\(E[U_{(k)}] = \frac{k}{n+1}\)</span>. This is crucial for understanding Quantile estimation.</p>
+</li>
+<li>
+<p><strong>Probability Integral Transform</strong>: For any continuous distribution <span class="arithmatex">\(F(x)\)</span>, <span class="arithmatex">\(F(X_{(k)}) \overset{d}{=} U_{(k)}\)</span>.</p>
+</li>
+</ol>
+</div>
+<hr />
+<h3 id="joint-distributions-of-multiple-order-statistics">Joint Distributions of Multiple Order Statistics</h3>
+<p>In non-parametric inference and survival analysis, we often study the relationship between specific ranked observations.</p>
+<div class="admonition success">
+<p class="admonition-title">Joint Density of Two Order Statistics (<span class="arithmatex">\(i &lt; j\)</span>)</p>
+<p>Let <span class="arithmatex">\(1 \le i &lt; j \le n\)</span>. The joint PDF of <span class="arithmatex">\(X_{(i)}\)</span> and <span class="arithmatex">\(X_{(j)}\)</span> is:</p>
+<div class="arithmatex">\[f_{(i),(j)}(u, v) = \frac{n!}{(i-1)!(j-i-1)!(n-j)!} [F(u)]^{i-1} f(u) [F(v)-F(u)]^{j-i-1} f(v) [1-F(v)]^{n-j}\]</div>
+<p>where <span class="arithmatex">\(u &lt; v\)</span>, and 0 otherwise.</p>
+</div>
+<details class="note">
+<summary>Multinomial Heuristic Derivation</summary>
+<p>Imagine <span class="arithmatex">\(n\)</span> sample points partitioned into <strong>5 distinct intervals</strong>:</p>
+<ol>
+<li>
+<p><span class="arithmatex">\((-\infty, u)\)</span>: Contains <span class="arithmatex">\(i-1\)</span> points, with probability <span class="arithmatex">\(F(u)\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\([u, u+du]\)</span>: Contains <strong>1 point</strong> (<span class="arithmatex">\(X_{(i)}\)</span>), with probability <span class="arithmatex">\(f(u)du\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\((u+du, v)\)</span>: Contains <span class="arithmatex">\(j-i-1\)</span> points, with probability <span class="arithmatex">\(F(v)-F(u)\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\([v, v+dv]\)</span>: Contains <strong>1 point</strong> (<span class="arithmatex">\(X_{(j)}\)</span>), with probability <span class="arithmatex">\(f(v)dv\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\((v+dv, \infty)\)</span>: Contains <span class="arithmatex">\(n-j\)</span> points, with probability <span class="arithmatex">\(1-F(v)\)</span>.</p>
+</li>
+</ol>
+<p>Based on the multinomial formula, the number of permutations is <span class="arithmatex">\(\frac{n!}{(i-1)! 1! (j-i-1)! 1! (n-j)!}\)</span>. Multiplying the probabilities of each interval by their respective powers and canceling <span class="arithmatex">\(du, dv\)</span> yields the formula. This logic extends to the joint distribution of any <span class="arithmatex">\(k\)</span> order statistics.</p>
+</details>
+<hr />
+<h3 id="range-and-median">Range and Median</h3>
+<details class="note">
+<summary>Distribution of the Sample Range</summary>
+<p>The range is defined as <span class="arithmatex">\(R = X_{(n)} - X_{(1)}\)</span>. For a <span class="arithmatex">\(U(0, 1)\)</span> distribution, the PDF of the range is:</p>
+<div class="arithmatex">\[f_R(r) = n(n-1)r^{n-2}(1-r), \quad 0 &lt; r &lt; 1\]</div>
+<p><em>(The derivation requires writing the joint distribution of <span class="arithmatex">\(X_{(1)}\)</span> and <span class="arithmatex">\(X_{(n)}\)</span> first, then performing a bivariate transformation).</em></p>
+</details>
+<details class="note">
+<summary>Core Derivation Steps: From Joint to Marginal Distribution</summary>
+<p><strong>Step 1: Write the joint distribution of <span class="arithmatex">\(X_{(1)}\)</span> and <span class="arithmatex">\(X_{(n)}\)</span></strong>
+Setting <span class="arithmatex">\(i=1, j=n\)</span> in the general joint formula:</p>
+<div class="arithmatex">\[f_{(1),(n)}(u, v) = n(n-1) [F(v)-F(u)]^{n-2} f(u) f(v), \quad u &lt; v\]</div>
+<p><strong>Step 2: Bivariate Transformation</strong>
+Introduce the range <span class="arithmatex">\(R\)</span> and an auxiliary variable <span class="arithmatex">\(V\)</span> (usually the minimum):</p>
+<div class="arithmatex">\[\begin{cases} R = X_{(n)} - X_{(1)} \\ V = X_{(1)} \end{cases} \implies \begin{cases} X_{(1)} = V \\ X_{(n)} = R + V \end{cases}\]</div>
+<p>The Jacobian determinant is: <span class="arithmatex">\(|J| = \left| \frac{\partial(u, v)}{\partial(r, v)} \right| = \det \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 1 \end{pmatrix} = |-1| = 1\)</span>.</p>
+<p><strong>Step 3: Find the joint density of <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(V\)</span></strong></p>
+<div class="arithmatex">\[f_{R,V}(r, v) = f_{(1),(n)}(v, r+v) \cdot |J| = n(n-1) [F(r+v)-F(v)]^{n-2} f(v) f(r+v)\]</div>
+<p><strong>Step 4: Integrate over <span class="arithmatex">\(V\)</span> to find the marginal density of <span class="arithmatex">\(R\)</span></strong></p>
+<div class="arithmatex">\[f_R(r) = \int_{-\infty}^{\infty} n(n-1) [F(r+v)-F(v)]^{n-2} f(v) f(r+v) dv, \quad r &gt; 0\]</div>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Asymptotic Property</p>
+<p>As <span class="arithmatex">\(n \to \infty\)</span>:</p>
+<ul>
+<li>
+<p><strong>Sample Median</strong>: Under certain conditions, it converges to a normal distribution (a variant of the Central Limit Theorem).</p>
+</li>
+<li>
+<p><strong>Sample Extrema</strong>: Converge to one of three extreme value distributions (Gumbel, Fréchet, or Weibull), which is the core of Extreme Value Theory (EVT).</p>
+</li>
+</ul>
+</div>
 
 
 
