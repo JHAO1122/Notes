@@ -36,9 +36,6 @@ This module focuses on content related to stochastic processes.
     2. **Uniformly bounded process**: For all $n \le T$, there exists a constant $M$ such that $|X_n| \le M$ almost surely.
     3. **Finite expected time and bounded increments**: $E[T] < \infty$, and the single-step increments of the martingale are bounded ($|X_m - X_n| \le C$).
 
----
-
-## 3. Core Limit Theorems of Martingales
 
 !!! abstract "Doob's Maximal Inequality"
     For a non-negative submartingale $X_n$ (or the absolute value of a martingale), the tail probability of its running maximum is bounded by its final expectation:
