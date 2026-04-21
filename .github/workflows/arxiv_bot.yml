@@ -1,0 +1,36 @@
+name: Academic Paper Tracker
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天北京时间早上 8 点自动运行
+  workflow_dispatch:      # 允许你在网页上手动点“Run”来测试
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # 必须开启：允许机器人修改你的 JSON 和 Markdown
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Libs
+        run: pip install arxiv openai
+
+      - name: Run Script
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/arxiv_bot.py
+
+      - name: Sync Changes
+        run: |
+          git config --global user.name "Jiahao-Bot"
+          git config --global user.email "bot@github.com"
+          git add docs/zh/research/arxiv_papers.md scripts/processed_papers.json
+          git commit -m "🤖 Auto-update: Latest Research Papers" || echo "No changes"
+          git push

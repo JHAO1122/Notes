@@ -67,6 +67,8 @@ In modern high-dimensional statistics, we often need to perform thousands of tes
         3. Reject the first $k$ null hypotheses (i.e., $H_{(1)}, \dots, H_{(k)}$).
         4. **Theorem**: Under the assumption of independence (or positive dependence), this procedure strictly controls the FDR $\le \alpha$.
 
+![Hyphothesis Testing Table](assets/Inference_Table.jpeg)
+
 ---
 
 ## 2. Order Statistics

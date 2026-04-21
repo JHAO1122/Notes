@@ -67,6 +67,9 @@
         3. 拒绝前 $k$ 个原假设（即 $H_{(1)}, \dots, H_{(k)}$）。
         4. **定理**：在独立性（或正相依）假设下，该过程能够严格控制 FDR $\le \alpha$。
 
+
+![Hyphothesis Testing Table](assets/Inference_Table.jpeg)
+
 ---
 
 ## 2. 次序统计量 (Order Statistics)
@@ -160,7 +163,7 @@
 ??? note "核心推导步骤：从联合分布到边际分布"
     **第一步：写出 $X_{(1)}$ 和 $X_{(n)}$ 的联合分布**
     令上述联合公式中的 $i=1, j=n$，得到：
-    
+
     $$f_{(1),(n)}(u, v) = n(n-1) [F(v)-F(u)]^{n-2} f(u) f(v), \quad u < v$$
 
     **第二步：变量代换 (Bivariate Transformation)**

@@ -83,6 +83,8 @@ plugins:
             "📏 测度论基础": "📏 Measure Theory"
             "🔢 线性代数": "🔢 Linear Algebra"
             "🌊 随机过程": "🌊 Stochastic Processes"
+            "🛰️ 前沿追踪": "🛰️ Research Updates"
+            "📝 最新论文": "📝 Latest Papers"
   - encryptcontent:
       title: "🔒 我的树洞"
       summary: "希望我们有心照不宣的默契。请输入暗号以解密："
@@ -137,7 +139,9 @@ nav:
       - 🎲 概率论: zh/reference/prob.md
       - 📏 测度论基础: zh/reference/measure.md
       - 🔢 线性代数: zh/reference/linalg.md
-      - 🌊 随机过程: zh/reference/stochastic.md
+      - 🌊 随机过程: zh/reference/stochastic.md 
+  - 🛰️ 前沿追踪: 
+      - 📝 最新论文: zh/research/arxiv_papers.md
 # ================= 扩展配置 =================
 extra_javascript:
   - javascripts/mathjax.js
