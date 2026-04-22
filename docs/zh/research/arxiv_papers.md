@@ -1,6 +1,6 @@
 # 🛰️ Research Frontier
 
-这里是我通过 GitHub 机器人脚本制作的论文速递版面，它北京时间每天早上八点会自动扫描 ArXiv 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
+这里是我通过脚本制作的论文速递版面，它会调用 GitHub 机器人，帮我在北京时间每天早上八点会自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
 > 更新于: 2026-04-22
