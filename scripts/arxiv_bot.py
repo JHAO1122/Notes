@@ -26,6 +26,7 @@ def get_ai_summary(title, abstract):
     prompt = (
         "你是一个深耕数理统计领域的专家。请用两句中文概括该论文创新点，"
         "重点突出其统计推导、构造的评分函数或理论性质，不要泛泛而谈应用场景。"
+        "不要使用 Markdown 标题或复杂的列表嵌套。"
         f"\n标题: {title}\n摘要: {abstract}"
     )
     try:
@@ -66,13 +67,13 @@ for tag, q in queries.items():
             "tag": tag,
             "status": "todo"
         }
-        
+        indented_summary = summary.replace("\n", "\n    ")
         # --- 格式修正：严格处理 MkDocs 的缩进和换行 ---
         new_entries += f"### - [ ] {result.title} \n\n" # 标题后留空行
         new_entries += f"- **分类**: {tag} | **日期**: {result.published.date()}\n"
         new_entries += f"- **链接**: [PDF]({result.entry_id})\n\n" # 列表后留空行
         new_entries += f'!!! note "AI 核心解读"\n\n' # 注意：此处必须有两个回车
-        new_entries += f"    {summary}\n\n" # 必须是 4 个空格缩进，且前后留白
+        new_entries += f"    {indented_summary}\n\n" # 必须是 4 个空格缩进，且前后留白
 
 # 2. 更新文件
 if new_entries:
