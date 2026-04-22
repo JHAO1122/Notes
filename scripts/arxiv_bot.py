@@ -49,17 +49,28 @@ queries = {
     "Conformal": 'all:"conformal prediction" AND (cat:stat.ME OR cat:stat.TH OR cat:stat.ML)'
 }
 
+# 配置一个“礼貌”的客户端
+client = arxiv.Client(page_size=10, delay_seconds=3.0, num_retries=5)
+
 new_entries = ""
 for tag, q in queries.items():
-    search = arxiv.Search(query=q, max_results=5, sort_by=arxiv.SortCriterion.SubmittedDate)
-    for result in arxiv.Client().results(search):
+    # 关键修改 1：把 max_results 调大（比如 30），扩大我们“淘金”的沙池
+    search = arxiv.Search(query=q, max_results=30, sort_by=arxiv.SortCriterion.SubmittedDate)
+    
+    # 关键修改 2：加一个计数器，记录今天这个标签下抓到了几篇全新的
+    new_found_count = 0 
+    
+    for result in client.results(search):
         paper_id = result.entry_id.split('/')[-1]
         
         if paper_id in db:
-            continue
+            continue # 见过的，直接跳过，去看下一篇
             
         print(f"New Academic Paper Found: {result.title}")
         summary = get_ai_summary(result.title, result.summary)
+        
+        # 确保多行 summary 也能完美缩进
+        indented_summary = summary.replace("\n", "\n    ")
         
         db[paper_id] = {
             "title": result.title,
@@ -67,14 +78,17 @@ for tag, q in queries.items():
             "tag": tag,
             "status": "todo"
         }
-        indented_summary = summary.replace("\n", "\n    ")
-        # --- 格式修正：严格处理 MkDocs 的缩进和换行 ---
-        new_entries += f"### - [ ] {result.title} \n\n" # 标题后留空行
-        new_entries += f"- **分类**: {tag} | **日期**: {result.published.date()}\n"
-        new_entries += f"- **链接**: [PDF]({result.entry_id})\n\n" # 列表后留空行
-        new_entries += f'!!! note "AI 核心解读"\n\n' # 注意：此处必须有两个回车
-        new_entries += f"    {indented_summary}\n\n" # 必须是 4 个空格缩进，且前后留白
-
+        
+        new_entries += f"### {result.title} \n\n" 
+        new_entries += f"- [ ] **分类**: {tag} | **日期**: {result.published.date()}\n"
+        new_entries += f"- **链接**: [PDF]({result.entry_id})\n\n"
+        new_entries += f'!!! note "AI 核心解读"\n\n'
+        new_entries += f"    {indented_summary}\n\n"
+        
+        # 关键修改 3：每找到一篇全新的，计数器 +1。凑满 5 篇就收工
+        new_found_count += 1
+        if new_found_count >= 5:
+            break
 # 2. 更新文件
 if new_entries:
     old_content = ""
