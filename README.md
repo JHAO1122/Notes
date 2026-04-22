@@ -13,16 +13,24 @@ Currently, [the site](https://jhao1122.github.io/Notes/) is divided into two cor
 
 ### 📚 Notes Base
 
-* **[Completed] Stochastic Differential Equations**
+* **[Completed] [Stochastic Differential Equations](https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/0Intro/)**
   * Covers core theories including Brownian Motion, Itô Calculus, SDE solutions, Black-Scholes pricing, and the Feynman-Kac formula.
   * Includes detailed solutions to exercises.
 
-* **[In Progress] Asymptotic Statistics**
+* **[In Progress] [Asymptotic Statistics](https://jhao1122.github.io/Notes/Asymptotic-statistics/0Intro/)**
   * Covers advanced statistical theories such as weak convergence, CLT for dependent data, and asymptotic inference methods.
 
-### ✒️ Essays
+### ✒️ [Essays](https://jhao1122.github.io/Notes/blog/)
 
 This is a place for passion and sentiment. No formulas, no derivations. For academic content, please refer to the Notes Base.
+
+### 🛠️ [Quick Reference](https://jhao1122.github.io/Notes/reference/)
+
+A personal repository of foundational concepts in Mathematics and Statistics that are often elusive or easily forgotten. This section also records my personal interpretations and intuitive grasp of core theorems.
+
+### 🛰️ [Research Frontier](https://jhao1122.github.io/Notes/research/arxiv_papers/)
+
+An automated gateway to the latest academic breakthroughs. Updated daily at 08:00 (UTC+8) via GitHub Actions, this section tracks the pulse of Knockoff Filters and Conformal Prediction within the stat.* domain, ensuring I stay synchronized with the frontier of high-dimensional inference
 
 ---
 
