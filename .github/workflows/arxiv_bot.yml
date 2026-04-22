@@ -12,10 +12,10 @@ jobs:
       contents: write    # 必须开启：允许机器人修改你的 JSON 和 Markdown
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
