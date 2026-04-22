@@ -1,1 +1,62 @@
-{}
+{
+    "2604.11253v1": {
+        "title": "Trustworthy Feature Importance Avoids Unrestricted Permutations",
+        "date": "2026-04-13",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2603.09061v1": {
+        "title": "Distribution-free screening of spatially variable genes in spatial transcriptomics",
+        "date": "2026-03-10",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2602.19398v1": {
+        "title": "Variable selection via knockoffs for clustered data",
+        "date": "2026-02-23",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2602.11610v1": {
+        "title": "Improving the adjusted Benjamini--Hochberg method using e-values in knockoff-assisted variable selection",
+        "date": "2026-02-12",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2602.00218v1": {
+        "title": "GRIP2: A Robust and Powerful Deep Knockoff Method for Feature Selection",
+        "date": "2026-01-30",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2604.18441v1": {
+        "title": "Conformal Robust Set Estimation",
+        "date": "2026-04-20",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.17984v1": {
+        "title": "Online Conformal Prediction with Adversarial Semi-bandit Feedback via Regret Minimization",
+        "date": "2026-04-20",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.15229v1": {
+        "title": "On a Probability Inequality for Order Statistics with Applications to Bootstrap, Conformal Prediction, and more",
+        "date": "2026-04-16",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.14621v2": {
+        "title": "Differentially Private Conformal Prediction",
+        "date": "2026-04-16",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.07325v1": {
+        "title": "Conformal Prediction with Time-Series Data via Sequential Conformalized Density Regions",
+        "date": "2026-04-08",
+        "tag": "Conformal",
+        "status": "todo"
+    }
+}
