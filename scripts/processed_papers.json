@@ -58,5 +58,65 @@
         "date": "2026-04-08",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2601.07764v2": {
+        "title": "Power of masking methods for adaptive testing in a multivariate normal means problem",
+        "date": "2026-01-12",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2601.02583v1": {
+        "title": "Improve Power of Knockoffs with Annotation Information of Covariates",
+        "date": "2026-01-05",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2512.17401v1": {
+        "title": "A General Stability Approach to False Discovery Rate Control",
+        "date": "2025-12-19",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2511.21562v1": {
+        "title": "StaRQR-K: False Discovery Rate Controlled Regional Quantile Regression",
+        "date": "2025-11-26",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2511.20851v2": {
+        "title": "When Features Beat Noise: A Feature Selection Technique Through Noise-Based Hypothesis Testing",
+        "date": "2025-11-25",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2604.06468v2": {
+        "title": "Conformal Margin Risk Minimization: An Envelope Framework for Robust Learning under Label Noise",
+        "date": "2026-04-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.06464v1": {
+        "title": "Weighted Bayesian Conformal Prediction",
+        "date": "2026-04-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.03772v1": {
+        "title": "Debiased Machine Learning for Conformal Prediction of Counterfactual Outcomes Under Runtime Confounding",
+        "date": "2026-04-04",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2604.01170v1": {
+        "title": "Online Reasoning Calibration: Test-Time Training Enables Generalizable Conformal LLM Reasoning",
+        "date": "2026-04-01",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.27189v1": {
+        "title": "Conformal Prediction Assessment: A Framework for Conditional Coverage Evaluation and Selection",
+        "date": "2026-03-28",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
