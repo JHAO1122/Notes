@@ -97,3 +97,32 @@ This module covers core inequalities in probability theory, convergence theory o
 | **Uniform Distribution** | $U(a, b)$ | $\frac{a+b}{2}$ | $\frac{(b-a)^2}{12}$ | $\frac{1}{b-a} \quad (a \le x \le b)$ | $\frac{e^{itb} - e^{ita}}{it(b-a)}$ | $\frac{e^{tb} - e^{ta}}{t(b-a)}$ |
 | **Poisson Distribution** | $Pois(\lambda)$ | $\lambda$ | $\lambda$ | $e^{-\lambda} \frac{\lambda^k}{k!} \quad (k \in \mathbb{N})$ | $e^{\lambda(e^{it} - 1)}$ | $e^{\lambda(e^t - 1)}$ |
 | **Binomial Distribution** | $Bin(n, p)$ | $np$ | $np(1-p)$ | $\binom{n}{k} p^k (1-p)^{n-k}$ | $(1 - p + pe^{it})^n$ | $(1 - p + pe^t)^n$ |
+
+---
+
+## V. Change of Variables & PDF Transformation
+
+!!! info "Univariate Transformation"
+    Let $X$ have PDF $f_X(x)$, and let $Y = g(X)$. If $g(x)$ is a strictly monotonic and differentiable function with inverse $x = g^{-1}(y)$, the PDF of $Y$ is:
+    
+    $$
+    f_Y(y) = f_X(g^{-1}(y)) \cdot \left| \frac{d}{dy} g^{-1}(y) \right|
+    $$
+
+!!! success "Multivariate Transformation & the Jacobian"
+    Let $\mathbf{X} = (X_1, \dots, X_n)^T$ have a joint PDF $f_{\mathbf{X}}(\mathbf{x})$, and let $\mathbf{Y} = \mathbf{g}(\mathbf{X})$ be a one-to-one mapping.
+    Let the inverse be $\mathbf{x} = \mathbf{h}(\mathbf{y})$ where $\mathbf{h} = \mathbf{g}^{-1}$. The joint PDF of $\mathbf{Y}$ is:
+    
+    $$
+    f_{\mathbf{Y}}(\mathbf{y}) = f_{\mathbf{X}}(\mathbf{h}(\mathbf{y})) \cdot | \det(J_{\mathbf{h}}(\mathbf{y})) |
+    $$
+    
+    Where $J_{\mathbf{h}}(\mathbf{y})$ is the **Jacobian Matrix**, defined as:
+    
+    $$
+    J_{\mathbf{h}}(\mathbf{y}) = \frac{\partial (x_1, \dots, x_n)}{\partial (y_1, \dots, y_n)} = \begin{pmatrix} 
+    \frac{\partial x_1}{\partial y_1} & \dots & \frac{\partial x_1}{\partial y_n} \\ 
+    \vdots & \ddots & \vdots \\ 
+    \frac{\partial x_n}{\partial y_1} & \dots & \frac{\partial x_n}{\partial y_n} 
+    \end{pmatrix}
+    $$

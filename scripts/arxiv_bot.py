@@ -101,7 +101,7 @@ if new_entries:
                 old_content = content
 
     # 1. 定义你专属的抬头模板
-    intro_text = """这里是我通过 GitHub 机器人脚本制作的论文速递版面，它北京时间每天早上八点会自动扫描 ArXiv 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
+    intro_text = """这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 """
 
     # 2. 构造完整的 header

@@ -97,3 +97,32 @@
 | **均匀分布** | $U(a, b)$ | $\frac{a+b}{2}$ | $\frac{(b-a)^2}{12}$ | $\frac{1}{b-a} \quad (a \le x \le b)$ | $\frac{e^{itb} - e^{ita}}{it(b-a)}$ | $\frac{e^{tb} - e^{ta}}{t(b-a)}$ |
 | **泊松分布** | $Pois(\lambda)$ | $\lambda$ | $\lambda$ | $e^{-\lambda} \frac{\lambda^k}{k!} \quad (k \in \mathbb{N})$ | $e^{\lambda(e^{it} - 1)}$ | $e^{\lambda(e^t - 1)}$ |
 | **二项分布** | $Bin(n, p)$ | $np$ | $np(1-p)$ | $\binom{n}{k} p^k (1-p)^{n-k}$ | $(1 - p + pe^{it})^n$ | $(1 - p + pe^t)^n$ |
+
+---
+
+## 五、 变量代换与 PDF 转换 (Variable Transformations)
+
+!!! info "一元连续型随机变量代换 (Univariate)"
+    设 $X$ 的 PDF 为 $f_X(x)$，令 $Y = g(X)$。若 $g(x)$ 是严格单调且可微的函数，其反函数记为 $x = g^{-1}(y)$，则 $Y$ 的 PDF 为：
+    
+    $$
+    f_Y(y) = f_X(g^{-1}(y)) \cdot \left| \frac{d}{dy} g^{-1}(y) \right|
+    $$
+
+!!! success "多元变量代换与雅可比矩阵 (Multivariate & Jacobian)"
+    设 $\mathbf{X} = (X_1, \dots, X_n)^T$ 的联合 PDF 为 $f_{\mathbf{X}}(\mathbf{x})$，令 $\mathbf{Y} = \mathbf{g}(\mathbf{X})$ 为 $n$ 维一一映射。
+    记反函数为 $\mathbf{x} = \mathbf{h}(\mathbf{y})$，其中 $\mathbf{h} = \mathbf{g}^{-1}$。则 $\mathbf{Y}$ 的联合 PDF 为：
+    
+    $$
+    f_{\mathbf{Y}}(\mathbf{y}) = f_{\mathbf{X}}(\mathbf{h}(\mathbf{y})) \cdot | \det(J_{\mathbf{h}}(\mathbf{y})) |
+    $$
+    
+    其中 $J_{\mathbf{h}}(\mathbf{y})$ 是 **Jacobian 矩阵**，其定义为：
+    
+    $$
+    J_{\mathbf{h}}(\mathbf{y}) = \frac{\partial (x_1, \dots, x_n)}{\partial (y_1, \dots, y_n)} = \begin{pmatrix} 
+    \frac{\partial x_1}{\partial y_1} & \dots & \frac{\partial x_1}{\partial y_n} \\ 
+    \vdots & \ddots & \vdots \\ 
+    \frac{\partial x_n}{\partial y_1} & \dots & \frac{\partial x_n}{\partial y_n} 
+    \end{pmatrix}
+    $$
