@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap7/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-23/">
       
       
-        <link rel="prev" href="../sol_chap5_6/">
+        <link rel="prev" href="../2026-4-15/">
       
       
-        <link rel="next" href="../../Asymptotic-statistics/0Intro/">
+        <link rel="next" href="../../../../Stochastic-Differential-Equation/0Intro/">
       
       
         
-          <link rel="alternate" href="./" hreflang="zh">
+          <link rel="alternate" href="../../../../../blog/posts/private/2026-4-23/" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/sol_chap7/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>SDE Chapter 7 - Jiahao's Academic Space</title>
+        <title>[Protected] 何时收敛 - Jiahao's Academic Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -93,7 +93,7 @@
       
         
         <a href="#_1" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -105,8 +105,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SDE Chapter 7
+              [Protected] 何时收敛
             
           </span>
         </div>
@@ -166,20 +166,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="zh" class="md-select__link">
+            <a href="../../../../../blog/posts/private/2026-4-23/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Stochastic-Differential-Equation/sol_chap7/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -200,16 +200,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -222,7 +222,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -234,7 +234,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -255,7 +255,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -265,13 +265,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../../../" class="md-tabs__link">
         
   
   
     
   
-  🏠 首页
+  🏠 Home
 
       </a>
     </li>
@@ -282,46 +282,44 @@
   
   
   
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
-          
-  
-  
-  ✍️ 随笔
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      
-  
-  
-  
     
   
   
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../0Intro/" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
   
-  📚 笔记库
+  ✍️ Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  📚 Course Notes
 
         </a>
       </li>
@@ -340,11 +338,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/" class="md-tabs__link">
+        <a href="../../../../reference/" class="md-tabs__link">
           
   
   
-  🛠️ 知识速查
+  🛠️ Quick Reference
 
         </a>
       </li>
@@ -360,11 +358,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+        <a href="../../../../research/arxiv_papers/" class="md-tabs__link">
           
   
   
-  🛰️ 前沿追踪
+  🛰️ Research Updates
 
         </a>
       </li>
@@ -383,7 +381,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -392,9 +392,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -404,7 +404,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -424,14 +424,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🏠 首页
+    🏠 Home
   
 
     
@@ -448,33 +448,38 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
     
@@ -485,12 +490,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
           </label>
@@ -503,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         
   
   
@@ -528,26 +533,31 @@
                 
   
   
+    
   
   
+  
     
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
@@ -565,7 +575,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -583,14 +593,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/posts/private/2026-4-15/" class="md-nav__link">
+      <a href="../2026-4-15/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    男人的一生只哭十一次
+    [Protected] 男人的一生只哭十一次
   
 
     
@@ -615,17 +625,26 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../blog/posts/private/2026-4-23/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    何时收敛
+    [Protected] 何时收敛
   
 
     
@@ -641,13 +660,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -660,43 +672,46 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    📚 笔记库
+    📚 Course Notes
   
 
     
@@ -707,12 +722,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📚 笔记库
+    📚 Course Notes
   
 
           </label>
@@ -722,38 +737,33 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
     
@@ -764,12 +774,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
           </label>
@@ -782,14 +792,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../0Intro/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    随机微分方程课程概览
+    SDE Course Overview
   
 
     
@@ -833,7 +843,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -849,7 +859,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -862,14 +872,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../1conditional_expectation/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第一章：条件期望
+    Ch 1: Conditional Expectation
   
 
     
@@ -890,14 +900,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../2Brown_Motion/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第二章：布朗运动
+    Ch 2: Brownian Motion
   
 
     
@@ -918,14 +928,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../3stochastic_integrate/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第三章：随机积分
+    Ch 3: Stochastic Integrals
   
 
     
@@ -946,14 +956,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../4Ito_integrate/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分
+    Ch 4: Itô Integrals
   
 
     
@@ -974,14 +984,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../5SDEs/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第五章：多元 Itô 积分
+    Ch 5: Multivariate Itô Calculus
   
 
     
@@ -1002,14 +1012,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../6SDEs/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第六章：解的存在唯一性
+    Ch 6: Existence & Uniqueness
   
 
     
@@ -1030,14 +1040,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../7Option_Pricing/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第七章：期权定价与停时
+    Ch 7: Option Pricing and Stopping Times
   
 
     
@@ -1063,8 +1073,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1077,11 +1085,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
         
           
           <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
@@ -1091,7 +1099,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -1102,12 +1110,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1120,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_chap1_2/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
         
   
   
@@ -1148,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_chap3_4/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
         
   
   
@@ -1176,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_chap5_6/" class="md-nav__link">
+      <a href="../../../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
         
   
   
@@ -1201,37 +1209,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SDE Chapter 7
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
         
   
   
@@ -1247,93 +1228,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#part-i" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part I: 停时与击中概率
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part I: 停时与击中概率">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 2
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-ii" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part II: 欧式期权定价实战
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part II: 欧式期权定价实战">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 3
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1368,27 +1262,24 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
     
@@ -1404,7 +1295,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
           </label>
@@ -1417,14 +1308,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/0Intro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    渐近统计课程概览
+    Asymptotic Statistics Course Overview
   
 
     
@@ -1468,7 +1359,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1484,7 +1375,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1497,14 +1388,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第一章：随机收敛
+    Ch 1: Stochastic Convergence
   
 
     
@@ -1525,14 +1416,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第二章：特征函数
+    Ch 2: Characteristic Functions
   
 
     
@@ -1553,14 +1444,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/3CLT/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第三章：中心极限定理（一）
+    Ch 3: Central Limit Theorem I
   
 
     
@@ -1581,14 +1472,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/4CLT/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第四章：中心极限定理（二）
+    Ch 4: Central Limit Theorem II
   
 
     
@@ -1609,14 +1500,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第五章：弱相依数据（一）
+    Ch 5: Weakly Dependent Data I
   
 
     
@@ -1637,14 +1528,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第六章：弱相依数据（二）
+    Ch 6: Weakly Dependent Data II
   
 
     
@@ -1665,14 +1556,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+      <a href="../../../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第七章： Delta 方法
+    Ch 7: Delta Method
   
 
     
@@ -1739,7 +1630,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
     
@@ -1755,7 +1646,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -1768,14 +1659,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/" class="md-nav__link">
+      <a href="../../../../reference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
     
@@ -1796,14 +1687,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/stats/" class="md-nav__link">
+      <a href="../../../../reference/stats/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    📖 数理统计
+    📖 Mathematical Statistics
   
 
     
@@ -1824,14 +1715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/prob/" class="md-nav__link">
+      <a href="../../../../reference/prob/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🎲 概率论
+    🎲 Probability Theory
   
 
     
@@ -1852,14 +1743,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/measure/" class="md-nav__link">
+      <a href="../../../../reference/measure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    📏 测度论基础
+    📏 Measure Theory
   
 
     
@@ -1880,14 +1771,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/linalg/" class="md-nav__link">
+      <a href="../../../../reference/linalg/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🔢 线性代数
+    🔢 Linear Algebra
   
 
     
@@ -1908,14 +1799,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/stochastic/" class="md-nav__link">
+      <a href="../../../../reference/stochastic/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🌊 随机过程
+    🌊 Stochastic Processes
   
 
     
@@ -1966,7 +1857,7 @@
   <span class="md-ellipsis">
     
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
     
@@ -1982,7 +1873,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
           </label>
@@ -1995,14 +1886,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research/arxiv_papers/" class="md-nav__link">
+      <a href="../../../../research/arxiv_papers/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    📝 最新论文
+    📝 Latest Papers
   
 
     
@@ -2031,92 +1922,19 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#part-i" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part I: 停时与击中概率
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part I: 停时与击中概率">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 2
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-ii" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part II: 欧式期权定价实战
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part II: 欧式期权定价实战">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 3
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2131,159 +1949,42 @@
                 
   
                   
+  
+
 
 
   
   
 
 
-<h1 id="_1">📝 课后习题精解：期权定价与停时</h1>
-<div class="admonition abstract">
-<p class="admonition-title">关于本页</p>
-<p>本页面收录了《随机微分方程》课程中关于停时理论、高维布朗运动击中概率以及欧式期权定价（Black-Scholes 模型）的核心课后习题解答。内容涵盖了停时的严格证明、利用鞅的性质导出 Dirichlet 边值问题，以及利用热传导方程基本解（高斯核）推导看跌期权公式的完整过程。</p>
+<div id="mkdocs-encrypted-content" style="display:none">TSxzhk0oaubzMs5kUH3zZQ==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>希望我们有心照不宣的默契。请输入暗号以解密：</h1>
+        <p>Contact your administrator for access to this page.</p>
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="请输入密码">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<hr />
-<h2 id="part-i">Part I: 停时与击中概率</h2>
-<h3 id="1">习题 1</h3>
-<p><strong>题目</strong>
-设 <span class="arithmatex">\(W\)</span> 为一维 Brown 运动，定义 <span class="arithmatex">\(\tau = \inf\{t: W(t) \in (a, b]\}\)</span> 为首次触碰区间 <span class="arithmatex">\((a, b]\)</span> 的时间。证明 <span class="arithmatex">\(\tau\)</span> 是一个停时。</p>
-<details class="success">
-<summary>解答 (点击展开)</summary>
-<p>为了严谨证明 <span class="arithmatex">\(\tau\)</span> 是一个停时，我们根据区间 <span class="arithmatex">\((a, b]\)</span> 的性质，将其拆分为两个首次击中时间来分别讨论。</p>
-<p>定义两个辅助变量：</p>
-<div class="arithmatex">\[
-\tau_a = \inf\{t: W(t) &gt; a\}
-\]</div>
-<div class="arithmatex">\[
-\tau_b = \inf\{t: W(t) \le b\}
-\]</div>
-<p><strong>第一步：证明 <span class="arithmatex">\(\tau_a\)</span> 和 <span class="arithmatex">\(\tau_b\)</span> 的可测性</strong></p>
-<p>对于 <span class="arithmatex">\(\tau_b\)</span>（首次进入闭集 <span class="arithmatex">\((-\infty, b]\)</span>）：由于布朗运动路径连续，闭集的首次击中时间满足：</p>
-<div class="arithmatex">\[
-\{\tau_b \le t\} = \inf_{0 \le s \le t} W(s) \le b
-\]</div>
-<p>利用有理数的稠密性，这等价于在有理数集 <span class="arithmatex">\(\mathbb{Q}\)</span> 上取下确界：</p>
-<div class="arithmatex">\[
-\{\tau_b \le t\} = \bigcap_{n=1}^\infty \bigcup_{s \in \mathbb{Q} \cap [0, t]} \left\{ W_s \le b + \frac{1}{n} \right\}
-\]</div>
-<p>因为右侧是 <span class="arithmatex">\(\mathcal{F}_t\)</span> 可测事件的可数交并，故 <span class="arithmatex">\(\tau_b\)</span> 是停时。</p>
-<p>对于 <span class="arithmatex">\(\tau_a\)</span>（首次进入开集 <span class="arithmatex">\((a, +\infty)\)</span>）：同理，利用开集的性质和有理数逼近：</p>
-<div class="arithmatex">\[
-\{\tau_a &lt; t\} = \bigcup_{s \in \mathbb{Q} \cap [0, t)} \{ W_s &gt; a \} \in  \mathcal{F}_t
-\]</div>
-<p>结合信息流的右连续性，<span class="arithmatex">\(\tau_a\)</span> 也是一个停时。</p>
-<p><strong>第二步：组合逻辑证明 <span class="arithmatex">\(\tau\)</span> 是停时</strong></p>
-<p>现在我们考察目标停时 <span class="arithmatex">\(\tau = \inf\{t: W(t) \in (a, b]\}\)</span>。根据初始状态 <span class="arithmatex">\(W(0)\)</span> 的不同，我们可以将 <span class="arithmatex">\(\{\tau \le t\}\)</span> 拆解：</p>
-<ol>
-<li>
-<p><strong>若 <span class="arithmatex">\(W(0) \le a\)</span></strong>：必须先向上穿过 <span class="arithmatex">\(a\)</span> 才能进入 <span class="arithmatex">\((a, b]\)</span>，此时事件等价于：<span class="arithmatex">\(\{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W(s) \le b\}\)</span></p>
-</li>
-<li>
-<p><strong>若 <span class="arithmatex">\(W(0) &gt; b\)</span></strong>：必须先向下穿过 <span class="arithmatex">\(b\)</span> 才能进入 <span class="arithmatex">\((a, b]\)</span>，此时事件等价于：<span class="arithmatex">\(\{W(0) &gt; b\} \cap \{\tau_b \le t\}\)</span></p>
-</li>
-<li>
-<p><strong>若 <span class="arithmatex">\(W(0) \in (a, b]\)</span></strong>：此时 <span class="arithmatex">\(\tau = 0 \le t\)</span> 必然成立，事件等价于 <span class="arithmatex">\(\{W(0) \in (a, b]\}\)</span>。</p>
-</li>
-</ol>
-<p>将上述三种互斥且完备的情况取并集，得到：</p>
-<div class="arithmatex">\[
-\{\tau \le t\} = \left( \{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W_s \le b\} \right) \cup \left( \{W(0) &gt; b\} \cap \{\tau_b \le t\} \right) \cup \{W(0) \in (a, b]\}
-\]</div>
-<p>由于上述表达式中涉及的所有的基本事件（包括初始状态集合、<span class="arithmatex">\(\tau_a\)</span> 和 <span class="arithmatex">\(\tau_b\)</span> 的水平穿越事件）均是 <span class="arithmatex">\(\mathcal{F}_t\)</span> 可测的，且 <span class="arithmatex">\(\sigma\)</span> 域对有限并集、交集封闭，因此整体事件 <span class="arithmatex">\(\{\tau \le t\} \in \mathcal{F}_t\)</span>。</p>
-<p>故 <span class="arithmatex">\(\tau\)</span> 满足停时的严格定义。得证。</p>
-</details>
-<hr />
-<h3 id="2">习题 2</h3>
-<p><strong>题目</strong>
-设 <span class="arithmatex">\(W\)</span> 为 <span class="arithmatex">\(n\)</span> 维 Brown 运动 (<span class="arithmatex">\(n \ge 3\)</span>)。记 <span class="arithmatex">\(X = W + x_0\)</span>，其中 <span class="arithmatex">\(x_0\)</span> 落在球壳 <span class="arithmatex">\(R_1 &lt; |x| &lt; R_2\)</span> 内。计算 <span class="arithmatex">\(X\)</span> 在碰到内球面 <span class="arithmatex">\(|x| = R_1\)</span> 之前碰到外球面 <span class="arithmatex">\(|x| = R_2\)</span> 的概率。</p>
-<details class="success">
-<summary>解答 (点击展开)</summary>
-<p><strong>第一步：利用 Itô 公式与鞅的性质导出 Dirichlet 边值问题</strong></p>
-<p>设 <span class="arithmatex">\(\tau\)</span> 为过程 <span class="arithmatex">\(X\)</span> 首次离开球壳区域 <span class="arithmatex">\(D = \{x: R_1 &lt; |x| &lt; R_2\}\)</span> 的退出时间。令 <span class="arithmatex">\(u(x)\)</span> 为从初始点 <span class="arithmatex">\(x\)</span> 出发，先击中外球面的概率，即 <span class="arithmatex">\(u(x) = P^x(|X_\tau| = R_2)\)</span>。</p>
-<p>我们构造一个随机过程 <span class="arithmatex">\(M_t = u(X_{t \wedge \tau})\)</span>。对 <span class="arithmatex">\(u(X_t)\)</span> 应用多维 Itô 公式展开：</p>
-<div class="arithmatex">\[
-u(X_{t \wedge \tau}) = u(X_0) + \int_0^{t \wedge \tau} \nabla u(X_s) dW_s + \int_0^{t \wedge \tau} \frac{1}{2} \Delta u(X_s) ds
-\]</div>
-<p>为了使期望概率在停时前保持守恒，过程 <span class="arithmatex">\(M_t = u(X_{t \wedge \tau})\)</span> 必须是一个<strong>鞅 (Martingale)</strong>。</p>
-<p>鞅的核心性质要求其微分的漂移项（<span class="arithmatex">\(ds\)</span> 项）期望恒为 0。因此，被积函数必须满足：</p>
-<div class="arithmatex">\[
-\frac{1}{2} \Delta u(x) = 0 \implies \Delta u(x) = 0 \quad (x \in D)
-\]</div>
-<p>对于边界条件：当过程击中外球面时，事件必然发生，概率为 1；击中内球面时，事件未发生，概率为 0。这就严谨地将概率问题转化为了如下的 Dirichlet 边值问题：</p>
-<div class="arithmatex">\[
-\begin{cases}
-\Delta u(x) = 0, &amp; R_1 &lt; |x| &lt; R_2 \\
-u(x) = 0, &amp; |x| = R_1 \\
-u(x) = 1, &amp; |x| = R_2
-\end{cases}
-\]</div>
-<p><strong>第二步：求解偏微分方程</strong></p>
-<p>由于区域是对称的，假设解具有径向形式 <span class="arithmatex">\(u(x) = v(r)\)</span>，其中 <span class="arithmatex">\(r = |x|\)</span>。在 <span class="arithmatex">\(n \ge 3\)</span> 时，Laplace 算子的基本解形式为：</p>
-<div class="arithmatex">\[
-v(r) = A + B r^{2-n}
-\]</div>
-<p>代入边界条件：
-当 <span class="arithmatex">\(r = R_1\)</span> 时：</p>
-<div class="arithmatex">\[
-A + B R_1^{2-n} = 0 \implies A = -B R_1^{2-n}
-\]</div>
-<p>当 <span class="arithmatex">\(r = R_2\)</span> 时：</p>
-<div class="arithmatex">\[
-A + B R_2^{2-n} = 1
-\]</div>
-<p>将第一式代入第二式，解得常数 <span class="arithmatex">\(B\)</span> 和 <span class="arithmatex">\(A\)</span>：</p>
-<div class="arithmatex">\[
-B = \frac{1}{R_2^{2-n} - R_1^{2-n}}, \quad A = -\frac{R_1^{2-n}}{R_2^{2-n} - R_1^{2-n}}
-\]</div>
-<p>代回原函数并化简，得到最终的击中概率：</p>
-<div class="arithmatex">\[
-u(x) = \frac{|x|^{2-n} - R_1^{2-n}}{R_2^{2-n} - R_1^{2-n}}
-\]</div>
-</details>
-<hr />
-<p><br></p>
-<h2 id="part-ii">Part II: 欧式期权定价实战</h2>
-<h3 id="3">习题 3</h3>
-<p><strong>题目</strong>
-推导欧式看跌期权 (European Put Option) 的 Black-Scholes 公式。</p>
-<details class="success">
-<summary>解答 (点击展开)</summary>
-<p><strong>1. 建立 Black-Scholes 偏微分方程 (PDE)</strong>
-设欧式看跌期权价格为 <span class="arithmatex">\(P(S, t)\)</span>。基于无套利原理和几何布朗运动的假设，看跌期权同样满足 BS PDE：</p>
-<div class="arithmatex">\[
-\frac{\partial P}{\partial t} + rS \frac{\partial P}{\partial S} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 P}{\partial S^2} - rP = 0
-\]</div>
-<p>终端条件为：<span class="arithmatex">\(P(S, T) = \max(K - S, 0) = (K - S)^+\)</span>。</p>
-<p><strong>2. 变量代换与方程简化</strong>
-令 <span class="arithmatex">\(x = \ln S\)</span> (即 <span class="arithmatex">\(S = e^x\)</span>)，并反转时间 <span class="arithmatex">\(\tau = T - t\)</span>。设 <span class="arithmatex">\(V(x, \tau) = P(e^x, T - \tau)\)</span>。代入方程后，为了消去一阶偏导和常数项，再作代换 <span class="arithmatex">\(V(x, \tau) = u(x, \tau) e^{\alpha \tau + \beta x}\)</span>，解得系数：</p>
-<div class="arithmatex">\[
-\beta = \frac{1}{2} - \frac{r}{\sigma^2}, \quad \alpha = -r - \frac{1}{2\sigma^2}\left(r - \frac{1}{2}\sigma^2\right)^2
-\]</div>
-<p>此时方程化为标准的热传导方程：</p>
-<div class="arithmatex">\[
-\frac{\partial u}{\partial \tau} = \frac{1}{2}\sigma^2 \frac{\partial^2 u}{\partial x^2}
-\]</div>
-<p><strong>3. 利用高斯核 (Gaussian Kernel) 积分求解</strong>
-转化后的初始条件为 <span class="arithmatex">\(u(y, 0) = e^{-\beta y} \max(K - e^y, 0)\)</span>。热传导方程的解可以利用高斯核的卷积给出：</p>
-<div class="arithmatex">\[
-u(x, \tau) = \frac{1}{\sigma \sqrt{2\pi \tau}} \int_{-\infty}^{\ln K} \exp\left(-\frac{(x-y)^2}{2\sigma^2 \tau}\right) e^{-\beta y} (K - e^y) dy
-\]</div>
-<p>(注意积分上限为 <span class="arithmatex">\(\ln K\)</span>，因为当 <span class="arithmatex">\(e^y &gt; K\)</span> 时收益为 0)</p>
-<p>我们将积分拆分为 <span class="arithmatex">\(I_1\)</span> (含 <span class="arithmatex">\(K\)</span>) 和 <span class="arithmatex">\(I_2\)</span> (含 <span class="arithmatex">\(e^y\)</span>) 两项。对指数部分进行“配方法 (Completing the square)”，并通过变量替换 <span class="arithmatex">\(z = \frac{y - \mu}{\sigma}\)</span> 将其化为标准正态分布累积函数 <span class="arithmatex">\(N(\cdot)\)</span>。</p>
-<p><strong>4. 还原得到最终定价公式</strong>
-最后利用 <span class="arithmatex">\(P(S, t) = e^{\alpha \tau + \beta x} u(x, \tau)\)</span> 还原变量，指数项完美相消，得到看跌期权的 Black-Scholes 公式：</p>
-<div class="arithmatex">\[
-P(S, t) = K e^{-r(T-t)} N(-d_2) - S N(-d_1)
-\]</div>
-<p>其中：</p>
-<div class="arithmatex">\[
-d_1 = \frac{\ln(S/K) + (r + \frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}}
-\]</div>
-<div class="arithmatex">\[
-d_2 = d_1 - \sigma \sqrt{T-t}
-\]</div>
-<p>推导完毕。</p>
-</details>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "Notes/en/blog/posts/private/2026-4-23/";
+var decryption_failure_message = "\u770b\u6765\u6211\u4eec\u6ca1\u6709\u90a3\u4e48\u9ed8\u5951\uff0c\u5373\u5c06\u5f3a\u5236\u9000\u51fa...";
+var encryptcontent_keystore = ["VGemYIXbThenGFIGa8OF3A==;4X1gj00caamDTR8GaRiBcLfj7cuXE8Vx9MjNlqQtY/voE1uwENG2aBY+yJPLw2oJ7Ot2uX2Vm0slsw3+TRNw5dApbngCAqq1Okmf/OExIzOfz4ZhTQX/p4lLlVN3SswC;C2eoONMSgpgixoTmztwVWg=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../../../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
 
 
 
@@ -2298,6 +1999,8 @@ d_2 = d_1 - \sigma \sqrt{T-t}
 
   
 
+
+  
 
 
 
@@ -2331,7 +2034,7 @@ d_2 = d_1 - \sigma \sqrt{T-t}
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -2363,16 +2066,16 @@ d_2 = d_1 - \sigma \sqrt{T-t}
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/security.js"></script>
+        <script src="../../../../../javascripts/security.js"></script>
       
     
   </body>

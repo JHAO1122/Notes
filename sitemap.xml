@@ -155,11 +155,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/blog/assets/proof/</loc>
+        <lastmod>2026-04-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/assets/proof/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/assets/proof/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/blog/posts/private/2026-4-15/</loc>
         <lastmod>2026-04-23</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/private/2026-4-15/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-15/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/blog/posts/private/2026-4-23/</loc>
+        <lastmod>2026-04-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/private/2026-4-23/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-23/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/reference/</loc>
@@ -407,11 +421,25 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/en/blog/assets/proof/</loc>
+        <lastmod>2026-04-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/assets/proof/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/assets/proof/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-15/</loc>
         <lastmod>2026-04-23</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-15/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/private/2026-4-15/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-23/</loc>
+        <lastmod>2026-04-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-23/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/private/2026-4-23/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/research/arxiv_papers/</loc>

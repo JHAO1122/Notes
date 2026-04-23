@@ -609,6 +609,41 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [Protected] 何时收敛
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1766,6 +1801,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pdf-variable-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、 变量代换与 PDF 转换 (Variable Transformations)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2023,6 +2069,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pdf-variable-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、 变量代换与 PDF 转换 (Variable Transformations)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2199,6 +2256,31 @@ P\left(\max_{1\le k\le n} \left|\sum_{i=1}^k X_i\right| \ge \lambda\right) \le \
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="pdf-variable-transformations">五、 变量代换与 PDF 转换 (Variable Transformations)</h2>
+<div class="admonition info">
+<p class="admonition-title">一元连续型随机变量代换 (Univariate)</p>
+<p>设 <span class="arithmatex">\(X\)</span> 的 PDF 为 <span class="arithmatex">\(f_X(x)\)</span>，令 <span class="arithmatex">\(Y = g(X)\)</span>。若 <span class="arithmatex">\(g(x)\)</span> 是严格单调且可微的函数，其反函数记为 <span class="arithmatex">\(x = g^{-1}(y)\)</span>，则 <span class="arithmatex">\(Y\)</span> 的 PDF 为：</p>
+<div class="arithmatex">\[
+f_Y(y) = f_X(g^{-1}(y)) \cdot \left| \frac{d}{dy} g^{-1}(y) \right|
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">多元变量代换与雅可比矩阵 (Multivariate &amp; Jacobian)</p>
+<p>设 <span class="arithmatex">\(\mathbf{X} = (X_1, \dots, X_n)^T\)</span> 的联合 PDF 为 <span class="arithmatex">\(f_{\mathbf{X}}(\mathbf{x})\)</span>，令 <span class="arithmatex">\(\mathbf{Y} = \mathbf{g}(\mathbf{X})\)</span> 为 <span class="arithmatex">\(n\)</span> 维一一映射。
+记反函数为 <span class="arithmatex">\(\mathbf{x} = \mathbf{h}(\mathbf{y})\)</span>，其中 <span class="arithmatex">\(\mathbf{h} = \mathbf{g}^{-1}\)</span>。则 <span class="arithmatex">\(\mathbf{Y}\)</span> 的联合 PDF 为：</p>
+<div class="arithmatex">\[
+f_{\mathbf{Y}}(\mathbf{y}) = f_{\mathbf{X}}(\mathbf{h}(\mathbf{y})) \cdot | \det(J_{\mathbf{h}}(\mathbf{y})) |
+\]</div>
+<p>其中 <span class="arithmatex">\(J_{\mathbf{h}}(\mathbf{y})\)</span> 是 <strong>Jacobian 矩阵</strong>，其定义为：</p>
+<div class="arithmatex">\[
+J_{\mathbf{h}}(\mathbf{y}) = \frac{\partial (x_1, \dots, x_n)}{\partial (y_1, \dots, y_n)} = \begin{pmatrix} 
+\frac{\partial x_1}{\partial y_1} &amp; \dots &amp; \frac{\partial x_1}{\partial y_n} \\ 
+\vdots &amp; \ddots &amp; \vdots \\ 
+\frac{\partial x_n}{\partial y_1} &amp; \dots &amp; \frac{\partial x_n}{\partial y_n} 
+\end{pmatrix}
+\]</div>
+</div>
 
 
 

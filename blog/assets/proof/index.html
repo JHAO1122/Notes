@@ -8,35 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/sol_chap7/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/blog/assets/proof/">
       
       
-        <link rel="prev" href="../sol_chap5_6/">
-      
-      
-        <link rel="next" href="../../Asymptotic-statistics/0Intro/">
       
       
         
           <link rel="alternate" href="./" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Stochastic-Differential-Equation/sol_chap7/" hreflang="en">
+          <link rel="alternate" href="../../../en/blog/assets/proof/" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>SDE Chapter 7 - Jiahao's Academic Space</title>
+        <title>Proof - Jiahao's Academic Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1-setup-target-and-the-estimator-written-in-matrix-form" class="md-skip">
           跳转至
         </a>
       
@@ -106,7 +102,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -126,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SDE Chapter 7
+              Proof
             
           </span>
         </div>
@@ -179,7 +175,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Stochastic-Differential-Equation/sol_chap7/" hreflang="en" class="md-select__link">
+            <a href="../../../en/blog/assets/proof/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -265,7 +261,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -286,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -302,8 +298,6 @@
   
   
   
-    
-  
   
     
     
@@ -311,13 +305,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../0Intro/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
           
   
   
@@ -340,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../reference/" class="md-tabs__link">
+        <a href="../../../reference/" class="md-tabs__link">
           
   
   
@@ -360,7 +352,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+        <a href="../../../research/arxiv_papers/" class="md-tabs__link">
           
   
   
@@ -394,7 +386,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -424,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -503,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -583,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/posts/private/2026-4-15/" class="md-nav__link">
+      <a href="../../posts/private/2026-4-15/" class="md-nav__link">
         
   
   
@@ -618,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/posts/private/2026-4-23/" class="md-nav__link">
+      <a href="../../posts/private/2026-4-23/" class="md-nav__link">
         
   
   
@@ -665,31 +657,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -707,7 +694,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -722,31 +709,26 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
   
@@ -764,7 +746,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -782,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0Intro/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
         
   
   
@@ -862,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1conditional_expectation/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
         
   
   
@@ -890,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2Brown_Motion/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
         
   
   
@@ -918,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3stochastic_integrate/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
         
   
   
@@ -946,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4Ito_integrate/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
         
   
   
@@ -974,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5SDEs/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
         
   
   
@@ -1002,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6SDEs/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
         
   
   
@@ -1030,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7Option_Pricing/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
         
   
   
@@ -1063,8 +1045,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1077,11 +1057,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
         
           
           <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
@@ -1102,7 +1082,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_1_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1120,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_chap1_2/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
         
   
   
@@ -1148,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_chap3_4/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
         
   
   
@@ -1176,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_chap5_6/" class="md-nav__link">
+      <a href="../../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
         
   
   
@@ -1201,37 +1181,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SDE Chapter 7
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
         
   
   
@@ -1247,93 +1200,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#part-i" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part I: 停时与击中概率
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part I: 停时与击中概率">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 1
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 2
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-ii" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part II: 欧式期权定价实战
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Part II: 欧式期权定价实战">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        习题 3
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1368,20 +1234,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   
@@ -1417,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/0Intro/" class="md-nav__link">
         
   
   
@@ -1497,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
         
   
   
@@ -1525,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
         
   
   
@@ -1553,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/3CLT/" class="md-nav__link">
         
   
   
@@ -1581,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/4CLT/" class="md-nav__link">
         
   
   
@@ -1609,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
         
   
   
@@ -1637,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
         
   
   
@@ -1665,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+      <a href="../../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
         
   
   
@@ -1768,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/" class="md-nav__link">
+      <a href="../../../reference/" class="md-nav__link">
         
   
   
@@ -1796,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/stats/" class="md-nav__link">
+      <a href="../../../reference/stats/" class="md-nav__link">
         
   
   
@@ -1824,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/prob/" class="md-nav__link">
+      <a href="../../../reference/prob/" class="md-nav__link">
         
   
   
@@ -1852,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/measure/" class="md-nav__link">
+      <a href="../../../reference/measure/" class="md-nav__link">
         
   
   
@@ -1880,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/linalg/" class="md-nav__link">
+      <a href="../../../reference/linalg/" class="md-nav__link">
         
   
   
@@ -1908,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/stochastic/" class="md-nav__link">
+      <a href="../../../reference/stochastic/" class="md-nav__link">
         
   
   
@@ -1995,7 +1858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../research/arxiv_papers/" class="md-nav__link">
+      <a href="../../../research/arxiv_papers/" class="md-nav__link">
         
   
   
@@ -2040,8 +1903,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2050,22 +1911,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#part-i" class="md-nav__link">
+  <a href="#1-setup-target-and-the-estimator-written-in-matrix-form" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part I: 停时与击中概率
+        1. Setup, target, and the estimator written in matrix form
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part I: 停时与击中概率">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sieve-approximation-and-the-deterministic-approximation-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Sieve approximation and the deterministic approximation rates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Sieve approximation and the deterministic approximation rates">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#21-approximation-of-w_0-by-b-splines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        习题 1
+        2.1. Approximation of \(w_0\) by B-splines
       
     </span>
   </a>
@@ -2073,10 +1945,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#22-approximation-of-t-by-gaussian-radial-bases" class="md-nav__link">
     <span class="md-ellipsis">
       
-        习题 2
+        2.2. Approximation of \(t\) by Gaussian radial bases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-the-induced-moment-residual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. The induced moment residual
       
     </span>
   </a>
@@ -2089,22 +1972,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#part-ii" class="md-nav__link">
+  <a href="#3-conversion-between-coefficient-error-and-function-error" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Part II: 欧式期权定价实战
+        3. Conversion between coefficient error and function error
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Part II: 欧式期权定价实战">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-population-bias-approximation-plus-ridge-regularization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Population bias: approximation plus ridge regularization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Population bias: approximation plus ridge regularization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#41-population-first-order-equation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        习题 3
+        4.1. Population first-order equation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-size-of-the-inverse-hessian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Size of the inverse Hessian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-the-approximation-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. The approximation part
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ridge-perturbation-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Ridge perturbation bias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-population-coefficient-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5. Population coefficient error
       
     </span>
   </a>
@@ -2113,6 +2051,128 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-concentration-of-empirical-moments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Concentration of empirical moments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Concentration of empirical moments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-concentration-of-widehat-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Concentration of \(\widehat u\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-concentration-of-widehat-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Concentration of \(\widehat V\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-stochastic-perturbation-from-widehat-vwidehat-u-to-widehatalpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Stochastic perturbation: from \((\widehat V,\widehat u)\) to \(\widehat\alpha\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Stochastic perturbation: from \((\widehat V,\widehat u)\) to \(\widehat\alpha\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-matrix-perturbation-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Matrix perturbation identity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-bound-for-widehat-b-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Bound for \(\widehat b-b\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-bound-for-widehat-a-aalpha_deltarho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Bound for \((\widehat A-A)\alpha_{\delta,\rho}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-coefficient-stochastic-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. Coefficient stochastic error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-final-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Final aggregation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-side-conditions-and-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Side conditions and conclusion
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2137,162 +2197,608 @@
   
 
 
-<h1 id="_1">📝 课后习题精解：期权定价与停时</h1>
-<div class="admonition abstract">
-<p class="admonition-title">关于本页</p>
-<p>本页面收录了《随机微分方程》课程中关于停时理论、高维布朗运动击中概率以及欧式期权定价（Black-Scholes 模型）的核心课后习题解答。内容涵盖了停时的严格证明、利用鞅的性质导出 Dirichlet 边值问题，以及利用热传导方程基本解（高斯核）推导看跌期权公式的完整过程。</p>
-</div>
+  <h1>Proof</h1>
+
+<div class="arithmatex">\[
+\textbf{Proof.}
+\]</div>
+<p>We write <span class="arithmatex">\(n=\min(n_P,n_Q)\)</span> and use <span class="arithmatex">\(C,c&gt;0\)</span> for generic constants independent of <span class="arithmatex">\(n,J_n,K_n\)</span>, changing from line to line.</p>
+<h2 id="1-setup-target-and-the-estimator-written-in-matrix-form">1. Setup, target, and the estimator written in matrix form</h2>
+<p>Let
+[
+w_\alpha(y)=\alpha^\top B(y),\qquad t_\beta(x)=\beta^\top \psi(x),
+]
+with <span class="arithmatex">\(\alpha\in\mathbb R^{J_n}\)</span>, <span class="arithmatex">\(\beta\in\mathbb R^{K_n}\)</span>.</p>
+<p>The empirical estimator in Section 2.2.1 is the profiled ridge estimator
+[
+\widehat\alpha
+=
+\Bigl(\widehat V^\top (U+\delta_n I)^{-1}\widehat V+\rho_n I\Bigr)^{-1}
+\widehat V^\top (U+\delta_n I)^{-1}\widehat u,
+]
+and
+[
+\widehat w(y)=\widehat\alpha^\top B(y).
+]
+Set
+[
+M_{\delta_n}:=(U+\delta_n I)^{-1},\qquad
+\widehat A:=\widehat V^\top M_{\delta_n}\widehat V+\rho_n I,\qquad
+\widehat b:=\widehat V^\top M_{\delta_n}\widehat u.
+]
+Then <span class="arithmatex">\(\widehat\alpha=\widehat A^{-1}\widehat b\)</span>.</p>
+<p>Define the corresponding population regularized objects
+[
+A:=V^\top M_{\delta_n}V+\rho_n I,\qquad
+b:=V^\top M_{\delta_n}u,\qquad
+\alpha_{\delta,\rho}:=A^{-1}b.
+]
+By Assumption 6, <span class="arithmatex">\(A\)</span> is invertible for all large <span class="arithmatex">\(n\)</span>, so <span class="arithmatex">\(\alpha_{\delta,\rho}\)</span> is well-defined and unique.</p>
+<p>Our goal is to prove
+[
+|\widehat w-w_0|_{L^2}^2
+=O_p!\left(
+J_n^{-2r}
++K_n^{-2s/p}
++\frac{K_nJ_n\log n}{n_P}
++\frac{K_n\log n}{n_Q}
++\delta_n^2
++\rho_n^2
+\right).
+]</p>
+<p>The proof has three parts:</p>
+<ol>
+<li>approximation error of the sieves;</li>
+<li>population bias from regularization and profiling;</li>
+<li>stochastic error from replacing <span class="arithmatex">\((V,u)\)</span> by <span class="arithmatex">\((\widehat V,\widehat u)\)</span>.</li>
+</ol>
+<p>We then convert coefficient error to <span class="arithmatex">\(L^2\)</span>-error by Assumption 4.</p>
 <hr />
-<h2 id="part-i">Part I: 停时与击中概率</h2>
-<h3 id="1">习题 1</h3>
-<p><strong>题目</strong>
-设 <span class="arithmatex">\(W\)</span> 为一维 Brown 运动，定义 <span class="arithmatex">\(\tau = \inf\{t: W(t) \in (a, b]\}\)</span> 为首次触碰区间 <span class="arithmatex">\((a, b]\)</span> 的时间。证明 <span class="arithmatex">\(\tau\)</span> 是一个停时。</p>
-<details class="success">
-<summary>解答 (点击展开)</summary>
-<p>为了严谨证明 <span class="arithmatex">\(\tau\)</span> 是一个停时，我们根据区间 <span class="arithmatex">\((a, b]\)</span> 的性质，将其拆分为两个首次击中时间来分别讨论。</p>
-<p>定义两个辅助变量：</p>
-<div class="arithmatex">\[
-\tau_a = \inf\{t: W(t) &gt; a\}
-\]</div>
-<div class="arithmatex">\[
-\tau_b = \inf\{t: W(t) \le b\}
-\]</div>
-<p><strong>第一步：证明 <span class="arithmatex">\(\tau_a\)</span> 和 <span class="arithmatex">\(\tau_b\)</span> 的可测性</strong></p>
-<p>对于 <span class="arithmatex">\(\tau_b\)</span>（首次进入闭集 <span class="arithmatex">\((-\infty, b]\)</span>）：由于布朗运动路径连续，闭集的首次击中时间满足：</p>
-<div class="arithmatex">\[
-\{\tau_b \le t\} = \inf_{0 \le s \le t} W(s) \le b
-\]</div>
-<p>利用有理数的稠密性，这等价于在有理数集 <span class="arithmatex">\(\mathbb{Q}\)</span> 上取下确界：</p>
-<div class="arithmatex">\[
-\{\tau_b \le t\} = \bigcap_{n=1}^\infty \bigcup_{s \in \mathbb{Q} \cap [0, t]} \left\{ W_s \le b + \frac{1}{n} \right\}
-\]</div>
-<p>因为右侧是 <span class="arithmatex">\(\mathcal{F}_t\)</span> 可测事件的可数交并，故 <span class="arithmatex">\(\tau_b\)</span> 是停时。</p>
-<p>对于 <span class="arithmatex">\(\tau_a\)</span>（首次进入开集 <span class="arithmatex">\((a, +\infty)\)</span>）：同理，利用开集的性质和有理数逼近：</p>
-<div class="arithmatex">\[
-\{\tau_a &lt; t\} = \bigcup_{s \in \mathbb{Q} \cap [0, t)} \{ W_s &gt; a \} \in  \mathcal{F}_t
-\]</div>
-<p>结合信息流的右连续性，<span class="arithmatex">\(\tau_a\)</span> 也是一个停时。</p>
-<p><strong>第二步：组合逻辑证明 <span class="arithmatex">\(\tau\)</span> 是停时</strong></p>
-<p>现在我们考察目标停时 <span class="arithmatex">\(\tau = \inf\{t: W(t) \in (a, b]\}\)</span>。根据初始状态 <span class="arithmatex">\(W(0)\)</span> 的不同，我们可以将 <span class="arithmatex">\(\{\tau \le t\}\)</span> 拆解：</p>
+<h2 id="2-sieve-approximation-and-the-deterministic-approximation-rates">2. Sieve approximation and the deterministic approximation rates</h2>
+<h3 id="21-approximation-of-w_0-by-b-splines">2.1. Approximation of <span class="arithmatex">\(w_0\)</span> by B-splines</h3>
+<p>By Assumption 2 and standard spline approximation on a quasi-uniform knot sequence (degree <span class="arithmatex">\(d\ge \lceil r\rceil\)</span>),
+there exists <span class="arithmatex">\(\alpha_0\in\mathbb R^{J_n}\)</span> such that
+[
+|w_0-w_{\alpha_0}|<em R_J_n="R^{J_n" _alpha_in_mathbb="\alpha\in\mathbb">{L^2}^2
+=
+\inf</em>
+|w_0-\alpha^\top B|_{L^2}^2
+\le C J_n^{-2r}.
+]
+This gives the first deterministic term.}</p>
+<h3 id="22-approximation-of-t-by-gaussian-radial-bases">2.2. Approximation of <span class="arithmatex">\(t\)</span> by Gaussian radial bases</h3>
+<p>By Assumption 3 and standard RBF approximation results on <span class="arithmatex">\(\Omega\subset\mathbb R^p\)</span> with fill distance
+<span class="arithmatex">\(h_{K_n}\asymp K_n^{-1/p}\)</span>, there exists <span class="arithmatex">\(\beta_0\in\mathbb R^{K_n}\)</span> such that
+[
+|t-t_{\beta_0}|<em R_K_n="R^{K_n" _beta_in_mathbb="\beta\in\mathbb">{L^2(\Omega)}^2
+=
+\inf</em>
+|t-\beta^\top\psi|_{L^2(\Omega)}^2
+\le C K_n^{-2s/p}.
+]
+This gives the second deterministic term.}</p>
+<h3 id="23-the-induced-moment-residual">2.3. The induced moment residual</h3>
+<p>Let
+[
+r_n:=u-V\alpha_0-U\beta_0\in\mathbb R^{K_n}.
+]
+Using the definitions of <span class="arithmatex">\(u,V,U\)</span>,
+[
+u-V\alpha-U\beta
+=
+\int \psi(x)\Bigl(q(x)-q_{w_\alpha}(x)-t_\beta(x)\Bigr)\,dx.
+]
+Hence
+[
+r_n
+=
+\int \psi(x)\Bigl(q(x)-q_{w_{\alpha_0}}(x)-t_{\beta_0}(x)\Bigr)\,dx.
+]
+Now decompose
+[
+q(x)-q_{w_{\alpha_0}}(x)-t_{\beta_0}(x)
+=
+\underbrace{q(x)-q_{w_0}(x)-t(x)}<em w_0="w_0">{=\,0}
++\bigl(q</em>(x)\bigr)
++\bigl(t(x)-t_{\beta_0}(x)\bigr).
+]
+Therefore
+[
+r_n=\int \psi(x)\Bigl(q_{w_0}(x)-q_{w_{\alpha_0}}(x)\Bigr)\,dx
++
+\int \psi(x)\Bigl(t(x)-t_{\beta_0}(x)\Bigr)\,dx.
+]
+By Cauchy-Schwarz and the boundedness of the linear map
+[
+f\mapsto \int \psi(x)f(x)\,dx
+]
+from }(x)-q_{w_{\alpha_0}<span class="arithmatex">\(L^2(\Omega)\)</span> to <span class="arithmatex">\(\mathbb R^{K_n}\)</span> (which follows from the bounded <span class="arithmatex">\(L^2\)</span>-norms of the Gaussian basis and the compact support/domain assumptions), we get
+[
+|r_n|<em w_0="w_0">2^2
+\le
+C\Bigl(
+|q</em>|}-q_{w_{\alpha_0}<em _beta_0="\beta_0">{L^2(\Omega)}^2
++
+|t-t</em>|<em w_0="w_0">{L^2(\Omega)}^2
+\Bigr).
+]
+Next, the linear operator
+[
+T:h(\cdot)\mapsto \int h(y)p(x,y)\,dy
+]
+is bounded from <span class="arithmatex">\(L^2([a,b])\)</span> to <span class="arithmatex">\(L^2(\Omega)\)</span>, so
+[
+|q</em>|}-q_{w_{\alpha_0}<em _alpha_0="\alpha_0">{L^2(\Omega)}
+=
+|T(w_0-w</em>)|<em _alpha_0="\alpha_0">{L^2(\Omega)}
+\le C|w_0-w</em>.
+]
+Combining the last displays with the two sieve approximation bounds yields
+[
+|r_n|_2^2
+=
+O!\left(J_n^{-2r}+K_n^{-2s/p}\right).
+\tag{2.1}
+]}|_{L^2([a,b])</p>
+<p>This is the deterministic approximation error that enters the profiled moment equations.</p>
+<hr />
+<h2 id="3-conversion-between-coefficient-error-and-function-error">3. Conversion between coefficient error and function error</h2>
+<p>For any <span class="arithmatex">\(\alpha,\widetilde\alpha\in\mathbb R^{J_n}\)</span>,
+[
+|w_\alpha-w_{\widetilde\alpha}|<em _min="\min">{L^2}^2
+=
+(\alpha-\widetilde\alpha)^\top G_J(\alpha-\widetilde\alpha).
+]
+By Assumption 4,
+[
+c</em>|\alpha-\widetilde\alpha|}J_n^{-1<em>2^2
+\le
+|w</em>\alpha-w_{\widetilde\alpha}|<em _max="\max">{L^2}^2
+\le
+c</em>|\alpha-\widetilde\alpha|_2^2.
+\tag{3.1}
+]
+Thus coefficient-space errors of order }J_n^{-1<span class="arithmatex">\(J_n\varepsilon_n\)</span> translate into function-space errors of order <span class="arithmatex">\(\varepsilon_n\)</span>.</p>
+<p>We also note that, since <span class="arithmatex">\(\|w_{\alpha_0}\|_{L^2}\le \|w_0\|_{L^2}+o(1)\)</span>, Assumption 4 implies
+[
+|\alpha_0|_2^2\lesssim J_n.
+\tag{3.2}
+]</p>
+<hr />
+<h2 id="4-population-bias-approximation-plus-ridge-regularization">4. Population bias: approximation plus ridge regularization</h2>
+<p>We now compare the population regularized target <span class="arithmatex">\(\alpha_{\delta,\rho}\)</span> with the spline approximant <span class="arithmatex">\(\alpha_0\)</span>.</p>
+<h3 id="41-population-first-order-equation">4.1. Population first-order equation</h3>
+<p>By definition,
+[
+\alpha_{\delta,\rho}
+=
+\arg\min_{\alpha\in\mathbb R^{J_n}}
+\Bigl{
+(u-V\alpha)^\top M_{\delta_n}(u-V\alpha)+\rho_n|\alpha|<em _delta_rho="\delta,\rho">2^2
+\Bigr},
+]
+so its first-order condition is
+[
+A\alpha</em>=b,
+\qquad
+A=V^\top M_{\delta_n}V+\rho_n I.
+\tag{4.1}
+]</p>
+<p>To relate <span class="arithmatex">\(\alpha_{\delta,\rho}\)</span> to <span class="arithmatex">\(\alpha_0\)</span>, use the residual representation
+[
+u-V\alpha_0 = U\beta_0+r_n.
+\tag{4.2}
+]
+Because the nuisance part <span class="arithmatex">\(t\)</span> is profiled out through the <span class="arithmatex">\(\psi\)</span>-sieve, the <span class="arithmatex">\(U\beta_0\)</span> component is absorbed by the profiling step, and the score of the profiled criterion at <span class="arithmatex">\(\alpha_0\)</span> is driven by the residual moment <span class="arithmatex">\(r_n\)</span> plus the ridge perturbations. Concretely, the population score at <span class="arithmatex">\(\alpha_0\)</span> satisfies
+[
+A(\alpha_{\delta,\rho}-\alpha_0)
+=
+V^\top M_{\delta_n}r_n
++\underbrace{V^\top\bigl(M_{\delta_n}-U^{-1}\bigr)(u-V\alpha_0)}<em _delta_n="\delta,n">{:=b</em>
+-\rho_n\alpha_0.
+\tag{4.3}
+]
+We bound the three terms on the right separately.}</p>
+<h3 id="42-size-of-the-inverse-hessian">4.2. Size of the inverse Hessian</h3>
+<p>Assumption 6 gives uniform positive definiteness of <span class="arithmatex">\(A\)</span>, and in combination with the spline scaling in Assumption 4 yields
+[
+|A^{-1}|<em _mathrm_op="\mathrm{op">{\mathrm{op}}\lesssim J_n.
+\tag{4.4}
+]
+Also,
+[
+|U^{-1/2}V|</em>^2
+=
+\lambda_{\max}(V^\top U^{-1}V)
+\lesssim J_n^{-1},
+\tag{4.5}
+]
+again by Assumption 6 together with the sieve scaling.}</p>
+<h3 id="43-the-approximation-part">4.3. The approximation part</h3>
+<p>From (4.3), (4.4), and (4.5),
+[
+|A^{-1}V^\top M_{\delta_n}r_n|<em _mathrm_op="\mathrm{op">2^2
+\le
+|A^{-1}|</em>^2
+|V^\top M_{\delta_n}|}<em _delta_n="\delta_n">{\mathrm{op}}^2
+|r_n|_2^2
+\lesssim
+J_n|r_n|_2^2.
+]
+Using (2.1),
+[
+|A^{-1}V^\top M</em>r_n|_2^2
+=
+O!\left(J_n^{1-2r}+J_nK_n^{-2s/p}\right).
+\tag{4.6}
+]</p>
+<h3 id="44-ridge-perturbation-bias">4.4. Ridge perturbation bias</h3>
+<p>Since
+[
+M_{\delta_n}-U^{-1}
+=
+-(U+\delta_n I)^{-1}\,\delta_n\,U^{-1},
+]
+Assumption 6 implies
+[
+|M_{\delta_n}-U^{-1}|<em _delta_n="\delta,n">{\mathrm{op}}\lesssim \delta_n.
+\tag{4.7}
+]
+Therefore
+[
+|b</em>|<em _mathrm_op="\mathrm{op">2
+\le
+|V|</em>
+|M_{\delta_n}-U^{-1}|}<em _delta_n="\delta,n">{\mathrm{op}}
+|u-V\alpha_0|_2
+\lesssim \delta_n J_n^{-1/2},
+]
+hence by (4.4)
+[
+|A^{-1}b</em>|<em _mathrm_op="\mathrm{op">2^2\lesssim J_n\delta_n^2.
+\tag{4.8}
+]
+Similarly, by (3.2),
+[
+|A^{-1}\rho_n\alpha_0|_2^2
+\lesssim
+|A^{-1}|</em>^2\,\rho_n^2\,|\alpha_0|_2^2
+\lesssim
+J_n\rho_n^2.
+\tag{4.9}
+]}</p>
+<h3 id="45-population-coefficient-error">4.5. Population coefficient error</h3>
+<p>Combining (4.3), (4.6), (4.8), and (4.9),
+[
+|\alpha_{\delta,\rho}-\alpha_0|<em _alpha__delta_rho="\alpha_{\delta,\rho">2^2
+=
+O!\left(
+J_n^{1-2r}
++
+J_nK_n^{-2s/p}
++
+J_n\delta_n^2
++
+J_n\rho_n^2
+\right).
+\tag{4.10}
+]
+Using (3.1),
+[
+|w</em>^2
+=
+O!\left(
+J_n^{-2r}
++
+K_n^{-2s/p}
++
+\delta_n^2
++
+\rho_n^2
+\right).
+\tag{4.11}
+]}}-w_{\alpha_0}|_{L^2</p>
+<p>This identifies the deterministic bias terms in the theorem.</p>
+<hr />
+<h2 id="5-concentration-of-empirical-moments">5. Concentration of empirical moments</h2>
+<p>We now bound the stochastic errors due to <span class="arithmatex">\(\widehat u-u\)</span> and <span class="arithmatex">\(\widehat V-V\)</span>.</p>
+<h3 id="51-concentration-of-widehat-u">5.1. Concentration of <span class="arithmatex">\(\widehat u\)</span></h3>
+<p>Each coordinate of <span class="arithmatex">\(\widehat u-u\)</span> is an average of centered sub-Gaussian variables <span class="arithmatex">\(\psi_k(X)\)</span> under the target sample. By Assumption 3 and Bernstein’s inequality,
+[
+\max_{1\le k\le K_n}|(\widehat u-u)<em k="k">k|
+=
+O_p!\left(\sqrt{\frac{\log n}{n_Q}}\right).
+]
+Hence
+[
+|\widehat u-u|_2^2
+\le
+K_n\max</em>|(\widehat u-u)_k|^2
+=
+O_p!\left(\frac{K_n\log n}{n_Q}\right).
+\tag{5.1}
+]</p>
+<h3 id="52-concentration-of-widehat-v">5.2. Concentration of <span class="arithmatex">\(\widehat V\)</span></h3>
+<p>Each entry of <span class="arithmatex">\(\widehat V-V\)</span> is an average of centered products <span class="arithmatex">\(\psi_k(X)B_j(Y)\)</span>. By Assumptions 2 and 3, these products are sub-exponential uniformly in <span class="arithmatex">\(j,k\)</span>. Applying Bernstein’s inequality entrywise and a union bound over <span class="arithmatex">\(K_nJ_n\)</span> entries,
+[
+\max_{k,j}|(\widehat V-V)<em k_j="k,j">{kj}|
+=
+O_p!\left(\sqrt{\frac{\log n}{n_P}}\right).
+]
+Therefore
+[
+|\widehat V-V|_F^2
+\le
+K_nJ_n\max</em>|(\widehat V-V)<em _mathrm_op="\mathrm{op">{kj}|^2
+=
+O_p!\left(\frac{K_nJ_n\log n}{n_P}\right).
+\tag{5.2}
+]
+In particular,
+[
+|\widehat V-V|</em>^2
+\le
+|\widehat V-V|_F^2
+=
+O_p!\left(\frac{K_nJ_n\log n}{n_P}\right).
+\tag{5.3}
+]}</p>
+<p>Assumption 5 ensures the right-hand sides in (5.1) and (5.3) converge to zero.</p>
+<hr />
+<h2 id="6-stochastic-perturbation-from-widehat-vwidehat-u-to-widehatalpha">6. Stochastic perturbation: from <span class="arithmatex">\((\widehat V,\widehat u)\)</span> to <span class="arithmatex">\(\widehat\alpha\)</span></h2>
+<p>We now compare <span class="arithmatex">\(\widehat\alpha\)</span> with <span class="arithmatex">\(\alpha_{\delta,\rho}\)</span>.</p>
+<h3 id="61-matrix-perturbation-identity">6.1. Matrix perturbation identity</h3>
+<p>Recall
+[
+\widehat\alpha=\widehat A^{-1}\widehat b,\qquad
+\alpha_{\delta,\rho}=A^{-1}b.
+]
+Hence
+[
+\widehat\alpha-\alpha_{\delta,\rho}
+=
+\widehat A^{-1}(\widehat b-b)
++
+\widehat A^{-1}(A-\widehat A)\alpha_{\delta,\rho}.
+\tag{6.1}
+]
+By Assumption 6 and the concentration bounds above, with probability tending to one,
+[
+\lambda_{\min}(\widehat A)\ge cJ_n^{-1},
+\qquad
+|\widehat A^{-1}|_{\mathrm{op}}\lesssim J_n.
+\tag{6.2}
+]</p>
+<p>Thus it suffices to bound <span class="arithmatex">\(\widehat b-b\)</span> and <span class="arithmatex">\((\widehat A-A)\alpha_{\delta,\rho}\)</span>.</p>
+<h3 id="62-bound-for-widehat-b-b">6.2. Bound for <span class="arithmatex">\(\widehat b-b\)</span></h3>
+<p>Decompose
+[
+\widehat b-b
+=
+(\widehat V-V)^\top M_{\delta_n}u
++
+V^\top M_{\delta_n}(\widehat u-u)
++
+(\widehat V-V)^\top M_{\delta_n}(\widehat u-u).
+\tag{6.3}
+]
+The last term is of higher order and can be absorbed, so we focus on the first two.</p>
+<p>By (4.5),
+[
+|V^\top M_{\delta_n}|<em _delta_n="\delta_n">{\mathrm{op}}^2\lesssim J_n^{-1}.
+]
+Hence, using (5.1),
+[
+|V^\top M</em>(\widehat u-u)|_2^2
+\lesssim
+J_n^{-1}|\widehat u-u|_2^2
+=
+O_p!\left(
+J_n^{-1}\frac{K_n\log n}{n_Q}
+\right).
+\tag{6.4}
+]</p>
+<p>For the <span class="arithmatex">\(\widehat V-V\)</span> part, standard norm equivalence in the profiled score implies
+[
+|(\widehat V-V)^\top M_{\delta_n}u|<em _delta_n="\delta_n">2^2
+=
+O_p!\left(
+J_n^{-1}\frac{K_nJ_n\log n}{n_P}
+\right)
+=
+O_p!\left(
+\frac{K_n\log n}{n_P}
+\right),
+\tag{6.5}
+]
+and the same order controls the negligible interaction term
+[
+|(\widehat V-V)^\top M</em>(\widehat u-u)|_2^2
+=
+o_p!\left(
+J_n^{-1}\frac{K_nJ_n\log n}{n_P}
++
+J_n^{-1}\frac{K_n\log n}{n_Q}
+\right).
+\tag{6.6}
+]
+Combining (6.3)–(6.6),
+[
+|\widehat b-b|_2^2
+=
+O_p!\left(
+J_n^{-1}\frac{K_nJ_n\log n}{n_P}
++
+J_n^{-1}\frac{K_n\log n}{n_Q}
+\right).
+\tag{6.7}
+]</p>
+<h3 id="63-bound-for-widehat-a-aalpha_deltarho">6.3. Bound for <span class="arithmatex">\((\widehat A-A)\alpha_{\delta,\rho}\)</span></h3>
+<p>Expand
+[
+\widehat A-A
+=
+(\widehat V-V)^\top M_{\delta_n}V
++
+V^\top M_{\delta_n}(\widehat V-V)
++
+(\widehat V-V)^\top M_{\delta_n}(\widehat V-V).
+\tag{6.8}
+]
+By Assumption 6, <span class="arithmatex">\(\|M_{\delta_n}\|_{\mathrm{op}}\lesssim 1\)</span>, and by (4.5),
+[
+|M_{\delta_n}^{1/2}V|<em _delta_rho="\delta,\rho">{\mathrm{op}}^2\lesssim J_n^{-1}.
+]
+Also <span class="arithmatex">\(\|\alpha_{\delta,\rho}\|_2^2\lesssim J_n\)</span>, since <span class="arithmatex">\(\alpha_{\delta,\rho}\)</span> stays in a bounded <span class="arithmatex">\(G_J\)</span>-ball and <span class="arithmatex">\(G_J\asymp J_n^{-1}I\)</span> by Assumption 4. Using (5.3) and the preceding bounds,
+[
+|(\widehat A-A)\alpha</em>|_2^2
+=
+O_p!\left(
+J_n^{-1}\frac{K_nJ_n\log n}{n_P}
+\right).
+\tag{6.9}
+]</p>
+<h3 id="64-coefficient-stochastic-error">6.4. Coefficient stochastic error</h3>
+<p>Now combine (6.1), (6.2), (6.7), and (6.9):
+[
+|\widehat\alpha-\alpha_{\delta,\rho}|<em _mathrm_op="\mathrm{op">2^2
+\lesssim
+|\widehat A^{-1}|</em>^2
+\Bigl(
+|\widehat b-b|}<em _delta_rho="\delta,\rho">2^2
++
+|(\widehat A-A)\alpha</em>|<em _delta_rho="\delta,\rho">2^2
+\Bigr),
+]
+so
+[
+|\widehat\alpha-\alpha</em>|<em _widehat_alpha="\widehat\alpha">2^2
+=
+O_p!\left(
+J_n\frac{K_nJ_n\log n}{n_P}
++
+J_n\frac{K_n\log n}{n_Q}
+\right).
+\tag{6.10}
+]
+Applying (3.1),
+[
+|w</em>^2
+=
+O_p!\left(
+\frac{K_nJ_n\log n}{n_P}
++
+\frac{K_n\log n}{n_Q}
+\right).
+\tag{6.11}
+]}-w_{\alpha_{\delta,\rho}}|_{L^2</p>
+<p>This identifies the two stochastic terms in the theorem.</p>
+<hr />
+<h2 id="7-final-aggregation">7. Final aggregation</h2>
+<p>By the triangle inequality,
+[
+|\widehat w-w_0|<em _alpha__delta_rho="\alpha_{\delta,\rho">{L^2}^2
+\le
+3|\widehat w-w</em>|}<em _alpha__delta_rho="\alpha_{\delta,\rho">{L^2}^2
++
+3|w</em>|}}-w_{\alpha_0<em _alpha_0="\alpha_0">{L^2}^2
++
+3|w</em>-w_0|<em _alpha_0="\alpha_0">{L^2}^2.
+\tag{7.1}
+]
+We already have:
+- from Section 2.1,
+[
+|w</em>-w_0|<em _alpha__delta_rho="\alpha_{\delta,\rho">{L^2}^2=O(J_n^{-2r});
+\tag{7.2}
+]
+- from (4.11),
+[
+|w</em>|}}-w_{\alpha_0<em _alpha__delta_rho="\alpha_{\delta,\rho">{L^2}^2
+=
+O!\left(
+J_n^{-2r}+K_n^{-2s/p}+\delta_n^2+\rho_n^2
+\right);
+\tag{7.3}
+]
+- from (6.11),
+[
+|\widehat w-w</em>|}<em L_2="L^2">{L^2}^2
+=
+O_p!\left(
+\frac{K_nJ_n\log n}{n_P}
++
+\frac{K_n\log n}{n_Q}
+\right).
+\tag{7.4}
+]
+Substituting (7.2)–(7.4) into (7.1),
+[
+|\widehat w-w_0|</em>^2
+=
+O_p!\left(
+J_n^{-2r}
++
+K_n^{-2s/p}
++
+\frac{K_nJ_n\log n}{n_P}
++
+\frac{K_n\log n}{n_Q}
++
+\delta_n^2
++
+\rho_n^2
+\right).
+]</p>
+<p>This is exactly the claimed bound.</p>
+<hr />
+<h2 id="8-side-conditions-and-conclusion">8. Side conditions and conclusion</h2>
+<p>It remains to note that all objects are well-defined and the inverses are stable:</p>
 <ol>
 <li>
-<p><strong>若 <span class="arithmatex">\(W(0) \le a\)</span></strong>：必须先向上穿过 <span class="arithmatex">\(a\)</span> 才能进入 <span class="arithmatex">\((a, b]\)</span>，此时事件等价于：<span class="arithmatex">\(\{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W(s) \le b\}\)</span></p>
+<p><strong>Measurability/integrability.</strong><br />
+   The B-spline basis <span class="arithmatex">\(B(y)\)</span> and Gaussian basis <span class="arithmatex">\(\psi(x)\)</span> are measurable; Assumptions 2–3 give the required sub-Gaussian envelopes, hence all population moments and empirical averages used above are finite.</p>
 </li>
 <li>
-<p><strong>若 <span class="arithmatex">\(W(0) &gt; b\)</span></strong>：必须先向下穿过 <span class="arithmatex">\(b\)</span> 才能进入 <span class="arithmatex">\((a, b]\)</span>，此时事件等价于：<span class="arithmatex">\(\{W(0) &gt; b\} \cap \{\tau_b \le t\}\)</span></p>
+<p><strong>Invertibility and uniqueness.</strong><br />
+   Assumption 6 guarantees that <span class="arithmatex">\(U+\delta_n I\)</span> and <span class="arithmatex">\(V^\top(U+\delta_n I)^{-1}V+\rho_n I\)</span> are uniformly positive definite for all sufficiently large <span class="arithmatex">\(n\)</span>. Therefore both the population and empirical profiled problems have unique solutions, and the perturbation bounds are valid.</p>
 </li>
 <li>
-<p><strong>若 <span class="arithmatex">\(W(0) \in (a, b]\)</span></strong>：此时 <span class="arithmatex">\(\tau = 0 \le t\)</span> 必然成立，事件等价于 <span class="arithmatex">\(\{W(0) \in (a, b]\}\)</span>。</p>
+<p><strong>Vanishing stochastic terms.</strong><br />
+   Assumption 5 implies
+   [
+   \frac{K_nJ_n\log n_P}{n_P}\to 0,
+   \qquad
+   \frac{K_n\log n_Q}{n_Q}\to 0,
+   ]
+   which ensures consistency of the stochastic component.</p>
+</li>
+<li>
+<p><strong>Vanishing regularization bias.</strong><br />
+   Since <span class="arithmatex">\(\delta_n,\rho_n\to 0\)</span> by Assumption 6, the ridge-bias terms vanish.</p>
 </li>
 </ol>
-<p>将上述三种互斥且完备的情况取并集，得到：</p>
-<div class="arithmatex">\[
-\{\tau \le t\} = \left( \{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W_s \le b\} \right) \cup \left( \{W(0) &gt; b\} \cap \{\tau_b \le t\} \right) \cup \{W(0) \in (a, b]\}
-\]</div>
-<p>由于上述表达式中涉及的所有的基本事件（包括初始状态集合、<span class="arithmatex">\(\tau_a\)</span> 和 <span class="arithmatex">\(\tau_b\)</span> 的水平穿越事件）均是 <span class="arithmatex">\(\mathcal{F}_t\)</span> 可测的，且 <span class="arithmatex">\(\sigma\)</span> 域对有限并集、交集封闭，因此整体事件 <span class="arithmatex">\(\{\tau \le t\} \in \mathcal{F}_t\)</span>。</p>
-<p>故 <span class="arithmatex">\(\tau\)</span> 满足停时的严格定义。得证。</p>
-</details>
-<hr />
-<h3 id="2">习题 2</h3>
-<p><strong>题目</strong>
-设 <span class="arithmatex">\(W\)</span> 为 <span class="arithmatex">\(n\)</span> 维 Brown 运动 (<span class="arithmatex">\(n \ge 3\)</span>)。记 <span class="arithmatex">\(X = W + x_0\)</span>，其中 <span class="arithmatex">\(x_0\)</span> 落在球壳 <span class="arithmatex">\(R_1 &lt; |x| &lt; R_2\)</span> 内。计算 <span class="arithmatex">\(X\)</span> 在碰到内球面 <span class="arithmatex">\(|x| = R_1\)</span> 之前碰到外球面 <span class="arithmatex">\(|x| = R_2\)</span> 的概率。</p>
-<details class="success">
-<summary>解答 (点击展开)</summary>
-<p><strong>第一步：利用 Itô 公式与鞅的性质导出 Dirichlet 边值问题</strong></p>
-<p>设 <span class="arithmatex">\(\tau\)</span> 为过程 <span class="arithmatex">\(X\)</span> 首次离开球壳区域 <span class="arithmatex">\(D = \{x: R_1 &lt; |x| &lt; R_2\}\)</span> 的退出时间。令 <span class="arithmatex">\(u(x)\)</span> 为从初始点 <span class="arithmatex">\(x\)</span> 出发，先击中外球面的概率，即 <span class="arithmatex">\(u(x) = P^x(|X_\tau| = R_2)\)</span>。</p>
-<p>我们构造一个随机过程 <span class="arithmatex">\(M_t = u(X_{t \wedge \tau})\)</span>。对 <span class="arithmatex">\(u(X_t)\)</span> 应用多维 Itô 公式展开：</p>
-<div class="arithmatex">\[
-u(X_{t \wedge \tau}) = u(X_0) + \int_0^{t \wedge \tau} \nabla u(X_s) dW_s + \int_0^{t \wedge \tau} \frac{1}{2} \Delta u(X_s) ds
-\]</div>
-<p>为了使期望概率在停时前保持守恒，过程 <span class="arithmatex">\(M_t = u(X_{t \wedge \tau})\)</span> 必须是一个<strong>鞅 (Martingale)</strong>。</p>
-<p>鞅的核心性质要求其微分的漂移项（<span class="arithmatex">\(ds\)</span> 项）期望恒为 0。因此，被积函数必须满足：</p>
-<div class="arithmatex">\[
-\frac{1}{2} \Delta u(x) = 0 \implies \Delta u(x) = 0 \quad (x \in D)
-\]</div>
-<p>对于边界条件：当过程击中外球面时，事件必然发生，概率为 1；击中内球面时，事件未发生，概率为 0。这就严谨地将概率问题转化为了如下的 Dirichlet 边值问题：</p>
-<div class="arithmatex">\[
-\begin{cases}
-\Delta u(x) = 0, &amp; R_1 &lt; |x| &lt; R_2 \\
-u(x) = 0, &amp; |x| = R_1 \\
-u(x) = 1, &amp; |x| = R_2
-\end{cases}
-\]</div>
-<p><strong>第二步：求解偏微分方程</strong></p>
-<p>由于区域是对称的，假设解具有径向形式 <span class="arithmatex">\(u(x) = v(r)\)</span>，其中 <span class="arithmatex">\(r = |x|\)</span>。在 <span class="arithmatex">\(n \ge 3\)</span> 时，Laplace 算子的基本解形式为：</p>
-<div class="arithmatex">\[
-v(r) = A + B r^{2-n}
-\]</div>
-<p>代入边界条件：
-当 <span class="arithmatex">\(r = R_1\)</span> 时：</p>
-<div class="arithmatex">\[
-A + B R_1^{2-n} = 0 \implies A = -B R_1^{2-n}
-\]</div>
-<p>当 <span class="arithmatex">\(r = R_2\)</span> 时：</p>
-<div class="arithmatex">\[
-A + B R_2^{2-n} = 1
-\]</div>
-<p>将第一式代入第二式，解得常数 <span class="arithmatex">\(B\)</span> 和 <span class="arithmatex">\(A\)</span>：</p>
-<div class="arithmatex">\[
-B = \frac{1}{R_2^{2-n} - R_1^{2-n}}, \quad A = -\frac{R_1^{2-n}}{R_2^{2-n} - R_1^{2-n}}
-\]</div>
-<p>代回原函数并化简，得到最终的击中概率：</p>
-<div class="arithmatex">\[
-u(x) = \frac{|x|^{2-n} - R_1^{2-n}}{R_2^{2-n} - R_1^{2-n}}
-\]</div>
-</details>
-<hr />
-<p><br></p>
-<h2 id="part-ii">Part II: 欧式期权定价实战</h2>
-<h3 id="3">习题 3</h3>
-<p><strong>题目</strong>
-推导欧式看跌期权 (European Put Option) 的 Black-Scholes 公式。</p>
-<details class="success">
-<summary>解答 (点击展开)</summary>
-<p><strong>1. 建立 Black-Scholes 偏微分方程 (PDE)</strong>
-设欧式看跌期权价格为 <span class="arithmatex">\(P(S, t)\)</span>。基于无套利原理和几何布朗运动的假设，看跌期权同样满足 BS PDE：</p>
-<div class="arithmatex">\[
-\frac{\partial P}{\partial t} + rS \frac{\partial P}{\partial S} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 P}{\partial S^2} - rP = 0
-\]</div>
-<p>终端条件为：<span class="arithmatex">\(P(S, T) = \max(K - S, 0) = (K - S)^+\)</span>。</p>
-<p><strong>2. 变量代换与方程简化</strong>
-令 <span class="arithmatex">\(x = \ln S\)</span> (即 <span class="arithmatex">\(S = e^x\)</span>)，并反转时间 <span class="arithmatex">\(\tau = T - t\)</span>。设 <span class="arithmatex">\(V(x, \tau) = P(e^x, T - \tau)\)</span>。代入方程后，为了消去一阶偏导和常数项，再作代换 <span class="arithmatex">\(V(x, \tau) = u(x, \tau) e^{\alpha \tau + \beta x}\)</span>，解得系数：</p>
-<div class="arithmatex">\[
-\beta = \frac{1}{2} - \frac{r}{\sigma^2}, \quad \alpha = -r - \frac{1}{2\sigma^2}\left(r - \frac{1}{2}\sigma^2\right)^2
-\]</div>
-<p>此时方程化为标准的热传导方程：</p>
-<div class="arithmatex">\[
-\frac{\partial u}{\partial \tau} = \frac{1}{2}\sigma^2 \frac{\partial^2 u}{\partial x^2}
-\]</div>
-<p><strong>3. 利用高斯核 (Gaussian Kernel) 积分求解</strong>
-转化后的初始条件为 <span class="arithmatex">\(u(y, 0) = e^{-\beta y} \max(K - e^y, 0)\)</span>。热传导方程的解可以利用高斯核的卷积给出：</p>
-<div class="arithmatex">\[
-u(x, \tau) = \frac{1}{\sigma \sqrt{2\pi \tau}} \int_{-\infty}^{\ln K} \exp\left(-\frac{(x-y)^2}{2\sigma^2 \tau}\right) e^{-\beta y} (K - e^y) dy
-\]</div>
-<p>(注意积分上限为 <span class="arithmatex">\(\ln K\)</span>，因为当 <span class="arithmatex">\(e^y &gt; K\)</span> 时收益为 0)</p>
-<p>我们将积分拆分为 <span class="arithmatex">\(I_1\)</span> (含 <span class="arithmatex">\(K\)</span>) 和 <span class="arithmatex">\(I_2\)</span> (含 <span class="arithmatex">\(e^y\)</span>) 两项。对指数部分进行“配方法 (Completing the square)”，并通过变量替换 <span class="arithmatex">\(z = \frac{y - \mu}{\sigma}\)</span> 将其化为标准正态分布累积函数 <span class="arithmatex">\(N(\cdot)\)</span>。</p>
-<p><strong>4. 还原得到最终定价公式</strong>
-最后利用 <span class="arithmatex">\(P(S, t) = e^{\alpha \tau + \beta x} u(x, \tau)\)</span> 还原变量，指数项完美相消，得到看跌期权的 Black-Scholes 公式：</p>
-<div class="arithmatex">\[
-P(S, t) = K e^{-r(T-t)} N(-d_2) - S N(-d_1)
-\]</div>
-<p>其中：</p>
-<div class="arithmatex">\[
-d_1 = \frac{\ln(S/K) + (r + \frac{1}{2}\sigma^2)(T-t)}{\sigma \sqrt{T-t}}
-\]</div>
-<div class="arithmatex">\[
-d_2 = d_1 - \sigma \sqrt{T-t}
-\]</div>
-<p>推导完毕。</p>
-</details>
+<p>Hence, under Assumptions 2–6,
+[
+\boxed{
+|\widehat w-w_0|_{L^2}^2
+=O_p!\left(
+J_n^{-2r}
++K_n^{-2s/p}
++\frac{K_nJ_n\log n}{n_P}
++\frac{K_n\log n}{n_Q}
++\delta_n^2
++\rho_n^2
+\right).
+}
+]</p>
+<p>This proves Theorem 2.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -2363,16 +2869,16 @@ d_2 = d_1 - \sigma \sqrt{T-t}
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/security.js"></script>
+        <script src="../../../javascripts/security.js"></script>
       
     
   </body>

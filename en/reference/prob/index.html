@@ -609,6 +609,41 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    何时收敛
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1766,6 +1801,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#v-change-of-variables-pdf-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V. Change of Variables &amp; PDF Transformation
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2023,6 +2069,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#v-change-of-variables-pdf-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V. Change of Variables &amp; PDF Transformation
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2199,6 +2256,31 @@ The standardized sum is <span class="arithmatex">\(Z_n = \frac{1}{S_n} \sum_{i=1
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="v-change-of-variables-pdf-transformation">V. Change of Variables &amp; PDF Transformation</h2>
+<div class="admonition info">
+<p class="admonition-title">Univariate Transformation</p>
+<p>Let <span class="arithmatex">\(X\)</span> have PDF <span class="arithmatex">\(f_X(x)\)</span>, and let <span class="arithmatex">\(Y = g(X)\)</span>. If <span class="arithmatex">\(g(x)\)</span> is a strictly monotonic and differentiable function with inverse <span class="arithmatex">\(x = g^{-1}(y)\)</span>, the PDF of <span class="arithmatex">\(Y\)</span> is:</p>
+<div class="arithmatex">\[
+f_Y(y) = f_X(g^{-1}(y)) \cdot \left| \frac{d}{dy} g^{-1}(y) \right|
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Multivariate Transformation &amp; the Jacobian</p>
+<p>Let <span class="arithmatex">\(\mathbf{X} = (X_1, \dots, X_n)^T\)</span> have a joint PDF <span class="arithmatex">\(f_{\mathbf{X}}(\mathbf{x})\)</span>, and let <span class="arithmatex">\(\mathbf{Y} = \mathbf{g}(\mathbf{X})\)</span> be a one-to-one mapping.
+Let the inverse be <span class="arithmatex">\(\mathbf{x} = \mathbf{h}(\mathbf{y})\)</span> where <span class="arithmatex">\(\mathbf{h} = \mathbf{g}^{-1}\)</span>. The joint PDF of <span class="arithmatex">\(\mathbf{Y}\)</span> is:</p>
+<div class="arithmatex">\[
+f_{\mathbf{Y}}(\mathbf{y}) = f_{\mathbf{X}}(\mathbf{h}(\mathbf{y})) \cdot | \det(J_{\mathbf{h}}(\mathbf{y})) |
+\]</div>
+<p>Where <span class="arithmatex">\(J_{\mathbf{h}}(\mathbf{y})\)</span> is the <strong>Jacobian Matrix</strong>, defined as:</p>
+<div class="arithmatex">\[
+J_{\mathbf{h}}(\mathbf{y}) = \frac{\partial (x_1, \dots, x_n)}{\partial (y_1, \dots, y_n)} = \begin{pmatrix} 
+\frac{\partial x_1}{\partial y_1} &amp; \dots &amp; \frac{\partial x_1}{\partial y_n} \\ 
+\vdots &amp; \ddots &amp; \vdots \\ 
+\frac{\partial x_n}{\partial y_1} &amp; \dots &amp; \frac{\partial x_n}{\partial y_n} 
+\end{pmatrix}
+\]</div>
+</div>
 
 
 
