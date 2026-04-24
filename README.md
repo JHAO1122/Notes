@@ -9,7 +9,7 @@ Welcome to my personal academic space. This is a **Personal Notes Base** built w
 
 ## 🗺️ Site Map
 
-Currently, [the site](https://jhao1122.github.io/Notes/) is divided into two core sections:
+Currently, [the site](https://jhao1122.github.io/Notes/) is divided into four core sections:
 
 ### 📚 Notes Base
 
