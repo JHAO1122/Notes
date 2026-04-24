@@ -118,5 +118,65 @@
         "date": "2026-03-28",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2511.11166v2": {
+        "title": "Choosing the nominal level post-hoc with knockoffs using e-values",
+        "date": "2025-11-14",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2510.01418v1": {
+        "title": "DiffKnock: Diffusion-based Knockoff Statistics for Neural Networks Inference",
+        "date": "2025-10-01",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2508.18901v1": {
+        "title": "Sparse minimum Redundancy Maximum Relevance for feature selection",
+        "date": "2025-08-26",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2508.18548v2": {
+        "title": "Mapping beyond diseases: Controlled variable selection for secondary phenotypes using tilted knockoffs",
+        "date": "2025-08-25",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2508.14882v1": {
+        "title": "Novel Knockoff Generation and Importance Measures with Heterogeneous Data via Conditional Residuals and Local Gradients",
+        "date": "2025-08-20",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2604.21595v1": {
+        "title": "A Kernel Nonconformity Score for Multivariate Conformal Prediction",
+        "date": "2026-04-23",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.27189v2": {
+        "title": "Conformal Prediction Assessment: A Framework for Conditional Coverage Evaluation and Selection",
+        "date": "2026-03-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.27062v1": {
+        "title": "Conformalized Signal Temporal Logic Inference under Covariate Shift",
+        "date": "2026-03-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.26261v1": {
+        "title": "Contrastive Conformal Sets",
+        "date": "2026-03-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.25509v1": {
+        "title": "Conformal Prediction for Nonparametric Instrumental Regression",
+        "date": "2026-03-26",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

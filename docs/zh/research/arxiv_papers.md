@@ -1,11 +1,102 @@
 # 🛰️ Research Frontier
 
-这里是我通过 GitHub 机器人脚本制作的论文速递版面，它北京时间每天早上八点会自动扫描 ArXiv 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
+这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-23
+> 更新于: 2026-04-24
 
 ---
+### Choosing the nominal level post-hoc with knockoffs using e-values 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-11-14
+- **链接**: [PDF](http://arxiv.org/abs/2511.11166v2)
+
+!!! note "AI 核心解读"
+
+    该论文通过引入 e 值框架，构造了一种可在数据观测后动态调整名义 FDR 水平的后验评分函数，突破了传统 knockoff 滤波器对名义水平的刚性依赖；其核心统计推导证明了该后验过程在任意数据实现下均能严格保持 FDR 控制，且在不增加任何统计代价的前提下，显著提升了低维稀疏信号场景下的选择效能与精度。
+
+### DiffKnock: Diffusion-based Knockoff Statistics for Neural Networks Inference 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-10-01
+- **链接**: [PDF](http://arxiv.org/abs/2510.01418v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出基于扩散模型的DiffKnock框架，通过训练扩散模型生成满足有限样本FDR控制的knockoff变量，并利用神经网络构造的梯度与过滤统计量构建反对称特征重要性度量，从而在保留复杂特征依赖结构的同时实现非线性关联检测。其理论贡献在于将深度生成模型的灵活性嵌入knockoff统计框架，在有限样本下严格保证FDR控制，并通过构造的统计量在非线性高维场景中显著提升统计功效。
+
+### Sparse minimum Redundancy Maximum Relevance for feature selection 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-08-26
+- **链接**: [PDF](http://arxiv.org/abs/2508.18901v1)
+
+!!! note "AI 核心解读"
+
+    该论文将经典离散mRMR准则连续化，并引入非凸惩罚项构造稀疏化评分函数，通过零系数估计实现非活跃特征的精确识别；进一步结合knockoff滤波器设计多阶段筛选流程，在控制错误发现率（FDR）的理论框架下证明了特征剔除的统计一致性。
+
+### Mapping beyond diseases: Controlled variable selection for secondary phenotypes using tilted knockoffs 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-08-25
+- **链接**: [PDF](http://arxiv.org/abs/2508.18548v2)
+
+!!! note "AI 核心解读"
+
+    该论文通过引入“倾斜分布”对模型-X knockoff框架进行修正，将选择概率纳入评分函数的构造，从而在偏倚抽样下实现了对条件独立性假设的FDR控制；其核心创新在于证明了基于倾斜分布构造的knockoff变量能够校正collider偏差，并推导了该评分函数在有限样本下控制FDR的理论性质。
+
+### Novel Knockoff Generation and Importance Measures with Heterogeneous Data via Conditional Residuals and Local Gradients 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-08-20
+- **链接**: [PDF](http://arxiv.org/abs/2508.14882v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出基于条件残差的 knockoff 生成框架，无需假设数据分布或类型同质性，通过残差构造实现异质数据下的伪变量生成；同时引入平均绝对局部导数（MALD）作为变量重要性度量，该评分函数兼容任意非线性模型，并在理论上保证了错误发现率的控制与统计功效的提升。
+
+### A Kernel Nonconformity Score for Multivariate Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-23
+- **链接**: [PDF](http://arxiv.org/abs/2604.21595v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种多元核评分函数（MKS），通过将残差向量压缩为标量并显式保留其几何结构，其统计推导表明该评分可分解为各向异性最大均值差异（MMD），从而在核密度估计与协方差加权距离之间实现插值。理论性质上，论文证明了有限样本覆盖保证，并建立了基于核协方差算子有效秩的收敛速率，实现了与维度无关的自适应，而非依赖环境维度。
+
+### Conformal Prediction Assessment: A Framework for Conditional Coverage Evaluation and Selection 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-28
+- **链接**: [PDF](http://arxiv.org/abs/2603.27189v2)
+
+!!! note "AI 核心解读"
+
+    该论文将条件覆盖率的评估重新构造为监督学习问题，通过训练一个可靠性估计器来预测实例层面的覆盖概率，并建立了该估计量的收敛速率。在此基础上，论文定义了条件有效性指数（CVI），将可靠性分解为安全性（欠覆盖风险）与效率（过覆盖代价），并证明了基于CVI的模型选择方法的一致性。
+
+### Conformalized Signal Temporal Logic Inference under Covariate Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-28
+- **链接**: [PDF](http://arxiv.org/abs/2603.27062v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于：针对训练与部署数据存在协变量偏移的场景，首次将加权保形预测框架与信号时序逻辑（STL）推理相结合，通过估计似然比构造了基于STL鲁棒性的加权评分函数。理论性质上，该方法在非交换性数据下仍能保证有限样本的边际覆盖有效性，且推导了加权保形集在分布偏移下的误差界。
+
+### Contrastive Conformal Sets 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-27
+- **链接**: [PDF](http://arxiv.org/abs/2603.26261v1)
+
+!!! note "AI 核心解读"
+
+    该论文将共形预测扩展到对比学习场景，通过引入可学习的广义多范数约束构造最小体积覆盖集，并理论证明了体积最小化可作为负样本排除的代理指标。其评分函数基于集合几何的优化设计，在保证正样本无分布假设覆盖的同时，通过统计推导实现了负样本排除的最大化。
+
+### Conformal Prediction for Nonparametric Instrumental Regression 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-26
+- **链接**: [PDF](http://arxiv.org/abs/2603.25509v1)
+
+!!! note "AI 核心解读"
+
+    该论文将条件覆盖保证重新表述为工具变量偏移类 \(\mathcal{F}\) 上的边际覆盖，从而将共形推断框架扩展到非参数工具变量回归中；其理论贡献在于证明了对于任意选定的偏移类，所构造的预测区间具有分布自由且有限样本的覆盖性质，且该评分函数可与任意NPIV估计量（如筛分2SLS或神经网络极小极大方法）结合使用。
+
+
 ### Power of masking methods for adaptive testing in a multivariate normal means problem 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-01-12
