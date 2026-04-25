@@ -3,9 +3,100 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-24
+> 更新于: 2026-04-25
 
 ---
+### Diffusion-Driven High-Dimensional Variable Selection 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-08-19
+- **链接**: [PDF](http://arxiv.org/abs/2508.13890v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种基于扩散模型生成多重伪数据集的再抽样聚合框架，通过构造稳定性评分函数并证明其在温和假设下的选择相合性，实现了对高维强相关数据的稳定变量选择。其核心创新在于将扩散模型的生成能力与聚合推断理论结合，使得评分函数在理论上可校准，并拓展至图模型选择与统计推断，为高维变量选择提供了新的统计推导路径。
+
+### Variable selection via knockoffs in missing data settings with categorical predictors 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-08-08
+- **链接**: [PDF](http://arxiv.org/abs/2508.06138v1)
+
+!!! note "AI 核心解读"
+
+    该论文将多重插补与knockoffs框架结合，针对含缺失值的分类预测变量场景，构造了适用于无序类别变量的评分函数，并证明了在多重插补后各数据集上独立应用knockoffs筛选仍能控制错误发现率。其理论贡献在于将knockoffs的有限样本保证扩展至缺失数据与多水平随机效应并存的情形，无需对缺失机制或类别顺序施加额外假设。
+
+### Differentially Private Model-X Knockoffs via Johnson-Lindenstrauss Transform 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-08-06
+- **链接**: [PDF](http://arxiv.org/abs/2508.04800v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于：通过高斯Johnson-Lindenstrauss变换对数据knockoff矩阵进行私有化，利用近似等距性在满足(ε,δ)-差分隐私的同时保留协变量间的依赖结构，从而避免传统噪声注入破坏交换性条件；理论层面，作者提出了一种针对高维私有knockoff过程的“去偏技术”，并严格刻画了降维比、信噪比、隐私参数等因子对FDR控制与统计功效的渐近影响，建立了功效趋于1的充分条件。
+
+### A powerful procedure that controls the false discovery rate with directional information 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-07-21
+- **链接**: [PDF](http://arxiv.org/abs/2507.15631v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了 signed-knockoff 程序，通过构造一种结合符号信息的评分函数，在有限样本下严格控制错误发现率（FDR），并基于统计推导证明了其在利用方向性信息时相比传统 p 值方法具有更强的检验功效。其理论核心在于将方向性信息嵌入 knockoff 框架的统计量构造中，从而在不依赖渐近近似的前提下实现 FDR 的精确控制。
+
+### Where to Intervene: Action Selection in Deep Reinforcement Learning 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-07-05
+- **链接**: [PDF](http://arxiv.org/abs/2507.04187v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于数据驱动的无模型动作选择方法，通过构造knockoff采样机制在统计上控制错误发现率，从而在无需先验知识的情况下筛选出最小充分动作集。其核心理论贡献在于将变量选择中的假阳性控制框架与深度强化学习的在线训练过程相融合，并证明了所选动作集在保持策略最优性方面的统计性质。
+
+### Elements of Conformal Prediction for Statisticians 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-25
+- **链接**: [PDF](http://arxiv.org/abs/2603.23923v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于：通过构造基于交换性假设的评分函数（如非一致性得分），将预测区间构建转化为分位数估计问题，并严格证明了在有限样本下无需分布假设即可实现精确的边际覆盖概率。其理论贡献在于揭示了评分函数与保序回归、核密度估计等经典统计工具的深层联系，并推导出条件覆盖率的渐近性质。
+
+### Shape-Adaptive Conditional Calibration for Conformal Prediction via Minimax Optimization 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-24
+- **链接**: [PDF](http://arxiv.org/abs/2603.23374v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过极小极大优化框架，将条件覆盖率的边际矩约束转化为对集值映射的灵活校准，从而突破了传统评分函数的结构限制，实现了形状自适应的预测集构造。理论方面，作者推导了非渐近的预言不等式，并证明在正则条件下覆盖误差的收敛速率达到最优阶，同时保证了基于校准阶段敏感属性（测试时不可观测）的条件推断有效性。
+
+### A plug-and-play approach with fast uncertainty quantification for weak lensing mass mapping 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-23
+- **链接**: [PDF](http://arxiv.org/abs/2603.22006v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种即插即用的弱透镜质量映射方法，通过交替执行带有精心设计数据保真项的梯度下降步骤与单一高斯白噪声去噪网络，实现了无需针对观测噪声协方差重新训练的快速点估计；同时构造基于矩网络的快速无采样不确定性量化方案，并引入保形预测理论保证误差条覆盖概率的严格理论性质。
+
+### CRPS-Optimal Binning for Univariate Conformal Regression 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-23
+- **链接**: [PDF](http://arxiv.org/abs/2603.22000v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于协变量排序后分箱的非参数条件分布估计方法，通过最小化留一法连续排序概率评分（LOO-CRPS）的闭式代价函数，并利用动态规划在 \(O(n^2 K)\) 时间内全局最优地确定分箱边界。理论贡献在于证明了直接最小化样本内 LOO-CRPS 会导致过拟合，转而采用 K 折交叉验证选择箱数 \(K\)，从而得到具有明确最小值的 U 型准则；同时，基于 CRPS 作为非一致性评分构造的共形预测集，在有限样本下保证了边际覆盖率的精确控制。
+
+### CoNBONet: Conformalized Neuroscience-inspired Bayesian Operator Network for Reliability Analysis 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-23
+- **链接**: [PDF](http://arxiv.org/abs/2603.21678v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：将分治共形预测（split conformal prediction）与神经科学启发的脉冲神经元模型相结合，构造了一个具有理论保证的校准不确定性量化评分函数，从而在贝叶斯算子网络框架下实现了对非线性动力系统时变可靠性的高效推断。其理论性质体现在，通过共形预测的有限样本覆盖保证，所提方法能够在不依赖传统贝叶斯后验采样的前提下，提供具有统计严格性的失效概率置信区间。
+
+
 ### Choosing the nominal level post-hoc with knockoffs using e-values 
 
 - [ ] **分类**: Knockoff | **日期**: 2025-11-14

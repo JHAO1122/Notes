@@ -178,5 +178,65 @@
         "date": "2026-03-26",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2508.13890v1": {
+        "title": "Diffusion-Driven High-Dimensional Variable Selection",
+        "date": "2025-08-19",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2508.06138v1": {
+        "title": "Variable selection via knockoffs in missing data settings with categorical predictors",
+        "date": "2025-08-08",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2508.04800v1": {
+        "title": "Differentially Private Model-X Knockoffs via Johnson-Lindenstrauss Transform",
+        "date": "2025-08-06",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2507.15631v1": {
+        "title": "A powerful procedure that controls the false discovery rate with directional information",
+        "date": "2025-07-21",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2507.04187v1": {
+        "title": "Where to Intervene: Action Selection in Deep Reinforcement Learning",
+        "date": "2025-07-05",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2603.23923v1": {
+        "title": "Elements of Conformal Prediction for Statisticians",
+        "date": "2026-03-25",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.23374v1": {
+        "title": "Shape-Adaptive Conditional Calibration for Conformal Prediction via Minimax Optimization",
+        "date": "2026-03-24",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.22006v1": {
+        "title": "A plug-and-play approach with fast uncertainty quantification for weak lensing mass mapping",
+        "date": "2026-03-23",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.22000v2": {
+        "title": "CRPS-Optimal Binning for Univariate Conformal Regression",
+        "date": "2026-03-23",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.21678v1": {
+        "title": "CoNBONet: Conformalized Neuroscience-inspired Bayesian Operator Network for Reliability Analysis",
+        "date": "2026-03-23",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
