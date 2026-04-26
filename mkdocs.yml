@@ -60,6 +60,7 @@ plugins:
             "课程概览": "Course Overview"
             "随机微分方程课程概览": "SDE Course Overview"
             "渐近统计课程概览": "Asymptotic Statistics Course Overview"
+            "泛函分析课程概览": "Functional Analysis Course Overview"
             "📖 核心笔记": "📖 Core Notes"
             "第一章：条件期望": "Ch 1: Conditional Expectation"
             "第二章：布朗运动": "Ch 2: Brownian Motion"
@@ -77,6 +78,8 @@ plugins:
             "第五章：弱相依数据（一）": "Ch 5: Weakly Dependent Data I"
             "第六章：弱相依数据（二）": "Ch 6: Weakly Dependent Data II"
             "第七章： Delta 方法": "Ch 7: Delta Method"
+            "🌌 泛函分析": "🌌 Functional Analysis"
+            "第一章：度量空间": "Ch 1: Distance Spaces"
             "🛠️ 知识速查": "🛠️ Quick Reference"
             "📖 数理统计": "📖 Mathematical Statistics"
             "🎲 概率论": "🎲 Probability Theory"
@@ -134,6 +137,10 @@ nav:
               - 第五章：弱相依数据（一）: zh/Asymptotic-statistics/5Weakly_Dep.md
               - 第六章：弱相依数据（二）: zh/Asymptotic-statistics/6Stantionary_process.md
               - 第七章： Delta 方法: zh/Asymptotic-statistics/7Delta_Method.md
+      - 🌌 泛函分析: 
+          - 泛函分析课程概览: zh/Functional_Analysis/0Intro.md
+          - 📖 笔记:
+              - 第一章：度量空间: zh/Functional_Analysis/1distance_space.md
   - 🛠️ 知识速查:
       - 🛠️ 知识速查: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
       - 📖 数理统计: zh/reference/stats.md

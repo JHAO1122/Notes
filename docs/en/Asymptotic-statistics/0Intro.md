@@ -1,7 +1,7 @@
 ---
 tags:
   - Asymptotic Statistic
-  - Graduate Course
+  - PhD Core Course
 ---
 
 # 📊 Asymptotic Statistics
@@ -14,7 +14,7 @@ tags:
     
     * **Prerequisites**: Mathematical Analysis, Advanced Algebra, Probability Theory, Mathematical Statistics, Functions of Real Variables
     
-    * **Course Type**: 32-hour Graduate Course
+    * **Course Type**: 32-hour PhD Core Course
 
 ---
 
