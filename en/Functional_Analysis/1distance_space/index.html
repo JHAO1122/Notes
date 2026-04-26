@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/6Stantionary_process/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/1distance_space/">
       
       
-        <link rel="prev" href="../5Weakly_Dep/">
+        <link rel="prev" href="../0Intro/">
       
       
-        <link rel="next" href="../7Delta_Method/">
+        <link rel="next" href="../../reference/">
       
       
         
-          <link rel="alternate" href="./" hreflang="zh">
+          <link rel="alternate" href="../../../Functional_Analysis/1distance_space/" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Asymptotic-statistics/6Stantionary_process/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>第六章：弱相依数据（二） - Jiahao's Academic Space</title>
+        <title>Ch 1: Distance Spaces - Jiahao's Academic Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,8 +92,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#weakly-dependent-data-ii" class="md-skip">
-          跳转至
+        <a href="#chapter-1-metric-spaces" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -105,8 +105,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第六章：弱相依数据（二）
+              Ch 1: Distance Spaces
             
           </span>
         </div>
@@ -166,20 +166,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="zh" class="md-select__link">
+            <a href="../../../Functional_Analysis/1distance_space/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Asymptotic-statistics/6Stantionary_process/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -200,16 +200,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -222,7 +222,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -234,7 +234,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -255,7 +255,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -265,13 +265,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         
   
   
     
   
-  🏠 首页
+  🏠 Home
 
       </a>
     </li>
@@ -290,7 +290,7 @@
           
   
   
-  ✍️ 随笔
+  ✍️ Blog
 
         </a>
       </li>
@@ -321,7 +321,7 @@
           
   
   
-  📚 笔记库
+  📚 Course Notes
 
         </a>
       </li>
@@ -344,7 +344,7 @@
           
   
   
-  🛠️ 知识速查
+  🛠️ Quick Reference
 
         </a>
       </li>
@@ -364,7 +364,7 @@
           
   
   
-  🛰️ 前沿追踪
+  🛰️ Research Updates
 
         </a>
       </li>
@@ -392,9 +392,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -404,7 +404,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -424,14 +424,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🏠 首页
+    🏠 Home
   
 
     
@@ -474,7 +474,7 @@
   <span class="md-ellipsis">
     
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
     
@@ -490,7 +490,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
           </label>
@@ -696,7 +696,7 @@
   <span class="md-ellipsis">
     
   
-    📚 笔记库
+    📚 Course Notes
   
 
     
@@ -712,7 +712,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📚 笔记库
+    📚 Course Notes
   
 
           </label>
@@ -751,7 +751,7 @@
   <span class="md-ellipsis">
     
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
     
@@ -767,7 +767,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
           </label>
@@ -787,7 +787,7 @@
   <span class="md-ellipsis">
     
   
-    随机微分方程课程概览
+    SDE Course Overview
   
 
     
@@ -831,7 +831,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -847,7 +847,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -867,7 +867,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：条件期望
+    Ch 1: Conditional Expectation
   
 
     
@@ -895,7 +895,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：布朗运动
+    Ch 2: Brownian Motion
   
 
     
@@ -923,7 +923,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分
+    Ch 3: Stochastic Integrals
   
 
     
@@ -951,7 +951,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分
+    Ch 4: Itô Integrals
   
 
     
@@ -979,7 +979,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：多元 Itô 积分
+    Ch 5: Multivariate Itô Calculus
   
 
     
@@ -1007,7 +1007,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：解的存在唯一性
+    Ch 6: Existence & Uniqueness
   
 
     
@@ -1035,7 +1035,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：期权定价与停时
+    Ch 7: Option Pricing and Stopping Times
   
 
     
@@ -1087,7 +1087,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -1103,7 +1103,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1241,6 +1241,353 @@
                 
   
   
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Asymptotic Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📊 Asymptotic Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic Statistics Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Stochastic Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Characteristic Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Central Limit Theorem I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Central Limit Theorem II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Weakly Dependent Data I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Weakly Dependent Data II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Delta Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1262,17 +1609,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    📊 渐近统计
+    🌌 Functional Analysis
   
 
     
@@ -1283,12 +1630,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📊 渐近统计
+    🌌 Functional Analysis
   
 
           </label>
@@ -1308,7 +1655,7 @@
   <span class="md-ellipsis">
     
   
-    渐近统计课程概览
+    Functional Analysis Course Overview
   
 
     
@@ -1344,17 +1691,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1365,156 +1712,16 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../1Stochastic_convergence/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第一章：随机收敛
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2Characteristic_Functions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第二章：特征函数
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3CLT/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第三章：中心极限定理（一）
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../4CLT/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第四章：中心极限定理（二）
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5Weakly_Dep/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第五章：弱相依数据（一）
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1539,7 +1746,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：弱相依数据（二）
+    Ch 1: Distance Spaces
   
 
     
@@ -1557,7 +1764,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：弱相依数据（二）
+    Ch 1: Distance Spaces
   
 
     
@@ -1569,7 +1776,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1578,27 +1785,38 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#1-definition-of-metric-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 弱相依平稳过程与中心极限定理
+        1. Definition of Metric Spaces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 弱相依平稳过程与中心极限定理">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-classical-examples-in-functional-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Classical Examples in Functional Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Classical Examples in Functional Analysis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
+  <a href="#21-euclidean-spaces-mathbbrn-and-mathbbcn" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 弱相依与长记忆的定义
+        2.1 Euclidean Spaces \(\mathbb{R}^n\) and \(\mathbb{C}^n\)
       
     </span>
   </a>
@@ -1606,10 +1824,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-clt" class="md-nav__link">
+  <a href="#22-continuous-function-space-cab" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 强混合过程的渐近方差与 CLT
+        2.2 Continuous Function Space \(C[a,b]\)
       
     </span>
   </a>
@@ -1617,10 +1835,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-coupling-method-exponential-inequalities" class="md-nav__link">
+  <a href="#23-sequence-spaces-lp-and-linfty" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 耦合方法与指数不等式 (Coupling Method &amp; Exponential Inequalities)
+        2.3 Sequence Spaces \(l^p\) and \(l^\infty\)
       
     </span>
   </a>
@@ -1633,61 +1851,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-sigma2-spectral-method" class="md-nav__link">
+  <a href="#3-classical-inequalities-and-proofs-holder-minkowski" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 长期协方差 \(\sigma^2\) 的谱估计方法 (Spectral Method)
+        3. Classical Inequalities and Proofs (Hölder &amp; Minkowski)
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5. 长期协方差 \(\sigma^2\) 的谱估计方法 (Spectral Method)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-periodograms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 周期图 (Periodograms)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 线性过程周期图的渐近分布
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#4-convergence-in-metric-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 谱密度的非参数核平滑估计
+        4. Convergence in Metric Spaces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. 谱密度的非参数核平滑估计">
+    <nav class="md-nav" aria-label="4. Convergence in Metric Spaces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
+  <a href="#41-basic-properties-of-convergent-sequences" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1 构建对数周期图回归模型
+        4.1 Basic Properties of Convergent Sequences
       
     </span>
   </a>
@@ -1695,10 +1885,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-nadaraya-watson-nw" class="md-nav__link">
+  <a href="#42-analysis-of-convergence-equivalence-in-different-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2 Nadaraya-Watson (NW) 核估计量
+        4.2 Analysis of Convergence Equivalence in Different Spaces
       
     </span>
   </a>
@@ -1714,213 +1904,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../7Delta_Method/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第七章： Delta 方法
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🌌 泛函分析
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    🌌 泛函分析
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Functional_Analysis/0Intro/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    泛函分析课程概览
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    📖 笔记
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    📖 笔记
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Functional_Analysis/1distance_space/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第一章：度量空间
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1979,7 +1962,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
     
@@ -1995,7 +1978,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -2015,7 +1998,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
     
@@ -2043,7 +2026,7 @@
   <span class="md-ellipsis">
     
   
-    📖 数理统计
+    📖 Mathematical Statistics
   
 
     
@@ -2071,7 +2054,7 @@
   <span class="md-ellipsis">
     
   
-    🎲 概率论
+    🎲 Probability Theory
   
 
     
@@ -2099,7 +2082,7 @@
   <span class="md-ellipsis">
     
   
-    📏 测度论基础
+    📏 Measure Theory
   
 
     
@@ -2127,7 +2110,7 @@
   <span class="md-ellipsis">
     
   
-    🔢 线性代数
+    🔢 Linear Algebra
   
 
     
@@ -2155,7 +2138,7 @@
   <span class="md-ellipsis">
     
   
-    🌊 随机过程
+    🌊 Stochastic Processes
   
 
     
@@ -2206,7 +2189,7 @@
   <span class="md-ellipsis">
     
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
     
@@ -2222,7 +2205,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
           </label>
@@ -2242,7 +2225,7 @@
   <span class="md-ellipsis">
     
   
-    📝 最新论文
+    📝 Latest Papers
   
 
     
@@ -2276,7 +2259,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -2285,27 +2268,38 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#1-definition-of-metric-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 弱相依平稳过程与中心极限定理
+        1. Definition of Metric Spaces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 弱相依平稳过程与中心极限定理">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-classical-examples-in-functional-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Classical Examples in Functional Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Classical Examples in Functional Analysis">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
+  <a href="#21-euclidean-spaces-mathbbrn-and-mathbbcn" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 弱相依与长记忆的定义
+        2.1 Euclidean Spaces \(\mathbb{R}^n\) and \(\mathbb{C}^n\)
       
     </span>
   </a>
@@ -2313,10 +2307,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-clt" class="md-nav__link">
+  <a href="#22-continuous-function-space-cab" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 强混合过程的渐近方差与 CLT
+        2.2 Continuous Function Space \(C[a,b]\)
       
     </span>
   </a>
@@ -2324,10 +2318,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-coupling-method-exponential-inequalities" class="md-nav__link">
+  <a href="#23-sequence-spaces-lp-and-linfty" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 耦合方法与指数不等式 (Coupling Method &amp; Exponential Inequalities)
+        2.3 Sequence Spaces \(l^p\) and \(l^\infty\)
       
     </span>
   </a>
@@ -2340,61 +2334,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-sigma2-spectral-method" class="md-nav__link">
+  <a href="#3-classical-inequalities-and-proofs-holder-minkowski" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 长期协方差 \(\sigma^2\) 的谱估计方法 (Spectral Method)
+        3. Classical Inequalities and Proofs (Hölder &amp; Minkowski)
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5. 长期协方差 \(\sigma^2\) 的谱估计方法 (Spectral Method)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-periodograms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 周期图 (Periodograms)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 线性过程周期图的渐近分布
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#4-convergence-in-metric-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 谱密度的非参数核平滑估计
+        4. Convergence in Metric Spaces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. 谱密度的非参数核平滑估计">
+    <nav class="md-nav" aria-label="4. Convergence in Metric Spaces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
+  <a href="#41-basic-properties-of-convergent-sequences" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1 构建对数周期图回归模型
+        4.1 Basic Properties of Convergent Sequences
       
     </span>
   </a>
@@ -2402,10 +2368,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-nadaraya-watson-nw" class="md-nav__link">
+  <a href="#42-analysis-of-convergence-equivalence-in-different-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2 Nadaraya-Watson (NW) 核估计量
+        4.2 Analysis of Convergence Equivalence in Different Spaces
       
     </span>
   </a>
@@ -2438,232 +2404,199 @@
   
 
 
-<h1 id="weakly-dependent-data-ii">第六章：弱相依数据（二）(Weakly Dependent Data II)</h1>
-<h2 id="4">4. 弱相依平稳过程与中心极限定理</h2>
-<p>通过前面的混合系数和协方差不等式，我们现在可以正式定义时间序列中的“弱相依”与“长记忆”现象，并建立混合过程的中心极限定理 (CLT)。</p>
-<h3 id="41">4.1 弱相依与长记忆的定义</h3>
-<p>假设 <span class="arithmatex">\(\{X_i\}\)</span> 是一个具有有限二阶矩的弱平稳过程。记其自协方差函数为 <span class="arithmatex">\(\gamma(j) = Cov(X_i, X_{i+j})\)</span>。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.8：弱相依与长记忆 (Weakly Dependent &amp; Long Memory)</p>
-<p>如果自协方差绝对可和：</p>
-<div class="arithmatex">\[
-\sum_{k=0}^{\infty} |\gamma(k)| &lt; \infty
-\]</div>
-<p>则称该过程是<strong>弱相依的 (weakly dependent)</strong>（或短记忆过程）。</p>
-<p>如果自协方差绝对和发散：</p>
-<div class="arithmatex">\[
-\sum_{k=0}^{\infty} |\gamma(k)| = \infty
-\]</div>
-<p>则称该过程是<strong>长记忆过程 (long memory process)</strong>。</p>
-</div>
-<p><strong>混合系数与弱相依的关系：</strong></p>
-<p>设 <span class="arithmatex">\(\alpha(k)\)</span> 为由 <span class="arithmatex">\(\{X_i\}_{i \in \mathbb{Z}}\)</span> 生成的 <span class="arithmatex">\(\sigma\)</span>-代数上的强混合（<span class="arithmatex">\(\alpha\)</span>-混合）系数。
-根据 Davydov 不等式（引理 4.7，取 <span class="arithmatex">\(r=q\)</span>），如果存在 <span class="arithmatex">\(q &gt; 2\)</span> 使得 <span class="arithmatex">\(E|X_i|^q &lt; \infty\)</span>，且对于 <span class="arithmatex">\(p = \frac{q}{q-2}\)</span> 满足级数收敛条件 <span class="arithmatex">\(\sum_{k=0}^{\infty} \alpha^{1/p}(k) &lt; \infty\)</span>，那么：</p>
-<div class="arithmatex">\[
-\sum_{k=0}^{\infty} |\gamma(k)| \le 2p \|X\|_q^2 \sum_{k=0}^{\infty} \alpha^{1/p}(k) &lt; \infty
-\]</div>
-<p>这说明满足该混合衰减速度的过程必然是<strong>弱相依（短记忆）</strong>的。
-特别地，如果过程是<strong>几何强混合 (Geometric Strong Mixing, GSM)</strong> 的，即 <span class="arithmatex">\(\alpha(k) \le C\rho^k\)</span> (其中 <span class="arithmatex">\(\rho \in (0,1)\)</span>)，那么：</p>
-<div class="arithmatex">\[
-\sum_{k=0}^{\infty} \alpha^{1/p}(k) \le C \sum_{k=0}^{\infty} \rho^{k/p} = \frac{C}{1 - \rho^{1/p}} &lt; \infty
-\]</div>
-<p>这自动保证了弱相依性。一般而言，为了保证级数收敛，我们只需要混合系数满足多项式衰减 <span class="arithmatex">\(\alpha(k) \sim k^{-p(1+\eta)}\)</span>（<span class="arithmatex">\(\eta &gt; 0\)</span>）即可。</p>
+<h1 id="chapter-1-metric-spaces">Chapter 1: Metric Spaces</h1>
+<p>In mathematical analysis, we are familiar with limits and continuity in the real number system <span class="arithmatex">\(\mathbb{R}\)</span> and Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span>. The essence of these concepts relies on the notion of "distance." The first step in functional analysis is to abstract this intuitive concept and generalize it to sets containing more complex elements, such as functions and sequences. This chapter introduces the basic axioms of metric spaces and several specific spaces and classical inequalities that are core to functional analysis.</p>
 <hr />
-<h3 id="42-clt">4.2 强混合过程的渐近方差与 CLT</h3>
-<p>在应用中心极限定理时，样本均值的方差极限是一个核心量。</p>
-<div class="admonition success">
-<p class="admonition-title">引理 4.9 (强混合过程的渐近方差)</p>
-<p>设 <span class="arithmatex">\(\{X_t\}_{t \in \mathbb{Z}}\)</span> 是一个零均值、实值的弱平稳过程。假设存在 <span class="arithmatex">\(r &gt; 2\)</span>，使得：</p>
+<h2 id="1-definition-of-metric-spaces">1. Definition of Metric Spaces</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.1 (Metric Space)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a non-empty set. If for any two elements <span class="arithmatex">\(x, y \in X\)</span>, there is a corresponding certain real number, denoted by <span class="arithmatex">\(\rho(x, y)\)</span>, which satisfies the following three conditions (Metric Axioms):</p>
+<p><strong>1. Non-negativity and Positivity:</strong></p>
 <div class="arithmatex">\[
-\sup_{t \in \mathbb{Z}} E|X_t|^r &lt; \infty, \quad \sum_{k \ge 1} \alpha(k)^{1 - \frac{2}{r}} &lt; +\infty
+\rho(x, y) \ge 0
 \]</div>
-<p>那么，级数 <span class="arithmatex">\(\sum_{k \in \mathbb{Z}} \gamma(k)\)</span> 绝对收敛，且收敛到一个非负的常数 <span class="arithmatex">\(\sigma^2\)</span>。并且部分和 <span class="arithmatex">\(S_n = \sum_{t=1}^n X_t\)</span> 的方差满足：</p>
+<p>and <span class="arithmatex">\(\rho(x, y) = 0\)</span> if and only if <span class="arithmatex">\(x = y\)</span>.</p>
+<p><strong>2. Symmetry:</strong></p>
 <div class="arithmatex">\[
-\lim_{n \rightarrow \infty} n Var\left(\frac{S_n}{n}\right) = \sigma^2
+\rho(x, y) = \rho(y, x)
+\]</div>
+<p><strong>3. Triangle Inequality:</strong></p>
+<div class="arithmatex">\[
+\rho(x, y) \le \rho(x, z) + \rho(z, y), \quad \forall z \in X
+\]</div>
+<p>Then <span class="arithmatex">\(\rho\)</span> is called a <strong>metric</strong> (or distance) on the set <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(X\)</span> is called a <strong>metric space</strong> with respect to <span class="arithmatex">\(\rho\)</span>, denoted as <span class="arithmatex">\((X, \rho)\)</span>. The elements in a metric space are usually called <strong>points</strong>.</p>
+</div>
+<p><strong>Subspaces and Discrete Spaces:</strong></p>
+<ul>
+<li><strong>Subspace</strong>: If <span class="arithmatex">\(A\)</span> is a non-empty subset of <span class="arithmatex">\(X\)</span>, then <span class="arithmatex">\(A\)</span> itself forms a metric space under the same metric <span class="arithmatex">\(\rho\)</span>, called a subspace of <span class="arithmatex">\(X\)</span>.</li>
+<li><strong>Discrete Metric Space</strong>: On any non-empty set <span class="arithmatex">\(X\)</span>, a trivial metric can be defined: <span class="arithmatex">\(\rho(x, y) = 0\)</span> if <span class="arithmatex">\(x = y\)</span>, and <span class="arithmatex">\(\rho(x, y) = 1\)</span> if <span class="arithmatex">\(x \ne y\)</span>. This constitutes a discrete metric space.</li>
+</ul>
+<hr />
+<h2 id="2-classical-examples-in-functional-analysis">2. Classical Examples in Functional Analysis</h2>
+<h3 id="21-euclidean-spaces-mathbbrn-and-mathbbcn">2.1 Euclidean Spaces <span class="arithmatex">\(\mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbb{C}^n\)</span></h3>
+<p>For the <span class="arithmatex">\(n\)</span>-dimensional Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span>, for any two points <span class="arithmatex">\(x = (x_1, \dots, x_n)\)</span> and <span class="arithmatex">\(y = (y_1, \dots, y_n)\)</span>, the standard distance is defined as:</p>
+<div class="arithmatex">\[
+\rho(x, y) = \left( \sum_{j=1}^n (x_j - y_j)^2 \right)^{\frac{1}{2}}
+\]</div>
+<p>The proof of the triangle inequality for this metric relies directly on the <strong>Cauchy Inequality</strong> in classical algebra.
+Complex spaces <span class="arithmatex">\(\mathbb{C}^n\)</span> can define a similar Euclidean metric, or the maximum metric <span class="arithmatex">\(\rho_\infty(x, y) = \max_j |x_j - y_j|\)</span>.</p>
+<h3 id="22-continuous-function-space-cab">2.2 Continuous Function Space <span class="arithmatex">\(C[a,b]\)</span></h3>
+<p>The set of all real (or complex) continuous functions on the closed interval <span class="arithmatex">\([a,b]\)</span>. For any <span class="arithmatex">\(x, y \in C[a,b]\)</span>, the distance is defined as the maximum uniform deviation:</p>
+<div class="arithmatex">\[
+\rho(x, y) = \max_{t \in [a,b]} |x(t) - y(t)|
+\]</div>
+<details class="proof">
+<summary>Proof: <span class="arithmatex">\(C[a,b]\)</span> satisfies the triangle inequality</summary>
+<p>Let <span class="arithmatex">\(x, y, z \in C[a,b]\)</span>. For any fixed <span class="arithmatex">\(t \in [a,b]\)</span>, according to the triangle inequality for absolute values of real numbers:</p>
+<div class="arithmatex">\[
+|x(t) - y(t)| \le |x(t) - z(t)| + |z(t) - y(t)|
+\]</div>
+<p>Bound each term on the right by its maximum value over the interval:</p>
+<div class="arithmatex">\[
+|x(t) - y(t)| \le \max_{t \in [a,b]} |x(t) - z(t)| + \max_{t \in [a,b]} |z(t) - y(t)| = \rho(x, z) + \rho(z, y)
+\]</div>
+<p>Since the right-hand side is a constant independent of <span class="arithmatex">\(t\)</span> and holds for all <span class="arithmatex">\(t \in [a,b]\)</span>, it holds for the maximum of the left-hand side:</p>
+<div class="arithmatex">\[
+\max_{t \in [a,b]} |x(t) - y(t)| \le \rho(x, z) + \rho(z, y)
+\]</div>
+<p>Thus, <span class="arithmatex">\(\rho(x, y) \le \rho(x, z) + \rho(z, y)\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="23-sequence-spaces-lp-and-linfty">2.3 Sequence Spaces <span class="arithmatex">\(l^p\)</span> and <span class="arithmatex">\(l^\infty\)</span></h3>
+<ul>
+<li>
+<p><strong>Space <span class="arithmatex">\(l^p\)</span> (<span class="arithmatex">\(1 \le p &lt; \infty\)</span>)</strong>: Consists of all sequences <span class="arithmatex">\(x = \{x_1, x_2, \dots\}\)</span> satisfying <span class="arithmatex">\(\sum_{j=1}^\infty |x_j|^p &lt; \infty\)</span>. Its distance is defined as:</p>
+<div class="arithmatex">\[
+\rho(x, y) = \left( \sum_{j=1}^\infty |x_j - y_j|^p \right)^{\frac{1}{p}}
+\]</div>
+</li>
+<li>
+<p><strong>Space <span class="arithmatex">\(l^\infty\)</span></strong>: Consists of all <strong>bounded</strong> sequences, with the distance defined as the supremum:</p>
+<div class="arithmatex">\[
+\rho(x, y) = \sup_{j} |x_j - y_j|
+\]</div>
+</li>
+</ul>
+<p>To prove that the <span class="arithmatex">\(l^p\)</span> space satisfies the triangle inequality, we must introduce two of the most fundamental inequalities in functional analysis: the Hölder inequality and the Minkowski inequality.</p>
+<hr />
+<h2 id="3-classical-inequalities-and-proofs-holder-minkowski">3. Classical Inequalities and Proofs (Hölder &amp; Minkowski)</h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.1 (Hölder's Inequality)</p>
+<p>Let <span class="arithmatex">\(p &gt; 1, q &gt; 1\)</span> satisfy the conjugate exponent relationship <span class="arithmatex">\(\frac{1}{p} + \frac{1}{q} = 1\)</span>.
+For any sequences <span class="arithmatex">\(a = \{a_1, a_2, \dots\} \in l^p\)</span> and <span class="arithmatex">\(b = \{b_1, b_2, \dots\} \in l^q\)</span>, we have:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^\infty |a_j b_j| \le \left( \sum_{j=1}^\infty |a_j|^p \right)^{\frac{1}{p}} \cdot \left( \sum_{j=1}^\infty |b_j|^q \right)^{\frac{1}{q}}
 \]</div>
 </div>
 <details class="proof">
-<summary>引理 4.9 的证明（点击展开）</summary>
-<p>首先，我们利用 Davydov 不等式（引理 4.7）来研究级数 <span class="arithmatex">\(\sum_{k \in \mathbb{Z}} \gamma(k)\)</span> 的绝对收敛性。
-在引理 4.7 中取 <span class="arithmatex">\(q = r\)</span>，根据参数关系式 <span class="arithmatex">\(\frac{1}{q} + \frac{1}{r} = 1 - \frac{1}{p}\)</span>，解得：</p>
+<summary>Proof of Hölder's Inequality (Click to expand)</summary>
+<p><strong>Step 1: Introduce Young's Inequality</strong></p>
+<p>Consider the function <span class="arithmatex">\(f(x) = x^\alpha\)</span> (where <span class="arithmatex">\(0 &lt; \alpha &lt; 1, x \ge 0\)</span>). Since <span class="arithmatex">\(f''(x) = \alpha(\alpha-1)x^{\alpha-2} &lt; 0\)</span>, this function is concave. Its tangent line equation at point <span class="arithmatex">\((1,1)\)</span> is <span class="arithmatex">\(y = \alpha(x-1) + 1 = \alpha x + \beta\)</span> (where <span class="arithmatex">\(\beta = 1 - \alpha\)</span>).
+By concavity, the function image lies below the tangent line:</p>
 <div class="arithmatex">\[
-\frac{1}{p} = 1 - \frac{2}{r} \implies p = \frac{r}{r-2}
+x^\alpha \le \alpha x + \beta
 \]</div>
-<p>代入 Davydov 不等式，得到协方差 <span class="arithmatex">\(\gamma(k) = Cov(X_0, X_k)\)</span> 的界：</p>
+<p>Let <span class="arithmatex">\(x = \frac{u}{v} \; (u, v &gt; 0)\)</span>, substitute into the above and multiply by <span class="arithmatex">\(v\)</span> to obtain <strong>Young's Inequality</strong>:</p>
 <div class="arithmatex">\[
-|\gamma(k)| \le \frac{2r}{r-2} (E|X_0|^r)^{2/r} (2\alpha(k))^{1 - 2/r}
+u^\alpha v^\beta \le \alpha u + \beta v \quad (\alpha + \beta = 1)
 \]</div>
-<p>由于题设条件已知 <span class="arithmatex">\(\sum_{k \ge 1} \alpha(k)^{1 - 2/r} &lt; +\infty\)</span>，因此由比较判别法，级数 <span class="arithmatex">\(\sum_{k \in \mathbb{Z}} |\gamma(k)|\)</span> 绝对收敛。</p>
-<p>接下来考察标准化和的方差。由于 <span class="arithmatex">\(\{X_t\}\)</span> 是弱平稳的，我们可以展开其方差：</p>
+<p><strong>Step 2: Construct Unitized Variables</strong></p>
+<p>Let <span class="arithmatex">\(\alpha = \frac{1}{p}, \beta = \frac{1}{q}\)</span>. For any given <span class="arithmatex">\(j\)</span>, let:</p>
 <div class="arithmatex">\[
-n Var\left(\frac{S_n}{n}\right) = n^{-1} \sum_{0 \le s, t \le n-1} Cov(X_s, X_t) = \sum_{k=-(n-1)}^{n-1} \left( 1 - \frac{|k|}{n} \right) \gamma(k)
+u = \frac{|a_j|^p}{\sum_{j=1}^\infty |a_j|^p}, \quad v = \frac{|b_j|^q}{\sum_{j=1}^\infty |b_j|^q}
 \]</div>
-<p>因为 <span class="arithmatex">\(\gamma(k)\)</span> 绝对可和，根据控制收敛定理（或 Kronecker 引理），当 <span class="arithmatex">\(n \rightarrow \infty\)</span> 时，权重 <span class="arithmatex">\(\left( 1 - \frac{|k|}{n} \right) \rightarrow 1\)</span>。因此：</p>
+<p><strong>Step 3: Apply Young's Inequality and Sum</strong></p>
+<p>Substituting into Young's Inequality, we get:</p>
 <div class="arithmatex">\[
-\lim_{n \rightarrow \infty} n Var\left(\frac{S_n}{n}\right) = \sum_{k=-\infty}^{\infty} \gamma(k) = \sigma^2 \ge 0
+\frac{|a_j b_j|}{ \left( \sum |a_j|^p \right)^{\frac{1}{p}} \left( \sum |b_j|^q \right)^{\frac{1}{q}} } \le \frac{1}{p} \frac{|a_j|^p}{\sum |a_j|^p} + \frac{1}{q} \frac{|b_j|^q}{\sum |b_j|^q}
 \]</div>
-<p>方差的非负性保证了极限 <span class="arithmatex">\(\sigma^2 \ge 0\)</span>。得证。 <span class="arithmatex">\(\square\)</span></p>
+<p>Summing both sides over <span class="arithmatex">\(j\)</span> from <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(\infty\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\sum_{j=1}^\infty |a_j b_j|}{ \left( \sum |a_j|^p \right)^{\frac{1}{p}} \left( \sum |b_j|^q \right)^{\frac{1}{q}} } \le \frac{1}{p} \cdot 1 + \frac{1}{q} \cdot 1 = 1
+\]</div>
+<p>Rearranging yields Hölder's Inequality. <span class="arithmatex">\(\square\)</span></p>
 </details>
-<p>有了渐近方差的保证，我们可以直接陈述 <span class="arithmatex">\(\alpha\)</span>-混合过程的中心极限定理：</p>
 <div class="admonition success">
-<p class="admonition-title">定理 4.13 (<span class="arithmatex">\(\alpha\)</span>-混合过程的 CLT)</p>
-<p>设 <span class="arithmatex">\(\{X_t\}_{t \in \mathbb{Z}}\)</span> 为零均值、实值的严格平稳过程。假设存在 <span class="arithmatex">\(r &gt; 2\)</span> 和 <span class="arithmatex">\(\beta &gt; 0\)</span> 使得：</p>
+<p class="admonition-title">Theorem 3.2 (Minkowski's Inequality)</p>
+<p>For <span class="arithmatex">\(p \ge 1\)</span>, for any two elements <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> in <span class="arithmatex">\(l^p\)</span>, then <span class="arithmatex">\(a+b \in l^p\)</span>, and:</p>
 <div class="arithmatex">\[
-E|X_t|^r &lt; \infty, \quad \alpha(k) \le a k^{-\beta}
+\left( \sum_{j=1}^\infty |a_j + b_j|^p \right)^{\frac{1}{p}} \le \left( \sum_{j=1}^\infty |a_j|^p \right)^{\frac{1}{p}} + \left( \sum_{j=1}^\infty |b_j|^p \right)^{\frac{1}{p}}
 \]</div>
-<p>其中常数 <span class="arithmatex">\(a &gt; 0\)</span> 且衰减阶数 <span class="arithmatex">\(\beta &gt; r / (r - 2)\)</span>。如果长期方差 <span class="arithmatex">\(\sigma^2 = \sum_{k=-\infty}^{\infty} \gamma(k) &gt; 0\)</span>，那么我们有：</p>
-<div class="arithmatex">\[
-\frac{S_n}{\sigma \sqrt{n}} \xrightarrow{d} N(0, 1)
-\]</div>
+<p><em>Note: This is essentially the core proof that <span class="arithmatex">\(l^p\)</span> spaces satisfy the triangle inequality.</em></p>
 </div>
+<details class="proof">
+<summary>Proof of Minkowski's Inequality (Click to expand)</summary>
+<p><strong>Step 1: Prove Closedness (<span class="arithmatex">\(a+b \in l^p\)</span>)</strong></p>
+<p>Using the elementary inequality <span class="arithmatex">\(|a_j + b_j|^p \le (2 \max\{|a_j|, |b_j|\})^p \le 2^p (|a_j|^p + |b_j|^p)\)</span>, summing this shows that as long as <span class="arithmatex">\(a, b \in l^p\)</span>, the sum sequence must also converge absolutely, i.e., <span class="arithmatex">\(a+b \in l^p\)</span>.</p>
+<p><strong>Step 2: Decomposition and Hölder's Inequality</strong></p>
+<p>When <span class="arithmatex">\(p &gt; 1\)</span> (the case <span class="arithmatex">\(p=1\)</span> follows directly from the absolute value triangle inequality), we use the conjugate relationship <span class="arithmatex">\((p-1)q = p\)</span> for algebraic manipulation:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^\infty |a_j + b_j|^p = \sum_{j=1}^\infty |a_j + b_j| \cdot |a_j + b_j|^{p-1} \le \sum_{j=1}^\infty (|a_j| + |b_j|) |a_j + b_j|^{p-1}
+\]</div>
+<p>After expansion, apply <strong>Hölder's Inequality</strong> to these two terms separately:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^\infty |a_j| |a_j + b_j|^{p-1} \le \left( \sum_{j=1}^\infty |a_j|^p \right)^{\frac{1}{p}} \left( \sum_{j=1}^\infty |a_j + b_j|^{(p-1)q} \right)^{\frac{1}{q}}
+\]</div>
+<p>Since <span class="arithmatex">\((p-1)q = p\)</span>, the second factor on the right is <span class="arithmatex">\(\left( \sum |a_j + b_j|^p \right)^{1/q}\)</span>. Do the same for the <span class="arithmatex">\(|b_j|\)</span> term.</p>
+<p><strong>Step 3: Combine Like Terms</strong></p>
+<p>Adding the two terms and factoring:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^\infty |a_j + b_j|^p \le \left[ \left( \sum_{j=1}^\infty |a_j|^p \right)^{\frac{1}{p}} + \left( \sum_{j=1}^\infty |b_j|^p \right)^{\frac{1}{p}} \right] \left( \sum_{j=1}^\infty |a_j + b_j|^p \right)^{\frac{1}{q}}
+\]</div>
+<p>Dividing both sides by <span class="arithmatex">\(\left( \sum |a_j + b_j|^p \right)^{\frac{1}{q}}\)</span>, and noting <span class="arithmatex">\(1 - \frac{1}{q} = \frac{1}{p}\)</span>:</p>
+<div class="arithmatex">\[
+\left( \sum_{j=1}^\infty |a_j + b_j|^p \right)^{\frac{1}{p}} \le \left( \sum_{j=1}^\infty |a_j|^p \right)^{\frac{1}{p}} + \left( \sum_{j=1}^\infty |b_j|^p \right)^{\frac{1}{p}}
+\]</div>
+<p>Proof complete. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p><em>(Note: For measurable function spaces <span class="arithmatex">\(L^p(F)\)</span>, replace the summation <span class="arithmatex">\(\sum\)</span> above with the Lebesgue integral <span class="arithmatex">\(\int_F\)</span> over the measurable set <span class="arithmatex">\(F\)</span> to obtain the corresponding integral forms of Hölder and Minkowski inequalities.)</em></p>
 <hr />
-<h3 id="43-coupling-method-exponential-inequalities">4.3 耦合方法与指数不等式 (Coupling Method &amp; Exponential Inequalities)</h3>
-<p>为了证明复杂的混合极限定理，统计学家发明了<strong>耦合方法 (Coupling Method)</strong>。其核心思想是：将相依的平稳随机序列，构造性地替换为具有相同分布的<strong>独立</strong>序列，从而利用独立序列的成熟结论。</p>
-<div class="admonition success">
-<p class="admonition-title">引理 4.10 (Bradley's Lemma / 耦合引理)</p>
-<p>设 <span class="arithmatex">\((X, Y)\)</span> 是取值于 <span class="arithmatex">\(\mathbb{R}^d \times \mathbb{R}\)</span> 的随机向量，且对于某个 <span class="arithmatex">\(p \in [1, \infty)\)</span> 有 <span class="arithmatex">\(Y \in L^p(P)\)</span>。
-设 <span class="arithmatex">\(c\)</span> 为实数使得 <span class="arithmatex">\(\|Y+c\|_p &gt; 0\)</span>，且 <span class="arithmatex">\(\xi \in (0, \|Y+c\|_p]\)</span>。那么，存在一个辅助随机变量 <span class="arithmatex">\(Y^*\)</span> 满足：</p>
+<h2 id="4-convergence-in-metric-spaces">4. Convergence in Metric Spaces</h2>
+<p>After establishing the metric standard, limit operations can be naturally defined.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1 (Convergence of a Sequence)</p>
+<p>Let <span class="arithmatex">\(\{x_n\}\)</span> be a sequence in a metric space <span class="arithmatex">\((X, \rho)\)</span>. If there exists a point <span class="arithmatex">\(y \in X\)</span> such that as <span class="arithmatex">\(n \rightarrow \infty\)</span>:</p>
+<div class="arithmatex">\[
+\rho(x_n, y) \rightarrow 0
+\]</div>
+<p>Then <span class="arithmatex">\(\{x_n\}\)</span> is said to converge to <span class="arithmatex">\(y\)</span>, denoted as <span class="arithmatex">\(x_n \rightarrow y\)</span> or <span class="arithmatex">\(\lim_{n \rightarrow \infty} x_n = y\)</span>. <span class="arithmatex">\(y\)</span> is called the limit of the sequence.</p>
+</div>
+<h3 id="41-basic-properties-of-convergent-sequences">4.1 Basic Properties of Convergent Sequences</h3>
+<p>For a convergent sequence <span class="arithmatex">\(\{x_n\}\)</span> in a metric space, it naturally inherits several excellent properties of limits on the real number line:</p>
 <ol>
-<li><span class="arithmatex">\(P_{Y^*} = P_Y\)</span>（即 <span class="arithmatex">\(Y^*\)</span> 与 <span class="arithmatex">\(Y\)</span> 同分布），并且 <span class="arithmatex">\(Y^*\)</span> 独立于 <span class="arithmatex">\(X\)</span>。</li>
-<li>它们之间的距离受混合系数控制：</li>
+<li><strong>Uniqueness of Limits</strong>: If <span class="arithmatex">\(x_n \rightarrow y\)</span> and <span class="arithmatex">\(x_n \rightarrow y'\)</span>, then it must be that <span class="arithmatex">\(y = y'\)</span>.</li>
+<li><strong>Boundedness</strong>: For any given point <span class="arithmatex">\(y_0 \in X\)</span>, the real sequence <span class="arithmatex">\(\rho(x_n, y_0)\)</span> is bounded.</li>
+<li><strong>Subsequence Inheritance</strong>: Any subsequence of <span class="arithmatex">\(\{x_n\}\)</span> also converges to the same limit. Conversely, if every subsequence converges, then the original sequence must converge.</li>
 </ol>
-<div class="arithmatex">\[
-P(|Y - Y^*| &gt; \xi) \le 11 \left( \xi^{-1} \|Y+c\|_p \right)^{\frac{p}{2p+1}} \{ \alpha(\sigma(X), \sigma(Y)) \}^{\frac{2p}{2p+1}}
-\]</div>
-</div>
-<p>借助 Bradley 引理，我们可以将经典的独立序列指数不等式（如 Hoeffding 和 Bernstein 不等式）推广到混合序列中。</p>
-<p><strong>回顾：独立序列的经典不等式 (定理 4.11)</strong>
-设 <span class="arithmatex">\(X_1, \dots, X_n\)</span> 为独立零均值随机变量，<span class="arithmatex">\(S_n = \sum X_i\)</span>。</p>
-<ul>
-<li>
-<p><strong>Hoeffding 不等式</strong>：若 <span class="arithmatex">\(a_i \le X_i \le b_i\)</span>，则 <span class="arithmatex">\(P(|S_n| \ge t) \le 2 \exp\left\{ -\frac{2t^2}{\sum (b_i - a_i)^2} \right\}\)</span>。</p>
-</li>
-<li>
-<p><strong>Bernstein 不等式</strong>：若满足 Cramér 条件 <span class="arithmatex">\(E|X_i|^p \le c^{p-2} p! EX_i^2 &lt; \infty\)</span>，则 <span class="arithmatex">\(P(|S_n| \ge t) \le 2 \exp\left\{ -\frac{2t^2}{4\sum EX_i^2 + 2ct} \right\}\)</span>。</p>
-</li>
-</ul>
-<p><strong>推广：混合序列的指数不等式 (定理 4.12, Bosq 1998)</strong>
-对于零均值实值过程 <span class="arithmatex">\((X_t)\)</span>，若其一致有界 <span class="arithmatex">\(\sup_t \|X_t\|_\infty \le b\)</span>。则对于整数 <span class="arithmatex">\(q \in [1, n/2]\)</span> 和 <span class="arithmatex">\(\epsilon &gt; 0\)</span>：</p>
-<div class="arithmatex">\[
-P(|S_n| \ge n\epsilon) \le 4 \exp\left(-\frac{\epsilon^2}{8b^2} q\right) + 22 \left(1 + \frac{4b}{\epsilon}\right)^{1/2} q \alpha\left(\left[\frac{n}{2q}\right]\right)
-\]</div>
-<p><em>(注：该不等式的第一项类似独立序列的指数衰减，第二项则是由于相依性引入的由 <span class="arithmatex">\(\alpha\)</span>-混合系数控制的惩罚项。)</em></p>
-<hr />
-<h2 id="5-sigma2-spectral-method">5. 长期协方差 <span class="arithmatex">\(\sigma^2\)</span> 的谱估计方法 (Spectral Method)</h2>
-<p>前面我们在 CLT 中定义了长期协方差 <span class="arithmatex">\(\sigma^2 = \sum_{k=-\infty}^{\infty} \gamma(k)\)</span>。在实际数据中，我们需要对它进行一致估计。频域方法（谱分析）为此提供了一个极为优雅的视角。</p>
-<div class="admonition info">
-<p class="admonition-title">定义与定理 4.14：谱密度函数 (Spectral Density Function)</p>
-<p>定义时间序列 <span class="arithmatex">\(\{X_t\}\)</span> 的<strong>谱密度函数</strong> <span class="arithmatex">\(f(\lambda)\)</span> 为自协方差函数 <span class="arithmatex">\(\gamma(k)\)</span> 的傅里叶变换 (Fourier Transform)：
-对于频率 <span class="arithmatex">\(\lambda \in (-\pi, \pi)\)</span>：</p>
-<div class="arithmatex">\[
-f(\lambda) = \frac{1}{2\pi} \sum_{k=-\infty}^{\infty} \gamma(k) \exp(-ik\lambda)
-\]</div>
-<p>如果 <span class="arithmatex">\(\sum |\gamma(k)| &lt; \infty\)</span>，则过程存在谱密度 <span class="arithmatex">\(f(\lambda)\)</span>。特别地，在频率 <span class="arithmatex">\(\lambda = 0\)</span> 处：</p>
-<div class="arithmatex">\[
-\sum_{k=-\infty}^{\infty} \gamma(k) = 2\pi f(0)
-\]</div>
-</div>
-<p><strong>核心思想：</strong> 估计长期方差 <span class="arithmatex">\(\sigma^2\)</span> 的问题，等价于估计谱密度在零频率处的值 <span class="arithmatex">\(2\pi f(0)\)</span>。</p>
-<h3 id="51-periodograms">5.1 周期图 (Periodograms)</h3>
-<p>为了估计谱密度，我们引入周期图的概念。给定样本 <span class="arithmatex">\(\{X_1, \dots, X_n\}\)</span>，在其傅里叶频率 <span class="arithmatex">\(\omega_j = 2\pi j / n \in [-\pi, \pi]\)</span> 处，周期图定义为：</p>
-<div class="arithmatex">\[
-l_n(\omega_j) = \frac{1}{n} \left| \sum_{t=1}^n X_t e^{-it\omega_j} \right|^2, \quad j \in T = \{0, \pm 1, \dots, \pm [n/2]\}
-\]</div>
-<p>它可以等价地展开为样本自协方差函数 <span class="arithmatex">\(\hat{\gamma}(k)\)</span> 的傅里叶变换：</p>
-<div class="arithmatex">\[
-\begin{cases} 
-l_n(0) = n|\overline{X}|^2 \\ 
-l_n(\omega_j) = \sum_{|k|&lt;n} \hat{\gamma}(k) e^{-ik\omega_j} &amp; \text{if } \omega_j \ne 0 
-\end{cases}
-\]</div>
-<p>其中 <span class="arithmatex">\(\hat{\gamma}(k) = n^{-1} \sum_{t=1}^{n-|k|} (X_t - \overline{X})(X_{t+|k|} - \overline{X})\)</span>。</p>
-<p>为了在连续频率域上分析，我们定义<strong>扩展周期图 (Extended Periodogram)</strong> <span class="arithmatex">\(I_n(\omega)\)</span>：对于任意 <span class="arithmatex">\(\omega \in [-\pi, \pi]\)</span>，将 <span class="arithmatex">\(I_n(\omega)\)</span> 定义为离 <span class="arithmatex">\(\omega\)</span> 最近的傅里叶频率点处的 <span class="arithmatex">\(l_n(\omega_k)\)</span> 值（即阶梯函数）。</p>
-<div class="admonition success">
-<p class="admonition-title">命题 4.16 (周期图的期望性质)</p>
-<p>如果 <span class="arithmatex">\(\{X_t\}\)</span> 是均值为 <span class="arithmatex">\(\mu\)</span> 且自协方差绝对可和的平稳序列，那么：</p>
-<div class="arithmatex">\[
-E(I_n(0)) - n\mu^2 \rightarrow 2\pi f(0)
-\]</div>
-<p>对于非零频率 <span class="arithmatex">\(\omega \ne 0\)</span>：</p>
-<div class="arithmatex">\[
-E(l_n(\omega)) \rightarrow 2\pi f(\omega)
-\]</div>
-<p>特别地，如果真实均值 <span class="arithmatex">\(\mu = 0\)</span>，则 <span class="arithmatex">\(E(I_n(\omega))\)</span> 在 <span class="arithmatex">\([-\pi, \pi]\)</span> 上一致收敛于 <span class="arithmatex">\(2\pi f(\omega)\)</span>。</p>
-</div>
 <details class="proof">
-<summary>命题 4.16 的证明（点击展开）</summary>
-<p>首先，对于零频率 <span class="arithmatex">\(\omega = 0\)</span>：</p>
+<summary>Proof: Uniqueness and Boundedness of Limits</summary>
+<p><strong>1. Proof of Uniqueness:</strong></p>
+<p>Using the triangle inequality:</p>
 <div class="arithmatex">\[
-E(l_n(0)) - n\mu^2 = n E(\overline{X}^2) - n\mu^2 = n Var(\overline{X}) = n Var(S_n/n)
+0 \le \rho(y, y') \le \rho(y, x_n) + \rho(x_n, y') = \rho(x_n, y) + \rho(x_n, y')
 \]</div>
-<p>由引理 4.9 的结论，当 <span class="arithmatex">\(n \rightarrow \infty\)</span> 时，上式收敛于 <span class="arithmatex">\(\sum_{k=-\infty}^{\infty} \gamma(k) = 2\pi f(0)\)</span>。</p>
-<p>现在考察 <span class="arithmatex">\(\omega \in (0, \pi]\)</span>。利用 <span class="arithmatex">\(l_n(\omega)\)</span> 的等价表示展开其期望：</p>
+<p>Since <span class="arithmatex">\(x_n \rightarrow y\)</span> and <span class="arithmatex">\(x_n \rightarrow y'\)</span>, the right-hand side tends to 0 as <span class="arithmatex">\(n \rightarrow \infty\)</span>. By the squeeze theorem, <span class="arithmatex">\(\rho(y, y') = 0\)</span>, and according to the first metric axiom, <span class="arithmatex">\(y = y'\)</span>.</p>
+<p><strong>2. Proof of Boundedness:</strong></p>
+<p>Let <span class="arithmatex">\(x_n \rightarrow y\)</span>, meaning <span class="arithmatex">\(\rho(x_n, y) \rightarrow 0\)</span>. By the definition of convergence, there must exist <span class="arithmatex">\(M &gt; 0\)</span> such that <span class="arithmatex">\(\rho(x_n, y) &lt; M\)</span> for all <span class="arithmatex">\(n\)</span>.
+Take any <span class="arithmatex">\(y_0 \in X\)</span>, by the triangle inequality:</p>
 <div class="arithmatex">\[
-E(l_n(\omega)) = \sum_{|k|&lt;n} \left( 1 - \frac{|k|}{n} \right) \gamma(k) e^{-ik g(n,\omega)}
+\rho(x_n, y_0) \le \rho(x_n, y) + \rho(y, y_0) &lt; M + \rho(y, y_0)
 \]</div>
-<p>其中 <span class="arithmatex">\(g(n,\omega)\)</span> 是离 <span class="arithmatex">\(\omega\)</span> 最近的傅里叶频率。
-因为自协方差 <span class="arithmatex">\(\gamma(\cdot)\)</span> 是绝对可和的，序列 <span class="arithmatex">\(\sum_{|k|&lt;n} \left( 1 - \frac{|k|}{n} \right) \gamma(k) e^{-ik\lambda}\)</span> 会一致收敛到其傅里叶变换 <span class="arithmatex">\(2\pi f(\lambda)\)</span>。</p>
-<p>又因为当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(g(n,\omega) \rightarrow \omega\)</span>，故有：</p>
-<div class="arithmatex">\[
-E(l_n(\omega)) \rightarrow 2\pi f(\omega)
-\]</div>
-<p>如果 <span class="arithmatex">\(\mu=0\)</span>，利用 <span class="arithmatex">\(f\)</span> 在闭区间 <span class="arithmatex">\([-\pi, \pi]\)</span> 上的均匀连续性，可得一致收敛结论。得证。 <span class="arithmatex">\(\square\)</span></p>
+<p>The right-hand side is a constant independent of <span class="arithmatex">\(n\)</span>, so the real sequence <span class="arithmatex">\(\rho(x_n, y_0)\)</span> is bounded. <span class="arithmatex">\(\square\)</span></p>
 </details>
-<h3 id="52">5.2 线性过程周期图的渐近分布</h3>
-<div class="admonition success">
-<p class="admonition-title">定理 4.17</p>
-<p>设 <span class="arithmatex">\(\{X_t\}\)</span> 为线性过程 <span class="arithmatex">\(X_t = \sum \psi_j \epsilon_{t-j}\)</span> 且 <span class="arithmatex">\(\sum |\psi_j| &lt; \infty\)</span>，<span class="arithmatex">\(\epsilon_t \sim i.i.d.\ F(0, \sigma^2)\)</span>。
-如果谱密度 <span class="arithmatex">\(f(\lambda) &gt; 0\)</span>，那么对于 <span class="arithmatex">\(m\)</span> 个不同的频率 <span class="arithmatex">\(0 &lt; \lambda_1 &lt; \dots &lt; \lambda_m &lt; \pi\)</span>，随机向量：</p>
-<div class="arithmatex">\[
-(I_n(\lambda_1), \dots, I_n(\lambda_m))^T
-\]</div>
-<p>依分布收敛于一个由<strong>独立的指数分布 (Exponential Distribution)</strong> 随机变量组成的向量，其中第 <span class="arithmatex">\(i\)</span> 个分量的均值为 <span class="arithmatex">\(2\pi f(\lambda_i)\)</span>。</p>
-</div>
-<p><em>(注：该定理不仅给出了极限分布，还指出了不同频率上的周期图在渐近意义上是不相关的，这为后续的频域回归奠定了基础。)</em></p>
-<hr />
-<h2 id="6">6. 谱密度的非参数核平滑估计</h2>
-<p>定理 4.17 揭示了一个严重的问题：<strong>单一的周期图 <span class="arithmatex">\(I_n(\omega)\)</span> 并不是谱密度 <span class="arithmatex">\(2\pi f(\omega)\)</span> 的一致估计量</strong>。
-（因为它的极限是一个方差不为 0 的指数分布，而不是退化到常数）。且当 <span class="arithmatex">\(\mu \ne 0\)</span> 时，<span class="arithmatex">\(I_n(0)\)</span> 甚至是有偏的。</p>
-<p><strong>解决方案：</strong> 既然不同频率 <span class="arithmatex">\(\omega_j\)</span> 处的周期图是渐近独立的，且它们的期望围绕着真实谱密度 <span class="arithmatex">\(f(\omega)\)</span> 波动，我们可以将相邻频率的周期图进行<strong>局部加权平均 (Locally weighted averaging)</strong>，这就是<strong>非参数核回归 (Nonparametric Kernel Regression)</strong> 的核心思想。</p>
-<h3 id="61">6.1 构建对数周期图回归模型</h3>
-<p>我们可以将周期图的关系写成一个乘性模型：</p>
-<div class="arithmatex">\[
-I_n(\omega_j) = 2\pi f(\omega_j) e_j + R_j \quad \text{for } j \in T \setminus \{0\}
-\]</div>
-<p>其中 <span class="arithmatex">\(\{e_j\}\)</span> 是独立的 <span class="arithmatex">\(Exp(1)\)</span> 随机变量，<span class="arithmatex">\(\{R_j\}\)</span> 是高阶可忽略项。
-对两边取自然对数，转化为标准的加性非参数回归模型：</p>
-<div class="arithmatex">\[
-\log\left(\frac{l_n(\omega_j)}{2\pi}\right) = \log(f(\omega_j)) + \log(e_j)
-\]</div>
-<p>已知指数分布对数的性质：<span class="arithmatex">\(E(\log(e_j)) = -0.57721\)</span> (欧拉常数) 且 <span class="arithmatex">\(Var(\log(e_j)) = \pi^2/6\)</span>。
-通过中心化，令：</p>
+<h3 id="42-analysis-of-convergence-equivalence-in-different-spaces">4.2 Analysis of Convergence Equivalence in Different Spaces</h3>
+<p>The subtlety of functional analysis lies in: <strong>The elements of a space may be the same, but different metrics lead to entirely different concepts of "convergence."</strong></p>
 <ul>
 <li>
-<p><span class="arithmatex">\(\eta_j = \log(e_j) + 0.57721\)</span> （零均值，方差 <span class="arithmatex">\(\pi^2/6\)</span> 的 i.i.d. 误差项）</p>
+<p><strong>In finite-dimensional Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span></strong>: Convergence of a sequence under the Euclidean metric is <strong>necessary and sufficient</strong> for each coordinate (component) to converge separately in the real field. Here, metric space convergence reduces to coordinate-wise convergence.</p>
 </li>
 <li>
-<p><span class="arithmatex">\(W_j = \log\left(\frac{l_n(\omega_j)}{2\pi}\right) + 0.57721\)</span> （新的响应变量）</p>
+<p><strong>In the space of continuous functions <span class="arithmatex">\(C[a,b]\)</span></strong>:</p>
 </li>
-<li>
-<p><span class="arithmatex">\(m(\omega) = \log(f(\omega))\)</span> （未知的目标平滑函数）</p>
-</li>
+<li>If assigned the maximum metric <span class="arithmatex">\(\rho(x, y) = \max_{t \in [a,b]} |x(t) - y(t)|\)</span>, sequence convergence is equivalent to <strong>Uniform Convergence</strong> of the function sequence on <span class="arithmatex">\([a,b]\)</span>.</li>
+<li><strong>Counter-example</strong>: If assigned the mean-square error metric <span class="arithmatex">\(\rho_1(x, y) = \left( \int_a^b |x(t) - y(t)|^2 dt \right)^{1/2}\)</span> in <span class="arithmatex">\(C[a,b]\)</span>. Consider the sequence <span class="arithmatex">\(x_n(t) = t^n\)</span> on <span class="arithmatex">\([0,1]\)</span>.
+    Clearly <span class="arithmatex">\(\rho_1(x_n, 0) \rightarrow 0\)</span> (converges to 0 under integral metric), but as a function sequence, it does not converge uniformly to 0 on <span class="arithmatex">\([0,1]\)</span> (it is always 1 at <span class="arithmatex">\(t=1\)</span>).</li>
 </ul>
-<p>于是我们得到了一个固定设计的非参数回归模型：</p>
-<div class="arithmatex">\[
-W_j = m(\omega_j) + \eta_j, \quad j \in T \setminus \{0\}
-\]</div>
-<h3 id="62-nadaraya-watson-nw">6.2 Nadaraya-Watson (NW) 核估计量</h3>
-<p>现在我们的目标是通过核平滑估计 <span class="arithmatex">\(m(0) = \log(f(0))\)</span>。
-给定核函数 <span class="arithmatex">\(K(\cdot)\)</span> 和平滑带宽 (bandwidth) <span class="arithmatex">\(b\)</span>，<span class="arithmatex">\(m(\omega)\)</span> 的 NW 估计量定义为：</p>
-<div class="arithmatex">\[
-\hat{m}_b(\omega) = \frac{\sum_{j \in T} K\left(\frac{\omega - \omega_j}{b}\right) W_j}{\sum_{j \in T} K\left(\frac{\omega - \omega_j}{b}\right)}
-\]</div>
-<p>其中带宽需要满足渐近条件：当 <span class="arithmatex">\(n \rightarrow \infty\)</span> 时，<span class="arithmatex">\(b \rightarrow 0\)</span> 且 <span class="arithmatex">\(nb \rightarrow \infty\)</span>。</p>
-<p>最后，通过指数逆变换，我们就能得到长期协方差（零频率谱密度）的一致估计：</p>
-<div class="arithmatex">\[
-\hat{f}(0) = \exp(\hat{m}_b(0))
-\]</div>
-<p>有了 <span class="arithmatex">\(\hat{f}(0)\)</span>，我们就成功得到了 CLT 标准化中所需的长期方差 <span class="arithmatex">\(\sigma^2 = 2\pi \hat{f}(0)\)</span>，从而闭环了整个弱相依数据的渐近推断体系。</p>
+<p>This shows that the specific definition of a metric profoundly affects the topological structure and limit behavior within a space, which is also an important motivation for our subsequent study of topological properties and completeness.</p>
 
 
 
@@ -2708,7 +2641,7 @@ W_j = m(\omega_j) + \eta_j, \quad j \in T \setminus \{0\}
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -2740,16 +2673,16 @@ W_j = m(\omega_j) + \eta_j, \quad j \in T \setminus \{0\}
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/security.js"></script>
+        <script src="../../../javascripts/security.js"></script>
       
     
   </body>

@@ -64,6 +64,20 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/7Delta_Method/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/</loc>
+        <lastmod>2026-04-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/0Intro/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Functional_Analysis/1distance_space/</loc>
+        <lastmod>2026-04-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Functional_Analysis/1distance_space/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/1distance_space/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/0Intro/</loc>
         <lastmod>2026-04-26</lastmod>
         <changefreq>daily</changefreq>
@@ -279,6 +293,20 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/7Delta_Method/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/7Delta_Method/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Functional_Analysis/0Intro/</loc>
+        <lastmod>2026-04-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Functional_Analysis/1distance_space/</loc>
+        <lastmod>2026-04-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/1distance_space/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Functional_Analysis/1distance_space/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/0Intro/</loc>
