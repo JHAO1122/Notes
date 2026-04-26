@@ -238,5 +238,65 @@
         "date": "2026-03-23",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2507.01732v2": {
+        "title": "Gold after Randomized Sand: Model-X Split Knockoffs for Controlled Transformation Selection",
+        "date": "2025-07-02",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2506.09690v1": {
+        "title": "Knockoffs Inference under Privacy Constraints",
+        "date": "2025-06-11",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2505.24727v1": {
+        "title": "Knockoff-Guided Compressive Sensing: A Statistical Machine Learning Framework for Support-Assured Signal Recovery",
+        "date": "2025-05-30",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2505.20634v1": {
+        "title": "Explaining Concept Shift with Interpretable Feature Attribution",
+        "date": "2025-05-27",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2505.16124v2": {
+        "title": "Controlling the false discovery rate in high-dimensional linear models using model-X knockoffs and $p$-values",
+        "date": "2025-05-22",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2603.20071v1": {
+        "title": "Posterior inference via Hill's prediction model",
+        "date": "2026-03-20",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.14233v1": {
+        "title": "Conformalized Robust Principal Component Analysis",
+        "date": "2026-03-15",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.14198v2": {
+        "title": "Efficient Federated Conformal Prediction with Group-Conditional Guarantees",
+        "date": "2026-03-15",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.10731v1": {
+        "title": "Beyond Accuracy: Reliability and Uncertainty Estimation in Convolutional Neural Networks",
+        "date": "2026-03-11",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.10674v1": {
+        "title": "Conformal prediction for high-dimensional functional time series: Applications to subnational mortality",
+        "date": "2026-03-11",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

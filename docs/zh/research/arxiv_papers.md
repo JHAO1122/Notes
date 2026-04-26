@@ -3,9 +3,100 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-25
+> 更新于: 2026-04-26
 
 ---
+### Gold after Randomized Sand: Model-X Split Knockoffs for Controlled Transformation Selection 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-07-02
+- **链接**: [PDF](http://arxiv.org/abs/2507.01732v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出Model-X Split Knockoffs方法，通过引入新颖的辅助随机化设计，解决了随机协变量设计与确定性线性变换之间的根本性矛盾，从而在随机设计下实现了对变换选择的有限样本FDR控制。其核心创新在于构造了一种新型评分函数，使得在已知或可准确估计的协变量分布下，无论响应变量的条件分布如何，都能保证与经典Model-X Knockoffs相同或更优的统计功效，并具备可证明的有限样本FDR控制理论性质。
+
+### Knockoffs Inference under Privacy Constraints 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-06-11
+- **链接**: [PDF](http://arxiv.org/abs/2506.09690v1)
+
+!!! note "AI 核心解读"
+
+    该论文在差分隐私约束下，为模型-X knockoff框架构造了经严格统计推导的噪声注入机制，并证明了该机制能同时保证精确的有限样本FDR控制与隐私保护。通过建立评分函数的渐近理论性质，作者给出了噪声不损害统计功效的充分条件，从而在理论上统一了隐私保护与变量选择的有效性。
+
+### Knockoff-Guided Compressive Sensing: A Statistical Machine Learning Framework for Support-Assured Signal Recovery 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-05-30
+- **链接**: [PDF](http://arxiv.org/abs/2505.24727v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于将Knockoff变量筛选框架与压缩感知结合，通过构造一种新型评分函数实现有限样本下对支撑集识别的严格FDR控制，并基于此推导出比传统ℓ1方法更弱的理论恢复条件，从而在保证信号重构精度的同时，为支撑恢复提供了统计可解释的误差控制。
+
+### Explaining Concept Shift with Interpretable Feature Attribution 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-05-27
+- **链接**: [PDF](http://arxiv.org/abs/2505.20634v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出基于广义可加模型（GAM）的SGShift框架，通过构造条件标签分布的评分函数并引入knockoffs控制错误发现率，实现了对概念漂移特征的稀疏识别与统计推断。理论性质上，该方法在特征归因中融合了吸收项以修正模型欠拟合偏差，并证明了所提评分函数在特征选择中的渐近有效性。
+
+### Controlling the false discovery rate in high-dimensional linear models using model-X knockoffs and $p$-values 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-05-22
+- **链接**: [PDF](http://arxiv.org/abs/2505.16124v2)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于：将模型-X knockoff框架与去偏惩罚估计量结合，构造了两组天然配对的高维检验统计量及其p值，并证明了第一组统计量渐近相互独立，从而为Benjamini-Hochberg程序提供了理论依据；进一步通过两步法利用配对结构提升检验功效，在一般设计矩阵相关结构下严格证明了渐近FDR控制性，并刻画了功效增益的理论性质。
+
+### Posterior inference via Hill's prediction model 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-20
+- **链接**: [PDF](http://arxiv.org/abs/2603.20071v1)
+
+!!! note "AI 核心解读"
+
+    该论文基于Hill的$A_n$预测模型，通过构造一步前向预测分布函数，在无需先验分布的前提下，直接生成完整数据集以实现任意统计量的后验推断。其核心创新在于利用共形预测框架下的等概率区间划分机制，推导出后验分布的闭合形式，并证明了该评分函数在有限样本下具有频率学派覆盖性质。
+
+### Conformalized Robust Principal Component Analysis 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-15
+- **链接**: [PDF](http://arxiv.org/abs/2603.14233v1)
+
+!!! note "AI 核心解读"
+
+    该论文的创新点在于：将共形预测框架与稳健主成分分析相结合，构建了一种无需分布假设的评分函数，并引入加权校准机制以处理异质性观测概率，从而在有限样本下为低秩矩阵恢复提供了严格的覆盖概率理论保证。
+
+### Efficient Federated Conformal Prediction with Group-Conditional Guarantees 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-15
+- **链接**: [PDF](http://arxiv.org/abs/2603.14198v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于组分层核集（group-stratified coresets）的联邦共形预测框架，通过构造可合并的加权评分摘要，在无需共享原始数据的前提下实现分布自由的组条件覆盖保证。其核心创新在于推导了跨客户端异构数据分布下的评分函数聚合理论，证明了所构造的加权评分集能够保持原始局部校准过程的覆盖性质，并严格控制了组条件覆盖误差的有限样本上界。
+
+### Beyond Accuracy: Reliability and Uncertainty Estimation in Convolutional Neural Networks 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-11
+- **链接**: [PDF](http://arxiv.org/abs/2603.10731v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过对比蒙特卡洛丢弃法（贝叶斯近似）与共形预测（非参数框架）在卷积神经网络中的不确定性量化表现，揭示了高精度模型（如H-CNN VGG16）往往伴随过度自信的校准缺陷，而共形预测凭借其构造的统计保证预测集，在理论上确保了覆盖率的有效性与无分布假设的稳健性。
+
+### Conformal prediction for high-dimensional functional time series: Applications to subnational mortality 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-11
+- **链接**: [PDF](http://arxiv.org/abs/2603.10674v1)
+
+!!! note "AI 核心解读"
+
+    该论文将分裂与序列两种共形预测框架拓展至高维函数型时间序列，通过验证集校准经验覆盖概率以优化调参，或利用自回归过程序贯更新预测分位数，从而在无需模型假设下构造出具有有限样本有效性的预测区间。其理论贡献在于证明了所构造评分函数在非平稳依赖结构下的覆盖保真性，并给出了序列共形预测中分位数更新过程的渐近一致性。
+
+
 ### Diffusion-Driven High-Dimensional Variable Selection 
 
 - [ ] **分类**: Knockoff | **日期**: 2025-08-19
