@@ -20,6 +20,8 @@ Currently, [the site](https://jhao1122.github.io/Notes/) is divided into four co
 * **[In Progress] [Asymptotic Statistics](https://jhao1122.github.io/Notes/Asymptotic-statistics/0Intro/)**
   * Covers advanced statistical theories such as weak convergence, CLT for dependent data, and asymptotic inference methods.
 
+* **[In Progress] [Functional Analysis](https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/)**
+
 ### ✒️ [Essays](https://jhao1122.github.io/Notes/blog/)
 
 This is a place for passion and sentiment. No formulas, no derivations. For academic content, please refer to the Notes Base.
