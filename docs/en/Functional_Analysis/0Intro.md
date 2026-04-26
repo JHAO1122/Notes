@@ -33,6 +33,8 @@ The following notes are continuously being updated:
 
 * [x] [Chapter 1: Metric Spaces](1distance_space.md)
 
+* [x] [Chapter 2: Topology and Completeness](2completeness.md)
+
 ---
 
 ## 📝 About the Notes

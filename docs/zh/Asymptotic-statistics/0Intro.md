@@ -20,7 +20,8 @@ tags:
 
 本课程用到的参考教材如下：
 
-1. **A.W. van der Vaart**, *Asymptotic Statistics* (Cambridge University Press) 
+1. **课程 PPT**：特别鸣谢任课老师提供的详尽授课讲义。本 MkDocs 笔记的内容逻辑与推导思路深度参考了老师的 PPT 结构。
+2. **A.W. van der Vaart**, *Asymptotic Statistics* (Cambridge University Press) 
 
 ---
 

@@ -22,7 +22,9 @@ tags:
 
 The reference textbooks used in this course are as follows:
 
-1. **A.W. van der Vaart**, *Asymptotic Statistics* (Cambridge University Press)
+1. **Course PPT**: Special thanks to the instructor for providing detailed lecture slides. The logical structure and derivation paths of these MkDocs notes deeply reference the PPT's organization.
+
+2. **A.W. van der Vaart**, *Asymptotic Statistics* (Cambridge University Press)
 
 ---
 
