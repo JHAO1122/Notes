@@ -82,7 +82,8 @@ plugins:
             "第一章：度量空间": "Ch 1: Distance Spaces"
             "第二章：拓扑与完备性": "Ch 2: Topology and Completeness"
             "🛠️ 知识速查": "🛠️ Quick Reference"
-            "📖 数理统计": "📖 Mathematical Statistics"
+            "🛠️ 速查": "🛠️ Quick Reference"
+            "📊 数理统计": "📊 Mathematical Statistics"
             "🎲 概率论": "🎲 Probability Theory"
             "📏 测度论基础": "📏 Measure Theory"
             "🔢 线性代数": "🔢 Linear Algebra"
@@ -150,12 +151,13 @@ nav:
               - 第一章：度量空间: zh/Functional_Analysis/1distance_space.md
               - 第二章：拓扑与完备性: zh/Functional_Analysis/2completeness.md
   - 🛠️ 知识速查:
-      - 🛠️ 知识速查: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
-      - 📖 数理统计: zh/reference/stats.md
-      - 🎲 概率论: zh/reference/prob.md
-      - 📏 测度论基础: zh/reference/measure.md
-      - 🔢 线性代数: zh/reference/linalg.md
-      - 🌊 随机过程: zh/reference/stochastic.md 
+      - 📖 概览: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
+      - 🛠️ 速查:
+          - 📊 数理统计: zh/reference/stats.md
+          - 🎲 概率论: zh/reference/prob.md
+          - 📏 测度论基础: zh/reference/measure.md
+          - 🔢 线性代数: zh/reference/linalg.md
+          - 🌊 随机过程: zh/reference/stochastic.md 
   - 🛰️ 前沿追踪: 
       - 📝 最新论文: zh/research/arxiv_papers.md
   - 🎙️ 讲座与报告:
