@@ -112,13 +112,11 @@ plugins:
 # 路径说明：这里只需写 zh/ 下的路径，i18n 插件会自动映射到 en/
 nav:
   - 🏠 首页: zh/index.md
-  
-  - ✍️ 随笔:
-      - 🍃 碎碎念（介绍）: zh/blog/index.md
-      - 📁 往期博文:
-          - 男人的一生只哭十一次: zh/blog/posts/private/2026-4-15.md
-          - 何时收敛: zh/blog/posts/private/2026-4-23.md
-
+  # - ✍️ 随笔:
+  #     - 🍃 碎碎念（介绍）: zh/blog/index.md
+  #     - 📁 往期博文:
+  #         - 男人的一生只哭十一次: zh/blog/posts/private/2026-4-15.md
+  #         - 何时收敛: zh/blog/posts/private/2026-4-23.md
   - 📚 笔记库:
       - 📈 随机微分方程:
           - 随机微分方程课程概览: zh/Stochastic-Differential-Equation/0Intro.md
@@ -168,6 +166,12 @@ nav:
       - 📑 文献研讨:
           - 2025秋季组会:
               - Derandomized Knockoffs: zh/Lectures/Group_Seminars/derandomized_knockoffs.md
+  - ✍️ 随笔:
+      - 🍃 碎碎念（介绍）: zh/blog/index.md
+      - 📁 往期博文:
+          - 男人的一生只哭十一次: zh/blog/posts/private/2026-4-15.md
+          - 何时收敛: zh/blog/posts/private/2026-4-23.md
+
 # ================= 扩展配置 =================
 extra_javascript:
   - javascripts/mathjax.js

@@ -16,9 +16,9 @@ Currently, my research interests focus on the following fields:
 
 * **Conformal Prediction**
 
-* **Probability Theory and Stochastic Processes** (Personal pursuit)
+* **Probability Theory and Stochastic Processes**
 
-* **Quantitative Finance** (Personal interest)
+* **Quantitative Finance** 
 
 
 ## 💡 Philosophy
