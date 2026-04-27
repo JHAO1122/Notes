@@ -81,6 +81,7 @@ plugins:
             "🌌 泛函分析": "🌌 Functional Analysis"
             "第一章：度量空间": "Ch 1: Distance Spaces"
             "第二章：拓扑与完备性": "Ch 2: Topology and Completeness"
+            "第三章：紧性": "Ch 3: Compactness"
             "🛠️ 知识速查": "🛠️ Quick Reference"
             "🛠️ 速查": "🛠️ Quick Reference"
             "📊 数理统计": "📊 Mathematical Statistics"
@@ -150,6 +151,7 @@ nav:
           - 📖 笔记:
               - 第一章：度量空间: zh/Functional_Analysis/1distance_space.md
               - 第二章：拓扑与完备性: zh/Functional_Analysis/2completeness.md
+              - 第三章：紧性: zh/Functional_Analysis/3compactness.md
   - 🛠️ 知识速查:
       - 📖 概览: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
       - 🛠️ 速查:

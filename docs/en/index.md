@@ -23,7 +23,7 @@ Currently, my research interests focus on the following fields:
 
 ## 💡 Philosophy
 
-The purpose of this website is twofold. First, it serves as a platform to organize my scattered handwritten derivations from scratch paper and my iPad into systematic notes for future review. Second, I firmly believe in the power of open-source and knowledge sharing, hoping that these notes might provide some value to others in the community.
+The purpose of this website is twofold. First, it serves as a platform to organize my scattered handwritten derivations from scratch paper and my iPad into systematic notes for future review. Second, I firmly believe that recording is a meaningful thing, and this website can well depict my growth trajectory and learning journey.
 
 
 ## 📖 Selected Coursework
