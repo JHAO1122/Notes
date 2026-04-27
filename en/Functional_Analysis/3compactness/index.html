@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Functional_Analysis/2completeness/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/3compactness/">
       
       
-        <link rel="prev" href="../1distance_space/">
+        <link rel="prev" href="../2completeness/">
       
       
-        <link rel="next" href="../3compactness/">
+        <link rel="next" href="../../reference/">
       
       
         
-          <link rel="alternate" href="./" hreflang="zh">
+          <link rel="alternate" href="../../../Functional_Analysis/3compactness/" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Functional_Analysis/2completeness/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>第二章：拓扑与完备性 - Jiahao's Academic Space</title>
+        <title>Ch 3: Compactness - Jiahao's Academic Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,8 +92,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
-          跳转至
+        <a href="#chapter-3-pre-compact-sets-compact-sets-and-their-topological-properties" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -105,8 +105,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第二章：拓扑与完备性
+              Ch 3: Compactness
             
           </span>
         </div>
@@ -166,20 +166,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="zh" class="md-select__link">
+            <a href="../../../Functional_Analysis/3compactness/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Functional_Analysis/2completeness/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -200,16 +200,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -222,7 +222,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -234,7 +234,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -255,7 +255,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -265,13 +265,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         
   
   
     
   
-  🏠 首页
+  🏠 Home
 
       </a>
     </li>
@@ -301,7 +301,7 @@
           
   
   
-  📚 笔记库
+  📚 Course Notes
 
         </a>
       </li>
@@ -324,7 +324,7 @@
           
   
   
-  🛠️ 知识速查
+  🛠️ Quick Reference
 
         </a>
       </li>
@@ -344,7 +344,7 @@
           
   
   
-  🛰️ 前沿追踪
+  🛰️ Research Updates
 
         </a>
       </li>
@@ -364,7 +364,7 @@
           
   
   
-  🎙️ 讲座与报告
+  🎙️ Lectures & Talks
 
         </a>
       </li>
@@ -384,7 +384,7 @@
           
   
   
-  ✍️ 随笔
+  ✍️ Blog
 
         </a>
       </li>
@@ -412,9 +412,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -424,7 +424,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -444,14 +444,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🏠 首页
+    🏠 Home
   
 
     
@@ -499,7 +499,7 @@
   <span class="md-ellipsis">
     
   
-    📚 笔记库
+    📚 Course Notes
   
 
     
@@ -515,7 +515,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📚 笔记库
+    📚 Course Notes
   
 
           </label>
@@ -554,7 +554,7 @@
   <span class="md-ellipsis">
     
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
     
@@ -570,7 +570,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
           </label>
@@ -590,7 +590,7 @@
   <span class="md-ellipsis">
     
   
-    随机微分方程课程概览
+    SDE Course Overview
   
 
     
@@ -634,7 +634,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -650,7 +650,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -670,7 +670,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：条件期望
+    Ch 1: Conditional Expectation
   
 
     
@@ -698,7 +698,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：布朗运动
+    Ch 2: Brownian Motion
   
 
     
@@ -726,7 +726,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分
+    Ch 3: Stochastic Integrals
   
 
     
@@ -754,7 +754,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分
+    Ch 4: Itô Integrals
   
 
     
@@ -782,7 +782,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：多元 Itô 积分
+    Ch 5: Multivariate Itô Calculus
   
 
     
@@ -810,7 +810,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：解的存在唯一性
+    Ch 6: Existence & Uniqueness
   
 
     
@@ -838,7 +838,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：期权定价与停时
+    Ch 7: Option Pricing and Stopping Times
   
 
     
@@ -890,7 +890,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -906,7 +906,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1073,7 +1073,7 @@
   <span class="md-ellipsis">
     
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
     
@@ -1089,7 +1089,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
           </label>
@@ -1109,7 +1109,7 @@
   <span class="md-ellipsis">
     
   
-    渐近统计课程概览
+    Asymptotic Statistics Course Overview
   
 
     
@@ -1153,7 +1153,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1169,7 +1169,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1189,7 +1189,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：随机收敛
+    Ch 1: Stochastic Convergence
   
 
     
@@ -1217,7 +1217,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：特征函数
+    Ch 2: Characteristic Functions
   
 
     
@@ -1245,7 +1245,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：中心极限定理（一）
+    Ch 3: Central Limit Theorem I
   
 
     
@@ -1273,7 +1273,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：中心极限定理（二）
+    Ch 4: Central Limit Theorem II
   
 
     
@@ -1301,7 +1301,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：弱相依数据（一）
+    Ch 5: Weakly Dependent Data I
   
 
     
@@ -1329,7 +1329,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：弱相依数据（二）
+    Ch 6: Weakly Dependent Data II
   
 
     
@@ -1357,7 +1357,7 @@
   <span class="md-ellipsis">
     
   
-    第七章： Delta 方法
+    Ch 7: Delta Method
   
 
     
@@ -1422,7 +1422,7 @@
   <span class="md-ellipsis">
     
   
-    🌌 泛函分析
+    🌌 Functional Analysis
   
 
     
@@ -1438,7 +1438,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🌌 泛函分析
+    🌌 Functional Analysis
   
 
           </label>
@@ -1458,7 +1458,7 @@
   <span class="md-ellipsis">
     
   
-    泛函分析课程概览
+    Functional Analysis Course Overview
   
 
     
@@ -1504,7 +1504,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1520,7 +1520,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1540,7 +1540,35 @@
   <span class="md-ellipsis">
     
   
-    第一章：度量空间
+    Ch 1: Distance Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Topology and Completeness
   
 
     
@@ -1577,7 +1605,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：拓扑与完备性
+    Ch 3: Compactness
   
 
     
@@ -1595,7 +1623,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：拓扑与完备性
+    Ch 3: Compactness
   
 
     
@@ -1607,7 +1635,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1616,43 +1644,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-basic-concepts-of-pre-compact-and-compact-sets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 距离空间中的基本拓扑概念
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 距离空间中的基本拓扑概念">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 开集与闭集
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 稠密性与可分性
+        1. Basic Concepts of Pre-compact and Compact Sets
       
     </span>
   </a>
@@ -1660,91 +1660,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-completeness" class="md-nav__link">
+  <a href="#2-epsilon-nets-and-totally-bounded-sets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 完备性 (Completeness)
+        2. \(\epsilon\)-Nets and Totally Bounded Sets
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. 完备性 (Completeness)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 经典空间的完备性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-s" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 可测函数空间 \(S\) 的完备性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-s" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 序列空间 \(s\) 的完备性
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-baire" class="md-nav__link">
+  <a href="#3-pre-compactness-and-compactness-in-complete-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 闭球套定理与 Baire 纲定理
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 闭球套定理与 Baire 纲定理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 闭球套定理
+        3. Pre-compactness and Compactness in Complete Spaces
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#42-baire" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-topological-characterization-of-compact-sets-finite-covers-and-finite-intersections" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 第一/第二类型集与 Baire 纲定理
+        4. Topological Characterization of Compact Sets: Finite Covers and Finite Intersections
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#5-continuous-mappings-on-compact-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Continuous Mappings on Compact Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-logical-connections-of-concepts-in-metric-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary: Logical Connections of Concepts in Metric Spaces
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1752,34 +1718,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../3compactness/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第三章：紧性
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1838,7 +1776,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
     
@@ -1854,7 +1792,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -1874,7 +1812,7 @@
   <span class="md-ellipsis">
     
   
-    📖 概览
+    📖 Overview
   
 
     
@@ -1918,7 +1856,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 速查
+    🛠️ Quick Reference
   
 
     
@@ -1934,7 +1872,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -1954,7 +1892,7 @@
   <span class="md-ellipsis">
     
   
-    📊 数理统计
+    📊 Mathematical Statistics
   
 
     
@@ -1982,7 +1920,7 @@
   <span class="md-ellipsis">
     
   
-    🎲 概率论
+    🎲 Probability Theory
   
 
     
@@ -2010,7 +1948,7 @@
   <span class="md-ellipsis">
     
   
-    📏 测度论基础
+    📏 Measure Theory
   
 
     
@@ -2038,7 +1976,7 @@
   <span class="md-ellipsis">
     
   
-    🔢 线性代数
+    🔢 Linear Algebra
   
 
     
@@ -2066,7 +2004,7 @@
   <span class="md-ellipsis">
     
   
-    🌊 随机过程
+    🌊 Stochastic Processes
   
 
     
@@ -2125,7 +2063,7 @@
   <span class="md-ellipsis">
     
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
     
@@ -2141,7 +2079,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
           </label>
@@ -2161,7 +2099,7 @@
   <span class="md-ellipsis">
     
   
-    📝 最新论文
+    📝 Latest Papers
   
 
     
@@ -2212,7 +2150,7 @@
   <span class="md-ellipsis">
     
   
-    🎙️ 讲座与报告
+    🎙️ Lectures & Talks
   
 
     
@@ -2228,7 +2166,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🎙️ 讲座与报告
+    🎙️ Lectures & Talks
   
 
           </label>
@@ -2248,7 +2186,7 @@
   <span class="md-ellipsis">
     
   
-    📖 概览
+    📖 Overview
   
 
     
@@ -2292,7 +2230,7 @@
   <span class="md-ellipsis">
     
   
-    🏛️ 基础理论
+    🏛️ Fundamental Theory
   
 
     
@@ -2308,7 +2246,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🏛️ 基础理论
+    🏛️ Fundamental Theory
   
 
           </label>
@@ -2344,7 +2282,7 @@
   <span class="md-ellipsis">
     
   
-    2025秋季高等概率论讨论班
+    2025 Fall Advanced Probability Seminar
   
 
     
@@ -2360,7 +2298,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    2025秋季高等概率论讨论班
+    2025 Fall Advanced Probability Seminar
   
 
           </label>
@@ -2380,7 +2318,7 @@
   <span class="md-ellipsis">
     
   
-    大偏差原理 (LDP)
+    Large Deviation Principle (LDP)
   
 
     
@@ -2440,7 +2378,7 @@
   <span class="md-ellipsis">
     
   
-    📑 文献研讨
+    📑 Paper Discussions
   
 
     
@@ -2456,7 +2394,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📑 文献研讨
+    📑 Paper Discussions
   
 
           </label>
@@ -2492,7 +2430,7 @@
   <span class="md-ellipsis">
     
   
-    2025秋季组会
+    2025 Fall Group Meetings
   
 
     
@@ -2508,7 +2446,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    2025秋季组会
+    2025 Fall Group Meetings
   
 
           </label>
@@ -2595,7 +2533,7 @@
   <span class="md-ellipsis">
     
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
     
@@ -2611,7 +2549,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ✍️ 随笔
+    ✍️ Blog
   
 
           </label>
@@ -2795,7 +2733,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -2804,43 +2742,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-basic-concepts-of-pre-compact-and-compact-sets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 距离空间中的基本拓扑概念
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 距离空间中的基本拓扑概念">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 开集与闭集
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 稠密性与可分性
+        1. Basic Concepts of Pre-compact and Compact Sets
       
     </span>
   </a>
@@ -2848,91 +2758,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-completeness" class="md-nav__link">
+  <a href="#2-epsilon-nets-and-totally-bounded-sets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 完备性 (Completeness)
+        2. \(\epsilon\)-Nets and Totally Bounded Sets
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. 完备性 (Completeness)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 经典空间的完备性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-s" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 可测函数空间 \(S\) 的完备性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-s" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 序列空间 \(s\) 的完备性
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-baire" class="md-nav__link">
+  <a href="#3-pre-compactness-and-compactness-in-complete-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 闭球套定理与 Baire 纲定理
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 闭球套定理与 Baire 纲定理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 闭球套定理
+        3. Pre-compactness and Compactness in Complete Spaces
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#42-baire" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-topological-characterization-of-compact-sets-finite-covers-and-finite-intersections" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 第一/第二类型集与 Baire 纲定理
+        4. Topological Characterization of Compact Sets: Finite Covers and Finite Intersections
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#5-continuous-mappings-on-compact-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Continuous Mappings on Compact Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-logical-connections-of-concepts-in-metric-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary: Logical Connections of Concepts in Metric Spaces
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2957,252 +2833,314 @@
   
 
 
-<h1 id="_1">第二章：距离空间中的拓扑与完备性</h1>
-<p>在第一章中，我们将“距离”的概念进行了公理化推广。有了距离之后，我们就可以顺理成章地在抽象空间中讨论“远近”和“极限”。本章我们将进一步借用微积分中的直观几何概念，在距离空间中建立起<strong>拓扑结构</strong>（开集、闭集、稠密性），并探讨泛函分析中最为核心的概念之一——<strong>完备性 (Completeness)</strong>。最后，我们将证明著名的 Baire 纲定理，这是研究线性算子理论的基石。</p>
+<h1 id="chapter-3-pre-compact-sets-compact-sets-and-their-topological-properties">Chapter 3: Pre-compact Sets, Compact Sets, and Their Topological Properties</h1>
+<p>In the real number field <span class="arithmatex">\(\mathbb{R}^n\)</span>, completeness has a very intuitive equivalent proposition (the Bolzano-Weierstrass Theorem): <strong>An infinite bounded set has at least one limit point</strong>. However, in a general metric space (even a complete metric space), this property does not necessarily hold. This indicates that the topological structure of general metric spaces is far more complex than that of finite-dimensional Euclidean spaces.</p>
+<p>To recover excellent properties similar to those of "bounded closed intervals" in abstract spaces, we introduce an extremely core concept in functional analysis—<strong>Compactness</strong>.</p>
 <hr />
-<h2 id="1">1. 距离空间中的基本拓扑概念</h2>
-<p>在欧氏空间中，极限和连续的定义都依赖于“邻域”。在一般的距离空间中，邻域通过“球”来定义。</p>
+<h2 id="1-basic-concepts-of-pre-compact-and-compact-sets">1. Basic Concepts of Pre-compact and Compact Sets</h2>
+<p>First, we need to clarify the definition of boundedness in general metric spaces.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 2.1 (球与邻域)</p>
-<p>设 <span class="arithmatex">\((X, \rho)\)</span> 是一距离空间，<span class="arithmatex">\(x_0 \in X\)</span>，<span class="arithmatex">\(r &gt; 0\)</span>。</p>
-<ul>
-<li><strong>开球 (Open Ball)</strong>：集合 <span class="arithmatex">\(\{x \in X \mid \rho(x, x_0) &lt; r\}\)</span> 称为以 <span class="arithmatex">\(x_0\)</span> 为中心，<span class="arithmatex">\(r\)</span> 为半径的开球，记为 <span class="arithmatex">\(S(x_0, r)\)</span>。</li>
-<li><strong>闭球 (Closed Ball)</strong>：集合 <span class="arithmatex">\(\{x \in X \mid \rho(x, x_0) \le r\}\)</span> 称为闭球，记为 <span class="arithmatex">\(\overline{S}(x_0, r)\)</span>。</li>
-</ul>
-<p>以 <span class="arithmatex">\(x_0\)</span> 为中心的开球 <span class="arithmatex">\(S(x_0, r)\)</span> 也称为 <span class="arithmatex">\(x_0\)</span> 的一个<strong>（球形）邻域</strong>。</p>
+<p class="admonition-title">Definition 3.1 (Bounded Set)</p>
+<p>A subset <span class="arithmatex">\(A\)</span> of a metric space <span class="arithmatex">\(X\)</span> is called a <strong>Bounded Set</strong> if <span class="arithmatex">\(A\)</span> is contained within some open or closed ball in <span class="arithmatex">\(X\)</span>.</p>
+<p><em>(Note: Any convergent sequence and any Cauchy sequence in a metric space are bounded.)</em></p>
 </div>
-<h3 id="11">1.1 开集与闭集</h3>
 <div class="admonition info">
-<p class="admonition-title">定义 2.2 (内点与开集)</p>
+<p class="admonition-title">Definition 3.2 (Pre-compact Set and Compact Set)</p>
+<p>Let <span class="arithmatex">\(A\)</span> be a subset of a metric space <span class="arithmatex">\(X\)</span>.</p>
 <ul>
-<li><strong>内点 (Interior Point)</strong>：设 <span class="arithmatex">\(G \subset X\)</span>，<span class="arithmatex">\(x \in G\)</span>。如果存在 <span class="arithmatex">\(x\)</span> 的某个邻域 <span class="arithmatex">\(S(x, r) \subset G\)</span>，则称 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(G\)</span> 的内点。</li>
-<li><strong>开集 (Open Set)</strong>：如果集合 <span class="arithmatex">\(G\)</span> 中的每一个点都是它的内点，则称 <span class="arithmatex">\(G\)</span> 为<strong>开集</strong>。规定空集 <span class="arithmatex">\(\emptyset\)</span> 也是开集。</li>
+<li><strong>Pre-compact Set</strong>: If <strong>every sequence</strong> in <span class="arithmatex">\(A\)</span> contains a subsequence that converges to some point in <span class="arithmatex">\(X\)</span>, then <span class="arithmatex">\(A\)</span> is called a pre-compact set.</li>
+<li><strong>Compact Set</strong>: If <strong>every sequence</strong> in <span class="arithmatex">\(A\)</span> contains a subsequence that converges to some point <strong>in <span class="arithmatex">\(A\)</span></strong>, then <span class="arithmatex">\(A\)</span> is called a compact set.</li>
 </ul>
+<p>If the space <span class="arithmatex">\(X\)</span> itself is a compact set, then <span class="arithmatex">\(X\)</span> is called a compact metric space.</p>
 </div>
-<p>开集具有以下基本性质：
-1. 全空间 <span class="arithmatex">\(X\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span> 都是开集；
-2. 任意多个开集的并集是开集；
-3. <strong>有限多个</strong>开集的交集是开集。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 2.3 (聚点、闭包与闭集)</p>
-<ul>
-<li><strong>聚点 (Limit Point)</strong>：设 <span class="arithmatex">\(A \subset X\)</span>。若对任给的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，邻域 <span class="arithmatex">\(S(x_0, \epsilon)\)</span> 中都含有 <span class="arithmatex">\(A\)</span> 中异于 <span class="arithmatex">\(x_0\)</span> 的点（即 <span class="arithmatex">\(S(x_0, \epsilon) \cap (A \setminus \{x_0\}) \ne \emptyset\)</span>），则称 <span class="arithmatex">\(x_0\)</span> 是 <span class="arithmatex">\(A\)</span> 的聚点。</li>
-<li><strong>孤立点 (Isolated Point)</strong>：若 <span class="arithmatex">\(x_0 \in A\)</span> 但不是聚点，则称为孤立点。</li>
-<li><strong>导集与闭包</strong>：<span class="arithmatex">\(A\)</span> 的全部聚点构成的集合称为导集 <span class="arithmatex">\(A'\)</span>。并集 <span class="arithmatex">\(\overline{A} = A \cup A'\)</span> 称为 <span class="arithmatex">\(A\)</span> 的<strong>闭包 (Closure)</strong>。</li>
-<li><strong>闭集 (Closed Set)</strong>：如果 <span class="arithmatex">\(A = \overline{A}\)</span>（即 <span class="arithmatex">\(A\)</span> 包含其所有聚点），则称 <span class="arithmatex">\(A\)</span> 为<strong>闭集</strong>。</li>
-</ul>
+<p><strong>Basic properties of compact sets:</strong></p>
+<ol>
+<li>
+<p>Any finite set is a compact set;</p>
+</li>
+<li>
+<p>Any subset of a pre-compact set is a pre-compact set;</p>
+</li>
+<li>
+<p>Any closed subset of a compact set is a compact set.</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Counterexample: A bounded closed set is not necessarily pre-compact</p>
+<p>In infinite-dimensional spaces, a bounded set does not necessarily have a convergent subsequence.
+Consider the space <span class="arithmatex">\(L^2[-\pi, \pi]\)</span> and define the sequence of functions:</p>
+<div class="arithmatex">\[
+e_k(t) = \frac{1}{\sqrt{\pi}} \sin(kt), \quad k = 1, 2, \dots
+\]</div>
+<p>This sequence is bounded (the norm of each element is 1). But calculating the squared distance between any two distinct elements:</p>
+<div class="arithmatex">\[
+\rho(e_j, e_k)^2 = \frac{1}{\pi} \int_{-\pi}^{\pi} |\sin(jt) - \sin(kt)|^2 dt
+\]</div>
+<p>Expanding and utilizing the orthogonality of trigonometric functions:</p>
+<div class="arithmatex">\[
+= \frac{1}{\pi} \int_{-\pi}^{\pi} (\sin^2(jt) - 2\sin(jt)\sin(kt) + \sin^2(kt)) dt = 1 - 0 + 1 = 2
+\]</div>
+<p>Therefore, when <span class="arithmatex">\(j \ne k\)</span>, <span class="arithmatex">\(\rho(e_j, e_k) = \sqrt{2}\)</span>.
+This shows that the distance between any two points in the sequence is exactly <span class="arithmatex">\(\sqrt{2}\)</span>. It is absolutely impossible for a Cauchy subsequence to exist, and naturally, no convergent subsequence can exist. Thus, this bounded sequence is not a pre-compact set.</p>
 </div>
-<p>开集与闭集是对偶的概念：<strong>集合 <span class="arithmatex">\(A\)</span> 是闭集，当且仅当其补集 <span class="arithmatex">\(A^c\)</span> 是开集。</strong> 闭集满足：任意多个闭集的交集是闭集；有限多个闭集的并集是闭集。</p>
 <hr />
-<h2 id="2">2. 稠密性与可分性</h2>
-<p>在分析学中，我们经常用一个简单的集合去“逼近”一个复杂的集合（比如用有理数逼近实数，用多项式逼近连续函数），这就引出了稠密性的概念。</p>
+<h2 id="2-epsilon-nets-and-totally-bounded-sets">2. <span class="arithmatex">\(\epsilon\)</span>-Nets and Totally Bounded Sets</h2>
+<p>To characterize pre-compactness more precisely, we introduce the concept of a "net", which is equivalent to using a finite number of points to "cover" the entire set.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 2.4 (稠密性 Dense)</p>
-<p>设 <span class="arithmatex">\(A, B \subset X\)</span>。如果 <span class="arithmatex">\(\overline{B} \supset A\)</span>，则称 <strong><span class="arithmatex">\(B\)</span> 在 <span class="arithmatex">\(A\)</span> 中稠密</strong>。</p>
-<p>稠密性有以下几个等价命题：
-(i) 对于任给的 <span class="arithmatex">\(x \in A\)</span> 及 <span class="arithmatex">\(r &gt; 0\)</span>，存在 <span class="arithmatex">\(B\)</span> 中的点 <span class="arithmatex">\(y\)</span> 使得 <span class="arithmatex">\(\rho(x, y) &lt; r\)</span>。
-(ii) 对于任给的 <span class="arithmatex">\(r &gt; 0\)</span>，以 <span class="arithmatex">\(B\)</span> 中每个点为中心、<span class="arithmatex">\(r\)</span> 为半径的所有开球的并集包含 <span class="arithmatex">\(A\)</span>。
-(iii) 对于任给的 <span class="arithmatex">\(x \in A\)</span>，必定存在 <span class="arithmatex">\(B\)</span> 中的点列 <span class="arithmatex">\(\{x_n\}\)</span> 使得 <span class="arithmatex">\(x_n \rightarrow x\)</span>。</p>
+<p class="admonition-title">Definition 3.3 (<span class="arithmatex">\(\epsilon\)</span>-Net)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a metric space, <span class="arithmatex">\(A, B \subset X\)</span>. Let <span class="arithmatex">\(\epsilon &gt; 0\)</span> be a given positive number.
+If for any point <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(A\)</span>, there exists a point <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(B\)</span> such that <span class="arithmatex">\(\rho(x, y) &lt; \epsilon\)</span>, then <span class="arithmatex">\(B\)</span> is called an <strong><span class="arithmatex">\(\epsilon\)</span>-net</strong> of <span class="arithmatex">\(A\)</span>.</p>
+<p><em>(In other words, the union of open balls centered at all points in <span class="arithmatex">\(B\)</span> with radius <span class="arithmatex">\(\epsilon\)</span> contains <span class="arithmatex">\(A\)</span>. Note: <span class="arithmatex">\(B\)</span> does not necessarily need to be contained in <span class="arithmatex">\(A\)</span>.)</em></p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">定义 2.5 (可分空间 Separable Space)</p>
-<p>如果距离空间 <span class="arithmatex">\(X\)</span> 中存在一个<strong>至多可列（Countable）</strong>且在 <span class="arithmatex">\(X\)</span> 中<strong>稠密</strong>的子集，则称 <span class="arithmatex">\(X\)</span> 是<strong>可分的</strong>。</p>
-</div>
-<ul>
-<li><strong>实例 1：</strong> 实数域 <span class="arithmatex">\(\mathbb{R}\)</span> 是可分的，因为有理数集 <span class="arithmatex">\(\mathbb{Q}\)</span> 是可列且稠密的。</li>
-<li><strong>实例 2：</strong> 连续函数空间 <span class="arithmatex">\(C[a,b]\)</span> 是可分的。由 Weierstrass 逼近定理，有理系数多项式集合在 <span class="arithmatex">\(C[a,b]\)</span> 中稠密，且该集合是可列的。</li>
-</ul>
-<p>并非所有空间都是可分的。泛函分析中一个经典的不可分空间是本性有界函数空间 <span class="arithmatex">\(L^\infty[a,b]\)</span>。</p>
-<details class="proof">
-<summary>证明：<span class="arithmatex">\(L^\infty[a,b]\)</span> 是不可分的距离空间</summary>
-<p>我们采用反证法。
-考虑区间 <span class="arithmatex">\([a,b]\)</span>，对于任意 <span class="arithmatex">\(s \in (a, b]\)</span>，定义特征函数 <span class="arithmatex">\(f_s = \chi_{[a, s]}\)</span>。
-显然，当 <span class="arithmatex">\(s \ne s'\)</span> 时，这两个函数在一个测度大于 0 的区间上取值不同（一个为 1，一个为 0），因此在 <span class="arithmatex">\(L^\infty[a,b]\)</span> 中的本性上确界距离为：</p>
-<div class="arithmatex">\[
-\rho(f_s, f_{s'}) = 1 \quad (s \ne s')
-\]</div>
-<p>所有这样的函数构成的集合记为 <span class="arithmatex">\(A = \{f_s \mid s \in (a,b]\}\)</span>。由于实数区间不可数，集合 <span class="arithmatex">\(A\)</span> 也是<strong>不可数</strong>的。</p>
-<p>假设 <span class="arithmatex">\(L^\infty[a,b]\)</span> 是可分的，那么它存在一个可列的稠密子集 <span class="arithmatex">\(M_0 = \{g_1, g_2, \dots\}\)</span>。
-以 <span class="arithmatex">\(M_0\)</span> 中的每个元素 <span class="arithmatex">\(g_n\)</span> 为中心，以 <span class="arithmatex">\(1/3\)</span> 为半径作开球 <span class="arithmatex">\(S(g_n, 1/3)\)</span>。由于 <span class="arithmatex">\(M_0\)</span> 稠密，这些开球的并集覆盖了整个 <span class="arithmatex">\(L^\infty[a,b]\)</span>，自然也覆盖了集合 <span class="arithmatex">\(A\)</span>。</p>
-<p>因为开球族 <span class="arithmatex">\(\{S(g_n, 1/3)\}\)</span> 只有可列个，而 <span class="arithmatex">\(A\)</span> 有不可列个元素。由抽屉原理，必然存在至少一个开球中包含了 <span class="arithmatex">\(A\)</span> 中的两个不同元素，设为 <span class="arithmatex">\(f_s\)</span> 和 <span class="arithmatex">\(f_{s'}\)</span>。
-由三角不等式：</p>
-<div class="arithmatex">\[
-\rho(f_s, f_{s'}) \le \rho(f_s, g_n) + \rho(g_n, f_{s'}) &lt; \frac{1}{3} + \frac{1}{3} = \frac{2}{3}
-\]</div>
-<p>这与前面得出的 <span class="arithmatex">\(\rho(f_s, f_{s'}) = 1\)</span> 相矛盾！
-因此，<span class="arithmatex">\(L^\infty[a,b]\)</span> 必定是不可分的。 <span class="arithmatex">\(\square\)</span></p>
-</details>
-<hr />
-<h2 id="3-completeness">3. 完备性 (Completeness)</h2>
-<p>极限的存在性是微积分的核心。但在实际计算中，我们往往只能判断一个序列是否越来越“靠近”彼此，却不知道那个“极限点”存不存在于当前空间中。这就是 Cauchy 列引入的动机。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 2.6 (基本点列 / Cauchy 列)</p>
-<p>距离空间 <span class="arithmatex">\(X\)</span> 中的点列 <span class="arithmatex">\(\{x_n\}\)</span> 称为<strong>基本点列（或柯西列）</strong>，若对任给的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，使得当 <span class="arithmatex">\(m, n &gt; N\)</span> 时，有：</p>
-<div class="arithmatex">\[
-\rho(x_n, x_m) &lt; \epsilon
-\]</div>
-</div>
-<p>易知，<strong>任何收敛点列必是基本点列</strong>（由三角不等式即得）。但反过来，基本点列是否一定收敛，取决于空间本身是否有“漏洞”。例如，有理数集 <span class="arithmatex">\(\mathbb{Q}\)</span> 中的基本点列可能收敛于无理数（如 <span class="arithmatex">\(\sqrt{2}\)</span>），此时极限不在 <span class="arithmatex">\(\mathbb{Q}\)</span> 中。</p>
 <div class="admonition success">
-<p class="admonition-title">定义 2.7 (完备距离空间 Complete Metric Space)</p>
-<p>如果距离空间 <span class="arithmatex">\(X\)</span> 中的<strong>任一基本点列</strong>都必定收敛于 <span class="arithmatex">\(X\)</span> 中的某一点，则称 <span class="arithmatex">\(X\)</span> 是<strong>完备的距离空间</strong>。</p>
+<p class="admonition-title">Definition 3.4 (Totally Bounded Set)</p>
+<p>Let <span class="arithmatex">\(A\)</span> be a subset of a metric space <span class="arithmatex">\(X\)</span>. If for any given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there always exists a <strong>finite <span class="arithmatex">\(\epsilon\)</span>-net</strong> for <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(A\)</span> is called a <strong>totally bounded set</strong>.</p>
 </div>
-<h3 id="31">3.1 经典空间的完备性</h3>
-<p>欧氏空间 <span class="arithmatex">\(\mathbb{R}^n\)</span> 是完备的。泛函分析中，我们更关心函数空间的完备性。</p>
+<p>Totally bounded sets have the following intuitive properties:</p>
+<ul>
+<li>
+<p>Any finite set is totally bounded;</p>
+</li>
+<li>
+<p>A subset of a totally bounded set is also totally bounded;</p>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(A\)</span> be a totally bounded set. For any given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, we can always take a <strong>finite subset of <span class="arithmatex">\(A\)</span> itself</strong> as an <span class="arithmatex">\(\epsilon\)</span>-net of <span class="arithmatex">\(A\)</span>.</p>
+</li>
+</ul>
 <details class="proof">
-<summary>证明：连续函数空间 <span class="arithmatex">\(C[a,b]\)</span> 是完备的</summary>
-<p>设 <span class="arithmatex">\(\{x_n\}\)</span> 是 <span class="arithmatex">\(C[a,b]\)</span> 中的基本点列。即对任给 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N\)</span>，当 <span class="arithmatex">\(m, n &gt; N\)</span> 时，对所有 <span class="arithmatex">\(t \in [a,b]\)</span> 恒有：</p>
+<summary>Proof: The net of a totally bounded set can be taken from within itself</summary>
+<p>Since <span class="arithmatex">\(A\)</span> is totally bounded, for a given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there exists a finite <span class="arithmatex">\(\epsilon/2\)</span>-net <span class="arithmatex">\(\{x_1, \dots, x_{n_0}\}\)</span> in <span class="arithmatex">\(X\)</span>.
+Without loss of generality, assume that for each <span class="arithmatex">\(k\)</span>, the ball intersects <span class="arithmatex">\(A\)</span> (if there is no intersection, the ball can simply be discarded):</p>
 <div class="arithmatex">\[
-|x_n(t) - x_m(t)| \le \max_{t \in [a,b]} |x_n(t) - x_m(t)| = \rho(x_n, x_m) &lt; \epsilon
+A \cap S\left(x_k, \frac{\epsilon}{2}\right) \ne \emptyset
 \]</div>
-<p>这说明对于区间上的每一个固定的点 <span class="arithmatex">\(t_0\)</span>，实数列 <span class="arithmatex">\(\{x_n(t_0)\}\)</span> 都是实数域 <span class="arithmatex">\(\mathbb{R}\)</span> 上的 Cauchy 列。由实数的完备性，点列必定收敛于某个实数，记为 <span class="arithmatex">\(x(t_0)\)</span>。令 <span class="arithmatex">\(t\)</span> 遍历 <span class="arithmatex">\([a,b]\)</span>，我们就得到了一个极限函数 <span class="arithmatex">\(x(t)\)</span>。</p>
-<p>接下来需要证明两点：(1) <span class="arithmatex">\(x_n \to x\)</span> 是在距离 <span class="arithmatex">\(\rho\)</span> 下收敛（即一致收敛）；(2) 极限函数 <span class="arithmatex">\(x(t) \in C[a,b]\)</span>。</p>
-<p><strong>(1) 一致收敛性</strong>：
-在 <span class="arithmatex">\(|x_n(t) - x_m(t)| &lt; \epsilon\)</span> 中，令 <span class="arithmatex">\(m \rightarrow \infty\)</span>。由于模函数连续，我们得到当 <span class="arithmatex">\(n &gt; N\)</span> 时，对一切 <span class="arithmatex">\(t \in [a,b]\)</span> 都有：</p>
-<div class="arithmatex">\[
-|x_n(t) - x(t)| \le \epsilon
-\]</div>
-<p>即 <span class="arithmatex">\(\rho(x_n, x) \le \epsilon\)</span>，这意味着函数列 <span class="arithmatex">\(\{x_n(t)\}\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上一致收敛于 <span class="arithmatex">\(x(t)\)</span>。</p>
-<p><strong>(2) 极限函数的连续性</strong>：
-由数学分析中的经典定理，连续函数列的一致极限必然是连续函数。因此 <span class="arithmatex">\(x(t)\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，即 <span class="arithmatex">\(x \in C[a,b]\)</span>。</p>
-<p>综上所述，基本点列 <span class="arithmatex">\(\{x_n\}\)</span> 在 <span class="arithmatex">\(C[a,b]\)</span> 中收敛于 <span class="arithmatex">\(x \in C[a,b]\)</span>，因此 <span class="arithmatex">\(C[a,b]\)</span> 是完备的。 <span class="arithmatex">\(\square\)</span></p>
+<p>We arbitrarily pick a point <span class="arithmatex">\(y_k \in A \cap S(x_k, \epsilon/2)\)</span> from each intersection.
+By the triangle inequality, this finite set of points <span class="arithmatex">\(\{y_1, \dots, y_{n_0}\} \subset A\)</span> serves as a finite <span class="arithmatex">\(\epsilon\)</span>-net for <span class="arithmatex">\(A\)</span>. <span class="arithmatex">\(\square\)</span></p>
 </details>
-<h3 id="32-s">3.2 可测函数空间 <span class="arithmatex">\(S\)</span> 的完备性</h3>
-<p>空间 <span class="arithmatex">\(S\)</span> 由可测集 <span class="arithmatex">\(E\)</span>（假设测度 <span class="arithmatex">\(m(E) &lt; \infty\)</span>）上所有几乎处处有限的 Lebesgue 可测函数构成。其距离定义为：</p>
-<div class="arithmatex">\[
-\rho(x, y) = \int_E \frac{|x(t) - y(t)|}{1 + |x(t) - y(t)|} dt
-\]</div>
-<p>通过测度论中的经典放缩方法可知，在这种距离下，点列的收敛等价于<strong>依测度收敛 (Convergence in Measure)</strong>。</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.1</p>
+<p>A totally bounded set must be bounded and separable.</p>
+</div>
 <details class="proof">
-<summary>证明：可测函数空间 <span class="arithmatex">\(S\)</span> 的完备性（点击展开）</summary>
-<p><strong>Step 1: 转化为依测度收敛的 Cauchy 列</strong>
-设 <span class="arithmatex">\(\{x_n\}\)</span> 为 <span class="arithmatex">\(S\)</span> 中的 Cauchy 列。即对任给 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，当 <span class="arithmatex">\(n, m \to \infty\)</span> 时，<span class="arithmatex">\(\rho(x_n, x_m) \to 0\)</span>。
-由于该积分距离下的收敛与依测度收敛等价，因此 <span class="arithmatex">\(\{x_n\}\)</span> 也是一个<strong>依测度 Cauchy 列</strong>。即对于任意给定的 <span class="arithmatex">\(\sigma &gt; 0\)</span>：</p>
+<summary>Proof of Theorem 3.1 (Click to expand)</summary>
+<p><strong>1. Proof of boundedness:</strong>
+Suppose <span class="arithmatex">\(A \subset X\)</span> is totally bounded. Thus, <span class="arithmatex">\(A\)</span> has a finite 1-net <span class="arithmatex">\(B_1 = \{x_1, \dots, x_{n_0}\}\)</span>.
+For any given <span class="arithmatex">\(x \in A\)</span>, there exists <span class="arithmatex">\(x_k \in B_1\)</span> such that <span class="arithmatex">\(\rho(x, x_k) &lt; 1\)</span>. By the triangle inequality, for a fixed point <span class="arithmatex">\(x_{n_0}\)</span>:</p>
 <div class="arithmatex">\[
-m(\{t \in E \mid |x_n(t) - x_m(t)| \ge \sigma\}) \to 0 \quad (n, m \to \infty)
+\rho(x, x_{n_0}) \le \rho(x, x_k) + \rho(x_k, x_{n_0}) \le 1 + \max_{1 \le k \le n_0} \rho(x_k, x_{n_0}) &lt; \infty
 \]</div>
-<p><strong>Step 2: 利用 Riesz 定理提取几乎处处收敛的子列</strong>
-根据实变函数中的 <strong>Riesz 定理</strong>（依测度的 Cauchy 列必定存在几乎处处收敛的子列），我们可以从 <span class="arithmatex">\(\{x_n\}\)</span> 中提取出一个子列 <span class="arithmatex">\(\{x_{n_k}\}\)</span>，使得它在 <span class="arithmatex">\(E\)</span> 上几乎处处收敛于某个可测函数 <span class="arithmatex">\(x(t)\)</span>。
-即当 <span class="arithmatex">\(k \to \infty\)</span> 时，<span class="arithmatex">\(x_{n_k}(t) \to x(t)\)</span> a.e. 
-显然，由可测函数的封闭性，极限函数 <span class="arithmatex">\(x \in S\)</span>。</p>
-<p><strong>Step 3: 利用 Lebesgue 控制收敛定理 (LDCT) 证明子列按距离收敛</strong>
-考察距离定义式中的被积函数：</p>
-<div class="arithmatex">\[
-f_k(t) = \frac{|x_{n_k}(t) - x(t)|}{1 + |x_{n_k}(t) - x(t)|}
-\]</div>
-<p>由于 <span class="arithmatex">\(x_{n_k}(t) \to x(t)\)</span> a.e.，故 <span class="arithmatex">\(f_k(t) \to 0\)</span> a.e.。
-同时，注意到对于所有的 <span class="arithmatex">\(t\)</span> 都有 <span class="arithmatex">\(|f_k(t)| \le 1\)</span>，而常数函数 <span class="arithmatex">\(1\)</span> 在有限测度集 <span class="arithmatex">\(E\)</span> 上是 Lebesgue 可积的。
-根据 <strong>Lebesgue 控制收敛定理 (LDCT)</strong>，积分和极限可以交换次序：</p>
-<div class="arithmatex">\[
-\lim_{k \to \infty} \rho(x_{n_k}, x) = \lim_{k \to \infty} \int_E f_k(t) dt = \int_E \lim_{k \to \infty} f_k(t) dt = \int_E 0 \, dt = 0
-\]</div>
-<p>这说明子列 <span class="arithmatex">\(\{x_{n_k}\}\)</span> 在距离 <span class="arithmatex">\(\rho\)</span> 意义下收敛于 <span class="arithmatex">\(x\)</span>。</p>
-<p><strong>Step 4: 证明原 Cauchy 列也收敛于该极限</strong>
-已知 <span class="arithmatex">\(\{x_n\}\)</span> 是距离空间中的 Cauchy 列，且它有一个子列收敛于 <span class="arithmatex">\(x\)</span>。
-利用三角不等式：</p>
-<div class="arithmatex">\[
-\rho(x_n, x) \le \rho(x_n, x_{n_k}) + \rho(x_{n_k}, x)
-\]</div>
-<p>对于任给的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>：
-第一项：由于 <span class="arithmatex">\(\{x_n\}\)</span> 是 Cauchy 列，当 <span class="arithmatex">\(n, n_k\)</span> 足够大时，<span class="arithmatex">\(\rho(x_n, x_{n_k}) &lt; \epsilon/2\)</span>；
-第二项：由于子列收敛，当 <span class="arithmatex">\(k\)</span> 足够大时，<span class="arithmatex">\(\rho(x_{n_k}, x) &lt; \epsilon/2\)</span>。</p>
-<p>因此，当 <span class="arithmatex">\(n \to \infty\)</span> 时，<span class="arithmatex">\(\rho(x_n, x) \to 0\)</span>。即原序列 <span class="arithmatex">\(\{x_n\}\)</span> 也在 <span class="arithmatex">\(S\)</span> 空间中按距离收敛于极限函数 <span class="arithmatex">\(x\)</span>。
-至此，证明了空间 <span class="arithmatex">\(S\)</span> 满足 Cauchy 列必收敛的条件，因而是完备的。 <span class="arithmatex">\(\square\)</span></p>
-</details>
-<h3 id="33-s">3.3 序列空间 <span class="arithmatex">\(s\)</span> 的完备性</h3>
-<p>空间 <span class="arithmatex">\(s\)</span> 由所有数列构成，距离定义为 <span class="arithmatex">\(\rho(x, y) = \sum_{i=1}^\infty \frac{1}{2^i} \frac{|\xi_i - \eta_i|}{1 + |\xi_i - \eta_i|}\)</span>。</p>
-<details class="proof">
-<summary>证明：空间 <span class="arithmatex">\(s\)</span> 的完备性（点击展开）</summary>
-<p><strong>Step 1: 逐项收敛性</strong>
-设 <span class="arithmatex">\(\{x_n\}\)</span> 为 <span class="arithmatex">\(s\)</span> 中的 Cauchy 列。对于固定的 <span class="arithmatex">\(k\)</span>，当 <span class="arithmatex">\(\rho(x_n, x_m) \to 0\)</span> 时：</p>
-<div class="arithmatex">\[
-\frac{1}{2^k} \frac{|\xi_k^{(n)} - \xi_k^{(m)}|}{1 + |\xi_k^{(n)} - \xi_k^{(m)}|} \le \rho(x_n, x_m) &lt; \epsilon
-\]</div>
-<p>由此推导出 <span class="arithmatex">\(|\xi_k^{(n)} - \xi_k^{(m)}| \to 0\)</span>，故对每个 <span class="arithmatex">\(k\)</span> 存在 <span class="arithmatex">\(\xi_k^{(n)} \to \xi_k\)</span>。记 <span class="arithmatex">\(x = (\xi_1, \xi_2, \dots)\)</span>。</p>
-<p><strong>Step 2: 证明距离收敛</strong>
-任给 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，选取足够大的 <span class="arithmatex">\(K\)</span> 使得 <span class="arithmatex">\(\sum_{i=K+1}^\infty \frac{1}{2^i} &lt; \frac{\epsilon}{2}\)</span>。
-对于前 <span class="arithmatex">\(K\)</span> 项，由于 <span class="arithmatex">\(\xi_i^{(n)} \to \xi_i\)</span>，存在 <span class="arithmatex">\(N\)</span> 使得当 <span class="arithmatex">\(n &gt; N\)</span> 时：</p>
-<div class="arithmatex">\[
-\sum_{i=1}^K \frac{1}{2^i} \frac{|\xi_i^{(n)} - \xi_i|}{1 + |\xi_i^{(n)} - \xi_i|} &lt; \frac{\epsilon}{2}
-\]</div>
-<p>于是当 <span class="arithmatex">\(n &gt; N\)</span> 时：</p>
-<div class="arithmatex">\[
-\rho(x_n, x) = \sum_{i=1}^K (\dots) + \sum_{i=K+1}^\infty (\dots) &lt; \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
-\]</div>
-<p>故 <span class="arithmatex">\(x_n \to x\)</span>。注意 <span class="arithmatex">\(s\)</span> 包含所有数列，故 <span class="arithmatex">\(x\)</span> 必然在 <span class="arithmatex">\(s\)</span> 内。 <span class="arithmatex">\(\square\)</span></p>
+<p>Since the right side is the maximum of a finite number of constants, it shows that <span class="arithmatex">\(A\)</span> is contained within a ball of finite radius, hence <span class="arithmatex">\(A\)</span> is bounded.</p>
+<p><strong>2. Proof of separability:</strong>
+For each natural number <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(A\)</span> has a finite <span class="arithmatex">\(1/n\)</span>-net, denoted as <span class="arithmatex">\(B_n \subset A\)</span>.
+Let <span class="arithmatex">\(B = \bigcup_{n=1}^\infty B_n\)</span>. Since the union of countably many finite sets is still an at most countable set, <span class="arithmatex">\(B\)</span> is a countable set.
+For any <span class="arithmatex">\(x \in A\)</span> and any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, choose <span class="arithmatex">\(k\)</span> such that <span class="arithmatex">\(1/k &lt; \epsilon\)</span>. Since <span class="arithmatex">\(B_k\)</span> is a <span class="arithmatex">\(1/k\)</span>-net, there must exist <span class="arithmatex">\(x_k \in B_k \subset B\)</span> such that <span class="arithmatex">\(\rho(x, x_k) &lt; 1/k &lt; \epsilon\)</span>. This shows that <span class="arithmatex">\(B\)</span> is dense in <span class="arithmatex">\(A\)</span>, hence <span class="arithmatex">\(A\)</span> is separable. <span class="arithmatex">\(\square\)</span></p>
 </details>
 <hr />
-<h2 id="4-baire">4. 闭球套定理与 Baire 纲定理</h2>
-<p>这是完备距离空间中最深刻且最具应用价值的拓扑性质，它将实数域上的“区间套定理”完美推广到了无穷维抽象空间。</p>
-<h3 id="41">4.1 闭球套定理</h3>
+<h2 id="3-pre-compactness-and-compactness-in-complete-spaces">3. Pre-compactness and Compactness in Complete Spaces</h2>
+<p>Pre-compactness and total boundedness have a one-way implication in general metric spaces, but they are entirely equivalent in complete spaces.</p>
 <div class="admonition success">
-<p class="admonition-title">定理 2.1 (闭球套定理 Nested Closed Sphere Theorem)</p>
-<p>设 <span class="arithmatex">\(X\)</span> 是完备距离空间。<span class="arithmatex">\(K_n = \overline{S}(x_n, r_n)\)</span> 是 <span class="arithmatex">\(X\)</span> 中的一列闭球，满足层层嵌套：</p>
+<p class="admonition-title">Theorem 3.2 (Equivalence of Pre-compactness and Total Boundedness)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a metric space.
+1. If <span class="arithmatex">\(A \subset X\)</span> is pre-compact, then <span class="arithmatex">\(A\)</span> is totally bounded.
+2. If <span class="arithmatex">\(X\)</span> is a <strong>complete</strong> metric space, then when <span class="arithmatex">\(A\)</span> is totally bounded, <span class="arithmatex">\(A\)</span> must be pre-compact.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 3.2 (Click to expand)</summary>
+<p><strong>(1) Pre-compact <span class="arithmatex">\(\implies\)</span> Totally bounded (Proof by contradiction):</strong>
+Assume <span class="arithmatex">\(A\)</span> is pre-compact but not totally bounded. Then there must exist some <span class="arithmatex">\(\epsilon_0 &gt; 0\)</span> such that <span class="arithmatex">\(A\)</span> does not have a finite <span class="arithmatex">\(\epsilon_0\)</span>-net.
+Arbitrarily pick <span class="arithmatex">\(x_1 \in A\)</span>; since <span class="arithmatex">\(\{x_1\}\)</span> cannot be an <span class="arithmatex">\(\epsilon_0\)</span>-net, there must exist <span class="arithmatex">\(x_2 \in A\)</span> such that <span class="arithmatex">\(\rho(x_1, x_2) &gt; \epsilon_0\)</span>.
+Similarly, <span class="arithmatex">\(\{x_1, x_2\}\)</span> is not an <span class="arithmatex">\(\epsilon_0\)</span>-net, so there must exist <span class="arithmatex">\(x_3 \in A\)</span> such that <span class="arithmatex">\(\rho(x_3, x_j) &gt; \epsilon_0\)</span> for <span class="arithmatex">\(j=1,2\)</span>.
+Continuing this process infinitely, we construct a sequence <span class="arithmatex">\(\{x_n\} \subset A\)</span> satisfying, for any <span class="arithmatex">\(m \ne n\)</span>:</p>
+<div class="arithmatex">\[
+\rho(x_m, x_n) &gt; \epsilon_0
+\]</div>
+<p>Obviously, this sequence does not have any Cauchy subsequence, and naturally no convergent subsequence, which contradicts the pre-compactness of <span class="arithmatex">\(A\)</span>! Thus, <span class="arithmatex">\(A\)</span> is totally bounded.</p>
+<p><strong>(2) In a complete space, Totally bounded <span class="arithmatex">\(\implies\)</span> Pre-compact:</strong>
+Suppose <span class="arithmatex">\(X\)</span> is complete and <span class="arithmatex">\(A\)</span> is totally bounded. Take any sequence <span class="arithmatex">\(\{x_n\}\)</span> in <span class="arithmatex">\(A\)</span>; we want to extract a convergent subsequence from it.
+(If the sequence has only finitely many distinct points, then it must have a constant convergent subsequence; thus, we assume there are infinitely many distinct points, denoted as set <span class="arithmatex">\(B_0\)</span>).</p>
+<p>Because <span class="arithmatex">\(A\)</span> is totally bounded, its subset <span class="arithmatex">\(B_0\)</span> is also totally bounded. Cover <span class="arithmatex">\(B_0\)</span> with a finite number of open balls of radius <span class="arithmatex">\(1/2\)</span>. By the Pigeonhole Principle, at least one ball contains infinitely many elements of <span class="arithmatex">\(B_0\)</span>. Denote the set formed by these elements as <span class="arithmatex">\(B_1\)</span>. Clearly, the diameter of <span class="arithmatex">\(B_1\)</span> does not exceed 1.
+Next, for the totally bounded set <span class="arithmatex">\(B_1\)</span>, cover it with a finite number of open balls of radius <span class="arithmatex">\(1/4\)</span>, and again we can select a subset <span class="arithmatex">\(B_2\)</span> containing infinitely many elements, whose diameter does not exceed <span class="arithmatex">\(1/2\)</span>.
+Continuing this process, we obtain a series of nested sets:</p>
+<div class="arithmatex">\[
+B_1 \supseteq B_2 \supseteq \dots \supseteq B_k \supseteq \dots
+\]</div>
+<p>Satisfying that each <span class="arithmatex">\(B_k\)</span> contains infinitely many points from the sequence, and <span class="arithmatex">\(\text{diam}(B_k) \le 1/2^{k-1}\)</span>.
+Now construct the subsequence: take <span class="arithmatex">\(x_{n_1} \in B_1\)</span>; pick <span class="arithmatex">\(x_{n_2}\)</span> with a larger index (<span class="arithmatex">\(n_2 &gt; n_1\)</span>) from <span class="arithmatex">\(B_2\)</span>; and so on, taking <span class="arithmatex">\(x_{n_k} \in B_k\)</span> (<span class="arithmatex">\(n_k &gt; n_{k-1}\)</span>).
+For any <span class="arithmatex">\(m &gt; k\)</span>, since <span class="arithmatex">\(x_{n_m}, x_{n_k} \in B_k\)</span>, we have:</p>
+<div class="arithmatex">\[
+\rho(x_{n_k}, x_{n_m}) \le \frac{1}{2^{k-1}} \xrightarrow{k \to \infty} 0
+\]</div>
+<p>This indicates that the extracted subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> is a Cauchy sequence. Because the space <span class="arithmatex">\(X\)</span> is <strong>complete</strong>, this Cauchy sequence must converge in <span class="arithmatex">\(X\)</span>. Therefore, <span class="arithmatex">\(A\)</span> is pre-compact. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p><strong>Corollaries:</strong></p>
+<ul>
+<li>
+<p>A compact set must be <strong>bounded and separable</strong>.</p>
+</li>
+<li>
+<p>In a complete metric space, <span class="arithmatex">\(A\)</span> is pre-compact <span class="arithmatex">\(\iff\)</span> for any given <span class="arithmatex">\(\epsilon&gt;0\)</span>, <span class="arithmatex">\(A\)</span> has a pre-compact <span class="arithmatex">\(\epsilon\)</span>-net.</p>
+</li>
+<li>
+<p><strong>A compact set in a metric space is itself a complete metric space</strong> (because its Cauchy sequences must have convergent subsequences, and the limits are within the set itself, thus they must converge).</p>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3 (Nested Compact Set Theorem)</p>
+<p>Let <span class="arithmatex">\(K_n\)</span> be a sequence of <strong>non-empty compact sets</strong> in a metric space <span class="arithmatex">\(X\)</span>, satisfying the nested relationship:</p>
 <div class="arithmatex">\[
 K_1 \supseteq K_2 \supseteq \cdots \supseteq K_n \supseteq \cdots
 \]</div>
-<p>如果闭球的半径 <span class="arithmatex">\(r_n \rightarrow 0\)</span> (<span class="arithmatex">\(n \to \infty\)</span>)，则在 <span class="arithmatex">\(X\)</span> 中<strong>存在唯一</strong>的一点 <span class="arithmatex">\(x_0\)</span>，它属于所有的闭球，即 <span class="arithmatex">\(\bigcap_{n=1}^\infty K_n = \{x_0\}\)</span>。</p>
+<p>Then their intersection <span class="arithmatex">\(\bigcap_{n=1}^\infty K_n\)</span> is non-empty.</p>
 </div>
 <details class="proof">
-<summary>闭球套定理的证明（点击展开）</summary>
-<p><strong>1. 存在性：</strong></p>
-<p>考察闭球的中心构成的点列 <span class="arithmatex">\(\{x_n\}\)</span>。
-设 <span class="arithmatex">\(m &gt; n\)</span>，由于嵌套关系 <span class="arithmatex">\(K_m \subseteq K_n\)</span>，这说明第 <span class="arithmatex">\(m\)</span> 个球的中心 <span class="arithmatex">\(x_m\)</span> 必定在第 <span class="arithmatex">\(n\)</span> 个球 <span class="arithmatex">\(K_n\)</span> 内部。因此：</p>
-<div class="arithmatex">\[
-\rho(x_n, x_m) \le r_n
-\]</div>
-<p>已知当 <span class="arithmatex">\(n \rightarrow \infty\)</span> 时 <span class="arithmatex">\(r_n \rightarrow 0\)</span>。这表明点列 <span class="arithmatex">\(\{x_n\}\)</span> 是一个基本点列 (Cauchy 列)。
-因为空间 <span class="arithmatex">\(X\)</span> 是<strong>完备的</strong>，所以 <span class="arithmatex">\(\{x_n\}\)</span> 必然收敛于 <span class="arithmatex">\(X\)</span> 中的某一点 <span class="arithmatex">\(x_0\)</span>。</p>
-<p>接下来证明 <span class="arithmatex">\(x_0 \in K_n\)</span> 对于所有 <span class="arithmatex">\(n\)</span> 成立。
-任取一个固定的整数 <span class="arithmatex">\(n_0\)</span>。当 <span class="arithmatex">\(n \ge n_0\)</span> 时，所有的 <span class="arithmatex">\(x_n\)</span> 都包含在闭球 <span class="arithmatex">\(K_{n_0}\)</span> 中。由于 <span class="arithmatex">\(K_{n_0}\)</span> 是一个闭集，其包含的点列的极限也必包含于其中，故 <span class="arithmatex">\(x_0 \in K_{n_0}\)</span>。由 <span class="arithmatex">\(n_0\)</span> 的任意性，可知 <span class="arithmatex">\(x_0 \in \bigcap_{n=1}^\infty K_n\)</span>。</p>
-<p><strong>2. 唯一性：</strong></p>
-<p>假设存在另一个点 <span class="arithmatex">\(y_0 \ne x_0\)</span> 也属于所有的闭球。由三角不等式，对任意的 <span class="arithmatex">\(n\)</span>：</p>
-<div class="arithmatex">\[
-\rho(x_0, y_0) \le \rho(x_0, x_n) + \rho(x_n, y_0) \le r_n + r_n = 2r_n
-\]</div>
-<p>令 <span class="arithmatex">\(n \rightarrow \infty\)</span>，右端趋于 0，得到 <span class="arithmatex">\(\rho(x_0, y_0) = 0\)</span>，即 <span class="arithmatex">\(x_0 = y_0\)</span>。矛盾。故交点唯一。 <span class="arithmatex">\(\square\)</span></p>
+<summary>Proof of the Nested Compact Set Theorem</summary>
+<p>Arbitrarily pick a point <span class="arithmatex">\(x_n\)</span> from each compact set <span class="arithmatex">\(K_n\)</span> to form the sequence <span class="arithmatex">\(\{x_n\}\)</span>.
+Since all <span class="arithmatex">\(x_n\)</span> are contained within the compact set <span class="arithmatex">\(K_1\)</span>, according to the definition of compactness, the sequence <span class="arithmatex">\(\{x_n\}\)</span> must have a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> that converges to some point <span class="arithmatex">\(x_0\)</span> in <span class="arithmatex">\(K_1\)</span>.</p>
+<p>For any given integer <span class="arithmatex">\(n\)</span>, when <span class="arithmatex">\(n_k \ge n\)</span>, we have <span class="arithmatex">\(x_{n_k} \in K_{n_k} \subseteq K_n\)</span>.
+That is to say, starting from a certain term, the subsequence entirely falls within <span class="arithmatex">\(K_n\)</span>. Since a compact set must be a closed set, the limit point must also belong to this closed set, meaning <span class="arithmatex">\(x_0 \in K_n\)</span>.
+Because <span class="arithmatex">\(n\)</span> was chosen arbitrarily, <span class="arithmatex">\(x_0 \in \bigcap_{n=1}^\infty K_n\)</span>. The intersection is non-empty. <span class="arithmatex">\(\square\)</span></p>
 </details>
-<p><em>(注：该定理的逆命题也成立，即如果一个空间中任意半径趋于零的闭球套都有非空交集，则该空间必然是完备的。)</em></p>
-<h3 id="42-baire">4.2 第一/第二类型集与 Baire 纲定理</h3>
-<p>为了刻画集合的“厚薄”，我们引入分类的概念：</p>
-<ul>
-<li><strong>稀疏集 (Nowhere Dense / 无处稠密)</strong>：如果子集 <span class="arithmatex">\(A\)</span> 在 <span class="arithmatex">\(X\)</span> 的<strong>任何非空开集中都不稠密</strong>，则称 <span class="arithmatex">\(A\)</span> 是稀疏集。等价地说，对于任一开球 <span class="arithmatex">\(S_1\)</span>，必定存在一个子开球 <span class="arithmatex">\(S_2 \subset S_1\)</span>，使得 <span class="arithmatex">\(S_2\)</span> 与 <span class="arithmatex">\(A\)</span> 不相交 (<span class="arithmatex">\(S_2 \cap A = \emptyset\)</span>)。</li>
-<li><strong>第一类型集 (Meager / First Category)</strong>：如果 <span class="arithmatex">\(A\)</span> 可以表示为<strong>至多可列个</strong>稀疏集的并集，则称 <span class="arithmatex">\(A\)</span> 是第一类型的。它代表拓扑意义上的“瘦集”或“薄集”。</li>
-<li><strong>第二类型集 (Non-meager / Second Category)</strong>：凡不是第一类型的集，均称为第二类型集。代表拓扑意义上的“胖集”。</li>
-</ul>
-<p>在泛函分析中，我们最关心的结论是：一个完备的空间，绝对不可能是由稀疏集拼凑而成的。</p>
+<hr />
+<h2 id="4-topological-characterization-of-compact-sets-finite-covers-and-finite-intersections">4. Topological Characterization of Compact Sets: Finite Covers and Finite Intersections</h2>
+<p>In calculus, a bounded closed interval on the real number axis enjoys the famous Heine-Borel Finite Cover Theorem. In a general metric space, this property not only holds true, but it is also a <strong>perfect equivalent characterization of compact sets</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.5 (Open Cover and Finite Subcover)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a metric space, <span class="arithmatex">\(A \subset X\)</span>. Let <span class="arithmatex">\(\{G_c\}_{c \in J}\)</span> be a family consisting of some open sets in <span class="arithmatex">\(X\)</span>.
+If <span class="arithmatex">\(A \subseteq \bigcup_{c \in J} G_c\)</span>, then <span class="arithmatex">\(\{G_c\}_{c \in J}\)</span> is called an <strong>open cover</strong> of <span class="arithmatex">\(A\)</span>.
+If the index set <span class="arithmatex">\(J\)</span> is a finite set, it is called a <strong>finite open cover</strong> of <span class="arithmatex">\(A\)</span>.</p>
+</div>
+<p><em>(Note: A bounded closed set in a general metric space does not necessarily satisfy the finite cover theorem. In the previous counterexample in <span class="arithmatex">\(L^2[-\pi,\pi]\)</span>, the open balls <span class="arithmatex">\(\{S(e_k, 1/2)\}\)</span> centered at the sequence elements are mutually disjoint, making it impossible to select finitely many to cover the closed set.)</em></p>
 <div class="admonition success">
-<p class="admonition-title">定理 2.2 (Baire 纲定理 Baire Category Theorem)</p>
-<p><strong>任何完备的距离空间 <span class="arithmatex">\(X\)</span>，必定是第二类型的集。</strong></p>
-<p><em>(换言之，完备空间不能表示为可数个无处稠密集的并集。或者说，可数个稠密开集的交集依然是稠密的。)</em></p>
+<p class="admonition-title">Theorem 3.4 (Borel Finite Cover Theorem: Criterion for Compactness)</p>
+<p>A necessary and sufficient condition for a subset <span class="arithmatex">\(A\)</span> of a metric space <span class="arithmatex">\(X\)</span> to be a compact set is: from <strong>any open cover</strong> of <span class="arithmatex">\(A\)</span>, a <strong>finite subcover</strong> can always be selected.</p>
 </div>
 <details class="proof">
-<summary>Baire 纲定理的证明（点击展开）</summary>
-<p>采用<strong>反证法</strong>。假设完备距离空间 <span class="arithmatex">\(X\)</span> 是第一类型的集，那么存在可数个稀疏集 <span class="arithmatex">\(\{F_n\}\)</span>，使得：</p>
-<div class="arithmatex">\[
-X = \bigcup_{n=1}^\infty F_n
-\]</div>
-<p>任取一个非空闭球 <span class="arithmatex">\(\overline{S}(x_0, r_0)\)</span> (<span class="arithmatex">\(r_0 &gt; 0\)</span>)。</p>
-<ol>
-<li>因为 <span class="arithmatex">\(F_1\)</span> 是稀疏集，它在 <span class="arithmatex">\(\overline{S}(x_0, r_0)\)</span> 的内部必定不稠密。故存在一个闭球 <span class="arithmatex">\(\overline{S}(x_1, r_1) \subset \overline{S}(x_0, r_0)\)</span>，使得 <span class="arithmatex">\(\overline{S}(x_1, r_1) \cap F_1 = \emptyset\)</span>。为了后续半径收敛到 0，我们可以强制要求 <span class="arithmatex">\(r_1 &lt; 1\)</span>。</li>
-<li>对于这个新球 <span class="arithmatex">\(\overline{S}(x_1, r_1)\)</span>，因为 <span class="arithmatex">\(F_2\)</span> 也是稀疏集，同理存在闭球 <span class="arithmatex">\(\overline{S}(x_2, r_2) \subset \overline{S}(x_1, r_1)\)</span>，使得 <span class="arithmatex">\(\overline{S}(x_2, r_2) \cap F_2 = \emptyset\)</span>，且设 <span class="arithmatex">\(r_2 &lt; 1/2\)</span>。</li>
-<li>依此类推，利用归纳法，我们可以构造出一个无限嵌套的闭球套：</li>
-</ol>
-<div class="arithmatex">\[
-\overline{S}(x_1, r_1) \supseteq \overline{S}(x_2, r_2) \supseteq \cdots \supseteq \overline{S}(x_n, r_n) \supseteq \cdots
-\]</div>
-<p>满足两个关键条件：
-(i) <span class="arithmatex">\(r_n &lt; 1/n\)</span>，所以当 <span class="arithmatex">\(n \rightarrow \infty\)</span> 时，<span class="arithmatex">\(r_n \rightarrow 0\)</span>。
-(ii) 第 <span class="arithmatex">\(n\)</span> 个闭球 <span class="arithmatex">\(\overline{S}(x_n, r_n)\)</span> 完全不包含 <span class="arithmatex">\(F_n\)</span> 中的任何点。</p>
-<p>由于空间 <span class="arithmatex">\(X\)</span> 是<strong>完备</strong>的，根据刚刚证明过的<strong>闭球套定理</strong>，这个闭球套的交集非空，必定存在一个点 <span class="arithmatex">\(y_0 \in X\)</span> 满足：</p>
-<div class="arithmatex">\[
-y_0 \in \bigcap_{n=1}^\infty \overline{S}(x_n, r_n)
-\]</div>
-<p>既然 <span class="arithmatex">\(y_0\)</span> 存在于空间 <span class="arithmatex">\(X\)</span> 中，且 <span class="arithmatex">\(X = \bigcup_{n=1}^\infty F_n\)</span>，那么 <span class="arithmatex">\(y_0\)</span> 必定属于某一个 <span class="arithmatex">\(F_k\)</span>。
-但这产生了矛盾！因为根据我们的构造过程，<span class="arithmatex">\(y_0\)</span> 在所有的闭球里，自然也在 <span class="arithmatex">\(\overline{S}(x_k, r_k)\)</span> 里。而我们构造时已经保证了 <span class="arithmatex">\(\overline{S}(x_k, r_k) \cap F_k = \emptyset\)</span>，所以 <span class="arithmatex">\(y_0\)</span> 绝不可能属于 <span class="arithmatex">\(F_k\)</span>。</p>
-<p>这个无法调和的矛盾证明了最初的假设是错误的。因此，完备距离空间绝不可能是第一类型集。 <span class="arithmatex">\(\square\)</span></p>
+<summary>Proof of the Finite Cover Theorem (Click to expand)</summary>
+<p><strong>1. Necessity (Compact set <span class="arithmatex">\(\implies\)</span> Can select a finite subcover):</strong>
+Suppose <span class="arithmatex">\(A\)</span> is a compact set and <span class="arithmatex">\(\{G_c\}_{c \in J}\)</span> is an open cover of <span class="arithmatex">\(A\)</span>.
+We first prove that there exists a so-called "Lebesgue number" <span class="arithmatex">\(\epsilon_0 &gt; 0\)</span>, such that for all <span class="arithmatex">\(x \in A\)</span>, the open ball <span class="arithmatex">\(S(x, \epsilon_0)\)</span> is strictly contained within some single open set <span class="arithmatex">\(G_c\)</span>.
+Proof by contradiction: If this were not the case, for every natural number <span class="arithmatex">\(n\)</span>, there would exist <span class="arithmatex">\(x_n \in A\)</span> such that the open ball <span class="arithmatex">\(S(x_n, 1/2^n)\)</span> is not contained in any <span class="arithmatex">\(G_c\)</span>. Because <span class="arithmatex">\(A\)</span> is compact, the sequence <span class="arithmatex">\(\{x_n\}\)</span> has a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> converging to some point <span class="arithmatex">\(x_0\)</span> in <span class="arithmatex">\(A\)</span>. Because <span class="arithmatex">\(\{G_c\}\)</span> covers <span class="arithmatex">\(A\)</span>, there must exist some <span class="arithmatex">\(G_{c_0}\)</span> such that <span class="arithmatex">\(x_0 \in G_{c_0}\)</span>. As it is an open set, there exists <span class="arithmatex">\(r &gt; 0\)</span> such that <span class="arithmatex">\(S(x_0, r) \subset G_{c_0}\)</span>.
+When <span class="arithmatex">\(k\)</span> is sufficiently large, <span class="arithmatex">\(\rho(x_{n_k}, x_0) &lt; r/2\)</span> and <span class="arithmatex">\(1/2^{n_k} &lt; r/2\)</span>. By the triangle inequality, we then have <span class="arithmatex">\(S(x_{n_k}, 1/2^{n_k}) \subset S(x_0, r) \subset G_{c_0}\)</span>, which contradicts the previous assumption (not being contained in any <span class="arithmatex">\(G_c\)</span>)! Hence, <span class="arithmatex">\(\epsilon_0\)</span> exists.</p>
+<p>Because <span class="arithmatex">\(A\)</span> is compact, it must be totally bounded, thus there exist finitely many open balls <span class="arithmatex">\(\{S(x_j, \epsilon_0)\}_{j=1}^l\)</span> that cover <span class="arithmatex">\(A\)</span>.
+According to the property of <span class="arithmatex">\(\epsilon_0\)</span>, each open ball <span class="arithmatex">\(S(x_j, \epsilon_0)\)</span> is contained by some open set <span class="arithmatex">\(G_{c_j}\)</span>. Extracting these <span class="arithmatex">\(l\)</span> corresponding open sets, the family they form <span class="arithmatex">\(\{G_{c_j}\}_{j=1}^l\)</span> clearly also covers <span class="arithmatex">\(A\)</span>, which is the finite subcover we are looking for.</p>
+<p><strong>2. Sufficiency (Every open cover has a finite subcover <span class="arithmatex">\(\implies\)</span> Compact set):</strong>
+Assume the condition holds, and let <span class="arithmatex">\(\{x_n\}\)</span> be a sequence in <span class="arithmatex">\(A\)</span>. We need to prove it has a convergent subsequence.
+Proof by contradiction: If <span class="arithmatex">\(\{x_n\}\)</span> has no convergent subsequence in <span class="arithmatex">\(A\)</span>, then for every point <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(A\)</span>, there exists a neighborhood <span class="arithmatex">\(S(y, \delta_y)\)</span> such that only finitely many terms of the sequence fall within this neighborhood (otherwise <span class="arithmatex">\(y\)</span> would be a limit point, and a convergent subsequence could be extracted).
+Obviously, this family of open balls <span class="arithmatex">\(\{S(y, \delta_y)\}_{y \in A}\)</span> forms an open cover of <span class="arithmatex">\(A\)</span>.
+According to the theorem's assumption, we can select a finite number of open balls <span class="arithmatex">\(\{S(y_j, \delta_{y_j})\}_{j=1}^l\)</span> from it to cover <span class="arithmatex">\(A\)</span>.
+However, each selected open ball contains only finitely many terms from the sequence <span class="arithmatex">\(\{x_n\}\)</span>, so their finite union (i.e., the entire set <span class="arithmatex">\(A\)</span>) can also only contain finitely many terms of the sequence! This contradicts the fact that <span class="arithmatex">\(\{x_n\}\)</span> is an infinite sequence. Thus, a convergent subsequence must exist, and <span class="arithmatex">\(A\)</span> is a compact set. <span class="arithmatex">\(\square\)</span></p>
 </details>
-<p><strong>Baire 纲定理的意义：</strong> 该定理是泛函分析中“三大基本定理”（一致有界性原理、开映射定理、闭图像定理）的基石。它告诉我们，在完备空间中，如果你要满足可数个极其严苛的条件（每个条件都排除了一个稠密开集），那么同时满足这些条件的点不仅存在，而且还是稠密的！</p>
+<p>The finite cover property of compact sets can be transformed into a property of closed sets through dual conversion (De Morgan's Laws):</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.6 (Finite Intersection Property)</p>
+<p>Let <span class="arithmatex">\(\{F_c\}_{c \in J}\)</span> be a family of sets in a metric space <span class="arithmatex">\(X\)</span>. If <strong>any finite subfamily</strong> of it has a non-empty intersection, then this family of sets is said to have the <strong>Finite Intersection Property</strong>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.5</p>
+<p>A necessary and sufficient condition for a <strong>closed subset <span class="arithmatex">\(A\)</span></strong> in a metric space to be a compact set is: every <strong>family of closed subsets</strong> in <span class="arithmatex">\(A\)</span> that has the finite intersection property has a non-empty intersection.</p>
+</div>
+<details class="proof">
+<summary>Proof of the Finite Intersection Property (Click to expand)</summary>
+<p><strong>1. Necessity (Compact set <span class="arithmatex">\(\implies\)</span> Non-empty intersection):</strong>
+Proof by contradiction: Suppose <span class="arithmatex">\(A\)</span> is a compact set and <span class="arithmatex">\(\{F_c\}_{c \in J}\)</span> is a family of closed subsets possessing the finite intersection property, but the intersection of all of them is empty, i.e., <span class="arithmatex">\(\bigcap_c F_c = \emptyset\)</span>.
+Let open sets <span class="arithmatex">\(G_c = X \setminus F_c\)</span>. By De Morgan's Laws:</p>
+<div class="arithmatex">\[
+\bigcup_c G_c = \bigcup_c (X \setminus F_c) = X \setminus \bigcap_c F_c = X \setminus \emptyset = X
+\]</div>
+<p>This indicates that <span class="arithmatex">\(\{G_c\}\)</span> forms an open cover of the entire space <span class="arithmatex">\(X\)</span>, and naturally covers <span class="arithmatex">\(A\)</span> as well. Due to compactness, there exists a finite subcover <span class="arithmatex">\(\{G_{c_j}\}_{j=1}^l\)</span> covering <span class="arithmatex">\(A\)</span>.
+Taking the complement again:</p>
+<div class="arithmatex">\[
+\bigcap_{j=1}^l F_{c_j} = \bigcap_{j=1}^l (X \setminus G_{c_j}) = X \setminus \bigcup_{j=1}^l G_{c_j} \subseteq X \setminus A
+\]</div>
+<p>However, all <span class="arithmatex">\(F_c\)</span> are subsets of <span class="arithmatex">\(A\)</span>, so their intersection must be contained within <span class="arithmatex">\(A\)</span>. That is, <span class="arithmatex">\(\bigcap_{j=1}^l F_{c_j} \subseteq A \cap (X \setminus A) = \emptyset\)</span>. This contradicts the premise "possesses the finite intersection property" (the intersection of finitely many is non-empty)!</p>
+<p><strong>2. Sufficiency (Having non-empty intersection <span class="arithmatex">\(\implies\)</span> Compact set):</strong>
+Suppose any family of closed subsets possessing the finite intersection property has a non-empty intersection. We want to prove that any open cover of <span class="arithmatex">\(A\)</span> has a finite subcover.
+Let <span class="arithmatex">\(\{G_c\}_{c \in J}\)</span> be an open cover of <span class="arithmatex">\(A\)</span>. Define closed subsets <span class="arithmatex">\(F_c = A \setminus G_c\)</span>. Since:</p>
+<div class="arithmatex">\[
+\bigcap_{c \in J} F_c = \bigcap_{c \in J} (A \setminus G_c) = A \setminus \bigcup_{c \in J} G_c = \emptyset
+\]</div>
+<p>We know that the family of closed subsets <span class="arithmatex">\(\{F_c\}_{c \in J}\)</span> <strong>does not</strong> possess the finite intersection property (otherwise the entire intersection would be non-empty according to the premise).
+Since it does not have the finite intersection property, it means there must exist a finite subfamily <span class="arithmatex">\(\{F_{c_j}\}_{j=1}^l\)</span> such that their intersection is empty:</p>
+<div class="arithmatex">\[
+\bigcap_{j=1}^l F_{c_j} = \emptyset
+\]</div>
+<p>Taking the complement of the equation to revert to open sets:</p>
+<div class="arithmatex">\[
+\bigcup_{j=1}^l G_{c_j} \supseteq \bigcup_{j=1}^l (A \setminus F_{c_j}) = A \setminus \bigcap_{j=1}^l F_{c_j} = A \setminus \emptyset = A
+\]</div>
+<p>This finds the finite subcover, proving that <span class="arithmatex">\(A\)</span> is a compact set. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="5-continuous-mappings-on-compact-sets">5. Continuous Mappings on Compact Sets</h2>
+<p>Compact sets have excellent "preservation properties" under continuous mappings. Several of the most famous theorems regarding continuous functions on closed intervals in calculus hold true for compact sets in general metric spaces.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.6 (The image of a compact set remains a compact set)</p>
+<p>Let <span class="arithmatex">\(X, Y\)</span> both be metric spaces, and let closed subset <span class="arithmatex">\(A \subset X\)</span> be a compact set. If <span class="arithmatex">\(T\)</span> is a continuous mapping from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>, then the image of <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(T(A)\)</span>, is a compact set in <span class="arithmatex">\(Y\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof (Click to expand)</summary>
+<p>Let <span class="arithmatex">\(\{y_n\}\)</span> be a sequence in <span class="arithmatex">\(T(A)\)</span>, then there must exist a corresponding preimage sequence <span class="arithmatex">\(\{x_n\}\)</span> in <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(y_n = T(x_n)\)</span>.
+Because <span class="arithmatex">\(A\)</span> is a compact set, the sequence <span class="arithmatex">\(\{x_n\}\)</span> must have a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> that converges to some point <span class="arithmatex">\(x_0 \in A\)</span> within <span class="arithmatex">\(A\)</span>.
+Also, because the mapping <span class="arithmatex">\(T\)</span> is continuous, according to the sequential criterion for continuity, limits and mappings can be interchanged:</p>
+<div class="arithmatex">\[
+\lim_{k \rightarrow \infty} y_{n_k} = \lim_{k \rightarrow \infty} T(x_{n_k}) = T(x_0)
+\]</div>
+<p>Since <span class="arithmatex">\(x_0 \in A\)</span>, obviously <span class="arithmatex">\(T(x_0) \in T(A)\)</span>.
+This demonstrates that any sequence in <span class="arithmatex">\(T(A)\)</span> has a subsequence converging within <span class="arithmatex">\(T(A)\)</span>, therefore <span class="arithmatex">\(T(A)\)</span> is a compact set. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>A continuous mapping on a compact set is not only pointwise continuous but also <strong>Uniformly Continuous</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.7 (Uniform Continuity Theorem)</p>
+<p>Let <span class="arithmatex">\(X, Y\)</span> be metric spaces, and compact set <span class="arithmatex">\(A \subset X\)</span>. If <span class="arithmatex">\(T: A \rightarrow Y\)</span> is continuous, then <span class="arithmatex">\(T\)</span> is <strong>uniformly continuous</strong> on <span class="arithmatex">\(A\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of the Uniform Continuity Theorem (Click to expand)</summary>
+<p><strong>Proof by contradiction</strong>.
+The definition of uniform continuity is: for any given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there exists a <span class="arithmatex">\(\delta &gt; 0\)</span> depending only on <span class="arithmatex">\(\epsilon\)</span>, such that when <span class="arithmatex">\(\rho(x, y) &lt; \delta\)</span>, we have <span class="arithmatex">\(\rho_1(T(x), T(y)) &lt; \epsilon\)</span>.</p>
+<p>Assume <span class="arithmatex">\(T\)</span> is not uniformly continuous, which means: there exists a fixed <span class="arithmatex">\(\epsilon_0 &gt; 0\)</span> such that no matter how small <span class="arithmatex">\(\delta\)</span> is taken, one can always find points extremely close to each other whose mapped distance is strictly greater than <span class="arithmatex">\(\epsilon_0\)</span>.
+Let <span class="arithmatex">\(\delta_n = 1/n\)</span>, then there exist sequences <span class="arithmatex">\(\{x_n\}\)</span> and <span class="arithmatex">\(\{y_n\}\)</span> contained in <span class="arithmatex">\(A\)</span> such that:</p>
+<div class="arithmatex">\[
+\rho(x_n, y_n) &lt; \frac{1}{n} \quad \text{but} \quad \rho_1(T(x_n), T(y_n)) &gt; \epsilon_0
+\]</div>
+<p>Because <span class="arithmatex">\(A\)</span> is a compact set, the sequence <span class="arithmatex">\(\{x_n\}\)</span> has a convergent subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span>, converging to some point <span class="arithmatex">\(x_0\)</span> within <span class="arithmatex">\(A\)</span>.
+Since <span class="arithmatex">\(\rho(x_{n_k}, y_{n_k}) &lt; 1/n_k \rightarrow 0\)</span>, by the triangle inequality:</p>
+<div class="arithmatex">\[
+\rho(y_{n_k}, x_0) \le \rho(y_{n_k}, x_{n_k}) + \rho(x_{n_k}, x_0) \xrightarrow{k \to \infty} 0
+\]</div>
+<p>This indicates that the corresponding subsequence <span class="arithmatex">\(\{y_{n_k}\}\)</span> also converges to the exact same limit point <span class="arithmatex">\(x_0\)</span>.
+Since <span class="arithmatex">\(x_{n_k} \rightarrow x_0\)</span> and <span class="arithmatex">\(y_{n_k} \rightarrow x_0\)</span>, utilizing the continuity of <span class="arithmatex">\(T\)</span> at <span class="arithmatex">\(x_0\)</span>, the image points of both should converge to <span class="arithmatex">\(T(x_0)\)</span>.
+Therefore, by the triangle inequality:</p>
+<div class="arithmatex">\[
+\rho_1(T(x_{n_k}), T(y_{n_k})) \le \rho_1(T(x_{n_k}), T(x_0)) + \rho_1(T(y_{n_k}), T(x_0)) \xrightarrow{k \to \infty} 0
+\]</div>
+<p>This requires that when <span class="arithmatex">\(k\)</span> is sufficiently large, <span class="arithmatex">\(\rho_1(T(x_{n_k}), T(y_{n_k})) \to 0\)</span>. But this creates an irreconcilable contradiction with our initial assumption that <span class="arithmatex">\(\rho_1(T(x_{n_k}), T(y_{n_k})) &gt; \epsilon_0 &gt; 0\)</span>!
+Thus, <span class="arithmatex">\(T\)</span> must be uniformly continuous. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>Setting the target space <span class="arithmatex">\(Y\)</span> to be the real number field <span class="arithmatex">\(\mathbb{R}\)</span>, we immediately obtain the classic Extreme Value Theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Corollary (Extreme Value Theorem for Continuous Functionals)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a metric space, and <span class="arithmatex">\(A\)</span> be a compact set in <span class="arithmatex">\(X\)</span>. Let <span class="arithmatex">\(f\)</span> be a continuous functional (real-valued function) defined on <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(f\)</span> is <strong>bounded</strong>, and it <strong>must achieve its supremum and infimum</strong> on <span class="arithmatex">\(A\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Derivation of the Extreme Value Theorem</summary>
+<p>According to Theorem 3.6, <span class="arithmatex">\(f(A)\)</span> is a compact set in the real number field <span class="arithmatex">\(\mathbb{R}\)</span>. In the real field, a compact set is equivalent to a <strong>bounded closed set</strong>.
+Because <span class="arithmatex">\(f(A)\)</span> is bounded, the functional <span class="arithmatex">\(f\)</span> is bounded, meaning there exists a finite supremum and infimum.
+Because <span class="arithmatex">\(f(A)\)</span> is a closed set, it must contain all of its limit points, and naturally contains its supremum and infimum. This means there exist points in <span class="arithmatex">\(A\)</span> that allow the functional to attain exactly these bounds. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="summary-logical-connections-of-concepts-in-metric-spaces">Summary: Logical Connections of Concepts in Metric Spaces</h2>
+<p>In general metric spaces, completeness and compactness possess the following elegant web of dualities and equivalences:</p>
+<ul>
+<li>
+<p><strong>Core Equivalence Chain</strong>:
+  Compact set <span class="arithmatex">\(\iff\)</span> Complete + Totally bounded <span class="arithmatex">\(\iff\)</span> Complete + Pre-compact</p>
+</li>
+<li>
+<p><strong>Duality of Topological Characterizations</strong>:
+  Every open cover has a finite subcover <span class="arithmatex">\(\iff\)</span> Every family of closed subsets with the finite intersection property must have a non-empty intersection.</p>
+</li>
+</ul>
 
 
 
@@ -3247,7 +3185,7 @@ y_0 \in \bigcap_{n=1}^\infty \overline{S}(x_n, r_n)
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -3279,16 +3217,16 @@ y_0 \in \bigcap_{n=1}^\infty \overline{S}(x_n, r_n)
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/security.js"></script>
+        <script src="../../../javascripts/security.js"></script>
       
     
   </body>

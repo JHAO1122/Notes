@@ -85,6 +85,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/2completeness/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Functional_Analysis/3compactness/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Functional_Analysis/3compactness/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/3compactness/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/Lectures/</loc>
         <lastmod>2026-04-27</lastmod>
         <changefreq>daily</changefreq>
@@ -342,6 +349,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/2completeness/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Functional_Analysis/2completeness/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Functional_Analysis/3compactness/</loc>
+        <lastmod>2026-04-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/3compactness/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Functional_Analysis/3compactness/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Lectures/</loc>
