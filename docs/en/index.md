@@ -58,6 +58,8 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 * Functional Analysis 
 
+* Distribution Function Theory
+
 * Point-Set Topology
 
 * Ordinary Differential Equations 

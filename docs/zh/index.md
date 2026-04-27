@@ -53,6 +53,8 @@
 
 * 泛函分析 (Functional Analysis) 
 
+* 广义函数论 (Distribution Function Theory)
+
 * 点集拓扑 (Point-Set Topology)
 
 * 常微分方程 (Ordinary Differential Equations) 
