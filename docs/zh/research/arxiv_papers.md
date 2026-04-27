@@ -3,9 +3,100 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-26
+> 更新于: 2026-04-27
 
 ---
+### Confirmatory Biomarker Identification with k-FWER Control Using Derandomized Knockoffs with Cox Regression 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-04-04
+- **链接**: [PDF](http://arxiv.org/abs/2504.03907v2)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：针对Cox回归模型，提出一种去随机化knockoffs方法，通过聚合多次随机knockoffs实现的特征选择结果，构造了更稳定的评分函数，并在理论上严格证明了该方法能控制k族错误率（k-FWER）。其核心统计贡献是，在保持错误率控制的同时，通过去随机化策略显著降低了传统knockoffs因单次随机实现导致的选择不稳定性。
+
+### Interpretable Feature Interaction via Statistical Self-supervised Learning on Tabular Data 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-03-23
+- **链接**: [PDF](http://arxiv.org/abs/2503.18048v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出Spofe方法，通过核主成分分析生成自监督信号，并将其蒸馏为稀疏多项式函数，从而在非线性特征交互建模中实现可解释性。其核心统计贡献在于：构建了基于多目标knockoff选择的特征筛选框架，并严格证明了错误发现率（FDR）的控制与误差界，为高维表格数据提供了兼具统计严谨性与可解释性的特征交互识别方法。
+
+### One-at-a-time knockoffs: controlled false discovery rate with higher power 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-02-26
+- **链接**: [PDF](http://arxiv.org/abs/2502.18750v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种逐列生成 knockoff 设计矩阵的新方法（OATK），通过仅替换原始设计矩阵的单一列来保持 Gram 矩阵，从而大幅简化了 Barber 与 Candès 的联合约束框架；在原始设计矩阵满足温和相关性假设的条件下，通过构造原始系数与 knockoff 系数的比较统计量，OATK 能够渐近控制错误发现率（FDR），并显著提升统计功效。
+
+### Asymptotic FDR Control with Model-X Knockoffs: Is Moments Matching Sufficient? 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-02-09
+- **链接**: [PDF](http://arxiv.org/abs/2502.05969v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过将模型-X敲除框架中的分布可交换性条件替换为近似敲除统计量的三个新条件，建立了渐进FDR控制的理论统一框架；并严格证明了基于前两阶矩匹配的高斯敲除生成器在采用相应统计量时能实现渐进FDR控制，首次从理论上验证了该方法的有效性与稳健性。
+
+### Can linear algebra create perfect knockoffs? 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-02-04
+- **链接**: [PDF](http://arxiv.org/abs/2502.02148v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：通过线性代数方法直接构造“完美”的Model-X knockoffs，并基于特征与knockoffs之间的平均绝对相关系数构建了新的质量度量指标，从而绕开了对复杂条件分布的精确推导；同时，作者提出了多种计算加速策略以降低优化算法的高昂计算成本，并严格证明了所构造knockoffs在统计性质上的伪完美性。
+
+### Conformalized Super Learner 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-24
+- **链接**: [PDF](http://arxiv.org/abs/2604.22391v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新性地将共形预测框架与超级学习器集成，通过加权多数投票机制融合各学习器的共形得分，从而在有限样本下为集成预测提供严格的覆盖保证。其核心理论贡献在于，在可交换性假设及异方差、稀疏性等复杂数据生成机制下，严格刻画了所构造预测区间的有限样本覆盖性质，无需依赖渐近论证或重采样过程。
+
+### Cross-Domain Uncertainty Quantification for Selective Prediction: A Comprehensive Bound Ablation with Transfer-Informed Betting 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-09
+- **链接**: [PDF](http://arxiv.org/abs/2603.08907v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于提出了**迁移知情投注（Transfer-Informed Betting, TIB）**，通过用源域风险分布预热WSR财富过程，构造了一个在任意源-目标域散度下仍为有效鞅的评分函数，并证明了当域匹配时TIB严格优于标准WSR，且任何数据无关的预热策略都无法达到更优的收敛速率。此外，论文系统性地消融了九种有限样本界族，揭示了**投注置信序列与LTT单调检验及跨域迁移的三重组合**在统计推导上的理论优势，即通过消除联合界中的ln(K)惩罚项，在数据稀缺场景下实现了覆盖率的显著提升。
+
+### Beyond Data Splitting: Full-Data Conformal Prediction by Differential Privacy 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-08
+- **链接**: [PDF](http://arxiv.org/abs/2603.07522v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种无需数据分割的全数据差分隐私保形预测框架，通过利用差分隐私引入的稳定性来约束样本内与样本外保形分数之间的差距，并构造了一个保守的私有分位数估计程序以防止覆盖不足。理论上，该工作证明了通用差分隐私保证可提供一个普适的覆盖下限，但无法恢复名义水平 \(1-\alpha\)，进而通过机制特定的稳定性分析实现了名义水平的渐近恢复。
+
+### ConfHit: Conformal Generative Design with Oracle Free Guarantees 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-07
+- **链接**: [PDF](http://arxiv.org/abs/2603.07371v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种无需实验验证的分布自由框架，通过构建基于加权可交换性的多样本密度比加权共形p值，解决了生成模型在预算限制和无真实标签条件下的命中率统计保证问题。其核心创新在于设计了嵌套检验程序，在保持多重比较校正的同时，对生成批次进行认证与精炼，从而在有限样本下严格控制置信水平并保证覆盖率的有效性。
+
+### CREDO: Epistemic-Aware Conformalized Credal Envelopes for Regression 
+
+- [ ] **分类**: Conformal | **日期**: 2026-03-06
+- **链接**: [PDF](http://arxiv.org/abs/2603.06826v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种“先构造认知包络、再执行分裂共形校准”的两阶段框架，通过基于极端后验预测端点修剪的快速算法构建随局部证据强度自适应增宽的认知包络，并证明其能在无需额外假设下保证边际覆盖有效性，同时将预测区间宽度分解为偶然噪声、认知膨胀和分布自由校准松弛三个可解释分量。
+
+
 ### Gold after Randomized Sand: Model-X Split Knockoffs for Controlled Transformation Selection 
 
 - [ ] **分类**: Knockoff | **日期**: 2025-07-02

@@ -298,5 +298,65 @@
         "date": "2026-03-11",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2504.03907v2": {
+        "title": "Confirmatory Biomarker Identification with k-FWER Control Using Derandomized Knockoffs with Cox Regression",
+        "date": "2025-04-04",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2503.18048v1": {
+        "title": "Interpretable Feature Interaction via Statistical Self-supervised Learning on Tabular Data",
+        "date": "2025-03-23",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2502.18750v1": {
+        "title": "One-at-a-time knockoffs: controlled false discovery rate with higher power",
+        "date": "2025-02-26",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2502.05969v1": {
+        "title": "Asymptotic FDR Control with Model-X Knockoffs: Is Moments Matching Sufficient?",
+        "date": "2025-02-09",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2502.02148v1": {
+        "title": "Can linear algebra create perfect knockoffs?",
+        "date": "2025-02-04",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2604.22391v1": {
+        "title": "Conformalized Super Learner",
+        "date": "2026-04-24",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.08907v1": {
+        "title": "Cross-Domain Uncertainty Quantification for Selective Prediction: A Comprehensive Bound Ablation with Transfer-Informed Betting",
+        "date": "2026-03-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.07522v1": {
+        "title": "Beyond Data Splitting: Full-Data Conformal Prediction by Differential Privacy",
+        "date": "2026-03-08",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.07371v1": {
+        "title": "ConfHit: Conformal Generative Design with Oracle Free Guarantees",
+        "date": "2026-03-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2603.06826v1": {
+        "title": "CREDO: Epistemic-Aware Conformalized Credal Envelopes for Regression",
+        "date": "2026-03-06",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
