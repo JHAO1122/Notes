@@ -358,5 +358,11 @@
         "date": "2026-03-06",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2604.23847v1": {
+        "title": "Privacy-preserving Meta-analysis through Low-Rank Basis Hunting",
+        "date": "2026-04-26",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

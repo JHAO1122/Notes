@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-27
+> 更新于: 2026-04-28
 
 ---
+### Privacy-preserving Meta-analysis through Low-Rank Basis Hunting 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-26
+- **链接**: [PDF](http://arxiv.org/abs/2604.23847v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出MetaHunt方法，通过将各研究的真实函数假设为共享低秩基函数的凸组合，并扩展函数型逐次投影算法实现去噪基函数搜寻，在温和正则条件下证明了基函数估计的一致性。进一步利用半参数或非参数模型刻画研究层面协变量与混合权重的关联，并基于共形预测构造预测区间，在可交换性与弱估计误差条件下证明了其渐近有效的边际覆盖性质。
+
+
 ### Confirmatory Biomarker Identification with k-FWER Control Using Derandomized Knockoffs with Cox Regression 
 
 - [ ] **分类**: Knockoff | **日期**: 2025-04-04
