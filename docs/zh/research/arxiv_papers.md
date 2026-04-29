@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-28
+> 更新于: 2026-04-29
 
 ---
+### VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-28
+- **链接**: [PDF](http://arxiv.org/abs/2604.25235v1)
+
+!!! note "AI 核心解读"
+
+    该论文首次将共形预测框架系统性地应用于视觉语言模型（VLM）作为自动评分者的不确定性量化，仅利用评分令牌的对数概率构造出无需重训的校准预测区间。其核心理论发现是评分区间宽度与任务类型强相关，并揭示了“排序-评分解耦”这一统计失效模式：即模型在排序相关性指标上表现良好，但生成的绝对评分区间却过宽且无信息量。
+
+### Tail allocation for conformal prediction intervals 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-28
+- **链接**: [PDF](http://arxiv.org/abs/2604.25202v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种新的尾部分配方法（TA-CQR），通过搜索分位数定义的核心来估计最优的单区间预测集，并利用非负加性分裂共形校准，在可交换性假设下严格保证了有限样本的边际覆盖。理论贡献包括：刻画了单区间预言机在单峰性下的最高密度几何解释与不连通高密度集的正连接成本，证明了所选分配与核心的局部恢复性，以及在端点密度条件下校准半径的渐近可忽略性，并给出了有限样本校准长度与预言机之间的显式不等式。
+
+### Conflict Forecasting via Conformal Prediction for Markov Processes 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-28
+- **链接**: [PDF](http://arxiv.org/abs/2604.25139v1)
+
+!!! note "AI 核心解读"
+
+    该论文将保形预测框架拓展至离散状态马尔可夫过程，针对时序依赖数据构造了非交换性条件下的预测集，并推导了其有限样本覆盖保证。通过对比基于似然的预测策略，作者证明了所提评分函数在模型误设定下仍能维持有效的置信度校准，且无需依赖数据可交换性假设。
+
+
 ### Privacy-preserving Meta-analysis through Low-Rank Basis Hunting 
 
 - [ ] **分类**: Conformal | **日期**: 2026-04-26
