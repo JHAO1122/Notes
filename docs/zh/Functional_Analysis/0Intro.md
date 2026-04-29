@@ -34,6 +34,7 @@ tags:
 
 * [x] [第二章：拓扑与完备性](2completeness.md)
 
+* [x] [第三章：紧性](3compactness.md)
 
 ---
 

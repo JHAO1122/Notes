@@ -35,6 +35,7 @@ The following notes are continuously being updated:
 
 * [x] [Chapter 2: Topology and Completeness](2completeness.md)
 
+* [x] [Chapter 3: Compactness](3compactness.md)
 ---
 
 ## 📝 About the Notes
