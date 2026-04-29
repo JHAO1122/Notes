@@ -82,6 +82,16 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 * Intro to Uncertainty Quantification 
 
+**💻 Self-Study Courses**
+
+Below are the mathematics/statistics courses I self-studied through Zhejiang University's live-streaming platform (Zhiyun Classroom):
+
+* Real Analysis
+
+* Numerical Algebra
+
+* Mathematical Foundations in Data Science
+
 ## 📬 Contact & Contribution
 
 All mathematical derivations on this website originate from my personal course-taking (including on-campus courses and recorded lectures from ZJU) and self-study manuscripts. The progress and difficulty are matched to the undergraduate and graduate curricula of the School of Mathematical Sciences at Zhejiang University.

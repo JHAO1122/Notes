@@ -81,6 +81,16 @@
 
 * 不确定性量化导论 (Intro to Uncertainty Quantification) 
 
+**💻 自学课程 (Self-Study Courses)**
+
+以下是我通过浙江大学直播课堂（又称智云课堂）自学的数学/统计课程：
+
+* 实分析 (Real Analysis)
+
+* 数值代数 (Numerical Algebra)
+
+* 数据科学中的数学基础 (Mathematical Foundations in Data Science)
+
 ## 📬 交流与指正 (Contact & Contribution)
 
 本网站的全部数学推导均源自我个人上课（包括选课与浙江大学录播课程）及课后自学时的手写草稿，进度与难度匹配浙江大学数学科学学院的本科生或研究生课程。为了提高效率，本站的 Markdown 格式排版、LaTeX 公式录入以及英文版的翻译工作，均使用了大语言模型（主要是 Gemini 3.1 Pro）作为辅助工具完成。
