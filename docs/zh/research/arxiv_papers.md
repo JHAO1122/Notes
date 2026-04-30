@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-29
+> 更新于: 2026-04-30
 
 ---
+### VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-28
+- **链接**: [PDF](http://arxiv.org/abs/2604.25235v2)
+
+!!! note "AI 核心解读"
+
+    该论文首次将共形预测（conformal prediction）框架系统性地应用于视觉语言模型（VLM）作为自动评估者的场景，仅利用评分令牌的对数概率构造出无需重训练的校准预测区间，并严格证明了评估不确定性具有显著的任务依赖性。其核心创新在于揭示了“排序-评分解耦”这一统计失效模式：即便VLM在排序相关性指标上表现优异，其构造的区间仍可能过宽且无信息量，从而在理论上区分了相对排序能力与绝对评分可靠性的本质差异。
+
+
 ### VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation 
 
 - [ ] **分类**: Conformal | **日期**: 2026-04-28

@@ -382,5 +382,11 @@
         "date": "2026-04-28",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2604.25235v2": {
+        "title": "VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation",
+        "date": "2026-04-28",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
