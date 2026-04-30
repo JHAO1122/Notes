@@ -555,10 +555,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-navigation" class="md-nav__link">
+  <a href="#knowledge-galaxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 快速导航 (Quick Navigation)
+        🌌 知识星图 (Knowledge Galaxy)
       
     </span>
   </a>
@@ -3044,10 +3044,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-navigation" class="md-nav__link">
+  <a href="#knowledge-galaxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 快速导航 (Quick Navigation)
+        🌌 知识星图 (Knowledge Galaxy)
       
     </span>
   </a>
@@ -3194,25 +3194,17 @@
 <h2 id="contact-contribution">📬 交流与指正 (Contact &amp; Contribution)</h2>
 <p>本网站的全部数学推导均源自我个人上课（包括选课与浙江大学录播课程）及课后自学时的手写草稿，进度与难度匹配浙江大学数学科学学院的本科生或研究生课程。为了提高效率，本站的 Markdown 格式排版、LaTeX 公式录入以及英文版的翻译工作，均使用了大语言模型（主要是 Gemini 3.1 Pro）作为辅助工具完成。</p>
 <p>数学推导难免存在 typo 或是思维盲区。如果你在阅读笔记时发现了任何错误，或者对统计推断、共形预测、概率论与随机过程甚至量化金融有共同的探讨兴趣，非常欢迎与我交流！</p>
-<h2 id="beyond-math">🌍 走出数学 (Beyond Math)</h2>
-<p>我不仅会和概率测度与统计方法打交道，我还是一个狂热的足球迷（Visca el Barça!）。我的人生清单之一是看一场西班牙或阿根廷的世界杯淘汰赛或者巴塞罗那在诺坎普球场的欧冠比赛。</p>
-<h2 id="quick-navigation">📚 快速导航 (Quick Navigation)</h2>
-<div class="grid cards">
-<ul>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg></span> <strong>随机微分方程</strong>
-    <a href="Stochastic-Differential-Equation/0Intro/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 进入阅读</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 2v4h10V4zm0 6v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"/></svg></span> <strong>渐近统计</strong>
-    <a href="Asymptotic-statistics/0Intro/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> 进入阅读</a></p>
-</li>
-</ul>
-</div>
 <ul>
 <li><strong>Email</strong>: jiahaot1122@gmail.com</li>
 <li><strong>GitHub</strong>: <a href="https://github.com/jhao1122">@jhao1122</a></li>
 </ul>
+<h2 id="beyond-math">🌍 走出数学 (Beyond Math)</h2>
+<p>我不仅会和概率测度与统计方法打交道，我还是一个狂热的足球迷（Visca el Barça!）。我的人生清单之一是看一场西班牙或阿根廷的世界杯淘汰赛或者巴塞罗那在诺坎普球场的欧冠比赛。</p>
+<h2 id="knowledge-galaxy">🌌 知识星图 (Knowledge Galaxy)</h2>
+<div id="starry-map" style="width: 100%; height: 500px; background: #0b0e14; border-radius: 8px; cursor: move;"></div>
+
+<script src="https://d3js.org/d3.v7.min.min.js"></script>
+
 <hr />
 <p><em>Stay rigorous, and keep computing.</em></p>
 
@@ -3301,6 +3293,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
         <script src="javascripts/security.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="javascripts/starry_map.js"></script>
       
     
   </body>
