@@ -97,24 +97,20 @@
 
 数学推导难免存在 typo 或是思维盲区。如果你在阅读笔记时发现了任何错误，或者对统计推断、共形预测、概率论与随机过程甚至量化金融有共同的探讨兴趣，非常欢迎与我交流！
 
+* **Email**: jiahaot1122@gmail.com
+* **GitHub**: [@jhao1122](https://github.com/jhao1122)
+
 ## 🌍 走出数学 (Beyond Math)
 
 我不仅会和概率测度与统计方法打交道，我还是一个狂热的足球迷（Visca el Barça!）。我的人生清单之一是看一场西班牙或阿根廷的世界杯淘汰赛或者巴塞罗那在诺坎普球场的欧冠比赛。
 
-## 📚 快速导航 (Quick Navigation)
+## 🌌 知识星图 (Knowledge Galaxy)
 
-<div class="grid cards" markdown>
 
--   :material-chart-line:{ .lg .middle } __随机微分方程__
-    [:octicons-arrow-right-24: 进入阅读](Stochastic-Differential-Equation/0Intro.md)
+<div id="starry-map" style="width: 100%; height: 500px; background: #0b0e14; border-radius: 8px; cursor: move;"></div>
 
--   :material-calculator:{ .lg .middle } __渐近统计__
-    [:octicons-arrow-right-24: 进入阅读](Asymptotic-statistics/0Intro.md)
+<script src="https://d3js.org/d3.v7.min.min.js"></script>
 
-</div>
-
-* **Email**: jiahaot1122@gmail.com
-* **GitHub**: [@jhao1122](https://github.com/jhao1122)
 
 ---
 *Stay rigorous, and keep computing.*

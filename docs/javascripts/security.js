@@ -16,7 +16,7 @@ const observer = new MutationObserver((mutations) => {
         // 把它保存到你的 mkdocs 项目的 docs/assets/ 目录下，命名为 var_check.gif
         // 然后把下面这行换成本地路径：const varImageUrl = siteRoot + "assets/var_check.gif";
         // 这里我先用一个网络图库的通用裁判GIF占位
-        const varImageUrl = siteRoot + "assets/var_check.gif";
+        const varImageUrl = siteRoot + "assets/offside.gif";
         // 强行覆盖整个页面的 HTML，营造转播屏幕的氛围
         document.body.innerHTML = `
             <div style="
@@ -58,7 +58,7 @@ const observer = new MutationObserver((mutations) => {
         // 留 3 秒钟让他们把图看清，笑出来，然后再平滑地踢回主页
         setTimeout(() => {
             window.location.href = siteRoot;
-        }, 5000);
+        }, 3000);
     }
 });
 
