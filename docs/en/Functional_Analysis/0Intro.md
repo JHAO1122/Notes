@@ -36,6 +36,9 @@ The following notes are continuously being updated:
 * [x] [Chapter 2: Topology and Completeness](2completeness.md)
 
 * [x] [Chapter 3: Compactness](3compactness.md)
+
+* [x] [Chapter 4: Contraction Mapping Theorem](4CMT.md)
+
 ---
 
 ## 📝 About the Notes
