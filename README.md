@@ -9,7 +9,7 @@ Welcome to my personal academic space. This is a **Personal Notes Base** built w
 
 ## 🗺️ Site Map
 
-Currently, [the site](https://jhao1122.github.io/Notes/) is divided into four core sections:
+Currently, [the site](https://jhao1122.github.io/Notes/) is divided into **five** core sections:
 
 ### 📚 Notes Base
 
@@ -22,9 +22,8 @@ Currently, [the site](https://jhao1122.github.io/Notes/) is divided into four co
 
 * **[In Progress] [Functional Analysis](https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/)**
 
-### ✒️ [Essays](https://jhao1122.github.io/Notes/blog/)
+  * Covers metric spaces, completeness, linear operators on Banach and Hilbert spaces, and the "Big Four" theorems (Hahn-Banach, Open Mapping, Closed Graph, and Uniform Boundedness).
 
-This is a place for passion and sentiment. No formulas, no derivations. For academic content, please refer to the Notes Base.
 
 ### 🛠️ [Quick Reference](https://jhao1122.github.io/Notes/reference/)
 
@@ -32,7 +31,15 @@ A personal repository of foundational concepts in Mathematics and Statistics tha
 
 ### 🛰️ [Research Frontier](https://jhao1122.github.io/Notes/research/arxiv_papers/)
 
-An automated gateway to the latest academic breakthroughs. Updated daily at 08:00 (UTC+8) via GitHub Actions, this section tracks the pulse of Knockoff Filters and Conformal Prediction within the stat.* domain, ensuring I stay synchronized with the frontier of high-dimensional inference
+An automated gateway to the latest academic breakthroughs. Updated daily at 08:00 (UTC+8) via GitHub Actions, this section tracks the pulse of Knockoff Filters and Conformal Prediction within the stat.* domain, ensuring I stay synchronized with the frontier of high-dimensional inference.
+
+### 🎤 [Lectures & Talks](https://jhao1122.github.io/Notes/Lectures/)
+
+"If you can't explain it simply, you don't understand it well enough." This section archives my presentation notes and slides from seminars and group meetings since my undergraduate years.
+
+### ✒️ [Blogs](https://jhao1122.github.io/Notes/blog/)
+
+This is a place for passion and sentiment. No formulas, no derivations. For academic content, please refer to the Notes Base.
 
 ---
 
