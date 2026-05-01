@@ -83,6 +83,10 @@ plugins:
             "第二章：拓扑与完备性": "Ch 2: Topology and Completeness"
             "第三章：紧性": "Ch 3: Compactness"
             "第四章：压缩映射定理": "Ch 4: Contraction Mapping Theorem"
+            "第五章：赋范线性空间": "Ch 5: Normed Linear Spaces"
+            "第六章：巴拿赫空间": "Ch 6: Banach Spaces"
+            "第七章：希尔伯特空间": "Ch 7: Hilbert Spaces"
+            "第八章：希尔伯特空间理论": "Ch 8: Hilbert Space Theory"
             "🛠️ 知识速查": "🛠️ Quick Reference"
             "🛠️ 速查": "🛠️ Quick Reference"
             "📊 数理统计": "📊 Mathematical Statistics"
@@ -154,6 +158,10 @@ nav:
               - 第二章：拓扑与完备性: zh/Functional_Analysis/2completeness.md
               - 第三章：紧性: zh/Functional_Analysis/3compactness.md
               - 第四章：压缩映射定理: zh/Functional_Analysis/4CMT.md
+              - 第五章：赋范线性空间: zh/Functional_Analysis/5Linear.md
+              - 第六章：巴拿赫空间: zh/Functional_Analysis/6Banach.md
+              - 第七章：希尔伯特空间: zh/Functional_Analysis/7Hilbert.md
+              - 第八章：希尔伯特空间理论: zh/Functional_Analysis/8Hilbert.md
   - 🛠️ 知识速查:
       - 📖 概览: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
       - 🛠️ 速查:
