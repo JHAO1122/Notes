@@ -33,14 +33,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
         { id: "FA", parentId: "Analysis", label: isEn ? "Functional Analysis" : "泛函分析", radius: 15, color: colors.analysisSub, collapsed: true },
         { id: "AS", parentId: "Prob-Stat", label: isEn ? "Asymptotic Statistics" : "渐近统计", radius: 15, color: colors.probSub, collapsed: true },
+        
+        // ✨ LDP 节点更新：添加了跳转 URL，点击星星直接跳转
         { id: "LDP", parentId: "Prob-Stat", label: isEn ? "LDP Seminar" : "大偏差原理", radius: 15, color: colors.probSub, url: "Lectures/Course_Lectures/LDP/" },
+        
         { id: "SDE", parentId: "Prob-Stat", label: isEn ? "Stochastic Diff Eq" : "随机微分方程", radius: 15, color: colors.probSub, collapsed: true },
 
-        // 泛函的内部章节 (注意路径与 docs/zh/ 保持一致)
+        // 泛函的内部章节
         { id: "FA-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/0Intro/" },
         { id: "FA-Ch1", label: isEn ? "1. Metric Spaces" : "1.度量空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/1distance_space/" },
         { id: "FA-Ch2", label: isEn ? "2. Linear Operators" : "2.线性算子", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/2completeness/" },
         { id: "FA-Ch3", label: isEn ? "3. Compactness" : "3.紧性", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/3compactness/" },
+        { id: "FA-Ch4", label: isEn ? "4. Fixed Point Theorems" : "4.压缩映射定理", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/4CMT/" },
 
         // 渐近统计章节
         { id: "AS-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/0Intro/" },
@@ -52,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "AS-Ch6", label: isEn ? "6. Stationary Process" : "6.平稳过程", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/6Stantionary_process/" },
         { id: "AS-Ch7", label: isEn ? "7. Delta Method" : "7.Delta方法", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/7Delta_Method/" },
     
-        // 随机微分方程章节 (匹配你的 1conditional_expectation 等文件名)
+        // 随机微分方程章节
         { id: "SDE-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/0Intro/" },
         { id: "SDE-Ch1", label: isEn ? "1. Cond Expectation" : "1.条件期望", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/1conditional_expectation/" },
         { id: "SDE-Ch2", label: isEn ? "2. Brownian Motion" : "2.布朗运动", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/2Brown_Motion/" },
@@ -77,13 +81,14 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Analysis", target: "SDE" },
 
         { source: "FA", target: "FA-Intro" }, { source: "FA", target: "FA-Ch1" }, { source: "FA", target: "FA-Ch2" }, { source: "FA", target: "FA-Ch3" },
+        { source: "FA", target: "FA-Ch4" },
         { source: "AS", target: "AS-Intro" }, { source: "AS", target: "AS-Ch1" }, { source: "AS", target: "AS-Ch2" }, { source: "AS", target: "AS-Ch3" },
         { source: "AS", target: "AS-Ch4" }, { source: "AS", target: "AS-Ch5" }, { source: "AS", target: "AS-Ch6" }, { source: "AS", target: "AS-Ch7" },
         { source: "SDE", target: "SDE-Intro" }, { source: "SDE", target: "SDE-Ch1" }, { source: "SDE", target: "SDE-Ch2" }, { source: "SDE", target: "SDE-Ch3" },
         { source: "SDE", target: "SDE-Ch4" }, { source: "SDE", target: "SDE-Ch5" }, { source: "SDE", target: "SDE-Ch6" }, { source: "SDE", target: "SDE-Ch7" }
     ];
 
-    // --- 2. 绘图逻辑 (D3.js 代码，适配路径跳转) ---
+    // --- 2. 绘图逻辑 ---
     const svg = d3.select("#starry-map").append("svg")
         .attr("width", "100%")
         .attr("height", "100%")
@@ -140,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function() {
             .call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended))
             .on("click", (event, d) => {
                 if (d.url) { 
-                    // 跳转逻辑：直接跳转至当前 zh/ 或 en/ 文件夹下的子页面
                     window.location.href = d.url; 
                 } 
                 else { d.collapsed = !d.collapsed; update(d); }
