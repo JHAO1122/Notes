@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const width = container.clientWidth;
     const height = container.clientHeight;
 
-    // 🌍 自动检测当前语言环境
+    // 🌍 自动检测当前语言环境 (zh 或 en)
     const isEn = window.location.pathname.includes('/en/');
 
     // --- 🌌 星云配色系统 (Nebula Palette) ---
@@ -21,11 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         applied: "#FF7F50",    // 应用与计算：珊瑚橙
     };
 
-    // 🛠️ 路径修正逻辑：如果是在 en/ 或 zh/ 子目录下，跳转路径需要返回上一级
-    const pathPrefix = "../";
-
     // --- 1. 定义整个宇宙的完整数据 ---
-    // id 为固定标识符，label 为显示的名称
     const allNodes = [
         { id: "Math-Core", label: isEn ? "Mathematical Sciences" : "数学科学", radius: 50, color: colors.core, collapsed: false },
 
@@ -37,34 +33,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
         { id: "FA", parentId: "Analysis", label: isEn ? "Functional Analysis" : "泛函分析", radius: 15, color: colors.analysisSub, collapsed: true },
         { id: "AS", parentId: "Prob-Stat", label: isEn ? "Asymptotic Statistics" : "渐近统计", radius: 15, color: colors.probSub, collapsed: true },
-        { id: "LDP", parentId: "Prob-Stat", label: isEn ? "LDP Seminar" : "大偏差原理", radius: 15, color: colors.probSub, collapsed: true },
+        { id: "LDP", parentId: "Prob-Stat", label: isEn ? "LDP Seminar" : "大偏差原理", radius: 15, color: colors.probSub, url: "Lectures/Course_Lectures/LDP/" },
         { id: "SDE", parentId: "Prob-Stat", label: isEn ? "Stochastic Diff Eq" : "随机微分方程", radius: 15, color: colors.probSub, collapsed: true },
 
-        // 泛函的内部章节
-        { id: "FA-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Functional_Analysis/0Intro/" },
-        { id: "FA-Ch1", label: isEn ? "1. Metric Spaces" : "1.度量空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Functional_Analysis/1distance_space/" },
-        { id: "FA-Ch2", label: isEn ? "2. Linear Operators" : "2.线性算子", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Functional_Analysis/2completeness/" },
-        { id: "FA-Ch3", label: isEn ? "3. Compactness" : "3.紧性", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Functional_Analysis/3compactness/" },
+        // 泛函的内部章节 (注意路径与 docs/zh/ 保持一致)
+        { id: "FA-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/0Intro/" },
+        { id: "FA-Ch1", label: isEn ? "1. Metric Spaces" : "1.度量空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/1distance_space/" },
+        { id: "FA-Ch2", label: isEn ? "2. Linear Operators" : "2.线性算子", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/2completeness/" },
+        { id: "FA-Ch3", label: isEn ? "3. Compactness" : "3.紧性", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/3compactness/" },
 
         // 渐近统计章节
-        { id: "AS-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/0Intro/" },
-        { id: "AS-Ch1", label: isEn ? "1. Convergence" : "1.随机收敛", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/1Stochastic_convergence/" },
-        { id: "AS-Ch2", label: isEn ? "2. Char Functions" : "2.特征函数", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/2asymptotic_efficiency/" },
-        { id: "AS-Ch3", label: isEn ? "3. CLT (I)" : "3.中心极限定理（一）", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/3CLT/" },
-        { id: "AS-Ch4", label: isEn ? "4. CLT (II)" : "4.中心极限定理（二）", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/4CLT/" },
-        { id: "AS-Ch5", label: isEn ? "5. Weak Dependence" : "5.弱相关数据", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/5Weakly_Dep/" },
-        { id: "AS-Ch6", label: isEn ? "6. Stationary Process" : "6.平稳过程", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/6Stantionary_process/" },
-        { id: "AS-Ch7", label: isEn ? "7. Delta Method" : "7.Delta方法", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Asymptotic-statistics/7Delta_Method/" },
+        { id: "AS-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/0Intro/" },
+        { id: "AS-Ch1", label: isEn ? "1. Convergence" : "1.随机收敛", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/1Stochastic_convergence/" },
+        { id: "AS-Ch2", label: isEn ? "2. Char Functions" : "2.特征函数", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/2asymptotic_efficiency/" },
+        { id: "AS-Ch3", label: isEn ? "3. CLT (I)" : "3.中心极限定理（一）", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/3CLT/" },
+        { id: "AS-Ch4", label: isEn ? "4. CLT (II)" : "4.中心极限定理（二）", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/4CLT/" },
+        { id: "AS-Ch5", label: isEn ? "5. Weak Dependence" : "5.弱相关数据", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/5Weakly_Dep/" },
+        { id: "AS-Ch6", label: isEn ? "6. Stationary Process" : "6.平稳过程", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/6Stantionary_process/" },
+        { id: "AS-Ch7", label: isEn ? "7. Delta Method" : "7.Delta方法", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/7Delta_Method/" },
     
-        // 随机微分方程章节
-        { id: "SDE-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/0Intro/" },
-        { id: "SDE-Ch1", label: isEn ? "1. Cond Expectation" : "1.条件期望", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/1conditional_expectation/" },
-        { id: "SDE-Ch2", label: isEn ? "2. Brownian Motion" : "2.布朗运动", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/2Brown_Motion/" },
-        { id: "SDE-Ch3", label: isEn ? "3. Stoch Integral" : "3.随机积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/3stochastic_integrate/" },
-        { id: "SDE-Ch4", label: isEn ? "4. Ito Integral" : "4.伊藤积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/4Ito_integrate/" },
-        { id: "SDE-Ch5", label: isEn ? "5. Multivariate Ito" : "5.多元伊藤积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/5SDEs/" },
-        { id: "SDE-Ch6", label: isEn ? "6. SDEs" : "6.随机微分方程", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/6SDEs/" },
-        { id: "SDE-Ch7", label: isEn ? "7. Option Pricing" : "7.欧式期权定价", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: pathPrefix + "Stochastic-Differential-Equation/7Option_Pricing/" }
+        // 随机微分方程章节 (匹配你的 1conditional_expectation 等文件名)
+        { id: "SDE-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/0Intro/" },
+        { id: "SDE-Ch1", label: isEn ? "1. Cond Expectation" : "1.条件期望", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/1conditional_expectation/" },
+        { id: "SDE-Ch2", label: isEn ? "2. Brownian Motion" : "2.布朗运动", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/2Brown_Motion/" },
+        { id: "SDE-Ch3", label: isEn ? "3. Stoch Integral" : "3.随机积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/3stochastic_integrate/" },
+        { id: "SDE-Ch4", label: isEn ? "4. Ito Integral" : "4.伊藤积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/4Ito_integrate/" },
+        { id: "SDE-Ch5", label: isEn ? "5. Multivariate Ito" : "5.多元伊藤积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/5SDEs/" },
+        { id: "SDE-Ch6", label: isEn ? "6. SDEs" : "6.随机微分方程", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/6SDEs/" },
+        { id: "SDE-Ch7", label: isEn ? "7. Option Pricing" : "7.欧式期权定价", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/7Option_Pricing/" }
     ];
 
     const allLinks = [
@@ -87,24 +83,24 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "SDE", target: "SDE-Ch4" }, { source: "SDE", target: "SDE-Ch5" }, { source: "SDE", target: "SDE-Ch6" }, { source: "SDE", target: "SDE-Ch7" }
     ];
 
-    // --- 2. 绘图逻辑 (已优化跳转和渲染) ---
+    // --- 2. 绘图逻辑 (D3.js 代码，适配路径跳转) ---
     const svg = d3.select("#starry-map").append("svg")
         .attr("width", "100%")
         .attr("height", "100%")
         .attr("viewBox", [0, 0, width, height]);
 
-    const linkGroup = svg.append("g").attr("stroke", "rgba(255,255,255,0.30)").attr("stroke-width", 2.5);
+    const linkGroup = svg.append("g").attr("stroke", "rgba(255,255,255,0.25)").attr("stroke-width", 2.2);
     const nodeGroup = svg.append("g");
 
     let simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(d => d.id).distance(d => {
             if (d.target.radius === 30) return 180;
-            if (d.target.radius === 15) return 120;
-            return 70;
+            if (d.target.radius === 15) return 110;
+            return 60;
         }))
-        .force("charge", d3.forceManyBody().strength(-350))
+        .force("charge", d3.forceManyBody().strength(-400))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collide", d3.forceCollide().radius(d => d.radius + 20));
+        .force("collide", d3.forceCollide().radius(d => d.radius + 25));
 
     function update(sourceNode) {
         const visibleNodes = [];
@@ -143,7 +139,10 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended))
             .on("click", (event, d) => {
-                if (d.url) { window.location.href = d.url; } 
+                if (d.url) { 
+                    // 跳转逻辑：直接跳转至当前 zh/ 或 en/ 文件夹下的子页面
+                    window.location.href = d.url; 
+                } 
                 else { d.collapsed = !d.collapsed; update(d); }
             });
 
@@ -154,18 +153,18 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("stroke-width", 2)
             .style("filter", "drop-shadow(0 0 10px rgba(255,255,255,0.2))")
             .on("mouseenter", function() {
-                d3.select(this).transition().duration(200).attr("r", d => d.radius * 1.3).style("filter", "drop-shadow(0 0 25px rgba(255,255,255,0.6))");
+                d3.select(this).transition().duration(200).attr("r", d => d.radius * 1.25).style("filter", "drop-shadow(0 0 25px rgba(255,255,255,0.6))");
             })
             .on("mouseleave", function() {
                 d3.select(this).transition().duration(200).attr("r", d => d.radius).style("filter", "drop-shadow(0 0 10px rgba(255,255,255,0.2))");
             });
 
         nodeEnter.append("text")
-            .text(d => d.label || d.id) // 优先使用 label
-            .attr("x", d => d.radius + 8)
+            .text(d => d.label || d.id)
+            .attr("x", d => d.radius + 10)
             .attr("y", 4)
             .style("fill", "#ecf0f1")
-            .style("font-size", d => d.radius < 10 ? "11px" : "13px")
+            .style("font-size", d => d.radius < 10 ? "11px" : "14px")
             .style("font-family", "'JetBrains Mono', 'PingFang SC', sans-serif")
             .style("text-shadow", "0 2px 4px rgba(0,0,0,0.8)");
 
@@ -185,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     update();
 
-    // 🌟 核心星球呼吸光晕动画
+    // 🌟 核心星球呼吸动画
     setTimeout(() => {
         const coreCircle = d3.select("#starry-map svg circle");
         if (!coreCircle.empty()) {
