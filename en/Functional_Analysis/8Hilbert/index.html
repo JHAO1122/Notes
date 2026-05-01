@@ -1,0 +1,3870 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/8Hilbert/">
+      
+      
+        <link rel="prev" href="../7Hilbert/">
+      
+      
+        <link rel="next" href="../../reference/">
+      
+      
+        
+          <link rel="alternate" href="../../../Functional_Analysis/8Hilbert/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Ch 8: Hilbert Space Theory - Jiahao's Academic Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-8-orthogonal-decomposition-and-hilbert-space-theory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jiahao's Academic Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ch 8: Hilbert Space Theory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="grey"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Functional_Analysis/8Hilbert/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  📚 Course Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  🛠️ Quick Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+          
+  
+  
+  🛰️ Research Updates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Lectures/" class="md-tabs__link">
+          
+  
+  
+  🎙️ Lectures & Talks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+  ✍️ Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jiahao's Academic Space
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Course Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Course Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 Stochastic Differential Equations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📈 Stochastic Differential Equations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Brownian Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Stochastic Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Itô Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Multivariate Itô Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Existence & Uniqueness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Option Pricing and Stopping Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Asymptotic Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📊 Asymptotic Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic Statistics Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Stochastic Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Characteristic Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Central Limit Theorem I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Central Limit Theorem II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Weakly Dependent Data I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Weakly Dependent Data II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Delta Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌌 Functional Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌌 Functional Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Analysis Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1distance_space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Distance Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Topology and Completeness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4CMT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Contraction Mapping Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Normed Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Banach Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Hilbert Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Hilbert Space Theory
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Hilbert Space Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-orthogonal-decomposition-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Orthogonal Decomposition Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-orthonormal-systems-and-fourier-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Orthonormal Systems and Fourier Coefficients
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Orthonormal Systems and Fourier Coefficients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-orthogonal-projection-onto-a-finite-dimensional-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Orthogonal Projection onto a Finite-Dimensional Subspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-classical-examples-of-orthonormal-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Classical Examples of Orthonormal Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bessels-inequality-and-riesz-fischer-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bessel's Inequality and Riesz-Fischer Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-completeness-and-totalness-of-orthonormal-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Completeness and Totalness of Orthonormal Systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gram-schmidt-orthogonalization-and-space-isomorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gram-Schmidt Orthogonalization and Space Isomorphism
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gram-Schmidt Orthogonalization and Space Isomorphism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#52-isometric-isomorphism-of-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Isometric Isomorphism of Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/prob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎲 Probability Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📏 Measure Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/linalg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 Linear Algebra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stochastic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛰️ Research Updates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛰️ Research Updates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/arxiv_papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Latest Papers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎙️ Lectures & Talks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎙️ Lectures & Talks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ Fundamental Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🏛️ Fundamental Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Course_Lectures/LDP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Deviation Principle (LDP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Paper Discussions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📑 Paper Discussions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Group Meetings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Group Meetings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Group_Seminars/derandomized_knockoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derandomized Knockoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✍️ Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ✍️ Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍃 碎碎念（介绍）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 往期博文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📁 往期博文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    男人的一生只哭十一次
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    何时收敛
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 🔵 红蓝温度
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔴 🔵 红蓝温度
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    序章:不只是一家俱乐部
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 羁绊
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔴 羁绊
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Follow/Blaugrana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polseres Blaugrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔵 溯源
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔵 溯源
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Trace/tito_messi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    百分百蒂托
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-orthogonal-decomposition-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Orthogonal Decomposition Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-orthonormal-systems-and-fourier-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Orthonormal Systems and Fourier Coefficients
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Orthonormal Systems and Fourier Coefficients">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-orthogonal-projection-onto-a-finite-dimensional-subspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Orthogonal Projection onto a Finite-Dimensional Subspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-classical-examples-of-orthonormal-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Classical Examples of Orthonormal Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bessels-inequality-and-riesz-fischer-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bessel's Inequality and Riesz-Fischer Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-completeness-and-totalness-of-orthonormal-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Completeness and Totalness of Orthonormal Systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gram-schmidt-orthogonalization-and-space-isomorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gram-Schmidt Orthogonalization and Space Isomorphism
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gram-Schmidt Orthogonalization and Space Isomorphism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#52-isometric-isomorphism-of-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Isometric Isomorphism of Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-8-orthogonal-decomposition-and-hilbert-space-theory">Chapter 8: Orthogonal Decomposition and Hilbert Space Theory</h1>
+<p>This chapter will deeply investigate the core topological properties of Hilbert spaces, focusing on the orthogonal decomposition theorem, orthonormal systems, Fourier expansion, and the isometric isomorphism between separable Hilbert spaces and the <span class="arithmatex">\(l^2\)</span> space.</p>
+<hr />
+<h2 id="1-orthogonal-decomposition-theorem">1. Orthogonal Decomposition Theorem</h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem 8.1 (Orthogonal Decomposition Theorem)</p>
+<p>Let <span class="arithmatex">\(M\)</span> be a closed subspace of a Hilbert space <span class="arithmatex">\(H\)</span>. Then for any element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(H\)</span>, there is the following unique orthogonal decomposition:</p>
+<div class="arithmatex">\[
+x = y + z, \quad y \in M, \quad z \in M^\perp
+\]</div>
+<p><span class="arithmatex">\(y\)</span> is called the orthogonal projection of <span class="arithmatex">\(x\)</span> onto <span class="arithmatex">\(M\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof: Existence and Uniqueness of Orthogonal Decomposition</summary>
+<p><strong>1. Existence:</strong>
+By assumption, <span class="arithmatex">\(M\)</span> is a closed subspace of <span class="arithmatex">\(H\)</span>, thus it is a closed convex set. 
+By the theorem from the previous chapter, there exists a unique best approximation element <span class="arithmatex">\(y\)</span> for <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(M\)</span>. Let <span class="arithmatex">\(\|x - y\| = \alpha\)</span>.</p>
+<ul>
+<li>
+<p>For a real Hilbert space: Since <span class="arithmatex">\(y \in M\)</span>, for any real number <span class="arithmatex">\(\lambda\)</span> and any element <span class="arithmatex">\(u \in M\)</span>, we have <span class="arithmatex">\(y + \lambda u \in M\)</span>.</p>
+</li>
+<li>
+<p>Therefore, the function <span class="arithmatex">\(\|-x + y + \lambda u\|^2\)</span> attains its minimum at <span class="arithmatex">\(\lambda = 0\)</span>.</p>
+</li>
+<li>
+<p>Taking the derivative with respect to <span class="arithmatex">\(\lambda\)</span>:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+0 = \frac{d}{d\lambda} \| -x + y + \lambda u \|^2 \Big|_{\lambda=0}
+\]</div>
+<div class="arithmatex">\[
+= \frac{d}{d\lambda} \left[ \|y - x\|^2 + \lambda(y - x, u) + \lambda(u, y - x) + \lambda^2\|u\|^2 \right] \Big|_{\lambda=0}
+\]</div>
+<div class="arithmatex">\[
+= (y - x, u) + (u, y - x) = 2(y - x, u)
+\]</div>
+<ul>
+<li>
+<p>Since <span class="arithmatex">\(u\)</span> is any element in <span class="arithmatex">\(M\)</span>, we have <span class="arithmatex">\(z = x - y \perp M\)</span>. Thus <span class="arithmatex">\(x = y + z\)</span>, with <span class="arithmatex">\(y \in M\)</span> and <span class="arithmatex">\(z \in M^\perp\)</span>.</p>
+</li>
+<li>
+<p>For a complex Hilbert space: Choose <span class="arithmatex">\(\lambda = -\frac{(y - x, u)}{\|u\|^2}\)</span>, and noting that <span class="arithmatex">\(\|x - y\| = \alpha\)</span>, we obtain:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\alpha^2 \le \|-x + y + \lambda u\|^2
+\]</div>
+<div class="arithmatex">\[
+= \|y - x\|^2 + \overline{\lambda}(y - x, u) + \lambda(u, y - x) + |\lambda|^2\|u\|^2
+\]</div>
+<div class="arithmatex">\[
+= \|y - x\|^2 + \lambda(u, y - x) + \overline{\lambda}[(y - x, u) + \lambda\|u\|^2]
+\]</div>
+<ul>
+<li>Substituting <span class="arithmatex">\(\lambda\)</span> and simplifying gives:</li>
+</ul>
+<div class="arithmatex">\[
+\alpha^2 \le \alpha^2 - \frac{|(y - x, u)|^2}{\|u\|^2}
+\]</div>
+<ul>
+<li>Therefore, it must be that <span class="arithmatex">\((y - x, u) = 0\)</span>. Hence <span class="arithmatex">\(z = x - y \in M^\perp\)</span>.</li>
+</ul>
+<p><strong>2. Uniqueness:</strong></p>
+<ul>
+<li>
+<p>Suppose there is another decomposition <span class="arithmatex">\(x = y' + z'\)</span>, where <span class="arithmatex">\(y' \in M\)</span>, <span class="arithmatex">\(z' \in M^\perp\)</span>.</p>
+</li>
+<li>
+<p>From <span class="arithmatex">\(y + z = y' + z'\)</span>, we get <span class="arithmatex">\(y - y' = z' - z\)</span>.</p>
+</li>
+<li>
+<p>Since <span class="arithmatex">\(y - y' \in M\)</span>, <span class="arithmatex">\(z' - z \in M^\perp\)</span>, and <span class="arithmatex">\(M \cap M^\perp = \{\theta\}\)</span> (if <span class="arithmatex">\(x \in M \cap M^\perp\)</span>, then <span class="arithmatex">\((x, x) = 0\)</span> implying <span class="arithmatex">\(x = \theta\)</span>),</p>
+</li>
+<li>
+<p>We have <span class="arithmatex">\(y - y' = z' - z = \theta\)</span>. Therefore <span class="arithmatex">\(y = y'\)</span>, <span class="arithmatex">\(z = z'\)</span>. The orthogonal decomposition is unique. <span class="arithmatex">\(\square\)</span></p>
+</li>
+</ul>
+</details>
+<hr />
+<h2 id="2-orthonormal-systems-and-fourier-coefficients">2. Orthonormal Systems and Fourier Coefficients</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 8.1 (Orthonormal System)</p>
+<p>Let <span class="arithmatex">\(\{e_n\}\)</span> be a system of elements in an inner product space satisfying:</p>
+<div class="arithmatex">\[
+(e_n, e_m) = \begin{cases} 0, &amp; n \neq m \\ 1, &amp; n = m \end{cases}
+\]</div>
+<p>Then <span class="arithmatex">\(\{e_n\}\)</span> is called an <strong>orthonormal system</strong> in <span class="arithmatex">\(H\)</span>. </p>
+<p>For any element <span class="arithmatex">\(x \in H\)</span>, <span class="arithmatex">\(c_n = (x, e_n)\)</span> is called the <span class="arithmatex">\(n\)</span>-th <strong>Fourier coefficient</strong> of <span class="arithmatex">\(x\)</span> with respect to <span class="arithmatex">\(\{e_n\}\)</span>, simply referred to as the Fourier coefficient, and <span class="arithmatex">\(\{(x, e_n)\}\)</span> is the Fourier coefficient set of <span class="arithmatex">\(x\)</span>.</p>
+</div>
+<h3 id="21-orthogonal-projection-onto-a-finite-dimensional-subspace">2.1 Orthogonal Projection onto a Finite-Dimensional Subspace</h3>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>Let <span class="arithmatex">\(n\)</span> be a given natural number, <span class="arithmatex">\(\{e_1, \dots, e_n\}\)</span> be an orthonormal system in an inner product space, and <span class="arithmatex">\(M\)</span> be the subspace spanned by <span class="arithmatex">\(\{e_1, \dots, e_n\}\)</span>. Then for any given <span class="arithmatex">\(x \in H\)</span>, the orthogonal projection of <span class="arithmatex">\(x\)</span> onto <span class="arithmatex">\(M\)</span> is:</p>
+<div class="arithmatex">\[
+y = \sum_{k=1}^n (x, e_k)e_k
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<ul>
+<li>
+<p>By the orthogonal decomposition theorem, any element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(H\)</span> has a unique orthogonal decomposition <span class="arithmatex">\(x = y + z\)</span>, where <span class="arithmatex">\(y \in M\)</span>, <span class="arithmatex">\(z \in M^\perp\)</span>.</p>
+</li>
+<li>
+<p>Then we have:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+y = \sum_{k=1}^n (y, e_k)e_k = \sum_{k=1}^n (x, e_k)e_k - \sum_{k=1}^n (z, e_k)e_k = \sum_{k=1}^n (x, e_k)e_k
+\]</div>
+<ul>
+<li>(Because <span class="arithmatex">\(z \in M^\perp\)</span>, so <span class="arithmatex">\((z, e_k) = 0\)</span>) <span class="arithmatex">\(\square\)</span></li>
+</ul>
+</details>
+<h3 id="22-classical-examples-of-orthonormal-systems">2.2 Classical Examples of Orthonormal Systems</h3>
+<ul>
+<li>
+<p><strong>Space <span class="arithmatex">\(L^2[0, 2\pi]\)</span></strong>: The function system <span class="arithmatex">\(\{ \frac{1}{\sqrt{2\pi}} e^{int} \}\)</span> (<span class="arithmatex">\(n = 0, \pm 1, \pm 2, \dots\)</span>) is an orthonormal system.</p>
+<ul>
+<li>Proof: When <span class="arithmatex">\(n \neq m\)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+\left( \frac{1}{\sqrt{2\pi}} e^{int}, \frac{1}{\sqrt{2\pi}} e^{imt} \right) = \frac{1}{2\pi} \int_0^{2\pi} e^{i(n-m)t} dt = \frac{1}{2\pi i(n-m)} e^{i(n-m)t} \Big|_0^{2\pi} = 0
+\]</div>
+</li>
+<li>
+<p><strong>Space <span class="arithmatex">\(l^2\)</span></strong>: The system of elements <span class="arithmatex">\(e_n = (0, \dots, 0, 1, 0, \dots)\)</span> (where the <span class="arithmatex">\(n\)</span>-th position is 1) is an orthonormal system of <span class="arithmatex">\(l^2\)</span>.</p>
+</li>
+<li>
+<p><strong>Space <span class="arithmatex">\(L^2([-1,1]; \frac{1}{\sqrt{1-t^2}})\)</span> and Chebyshev Polynomials</strong>: Consider the function system <span class="arithmatex">\(T_n(t) = \cos(n \arccos t)\)</span>, where <span class="arithmatex">\(t \in [-1,1]\)</span>.</p>
+<ul>
+<li>
+<p>Substituting <span class="arithmatex">\(\theta = \arccos t\)</span> into the identity <span class="arithmatex">\(\cos n\theta + \cos(n-2)\theta = 2 \cos \theta \cos(n-1)\theta\)</span>, we get the recurrence formula <span class="arithmatex">\(T_n(t) = 2t T_{n-1}(t) - T_{n-2}(t)\)</span>.</p>
+</li>
+<li>
+<p>From <span class="arithmatex">\(T_0(t)=1, T_1(t)=t\)</span> and the recurrence formula, we have <span class="arithmatex">\(T_2(t)=2t^2-1, T_3(t)=4t^3-3t\)</span>. Using mathematical induction, it can be proven that <span class="arithmatex">\(T_n(t)\)</span> is indeed a polynomial of degree <span class="arithmatex">\(n\)</span> (Chebyshev polynomial of the first kind).</p>
+</li>
+<li>
+<p>Note that <span class="arithmatex">\(t = \cos \theta\)</span>. When <span class="arithmatex">\(n \neq m\)</span>:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_{-1}^1 \frac{T_n(t)T_m(t)}{\sqrt{1-t^2}} dt = \int_0^\pi \cos n\theta \cdot \cos m\theta \, d\theta = 0
+\]</div>
+<ul>
+<li>When <span class="arithmatex">\(n = m\)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+\int_{-1}^1 \frac{T_n(t)^2}{\sqrt{1-t^2}} dt = \int_0^\pi \cos^2 n\theta \, d\theta = \begin{cases} \frac{\pi}{2}, &amp; n \neq 0 \\ \pi, &amp; n = 0 \end{cases}
+\]</div>
+<ul>
+<li>Thus, we can normalize to construct the orthonormal system <span class="arithmatex">\(\tilde{T}_n(t)\)</span>, where the coefficient is <span class="arithmatex">\(\sqrt{\frac{2}{\pi}}\)</span> for <span class="arithmatex">\(n \ge 1\)</span> and <span class="arithmatex">\(\sqrt{\frac{1}{\pi}}\)</span> for <span class="arithmatex">\(n=0\)</span>.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="3-bessels-inequality-and-riesz-fischer-theorem">3. Bessel's Inequality and Riesz-Fischer Theorem</h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem 8.2 (Bessel's Inequality)</p>
+<p>Let <span class="arithmatex">\(\{e_n\}\)</span> be an orthonormal system in an inner product space. Then for any <span class="arithmatex">\(x \in H\)</span>, the following holds:</p>
+<div class="arithmatex">\[
+\sum_{k=1}^\infty |(x, e_k)|^2 \le \|x\|^2
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<ul>
+<li>
+<p>For any <span class="arithmatex">\(x \in H\)</span>, by the previous corollary, for any given natural number <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(y = \sum_{k=1}^n (x, e_k)e_k\)</span> is the orthogonal projection of <span class="arithmatex">\(x\)</span> onto the subspace spanned by <span class="arithmatex">\(\{e_1, \dots, e_n\}\)</span>.</p>
+</li>
+<li>
+<p>Thus <span class="arithmatex">\(x = y + z\)</span>, where <span class="arithmatex">\(y \perp z\)</span>. This immediately implies <span class="arithmatex">\(\|y\| \le \|x\|\)</span>, meaning:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{k=1}^n |(x, e_k)|^2 \le \|x\|^2
+\]</div>
+<ul>
+<li>Letting <span class="arithmatex">\(n \to \infty\)</span>, we obtain Bessel's inequality. <span class="arithmatex">\(\square\)</span></li>
+</ul>
+</details>
+<p>From Bessel's inequality, we know that the sequence composed of the Fourier coefficients of any element with respect to an orthonormal system must belong to <span class="arithmatex">\(l^2\)</span>. Conversely, we have the following theorem:</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 8.3 (Riesz-Fischer Theorem)</p>
+<p>Let <span class="arithmatex">\(\{e_n\}\)</span> be an orthonormal system in a Hilbert space, and let the sequence <span class="arithmatex">\(\{c_n\} \in l^2\)</span>. Then there exists an element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(H\)</span> such that <span class="arithmatex">\(\{c_n\}\)</span> is the Fourier coefficient set of this element with respect to <span class="arithmatex">\(\{e_n\}\)</span>, and the following <strong>Parseval's formula</strong> holds:</p>
+<div class="arithmatex">\[
+\sum_{k=1}^\infty |(x, e_k)|^2 = \|x\|^2
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<ul>
+<li>Let <span class="arithmatex">\(x_n = \sum_{k=1}^n c_k e_k\)</span>. Suppose natural numbers <span class="arithmatex">\(m, n\)</span> satisfy <span class="arithmatex">\(m &gt; n\)</span>.</li>
+</ul>
+<div class="arithmatex">\[
+\|x_m - x_n\|^2 = \left\| \sum_{k=n+1}^m c_k e_k \right\|^2 = \sum_{k=n+1}^m |c_k|^2
+\]</div>
+<ul>
+<li>
+<p>Since <span class="arithmatex">\(\{c_n\} \in l^2\)</span>, as <span class="arithmatex">\(m, n \to \infty\)</span>, the tail series <span class="arithmatex">\(\sum_{k=n+1}^m |c_k|^2 \to 0\)</span>.</p>
+</li>
+<li>
+<p>Therefore <span class="arithmatex">\(\|x_m - x_n\| \to 0\)</span>. Thus <span class="arithmatex">\(\{x_n\}\)</span> is a Cauchy sequence in <span class="arithmatex">\(H\)</span>.</p>
+</li>
+<li>
+<p>Since <span class="arithmatex">\(H\)</span> is complete, there exists an element <span class="arithmatex">\(x \in H\)</span> such that <span class="arithmatex">\(x_n \to x\)</span>. By the continuity of the inner product, for any given natural number <span class="arithmatex">\(k_0\)</span>, we have:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+(x_n, e_{k_0}) \to (x, e_{k_0})
+\]</div>
+<ul>
+<li>
+<p>On the other hand, when <span class="arithmatex">\(n \ge k_0\)</span>, <span class="arithmatex">\((x_n, e_{k_0}) = \left(\sum_{k=1}^n c_k e_k, e_{k_0}\right) = c_{k_0}\)</span>.</p>
+</li>
+<li>
+<p>So <span class="arithmatex">\((x, e_{k_0}) = c_{k_0}\)</span>. Since <span class="arithmatex">\(k_0\)</span> is arbitrarily given, <span class="arithmatex">\(\{c_n\}\)</span> is exactly the Fourier coefficient set of the element <span class="arithmatex">\(x\)</span>.</p>
+</li>
+<li>
+<p>Furthermore, let:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{k=1}^n |(x, e_k)|^2 = \|x_n\|^2
+\]</div>
+<ul>
+<li>As <span class="arithmatex">\(n \to \infty\)</span>, Parseval's formula holds. <span class="arithmatex">\(\square\)</span></li>
+</ul>
+</details>
+<hr />
+<h2 id="4-completeness-and-totalness-of-orthonormal-systems">4. Completeness and Totalness of Orthonormal Systems</h2>
+<p>Parseval's identity may not always hold for all elements because the elements in <span class="arithmatex">\(\{e_n\}\)</span> might "not be enough". If there are "enough" elements, Parseval's identity might hold for all elements.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 8.2 (Complete and Total)</p>
+<ul>
+<li>
+<p><strong>Complete</strong>: If for every <span class="arithmatex">\(x \in H\)</span>, Parseval's identity <span class="arithmatex">\(\sum_{k=1}^\infty |(x, e_k)|^2 = \|x\|^2\)</span> holds identically, then <span class="arithmatex">\(\{e_n\}\)</span> is said to be complete.</p>
+</li>
+<li>
+<p><strong>Total</strong>: If for every <span class="arithmatex">\(x \in H\)</span>, <span class="arithmatex">\((x, e_k) = 0\)</span> <span class="arithmatex">\((k=1,2,\dots)\)</span> implies <span class="arithmatex">\(x = \theta\)</span>, then <span class="arithmatex">\(\{e_n\}\)</span> is said to be total.</p>
+</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 8.4</p>
+<p>Let <span class="arithmatex">\(\{e_n\}\)</span> be an orthonormal system in a Hilbert space. Then the following properties are equivalent:</p>
+<ul>
+<li>
+<p>(i) <span class="arithmatex">\(\{e_n\}\)</span> is complete;</p>
+</li>
+<li>
+<p>(ii) For any element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(H\)</span>, the series converges in norm to <span class="arithmatex">\(x\)</span>, i.e., <span class="arithmatex">\(x = \sum_{k=1}^\infty (x, e_k)e_k\)</span>;</p>
+</li>
+<li>
+<p>(iii) For any two elements <span class="arithmatex">\(x, y\)</span> in <span class="arithmatex">\(H\)</span>, the generalized Parseval's identity holds: <span class="arithmatex">\((x, y) = \sum_{k=1}^\infty (x, e_k)\overline{(y, e_k)}\)</span>, and the right side converges absolutely;</p>
+</li>
+<li>
+<p>(iv) <span class="arithmatex">\(\{e_n\}\)</span> is total.</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Proof: Equivalence of the Four Properties</summary>
+<ul>
+<li><strong>(i) <span class="arithmatex">\(\implies\)</span> (ii)</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+\left\|x - \sum_{k=1}^n (x, e_k)e_k\right\|^2 = \|x\|^2 - \sum_{k=1}^n |(x, e_k)|^2
+\]</div>
+<ul>
+<li>Taking the limit based on the completeness assumption (Parseval's identity), we get:</li>
+</ul>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \left\|x - \sum_{k=1}^n (x, e_k)e_k\right\|^2 = 0
+\]</div>
+<ul>
+<li>
+<p><strong>(ii) <span class="arithmatex">\(\implies\)</span> (iii)</strong>: For any two elements <span class="arithmatex">\(x, y\)</span>, let <span class="arithmatex">\(x_n = \sum_{k=1}^n (x, e_k)e_k\)</span> and <span class="arithmatex">\(y_n = \sum_{k=1}^n (y, e_k)e_k\)</span>.</p>
+</li>
+<li>
+<p>Noting the orthogonality of <span class="arithmatex">\(\{e_n\}\)</span>, we have:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+(x_n, y_n) = \sum_{k=1}^n (x, e_k)\overline{(y, e_k)}
+\]</div>
+<ul>
+<li>From (ii), <span class="arithmatex">\(x_n \to x, y_n \to y\)</span>. By the continuity of the inner product:</li>
+</ul>
+<div class="arithmatex">\[
+(x, y) = \lim_{n \to \infty} (x_n, y_n) = \sum_{k=1}^\infty (x, e_k)\overline{(y, e_k)}
+\]</div>
+<ul>
+<li>
+<p>By Bessel's inequality, the sequence formed by the Fourier coefficients belongs to <span class="arithmatex">\(l^2\)</span>, so the series on the right side converges absolutely.</p>
+</li>
+<li>
+<p><strong>(iii) <span class="arithmatex">\(\implies\)</span> (iv)</strong>: Suppose <span class="arithmatex">\(x \in H\)</span> satisfies <span class="arithmatex">\((x, e_k) = 0\)</span> <span class="arithmatex">\((k=1,2,\dots)\)</span>. From (iii), for any <span class="arithmatex">\(y \in H\)</span>, we have <span class="arithmatex">\((x, y) = 0\)</span>.</p>
+</li>
+<li>
+<p>Letting <span class="arithmatex">\(y = x\)</span> gives <span class="arithmatex">\((x, x) = 0\)</span>. Therefore <span class="arithmatex">\(x = \theta\)</span>.</p>
+</li>
+<li>
+<p><strong>(iv) <span class="arithmatex">\(\implies\)</span> (i)</strong>: By Bessel's inequality, <span class="arithmatex">\(\{(x, e_k)\} \in l^2\)</span>. By the Riesz-Fischer Theorem, there exists <span class="arithmatex">\(y\)</span> such that <span class="arithmatex">\(\{(x, e_k)\}\)</span> is the Fourier coefficient set of <span class="arithmatex">\(y\)</span>, and <span class="arithmatex">\(\sum |(x, e_k)|^2 = \|y\|^2\)</span>.</p>
+</li>
+<li>
+<p>Notice that <span class="arithmatex">\(\{(x, e_k)\}\)</span> are also the Fourier coefficients of <span class="arithmatex">\(x\)</span>, thus <span class="arithmatex">\((x-y, e_k) = 0\)</span>. By the totality assumption of (iv), this implies <span class="arithmatex">\(x - y = \theta\)</span>, i.e., <span class="arithmatex">\(x=y\)</span>.</p>
+</li>
+<li>
+<p>Therefore, Parseval's identity of (i) holds: <span class="arithmatex">\(\sum_{k=1}^\infty |(x, e_k)|^2 = \|x\|^2\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</li>
+</ul>
+</details>
+<ul>
+<li>
+<p><strong>Corollary 1</strong>: The element that makes Parseval's identity hold in the theorem is unique.</p>
+<ul>
+<li>(Proof sketch: If both <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(x'\)</span> satisfy it, the series expansion in (ii) shows <span class="arithmatex">\(x = x'\)</span>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Corollary 2</strong>: If there exists a complete orthonormal system in an inner product space, then the space is separable.</p>
+<ul>
+<li>(Proof sketch: Due to completeness, the subspace spanned by the orthogonal system is dense. Linear combinations with rational coefficients form a countable and dense set, thus it is separable).</li>
+</ul>
+</li>
+<li>
+<p><strong>Corollary 3</strong>: An equivalent condition to prove that an orthonormal system is complete is: the closed subspace generated by <span class="arithmatex">\(\{e_k\}\)</span> is the entire space.</p>
+<ul>
+<li>(Proof sketch: Utilize the property that orthogonal projection is the best approximation element in a finite-dimensional space, and bound the distance to show it approaches 0).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="5-gram-schmidt-orthogonalization-and-space-isomorphism">5. Gram-Schmidt Orthogonalization and Space Isomorphism</h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem 8.5 (Gram-Schmidt Orthogonalization Theorem)</p>
+<p>Let <span class="arithmatex">\(\{x_n\}\)</span> be a countable subset in an inner product space. Then a complete orthonormal system <span class="arithmatex">\(\{e_n\}\)</span> can be constructed from <span class="arithmatex">\(\{x_n\}\)</span> such that the subspace spanned by it is identical to the subspace spanned by <span class="arithmatex">\(\{x_n\}\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof: Orthogonalization Construction Process</summary>
+<ul>
+<li>
+<p>Assume <span class="arithmatex">\(x_1\)</span> is the first non-zero element. Let <span class="arithmatex">\(e_1 = \frac{x_1}{\|x_1\|}\)</span>, then <span class="arithmatex">\(\|e_1\| = 1\)</span>.</p>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(x_2\)</span> be the first element linearly independent of <span class="arithmatex">\(e_1\)</span>. Let <span class="arithmatex">\(h_2 = x_2 - (x_2, e_1)e_1\)</span>.</p>
+</li>
+<li>
+<p>Then <span class="arithmatex">\(h_2 \neq 0\)</span> (otherwise linearly dependent), and it is easy to prove <span class="arithmatex">\(h_2 \perp e_1\)</span>. Let <span class="arithmatex">\(e_2 = \frac{h_2}{\|h_2\|}\)</span>.</p>
+</li>
+<li>
+<p>Assume that mutually orthogonal elements <span class="arithmatex">\(e_1, \dots, e_{k-1}\)</span> with norm 1 have been constructed. Let <span class="arithmatex">\(x_k\)</span> be the first element linearly independent of them. Let:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+h_k = x_k - \sum_{j=1}^{k-1} (x_k, e_j)e_j
+\]</div>
+<ul>
+<li>
+<p>Then <span class="arithmatex">\(h_k \neq 0\)</span> and <span class="arithmatex">\(h_k \perp e_j\)</span>. Let <span class="arithmatex">\(e_k = \frac{h_k}{\|h_k\|}\)</span>.</p>
+</li>
+<li>
+<p>By induction, an orthonormal system with at most countably many elements is obtained.</p>
+</li>
+<li>
+<p>From the construction process, each <span class="arithmatex">\(e_k\)</span> can be linearly expressed by <span class="arithmatex">\(x_1, \dots, x_k\)</span>, and conversely, each <span class="arithmatex">\(x_k\)</span> can be linearly expressed by <span class="arithmatex">\(e_1, \dots, e_k\)</span>. Hence the subspaces spanned by both are exactly the same. <span class="arithmatex">\(\square\)</span></p>
+</li>
+</ul>
+</details>
+<p>From the above orthogonalization theorem, an important conclusion follows directly: <strong>Any separable inner product space must possess a complete orthonormal system.</strong> ### 5.1 <span class="arithmatex">\(L^2(\mathbb{R}; e^{-t^2})\)</span> and Hermite Polynomials</p>
+<ul>
+<li>
+<p>The function family <span class="arithmatex">\(\{1, t, t^2, \dots\}\)</span> belongs to the weighted space <span class="arithmatex">\(L^2(\mathbb{R}; e^{-t^2})\)</span>. Denote the weight function as <span class="arithmatex">\(\omega(t) = e^{-t^2}\)</span>.</p>
+<ul>
+<li>
+<p>Taking higher-order derivatives of <span class="arithmatex">\(\omega(t)\)</span>, by mathematical induction it can be proven that <span class="arithmatex">\(\omega^{(n)}(t) = y_n(t)e^{-t^2}\)</span>, where <span class="arithmatex">\(y_n(t)\)</span> is a polynomial of degree <span class="arithmatex">\(n\)</span> with the highest order term's coefficient being <span class="arithmatex">\((-2)^n\)</span>.</p>
+</li>
+<li>
+<p>For any polynomial <span class="arithmatex">\(u(t)\)</span> of degree less than <span class="arithmatex">\(n\)</span>, applying integration by parts multiple times yields:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_{-\infty}^{+\infty} y_n(t)e^{-t^2} u(t) dt = \int_{-\infty}^{+\infty} \omega^{(n)}(t)u(t) dt = \dots = (-1)^n \int_{-\infty}^{+\infty} \omega(t)u^{(n)}(t) dt = 0
+\]</div>
+<ul>
+<li>
+<p>This shows that <span class="arithmatex">\(y_n(t)\)</span> is orthogonal to all polynomials of lower degree, meaning it is the product of the orthogonalization of <span class="arithmatex">\(\{1, t, t^2, \dots\}\)</span>.</p>
+</li>
+<li>
+<p>Normalization: Calculating the norm yields <span class="arithmatex">\(\|y_n\|^2 = 2^n n! \sqrt{\pi}\)</span>.</p>
+</li>
+<li>
+<p>Letting <span class="arithmatex">\(H_n(t) = \frac{y_n(t)}{\|y_n\|}\)</span>, we obtain the famous <strong>Hermite Polynomial</strong> orthonormal system. It can be expressed as:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+H_n(t) = \frac{1}{(2^n n! \sqrt{\pi})^{\frac{1}{2}}} e^{t^2} \frac{d^n}{dt^n}(e^{-t^2})
+\]</div>
+<ul>
+<li>Because the polynomial system is dense, this constitutes a complete orthonormal system.</li>
+</ul>
+</li>
+</ul>
+<h3 id="52-isometric-isomorphism-of-spaces">5.2 Isometric Isomorphism of Spaces</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 8.6</p>
+<p><strong>Every real (or complex) separable Hilbert space is isometrically isomorphic to the real (or complex) <span class="arithmatex">\(l^2\)</span> space.</strong> Therefore, all separable Hilbert spaces are necessarily isometrically isomorphic to each other.</p>
+</div>
+<details class="proof">
+<summary>Proof: Construction of the Isomorphic Mapping</summary>
+<ul>
+<li>
+<p>Let <span class="arithmatex">\(H\)</span> be a separable Hilbert space, and <span class="arithmatex">\(\{e_n\}\)</span> be a complete orthonormal system. Define the mapping <span class="arithmatex">\(T: H \to l^2\)</span> as <span class="arithmatex">\(Tx = \{c_n\}\)</span>, where <span class="arithmatex">\(\{c_n\}\)</span> is the Fourier coefficient set of <span class="arithmatex">\(x\)</span>.</p>
+</li>
+<li>
+<p><strong>Linearity</strong>: <span class="arithmatex">\(T(\alpha x + \beta y) = \{\alpha c_n + \beta c_n'\} = \alpha Tx + \beta Ty\)</span>.</p>
+</li>
+<li>
+<p><strong>Isometry</strong>: By Parseval's identity, <span class="arithmatex">\(\|x\|^2 = \sum |c_n|^2 = \|Tx\|^2\)</span>, so <span class="arithmatex">\(T\)</span> is an isometric homomorphic mapping. </p>
+</li>
+<li>
+<p><strong>Injectivity</strong>: If <span class="arithmatex">\(Tx = \{0,0,\dots\}\)</span>, totality deduces <span class="arithmatex">\(x = \theta\)</span>.</p>
+</li>
+<li>
+<p><strong>Surjectivity</strong>: For any <span class="arithmatex">\(\{c_n\} \in l^2\)</span>, by the Riesz-Fischer Theorem there exists a corresponding <span class="arithmatex">\(x \in H\)</span>, so <span class="arithmatex">\(T\)</span> is surjective. <span class="arithmatex">\(\square\)</span></p>
+</li>
+</ul>
+</details>
+<p>Because the properties of infinite-dimensional spaces are drastically different from finite-dimensional ones, for example, in <span class="arithmatex">\(l^2\)</span>, a bounded closed ball cannot be covered by a finite number of small open balls (the unit closed ball in infinite-dimensional spaces is not compact). </p>
+<hr />
+<h2 id="6-chapter-summary">6. Chapter Summary</h2>
+<ul>
+<li>
+<p>The inner product can induce a norm, thereby preserving the geometric and topological properties of Euclidean spaces and normed spaces. The inner product defines orthogonality, which is an extremely important structural feature in functional analysis.</p>
+</li>
+<li>
+<p>The orthogonal decomposition theorem guarantees that an element can find a unique projection in any closed subspace, which is the cornerstone for establishing the existence of orthonormal systems and related important conclusions.</p>
+</li>
+<li>
+<p>"Completeness" and "Totalness" are equivalent in separable Hilbert spaces; Bessel's inequality holds unconditionally, whereas Parseval's identity holds for all elements only when the orthonormal system is complete.</p>
+</li>
+<li>
+<p>Core conclusion: A complete orthonormal system exists in a separable Hilbert space, and all separable Hilbert spaces are isometrically isomorphic to each other. This is one of the most beautiful and fundamental facts in Hilbert space theory.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+
+  <h2 id="__comments">💬 Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="JHAO1122/Notes"
+        data-repo-id="R_kgDORuXyyw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORuXyy84C6uAS"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/security.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../../javascripts/starry_map.js"></script>
+      
+    
+  </body>
+</html>

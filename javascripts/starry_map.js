@@ -45,6 +45,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "FA-Ch2", label: isEn ? "2. Linear Operators" : "2.线性算子", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/2completeness/" },
         { id: "FA-Ch3", label: isEn ? "3. Compactness" : "3.紧性", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/3compactness/" },
         { id: "FA-Ch4", label: isEn ? "4. Fixed Point Theorems" : "4.压缩映射定理", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/4CMT/" },
+        { id: "FA-Ch5", label: isEn ? "5. Normed Spaces" : "5.赋范线性空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/5Linear/" },
+        { id: "FA-Ch6", label: isEn ? "6. Banach Spaces" : "6.巴拿赫空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/6Banach/" },
+        { id: "FA-Ch7", label: isEn ? "7. Hilbert Spaces" : "7.希尔伯特空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/7Hilbert/" },
+        { id: "FA-Ch8", label: isEn ? "8. Hilbert Spaces Theory" : "8.希尔伯特空间理论", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/8Hilbert/" },
 
         // 渐近统计章节
         { id: "AS-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/0Intro/" },
@@ -81,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Analysis", target: "SDE" },
 
         { source: "FA", target: "FA-Intro" }, { source: "FA", target: "FA-Ch1" }, { source: "FA", target: "FA-Ch2" }, { source: "FA", target: "FA-Ch3" },
-        { source: "FA", target: "FA-Ch4" },
+        { source: "FA", target: "FA-Ch4" }, { source: "FA", target: "FA-Ch5" }, { source: "FA", target: "FA-Ch6" }, { source: "FA", target: "FA-Ch7" },
+        { source: "FA", target: "FA-Ch8" },
         { source: "AS", target: "AS-Intro" }, { source: "AS", target: "AS-Ch1" }, { source: "AS", target: "AS-Ch2" }, { source: "AS", target: "AS-Ch3" },
         { source: "AS", target: "AS-Ch4" }, { source: "AS", target: "AS-Ch5" }, { source: "AS", target: "AS-Ch6" }, { source: "AS", target: "AS-Ch7" },
         { source: "SDE", target: "SDE-Intro" }, { source: "SDE", target: "SDE-Ch1" }, { source: "SDE", target: "SDE-Ch2" }, { source: "SDE", target: "SDE-Ch3" },
