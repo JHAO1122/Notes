@@ -104,7 +104,7 @@
 
 我不仅会和概率测度与统计方法打交道，我还是一个狂热的足球迷（Visca el Barça!）。我的人生清单之一是看一场西班牙或阿根廷的世界杯淘汰赛或者巴塞罗那在诺坎普球场的欧冠比赛。
 
-## 🌌 知识星图 (Knowledge Galaxy)
+## 🌌 数学星系 (Mathematical Galaxy)
 
 
 <div id="starry-map" style="width: 100%; height: 500px; background: #0b0e14; border-radius: 8px; cursor: move;"></div>

@@ -80,7 +80,7 @@ Mathematical derivations inevitably contain typos or blind spots. If you find an
 
 Beyond probability measures and statistical methods, I am a passionate football fan (*Visca el Barça!*). One of my bucket list items is to attend a World Cup knockout match involving Spain or Argentina, or a UEFA Champions League match featuring FC Barcelona at the Camp Nou.
 
-## 🌌 Knowledge Galaxy
+## 🌌 Mathematical Galaxy
 
 <div id="starry-map" style="width: 100%; height: 500px; background: #0b0e14; border-radius: 8px; cursor: move;"></div>
 

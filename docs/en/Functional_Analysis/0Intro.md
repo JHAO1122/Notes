@@ -39,6 +39,14 @@ The following notes are continuously being updated:
 
 * [x] [Chapter 4: Contraction Mapping Theorem](4CMT.md)
 
+* [x] [Chapter 5: Normed Linear Spaces](5Linear.md)
+
+* [x] [Chapter 6: Banach Spaces](6Banach.md)
+
+* [x] [Chapter 7: Inner Product Spaces](7Hilbert.md)
+
+* [x] [Chapter 8: Hilbert Space Theory](8Hilbert.md)
+
 ---
 
 ## 📝 About the Notes
