@@ -87,6 +87,15 @@ plugins:
             "第六章：巴拿赫空间": "Ch 6: Banach Spaces"
             "第七章：希尔伯特空间": "Ch 7: Hilbert Spaces"
             "第八章：希尔伯特空间理论": "Ch 8: Hilbert Space Theory"
+            "🍩 点集拓扑": "🍩 Point Set Topology"
+            "第一章：集合论": "Ch 1: Set Theory"
+            "第二章：可数集": "Ch 2: Countable Sets"
+            "第三章：函数与关系": "Ch 3: Functions and Relations"
+            "第四章：开集与拓扑": "Ch 4: Open Sets and Topology"
+            "第五章：诱导拓扑": "Ch 5: Induced Topology"
+            "第六章：连续与同胚": "Ch 6: Continuity and Homeomorphisms"
+            "第七章：连通性": "Ch 7: Connectedness"
+            "第八章：紧性": "Ch 8: Compactness"
             "🛠️ 知识速查": "🛠️ Quick Reference"
             "🛠️ 速查": "🛠️ Quick Reference"
             "📊 数理统计": "📊 Mathematical Statistics"
@@ -162,6 +171,17 @@ nav:
               - 第六章：巴拿赫空间: zh/Functional_Analysis/6Banach.md
               - 第七章：希尔伯特空间: zh/Functional_Analysis/7Hilbert.md
               - 第八章：希尔伯特空间理论: zh/Functional_Analysis/8Hilbert.md
+      - 🍩 点集拓扑:
+          - 点集拓扑课程概览: zh/Topology/0Intro.md
+          - 📖 笔记:
+              - 第一章：集合论: zh/Topology/1.md
+              - 第二章：可数集: zh/Topology/2.md
+              - 第三章：函数与关系: zh/Topology/2.md
+              - 第四章：开集与拓扑: zh/Topology/4.md
+              - 第五章：诱导拓扑: zh/Topology/5.md
+              - 第六章：连续与同胚: zh/Topology/6.md
+              - 第七章：连通性: zh/Topology/7.md
+              - 第八章：紧性: zh/Topology/8.md
   - 🛠️ 知识速查:
       - 📖 概览: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
       - 🛠️ 速查:
