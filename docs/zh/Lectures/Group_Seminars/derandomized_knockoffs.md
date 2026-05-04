@@ -248,6 +248,7 @@ Xk <- create.gaussian(X, mu, Sigma, diag_s = diags)
 3. **生成潜变量 Knockoff**：在转换后的高斯空间中，生成对应于潜变量 $\tilde{Z}$ 的高斯 Knockoff 变量。
 
 4. **逆变换回原空间**：最后通过逆变换将 Knockoff 变量映射回原特征的数据尺度：
+
    $$
    U_{ij}^{\tilde{Z}} = \Phi(\tilde{Z}_{ij}), \quad \tilde{X}_{ij} = \hat{F}_j^{-1}(U_{ij}^{\tilde{Z}})
    $$
