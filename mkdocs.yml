@@ -88,6 +88,7 @@ plugins:
             "第七章：希尔伯特空间": "Ch 7: Hilbert Spaces"
             "第八章：希尔伯特空间理论": "Ch 8: Hilbert Space Theory"
             "🍩 点集拓扑": "🍩 Point Set Topology"
+            "点集拓扑课程概览": "Point Set Topology Course Overview"
             "第一章：集合论": "Ch 1: Set Theory"
             "第二章：可数集": "Ch 2: Countable Sets"
             "第三章：函数与关系": "Ch 3: Functions and Relations"
@@ -176,7 +177,7 @@ nav:
           - 📖 笔记:
               - 第一章：集合论: zh/Topology/1.md
               - 第二章：可数集: zh/Topology/2.md
-              - 第三章：函数与关系: zh/Topology/2.md
+              - 第三章：函数与关系: zh/Topology/3.md
               - 第四章：开集与拓扑: zh/Topology/4.md
               - 第五章：诱导拓扑: zh/Topology/5.md
               - 第六章：连续与同胚: zh/Topology/6.md
