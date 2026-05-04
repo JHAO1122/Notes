@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // 点集拓扑全部章节
         { id: "Top-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/0Intro/" },
         { id: "Top-Ch1", label: isEn ? "1. Set Theory" : "1.集合论", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/1/" },
-        { id: "Top-Ch2", label: isEn ? "2. Countable Sets" : "2.可数集", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/2/" },
-        { id: "Top-Ch3", label: isEn ? "3. Functions and Relations" : "3.函数与关系", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/3/" },
+        { id: "Top-Ch2", label: isEn ? "2. Functions and Relations" : "2.函数与关系", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/2/" },
+        { id: "Top-Ch3", label: isEn ? "3. Countable Set" : "3.可数集", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/3/" },
         { id: "Top-Ch4", label: isEn ? "4. Open Sets and Topology" : "4.开集与拓扑", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/4/" },
         { id: "Top-Ch5", label: isEn ? "5. Induced Topology" : "5.诱导拓扑", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/5/" },
         { id: "Top-Ch6", label: isEn ? "6.Continuity and Homeomorphisms" : "6.连续与同胚", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/6/" },
