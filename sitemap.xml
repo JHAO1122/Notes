@@ -295,6 +295,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Topology/8/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Topology/temp_combined/</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Topology/temp_combined/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Topology/temp_combined/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/blog/</loc>
         <lastmod>2026-05-04</lastmod>
         <changefreq>daily</changefreq>
@@ -720,6 +727,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Topology/8/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Topology/8/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Topology/temp_combined/</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Topology/temp_combined/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Topology/temp_combined/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/blog/</loc>
