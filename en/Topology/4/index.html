@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#chapter-4-open-sets-and-topological-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -2052,10 +2052,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-open-and-closed-sets-in-metric-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 度量空间中的开集与闭集
+        1. Open and Closed Sets in Metric Spaces
       
     </span>
   </a>
@@ -2063,10 +2063,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-topological-characterization-of-continuity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 连续性的拓扑刻画
+        2. Topological Characterization of Continuity
       
     </span>
   </a>
@@ -2074,10 +2074,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-axiomatic-definition-of-general-topological-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 一般拓扑空间的公理化定义
+        3. Axiomatic Definition of General Topological Spaces
       
     </span>
   </a>
@@ -2088,7 +2088,7 @@
   <a href="#4-bases-for-a-topology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 拓扑的基 (Bases for a Topology)
+        4. Bases for a Topology
       
     </span>
   </a>
@@ -3648,10 +3648,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-open-and-closed-sets-in-metric-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 度量空间中的开集与闭集
+        1. Open and Closed Sets in Metric Spaces
       
     </span>
   </a>
@@ -3659,10 +3659,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-topological-characterization-of-continuity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 连续性的拓扑刻画
+        2. Topological Characterization of Continuity
       
     </span>
   </a>
@@ -3670,10 +3670,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-axiomatic-definition-of-general-topological-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 一般拓扑空间的公理化定义
+        3. Axiomatic Definition of General Topological Spaces
       
     </span>
   </a>
@@ -3684,7 +3684,7 @@
   <a href="#4-bases-for-a-topology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 拓扑的基 (Bases for a Topology)
+        4. Bases for a Topology
       
     </span>
   </a>
@@ -3712,133 +3712,133 @@
   
 
 
-<h1 id="_1">第四章：开集与拓扑结构</h1>
-<p>在前面的章节中，我们探讨了集合、映射以及距离空间的基本性质。本章将在此基础上，从度量空间中的开集出发，逐步剥离距离的概念，建立起一般拓扑空间的公理化体系，并重点讨论连续性的拓扑刻画以及拓扑基的构造方法。</p>
+<h1 id="chapter-4-open-sets-and-topological-structure">Chapter 4: Open Sets and Topological Structure</h1>
+<p>In previous chapters, we explored the basic properties of sets, mappings, and metric spaces. Based on this, this chapter will start from open sets in metric spaces, gradually stripping away the concept of distance to establish an axiomatic system for general topological spaces, with a focus on the topological characterization of continuity and the construction of bases for a topology.</p>
 <hr />
-<h2 id="1">1. 度量空间中的开集与闭集</h2>
-<p>在度量空间（或距离空间）中，一切拓扑性质的基础是“球”的概念。</p>
+<h2 id="1-open-and-closed-sets-in-metric-spaces">1. Open and Closed Sets in Metric Spaces</h2>
+<p>In metric spaces (or distance spaces), the foundation of all topological properties is the concept of a "ball."</p>
 <div class="admonition info">
-<p class="admonition-title">定义 4.1 (<span class="arithmatex">\(\epsilon\)</span>-球)</p>
-<p>设 <span class="arithmatex">\((S, d)\)</span> 为一个度量空间，对于任意的 <span class="arithmatex">\(x \in S\)</span> 以及实数 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，以 <span class="arithmatex">\(x\)</span> 为中心、<span class="arithmatex">\(\epsilon\)</span> 为半径的 <span class="arithmatex">\(\epsilon\)</span>-球定义为：</p>
+<p class="admonition-title">Definition 4.1 (<span class="arithmatex">\(\epsilon\)</span>-Ball)</p>
+<p>Let <span class="arithmatex">\((S, d)\)</span> be a metric space. For any <span class="arithmatex">\(x \in S\)</span> and any real number <span class="arithmatex">\(\epsilon &gt; 0\)</span>, the <span class="arithmatex">\(\epsilon\)</span>-ball centered at <span class="arithmatex">\(x\)</span> with radius <span class="arithmatex">\(\epsilon\)</span> is defined as:</p>
 <div class="arithmatex">\[
 B(x, \epsilon) = \{y \in S \mid d(y, x) &lt; \epsilon\}
 \]</div>
 </div>
-<p>基于 <span class="arithmatex">\(\epsilon\)</span>-球，我们可以严格定义开集与闭集：</p>
+<p>Based on the <span class="arithmatex">\(\epsilon\)</span>-ball, we can strictly define open sets and closed sets:</p>
 <div class="admonition info">
-<p class="admonition-title">定义 4.2 (开集与闭集)</p>
+<p class="admonition-title">Definition 4.2 (Open and Closed Sets)</p>
 <ul>
 <li>
-<p><strong>开集 (Open Set)</strong>：称集合 <span class="arithmatex">\(P \subseteq S\)</span> 是开集，如果对于 <span class="arithmatex">\(P\)</span> 中的任意点 <span class="arithmatex">\(x \in P\)</span>，都存在一个常数 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，使得 <span class="arithmatex">\(B(x, \epsilon) \subseteq P\)</span>。</p>
+<p><strong>Open Set</strong>: A subset <span class="arithmatex">\(P \subseteq S\)</span> is called an open set if for every point <span class="arithmatex">\(x \in P\)</span>, there exists a constant <span class="arithmatex">\(\epsilon &gt; 0\)</span> such that <span class="arithmatex">\(B(x, \epsilon) \subseteq P\)</span>.</p>
 </li>
 <li>
-<p><strong>闭集 (Closed Set)</strong>：称集合 <span class="arithmatex">\(C \subseteq S\)</span> 是闭集，如果其补集 <span class="arithmatex">\(S \setminus C\)</span> 是开集。</p>
+<p><strong>Closed Set</strong>: A subset <span class="arithmatex">\(C \subseteq S\)</span> is called a closed set if its complement <span class="arithmatex">\(S \setminus C\)</span> is an open set.</p>
 </li>
 </ul>
 </div>
-<p><strong>基本例子与性质</strong>：</p>
+<p><strong>Basic Examples and Properties</strong>:</p>
 <ul>
 <li>
-<p>全空间 <span class="arithmatex">\(S\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span> 既是开集也是闭集。</p>
+<p>The entire space <span class="arithmatex">\(S\)</span> and the empty set <span class="arithmatex">\(\emptyset\)</span> are both open and closed.</p>
 </li>
 <li>
-<p><strong>任意并集</strong>：如果族 <span class="arithmatex">\(\{A_i\}_{i \in I}\)</span> 中的每一个 <span class="arithmatex">\(A_i\)</span> 都是开集，那么它们的并集 <span class="arithmatex">\(\bigcup_{i \in I} A_i\)</span> 也是开集。</p>
+<p><strong>Arbitrary Unions</strong>: If every <span class="arithmatex">\(A_i\)</span> in the family <span class="arithmatex">\(\{A_i\}_{i \in I}\)</span> is an open set, then their union <span class="arithmatex">\(\bigcup_{i \in I} A_i\)</span> is also an open set.</p>
 </li>
 <li>
-<p><strong>有限交集</strong>：有限多个开集的交集必然是开集。</p>
+<p><strong>Finite Intersections</strong>: The intersection of finitely many open sets must be an open set.</p>
 </li>
 </ul>
 <details class="proof">
-<summary>证明：有限个开集的交集是开集</summary>
-<p>我们只需证明两个开集的交集是开集，然后通过数学归纳法即可推广到有限个的情况。设 <span class="arithmatex">\(A_1, A_2, \dots, A_k\)</span> 是有限个开集。</p>
-<p>考虑它们的交集 <span class="arithmatex">\(\bigcap_{i=1}^k A_i\)</span>。如果该交集为空集 <span class="arithmatex">\(\emptyset\)</span>，由于空集是开集，结论自然成立。</p>
-<p>如果交集非空，任取一点 <span class="arithmatex">\(x \in \bigcap_{i=1}^k A_i\)</span>。</p>
-<p>这意味着对于每一个 <span class="arithmatex">\(i \in \{1, 2, \dots, k\}\)</span>，都有 <span class="arithmatex">\(x \in A_i\)</span>。</p>
-<p>因为每个 <span class="arithmatex">\(A_i\)</span> 都是开集，根据开集的定义，必定存在对应的 <span class="arithmatex">\(\epsilon_i &gt; 0\)</span>，使得 <span class="arithmatex">\(B(x, \epsilon_i) \subseteq A_i\)</span>。</p>
-<p>我们只需取这些半径中的最小值：</p>
+<summary>Proof: Finite Intersections of Open Sets are Open</summary>
+<p>We only need to prove that the intersection of two open sets is open, and then the conclusion can be extended to any finite number of sets by mathematical induction. Let <span class="arithmatex">\(A_1, A_2, \dots, A_k\)</span> be a finite number of open sets.</p>
+<p>Consider their intersection <span class="arithmatex">\(\bigcap_{i=1}^k A_i\)</span>. If this intersection is the empty set <span class="arithmatex">\(\emptyset\)</span>, the conclusion holds naturally since the empty set is open.</p>
+<p>If the intersection is non-empty, take any point <span class="arithmatex">\(x \in \bigcap_{i=1}^k A_i\)</span>.</p>
+<p>This means that for every <span class="arithmatex">\(i \in \{1, 2, \dots, k\}\)</span>, <span class="arithmatex">\(x \in A_i\)</span>.</p>
+<p>Since each <span class="arithmatex">\(A_i\)</span> is an open set, by the definition of open sets, there must exist a corresponding <span class="arithmatex">\(\epsilon_i &gt; 0\)</span> such that <span class="arithmatex">\(B(x, \epsilon_i) \subseteq A_i\)</span>.</p>
+<p>We simply take the minimum of these radii:</p>
 <div class="arithmatex">\[
 \epsilon = \min\{\epsilon_1, \epsilon_2, \dots, \epsilon_k\}
 \]</div>
-<p>由于集合是有限的，<span class="arithmatex">\(\epsilon\)</span> 必定是一个严格大于 0 的实数。此时，对于所有的 <span class="arithmatex">\(i\)</span>，都有 <span class="arithmatex">\(B(x, \epsilon) \subseteq B(x, \epsilon_i) \subseteq A_i\)</span>。</p>
-<p>因此，<span class="arithmatex">\(B(x, \epsilon) \subseteq \bigcap_{i=1}^k A_i\)</span>。这证明了交集中的任意一点都包含一个完全落在交集内的 <span class="arithmatex">\(\epsilon\)</span>-球，故有限交集是开集。 <span class="arithmatex">\(\square\)</span></p>
+<p>Since the collection is finite, <span class="arithmatex">\(\epsilon\)</span> must be a real number strictly greater than 0. At this point, for all <span class="arithmatex">\(i\)</span>, we have <span class="arithmatex">\(B(x, \epsilon) \subseteq B(x, \epsilon_i) \subseteq A_i\)</span>.</p>
+<p>Therefore, <span class="arithmatex">\(B(x, \epsilon) \subseteq \bigcap_{i=1}^k A_i\)</span>. This proves that any point in the intersection contains an <span class="arithmatex">\(\epsilon\)</span>-ball that lies entirely within the intersection; thus, a finite intersection is an open set. <span class="arithmatex">\(\square\)</span></p>
 </details>
 <hr />
-<h2 id="2">2. 连续性的拓扑刻画</h2>
-<p>在微积分中，连续性通常通过 <span class="arithmatex">\(\epsilon-\delta\)</span> 语言来描述。在更一般的空间中，我们可以用开集来完全等价地刻画连续性。</p>
+<h2 id="2-topological-characterization-of-continuity">2. Topological Characterization of Continuity</h2>
+<p>In calculus, continuity is usually described in <span class="arithmatex">\(\epsilon-\delta\)</span> language. In more general spaces, we can use open sets to characterize continuity in an entirely equivalent way.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 4.3 (映射的连续性)</p>
-<p>设 <span class="arithmatex">\(f: S \to M\)</span> 是两个空间之间的映射。</p>
+<p class="admonition-title">Definition 4.3 (Continuity of Mappings)</p>
+<p>Let <span class="arithmatex">\(f: S \to M\)</span> be a mapping between two spaces.</p>
 <ul>
 <li>
-<p><strong>在某一点的局部连续性</strong>：称映射 <span class="arithmatex">\(f\)</span> 在点 <span class="arithmatex">\(x_0 \in S\)</span> 处是连续的，如果对于伴域 <span class="arithmatex">\(M\)</span> 中任意一个包含像点 <span class="arithmatex">\(f(x_0)\)</span> 的开集 <span class="arithmatex">\(V\)</span>（即 <span class="arithmatex">\(f(x_0) \in V\)</span>），都存在定义域 <span class="arithmatex">\(S\)</span> 中的一个开集 <span class="arithmatex">\(U\)</span>，满足 <span class="arithmatex">\(x_0 \in U \subseteq f^{-1}(V)\)</span>。</p>
+<p><strong>Local Continuity at a Point</strong>: A mapping <span class="arithmatex">\(f\)</span> is said to be continuous at a point <span class="arithmatex">\(x_0 \in S\)</span> if for any open set <span class="arithmatex">\(V\)</span> in the codomain <span class="arithmatex">\(M\)</span> containing the image point <span class="arithmatex">\(f(x_0)\)</span> (i.e., <span class="arithmatex">\(f(x_0) \in V\)</span>), there exists an open set <span class="arithmatex">\(U\)</span> in the domain <span class="arithmatex">\(S\)</span> such that <span class="arithmatex">\(x_0 \in U \subseteq f^{-1}(V)\)</span>.</p>
 </li>
 <li>
-<p><strong>全局连续性</strong>：称映射 <span class="arithmatex">\(f\)</span> 在整个 <span class="arithmatex">\(S\)</span> 上是连续的，当且仅当它在 <span class="arithmatex">\(S\)</span> 中的每一个点都连续。等价地，<span class="arithmatex">\(f\)</span> 是连续的，当且仅当对于 <span class="arithmatex">\(M\)</span> 中的任意开集 <span class="arithmatex">\(V\)</span>，其原像 <span class="arithmatex">\(f^{-1}(V)\)</span> 必定是 <span class="arithmatex">\(S\)</span> 中的开集。</p>
+<p><strong>Global Continuity</strong>: A mapping <span class="arithmatex">\(f\)</span> is said to be continuous on the entire space <span class="arithmatex">\(S\)</span> if and only if it is continuous at every point in <span class="arithmatex">\(S\)</span>. Equivalently, <span class="arithmatex">\(f\)</span> is continuous if and only if for any open set <span class="arithmatex">\(V\)</span> in <span class="arithmatex">\(M\)</span>, its preimage <span class="arithmatex">\(f^{-1}(V)\)</span> must be an open set in <span class="arithmatex">\(S\)</span>.</p>
 </li>
 </ul>
 </div>
 <hr />
-<h2 id="3">3. 一般拓扑空间的公理化定义</h2>
-<p>一旦我们将连续性的定义完全建立在开集之上，距离 <span class="arithmatex">\(d\)</span> 就不再是必需的了。我们可以直接公理化“开集”的概念，从而定义一般拓扑空间。</p>
+<h2 id="3-axiomatic-definition-of-general-topological-spaces">3. Axiomatic Definition of General Topological Spaces</h2>
+<p>Once we base the definition of continuity entirely on open sets, the distance <span class="arithmatex">\(d\)</span> is no longer necessary. We can directly axiomatize the concept of "open sets" to define general topological spaces.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 4.4 (拓扑与拓扑空间)</p>
-<p>设 <span class="arithmatex">\(X\)</span> 是一个非空集合。<span class="arithmatex">\(X\)</span> 上的一个<strong>拓扑 (Topology)</strong> <span class="arithmatex">\(\tau\)</span> 是幂集 <span class="arithmatex">\(\mathcal{P}(X)\)</span> 的一个子族（即 <span class="arithmatex">\(\tau\)</span> 包含 <span class="arithmatex">\(X\)</span> 的部分子集），并且满足以下三条公理：</p>
+<p class="admonition-title">Definition 4.4 (Topology and Topological Space)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a non-empty set. A <strong>topology</strong> <span class="arithmatex">\(\tau\)</span> on <span class="arithmatex">\(X\)</span> is a subcollection of the power set <span class="arithmatex">\(\mathcal{P}(X)\)</span> (i.e., <span class="arithmatex">\(\tau\)</span> contains some subsets of <span class="arithmatex">\(X\)</span>) that satisfies the following three axioms:</p>
 <ul>
 <li>
-<p><strong>(1)</strong> 全空间 <span class="arithmatex">\(X\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span> 属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\emptyset, X \in \tau\)</span>。</p>
+<p><strong>(1)</strong> The entire space <span class="arithmatex">\(X\)</span> and the empty set <span class="arithmatex">\(\emptyset\)</span> belong to <span class="arithmatex">\(\tau\)</span>. That is, <span class="arithmatex">\(\emptyset, X \in \tau\)</span>.</p>
 </li>
 <li>
-<p><strong>(2) 任意并封闭</strong>：如果 <span class="arithmatex">\(\{A_i\}_{i \in I} \subseteq \tau\)</span>，那么它们的任意并集也属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\bigcup_{i \in I} A_i \in \tau\)</span>。</p>
+<p><strong>(2) Closure under Arbitrary Unions</strong>: If <span class="arithmatex">\(\{A_i\}_{i \in I} \subseteq \tau\)</span>, then their union also belongs to <span class="arithmatex">\(\tau\)</span>. That is, <span class="arithmatex">\(\bigcup_{i \in I} A_i \in \tau\)</span>.</p>
 </li>
 <li>
-<p><strong>(3) 有限交封闭</strong>：如果 <span class="arithmatex">\(A_1, A_2, \dots, A_k \in \tau\)</span>，那么它们的有限交集也属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\bigcap_{i=1}^k A_i \in \tau\)</span>。</p>
+<p><strong>(3) Closure under Finite Intersections</strong>: If <span class="arithmatex">\(A_1, A_2, \dots, A_k \in \tau\)</span>, then their finite intersection also belongs to <span class="arithmatex">\(\tau\)</span>. That is, <span class="arithmatex">\(\bigcap_{i=1}^k A_i \in \tau\)</span>.</p>
 </li>
 </ul>
-<p>赋予了拓扑 <span class="arithmatex">\(\tau\)</span> 的集合 <span class="arithmatex">\(X\)</span> 被称为<strong>拓扑空间</strong> <span class="arithmatex">\((X, \tau)\)</span>。拓扑 <span class="arithmatex">\(\tau\)</span> 中的元素被称为 <span class="arithmatex">\(X\)</span> 关于该拓扑的<strong>开集 (Open Sets)</strong>。</p>
+<p>The set <span class="arithmatex">\(X\)</span> endowed with the topology <span class="arithmatex">\(\tau\)</span> is called a <strong>topological space</strong> <span class="arithmatex">\((X, \tau)\)</span>. The elements in <span class="arithmatex">\(\tau\)</span> are called <strong>open sets</strong> of <span class="arithmatex">\(X\)</span> with respect to this topology.</p>
 </div>
-<p>如果一个子集 <span class="arithmatex">\(S \subseteq X\)</span> 的补集 <span class="arithmatex">\(X \setminus S\)</span> 是开集（即属于 <span class="arithmatex">\(\tau\)</span>），那么称 <span class="arithmatex">\(S\)</span> 为<strong>闭集 (Closed Set)</strong>。</p>
-<p><strong>例子</strong>：设集合 <span class="arithmatex">\(X = \{a, b\}\)</span>，可以定义一个拓扑 <span class="arithmatex">\(\tau = \{\emptyset, X, \{a\}\}\)</span>。在这个拓扑空间中，<span class="arithmatex">\(\{a\}\)</span> 是开集，相应的补集 <span class="arithmatex">\(\{b\}\)</span> 则是闭集。</p>
-<p>闭集具有与开集对偶的性质：</p>
+<p>If the complement <span class="arithmatex">\(X \setminus S\)</span> of a subset <span class="arithmatex">\(S \subseteq X\)</span> is an open set (i.e., belongs to <span class="arithmatex">\(\tau\)</span>), then <span class="arithmatex">\(S\)</span> is called a <strong>closed set</strong>.</p>
+<p><strong>Example</strong>: Let <span class="arithmatex">\(X = \{a, b\}\)</span>. We can define a topology <span class="arithmatex">\(\tau = \{\emptyset, X, \{a\}\}\)</span>. In this topological space, <span class="arithmatex">\(\{a\}\)</span> is an open set, and its corresponding complement <span class="arithmatex">\(\{b\}\)</span> is a closed set.</p>
+<p>Closed sets have properties dual to those of open sets:</p>
 <ul>
 <li>
-<p><span class="arithmatex">\(\emptyset\)</span> 和 <span class="arithmatex">\(X\)</span> 都是闭集。</p>
+<p><span class="arithmatex">\(\emptyset\)</span> and <span class="arithmatex">\(X\)</span> are both closed sets.</p>
 </li>
 <li>
-<p>任意多个闭集的交集 <span class="arithmatex">\(\bigcap_{i \in I} C_i\)</span> 仍然是闭集。</p>
+<p>The intersection of any number of closed sets <span class="arithmatex">\(\bigcap_{i \in I} C_i\)</span> is still a closed set.</p>
 </li>
 <li>
-<p>有限多个闭集的并集 <span class="arithmatex">\(\bigcup_{i=1}^k C_i\)</span> 仍然是闭集。</p>
+<p>The union of a finite number of closed sets <span class="arithmatex">\(\bigcup_{i=1}^k C_i\)</span> is still a closed set.</p>
 </li>
 </ul>
 <hr />
-<h2 id="4-bases-for-a-topology">4. 拓扑的基 (Bases for a Topology)</h2>
-<p>为了描述一个拓扑 <span class="arithmatex">\(\tau\)</span>，我们往往不需要列出其中所有的开集，而是可以通过一个更小的集合族——<strong>拓扑基 (Base)</strong> 来生成整个拓扑。</p>
+<h2 id="4-bases-for-a-topology">4. Bases for a Topology</h2>
+<p>To describe a topology <span class="arithmatex">\(\tau\)</span>, we often do not need to list all the open sets within it. Instead, we can generate the entire topology through a smaller collection of sets—a <strong>basis</strong>.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 4.5 (拓扑的基)</p>
-<p>设 <span class="arithmatex">\((X, \tau)\)</span> 为一个拓扑空间。一个开集族 <span class="arithmatex">\(\mathcal{B} \subseteq \tau\)</span> 被称为拓扑 <span class="arithmatex">\(\tau\)</span> 的<strong>基 (Base)</strong>，如果对于 <span class="arithmatex">\(\tau\)</span> 中的任意开集 <span class="arithmatex">\(S\)</span>，以及 <span class="arithmatex">\(S\)</span> 中的任意点 <span class="arithmatex">\(x \in S\)</span>，都存在一个基元素 <span class="arithmatex">\(B \in \mathcal{B}\)</span>，满足：</p>
+<p class="admonition-title">Definition 4.5 (Basis for a Topology)</p>
+<p>Let <span class="arithmatex">\((X, \tau)\)</span> be a topological space. A collection of open sets <span class="arithmatex">\(\mathcal{B} \subseteq \tau\)</span> is called a <strong>basis</strong> for the topology <span class="arithmatex">\(\tau\)</span> if for any open set <span class="arithmatex">\(S \in \tau\)</span> and any point <span class="arithmatex">\(x \in S\)</span>, there exists a basis element <span class="arithmatex">\(B \in \mathcal{B}\)</span> such that:</p>
 <div class="arithmatex">\[
 x \in B \subseteq S
 \]</div>
-<p>由此可知，拓扑 <span class="arithmatex">\(\tau\)</span> 中的每一个开集 <span class="arithmatex">\(S\)</span> 都可以表示为某些基元素的并集，即 <span class="arithmatex">\(S = \bigcup_{i \in I} B_i\)</span>。</p>
+<p>From this, it follows that every open set <span class="arithmatex">\(S\)</span> in the topology <span class="arithmatex">\(\tau\)</span> can be expressed as the union of some basis elements, i.e., <span class="arithmatex">\(S = \bigcup_{i \in I} B_i\)</span>.</p>
 </div>
-<p>并非任意的集合族都能成为某个拓扑的基。下面的定理给出了判断条件：</p>
+<p>Not every collection of sets can serve as a basis for some topology. The following theorem provides the criteria:</p>
 <div class="admonition success">
-<p class="admonition-title">定理 4.1 (基的判定准则)</p>
-<p>设 <span class="arithmatex">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 是集合 <span class="arithmatex">\(X\)</span> 的一个子集族。那么 <span class="arithmatex">\(\mathcal{B}\)</span> 能够成为 <span class="arithmatex">\(X\)</span> 上某个拓扑的基，当且仅当它满足以下两个条件：</p>
+<p class="admonition-title">Theorem 4.1 (Criterion for a Basis)</p>
+<p>Let <span class="arithmatex">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> be a collection of subsets of <span class="arithmatex">\(X\)</span>. Then <span class="arithmatex">\(\mathcal{B}\)</span> can be a basis for some topology on <span class="arithmatex">\(X\)</span> if and only if it satisfies the following two conditions:</p>
 <ul>
-<li><strong>(1) 覆盖性</strong>：基元素的并集必须覆盖整个空间 <span class="arithmatex">\(X\)</span>。即：</li>
+<li><strong>(1) Coverage</strong>: The union of all basis elements must cover the entire space <span class="arithmatex">\(X\)</span>. That is:</li>
 </ul>
 <div class="arithmatex">\[
 X = \bigcup_{B \in \mathcal{B}} B
 \]</div>
 <ul>
-<li><strong>(2) 内部相容性</strong>：如果选取两个基元素 <span class="arithmatex">\(B_1, B_2 \in \mathcal{B}\)</span>，并且取其交集中的任意一点 <span class="arithmatex">\(x \in B_1 \cap B_2\)</span>，则必定存在第三个基元素 <span class="arithmatex">\(B_3 \in \mathcal{B}\)</span>，使得：</li>
+<li><strong>(2) Internal Consistency</strong>: If two basis elements <span class="arithmatex">\(B_1, B_2 \in \mathcal{B}\)</span> are chosen, and any point <span class="arithmatex">\(x \in B_1 \cap B_2\)</span> is taken from their intersection, then there must exist a third basis element <span class="arithmatex">\(B_3 \in \mathcal{B}\)</span> such that:</li>
 </ul>
 <div class="arithmatex">\[
 x \in B_3 \subseteq B_1 \cap B_2
 \]</div>
 </div>
-<p>如果一个集合族 <span class="arithmatex">\(\mathcal{B}\)</span> 满足了上述两个条件，那么由它所生成的拓扑 <span class="arithmatex">\(\tau\)</span> 就精确地包含了由 <span class="arithmatex">\(\mathcal{B}\)</span> 中元素的任意并集所构成的所有子集。</p>
+<p>If a collection of sets <span class="arithmatex">\(\mathcal{B}\)</span> satisfies the two conditions above, then the topology <span class="arithmatex">\(\tau\)</span> generated by it contains exactly all subsets formed by arbitrary unions of elements in <span class="arithmatex">\(\mathcal{B}\)</span>.</p>
 
 
 

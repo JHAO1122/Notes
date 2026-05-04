@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#chapter-1-set-theory-and-logic-foundations" class="md-skip">
           Skip to content
         </a>
       
@@ -1968,10 +1968,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-zfc" class="md-nav__link">
+  <a href="#1-introduction-to-zfc-axiom-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. ZFC 公理系统简介
+        1. Introduction to ZFC Axiom System
       
     </span>
   </a>
@@ -1979,10 +1979,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-basic-set-operations-and-cartesian-product" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 集合的基本运算与笛卡尔积
+        2. Basic Set Operations and Cartesian Product
       
     </span>
   </a>
@@ -1990,10 +1990,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-mappings-and-cardinality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 映射与集合的势 (基数)
+        3. Mappings and Cardinality
       
     </span>
   </a>
@@ -2001,10 +2001,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#4-relations-and-partially-ordered-sets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 关系与偏序集
+        4. Relations and Partially Ordered Sets
       
     </span>
   </a>
@@ -3648,10 +3648,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-zfc" class="md-nav__link">
+  <a href="#1-introduction-to-zfc-axiom-system" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. ZFC 公理系统简介
+        1. Introduction to ZFC Axiom System
       
     </span>
   </a>
@@ -3659,10 +3659,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-basic-set-operations-and-cartesian-product" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 集合的基本运算与笛卡尔积
+        2. Basic Set Operations and Cartesian Product
       
     </span>
   </a>
@@ -3670,10 +3670,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-mappings-and-cardinality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 映射与集合的势 (基数)
+        3. Mappings and Cardinality
       
     </span>
   </a>
@@ -3681,10 +3681,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#4-relations-and-partially-ordered-sets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 关系与偏序集
+        4. Relations and Partially Ordered Sets
       
     </span>
   </a>
@@ -3712,41 +3712,41 @@
   
 
 
-<h1 id="_1">第一章：集合论与逻辑基础</h1>
-<p>在深入学习点集拓扑之前，我们需要建立严密的集合论基础。本章将从 ZFC 公理系统出发，回顾集合的基本运算、映射的概念，并重点探讨集合的势（基数）以及著名的 Cantor 定理，最后简要介绍关系与偏序。</p>
+<h1 id="chapter-1-set-theory-and-logic-foundations">Chapter 1: Set Theory and Logic Foundations</h1>
+<p>Before diving into General Topology, we must establish a rigorous foundation in set theory. This chapter starts from the ZFC axiom system, reviews fundamental set operations and the concept of mappings, focuses on the cardinality of sets and the famous Cantor's Theorem, and concludes with a brief introduction to relations and partial orders.</p>
 <hr />
-<h2 id="1-zfc">1. ZFC 公理系统简介</h2>
-<p>现代数学广泛采用 ZF (Zermelo-Fraenkel) 或 ZFC（附加选择公理）作为集合论的公理化基础。该理论建立在逻辑符号（如 <span class="arithmatex">\(\vee, \wedge, \neg, \forall, \exists\)</span>）和关系符号（如 <span class="arithmatex">\(\in, =\)</span>）之上。</p>
+<h2 id="1-introduction-to-zfc-axiom-system">1. Introduction to ZFC Axiom System</h2>
+<p>Modern mathematics widely adopts ZF (Zermelo-Fraenkel) or ZFC (ZF with the Axiom of Choice) as the axiomatic foundation for set theory. The theory is built upon logical symbols (such as <span class="arithmatex">\(\vee, \wedge, \neg, \forall, \exists\)</span>) and relational symbols (such as <span class="arithmatex">\(\in, =\)</span>).</p>
 <div class="admonition info">
-<p class="admonition-title">基本集合论公理 (ZF 与 ZFC)</p>
-<p>以下是构建 ZF 公理系统的 9 条基本公理（加入第 10 条即为 ZFC）：</p>
+<p class="admonition-title">Basic Axioms of Set Theory (ZF and ZFC)</p>
+<p>The following are the 9 fundamental axioms constructing the ZF system (becoming ZFC with the addition of the 10th):</p>
 <ul>
-<li><strong>1. 外延公理 (Extensionality)</strong>：两个集合相等，当且仅当它们包含相同的元素。</li>
+<li><strong>1. Axiom of Extensionality</strong>: Two sets are equal if and only if they contain the same elements.</li>
 </ul>
 <div class="arithmatex">\[
 \forall A \forall B (\forall x (x \in A \leftrightarrow x \in B) \rightarrow A = B)
 \]</div>
 <ul>
-<li><strong>2. 空集公理 (Empty set)</strong>：存在一个不包含任何元素的集合，记为 <span class="arithmatex">\(\emptyset\)</span>。</li>
+<li><strong>2. Axiom of Empty Set</strong>: There exists a set that contains no elements, denoted as <span class="arithmatex">\(\emptyset\)</span>.</li>
 </ul>
 <div class="arithmatex">\[
 \exists A \forall x (x \notin A)
 \]</div>
 <ul>
 <li>
-<p><strong>3. 配对公理 (Pairing)</strong>：给定任意两个集合 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span>，存在一个集合其元素恰好为 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span>。即可以得到 <span class="arithmatex">\(\{A, B\}\)</span>。</p>
+<p><strong>3. Axiom of Pairing</strong>: Given any two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, there exists a set whose elements are exactly <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. That is, we can obtain <span class="arithmatex">\(\{A, B\}\)</span>.</p>
 </li>
 <li>
-<p><strong>4. 并集公理 (Union)</strong>：给定任意集合族 <span class="arithmatex">\(A\)</span>，存在一个集合包含了 <span class="arithmatex">\(A\)</span> 中所有元素的元素。记为 <span class="arithmatex">\(\cup A\)</span>。例如，若 <span class="arithmatex">\(A = \{\{1,2\}, \{3\}\}\)</span>，则 <span class="arithmatex">\(\cup A = \{1,2,3\}\)</span>。</p>
+<p><strong>4. Axiom of Union</strong>: For any collection of sets <span class="arithmatex">\(A\)</span>, there exists a set that contains all elements that are members of some set in <span class="arithmatex">\(A\)</span>. It is denoted as <span class="arithmatex">\(\cup A\)</span>. For example, if <span class="arithmatex">\(A = \{\{1,2\}, \{3\}\}\)</span>, then <span class="arithmatex">\(\cup A = \{1,2,3\}\)</span>.</p>
 </li>
 <li>
-<p><strong>5. 子集公理 / 分离公理 (Subset / Separation)</strong>：给定集合 <span class="arithmatex">\(A\)</span> 和一个性质（公式） <span class="arithmatex">\(\varphi(x)\)</span>，可以构造一个包含 <span class="arithmatex">\(A\)</span> 中所有满足 <span class="arithmatex">\(\varphi(x)\)</span> 的元素的集合。即可以得到 <span class="arithmatex">\(\{x \in A \mid \varphi(x)\}\)</span>。</p>
+<p><strong>5. Axiom Schema of Subset / Separation</strong>: Given a set <span class="arithmatex">\(A\)</span> and a property (formula) <span class="arithmatex">\(\varphi(x)\)</span>, one can construct a set containing all elements of <span class="arithmatex">\(A\)</span> that satisfy <span class="arithmatex">\(\varphi(x)\)</span>. That is, we obtain <span class="arithmatex">\(\{x \in A \mid \varphi(x)\}\)</span>.</p>
 </li>
 <li>
-<p><strong>6. 幂集公理 (Power set)</strong>：对于任意集合 <span class="arithmatex">\(A\)</span>，存在一个集合包含了 <span class="arithmatex">\(A\)</span> 的所有子集。该集合称为 <span class="arithmatex">\(A\)</span> 的幂集，记为 <span class="arithmatex">\(P(A)\)</span> 或 <span class="arithmatex">\(2^A\)</span>。</p>
+<p><strong>6. Axiom of Power Set</strong>: For any set <span class="arithmatex">\(A\)</span>, there exists a set containing all subsets of <span class="arithmatex">\(A\)</span>. This set is called the power set of <span class="arithmatex">\(A\)</span>, denoted as <span class="arithmatex">\(P(A)\)</span> or <span class="arithmatex">\(2^A\)</span>.</p>
 </li>
 <li>
-<p><strong>7. 无穷公理 (Infinity)</strong>：存在一个包含空集，且对其元素进行后继运算封闭的归纳集。即存在无限集。</p>
+<p><strong>7. Axiom of Infinity</strong>: There exists an inductive set containing the empty set and closed under the successor operation. This ensures the existence of infinite sets.</p>
 </li>
 </ul>
 <div class="arithmatex">\[
@@ -3754,152 +3754,152 @@
 \]</div>
 <ul>
 <li>
-<p><strong>8. 替换公理 (Replacement)</strong>：如果一个类函数的定义域是一个集合，那么它的值域也是一个集合。即对于 <span class="arithmatex">\(A\)</span> 中的每个元素 <span class="arithmatex">\(x\)</span>，若有唯一的 <span class="arithmatex">\(y\)</span> 使得 <span class="arithmatex">\(\varphi(x, y)\)</span> 成立，则所有这样的 <span class="arithmatex">\(y\)</span> 构成一个集合。</p>
+<p><strong>8. Axiom of Replacement</strong>: If the domain of a class function is a set, then its range is also a set. That is, for each element <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(A\)</span>, if there is a unique <span class="arithmatex">\(y\)</span> such that <span class="arithmatex">\(\varphi(x, y)\)</span> holds, then all such <span class="arithmatex">\(y\)</span> form a set.</p>
 </li>
 <li>
-<p><strong>9. 正则公理 / 基础公理 (Regularity / Foundation)</strong>：任何非空集合 <span class="arithmatex">\(A\)</span> 都包含一个与 <span class="arithmatex">\(A\)</span> 不交的元素。即：</p>
+<p><strong>9. Axiom of Regularity / Foundation</strong>: Every non-empty set <span class="arithmatex">\(A\)</span> contains an element that is disjoint from <span class="arithmatex">\(A\)</span>. That is:</p>
 </li>
 </ul>
 <div class="arithmatex">\[
 \forall A \neq \emptyset, \exists x \in A \text{ s.t. } x \cap A = \emptyset
 \]</div>
 <ul>
-<li><strong>10. 选择公理 (Axiom of Choice, AC)</strong>：对于任意由非空且互不相交的集合组成的族，存在一个“选择函数”，能够从族中的每个集合里恰好挑出一个元素。加上此公理构成的系统称为 ZFC。</li>
+<li><strong>10. Axiom of Choice (AC)</strong>: For any collection of non-empty and pairwise disjoint sets, there exists a "choice function" that can pick exactly one element from each set in the collection. The system including this axiom is called ZFC.</li>
 </ul>
 </div>
 <hr />
-<h2 id="2">2. 集合的基本运算与笛卡尔积</h2>
-<p>在拓扑学中，我们经常需要处理一族集合（集合族）的交与并。</p>
+<h2 id="2-basic-set-operations-and-cartesian-product">2. Basic Set Operations and Cartesian Product</h2>
+<p>In topology, we frequently deal with the intersection and union of a family of sets (set collections).</p>
 <div class="admonition info">
-<p class="admonition-title">定义 1.1 (集合族的交与并)</p>
-<p>设 <span class="arithmatex">\(\mathcal{F}\)</span> 为任意集合族（即其元素本身也是集合），定义 <span class="arithmatex">\(\mathcal{F}\)</span> 中所有元素的并集与交集如下：</p>
+<p class="admonition-title">Definition 1.1 (Union and Intersection of Families)</p>
+<p>Let <span class="arithmatex">\(\mathcal{F}\)</span> be an arbitrary family of sets (i.e., its elements are themselves sets). The union and intersection of all elements in <span class="arithmatex">\(\mathcal{F}\)</span> are defined as follows:</p>
 <ul>
-<li><strong>并集</strong>：</li>
+<li><strong>Union</strong>:</li>
 </ul>
 <div class="arithmatex">\[
 \cup \mathcal{F} = \{x \mid \exists A \in \mathcal{F} \text{ s.t. } x \in A\}
 \]</div>
 <ul>
 <li>
-<p>若 <span class="arithmatex">\(\mathcal{F} = \{A_1, A_2, \dots, A_n\}\)</span>，则 <span class="arithmatex">\(\cup \mathcal{F} = A_1 \cup A_2 \cup \dots \cup A_n\)</span>。</p>
+<p>If <span class="arithmatex">\(\mathcal{F} = \{A_1, A_2, \dots, A_n\}\)</span>, then <span class="arithmatex">\(\cup \mathcal{F} = A_1 \cup A_2 \cup \dots \cup A_n\)</span>.</p>
 </li>
 <li>
-<p><strong>交集</strong>：对于非空集合族 <span class="arithmatex">\(\mathcal{F}\)</span>：</p>
+<p><strong>Intersection</strong>: For a non-empty family of sets <span class="arithmatex">\(\mathcal{F}\)</span>:</p>
 </li>
 </ul>
 <div class="arithmatex">\[
 \cap \mathcal{F} = \{x \mid \forall A \in \mathcal{F}, x \in A\}
 \]</div>
 <ul>
-<li>若 <span class="arithmatex">\(\mathcal{F} = \{A_1, A_2, \dots, A_n\}\)</span>，则 <span class="arithmatex">\(\cap \mathcal{F} = \bigcap_{i=1}^n A_i\)</span>。</li>
+<li>If <span class="arithmatex">\(\mathcal{F} = \{A_1, A_2, \dots, A_n\}\)</span>, then <span class="arithmatex">\(\cap \mathcal{F} = \bigcap_{i=1}^n A_i\)</span>.</li>
 </ul>
 </div>
 <div class="admonition info">
-<p class="admonition-title">定义 1.2 (序对与笛卡尔积)</p>
+<p class="admonition-title">Definition 1.2 (Ordered Pair and Cartesian Product)</p>
 <ul>
-<li><strong>有序对 (Ordered Pair)</strong>：由两个元素 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 组成的序列称为有序对，记作 <span class="arithmatex">\((a, b)\)</span>。其基本性质为：</li>
+<li><strong>Ordered Pair</strong>: A sequence consisting of two elements <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> is called an ordered pair, denoted as <span class="arithmatex">\((a, b)\)</span>. Its fundamental property is:</li>
 </ul>
 <div class="arithmatex">\[
 (a, b) = (c, d) \iff a = c \wedge b = d
 \]</div>
 <ul>
-<li><strong>笛卡尔积 (Cartesian Product)</strong>：两个集合 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 的笛卡尔积定义为所有可能的有序对构成的集合：</li>
+<li><strong>Cartesian Product</strong>: The Cartesian product of two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> is defined as the set of all possible ordered pairs:</li>
 </ul>
 <div class="arithmatex">\[
 A \times B = \{(a, b) \mid a \in A, b \in B\}
 \]</div>
 </div>
 <hr />
-<h2 id="3">3. 映射与集合的势 (基数)</h2>
-<p>映射是连接不同集合结构的核心工具，而“势”则推广了有限集中“元素个数”的概念。</p>
+<h2 id="3-mappings-and-cardinality">3. Mappings and Cardinality</h2>
+<p>Mappings are essential tools for connecting different set structures, while "cardinality" generalizes the concept of the "number of elements" from finite sets.</p>
 <div class="admonition info">
-<p class="admonition-title">定义 1.3 (映射)</p>
-<p>给定集合 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span>。<strong>映射 (Mapping)</strong> <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\(A \times B\)</span> 的一个子集，满足：对于任意的 <span class="arithmatex">\(a \in A\)</span>，存在<strong>唯一</strong>的 <span class="arithmatex">\(b \in B\)</span>，使得 <span class="arithmatex">\((a, b) \in f\)</span>。</p>
+<p class="admonition-title">Definition 1.3 (Mapping)</p>
+<p>Given sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. A <strong>Mapping</strong> <span class="arithmatex">\(f\)</span> is a subset of <span class="arithmatex">\(A \times B\)</span> such that: for every <span class="arithmatex">\(a \in A\)</span>, there exists a <strong>unique</strong> <span class="arithmatex">\(b \in B\)</span> such that <span class="arithmatex">\((a, b) \in f\)</span>.</p>
 <ul>
 <li>
-<p>通常记作 <span class="arithmatex">\(f: A \to B\)</span>。</p>
+<p>It is usually denoted as <span class="arithmatex">\(f: A \to B\)</span>.</p>
 </li>
 <li>
-<p>这个唯一的 <span class="arithmatex">\(b\)</span> 称为 <span class="arithmatex">\(a\)</span> 在 <span class="arithmatex">\(f\)</span> 下的像，记为 <span class="arithmatex">\(b = f(a)\)</span>。</p>
+<p>This unique <span class="arithmatex">\(b\)</span> is called the image of <span class="arithmatex">\(a\)</span> under <span class="arithmatex">\(f\)</span>, denoted as <span class="arithmatex">\(b = f(a)\)</span>.</p>
 </li>
 <li>
-<p>对于子集 <span class="arithmatex">\(A_0 \subseteq A\)</span>，其<strong>像 (Image)</strong> 定义为：</p>
+<p>For a subset <span class="arithmatex">\(A_0 \subseteq A\)</span>, its <strong>Image</strong> is defined as:</p>
 </li>
 </ul>
 <div class="arithmatex">\[
 f(A_0) = \{f(a) \mid a \in A_0\} \subseteq B
 \]</div>
 <ul>
-<li>对于子集 <span class="arithmatex">\(U \subseteq B\)</span>，其<strong>原像 (Preimage)</strong> 定义为：</li>
+<li>For a subset <span class="arithmatex">\(U \subseteq B\)</span>, its <strong>Preimage</strong> is defined as:</li>
 </ul>
 <div class="arithmatex">\[
 f^{-1}(U) = \{a \in A \mid f(a) \in U\} \subseteq A
 \]</div>
 </div>
-<p>集合的势用于刻画集合的大小。若集合 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 之间存在一个<strong>双射</strong>（既是单射又是满射的一一对应），则称 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 等势（或称拥有相同的基数），记为 <span class="arithmatex">\(|A| = |B|\)</span> 或 <span class="arithmatex">\(A \sim B\)</span>。</p>
+<p>Cardinality characterizes the size of a set. If there exists a <strong>bijection</strong> (a mapping that is both injective and surjective) between sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, then <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are said to be equinumerous (or to have the same cardinality), denoted as <span class="arithmatex">\(|A| = |B|\)</span> or <span class="arithmatex">\(A \sim B\)</span>.</p>
 <ul>
-<li><strong>实例</strong>：实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 和自然数集的幂集 <span class="arithmatex">\(P(\mathbb{N})\)</span> 存在一一对应关系，即 <span class="arithmatex">\(|\mathbb{R}| = |P(\mathbb{N})|\)</span>。</li>
+<li><strong>Example</strong>: There is a one-to-one correspondence between the set of real numbers <span class="arithmatex">\(\mathbb{R}\)</span> and the power set of natural numbers <span class="arithmatex">\(P(\mathbb{N})\)</span>, i.e., <span class="arithmatex">\(|\mathbb{R}| = |P(\mathbb{N})|\)</span>.</li>
 </ul>
-<p>关于集合的势，集合论中最著名的结论之一是 Cantor 定理，它指出了任何集合的幂集必定“严格大于”原集合。</p>
+<p>Regarding cardinality, one of the most famous conclusions in set theory is Cantor's Theorem, which states that the power set of any set is "strictly larger" than the set itself.</p>
 <div class="admonition success">
-<p class="admonition-title">定理 1.1 (Cantor 定理)</p>
-<p>对于任意集合 <span class="arithmatex">\(A\)</span>，不存在从 <span class="arithmatex">\(A\)</span> 到其幂集 <span class="arithmatex">\(P(A)\)</span> 的满射。</p>
-<p>换言之，集合 <span class="arithmatex">\(A\)</span> 的势严格小于其幂集 <span class="arithmatex">\(P(A)\)</span> 的势，即 <span class="arithmatex">\(|A| &lt; |P(A)|\)</span>。</p>
+<p class="admonition-title">Theorem 1.1 (Cantor's Theorem)</p>
+<p>For any set <span class="arithmatex">\(A\)</span>, there exists no surjection from <span class="arithmatex">\(A\)</span> to its power set <span class="arithmatex">\(P(A)\)</span>.</p>
+<p>In other words, the cardinality of set <span class="arithmatex">\(A\)</span> is strictly less than the cardinality of its power set <span class="arithmatex">\(P(A)\)</span>, i.e., <span class="arithmatex">\(|A| &lt; |P(A)|\)</span>.</p>
 </div>
 <details class="proof">
-<summary>Cantor 定理的证明（对角线法）</summary>
-<p>采用<strong>反证法</strong>。</p>
-<p>假设存在一个从 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(P(A)\)</span> 的满射映射 <span class="arithmatex">\(\phi: A \to P(A)\)</span>。
-这意味着，对于 <span class="arithmatex">\(P(A)\)</span> 中的每一个元素（即 <span class="arithmatex">\(A\)</span> 的每一个子集），都能在 <span class="arithmatex">\(A\)</span> 中找到至少一个原像。</p>
-<p>现在，我们构造一个特殊的集合 <span class="arithmatex">\(B \subseteq A\)</span>：</p>
+<summary>Proof of Cantor's Theorem (Diagonal Argument)</summary>
+<p>We proceed by <strong>contradiction</strong>.</p>
+<p>Suppose there exists a surjective mapping <span class="arithmatex">\(\phi: A \to P(A)\)</span>.
+This means that for every element in <span class="arithmatex">\(P(A)\)</span> (i.e., every subset of <span class="arithmatex">\(A\)</span>), at least one preimage can be found in <span class="arithmatex">\(A\)</span>.</p>
+<p>Now, we construct a special set <span class="arithmatex">\(B \subseteq A\)</span>:</p>
 <div class="arithmatex">\[
 B = \{a \in A \mid a \notin \phi(a)\}
 \]</div>
-<p>由于 <span class="arithmatex">\(B\)</span> 的元素都取自 <span class="arithmatex">\(A\)</span>，显然 <span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(A\)</span> 的一个子集，即 <span class="arithmatex">\(B \in P(A)\)</span>。</p>
-<p>因为 <span class="arithmatex">\(\phi\)</span> 是满射，所以必定存在某个元素 <span class="arithmatex">\(a_0 \in A\)</span>，使得它的像恰好是集合 <span class="arithmatex">\(B\)</span>。即：</p>
+<p>Since all elements of <span class="arithmatex">\(B\)</span> are taken from <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span> is clearly a subset of <span class="arithmatex">\(A\)</span>, meaning <span class="arithmatex">\(B \in P(A)\)</span>.</p>
+<p>Because <span class="arithmatex">\(\phi\)</span> is surjective, there must exist some element <span class="arithmatex">\(a_0 \in A\)</span> such that its image is exactly the set <span class="arithmatex">\(B\)</span>. That is:</p>
 <div class="arithmatex">\[
 \phi(a_0) = B
 \]</div>
-<p>接下来，我们讨论元素 <span class="arithmatex">\(a_0\)</span> 是否属于集合 <span class="arithmatex">\(B\)</span>。只有以下两种可能：</p>
+<p>Next, we discuss whether the element <span class="arithmatex">\(a_0\)</span> belongs to set <span class="arithmatex">\(B\)</span>. There are only two possibilities:</p>
 <ul>
-<li><strong>情形 1：假设 <span class="arithmatex">\(a_0 \in B\)</span></strong></li>
+<li><strong>Case 1: Assume <span class="arithmatex">\(a_0 \in B\)</span></strong></li>
 </ul>
-<p>根据集合 <span class="arithmatex">\(B\)</span> 的定义，如果 <span class="arithmatex">\(a_0 \in B\)</span>，则必须满足 <span class="arithmatex">\(a_0 \notin \phi(a_0)\)</span>。
-但我们已知 <span class="arithmatex">\(\phi(a_0) = B\)</span>，这就意味着 <span class="arithmatex">\(a_0 \notin B\)</span>。
-这导致了矛盾（<span class="arithmatex">\(a_0 \in B \Rightarrow a_0 \notin B\)</span>）。</p>
+<p>By the definition of set <span class="arithmatex">\(B\)</span>, if <span class="arithmatex">\(a_0 \in B\)</span>, then it must satisfy <span class="arithmatex">\(a_0 \notin \phi(a_0)\)</span>.
+However, we know <span class="arithmatex">\(\phi(a_0) = B\)</span>, which implies <span class="arithmatex">\(a_0 \notin B\)</span>.
+This leads to a contradiction (<span class="arithmatex">\(a_0 \in B \Rightarrow a_0 \notin B\)</span>).</p>
 <ul>
-<li><strong>情形 2：假设 <span class="arithmatex">\(a_0 \notin B\)</span></strong></li>
+<li><strong>Case 2: Assume <span class="arithmatex">\(a_0 \notin B\)</span></strong></li>
 </ul>
-<p>既然 <span class="arithmatex">\(a_0 \notin B\)</span>，且 <span class="arithmatex">\(B = \phi(a_0)\)</span>，这就意味着 <span class="arithmatex">\(a_0 \notin \phi(a_0)\)</span>。
-然而，根据集合 <span class="arithmatex">\(B\)</span> 的构造条件，所有满足 <span class="arithmatex">\(x \notin \phi(x)\)</span> 的元素 <span class="arithmatex">\(x\)</span> 都应该被包含在 <span class="arithmatex">\(B\)</span> 中。
-因此，必须有 <span class="arithmatex">\(a_0 \in B\)</span>。
-这同样导致了矛盾（<span class="arithmatex">\(a_0 \notin B \Rightarrow a_0 \in B\)</span>）。</p>
-<p>综上所述，无论哪种情况都会导致不可调和的逻辑矛盾。
-因此，最初的假设——“存在从 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(P(A)\)</span> 的满射”是错误的。定理得证。 <span class="arithmatex">\(\square\)</span></p>
+<p>Since <span class="arithmatex">\(a_0 \notin B\)</span> and <span class="arithmatex">\(B = \phi(a_0)\)</span>, this implies <span class="arithmatex">\(a_0 \notin \phi(a_0)\)</span>.
+However, according to the construction of set <span class="arithmatex">\(B\)</span>, all elements <span class="arithmatex">\(x\)</span> that satisfy <span class="arithmatex">\(x \notin \phi(x)\)</span> must be contained in <span class="arithmatex">\(B\)</span>.
+Therefore, we must have <span class="arithmatex">\(a_0 \in B\)</span>.
+This also leads to a contradiction (<span class="arithmatex">\(a_0 \notin B \Rightarrow a_0 \in B\)</span>).</p>
+<p>In summary, both cases lead to an irreconcilable logical contradiction.
+Thus, the initial assumption—"there exists a surjection from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(P(A)\)</span>"—is false. The theorem is proved. <span class="arithmatex">\(\square\)</span></p>
 </details>
 <hr />
-<h2 id="4">4. 关系与偏序集</h2>
-<p>除了映射，集合上的二元关系也是构建复杂数学结构（如偏序和等价关系）的基石。</p>
+<h2 id="4-relations-and-partially-ordered-sets">4. Relations and Partially Ordered Sets</h2>
+<p>In addition to mappings, binary relations on sets are the cornerstones for building complex mathematical structures (such as partial orders and equivalence relations).</p>
 <div class="admonition info">
-<p class="admonition-title">定义 1.4 (二元关系与偏序)</p>
+<p class="admonition-title">Definition 1.4 (Binary Relation and Partial Order)</p>
 <ul>
 <li>
-<p><strong>关系 (Relation)</strong>：设 <span class="arithmatex">\(X\)</span> 为一个集合。<span class="arithmatex">\(X\)</span> 上的一个二元关系 <span class="arithmatex">\(R\)</span> 是笛卡尔积 <span class="arithmatex">\(X \times X\)</span> 的一个子集，即 <span class="arithmatex">\(R \subseteq X \times X\)</span>。若 <span class="arithmatex">\((a, b) \in R\)</span>，我们通常记作 <span class="arithmatex">\(aRb\)</span>。</p>
+<p><strong>Relation</strong>: Let <span class="arithmatex">\(X\)</span> be a set. A binary relation <span class="arithmatex">\(R\)</span> on <span class="arithmatex">\(X\)</span> is a subset of the Cartesian product <span class="arithmatex">\(X \times X\)</span>, i.e., <span class="arithmatex">\(R \subseteq X \times X\)</span>. If <span class="arithmatex">\((a, b) \in R\)</span>, we typically write <span class="arithmatex">\(aRb\)</span>.</p>
 </li>
 <li>
-<p><strong>偏序关系 (Partial Order)</strong>：设 <span class="arithmatex">\(\le\)</span> 为 <span class="arithmatex">\(X\)</span> 上的二元关系。如果 <span class="arithmatex">\(\le\)</span> 满足以下三个性质，则称其为 <span class="arithmatex">\(X\)</span> 上的偏序：</p>
+<p><strong>Partial Order</strong>: Let <span class="arithmatex">\(\le\)</span> be a binary relation on <span class="arithmatex">\(X\)</span>. If <span class="arithmatex">\(\le\)</span> satisfies the following three properties, it is called a partial order on <span class="arithmatex">\(X\)</span>:</p>
 </li>
 <li>
-<p><strong>(1) 自反性</strong>：对任意 <span class="arithmatex">\(a \in X\)</span>，有 <span class="arithmatex">\(a \le a\)</span>。</p>
+<p><strong>(1) Reflexivity</strong>: For any <span class="arithmatex">\(a \in X\)</span>, <span class="arithmatex">\(a \le a\)</span>.</p>
 </li>
 <li>
-<p><strong>(2) 反对称性</strong>：对任意 <span class="arithmatex">\(a, b \in X\)</span>，若 <span class="arithmatex">\(a \le b\)</span> 且 <span class="arithmatex">\(b \le a\)</span>，则必然有 <span class="arithmatex">\(a = b\)</span>。</p>
+<p><strong>(2) Antisymmetry</strong>: For any <span class="arithmatex">\(a, b \in X\)</span>, if <span class="arithmatex">\(a \le b\)</span> and <span class="arithmatex">\(b \le a\)</span>, then <span class="arithmatex">\(a = b\)</span>.</p>
 </li>
 <li>
-<p><strong>(3) 传递性</strong>：对任意 <span class="arithmatex">\(a, b, c \in X\)</span>，若 <span class="arithmatex">\(a \le b\)</span> 且 <span class="arithmatex">\(b \le c\)</span>，则必然有 <span class="arithmatex">\(a \le c\)</span>。</p>
+<p><strong>(3) Transitivity</strong>: For any <span class="arithmatex">\(a, b, c \in X\)</span>, if <span class="arithmatex">\(a \le b\)</span> and <span class="arithmatex">\(b \le c\)</span>, then <span class="arithmatex">\(a \le c\)</span>.</p>
 </li>
 </ul>
-<p>赋予了偏序关系的集合 <span class="arithmatex">\((X, \le)\)</span> 称为<strong>偏序集 (Partially Ordered Set)</strong>。</p>
+<p>A set <span class="arithmatex">\((X, \le)\)</span> endowed with a partial order relation is called a <strong>Partially Ordered Set (POSET)</strong>.</p>
 </div>
 
 
