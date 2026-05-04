@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         
         { id: "SDE", parentId: "Prob-Stat", label: isEn ? "Stochastic Diff Eq" : "随机微分方程", radius: 15, color: colors.probSub, collapsed: true },
 
+        { id: "Top", parentId: "Geometry", label: isEn ? "General Topology" : "点集拓扑", radius: 15, color: colors.geometry, collapsed: true },
+
         // 泛函的内部章节
         { id: "FA-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/0Intro/" },
         { id: "FA-Ch1", label: isEn ? "1. Metric Spaces" : "1.度量空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/1distance_space/" },
@@ -68,7 +70,18 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "SDE-Ch4", label: isEn ? "4. Ito Integral" : "4.伊藤积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/4Ito_integrate/" },
         { id: "SDE-Ch5", label: isEn ? "5. Multivariate Ito" : "5.多元伊藤积分", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/5SDEs/" },
         { id: "SDE-Ch6", label: isEn ? "6. SDEs" : "6.随机微分方程", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/6SDEs/" },
-        { id: "SDE-Ch7", label: isEn ? "7. Option Pricing" : "7.欧式期权定价", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/7Option_Pricing/" }
+        { id: "SDE-Ch7", label: isEn ? "7. Option Pricing" : "7.欧式期权定价", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/7Option_Pricing/" },
+        
+        // 点集拓扑全部章节
+        { id: "Top-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/0Intro/" },
+        { id: "Top-Ch1", label: isEn ? "1. Set Theory" : "1.集合论", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/1/" },
+        { id: "Top-Ch2", label: isEn ? "2. Countable Sets" : "2.可数集", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/2/" },
+        { id: "Top-Ch3", label: isEn ? "3. Functions and Relations" : "3.函数与关系", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/3/" },
+        { id: "Top-Ch4", label: isEn ? "4. Open Sets and Topology" : "4.开集与拓扑", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/4/" },
+        { id: "Top-Ch5", label: isEn ? "5. Induced Topology" : "5.诱导拓扑", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/5/" },
+        { id: "Top-Ch6", label: isEn ? "6.Continuity and Homeomorphisms" : "6.连续与同胚", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/6/" },
+        { id: "Top-Ch7", label: isEn ? "7. Connectedness" : "7.连通性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/7/" },
+        { id: "Top-Ch8", label: isEn ? "8. Compactness" : "8.紧性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/8/" }
     ];
 
     const allLinks = [
@@ -83,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Prob-Stat", target: "LDP" },
         { source: "Prob-Stat", target: "SDE" },
         { source: "Analysis", target: "SDE" },
+        { source: "Geometry", target: "Top" },
 
         { source: "FA", target: "FA-Intro" }, { source: "FA", target: "FA-Ch1" }, { source: "FA", target: "FA-Ch2" }, { source: "FA", target: "FA-Ch3" },
         { source: "FA", target: "FA-Ch4" }, { source: "FA", target: "FA-Ch5" }, { source: "FA", target: "FA-Ch6" }, { source: "FA", target: "FA-Ch7" },
@@ -90,7 +104,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "AS", target: "AS-Intro" }, { source: "AS", target: "AS-Ch1" }, { source: "AS", target: "AS-Ch2" }, { source: "AS", target: "AS-Ch3" },
         { source: "AS", target: "AS-Ch4" }, { source: "AS", target: "AS-Ch5" }, { source: "AS", target: "AS-Ch6" }, { source: "AS", target: "AS-Ch7" },
         { source: "SDE", target: "SDE-Intro" }, { source: "SDE", target: "SDE-Ch1" }, { source: "SDE", target: "SDE-Ch2" }, { source: "SDE", target: "SDE-Ch3" },
-        { source: "SDE", target: "SDE-Ch4" }, { source: "SDE", target: "SDE-Ch5" }, { source: "SDE", target: "SDE-Ch6" }, { source: "SDE", target: "SDE-Ch7" }
+        { source: "SDE", target: "SDE-Ch4" }, { source: "SDE", target: "SDE-Ch5" }, { source: "SDE", target: "SDE-Ch6" }, { source: "SDE", target: "SDE-Ch7" },
+        { source: "Top", target: "Top-Intro" }, { source: "Top", target: "Top-Ch1" }, { source: "Top", target: "Top-Ch2" }, { source: "Top", target: "Top-Ch3" },
+        { source: "Top", target: "Top-Ch4" }, { source: "Top", target: "Top-Ch5" }, { source: "Top", target: "Top-Ch6" }, { source: "Top", target: "Top-Ch7" },
+        { source: "Top", target: "Top-Ch8" }
     ];
 
     // --- 2. 绘图逻辑 ---

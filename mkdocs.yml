@@ -183,6 +183,10 @@ nav:
               - 第六章：连续与同胚: zh/Topology/6.md
               - 第七章：连通性: zh/Topology/7.md
               - 第八章：紧性: zh/Topology/8.md
+          - 📝 习题:
+              - Homework 1-2: zh/Topology/sol_12.md
+              - Homework 3-4: zh/Topology/sol_34.md
+              - Homework 5-6: zh/Topology/sol_56.md   
   - 🛠️ 知识速查:
       - 📖 概览: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
       - 🛠️ 速查:
