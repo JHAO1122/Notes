@@ -1,4 +1,4 @@
-# Chapter 1 Exercises (Homework 01 & 02)
+# Exercise Set 1 (Homework 01 & 02)
 
 This section contains the problems and detailed solutions for the first and second homework assignments of the Point-Set Topology course.
 

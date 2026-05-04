@@ -1,4 +1,4 @@
-# Homework 02 (Homework 03 & 04)
+# Exercise Set 2 (Homework 03 & 04)
 
 This section contains exercises related to the third and fourth homework assignments of the Point-Set Topology course.
 
