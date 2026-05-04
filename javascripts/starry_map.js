@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "Math-Core", label: isEn ? "Mathematical Sciences" : "数学科学", radius: 50, color: colors.core, collapsed: false },
 
         { id: "Analysis", parentId: "Math-Core", label: isEn ? "Analysis" : "分析学", radius: 30, color: colors.analysis, collapsed: false },
-        { id: "Algebra", parentId: "Math-Core", label: isEn ? "Algebra" : "代数学", radius: 30, color: colors.algebra, collapsed: true },
-        { id: "Geometry", parentId: "Math-Core", label: isEn ? "Geometry" : "几何学", radius: 30, color: colors.geometry, collapsed: true },
+        { id: "Algebra", parentId: "Math-Core", label: isEn ? "Algebra" : "代数学", radius: 30, color: colors.algebra, collapsed: false },
+        { id: "Geometry", parentId: "Math-Core", label: isEn ? "Geometry" : "几何学", radius: 30, color: colors.geometry, collapsed: false },
         { id: "Prob-Stat", parentId: "Math-Core", label: isEn ? "Probability & Statistics" : "概率与统计", radius: 30, color: colors.prob, collapsed: false },
-        { id: "Applied-Comp", parentId: "Math-Core", label: isEn ? "Applied Mathematics" : "应用与计算", radius: 30, color: colors.applied, collapsed: true },
+        { id: "Applied-Comp", parentId: "Math-Core", label: isEn ? "Applied Mathematics" : "应用与计算", radius: 30, color: colors.applied, collapsed: false },
 
         { id: "FA", parentId: "Analysis", label: isEn ? "Functional Analysis" : "泛函分析", radius: 15, color: colors.analysisSub, collapsed: true },
         { id: "AS", parentId: "Prob-Stat", label: isEn ? "Asymptotic Statistics" : "渐近统计", radius: 15, color: colors.probSub, collapsed: true },
