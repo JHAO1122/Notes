@@ -1914,7 +1914,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：可数集
+    第二章：函数与关系
   
 
     
@@ -1942,7 +1942,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：函数与关系
+    第三章：可数集
   
 
     
@@ -4716,6 +4716,999 @@ x \sim y \iff \text{存在一个连通子集 } A \subseteq X \text{，使得 } x
 </li>
 </ul>
 <p>既然割点的数量（或者是否存在割点）在同胚映射下必须保持不变，而这三个空间的割点性质截然不同，因此这三个空间两两互不<strong>同胚</strong>。</p>
+<p>\newpage</p>
+<h1 id="homework-01-02">习题一 (Homework 01 &amp; 02)</h1>
+<p>本部分包含点集拓扑课程第一、第二次作业的题目及其详细解答。</p>
+<hr />
+<h2 id="1_4">问题 1</h2>
+<p>设 <span class="arithmatex">\(A\)</span> 为一个非空有限集。令 <span class="arithmatex">\(\mathcal{P}(A) = \{A' \mid A' \subseteq A\}\)</span> 为 <span class="arithmatex">\(A\)</span> 的幂集。记 <span class="arithmatex">\(2^A\)</span> 为所有形式为 <span class="arithmatex">\(f: A \to \{\pm 1\}\)</span> 的函数构成的集合。</p>
+<p>证明：在 <span class="arithmatex">\(\mathcal{P}(A)\)</span> 与 <span class="arithmatex">\(2^A\)</span> 之间存在一个双射，并计算 <span class="arithmatex">\(\mathcal{P}(A)\)</span> 的基数。</p>
+<h3 id="_8">解答</h3>
+<p>我们可以通过定义指示函数（特征函数）的方法来构造双射。</p>
+<p><strong>1. 构造映射：</strong>
+定义映射 <span class="arithmatex">\(\Phi: \mathcal{P}(A) \to 2^A\)</span>。对于任何子集 <span class="arithmatex">\(A' \in \mathcal{P}(A)\)</span>，其对应的函数 <span class="arithmatex">\(f_{A'} = \Phi(A')\)</span> 定义如下：</p>
+<div class="arithmatex">\[
+f_{A'}(x) = \begin{cases} 1, &amp; x \in A' \\ -1, &amp; x \notin A' \end{cases}
+\]</div>
+<p><strong>2. 证明 <span class="arithmatex">\(\Phi\)</span> 是单射：</strong>
+假设对于 <span class="arithmatex">\(A_1', A_2' \in \mathcal{P}(A)\)</span>，有 <span class="arithmatex">\(\Phi(A_1') = \Phi(A_2')\)</span>。这意味着对于所有的 <span class="arithmatex">\(x \in A\)</span>，都有 <span class="arithmatex">\(f_{A_1'}(x) = f_{A_2'}(x)\)</span>。
+根据 <span class="arithmatex">\(f_{A'}\)</span> 的定义：
+若 <span class="arithmatex">\(x \in A_1'\)</span>，则 <span class="arithmatex">\(f_{A_1'}(x) = 1\)</span>，从而 <span class="arithmatex">\(f_{A_2'}(x) = 1\)</span>，由定义得 <span class="arithmatex">\(x \in A_2'\)</span>。故 <span class="arithmatex">\(A_1' \subseteq A_2'\)</span>。
+同理可得 <span class="arithmatex">\(A_2' \subseteq A_1'\)</span>。
+因此 <span class="arithmatex">\(A_1' = A_2'\)</span>，映射是单射。</p>
+<p><strong>3. 证明 <span class="arithmatex">\(\Phi\)</span> 是满射：</strong>
+对于任意函数 <span class="arithmatex">\(g \in 2^A\)</span>，其中 <span class="arithmatex">\(g: A \to \{\pm 1\}\)</span>。
+我们可以构造集合 <span class="arithmatex">\(A_g' = \{x \in A \mid g(x) = 1\}\)</span>。显然 <span class="arithmatex">\(A_g' \subseteq A\)</span>，即 <span class="arithmatex">\(A_g' \in \mathcal{P}(A)\)</span>。
+根据构造，<span class="arithmatex">\(\Phi(A_g')\)</span> 产生的函数在 <span class="arithmatex">\(x \in A_g'\)</span> 时取 <span class="arithmatex">\(1\)</span>，其余取 <span class="arithmatex">\(-1\)</span>，这与 <span class="arithmatex">\(g\)</span> 的取值完全一致。
+故 <span class="arithmatex">\(\Phi(A_g') = g\)</span>，映射是满射。</p>
+<p><strong>4. 计算基数：</strong>
+由于存在双射，故 <span class="arithmatex">\(|\mathcal{P}(A)| = |2^A|\)</span>。
+对于有限集 <span class="arithmatex">\(A\)</span>，设 <span class="arithmatex">\(|A| = n\)</span>。在构造函数 <span class="arithmatex">\(f: A \to \{-1, 1\}\)</span> 时，对于 <span class="arithmatex">\(A\)</span> 中的每一个元素 <span class="arithmatex">\(x\)</span>，都有 <span class="arithmatex">\(2\)</span> 种取值选择（<span class="arithmatex">\(1\)</span> 或 <span class="arithmatex">\(-1\)</span>）。
+根据乘法原理，总的函数个数为：</p>
+<div class="arithmatex">\[
+|2^A| = \underbrace{2 \times 2 \times \dots \times 2}_{n \text{ 次}} = 2^n
+\]</div>
+<p>因此，幂集的基数为 <span class="arithmatex">\(|\mathcal{P}(A)| = 2^{|A|}\)</span>。</p>
+<hr />
+<h2 id="2_5">问题 2</h2>
+<p>设 <span class="arithmatex">\(A\)</span> 为一个非空有限集。记 <span class="arithmatex">\(\mathcal{F}(A)\)</span> 为所有双射 <span class="arithmatex">\(f: A \to A\)</span> 构成的集合。</p>
+<p>证明：<span class="arithmatex">\(\mathcal{F}(A)\)</span> 关于映射的复合运算 <span class="arithmatex">\(g \circ f\)</span> 构成一个群。并讨论在何种情况下 <span class="arithmatex">\(\mathcal{F}(A)\)</span> 是阿贝尔群。</p>
+<h3 id="_9">解答</h3>
+<p>要证明 <span class="arithmatex">\((\mathcal{F}(A), \circ)\)</span> 构成一个群，我们需要验证群的四条公理：</p>
+<p><strong>1. 封闭性：</strong>
+若 <span class="arithmatex">\(f, g \in \mathcal{F}(A)\)</span>，则 <span class="arithmatex">\(f\)</span> 和 <span class="arithmatex">\(g\)</span> 均为双射。由于两个双射的复合映射仍然是双射，故 <span class="arithmatex">\(g \circ f: A \to A\)</span> 属于 <span class="arithmatex">\(\mathcal{F}(A)\)</span>。</p>
+<p><strong>2. 结合律：</strong>
+对于任意 <span class="arithmatex">\(f, g, h \in \mathcal{F}(A)\)</span>，根据映射复合的性质，对于任意 <span class="arithmatex">\(x \in A\)</span>：</p>
+<div class="arithmatex">\[
+[h \circ (g \circ f)](x) = h((g \circ f)(x)) = h(g(f(x)))
+\]</div>
+<div class="arithmatex">\[
+[(h \circ g) \circ f](x) = (h \circ g)(f(x)) = h(g(f(x)))
+\]</div>
+<p>故 <span class="arithmatex">\(h \circ (g \circ f) = (h \circ g) \circ f\)</span>。</p>
+<p><strong>3. 单位元：</strong>
+存在恒等映射 <span class="arithmatex">\(id_A: A \to A\)</span>，定义为 <span class="arithmatex">\(id_A(x) = x\)</span>。显然 <span class="arithmatex">\(id_A\)</span> 是双射，属于 <span class="arithmatex">\(\mathcal{F}(A)\)</span>。
+对于任意 <span class="arithmatex">\(f \in \mathcal{F}(A)\)</span>，有 <span class="arithmatex">\(f \circ id_A = id_A \circ f = f\)</span>。</p>
+<p><strong>4. 逆元：</strong>
+对于任意 <span class="arithmatex">\(f \in \mathcal{F}(A)\)</span>，由于 <span class="arithmatex">\(f\)</span> 是双射，根据逆映射定理，存在唯一的逆映射 <span class="arithmatex">\(f^{-1}: A \to A\)</span> 且 <span class="arithmatex">\(f^{-1}\)</span> 也是双射。
+故 <span class="arithmatex">\(f^{-1} \in \mathcal{F}(A)\)</span>，且满足 <span class="arithmatex">\(f \circ f^{-1} = f^{-1} \circ f = id_A\)</span>。</p>
+<p><strong>5. 关于阿贝尔群的讨论：</strong>
+<span class="arithmatex">\(\mathcal{F}(A)\)</span> 是阿贝尔群当且仅当 <span class="arithmatex">\(|A| \le 2\)</span>。</p>
+<ul>
+<li>若 <span class="arithmatex">\(|A| = 1\)</span>，<span class="arithmatex">\(\mathcal{F}(A)\)</span> 仅含单位元，是阿贝尔群。</li>
+<li>若 <span class="arithmatex">\(|A| = 2\)</span>，设 <span class="arithmatex">\(A = \{a, b\}\)</span>，<span class="arithmatex">\(\mathcal{F}(A)\)</span> 包含 <span class="arithmatex">\(id_A\)</span> 和对换 <span class="arithmatex">\((a, b)\)</span>，其阶为 <span class="arithmatex">\(2\)</span>，交换律成立。</li>
+<li>若 <span class="arithmatex">\(|A| \ge 3\)</span>，<span class="arithmatex">\(\mathcal{F}(A)\)</span> 即为对称群 <span class="arithmatex">\(S_n\)</span> (<span class="arithmatex">\(n \ge 3\)</span>)。此时可以取对换 <span class="arithmatex">\(f = (1, 2)\)</span> 和 <span class="arithmatex">\(g = (2, 3)\)</span>。
+  则 <span class="arithmatex">\((g \circ f)(1) = g(2) = 3\)</span>，而 <span class="arithmatex">\((f \circ g)(1) = f(1) = 2\)</span>。两者不等，故不是阿贝尔群。</li>
+</ul>
+<hr />
+<h2 id="3_5">问题 3</h2>
+<p>设 <span class="arithmatex">\(p_n\)</span> 为按升序排列的第 <span class="arithmatex">\(n\)</span> 个素数（例如 <span class="arithmatex">\(p_1=2, p_2=3, p_3=5\)</span>）。利用数学归纳法或其他方法证明：对于每一个 <span class="arithmatex">\(n\)</span>，都有 <span class="arithmatex">\(p_n &lt; 2^{2^n}\)</span>。</p>
+<h3 id="_10">解答</h3>
+<p>我们将利用素数个数的估计性质进行数学归纳法证明。</p>
+<p><strong>1. 基础步骤：</strong>
+当 <span class="arithmatex">\(n = 1\)</span> 时，<span class="arithmatex">\(p_1 = 2\)</span>。右式为 <span class="arithmatex">\(2^{2^1} = 2^2 = 4\)</span>。
+显然 <span class="arithmatex">\(2 &lt; 4\)</span>，命题在 <span class="arithmatex">\(n=1\)</span> 时成立。</p>
+<p><strong>2. 归纳假设：</strong>
+假设当 <span class="arithmatex">\(n \le k\)</span> 时，命题均成立，即对于所有 <span class="arithmatex">\(1 \le i \le k\)</span>，有 <span class="arithmatex">\(p_i &lt; 2^{2^i}\)</span>。</p>
+<p><strong>3. 归纳递推：</strong>
+根据 Euclid 对素数无穷性的证明思想，第 <span class="arithmatex">\(k+1\)</span> 个素数 <span class="arithmatex">\(p_{k+1}\)</span> 满足以下不等式：</p>
+<div class="arithmatex">\[
+p_{k+1} \le (p_1 p_2 \dots p_k) + 1
+\]</div>
+<p>利用归纳假设代入：</p>
+<div class="arithmatex">\[
+p_{k+1} \le (2^{2^1} \cdot 2^{2^2} \cdot \dots \cdot 2^{2^k}) + 1
+\]</div>
+<p>根据指数幂运算法则，括号内的指数部分为等比数列求和：</p>
+<div class="arithmatex">\[
+2^1 + 2^2 + \dots + 2^k = 2(2^k - 1) = 2^{k+1} - 2
+\]</div>
+<p>因此：</p>
+<div class="arithmatex">\[
+p_{k+1} \le 2^{2^{k+1} - 2} + 1
+\]</div>
+<p>由于对于 <span class="arithmatex">\(k \ge 1\)</span>，有 <span class="arithmatex">\(2^{k+1} - 2 &lt; 2^{k+1}\)</span>。且当 <span class="arithmatex">\(x \ge 2\)</span> 时，<span class="arithmatex">\(2^{x-2} + 1 &lt; 2^x\)</span> 显然成立。
+具体地，对于 <span class="arithmatex">\(k \ge 1\)</span>：</p>
+<div class="arithmatex">\[
+2^{2^{k+1} - 2} + 1 \le 2^{2^{k+1} - 1} &lt; 2^{2^{k+1}}
+\]</div>
+<p>故 <span class="arithmatex">\(p_{k+1} &lt; 2^{2^{k+1}}\)</span>。
+综上所述，由数学归纳法可知，对于所有 <span class="arithmatex">\(n \in \mathbb{N}_{\ge 1}\)</span>，命题均成立。</p>
+<hr />
+<h2 id="4_2">问题 4</h2>
+<p>设 <span class="arithmatex">\(S\)</span> 和 <span class="arithmatex">\(S'\)</span> 是 <span class="arithmatex">\(\mathbb{R} \times \mathbb{R}\)</span> 的如下子集：
+<span class="arithmatex">\(S = \{(x, y) \mid y = x+1 \text{ 且 } 0 &lt; x &lt; 3\}\)</span>
+<span class="arithmatex">\(S' = \{(x, y) \mid y - x \in \mathbb{Z}\}\)</span></p>
+<ul>
+<li>(i) 证明 <span class="arithmatex">\(S'\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 上的一个等价关系。描述 <span class="arithmatex">\(S'\)</span> 的等价类。</li>
+<li>(ii) 设 <span class="arithmatex">\(\{R_i\}_{i \in I}\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 上的一族等价关系。证明 <span class="arithmatex">\(\bigcap_{i \in I} R_i\)</span> 也是 <span class="arithmatex">\(\mathbb{R}\)</span> 上的一个等价关系。</li>
+<li>(iii) 描述 <span class="arithmatex">\(\mathbb{R}\)</span> 上的等价关系 <span class="arithmatex">\(T\)</span>，它是所有包含 <span class="arithmatex">\(S\)</span> 的等价关系的交集。描述 <span class="arithmatex">\(T\)</span> 的等价类。</li>
+</ul>
+<h3 id="_11">解答</h3>
+<p><strong>解答 (i)：证明 <span class="arithmatex">\(S'\)</span> 为等价关系</strong></p>
+<ul>
+<li>
+<p><strong>自反性</strong>：对于任意 <span class="arithmatex">\(x \in \mathbb{R}\)</span>，<span class="arithmatex">\(x - x = 0\)</span>。因为 <span class="arithmatex">\(0 \in \mathbb{Z}\)</span>，所以 <span class="arithmatex">\((x, x) \in S'\)</span>。</p>
+</li>
+<li>
+<p><strong>对称性</strong>：若 <span class="arithmatex">\((x, y) \in S'\)</span>，则 <span class="arithmatex">\(y - x = k \in \mathbb{Z}\)</span>。那么 <span class="arithmatex">\(x - y = -k\)</span>。因为 <span class="arithmatex">\(-k\)</span> 也是整数，故 <span class="arithmatex">\((y, x) \in S'\)</span>。</p>
+</li>
+<li>
+<p><strong>传递性</strong>：若 <span class="arithmatex">\((x, y) \in S'\)</span> 且 <span class="arithmatex">\((y, z) \in S'\)</span>，则 <span class="arithmatex">\(y - x = k_1 \in \mathbb{Z}\)</span> 且 <span class="arithmatex">\(z - y = k_2 \in \mathbb{Z}\)</span>。
+  则 <span class="arithmatex">\(z - x = (z - y) + (y - x) = k_2 + k_1\)</span>。由于整数之和仍为整数，故 <span class="arithmatex">\((x, z) \in S'\)</span>。</p>
+</li>
+<li>
+<p><strong>等价类描述</strong>：对于任意 <span class="arithmatex">\(x \in \mathbb{R}\)</span>，其等价类为 <span class="arithmatex">\([x]_{S'} = \{x + k \mid k \in \mathbb{Z}\}\)</span>。这实际上是将实数轴按照整数跨度进行了离散化划分。</p>
+</li>
+</ul>
+<p><strong>解答 (ii)：证明等价关系的交集仍为等价关系</strong>
+设 <span class="arithmatex">\(R = \bigcap_{i \in I} R_i\)</span>。</p>
+<ul>
+<li>
+<p><strong>自反性</strong>：对任意 <span class="arithmatex">\(x \in \mathbb{R}\)</span>，由于每个 <span class="arithmatex">\(R_i\)</span> 都是等价关系，故 <span class="arithmatex">\(\forall i \in I, (x, x) \in R_i\)</span>。因此 <span class="arithmatex">\((x, x) \in R\)</span>。</p>
+</li>
+<li>
+<p><strong>对称性</strong>：若 <span class="arithmatex">\((x, y) \in R\)</span>，则对所有 <span class="arithmatex">\(i \in I\)</span> 都有 <span class="arithmatex">\((x, y) \in R_i\)</span>。由 <span class="arithmatex">\(R_i\)</span> 的对称性知 <span class="arithmatex">\((y, x) \in R_i\)</span>。因此 <span class="arithmatex">\((y, x) \in R\)</span>。</p>
+</li>
+<li>
+<p><strong>传递性</strong>：若 <span class="arithmatex">\((x, y) \in R\)</span> 且 <span class="arithmatex">\((y, z) \in R\)</span>，则对所有 <span class="arithmatex">\(i \in I\)</span> 都有 <span class="arithmatex">\((x, y) \in R_i\)</span> 且 <span class="arithmatex">\((y, z) \in R_i\)</span>。由 <span class="arithmatex">\(R_i\)</span> 的传递性知 <span class="arithmatex">\((x, z) \in R_i\)</span>。因此 <span class="arithmatex">\((x, z) \in R\)</span>。</p>
+</li>
+</ul>
+<p><strong>解答 (iii)：描述等价关系 <span class="arithmatex">\(T\)</span></strong>
+根据 (ii) 的结论，<span class="arithmatex">\(T\)</span> 是包含 <span class="arithmatex">\(S\)</span> 的最小等价关系。等价关系 <span class="arithmatex">\(T\)</span> 由 <span class="arithmatex">\(S\)</span> 的自反、对称、传递闭包生成。
+<span class="arithmatex">\(S\)</span> 描述了间隔为 <span class="arithmatex">\(1\)</span> 且 <span class="arithmatex">\(x \in (0, 3)\)</span> 的连接关系。</p>
+<ul>
+<li><strong>等价类描述</strong>：</li>
+<li>若 <span class="arithmatex">\(x \in (0, 1]\)</span>，则它可以通过连续加 <span class="arithmatex">\(1\)</span> 的方式与后面的点建立等价关系，其等价类为 <span class="arithmatex">\([x]_T = \{x, x+1, x+2, x+3\}\)</span>（注意：当 <span class="arithmatex">\(x\)</span> 逼近 <span class="arithmatex">\(1\)</span> 时，<span class="arithmatex">\(x+3\)</span> 逼近 <span class="arithmatex">\(4\)</span>）。</li>
+<li>若 <span class="arithmatex">\(x \in (1, 4)\)</span> 且不属于上述生成方式中的点，其等价类与上述重叠（即它属于某个起点在 <span class="arithmatex">\((0,1]\)</span> 的序列中）。</li>
+<li>若 <span class="arithmatex">\(x \in (-\infty, 0] \cup [4, +\infty)\)</span>，它没有被 <span class="arithmatex">\(S\)</span> 关系“连接”到任何其他点，因此 <span class="arithmatex">\([x]_T = \{x\}\)</span>。</li>
+</ul>
+<hr />
+<h2 id="5_1">问题 5</h2>
+<p>实数 <span class="arithmatex">\(x \in \mathbb{R}\)</span> 若满足某个正次数的有理系数多项式方程：</p>
+<div class="arithmatex">\[
+x^n + a_{n-1}x^{n-1} + \dots + a_1x + a_0 = 0
+\]</div>
+<p>其中 <span class="arithmatex">\(a_i \in \mathbb{Q}\)</span>，则称 <span class="arithmatex">\(x\)</span> 为<strong>代数数</strong>（Algebraic number）；否则称其为<strong>超越数</strong>（Transcendental number）。假设每个此类多项式方程在 <span class="arithmatex">\(\mathbb{R}\)</span> 中只有有限个根。</p>
+<p>证明：所有实代数数构成的集合 <span class="arithmatex">\(\mathcal{A} \subseteq \mathbb{R}\)</span> 是可数的。并由此推导所有实超越数构成的集合 <span class="arithmatex">\(\mathbb{R} - \mathcal{A}\)</span> 是不可数的。</p>
+<h3 id="_12">解答</h3>
+<p><strong>第一步：证明有理系数多项式集是可数的</strong>
+对于每一个确定的次数 <span class="arithmatex">\(n \ge 1\)</span>，一个首一的有理系数多项式由其系数序列 <span class="arithmatex">\((a_{n-1}, a_{n-2}, \dots, a_0) \in \mathbb{Q}^n\)</span> 唯一确定。
+因为有理数集 <span class="arithmatex">\(\mathbb{Q}\)</span> 是可数的，所以有限个可数集的笛卡尔积 <span class="arithmatex">\(\mathbb{Q}^n\)</span> 也是可数的。
+所有正次数的有理系数多项式的集合可以表示为所有固定次数多项式集合的并集：</p>
+<div class="arithmatex">\[
+\mathcal{P} = \bigcup_{n=1}^{\infty} \mathbb{Q}^n
+\]</div>
+<p>由于可数个可数集的并集依然是可数的，故所有有理系数多项式构成的集合 <span class="arithmatex">\(\mathcal{P}\)</span> 是可数的。</p>
+<p><strong>第二步：证明代数数集 <span class="arithmatex">\(\mathcal{A}\)</span> 是可数的</strong>
+对于每一个多项式 <span class="arithmatex">\(P \in \mathcal{P}\)</span>，令 <span class="arithmatex">\(R(P)\)</span> 为多项式 <span class="arithmatex">\(P\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 中的所有根构成的集合。根据题目假设，<span class="arithmatex">\(R(P)\)</span> 是一个有限集。
+全体实代数数集 <span class="arithmatex">\(\mathcal{A}\)</span> 可以表示为所有有理系数多项式根集的并集：</p>
+<div class="arithmatex">\[
+\mathcal{A} = \bigcup_{P \in \mathcal{P}} R(P)
+\]</div>
+<p>既然 <span class="arithmatex">\(\mathcal{P}\)</span> 是可数的，且每个 <span class="arithmatex">\(R(P)\)</span> 都是有限集，根据“可数个可数（或有限）集的并集仍为可数集”的定理，<span class="arithmatex">\(\mathcal{A}\)</span> 是可数的。</p>
+<p><strong>第三步：推导超越数集的不可数性</strong>
+我们已知实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 是不可数的。
+由于 <span class="arithmatex">\(\mathbb{R} = \mathcal{A} \cup (\mathbb{R} - \mathcal{A})\)</span>，如果超越数集 <span class="arithmatex">\(\mathbb{R} - \mathcal{A}\)</span> 是可数的，那么两个可数集的并集 <span class="arithmatex">\(\mathbb{R}\)</span> 也应该是可数的。
+这与实数集的不可数性产生矛盾。因此，实超越数集 <span class="arithmatex">\(\mathbb{R} - \mathcal{A}\)</span> 必定是不可数的。</p>
+<hr />
+<h2 id="6_1">问题 6</h2>
+<p>设 <span class="arithmatex">\(X := \{0, 1\}\)</span>。令 <span class="arithmatex">\(X^{\mathbb{N}}\)</span> 为所有映射 <span class="arithmatex">\(f: \mathbb{N} \to X\)</span> 构成的集合。对于 <span class="arithmatex">\(f \in X^{\mathbb{N}}\)</span>，定义 <span class="arithmatex">\(f\)</span> 的<strong>支撑集</strong>（Support）为：</p>
+<div class="arithmatex">\[
+supp(f) = f^{-1}(\{1\})
+\]</div>
+<p>考虑子集 <span class="arithmatex">\(X_0^{\mathbb{N}} = \{f \in X^{\mathbb{N}} \mid supp(f) \text{ 是有限集} \}\)</span>。</p>
+<p>问：<span class="arithmatex">\(X_0^{\mathbb{N}}\)</span> 是可数的还是不可数的？请给出理由。</p>
+<h3 id="_13">解答</h3>
+<p><strong>结论</strong>：<span class="arithmatex">\(X_0^{\mathbb{N}}\)</span> 是<strong>可数集</strong>。</p>
+<p><strong>理由如下</strong>：
+每一个函数 <span class="arithmatex">\(f \in X_0^{\mathbb{N}}\)</span> 都由其支撑集 <span class="arithmatex">\(supp(f)\)</span> 唯一确定。这是因为 <span class="arithmatex">\(f(n)=1\)</span> 当且仅当 <span class="arithmatex">\(n \in supp(f)\)</span>，否则 <span class="arithmatex">\(f(n)=0\)</span>。
+因此，<span class="arithmatex">\(X_0^{\mathbb{N}}\)</span> 与自然数集 <span class="arithmatex">\(\mathbb{N}\)</span> 的所有<strong>有限子集</strong>构成的集合 <span class="arithmatex">\(\mathcal{P}_{fin}(\mathbb{N})\)</span> 之间存在一个自然双射。</p>
+<p>我们可以将 <span class="arithmatex">\(\mathcal{P}_{fin}(\mathbb{N})\)</span> 拆分为按大小分类的子集族：</p>
+<div class="arithmatex">\[
+\mathcal{P}_{fin}(\mathbb{N}) = \bigcup_{n=0}^{\infty} \mathcal{P}_n(\mathbb{N})
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathcal{P}_n(\mathbb{N})\)</span> 表示所有大小恰好为 <span class="arithmatex">\(n\)</span> 的自然数子集构成的集合。</p>
+<ul>
+<li>对于 <span class="arithmatex">\(n=0\)</span>，<span class="arithmatex">\(\mathcal{P}_0(\mathbb{N}) = \{\emptyset\}\)</span>，是有限集。</li>
+<li>对于 <span class="arithmatex">\(n \ge 1\)</span>，每一个含有 <span class="arithmatex">\(n\)</span> 个元素的子集可以单射映射到一个有序的 <span class="arithmatex">\(n\)</span> 元组 <span class="arithmatex">\((k_1, k_2, \dots, k_n) \in \mathbb{N}^n\)</span> 中（例如按升序排列）。由于 <span class="arithmatex">\(\mathbb{N}^n\)</span> 是可数集，其子集 <span class="arithmatex">\(\mathcal{P}_n(\mathbb{N})\)</span> 必定也是可数的。</li>
+</ul>
+<p>因为 <span class="arithmatex">\(\mathcal{P}_{fin}(\mathbb{N})\)</span> 是可数个可数集的并集，所以它是可数的。从而 <span class="arithmatex">\(X_0^{\mathbb{N}}\)</span> 是可数集。</p>
+<hr />
+<h3 id="01-pseudo-metric-space">定义 0.1 (伪度量空间 Pseudo-metric space)</h3>
+<p>一个<strong>伪度量空间</strong>是一个二元组 <span class="arithmatex">\((S, d)\)</span>，其中 <span class="arithmatex">\(S\)</span> 是一个非空集合，且 <span class="arithmatex">\(d: S \times S \to \mathbb{R}_{\ge 0}\)</span> 是一个函数（称为 <span class="arithmatex">\(S\)</span> 上的伪度量），它满足以下性质：
+(1) <span class="arithmatex">\(d(x, x) = 0\)</span>
+(2) 对于所有的 <span class="arithmatex">\(x, y \in S\)</span>，有 <span class="arithmatex">\(d(x, y) = d(y, x)\)</span>
+(3) 对于所有的 <span class="arithmatex">\(x, y, z \in S\)</span>，满足三角不等式：<span class="arithmatex">\(d(x, z) \le d(x, y) + d(y, z)\)</span></p>
+<p><strong>注</strong>：如果它还额外满足条件“若 <span class="arithmatex">\(d(x, y) = 0\)</span> 则必定有 <span class="arithmatex">\(x = y\)</span>”，那么它就成为了一个严格的<strong>度量空间</strong>。</p>
+<p><em>(以下第 7、8、9 题均基于度量与伪度量的相关概念)</em></p>
+<h2 id="7">问题 7</h2>
+<p>设 <span class="arithmatex">\((S, d)\)</span> 为一个伪度量空间。我们在 <span class="arithmatex">\(S\)</span> 上定义关系 <span class="arithmatex">\(\sim\)</span> 如下：若 <span class="arithmatex">\(d(x, y) = 0\)</span>，则称 <span class="arithmatex">\(x \sim y\)</span>。</p>
+<p>证明：
+(i) <span class="arithmatex">\(\sim\)</span> 是 <span class="arithmatex">\(S\)</span> 上的一个等价关系（记其等价类构成的商集为 <span class="arithmatex">\(S^*\)</span>）；
+(ii) 对于每一个 <span class="arithmatex">\([x], [y] \in S^*\)</span>，定义函数 <span class="arithmatex">\(d^*([x], [y]) = d(x, y)\)</span>，证明它给出了 <span class="arithmatex">\(S^*\)</span> 上一个定义良好（well-defined）的度量。</p>
+<h3 id="_14">解答</h3>
+<p><strong>(i) 证明等价关系</strong></p>
+<ul>
+<li>
+<p><strong>自反性</strong>：由伪度量定义 (1) 知，<span class="arithmatex">\(d(x, x) = 0\)</span>，故 <span class="arithmatex">\(x \sim x\)</span>。</p>
+</li>
+<li>
+<p><strong>对称性</strong>：若 <span class="arithmatex">\(x \sim y\)</span>，则 <span class="arithmatex">\(d(x, y) = 0\)</span>。由伪度量定义 (2) 知，<span class="arithmatex">\(d(y, x) = d(x, y) = 0\)</span>，故 <span class="arithmatex">\(y \sim x\)</span>。</p>
+</li>
+<li>
+<p><strong>传递性</strong>：若 <span class="arithmatex">\(x \sim y\)</span> 且 <span class="arithmatex">\(y \sim z\)</span>，则 <span class="arithmatex">\(d(x, y) = 0\)</span> 且 <span class="arithmatex">\(d(y, z) = 0\)</span>。由三角不等式知：<span class="arithmatex">\(0 \le d(x, z) \le d(x, y) + d(y, z) = 0 + 0 = 0\)</span></p>
+</li>
+</ul>
+<p>故 <span class="arithmatex">\(d(x, z) = 0\)</span>，即 <span class="arithmatex">\(x \sim z\)</span>。</p>
+<p><strong>(ii) 证明 <span class="arithmatex">\(d^*\)</span> 是良好的度量</strong></p>
+<ul>
+<li><strong>1. 定义良好性 (Well-definedness)</strong>：
+  我们需要证明 <span class="arithmatex">\(d^*([x], [y])\)</span> 的取值不依赖于等价类代表元的选择。设 <span class="arithmatex">\(x \sim x'\)</span> 且 <span class="arithmatex">\(y \sim y'\)</span>，即 <span class="arithmatex">\(d(x, x') = 0\)</span> 且 <span class="arithmatex">\(d(y, y') = 0\)</span>。
+  根据三角不等式：</li>
+</ul>
+<p>$$
+  d(x, y) \le d(x, x') + d(x', y') + d(y', y) = 0 + d(x', y') + 0 = d(x', y')
+  $$</p>
+<p>同理反向应用三角不等式可得 <span class="arithmatex">\(d(x', y') \le d(x, y)\)</span>。因此 <span class="arithmatex">\(d(x, y) = d(x', y')\)</span>，取值与代表元无关，定义良好。</p>
+<ul>
+<li><strong>2. 验证度量公理</strong>：</li>
+<li><strong>非负性与自反性</strong>：<span class="arithmatex">\(d^*([x], [y]) = d(x, y) \ge 0\)</span>。且 <span class="arithmatex">\(d^*([x], [x]) = d(x, x) = 0\)</span>。</li>
+<li><strong>严格正性</strong>：若 <span class="arithmatex">\(d^*([x], [y]) = 0\)</span>，则 <span class="arithmatex">\(d(x, y) = 0\)</span>。根据 <span class="arithmatex">\(\sim\)</span> 的定义，这意味着 <span class="arithmatex">\(x \sim y\)</span>，即 <span class="arithmatex">\([x] = [y]\)</span>。</li>
+<li><strong>对称性</strong>：<span class="arithmatex">\(d^*([x], [y]) = d(x, y) = d(y, x) = d^*([y], [x])\)</span>。</li>
+<li>
+<p><strong>三角不等式</strong>：</p>
+<div class="arithmatex">\[
+d^*([x], [z]) = d(x, z) \le d(x, y) + d(y, z) = d^*([x], [y]) + d^*([y], [z])
+\]</div>
+</li>
+</ul>
+<p>故 <span class="arithmatex">\(d^*\)</span> 确实是 <span class="arithmatex">\(S^*\)</span> 上的一个度量。</p>
+<hr />
+<h2 id="8">问题 8</h2>
+<p>设 <span class="arithmatex">\(n \in \mathbb{N}_{\ge 1}\)</span>。考虑定义在 <span class="arithmatex">\(\mathbb{R}^2 \times \mathbb{R}^2\)</span> 上的函数 <span class="arithmatex">\(d_n: \mathbb{R}^2 \times \mathbb{R}^2 \to \mathbb{R}_{\ge 0}\)</span>，其公式为：</p>
+<div class="arithmatex">\[
+d_n(x, y) := (|x_1 - y_1| + |x_2 - y_2|)^n
+\]</div>
+<p>其中 <span class="arithmatex">\(x = (x_1, x_2), y = (y_1, y_2) \in \mathbb{R}^2\)</span>。确定使得 <span class="arithmatex">\((\mathbb{R}^2, d_n)\)</span> 成为度量空间的所有 <span class="arithmatex">\(n\)</span> 的取值。</p>
+<h3 id="_15">解答</h3>
+<p><strong>结论</strong>：使得 <span class="arithmatex">\((\mathbb{R}^2, d_n)\)</span> 成为度量空间的 <span class="arithmatex">\(n\)</span> 只能取 <strong><span class="arithmatex">\(1\)</span></strong>。</p>
+<p><strong>分析与证明</strong>：
+要使 <span class="arithmatex">\(d_n\)</span> 成为度量，它必须对所有点满足三角不等式：<span class="arithmatex">\(d_n(x, z) \le d_n(x, y) + d_n(y, z)\)</span>。</p>
+<p><strong>情况一：当 <span class="arithmatex">\(n = 1\)</span> 时</strong></p>
+<div class="arithmatex">\[
+d_1(x, y) = |x_1 - y_1| + |x_2 - y_2|
+\]</div>
+<p>这恰好是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 上的曼哈顿度量（<span class="arithmatex">\(L_1\)</span> 度量）。根据实数绝对值的三角不等式：</p>
+<div class="arithmatex">\[
+|x_1 - z_1| + |x_2 - z_2| \le (|x_1 - y_1| + |y_1 - z_1|) + (|x_2 - y_2| + |y_2 - z_2|)
+\]</div>
+<p>重新排列即可得到 <span class="arithmatex">\(d_1(x, z) \le d_1(x, y) + d_1(y, z)\)</span>。非负性、严格正性和对称性显然成立。因此 <span class="arithmatex">\(n=1\)</span> 是一个解。</p>
+<p><strong>情况二：当 <span class="arithmatex">\(n \ge 2\)</span> 时</strong>
+我们试图寻找一个违反三角不等式的反例。取 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中的三个点：
+<span class="arithmatex">\(x = (0, 0)\)</span>, <span class="arithmatex">\(y = (1, 0)\)</span>, <span class="arithmatex">\(z = (1, 1)\)</span>。</p>
+<p>我们计算这三个点两两之间的距离：</p>
+<div class="arithmatex">\[
+d_n(x, y) = (|0 - 1| + |0 - 0|)^n = 1^n = 1
+\]</div>
+<div class="arithmatex">\[
+d_n(y, z) = (|1 - 1| + |0 - 1|)^n = 1^n = 1
+\]</div>
+<div class="arithmatex">\[
+d_n(x, z) = (|0 - 1| + |0 - 1|)^n = (1 + 1)^n = 2^n
+\]</div>
+<p>如果要满足三角不等式，必须有：</p>
+<div class="arithmatex">\[
+d_n(x, z) \le d_n(x, y) + d_n(y, z) \implies 2^n \le 1 + 1 = 2
+\]</div>
+<p>因为我们处于 <span class="arithmatex">\(n \ge 2\)</span> 的情况（且 <span class="arithmatex">\(n\)</span> 为整数），<span class="arithmatex">\(2^n \ge 4 &gt; 2\)</span>。
+这显然与三角不等式矛盾！
+因此，当 <span class="arithmatex">\(n \ge 2\)</span> 时，<span class="arithmatex">\(d_n\)</span> 无法构成度量。</p>
+<p>综上所述，唯一满足条件的 <span class="arithmatex">\(n\)</span> 为 <span class="arithmatex">\(1\)</span>。</p>
+<hr />
+<h2 id="9">问题 9</h2>
+<p>设 <span class="arithmatex">\((S, d)\)</span> 是一个度量空间。我们是否总是能够在 <span class="arithmatex">\(S\)</span> 的幂集 <span class="arithmatex">\(\mathcal{P}(S)\)</span> 上定义一个度量 <span class="arithmatex">\(d'\)</span>，使得对于任意的 <span class="arithmatex">\(x, y \in S\)</span>，都有 <span class="arithmatex">\(d'(\{x\}, \{y\}) = d(x, y)\)</span>？请证明或给出理由。</p>
+<h3 id="_16">解答</h3>
+<p><strong>结论</strong>：是的，我们<strong>总是</strong>可以构造出这样的度量 <span class="arithmatex">\(d'\)</span>。</p>
+<p><strong>构造与证明</strong>：
+这道题的核心在于：将单点集看作 <span class="arithmatex">\(S\)</span> 的一个拷贝，我们如何将定义在单点集子集上的度量，合法地“延拓”到包含非单点集的整个幂集 <span class="arithmatex">\(\mathcal{P}(S)\)</span> 上，同时不破坏度量的三大公理（尤其是三角不等式）。</p>
+<ul>
+<li>
+<p><strong>平凡情况</strong>：如果 <span class="arithmatex">\(S = \emptyset\)</span>，则 <span class="arithmatex">\(\mathcal{P}(S) = \{\emptyset\}\)</span>。在这个单点集上定义平凡度量 <span class="arithmatex">\(d'(\emptyset, \emptyset) = 0\)</span> 即可。</p>
+</li>
+<li>
+<p><strong>一般情况</strong>：设 <span class="arithmatex">\(S\)</span> 非空。我们固定 <span class="arithmatex">\(S\)</span> 中的任意一点 <span class="arithmatex">\(x_0 \in S\)</span>。
+  对于 <span class="arithmatex">\(\mathcal{P}(S)\)</span> 中的任意两个集合 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span>，我们如下定义度量 <span class="arithmatex">\(d'(A, B)\)</span>：</p>
+</li>
+<li>
+<p>如果 <span class="arithmatex">\(A = B\)</span>，定义 <strong><span class="arithmatex">\(d'(A, B) = 0\)</span></strong>。</p>
+</li>
+<li>如果 <span class="arithmatex">\(A = \{x\}\)</span> 且 <span class="arithmatex">\(B = \{y\}\)</span>（即两者都是单点集，且 <span class="arithmatex">\(x \neq y\)</span>），定义 <strong><span class="arithmatex">\(d'(A, B) = d(x, y)\)</span></strong>。</li>
+<li>如果 <span class="arithmatex">\(A = \{x\}\)</span> 是单点集，而 <span class="arithmatex">\(B\)</span> 不是单点集，定义 <strong><span class="arithmatex">\(d'(A, B) = d(x, x_0) + 1\)</span></strong>。根据对称性，若 <span class="arithmatex">\(A\)</span> 不是单点集而 <span class="arithmatex">\(B=\{y\}\)</span>，则定义 <strong><span class="arithmatex">\(d'(B, A) = d'(A, B) = d(y, x_0) + 1\)</span></strong>。</li>
+<li>如果 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 都不是单点集（且 <span class="arithmatex">\(A \neq B\)</span>），定义 <strong><span class="arithmatex">\(d'(A, B) = 2\)</span></strong>。</li>
+</ul>
+<p>接下来我们验证这确实是一个合法的度量：</p>
+<ul>
+<li>
+<p><strong>严格正性与对称性</strong>：因为 <span class="arithmatex">\(d(x,y)&gt;0\)</span> (当 <span class="arithmatex">\(x \neq y\)</span>)，且 <span class="arithmatex">\(d(x, x_0)+1 \ge 1 &gt; 0\)</span> 以及 <span class="arithmatex">\(2 &gt; 0\)</span>，所以当且仅当 <span class="arithmatex">\(A=B\)</span> 时 <span class="arithmatex">\(d'(A,B)=0\)</span>。对称性由定义直接保证。</p>
+</li>
+<li>
+<p><strong>三角不等式</strong> <span class="arithmatex">\(d'(A, C) \le d'(A, B) + d'(B, C)\)</span> 的验证（设 <span class="arithmatex">\(A, B, C\)</span> 互不相同）：</p>
+</li>
+<li>
+<p><strong>全为单点集</strong> (<span class="arithmatex">\(A=\{x\}, B=\{y\}, C=\{z\}\)</span>)：<span class="arithmatex">\(d(x,z) \le d(x,y) + d(y,z)\)</span>，由原度量 <span class="arithmatex">\(d\)</span> 的三角不等式保证。</p>
+</li>
+<li>
+<p><strong>两单一非</strong> (<span class="arithmatex">\(A=\{x\}, B=\{y\}, C\)</span>非单)：我们要证 <span class="arithmatex">\(d'(A,C) \le d'(A,B) + d'(B,C)\)</span>。即证 <span class="arithmatex">\(d(x, x_0) + 1 \le d(x, y) + d(y, x_0) + 1\)</span>。消去 1 后即 <span class="arithmatex">\(d(x, x_0) \le d(x, y) + d(y, x_0)\)</span>，由原度量 <span class="arithmatex">\(d\)</span> 保证，成立。
+    同理要证 <span class="arithmatex">\(d'(A,B) \le d'(A,C) + d'(C,B)\)</span>。即证 <span class="arithmatex">\(d(x,y) \le d(x, x_0) + 1 + d(y, x_0) + 1\)</span>。这显然成立，因为 <span class="arithmatex">\(d(x,y) \le d(x, x_0) + d(y, x_0) \le d(x, x_0) + d(y, x_0) + 2\)</span>。</p>
+</li>
+<li>
+<p><strong>一单两非</strong> (<span class="arithmatex">\(A=\{x\}, B\)</span>非单, <span class="arithmatex">\(C\)</span>非单)：我们要证 <span class="arithmatex">\(d'(A,C) \le d'(A,B) + d'(B,C)\)</span>。即证 <span class="arithmatex">\(d(x, x_0) + 1 \le d(x, x_0) + 1 + 2\)</span>，显然成立。
+    同理要证 <span class="arithmatex">\(d'(B,C) \le d'(B,A) + d'(A,C)\)</span>。即证 <span class="arithmatex">\(2 \le d(x, x_0) + 1 + d(x, x_0) + 1 = 2d(x, x_0) + 2\)</span>。由于距离非负（<span class="arithmatex">\(d(x,x_0) \ge 0\)</span>），不等式右边至少为 2，显然成立。</p>
+</li>
+<li>
+<p><strong>全非单点集</strong>：我们要证 <span class="arithmatex">\(2 \le 2 + 2\)</span>，显然成立。</p>
+</li>
+</ul>
+<p>所有的度量公理均被满足，且按照定义，当 <span class="arithmatex">\(A=\{x\}, B=\{y\}\)</span> 时 <span class="arithmatex">\(d'(A,B) = d(x,y)\)</span>。
+因此，这样的度量 <span class="arithmatex">\(d'\)</span> <strong>总是存在</strong>的。</p>
+<p>\newpage</p>
+<h1 id="homework-03-04">习题二 (Homework 03 &amp; 04)</h1>
+<p>本部分包含点集拓扑课程第三、第四次作业相关练习。</p>
+<hr />
+<h2 id="1_5">问题 1</h2>
+<p>设 <span class="arithmatex">\(S\)</span> 为一个非空集合。</p>
+<p>(i) 考虑离散度量 <span class="arithmatex">\(d: S \times S \to \mathbb{R}_{\ge 0}\)</span>，定义为：当 <span class="arithmatex">\(x=y\)</span> 时 <span class="arithmatex">\(d(x, y)=0\)</span>；当 <span class="arithmatex">\(x \neq y\)</span> 时 <span class="arithmatex">\(d(x, y)=1\)</span>。证明该度量诱导的拓扑 <span class="arithmatex">\(\mathcal{T}_d\)</span> 正好是幂集 <span class="arithmatex">\(\mathcal{P}(S)\)</span>，即 <span class="arithmatex">\(S\)</span> 的每一个子集在度量空间 <span class="arithmatex">\((S, d)\)</span> 中都是开集。</p>
+<p>(ii) 是否总能找到 <span class="arithmatex">\(S\)</span> 上的一个度量，使得其诱导的拓扑是平庸拓扑（即 <span class="arithmatex">\(\{ \emptyset, S \}\)</span>）？</p>
+<h3 id="_17">解答</h3>
+<p><strong>(i) 证明离散度量诱导离散拓扑</strong></p>
+<p>要证明 <span class="arithmatex">\(\mathcal{T}_d = \mathcal{P}(S)\)</span>，只需证明 <span class="arithmatex">\(S\)</span> 中的每一个单点集 <span class="arithmatex">\(\{x\}\)</span> 都是开集即可。</p>
+<p>对于任意 <span class="arithmatex">\(x \in S\)</span>，考虑以 <span class="arithmatex">\(x\)</span> 为中心，半径为 <span class="arithmatex">\(\epsilon = 1/2\)</span> 的开球：</p>
+<div class="arithmatex">\[
+B(x, 1/2) = \{ y \in S \mid d(y, x) &lt; 1/2 \}
+\]</div>
+<p>根据离散度量的定义，当 <span class="arithmatex">\(y \neq x\)</span> 时 <span class="arithmatex">\(d(y, x) = 1 &gt; 1/2\)</span>；只有当 <span class="arithmatex">\(y = x\)</span> 时 <span class="arithmatex">\(d(y, x) = 0 &lt; 1/2\)</span>。
+因此，<span class="arithmatex">\(B(x, 1/2) = \{x\}\)</span>。</p>
+<p>由于度量空间中的开球必为开集，故 <span class="arithmatex">\(\{x\}\)</span> 是开集。
+因为 <span class="arithmatex">\(S\)</span> 的任意子集 <span class="arithmatex">\(A\)</span> 都可以表示为单点集的并集：</p>
+<div class="arithmatex">\[
+A = \bigcup_{x \in A} \{x\}
+\]</div>
+<p>且拓扑对任意并运算封闭，所以 <span class="arithmatex">\(A\)</span> 必定是开集。故 <span class="arithmatex">\(\mathcal{T}_d = \mathcal{P}(S)\)</span>。</p>
+<p><strong>(ii) 关于平庸拓扑的可度量化讨论</strong></p>
+<p><strong>结论</strong>：当 <span class="arithmatex">\(|S| \le 1\)</span> 时可以；当 <span class="arithmatex">\(|S| \ge 2\)</span> 时不存在。</p>
+<p><strong>理由</strong>：
+假设 <span class="arithmatex">\(S\)</span> 至少包含两个不同的点 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>。若存在度量 <span class="arithmatex">\(d\)</span> 诱导平庸拓扑，则 <span class="arithmatex">\(d(x, y) = \epsilon &gt; 0\)</span>。
+考虑开球 <span class="arithmatex">\(B(x, \epsilon) = \{ z \in S \mid d(z, x) &lt; \epsilon \}\)</span>。</p>
+<p>由于 <span class="arithmatex">\(d(x, x) = 0 &lt; \epsilon\)</span>，所以 <span class="arithmatex">\(x \in B(x, \epsilon)\)</span>。
+由于 <span class="arithmatex">\(d(y, x) = \epsilon \not&lt; \epsilon\)</span>，所以 <span class="arithmatex">\(y \notin B(x, \epsilon)\)</span>。</p>
+<p>这意味着 <span class="arithmatex">\(B(x, \epsilon)\)</span> 既不是空集（包含 <span class="arithmatex">\(x\)</span>），也不是全空间 <span class="arithmatex">\(S\)</span>（不包含 <span class="arithmatex">\(y\)</span>）。
+但在平庸拓扑中，唯一的开集只有 <span class="arithmatex">\(\emptyset\)</span> 和 <span class="arithmatex">\(S\)</span>。产生矛盾。
+因此，若 <span class="arithmatex">\(|S| \ge 2\)</span>，不存在诱导平庸拓扑的度量。</p>
+<hr />
+<h2 id="2_6">问题 2</h2>
+<p>证明 <span class="arithmatex">\(\mathcal{B} := \{ (a, b) \mid a &lt; b \text{ 且 } a, b \in \mathbb{Q} \}\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 上标准拓扑（由度量 <span class="arithmatex">\(d(x, y) = |x - y|\)</span> 诱导）的一个基。并证明 <span class="arithmatex">\(\text{Card}(\mathcal{B}) = \aleph_0\)</span>。</p>
+<h3 id="_18">解答</h3>
+<p><strong>1. 证明 <span class="arithmatex">\(\mathcal{B}\)</span> 是标准拓扑的基</strong></p>
+<p>设 <span class="arithmatex">\(\mathcal{T}\)</span> 为 <span class="arithmatex">\(\mathbb{R}\)</span> 上的标准拓扑。要证明 <span class="arithmatex">\(\mathcal{B}\)</span> 是基，需证明对于任意开集 <span class="arithmatex">\(U \in \mathcal{T}\)</span> 及任意点 <span class="arithmatex">\(x \in U\)</span>，都存在 <span class="arithmatex">\(B \in \mathcal{B}\)</span> 使得 <span class="arithmatex">\(x \in B \subseteq U\)</span>。</p>
+<p>已知 <span class="arithmatex">\(U\)</span> 是开集，故存在 <span class="arithmatex">\(\epsilon &gt; 0\)</span> 使得 <span class="arithmatex">\((x - \epsilon, x + \epsilon) \subseteq U\)</span>。
+根据有理数在实数中的<strong>稠密性 (Density)</strong>：
+在区间 <span class="arithmatex">\((x - \epsilon, x)\)</span> 中必存在有理数 <span class="arithmatex">\(a\)</span>；
+在区间 <span class="arithmatex">\((x, x + \epsilon)\)</span> 中必存在有理数 <span class="arithmatex">\(b\)</span>。</p>
+<p>由此我们得到 <span class="arithmatex">\(a &lt; x &lt; b\)</span>，且 <span class="arithmatex">\(a, b \in \mathbb{Q}\)</span>。
+显然 <span class="arithmatex">\((a, b) \in \mathcal{B}\)</span>。
+并且因为 <span class="arithmatex">\(x - \epsilon &lt; a\)</span> 且 <span class="arithmatex">\(b &lt; x + \epsilon\)</span>，故：</p>
+<div class="arithmatex">\[
+x \in (a, b) \subseteq (x - \epsilon, x + \epsilon) \subseteq U
+\]</div>
+<p>证毕。</p>
+<p><strong>2. 计算基的势</strong></p>
+<p>集合 <span class="arithmatex">\(\mathcal{B}\)</span> 的每一个元素由有序有理数对 <span class="arithmatex">\((a, b)\)</span> 唯一确定，且满足 <span class="arithmatex">\(a &lt; b\)</span>。
+因此存在一个单射 <span class="arithmatex">\(\Psi: \mathcal{B} \to \mathbb{Q} \times \mathbb{Q}\)</span>。
+由于 <span class="arithmatex">\(\mathbb{Q}\)</span> 是可数集，其笛卡尔积 <span class="arithmatex">\(\mathbb{Q} \times \mathbb{Q}\)</span> 也是可数集（即势为 <span class="arithmatex">\(\aleph_0\)</span>）。
+因为 <span class="arithmatex">\(\mathcal{B}\)</span> 是无穷集（例如包含所有 <span class="arithmatex">\((0, n), n \in \mathbb{Q}^+\)</span>），且其势不大于 <span class="arithmatex">\(\aleph_0\)</span>，由 Cantor-Bernstein 定理：</p>
+<div class="arithmatex">\[
+\text{Card}(\mathcal{B}) = \aleph_0
+\]</div>
+<hr />
+<h2 id="3_6">问题 3</h2>
+<p>对于 <span class="arithmatex">\(n \in \mathbb{N}_{\ge 1}\)</span>，考虑大小为 <span class="arithmatex">\(n\)</span> 的有限集 <span class="arithmatex">\(X_n := \{1, 2, \dots, n\}\)</span>。
+<span class="arithmatex">\(X_n\)</span> 上有多少个拓扑？此外，考虑 <span class="arithmatex">\(X_n\)</span> 上所有拓扑构成的集合 <span class="arithmatex">\(\Omega\)</span>。定义 <span class="arithmatex">\(\mathcal{T}_i &lt; \mathcal{T}_j\)</span> 为 <span class="arithmatex">\(\mathcal{T}_i \subsetneq \mathcal{T}_j\)</span>。问 <span class="arithmatex">\((\Omega, &lt;)\)</span> 在何时构成线性序关系？</p>
+<h3 id="_19">解答</h3>
+<p><strong>1. 拓扑的数量</strong></p>
+<p>有限集上的拓扑数量没有简单的通项公式，通常记为 <span class="arithmatex">\(T(n)\)</span>。对于前几个 <span class="arithmatex">\(n\)</span>，其数值为：</p>
+<ul>
+<li><span class="arithmatex">\(n=1: T(1) = 1\)</span>（仅平庸拓扑）</li>
+<li><span class="arithmatex">\(n=2: T(2) = 4\)</span>（平庸、离散、以及两个谢尔宾斯基拓扑）</li>
+<li><span class="arithmatex">\(n=3: T(3) = 29\)</span></li>
+</ul>
+<p><strong>2. 线性序关系的讨论</strong></p>
+<p><strong>结论</strong>：<span class="arithmatex">\((\Omega, &lt;)\)</span> 构成线性序关系当且仅当 <span class="arithmatex">\(n=1\)</span>。</p>
+<p><strong>理由</strong>：
+线性序要求对于 <span class="arithmatex">\(\Omega\)</span> 中的任意两个元素 <span class="arithmatex">\(\mathcal{T}_i, \mathcal{T}_j\)</span>，必有 <span class="arithmatex">\(\mathcal{T}_i \subseteq \mathcal{T}_j\)</span> 或 <span class="arithmatex">\(\mathcal{T}_j \subseteq \mathcal{T}_i\)</span>。</p>
+<p>当 <span class="arithmatex">\(n \ge 2\)</span> 时，我们可以构造两个不可比的拓扑。设 <span class="arithmatex">\(X_n\)</span> 包含不同元素 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>。
+定义拓扑 <span class="arithmatex">\(\mathcal{T}_1 = \{ \emptyset, X_n, \{a\} \}\)</span>；
+定义拓扑 <span class="arithmatex">\(\mathcal{T}_2 = \{ \emptyset, X_n, \{b\} \}\)</span>。</p>
+<p>显然 <span class="arithmatex">\(\{a\} \notin \mathcal{T}_2\)</span> 且 <span class="arithmatex">\(\{b\} \notin \mathcal{T}_1\)</span>。
+故 <span class="arithmatex">\(\mathcal{T}_1 \not\subseteq \mathcal{T}_2\)</span> 且 <span class="arithmatex">\(\mathcal{T}_2 \not\subseteq \mathcal{T}_1\)</span>。
+因此，当 <span class="arithmatex">\(n \ge 2\)</span> 时，<span class="arithmatex">\((\Omega, &lt;)\)</span> 不是线性序。</p>
+<hr />
+<h2 id="4_3">问题 4</h2>
+<p>设 <span class="arithmatex">\(S\)</span> 为一个集合。</p>
+<p>(i) 证明：若 <span class="arithmatex">\(\{ \mathcal{T}_i \}_{i \in I}\)</span> 是 <span class="arithmatex">\(S\)</span> 上的一族拓扑，则其交集 <span class="arithmatex">\(\bigcap_{i \in I} \mathcal{T}_i\)</span> 也是 <span class="arithmatex">\(S\)</span> 上的一个拓扑。
+(ii) 给出两个拓扑 <span class="arithmatex">\(\mathcal{T}_1\)</span> 和 <span class="arithmatex">\(\mathcal{T}_2\)</span> 的例子，使得 <span class="arithmatex">\(\mathcal{T}_1 \cup \mathcal{T}_2\)</span> 不是拓扑。并找到包含 <span class="arithmatex">\(\mathcal{T}_1 \cup \mathcal{T}_2\)</span> 的唯一最小拓扑。</p>
+<h3 id="_20">解答</h3>
+<p><strong>(i) 证明交集是拓扑</strong></p>
+<p>记 <span class="arithmatex">\(\mathcal{T} = \bigcap_{i \in I} \mathcal{T}_i\)</span>。</p>
+<ol>
+<li><strong>包含空集与全空间</strong>：因为对所有 <span class="arithmatex">\(i \in I\)</span> 都有 <span class="arithmatex">\(\emptyset, S \in \mathcal{T}_i\)</span>，故 <span class="arithmatex">\(\emptyset, S \in \mathcal{T}\)</span>。</li>
+<li><strong>对任意并封闭</strong>：设 <span class="arithmatex">\(\{ U_\alpha \}_{\alpha \in A} \subseteq \mathcal{T}\)</span>。则对每一个 <span class="arithmatex">\(i \in I\)</span>，都有 <span class="arithmatex">\(\{ U_\alpha \} \subseteq \mathcal{T}_i\)</span>。由于 <span class="arithmatex">\(\mathcal{T}_i\)</span> 是拓扑，故 <span class="arithmatex">\(\bigcup U_\alpha \in \mathcal{T}_i\)</span>。因此 <span class="arithmatex">\(\bigcup U_\alpha \in \bigcap \mathcal{T}_i = \mathcal{T}\)</span>。</li>
+<li><strong>对有限交封闭</strong>：设 <span class="arithmatex">\(U_1, \dots, U_k \in \mathcal{T}\)</span>。则对每一个 <span class="arithmatex">\(i \in I\)</span>，都有 <span class="arithmatex">\(U_1, \dots, U_k \in \mathcal{T}_i\)</span>，故 <span class="arithmatex">\(\bigcap_{j=1}^k U_j \in \mathcal{T}_i\)</span>。因此其有限交属于 <span class="arithmatex">\(\mathcal{T}\)</span>。</li>
+</ol>
+<p><strong>(ii) 并集不是拓扑的反例</strong></p>
+<p>设 <span class="arithmatex">\(S = \{a, b, c\}\)</span>。
+取 <span class="arithmatex">\(\mathcal{T}_1 = \{ \emptyset, S, \{a\} \}\)</span>，<span class="arithmatex">\(\mathcal{T}_2 = \{ \emptyset, S, \{b\} \}\)</span>。
+则 <span class="arithmatex">\(\mathcal{T}_1 \cup \mathcal{T}_2 = \{ \emptyset, S, \{a\}, \{b\} \}\)</span>。</p>
+<p>然而，<span class="arithmatex">\(\{a\} \cup \{b\} = \{a, b\}\)</span>，但 <span class="arithmatex">\(\{a, b\} \notin \mathcal{T}_1 \cup \mathcal{T}_2\)</span>。
+违反了对并运算封闭的公理，故并集不是拓扑。</p>
+<p><strong>最小拓扑</strong>：
+包含 <span class="arithmatex">\(\mathcal{T}_1 \cup \mathcal{T}_2\)</span> 的唯一最小拓扑是由该并集作为<strong>子基 (Subbasis)</strong> 生成的拓扑。在这个例子中，该拓扑为：</p>
+<div class="arithmatex">\[
+\mathcal{T}_{min} = \{ \emptyset, S, \{a\}, \{b\}, \{a, b\} \}
+\]</div>
+<hr />
+<h2 id="5_2">问题 5</h2>
+<p><span class="arithmatex">\(\mathbb{R}^2\)</span> 的子集若满足：它在其每一个点处的每一个方向上都包含一条开线段，则称其为<strong>径向开集</strong> (Radially open)。记 <span class="arithmatex">\(\mathcal{T}_{ro}\)</span> 为所有径向开集构成的族。</p>
+<p>证明 <span class="arithmatex">\(\mathcal{T}_{ro}\)</span> 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 上的一个拓扑。它与标准拓扑 <span class="arithmatex">\(\mathcal{T}_{std}\)</span> 的关系如何？</p>
+<h3 id="_21">解答</h3>
+<p><strong>1. 证明是拓扑</strong></p>
+<p>重点在于证明对有限交封闭。
+设 <span class="arithmatex">\(A, B \in \mathcal{T}_{ro}\)</span>。对于任何点 <span class="arithmatex">\(x \in A \cap B\)</span>：</p>
+<ul>
+<li>因为 <span class="arithmatex">\(x \in A\)</span>，在方向 <span class="arithmatex">\(\theta\)</span> 上存在开线段 <span class="arithmatex">\(I_A(\theta) \subseteq A\)</span>；</li>
+<li>因为 <span class="arithmatex">\(x \in B\)</span>，在方向 <span class="arithmatex">\(\theta\)</span> 上存在开线段 <span class="arithmatex">\(I_B(\theta) \subseteq B\)</span>。</li>
+</ul>
+<p>取这两个线段的交集 <span class="arithmatex">\(I_A \cap I_B\)</span>，由于它们共中心且都在同一射线上，其交集仍是一个包含 <span class="arithmatex">\(x\)</span> 的开线段，且 <span class="arithmatex">\(I_A \cap I_B \subseteq A \cap B\)</span>。
+因此 <span class="arithmatex">\(A \cap B\)</span> 也是径向开的。结合 <span class="arithmatex">\(\emptyset, S\)</span> 的显见性和并运算的性质，<span class="arithmatex">\(\mathcal{T}_{ro}\)</span> 是拓扑。</p>
+<p><strong>2. 与标准拓扑的关系</strong></p>
+<p><strong>结论</strong>：<span class="arithmatex">\(\mathcal{T}_{std} \subsetneq \mathcal{T}_{ro}\)</span>。</p>
+<ul>
+<li><strong>包含关系</strong>：标准开集中的点包含一个开球 <span class="arithmatex">\(B(x, \epsilon)\)</span>。该球在任何方向上显然都包含长度为 <span class="arithmatex">\(2\epsilon\)</span> 的开线段。故标准开集必为径向开集。</li>
+<li><strong>严格性（反例）</strong>：存在径向开集不是标准开集。
+  构造集合：<span class="arithmatex">\(U = \{ (r\cos\theta, r\sin\theta) \mid 0 \le r &lt; f(\theta) \}\)</span>，其中 <span class="arithmatex">\(f(\theta)\)</span> 是一个在极角趋于某些值时迅速趋于 0 的正函数。
+  例如，若使 <span class="arithmatex">\(f(\theta)\)</span> 在原点附近极其“尖锐”，使得原点虽在每个方向都有线段，但无法放入任何完整的圆盘。这种集合在原点处是径向开的，但在标准拓扑下原点不是内点。</li>
+</ul>
+<hr />
+<h2 id="6_2">问题 6</h2>
+<p>设 <span class="arithmatex">\(X = \mathbb{R}^2\)</span> 赋予标准拓扑。考虑其子集（拓扑学家正弦曲线）：</p>
+<div class="arithmatex">\[
+A = \{ (x, \sin(1/x)) : x \in (0, 1] \} \subset X
+\]</div>
+<p>计算以下四个集合：<span class="arithmatex">\(A^o\)</span>，<span class="arithmatex">\(LP(A)\)</span>，<span class="arithmatex">\(\overline{A}\)</span> 以及 <span class="arithmatex">\(\overline{A} \cap \overline{\mathbb{R}^2 - A}\)</span>。</p>
+<h3 id="_22">解答</h3>
+<p><strong>1. 内部 <span class="arithmatex">\(A^o\)</span></strong></p>
+<p>由于 <span class="arithmatex">\(A\)</span> 是连续函数 <span class="arithmatex">\(y = \sin(1/x)\)</span> 在区间 <span class="arithmatex">\((0, 1]\)</span> 上的图像，它在 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中是一条曲线。
+对于 <span class="arithmatex">\(A\)</span> 中的任意一点 <span class="arithmatex">\(P\)</span>，其任何开邻域（开圆盘）都会包含不属于该曲线的点（即纵坐标不满足 <span class="arithmatex">\(y = \sin(1/x)\)</span> 的点）。
+因此，<span class="arithmatex">\(A\)</span> 中不包含任何非空的开球。
+故：</p>
+<div class="arithmatex">\[
+A^o = \emptyset
+\]</div>
+<p><strong>2. 极限点集 <span class="arithmatex">\(LP(A)\)</span> 与 闭包 <span class="arithmatex">\(\overline{A}\)</span></strong></p>
+<p>当 <span class="arithmatex">\(x \to 0^+\)</span> 时，函数 <span class="arithmatex">\(\sin(1/x)\)</span> 在 <span class="arithmatex">\(-1\)</span> 到 <span class="arithmatex">\(1\)</span> 之间进行无限次振荡。
+因此，纵轴上的线段 <span class="arithmatex">\(\{0\} \times [-1, 1]\)</span> 中的每一个点都是 <span class="arithmatex">\(A\)</span> 的极限点。
+集合 <span class="arithmatex">\(A\)</span> 自身的点显然也是其极限点。
+因此：</p>
+<div class="arithmatex">\[
+LP(A) = A \cup ( \{0\} \times [-1, 1] )
+\]</div>
+<p>由于闭包 <span class="arithmatex">\(\overline{A} = A \cup LP(A)\)</span>，我们可以得出：</p>
+<div class="arithmatex">\[
+\overline{A} = A \cup ( \{0\} \times [-1, 1] )
+\]</div>
+<p><strong>3. 交集 <span class="arithmatex">\(\overline{A} \cap \overline{\mathbb{R}^2 - A}\)</span></strong></p>
+<p>因为 <span class="arithmatex">\(A^o = \emptyset\)</span>，所以全空间中的每一个点要么属于 <span class="arithmatex">\(\mathbb{R}^2 - A\)</span> 的内部，要么属于 <span class="arithmatex">\(A\)</span> 的边界。
+由于 <span class="arithmatex">\(\overline{\mathbb{R}^2 - A} = \mathbb{R}^2 - A^o = \mathbb{R}^2 - \emptyset = \mathbb{R}^2\)</span>。
+因此：</p>
+<div class="arithmatex">\[
+\overline{A} \cap \overline{\mathbb{R}^2 - A} = \overline{A} \cap \mathbb{R}^2 = \overline{A}
+\]</div>
+<hr />
+<h2 id="7_1">问题 7</h2>
+<p>设 <span class="arithmatex">\(X\)</span> 为一个集合，<span class="arithmatex">\(f: \mathcal{P}(X) \to \mathcal{P}(X)\)</span> 是一个满足以下性质的函数（对任意 <span class="arithmatex">\(A, B \subseteq X\)</span>）：
+(i) <span class="arithmatex">\(f(\emptyset) = \emptyset\)</span>；
+(ii) <span class="arithmatex">\(A \subseteq f(A)\)</span>；
+(iii) <span class="arithmatex">\(f(A) = f(f(A))\)</span>；
+(iv) <span class="arithmatex">\(f(A \cup B) = f(A) \cup f(B)\)</span>。</p>
+<p>证明：
+(1) 集合 <span class="arithmatex">\(\mathcal{T}_f := \{ X - A : A \in \mathcal{P}(X) \text{ 且 } f(A) = A \}\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个拓扑；
+(2) 任意子集 <span class="arithmatex">\(A \subseteq X\)</span> 关于拓扑 <span class="arithmatex">\(\mathcal{T}_f\)</span> 的闭包 <span class="arithmatex">\(\overline{A}\)</span> 正好是 <span class="arithmatex">\(f(A)\)</span>。</p>
+<h3 id="_23">解答</h3>
+<p><strong>(1) 证明 <span class="arithmatex">\(\mathcal{T}_f\)</span> 是一个拓扑</strong></p>
+<ul>
+<li>
+<p><strong>空集与全空间</strong>：
+  由性质 (i) 知 <span class="arithmatex">\(f(\emptyset) = \emptyset\)</span>，故 <span class="arithmatex">\(X - \emptyset = X \in \mathcal{T}_f\)</span>。
+  由性质 (ii) 知 <span class="arithmatex">\(X \subseteq f(X)\)</span>，而 <span class="arithmatex">\(f(X) \subseteq X\)</span> 显然成立，故 <span class="arithmatex">\(f(X) = X\)</span>。
+  因此 <span class="arithmatex">\(X - X = \emptyset \in \mathcal{T}_f\)</span>。</p>
+</li>
+<li>
+<p><strong>任意并运算</strong>：
+  设 <span class="arithmatex">\(\{ U_\alpha \}_{\alpha \in I}\)</span> 是 <span class="arithmatex">\(\mathcal{T}_f\)</span> 中的一族开集，其中 <span class="arithmatex">\(U_\alpha = X - A_\alpha\)</span>，且 <span class="arithmatex">\(f(A_\alpha) = A_\alpha\)</span>。
+  其并集 <span class="arithmatex">\(\bigcup U_\alpha = X - \bigcap A_\alpha\)</span>。
+  由性质 (iv) 可推导出 <span class="arithmatex">\(f\)</span> 是单调的：若 <span class="arithmatex">\(A \subseteq B\)</span>，则 <span class="arithmatex">\(f(A) \subseteq f(B)\)</span>。
+  由于 <span class="arithmatex">\(\bigcap A_\alpha \subseteq A_\alpha\)</span>，故 <span class="arithmatex">\(f(\bigcap A_\alpha) \subseteq f(A_\alpha) = A_\alpha\)</span>。
+  从而 <span class="arithmatex">\(f(\bigcap A_\alpha) \subseteq \bigcap A_\alpha\)</span>。
+  结合性质 (ii) 的反向包含，得 <span class="arithmatex">\(f(\bigcap A_\alpha) = \bigcap A_\alpha\)</span>。
+  故 <span class="arithmatex">\(\bigcup U_\alpha \in \mathcal{T}_f\)</span>。</p>
+</li>
+<li>
+<p><strong>有限交运算</strong>：
+  设 <span class="arithmatex">\(U_1, U_2 \in \mathcal{T}_f\)</span>，则 <span class="arithmatex">\(U_1 \cap U_2 = X - (A_1 \cup A_2)\)</span>。
+  由性质 (iv) 知 <span class="arithmatex">\(f(A_1 \cup A_2) = f(A_1) \cup f(A_2) = A_1 \cup A_2\)</span>。
+  故 <span class="arithmatex">\(U_1 \cap U_2 \in \mathcal{T}_f\)</span>。</p>
+</li>
+</ul>
+<p><strong>(2) 证明闭包 <span class="arithmatex">\(\overline{A} = f(A)\)</span></strong></p>
+<p>根据闭包的定义，<span class="arithmatex">\(\overline{A}\)</span> 是包含 <span class="arithmatex">\(A\)</span> 的所有闭集的交集。在此拓扑下，闭集 <span class="arithmatex">\(C\)</span> 满足 <span class="arithmatex">\(f(C) = C\)</span>。</p>
+<ul>
+<li>
+<p>首先，由性质 (iii) 知 <span class="arithmatex">\(f(f(A)) = f(A)\)</span>，故 <span class="arithmatex">\(f(A)\)</span> 本身是一个闭集。且由性质 (ii) 知 <span class="arithmatex">\(A \subseteq f(A)\)</span>。
+  因此 <span class="arithmatex">\(f(A)\)</span> 是一个包含 <span class="arithmatex">\(A\)</span> 的闭集，故 <span class="arithmatex">\(\overline{A} \subseteq f(A)\)</span>。</p>
+</li>
+<li>
+<p>其次，设 <span class="arithmatex">\(C\)</span> 是任何包含 <span class="arithmatex">\(A\)</span> 的闭集（即 <span class="arithmatex">\(A \subseteq C\)</span> 且 <span class="arithmatex">\(f(C) = C\)</span>）。
+  由 <span class="arithmatex">\(f\)</span> 的单调性知 <span class="arithmatex">\(f(A) \subseteq f(C) = C\)</span>。
+  这意味着 <span class="arithmatex">\(f(A)\)</span> 包含在每一个包含 <span class="arithmatex">\(A\)</span> 的闭集中，因此 <span class="arithmatex">\(f(A) \subseteq \bigcap C = \overline{A}\)</span>。</p>
+</li>
+</ul>
+<p>综上所述，<span class="arithmatex">\(\overline{A} = f(A)\)</span>。</p>
+<hr />
+<h2 id="8_1">问题 8</h2>
+<p>考虑函数 <span class="arithmatex">\(f: [0, 1) \to S^1\)</span>，定义为 <span class="arithmatex">\(f(t) = (\cos(2\pi t), \sin(2\pi t))\)</span>。
+证明 <span class="arithmatex">\(f\)</span> 关于标准子空间拓扑不是同胚。是否可能找到 <span class="arithmatex">\([0, 1)\)</span> 与 <span class="arithmatex">\(S^1\)</span> 之间的同胚映射？</p>
+<h3 id="_24">解答</h3>
+<p><strong>1. 证明 <span class="arithmatex">\(f\)</span> 不是同胚</strong></p>
+<p>虽然 <span class="arithmatex">\(f\)</span> 是一个连续的双射，但它的逆映射 <span class="arithmatex">\(f^{-1}\)</span> 在点 <span class="arithmatex">\((1, 0)\)</span> 处不连续。
+我们可以从拓扑不变量的角度给出更严谨的证明：</p>
+<ul>
+<li>
+<p><strong>方法一：紧致性</strong>
+  在标准欧氏拓扑下，<span class="arithmatex">\(S^1\)</span> 是 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中的有界闭集，因此是紧致的。
+  而 <span class="arithmatex">\([0, 1)\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 中不是闭集，因此不是紧致的。
+  由于同胚映射必须保持紧致性，故 <span class="arithmatex">\(f\)</span> 不可能是同胚。</p>
+</li>
+<li>
+<p><strong>方法二：割点（连通性）</strong>
+  若 <span class="arithmatex">\(f\)</span> 是同胚，则去掉一个点后空间的连通性应该保持不变。
+  对于 <span class="arithmatex">\(S^1\)</span>，去掉任意一点 <span class="arithmatex">\(p\)</span>，剩余空间 <span class="arithmatex">\(S^1 - \{p\}\)</span> 仍然是连通的（同胚于一个开区间）。
+  对于 <span class="arithmatex">\([0, 1)\)</span>，如果我们去掉点 <span class="arithmatex">\(t = 1/2\)</span>，剩余空间 <span class="arithmatex">\([0, 1/2) \cup (1/2, 1)\)</span> 是不连通的。
+  因此，这两个空间不具有相同的局部连通结构，故 <span class="arithmatex">\(f\)</span> 不是同胚。</p>
+</li>
+</ul>
+<p><strong>2. 结论</strong></p>
+<p><strong>不可能</strong>。
+基于上述紧致性和割点的理由，<span class="arithmatex">\([0, 1)\)</span> 与 <span class="arithmatex">\(S^1\)</span> 之间不存在任何同胚映射。</p>
+<hr />
+<h2 id="9_1">问题 9</h2>
+<p>子集 <span class="arithmatex">\(A \subseteq X\)</span> 若满足 <span class="arithmatex">\(A = (\overline{A})^o\)</span>，则称其为<strong>正则开集</strong> (Regularly open)。</p>
+<p>(i) 给出 <span class="arithmatex">\(\mathbb{R}\)</span> 中一个开集但不是正则开集的例子。你能刻画 <span class="arithmatex">\(\mathbb{R}\)</span> 中的正则开集吗？
+(ii) 证明对于任何 <span class="arithmatex">\(A \subseteq X\)</span>，集合 <span class="arithmatex">\((\overline{A})^o\)</span> 都是正则开集。</p>
+<h3 id="_25">解答</h3>
+<p><strong>(i) 例子与刻画</strong></p>
+<ul>
+<li>
+<p><strong>反例</strong>：取 <span class="arithmatex">\(A = (0, 1) \cup (1, 2)\)</span>。
+  则 <span class="arithmatex">\(\overline{A} = [0, 2]\)</span>，而 <span class="arithmatex">\((\overline{A})^o = (0, 2)\)</span>。
+  显然 <span class="arithmatex">\(A \neq (\overline{A})^o\)</span>，故 <span class="arithmatex">\(A\)</span> 不是正则开集。其原因在于 <span class="arithmatex">\(A\)</span> 中缺失了闭包内部的一个点 <span class="arithmatex">\(\{1\}\)</span>。</p>
+</li>
+<li>
+<p><strong>刻画</strong>：<span class="arithmatex">\(\mathbb{R}\)</span> 中的正则开集是那些“没有多余缝隙”的开集。即它不能通过从一个更大的开集中挖去一些孤立点或闭集界点而得到。</p>
+</li>
+</ul>
+<p><strong>(ii) 证明 <span class="arithmatex">\((\overline{A})^o\)</span> 是正则开集</strong></p>
+<p>设 <span class="arithmatex">\(U = (\overline{A})^o\)</span>。我们要证明 <span class="arithmatex">\(U = (\overline{U})^o\)</span>。</p>
+<ul>
+<li>
+<p>根据定义 <span class="arithmatex">\(U \subseteq \overline{U}\)</span>，由于 <span class="arithmatex">\(U\)</span> 是开集，故 <span class="arithmatex">\(U = U^o \subseteq (\overline{U})^o\)</span>。</p>
+</li>
+<li>
+<p>另一方面，由于 <span class="arithmatex">\(U = (\overline{A})^o \subseteq \overline{A}\)</span>，且闭包运算具有单调性和幂等性：
+  由此推得 <span class="arithmatex">\(\overline{U} \subseteq \overline{(\overline{A})} = \overline{A}\)</span>。
+  对两边取内部，得 <span class="arithmatex">\((\overline{U})^o \subseteq (\overline{A})^o = U\)</span>。</p>
+</li>
+</ul>
+<p>综上所述，<span class="arithmatex">\(U = (\overline{U})^o\)</span>，即 <span class="arithmatex">\((\overline{A})^o\)</span> 是正则开集。</p>
+<hr />
+<h2 id="10">问题 10</h2>
+<p>设 <span class="arithmatex">\(A\)</span> 是拓扑空间 <span class="arithmatex">\(X\)</span> 的子集。证明等式 <span class="arithmatex">\(\overline{A} = A \cup LP(A)\)</span>。</p>
+<h3 id="_26">解答</h3>
+<p><strong>1. 证明 <span class="arithmatex">\(A \cup LP(A) \subseteq \overline{A}\)</span></strong></p>
+<ul>
+<li>
+<p>显见 <span class="arithmatex">\(A \subseteq \overline{A}\)</span>。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(x \in LP(A)\)</span>。根据极限点的定义，对于 <span class="arithmatex">\(x\)</span> 的任何开邻域 <span class="arithmatex">\(U\)</span>，都有 <span class="arithmatex">\(U \cap (A - \{x\}) \neq \emptyset\)</span>。
+  这意味着 <span class="arithmatex">\(U \cap A \neq \emptyset\)</span> 对所有开邻域成立。
+  根据闭包的邻域刻画性质，这正是 <span class="arithmatex">\(x \in \overline{A}\)</span> 的充分必要条件。
+  故 <span class="arithmatex">\(LP(A) \subseteq \overline{A}\)</span>。</p>
+</li>
+</ul>
+<p>因此 <span class="arithmatex">\(A \cup LP(A) \subseteq \overline{A}\)</span>。</p>
+<p><strong>2. 证明 <span class="arithmatex">\(\overline{A} \subseteq A \cup LP(A)\)</span></strong></p>
+<p>设 <span class="arithmatex">\(x \in \overline{A}\)</span>。</p>
+<ul>
+<li>
+<p>若 <span class="arithmatex">\(x \in A\)</span>，则结论显然成立。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(x \notin A\)</span>，由于 <span class="arithmatex">\(x \in \overline{A}\)</span>，对于 <span class="arithmatex">\(x\)</span> 的任何开邻域 <span class="arithmatex">\(U\)</span>，都有 <span class="arithmatex">\(U \cap A \neq \emptyset\)</span>。
+  因为 <span class="arithmatex">\(x \notin A\)</span>，集合 <span class="arithmatex">\(U \cap A\)</span> 中的点必然不是 <span class="arithmatex">\(x\)</span>。
+  也就是说，<span class="arithmatex">\(U \cap (A - \{x\}) \neq \emptyset\)</span>。
+  这符合极限点的定义，故 <span class="arithmatex">\(x \in LP(A)\)</span>。</p>
+</li>
+</ul>
+<p>因此 <span class="arithmatex">\(x \in A \cup LP(A)\)</span>。</p>
+<p>综上所述，<span class="arithmatex">\(\overline{A} = A \cup LP(A)\)</span>。</p>
+<p>\newpage</p>
+<h1 id="homework-05-06">习题三 (Homework 05 &amp; 06)</h1>
+<p>本部分包含点集拓扑课程第五、第六次作业及其相关补充练习。内容涵盖度量空间的等价性、无穷乘积空间、连通性与道路连通性、不动点定理以及共有限拓扑的紧致性。</p>
+<hr />
+<h2 id="1_6">问题 1</h2>
+<p>设 <span class="arithmatex">\((X, d)\)</span> 为一个度量空间，<span class="arithmatex">\(\mathcal{T}\)</span> 是由 <span class="arithmatex">\(d\)</span> 诱导的拓扑。定义函数：</p>
+<div class="arithmatex">\[
+d^*(x, y) = \min\{d(x, y), 1\}
+\]</div>
+<p>对于每一对 <span class="arithmatex">\(x, y \in X\)</span>。</p>
+<p>证明：</p>
+<p>(i) <span class="arithmatex">\(d^*\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个度量。
+(ii) <span class="arithmatex">\(d^*\)</span> 诱导的拓扑 <span class="arithmatex">\(\mathcal{T}^*\)</span> 等于 <span class="arithmatex">\(\mathcal{T}\)</span>。
+(iii) 是否总能找到一个常数 <span class="arithmatex">\(A \in \mathbb{R}_{&gt;0}\)</span>，使得对于所有的 <span class="arithmatex">\(x, y \in X\)</span>，都有 <span class="arithmatex">\(A \cdot d(x, y) \le d^*(x, y)\)</span>？</p>
+<h3 id="_27">解答</h3>
+<p><strong>(i) 证明 <span class="arithmatex">\(d^*\)</span> 是度量</strong></p>
+<ol>
+<li>
+<p><strong>非负性与严格正性</strong>：
+   由于 <span class="arithmatex">\(d(x, y) \ge 0\)</span>，故 <span class="arithmatex">\(d^*(x, y) = \min\{d, 1\} \ge 0\)</span>。
+   且 <span class="arithmatex">\(d^*(x, y) = 0 \iff \min\{d, 1\} = 0 \iff d(x, y) = 0 \iff x = y\)</span>。</p>
+</li>
+<li>
+<p><strong>对称性</strong>：
+   <span class="arithmatex">\(d^*(x, y) = \min\{d(x, y), 1\} = \min\{d(y, x), 1\} = d^*(y, x)\)</span>。</p>
+</li>
+<li>
+<p><strong>三角不等式</strong>：我们需要证明 <span class="arithmatex">\(d^*(x, z) \le d^*(x, y) + d^*(y, z)\)</span>。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(d^*(x, y) + d^*(y, z) \ge 1\)</span>，由于 <span class="arithmatex">\(d^*(x, z) \le 1\)</span>，不等式显然成立。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(d^*(x, y) + d^*(y, z) &lt; 1\)</span>，由于 <span class="arithmatex">\(d^* \le d\)</span>，这意味着 <span class="arithmatex">\(d^*(x, y) = d(x, y)\)</span> 且 <span class="arithmatex">\(d^*(y, z) = d(y, z)\)</span>。
+     根据原度量 <span class="arithmatex">\(d\)</span> 的三角不等式：<span class="arithmatex">\(d(x, z) \le d(x, y) + d(y, z) &lt; 1\)</span></p>
+<p>因此 <span class="arithmatex">\(d^*(x, z) = \min\{d(x, z), 1\} = d(x, z)\)</span>。
+ 故 <span class="arithmatex">\(d^*(x, z) \le d(x, y) + d(y, z) = d^*(x, y) + d^*(y, z)\)</span>。</p>
+</li>
+</ol>
+<p><strong>(ii) 证明 <span class="arithmatex">\(\mathcal{T}^* = \mathcal{T}\)</span></strong></p>
+<p>要证明两个度量诱导相同的拓扑，只需证明它们的开球可以互相包含。</p>
+<ul>
+<li>
+<p>对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，取 <span class="arithmatex">\(\epsilon' = \min\{\epsilon, 1\}\)</span>。则 <span class="arithmatex">\(B_{d^*}(x, \epsilon') \subseteq B_d(x, \epsilon)\)</span>。
+  因为若 <span class="arithmatex">\(d^*(x, y) &lt; \epsilon' \le 1\)</span>，则必有 <span class="arithmatex">\(d(x, y) = d^*(x, y) &lt; \epsilon' \le \epsilon\)</span>。</p>
+</li>
+<li>
+<p>反之，对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，取 <span class="arithmatex">\(\epsilon' = \min\{\epsilon, 1/2\}\)</span>。则 <span class="arithmatex">\(B_d(x, \epsilon') \subseteq B_{d^*}(x, \epsilon)\)</span>。
+  因为若 <span class="arithmatex">\(d(x, y) &lt; \epsilon' \le 1/2\)</span>，则 <span class="arithmatex">\(d^*(x, y) = d(x, y) &lt; \epsilon' \le \epsilon\)</span>。</p>
+</li>
+</ul>
+<p>由于开球互为包含关系，两个度量生成的拓扑完全一致。</p>
+<p><strong>(iii) 关于常数 <span class="arithmatex">\(A\)</span> 的讨论</strong></p>
+<p><strong>结论</strong>：不一定能找到。</p>
+<p><strong>理由</strong>：
+若度量 <span class="arithmatex">\(d\)</span> 是无界的（例如欧氏空间 <span class="arithmatex">\(\mathbb{R}^n\)</span>），则对于任何 <span class="arithmatex">\(A &gt; 0\)</span>，我们总能找到距离足够远的两点 <span class="arithmatex">\(x, y\)</span> 使得 <span class="arithmatex">\(d(x, y) &gt; 1/A\)</span>。
+此时：</p>
+<div class="arithmatex">\[
+A \cdot d(x, y) &gt; 1
+\]</div>
+<p>然而，根据定义 <span class="arithmatex">\(d^*(x, y) \le 1\)</span> 永远成立。
+这导致 <span class="arithmatex">\(A \cdot d(x, y) &gt; d^*(x, y)\)</span>，与题目要求矛盾。
+只有当原度量空间本身是有界的时候，才一定能找到这样的 <span class="arithmatex">\(A\)</span>。</p>
+<hr />
+<h2 id="2_7">问题 2</h2>
+<p>考虑笛卡尔积空间：</p>
+<div class="arithmatex">\[
+\mathbb{R}^\omega := \prod_{i \in \mathbb{N}} \mathbb{R} = \{ (x_i)_{i \in \mathbb{N}} \mid x_i \in \mathbb{R} \}
+\]</div>
+<p>令 <span class="arithmatex">\(R_{ez}^\omega \subseteq \mathbb{R}^\omega\)</span> 是所有“最终为零”的序列构成的子集（即只有有限个分量非零）。</p>
+<p>请分别在 <strong>积拓扑 (Product Topology)</strong> <span class="arithmatex">\(\mathcal{T}_p\)</span> 和 <strong>箱拓扑 (Box Topology)</strong> <span class="arithmatex">\(\mathcal{T}_b\)</span> 下，计算 <span class="arithmatex">\(R_{ez}^\omega\)</span> 的内部与闭包。</p>
+<h3 id="_28">解答</h3>
+<p><strong>1. 在积拓扑 <span class="arithmatex">\(\mathcal{T}_p\)</span> 下</strong></p>
+<ul>
+<li>
+<p><strong>内部 <span class="arithmatex">\((R_{ez}^\omega)^\circ\)</span></strong>：
+  任意非空开集 <span class="arithmatex">\(U\)</span> 必须包含一个基元素 <span class="arithmatex">\(\prod U_i\)</span>（其中几乎所有 <span class="arithmatex">\(U_i = \mathbb{R}\)</span>）。
+  由于存在无限个分量可以取任意实数，该开集内必然包含具有无限个非零分量的序列。
+  因此，<span class="arithmatex">\(U \not\subseteq R_{ez}^\omega\)</span>，故内部为空集：<span class="arithmatex">\((R_{ez}^\omega)^\circ = \emptyset\)</span></p>
+</li>
+<li>
+<p><strong>闭包 <span class="arithmatex">\(\overline{R_{ez}^\omega}\)</span></strong>：
+  对于任意序列 <span class="arithmatex">\(x = (x_i) \in \mathbb{R}^\omega\)</span> 及其任意开邻域 <span class="arithmatex">\(U\)</span>，我们可以选取一个充分大的 <span class="arithmatex">\(N\)</span>，使得对于所有 <span class="arithmatex">\(i &gt; N\)</span> 都有 <span class="arithmatex">\(U_i = \mathbb{R}\)</span>。
+  构造序列 <span class="arithmatex">\(y = (x_1, x_2, \dots, x_N, 0, 0, \dots)\)</span>。
+  显然 <span class="arithmatex">\(y \in R_{ez}^\omega\)</span> 且 <span class="arithmatex">\(y \in U\)</span>。
+  这意味着任意点都是极限点，故闭包为全空间：<span class="arithmatex">\(\overline{R_{ez}^\omega} = \mathbb{R}^\omega\)</span></p>
+</li>
+</ul>
+<p><strong>2. 在箱拓扑 <span class="arithmatex">\(\mathcal{T}_b\)</span> 下</strong></p>
+<ul>
+<li>
+<p><strong>内部 <span class="arithmatex">\((R_{ez}^\omega)^\circ\)</span></strong>：
+  同理，箱拓扑中的任意非空开基元素依然允许分量在区间内自由取值。
+  只要 <span class="arithmatex">\(U_i\)</span> 不是单点集 <span class="arithmatex">\(\{0\}\)</span>，我们总能构造出一个具有无限个非零项的序列落入该邻域。
+  因此，内部依然是空集：<span class="arithmatex">\((R_{ez}^\omega)^\circ = \emptyset\)</span></p>
+</li>
+<li>
+<p><strong>闭包 <span class="arithmatex">\(\overline{R_{ez}^\omega}\)</span></strong>：
+  箱拓扑的基元素形式为 <span class="arithmatex">\(\prod U_i\)</span>，其中每一个分量都可以被限制。
+  设 <span class="arithmatex">\(x\)</span> 是具有无限个非零分量的序列（即 <span class="arithmatex">\(x \notin R_{ez}^\omega\)</span>）。
+  我们可以为每一个非零分量 <span class="arithmatex">\(x_i\)</span> 选取一个不包含 <span class="arithmatex">\(0\)</span> 的开区间 <span class="arithmatex">\(U_i = (x_i - \frac{|x_i|}{2}, x_i + \frac{|x_i|}{2})\)</span>。对于为 <span class="arithmatex">\(0\)</span> 的分量，任取邻域。
+  这样构造的箱开集 <span class="arithmatex">\(\prod U_i\)</span> 与 <span class="arithmatex">\(R_{ez}^\omega\)</span> 的交集为空。
+  因此，不属于的 <span class="arithmatex">\(R_{ez}^\omega\)</span> 的点都不是极限点，故它是闭集：<span class="arithmatex">\(\overline{R_{ez}^\omega} = R_{ez}^\omega\)</span></p>
+</li>
+</ul>
+<hr />
+<h2 id="3_7">问题 3</h2>
+<p>(i) 拓扑空间 <span class="arithmatex">\((\mathbb{R}^\omega, \mathcal{T}_p)\)</span> 是否为可度量化空间？
+(ii) 它是否是连通的？</p>
+<p>（提示：对于可度量化，考虑函数 <span class="arithmatex">\(d^\omega(x, y) = \sup \{ \frac{d^*(x_i, y_i)}{i+1} : i \in \mathbb{N} \}\)</span>，其中 <span class="arithmatex">\(d\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 上的标准度量。）</p>
+<h3 id="_29">解答</h3>
+<p><strong>(i) 可度量化性</strong></p>
+<p><strong>结论</strong>：是可度量化的。</p>
+<p><strong>理由</strong>：
+利用提示中的度量：</p>
+<div class="arithmatex">\[
+d^\omega(x, y) = \sup_{i \in \mathbb{N}} \frac{\min\{|x_i - y_i|, 1\}}{i+1}
+\]</div>
+<p>由于分母 <span class="arithmatex">\(i+1\)</span> 随维度增加而趋于无穷，这保证了度量在远端坐标上的限制非常宽松，而在近端坐标上非常严格。
+这种衰减特性完美地对应了积拓扑“只约束有限个坐标”的结构。通过严格验证开球的包含关系，可以证明该度量诱导的拓扑恰好等于积拓扑 <span class="arithmatex">\(\mathcal{T}_p\)</span>。</p>
+<p><strong>(ii) 连通性</strong></p>
+<p><strong>结论</strong>：是连通的。</p>
+<p><strong>理由</strong>：
+实数轴 <span class="arithmatex">\(\mathbb{R}\)</span> 在标准拓扑下是连通空间。
+根据拓扑学中的著名定理：<strong>连通空间的任意笛卡尔积空间（在积拓扑下）仍然是连通的。</strong>
+由于 <span class="arithmatex">\(\mathbb{R}^\omega\)</span> 是可数个连通空间的乘积，故它在积拓扑下是连通的。</p>
+<hr />
+<h2 id="4_4">问题 4</h2>
+<p>考虑拓扑空间 <span class="arithmatex">\((\mathbb{R}^\omega, \mathcal{T}_b)\)</span>。令 <span class="arithmatex">\(U \subseteq \mathbb{R}^\omega\)</span> 是由所有<strong>有界序列</strong>构成的子集，即：</p>
+<div class="arithmatex">\[
+U = \{ x = (x_i) \mid \exists C_x, \text{使得对所有 } i, |x_i| \le C_x \}
+\]</div>
+<p>证明 <span class="arithmatex">\(U\)</span> 和 <span class="arithmatex">\(\mathbb{R}^\omega - U\)</span> 构成了该空间的一个非平凡分割，并推断 <span class="arithmatex">\((\mathbb{R}^\omega, \mathcal{T}_b)\)</span> 是否连通。</p>
+<h3 id="_30">解答</h3>
+<p><strong>1. 证明 <span class="arithmatex">\(U\)</span> 是开集</strong></p>
+<p>对于任意有界序列 <span class="arithmatex">\(x = (x_i) \in U\)</span>，其每一项都满足 <span class="arithmatex">\(|x_i| \le C_x\)</span>。
+考虑箱开集：</p>
+<div class="arithmatex">\[
+V = \prod_{i \in \mathbb{N}} (x_i - 1, x_i + 1)
+\]</div>
+<p>对于 <span class="arithmatex">\(V\)</span> 中的任意元素 <span class="arithmatex">\(y = (y_i)\)</span>，有：</p>
+<div class="arithmatex">\[
+|y_i| \le |x_i| + 1 \le C_x + 1
+\]</div>
+<p>因此 <span class="arithmatex">\(y\)</span> 也是有界序列，即 <span class="arithmatex">\(V \subseteq U\)</span>。由于每一个点都有一个完全包含于 <span class="arithmatex">\(U\)</span> 的开邻域，故 <span class="arithmatex">\(U\)</span> 是开集。</p>
+<p><strong>2. 证明 <span class="arithmatex">\(\mathbb{R}^\omega - U\)</span> 是开集</strong></p>
+<p>对于任意无界序列 <span class="arithmatex">\(z = (z_i) \in \mathbb{R}^\omega - U\)</span>，考虑相同的箱开集形式：</p>
+<div class="arithmatex">\[
+W = \prod_{i \in \mathbb{N}} (z_i - 1, z_i + 1)
+\]</div>
+<p>若存在某个 <span class="arithmatex">\(y \in W\)</span> 是有界的（即 <span class="arithmatex">\(|y_i| \le M\)</span>），则根据距离关系：</p>
+<div class="arithmatex">\[
+|z_i| \le |y_i| + 1 \le M + 1
+\]</div>
+<p>这意味着 <span class="arithmatex">\(z\)</span> 也是有界的序列，这与前提矛盾。
+因此，<span class="arithmatex">\(W\)</span> 中的所有序列都必须是无界的，即 <span class="arithmatex">\(W \subseteq \mathbb{R}^\omega - U\)</span>。故 <span class="arithmatex">\(\mathbb{R}^\omega - U\)</span> 也是开集。</p>
+<p><strong>3. 结论</strong></p>
+<p>由于 <span class="arithmatex">\(U\)</span> 和 <span class="arithmatex">\(\mathbb{R}^\omega - U\)</span> 都是非空的开集，且它们互不相交，并集为全空间。
+这构成了空间的一个非平凡分割。
+因此，箱拓扑空间 <span class="arithmatex">\((\mathbb{R}^\omega, \mathcal{T}_b)\)</span> 是<strong>不连通的</strong>。</p>
+<hr />
+<h2 id="5_3">问题 5</h2>
+<p>考虑 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中的如下子集，并赋予标准子空间拓扑：</p>
+<div class="arithmatex">\[
+X = \{(x, 0) : x \in \mathbb{R}\} \cup \{(x, 1/x) : x \in \mathbb{R}_{&gt;0}\}
+\]</div>
+<p>问：空间 <span class="arithmatex">\(X\)</span> 是否连通？请给出证明。</p>
+<h3 id="_31">解答</h3>
+<p><strong>结论</strong>：<span class="arithmatex">\(X\)</span> 是<strong>不连通的</strong>。</p>
+<p><strong>证明过程</strong>：</p>
+<p>我们将 <span class="arithmatex">\(X\)</span> 拆分为两个天然的几何部分：</p>
+<div class="arithmatex">\[
+A = \{(x, 0) \mid x \in \mathbb{R}\} \quad (\text{即 } x \text{ 轴})
+\]</div>
+<div class="arithmatex">\[
+B = \{(x, 1/x) \mid x \in \mathbb{R}_{&gt;0}\} \quad (\text{即第一象限的双曲线支})
+\]</div>
+<p>显然 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 都是非空集合，且 <span class="arithmatex">\(A \cap B = \emptyset\)</span>，<span class="arithmatex">\(X = A \cup B\)</span>。
+为了证明 <span class="arithmatex">\(X\)</span> 不连通，我们只需证明 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(B\)</span> 在子空间 <span class="arithmatex">\(X\)</span> 中都是闭集（从而构成非平凡分割）。</p>
+<ul>
+<li>
+<p><strong>证明 <span class="arithmatex">\(A\)</span> 是闭集</strong>：
+  <span class="arithmatex">\(A\)</span> 是一条完整的直线，它在全空间 <span class="arithmatex">\(\mathbb{R}^2\)</span> 的标准拓扑中是一个闭集。
+  根据子空间拓扑的性质，<span class="arithmatex">\(A = A \cap X\)</span>，因此 <span class="arithmatex">\(A\)</span> 在子空间 <span class="arithmatex">\(X\)</span> 中必然是闭集。</p>
+</li>
+<li>
+<p><strong>证明 <span class="arithmatex">\(B\)</span> 是闭集</strong>：
+  我们需要考察 <span class="arithmatex">\(B\)</span> 在全空间 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中的极限点。
+  设存在序列 <span class="arithmatex">\((x_n, 1/x_n) \in B\)</span> 且它在 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中收敛到某一点 <span class="arithmatex">\((x_0, y_0)\)</span>。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(x_0 &gt; 0\)</span>，由于 <span class="arithmatex">\(f(x) = 1/x\)</span> 连续，则 <span class="arithmatex">\(y_0 = 1/x_0\)</span>，此时极限点 <span class="arithmatex">\((x_0, y_0)\)</span> 仍在 <span class="arithmatex">\(B\)</span> 中。</p>
+</li>
+<li>若 <span class="arithmatex">\(x_0 = 0\)</span>，随着 <span class="arithmatex">\(x_n \to 0^+\)</span>，<span class="arithmatex">\(1/x_n \to +\infty\)</span>。由于 <span class="arithmatex">\(y\)</span> 坐标发散，该序列在 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中不收敛，不存在极限点。</li>
+<li>若 <span class="arithmatex">\(x_0 &lt; 0\)</span>，序列中 <span class="arithmatex">\(x_n &gt; 0\)</span>，不可能收敛到负数。</li>
+</ul>
+<p>这说明 <span class="arithmatex">\(B\)</span> 包含了它在 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中的所有极限点，因此 <span class="arithmatex">\(B\)</span> 在 <span class="arithmatex">\(\mathbb{R}^2\)</span> 中本身就是一个闭集。
+  进而在子空间 <span class="arithmatex">\(X\)</span> 中，<span class="arithmatex">\(B = B \cap X\)</span> 也是闭集。</p>
+<p>由于 <span class="arithmatex">\(X = A \cup B\)</span>，且 <span class="arithmatex">\(A, B\)</span> 都是非空且互不相交的闭集。这构成了 <span class="arithmatex">\(X\)</span> 的一个非平凡分割。
+因此，拓扑空间 <span class="arithmatex">\(X\)</span> 是<strong>不连通的</strong>。</p>
+<hr />
+<h2 id="6_3">问题 6</h2>
+<p>证明 <span class="arithmatex">\(\mathbb{R}^2\)</span> 的如下子空间（拓扑学家正弦曲线的变体）不是道路连通的：</p>
+<div class="arithmatex">\[
+X = \{ (0,0) \} \cup \{ (x, \sin(1/x)) : x \in \mathbb{R}_{&gt;0} \}
+\]</div>
+<h3 id="_32">解答</h3>
+<p>我们采用<strong>反证法</strong>。假设 <span class="arithmatex">\(X\)</span> 是道路连通的。</p>
+<p><strong>1. 构造道路：</strong></p>
+<p>既然 <span class="arithmatex">\(X\)</span> 道路连通，对于原点 <span class="arithmatex">\((0,0)\)</span> 和曲线上的点 <span class="arithmatex">\((1/\pi, 0)\)</span>，必定存在一条连续映射 <span class="arithmatex">\(\gamma: [0, 1] \to X\)</span>，使得：</p>
+<div class="arithmatex">\[
+\gamma(0) = (0,0) \quad \text{且} \quad \gamma(1) = (1/\pi, 0)
+\]</div>
+<p><strong>2. 考虑分量函数：</strong></p>
+<p>令 <span class="arithmatex">\(\gamma(t) = (x(t), y(t))\)</span>。由于 <span class="arithmatex">\(\gamma\)</span> 是连续映射，其坐标分量函数 <span class="arithmatex">\(x(t)\)</span> 和 <span class="arithmatex">\(y(t)\)</span> 必须是闭区间 <span class="arithmatex">\([0, 1]\)</span> 上的实值连续函数。</p>
+<p>考虑集合 <span class="arithmatex">\(T = \{ t \in [0, 1] \mid x(t) = 0 \}\)</span>。
+因为单点集 <span class="arithmatex">\(\{0\}\)</span> 是闭集且 <span class="arithmatex">\(x(t)\)</span> 连续，故 <span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\([0, 1]\)</span> 中的闭子集。
+令 <span class="arithmatex">\(t_0 = \sup T\)</span>。由于已知 <span class="arithmatex">\(x(1) = 1/\pi &gt; 0\)</span>，必有 <span class="arithmatex">\(t_0 &lt; 1\)</span>。</p>
+<p>根据上确界的性质，在 <span class="arithmatex">\(t_0\)</span> 的右侧（即对于 <span class="arithmatex">\(t \in (t_0, 1]\)</span>），有 <span class="arithmatex">\(x(t) &gt; 0\)</span>。</p>
+<p><strong>3. 导出矛盾：</strong></p>
+<p>当 <span class="arithmatex">\(t\)</span> 从右侧趋近于 <span class="arithmatex">\(t_0\)</span> 时（<span class="arithmatex">\(t \to t_0^+\)</span>），我们有 <span class="arithmatex">\(x(t) \to 0^+\)</span>。
+由于 <span class="arithmatex">\(\gamma\)</span> 落在 <span class="arithmatex">\(X\)</span> 中，当 <span class="arithmatex">\(x(t) &gt; 0\)</span> 时，必须满足：</p>
+<div class="arithmatex">\[
+y(t) = \sin\left(\frac{1}{x(t)}\right)
+\]</div>
+<p>由于 <span class="arithmatex">\(y(t)\)</span> 也是连续函数，它在 <span class="arithmatex">\(t_0\)</span> 处的右极限必须存在且等于 <span class="arithmatex">\(y(t_0)\)</span>，即 <span class="arithmatex">\(y(t_0) = 0\)</span>。
+然而，随着 <span class="arithmatex">\(x(t) \to 0^+\)</span>，变量 <span class="arithmatex">\(1/x(t) \to +\infty\)</span>。正弦函数 <span class="arithmatex">\(\sin(1/x(t))\)</span> 将在 <span class="arithmatex">\([-1, 1]\)</span> 之间进行无限次剧烈振荡，<strong>根本不存在极限</strong>。</p>
+<p>这与 <span class="arithmatex">\(y(t)\)</span> 必须在 <span class="arithmatex">\(t_0\)</span> 处连续的要求产生了不可调和的矛盾。
+因此，不存在这样的连续道路 <span class="arithmatex">\(\gamma\)</span>。故 <span class="arithmatex">\(X\)</span> <strong>不是道路连通的</strong>。</p>
+<hr />
+<h2 id="7_2">问题 7</h2>
+<p>证明 <span class="arithmatex">\((0, 1)\)</span>，<span class="arithmatex">\((0, 1]\)</span> 和 <span class="arithmatex">\([0, 1]\)</span> 这三个空间两两不通过同胚映射相互关联。</p>
+<h3 id="_33">解答</h3>
+<p>我们通过<strong>拓扑不变量</strong>（紧致性和割点性质）来区分这三个子空间：</p>
+<p><strong>1. 区分 <span class="arithmatex">\([0, 1]\)</span> 与其他两者</strong></p>
+<p>在标准拓扑下，闭区间 <span class="arithmatex">\([0, 1]\)</span> 是实数轴中的有界闭集。根据 Heine-Borel 定理，<span class="arithmatex">\([0, 1]\)</span> 是<strong>紧致空间</strong>。
+而开区间 <span class="arithmatex">\((0, 1)\)</span> 和半开半闭区间 <span class="arithmatex">\((0, 1]\)</span> 都不是闭集，因此它们不是紧致的。
+由于同胚映射必须保持紧致性，故 <span class="arithmatex">\([0, 1]\)</span> 与 <span class="arithmatex">\((0, 1)\)</span>、<span class="arithmatex">\((0, 1]\)</span> 均互不同胚。</p>
+<p><strong>2. 区分 <span class="arithmatex">\((0, 1)\)</span> 与 <span class="arithmatex">\((0, 1]\)</span></strong></p>
+<p>我们利用<strong>割点 (Cut point)</strong> 的数量来进行拓扑区分。</p>
+<ul>
+<li>对于 <span class="arithmatex">\((0, 1]\)</span>，存在一个特殊的点（端点 <span class="arithmatex">\(1\)</span>）。如果我们去掉该点，剩余的空间 <span class="arithmatex">\((0, 1]\)</span> - <span class="arithmatex">\(\{1\} = (0, 1)\)</span> 仍然是一个连通的区间。因此，<span class="arithmatex">\((0, 1]\)</span> 存在非割点。</li>
+<li>对于 <span class="arithmatex">\((0, 1)\)</span>，其中的<strong>每一个点</strong>都是割点。无论去掉哪一个点 <span class="arithmatex">\(c \in (0, 1)\)</span>，空间都会断裂成两个不相交的非空开集 <span class="arithmatex">\((0, c) \cup (c, 1)\)</span>，从而变得不连通。</li>
+</ul>
+<p>同胚映射必须保持割点与非割点的拓扑结构。既然两者的割点性质截然不同，故 <span class="arithmatex">\((0, 1)\)</span> 与 <span class="arithmatex">\((0, 1]\)</span> 不同胚。</p>
+<p>综上所述，这三个空间两两不同胚。</p>
+<hr />
+<h2 id="8_2">问题 8</h2>
+<p>(i) 证明每一个连续函数 <span class="arithmatex">\(f: [0, 1] \to [0, 1]\)</span> 都至少存在一个不动点 <span class="arithmatex">\(x \in [0, 1]\)</span>，即满足 <span class="arithmatex">\(f(x) = x\)</span>。
+(ii) 如果将 <span class="arithmatex">\([0, 1]\)</span> 替换为 <span class="arithmatex">\((0, 1)\)</span> 或 <span class="arithmatex">\((0, 1]\)</span>，上述结论是否依然成立？请给出理由。</p>
+<h3 id="_34">解答</h3>
+<p><strong>(i) 证明不动点的存在性</strong></p>
+<p>我们构造一个辅助函数 <span class="arithmatex">\(g(x) = f(x) - x\)</span>。
+由于 <span class="arithmatex">\(f(x)\)</span> 连续且恒等映射 <span class="arithmatex">\(x\)</span> 也是连续的，故 <span class="arithmatex">\(g(x)\)</span> 是闭区间 <span class="arithmatex">\([0, 1]\)</span> 上的连续函数。</p>
+<p>考察区间的端点值：</p>
+<ul>
+<li>若 <span class="arithmatex">\(f(0) = 0\)</span> 或 <span class="arithmatex">\(f(1) = 1\)</span>，则不动点已经找到。</li>
+<li>否则，必定有 <span class="arithmatex">\(f(0) &gt; 0\)</span>（因为 <span class="arithmatex">\(f\)</span> 的值域在 <span class="arithmatex">\([0, 1]\)</span> 内）且 <span class="arithmatex">\(f(1) &lt; 1\)</span>。</li>
+<li>此时，代入辅助函数可得：<span class="arithmatex">\(g(0) = f(0) - 0 &gt; 0\)</span>，且 <span class="arithmatex">\(g(1) = f(1) - 1 &lt; 0\)</span>。</li>
+</ul>
+<p>根据实数连续函数的<strong>介值定理 (Intermediate Value Theorem)</strong>，既然函数值在区间端点处异号，那么在区间 <span class="arithmatex">\((0, 1)\)</span> 内部必定存在一点 <span class="arithmatex">\(x_0\)</span>，使得：</p>
+<div class="arithmatex">\[
+g(x_0) = 0
+\]</div>
+<p>即 <span class="arithmatex">\(f(x_0) - x_0 = 0 \implies f(x_0) = x_0\)</span>。
+故 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0, 1]\)</span> 上必有至少一个不动点。</p>
+<p><strong>(ii) 讨论其他区间情况</strong></p>
+<p><strong>结论</strong>：在 <span class="arithmatex">\((0, 1)\)</span> 和 <span class="arithmatex">\((0, 1]\)</span> 上，该结论均<strong>不成立</strong>。</p>
+<ul>
+<li>
+<p><strong>对于 <span class="arithmatex">\((0, 1)\)</span> 的反例</strong>：
+  构造连续函数 <span class="arithmatex">\(f(x) = x^2\)</span>。它将 <span class="arithmatex">\((0, 1)\)</span> 映射到 <span class="arithmatex">\((0, 1)\)</span>。
+  求解方程 <span class="arithmatex">\(x^2 = x\)</span>，得解为 <span class="arithmatex">\(x=0\)</span> 或 <span class="arithmatex">\(x=1\)</span>。但这两人点都不在开区间 <span class="arithmatex">\((0, 1)\)</span> 内。因此该函数没有不动点。
+  （或者取 <span class="arithmatex">\(f(x) = (x+1)/2\)</span>，解为 <span class="arithmatex">\(x=1\)</span>，同样不在区间内）。</p>
+</li>
+<li>
+<p><strong>对于 <span class="arithmatex">\((0, 1]\)</span> 的反例</strong>：
+  构造连续函数 <span class="arithmatex">\(f(x) = x/2\)</span>。
+  它是一个从 <span class="arithmatex">\((0, 1]\)</span> 映射到 <span class="arithmatex">\((0, 1/2] \subseteq (0, 1]\)</span> 的函数。
+  求解方程 <span class="arithmatex">\(x/2 = x\)</span>，唯一的解是 <span class="arithmatex">\(x=0\)</span>。但这唯一的解不在区间 <span class="arithmatex">\((0, 1]\)</span> 内部。因此也没有不动点。</p>
+</li>
+</ul>
+<hr />
+<h2 id="9_2">问题 9</h2>
+<p>设 <span class="arithmatex">\((X, \mathcal{T})\)</span> 为一个拓扑空间。点 <span class="arithmatex">\(x \in X\)</span> 的一个<strong>开邻域基</strong> (Open neighborhood basis) 是一族开集 <span class="arithmatex">\(\{B_i\}_{i \in I}\)</span>，满足：</p>
+<ol>
+<li>对于所有的 <span class="arithmatex">\(i\)</span>，都有 <span class="arithmatex">\(x \in B_i\)</span>；</li>
+<li>对于任意一个包含 <span class="arithmatex">\(x\)</span> 的开集 <span class="arithmatex">\(U\)</span>，必定存在某个 <span class="arithmatex">\(B_i\)</span> 使得 <span class="arithmatex">\(B_i \subseteq U\)</span>。</li>
+</ol>
+<p>如果拓扑空间 <span class="arithmatex">\(X\)</span> 中的每一个点都拥有一个由<strong>道路连通集</strong>构成的开邻域基，我们就称 <span class="arithmatex">\(X\)</span> 是<strong>局部道路连通的</strong> (Locally path-connected)。</p>
+<p>证明：如果 <span class="arithmatex">\(X\)</span> 是连通的，并且是局部道路连通的，那么 <span class="arithmatex">\(X\)</span> 必定是道路连通的。
+<em>(提示：固定 <span class="arithmatex">\(x \in X\)</span>，考虑 <span class="arithmatex">\(X\)</span> 中所有能与 <span class="arithmatex">\(x\)</span> 用道路连接的点构成的集合 <span class="arithmatex">\(S_x\)</span>。证明 <span class="arithmatex">\(S_x\)</span> 是既开又闭集。)</em></p>
+<h3 id="_35">解答</h3>
+<p><strong>1. 构造连通分支集合 <span class="arithmatex">\(S_x\)</span></strong></p>
+<p>固定空间中的任意一点 <span class="arithmatex">\(x \in X\)</span>。我们定义集合 <span class="arithmatex">\(S_x\)</span> 为能通过道路与 <span class="arithmatex">\(x\)</span> 连通的点的集合：</p>
+<div class="arithmatex">\[
+S_x = \{ y \in X \mid \text{存在道路 } \gamma: [0, 1] \to X, \text{ 使得 } \gamma(0) = x \text{ 且 } \gamma(1) = y \}
+\]</div>
+<p>常值道路（恒等于 <span class="arithmatex">\(x\)</span>）显然连接了 <span class="arithmatex">\(x\)</span> 自身，因此 <span class="arithmatex">\(x \in S_x\)</span>，即 <span class="arithmatex">\(S_x\)</span> 是<strong>非空集</strong>。</p>
+<p><strong>2. 证明 <span class="arithmatex">\(S_x\)</span> 是开集</strong></p>
+<p>任取 <span class="arithmatex">\(y \in S_x\)</span>。
+因为 <span class="arithmatex">\(X\)</span> 是局部道路连通的，对于点 <span class="arithmatex">\(y\)</span> 和全空间 <span class="arithmatex">\(X\)</span>，必定存在 <span class="arithmatex">\(y\)</span> 的开邻域基中的一个<strong>道路连通的开集</strong> <span class="arithmatex">\(B_y\)</span>，使得 <span class="arithmatex">\(y \in B_y \subseteq X\)</span>。</p>
+<p>考察 <span class="arithmatex">\(B_y\)</span> 中的任意一点 <span class="arithmatex">\(z\)</span>：</p>
+<ul>
+<li>因为 <span class="arithmatex">\(y \in S_x\)</span>，存在从 <span class="arithmatex">\(x\)</span> 到 <span class="arithmatex">\(y\)</span> 的道路。</li>
+<li>因为 <span class="arithmatex">\(B_y\)</span> 是道路连通的，存在从 <span class="arithmatex">\(y\)</span> 到 <span class="arithmatex">\(z\)</span> 的道路。</li>
+</ul>
+<p>拼接这两条道路即可得到从 <span class="arithmatex">\(x\)</span> 到 <span class="arithmatex">\(z\)</span> 的道路，从而推导出 <span class="arithmatex">\(z \in S_x\)</span>。
+既然对任意 <span class="arithmatex">\(z \in B_y\)</span> 都有 <span class="arithmatex">\(z \in S_x\)</span>，则 <span class="arithmatex">\(B_y \subseteq S_x\)</span>。
+这说明 <span class="arithmatex">\(S_x\)</span> 中的每一个点都有一个完全包含在 <span class="arithmatex">\(S_x\)</span> 内部的开邻域，因此 <span class="arithmatex">\(S_x\)</span> 是一个<strong>开集</strong>。</p>
+<p><strong>3. 证明 <span class="arithmatex">\(S_x\)</span> 是闭集</strong></p>
+<p>我们需要证明它的补集 <span class="arithmatex">\(X \setminus S_x\)</span> 是开集。</p>
+<p>任取 <span class="arithmatex">\(w \in X \setminus S_x\)</span>。同理，由局部道路连通性，点 <span class="arithmatex">\(w\)</span> 必定拥有一个<strong>道路连通的开邻域</strong> <span class="arithmatex">\(B_w\)</span>。
+如果这个开邻域 <span class="arithmatex">\(B_w\)</span> 与 <span class="arithmatex">\(S_x\)</span> 有交集，假设存在点 <span class="arithmatex">\(v \in B_w \cap S_x\)</span>：</p>
+<ul>
+<li><span class="arithmatex">\(v \in S_x\)</span> 意味着存在从 <span class="arithmatex">\(x\)</span> 到 <span class="arithmatex">\(v\)</span> 的道路。</li>
+<li><span class="arithmatex">\(B_w\)</span> 道路连通意味着存在从 <span class="arithmatex">\(v\)</span> 到 <span class="arithmatex">\(w\)</span> 的道路。</li>
+</ul>
+<p>拼接道路后推导出 <span class="arithmatex">\(w \in S_x\)</span>，这与 <span class="arithmatex">\(w \in X \setminus S_x\)</span> 矛盾！
+因此，<span class="arithmatex">\(B_w \cap S_x = \emptyset\)</span>，即 <span class="arithmatex">\(B_w \subseteq X \setminus S_x\)</span>。
+由于补集中的每一点都有开邻域包含在补集内，故 <span class="arithmatex">\(X \setminus S_x\)</span> 是开集，<span class="arithmatex">\(S_x\)</span> 是<strong>闭集</strong>。</p>
+<p><strong>4. 结论</strong></p>
+<p>综上所述，<span class="arithmatex">\(S_x\)</span> 是拓扑空间 <span class="arithmatex">\(X\)</span> 中的一个非空的既开又闭集。
+由于全空间 <span class="arithmatex">\(X\)</span> 是<strong>连通的</strong>，空间中唯一的非空既开又闭集只能是 <span class="arithmatex">\(X\)</span> 本身。
+因此：</p>
+<div class="arithmatex">\[
+S_x = X
+\]</div>
+<p>这表示空间中的每一个点都可以用道路与 <span class="arithmatex">\(x\)</span> 连接，故 <span class="arithmatex">\(X\)</span> 必定是<strong>道路连通的</strong>。</p>
+<hr />
+<h2 id="10_1">问题 10</h2>
+<p>考虑 <span class="arithmatex">\(\mathbb{R}\)</span> 上的共有限拓扑 <span class="arithmatex">\(\mathcal{T} = \{ \emptyset \} \cup \{ \mathbb{R} - A : A \text{ 为有限集} \}\)</span>。</p>
+<p>证明：每一个子集 <span class="arithmatex">\(X \subseteq \mathbb{R}\)</span>（赋予子空间拓扑）都是紧致的。</p>
+<h3 id="_36">解答</h3>
+<p><strong>证明过程</strong>：</p>
+<p>设 <span class="arithmatex">\(\{U_i\}_{i \in I}\)</span> 是子空间 <span class="arithmatex">\(X\)</span> 的一个任意开覆盖。</p>
+<ol>
+<li>
+<p>若 <span class="arithmatex">\(X\)</span> 为空集，则它显然是紧致的。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(X\)</span> 非空，我们可以从该开覆盖中任意挑选一个非空的开集，记为 <span class="arithmatex">\(U_{i_0}\)</span>。</p>
+</li>
+<li>
+<p>根据子空间拓扑和共有限拓扑的定义，<span class="arithmatex">\(U_{i_0}\)</span> 必定具有如下形式：<span class="arithmatex">\(U_{i_0} = X \cap (\mathbb{R} \setminus A)\)</span>，其中 <span class="arithmatex">\(A\)</span> 是 <span class="arithmatex">\(\mathbb{R}\)</span> 中的某个<strong>有限集</strong>。</p>
+</li>
+<li>
+<p>此时，我们考察在 <span class="arithmatex">\(X\)</span> 中尚未被 <span class="arithmatex">\(U_{i_0}\)</span> 覆盖的剩余部分：<span class="arithmatex">\(X \setminus U_{i_0} = X \setminus (X \cap (\mathbb{R} \setminus A)) = X \cap A\)</span>。因为 <span class="arithmatex">\(A\)</span> 本身是有限集，所以交集 <span class="arithmatex">\(X \cap A\)</span> 必定也是一个有限集。这意味着，在 <span class="arithmatex">\(X\)</span> 中还没有被 <span class="arithmatex">\(U_{i_0}\)</span> 覆盖的点只有有限个，我们不妨将它们记为：<span class="arithmatex">\(\{x_1, x_2, \dots, x_k\}\)</span>。</p>
+</li>
+<li>
+<p>既然 <span class="arithmatex">\(\{U_i\}_{i \in I}\)</span> 是 <span class="arithmatex">\(X\)</span> 的覆盖，对于剩下的每一个点 <span class="arithmatex">\(x_j\)</span>（<span class="arithmatex">\(j = 1, \dots, k\)</span>），都必定存在覆盖族中的某一个开集 <span class="arithmatex">\(U_{i_j}\)</span>，使得：<span class="arithmatex">\(x_j \in U_{i_j}\)</span></p>
+</li>
+<li>
+<p>这样，我们只需要取最初挑选的 <span class="arithmatex">\(U_{i_0}\)</span>，再加上这 <span class="arithmatex">\(k\)</span> 个额外的开集，就构成了一个集合族：<span class="arithmatex">\(\{U_{i_0}, U_{i_1}, \dots, U_{i_k}\}\)</span></p>
+</li>
+</ol>
+<p>显然，这是一个<strong>有限的开集族</strong>，并且它完全覆盖了整个 <span class="arithmatex">\(X\)</span>。</p>
+<p>既然 <span class="arithmatex">\(X\)</span> 的任意开覆盖都存在有限子覆盖，根据紧致性的定义，该子空间 <span class="arithmatex">\(X\)</span> 必定是紧致的。</p>
 <p>\newpage</p>
 
 
