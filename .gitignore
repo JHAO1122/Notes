@@ -9,3 +9,6 @@ migrate_folders.py
 test_model.py
 docs/zh/blog/posts/private/
 encryptcontent.cache
+temp_combined.md
+*.pdf
+bulid.py
