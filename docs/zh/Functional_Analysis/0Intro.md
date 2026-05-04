@@ -28,7 +28,7 @@ tags:
 
 以下笔记正在持续更新中：
 
-### Part I: 距离空间基础 (Metric Spaces)
+### 第一部分：距离空间理论
 
 * [x] [第一章：度量空间](1distance_space.md)
 
@@ -38,9 +38,13 @@ tags:
 
 * [x] [第四章：压缩映射定理](4CMT.md)
 
+### 第二部分：赋范线性空间与 Banach 空间
+
 * [x] [第五章：赋范线性空间](5Linear.md)
 
 * [x] [第六章：Banach 空间](6Banach.md)
+
+### 第三部分：内积空间与 Hilbert 空间 
 
 * [x] [第七章：内积空间](7Hilbert.md)
 

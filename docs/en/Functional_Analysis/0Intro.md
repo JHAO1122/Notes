@@ -29,7 +29,7 @@ The construction of these notes is primarily based on the following resources:
 
 The following notes are continuously being updated:
 
-### Part I: Foundations of Metric Spaces
+### Part I: Metric Spaces Theory
 
 * [x] [Chapter 1: Metric Spaces](1distance_space.md)
 
@@ -37,11 +37,15 @@ The following notes are continuously being updated:
 
 * [x] [Chapter 3: Compactness](3compactness.md)
 
-* [x] [Chapter 4: Contraction Mapping Theorem](4CMT.md)
+* [x] [Chapter 4: Fixed Point Theorems](4CMT.md)
+
+### Part II: Normed Spaces & Banach Spaces
 
 * [x] [Chapter 5: Normed Linear Spaces](5Linear.md)
 
 * [x] [Chapter 6: Banach Spaces](6Banach.md)
+
+### Part III: Inner Product Spaces & Hilbert Spaces
 
 * [x] [Chapter 7: Inner Product Spaces](7Hilbert.md)
 
