@@ -388,5 +388,17 @@
         "date": "2026-04-28",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.00432v1": {
+        "title": "Optimal Spatio-Temporal Decoupling for Bayesian Conformal Prediction",
+        "date": "2026-05-01",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.00126v1": {
+        "title": "SPLICE: Latent Diffusion over JEPA Embeddings for Conformal Time-Series Inpainting",
+        "date": "2026-04-30",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

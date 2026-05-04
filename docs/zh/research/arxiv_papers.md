@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-04-30
+> 更新于: 2026-05-04
 
 ---
+### Optimal Spatio-Temporal Decoupling for Bayesian Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-01
+- **链接**: [PDF](http://arxiv.org/abs/2605.00432v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出状态自适应贝叶斯共形预测（SA-BCP），通过空间核密度证据门控长期时间惯性，在统计上实现了时间适应性与结构稳定性的最优解耦。其核心创新在于严格证明了由证据阈值K控制的极小极大偏差-方差权衡，并构造了能同时消除ACI系统欠覆盖并缩减贝叶斯CP未校准区间膨胀的评分函数。
+
+### SPLICE: Latent Diffusion over JEPA Embeddings for Conformal Time-Series Inpainting 
+
+- [ ] **分类**: Conformal | **日期**: 2026-04-30
+- **链接**: [PDF](http://arxiv.org/abs/2605.00126v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于将基于JEPA的潜变量扩散生成模型与自适应共形推断（ACI）相结合，首次为时间序列插补提供了具有有限样本覆盖保证的在线预测区间。其统计贡献在于：通过构造一个条件潜桥扩散过程，在64维潜空间中生成候选填补轨迹，并利用ACI动态调整共形分位数，从而在无需分布假设的情况下，严格校正了静态共形预测中高达7.5个百分点的覆盖不足问题。
+
+
 ### VLM Judges Can Rank but Cannot Score: Task-Dependent Uncertainty in Multimodal Evaluation 
 
 - [ ] **分类**: Conformal | **日期**: 2026-04-28
