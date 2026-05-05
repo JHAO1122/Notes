@@ -64,6 +64,41 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/7Delta_Method/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Asymptotic-statistics/8MLE/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/8MLE/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/8MLE/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_1/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_1/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_2/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_2/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_3/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_3/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_3/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_4/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_4/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_4/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/</loc>
         <lastmod>2026-05-05</lastmod>
         <changefreq>daily</changefreq>
@@ -365,6 +400,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-23/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/blog/posts/public/2026-5-5/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/public/2026-5-5/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/public/2026-5-5/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/reference/</loc>
         <lastmod>2026-05-05</lastmod>
         <changefreq>daily</changefreq>
@@ -475,6 +517,41 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/7Delta_Method/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/7Delta_Method/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/8MLE/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/8MLE/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/8MLE/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_1/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_1/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_2/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_2/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_3/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_3/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_3/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_4/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Asymptotic-statistics/sol_4/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_4/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Functional_Analysis/0Intro/</loc>
@@ -818,6 +895,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/private/2026-4-23/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/private/2026-4-23/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/blog/posts/public/2026-5-5/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/blog/posts/public/2026-5-5/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/blog/posts/public/2026-5-5/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/research/arxiv_papers/</loc>
