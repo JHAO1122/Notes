@@ -241,14 +241,11 @@ Xk <- create.gaussian(X, mu, Sigma, diag_s = diags)
 1. **边缘分布估计**：估计每个特征的经验 CDF，记为 $\hat{F}_j$。
 
 2. **正态分位数变换 (Normal Quantile Transform)**：通过概率积分变换，将原始数据投影到 $[0, 1]$ 空间，再映射到潜变量的高斯空间：
-   $$
-   \hat{U}_{ij} = \hat{F}_j(X_{ij}), \quad \tilde{Z}_{ij} = \Phi^{-1}(\hat{U}_{ij})
-   $$
+   
+   $\hat{U}_{ij} = \hat{F}_j(X_{ij}), \quad \tilde{Z}_{ij} = \Phi^{-1}(\hat{U}_{ij})$
 
 3. **生成潜变量 Knockoff**：在转换后的高斯空间中，生成对应于潜变量 $\tilde{Z}$ 的高斯 Knockoff 变量。
 
 4. **逆变换回原空间**：最后通过逆变换将 Knockoff 变量映射回原特征的数据尺度：
 
-   $$
-   U_{ij}^{\tilde{Z}} = \Phi(\tilde{Z}_{ij}), \quad \tilde{X}_{ij} = \hat{F}_j^{-1}(U_{ij}^{\tilde{Z}})
-   $$
+   $U_{ij}^{\tilde{Z}} = \Phi(\tilde{Z}_{ij}), \quad \tilde{X}_{ij} = \hat{F}_j^{-1}(U_{ij}^{\tilde{Z}})$
