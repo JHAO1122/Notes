@@ -400,5 +400,11 @@
         "date": "2026-04-30",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.01452v1": {
+        "title": "Stable Localized Conformal Prediction via Transduction",
+        "date": "2026-05-02",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

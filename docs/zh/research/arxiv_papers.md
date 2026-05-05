@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-04
+> 更新于: 2026-05-05
 
 ---
+### Stable Localized Conformal Prediction via Transduction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-02
+- **链接**: [PDF](http://arxiv.org/abs/2605.01452v1)
+
+!!! note "AI 核心解读"
+
+    该论文首次将共形预测集合大小的条件期望方差形式化为“集合稳定性”这一统计量，并基于此推导出稳定共形预测（StCP）方法，通过引入源任务标签数据与目标任务无标签数据构造了新的评分函数，在理论上严格证明了其边际覆盖率和稳定性性质。
+
+
 ### Optimal Spatio-Temporal Decoupling for Bayesian Conformal Prediction 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-01
