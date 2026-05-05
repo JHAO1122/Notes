@@ -4032,11 +4032,11 @@ S_{kn-derand} := \left\{ j \in [p] : e_j^{avg} \ge \frac{p}{\alpha_{ebh} \hat{k}
 <p><strong>边缘分布估计</strong>：估计每个特征的经验 CDF，记为 <span class="arithmatex">\(\hat{F}_j\)</span>。</p>
 </li>
 <li>
-<p><strong>正态分位数变换 (Normal Quantile Transform)</strong>：通过概率积分变换，将原始数据投影到 <span class="arithmatex">\([0, 1]\)</span> 空间，再映射到潜变量的高斯空间：
-   $$
-   \hat{U}<em ij="ij">{ij} = \hat{F}_j(X</em>}), \quad \tilde{Z<em ij="ij">{ij} = \Phi^{-1}(\hat{U}</em>)
-   $$</p>
+<p><strong>正态分位数变换 (Normal Quantile Transform)</strong>：通过概率积分变换，将原始数据投影到 <span class="arithmatex">\([0, 1]\)</span> 空间，再映射到潜变量的高斯空间：</p>
 </li>
+</ol>
+<p><span class="arithmatex">\(\hat{U}_{ij} = \hat{F}_j(X_{ij}), \quad \tilde{Z}_{ij} = \Phi^{-1}(\hat{U}_{ij})\)</span></p>
+<ol>
 <li>
 <p><strong>生成潜变量 Knockoff</strong>：在转换后的高斯空间中，生成对应于潜变量 <span class="arithmatex">\(\tilde{Z}\)</span> 的高斯 Knockoff 变量。</p>
 </li>
@@ -4044,9 +4044,7 @@ S_{kn-derand} := \left\{ j \in [p] : e_j^{avg} \ge \frac{p}{\alpha_{ebh} \hat{k}
 <p><strong>逆变换回原空间</strong>：最后通过逆变换将 Knockoff 变量映射回原特征的数据尺度：</p>
 </li>
 </ol>
-<p>$$
-   U_{ij}^{\tilde{Z}} = \Phi(\tilde{Z}<em ij="ij">{ij}), \quad \tilde{X}</em>} = \hat{F<em ij="ij">j^{-1}(U</em>)
-   $$}^{\tilde{Z}</p>
+<p><span class="arithmatex">\(U_{ij}^{\tilde{Z}} = \Phi(\tilde{Z}_{ij}), \quad \tilde{X}_{ij} = \hat{F}_j^{-1}(U_{ij}^{\tilde{Z}})\)</span></p>
 
 
 
