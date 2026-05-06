@@ -31,7 +31,7 @@
 * **2026-04-23** | [何时收敛](posts/private/2026-4-23.md) 🔒
     > *对于27fall申请的疲惫、一些对未来的想法以及期中总结*
 
-* **2026-05-05** | [重返绿茵](posts/public/2026-5-05.md) 
+* **2026-05-05** | [重返绿茵](posts/public/2026-5-5.md) 
     > *关于重返绿茵场的一些复盘和相关故事*
 
 <div style="background-color: rgba(67, 161, 213, 0.05); border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 20px 0; border: 1px solid rgba(67, 161, 213, 0.2);">
