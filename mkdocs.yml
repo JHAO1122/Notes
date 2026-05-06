@@ -161,6 +161,7 @@ nav:
               - 第五章：弱相依数据（一）: zh/Asymptotic-statistics/5Weakly_Dep.md
               - 第六章：弱相依数据（二）: zh/Asymptotic-statistics/6Stantionary_process.md
               - 第七章： Delta 方法: zh/Asymptotic-statistics/7Delta_Method.md
+              - 第八章：极大似然估计: zh/Asymptotic-statistics/8MLE.md
           - 📝 习题:
               - AS Homework 1: zh/Asymptotic-statistics/sol_1.md
               - AS Homework 2: zh/Asymptotic-statistics/sol_2.md
