@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-05
+> 更新于: 2026-05-06
 
 ---
+### Graph Convolutional Support Vector Regression for Robust Spatiotemporal Forecasting of Urban Air Pollution 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-05
+- **链接**: [PDF](http://arxiv.org/abs/2605.03795v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于将图卷积网络与支持向量回归相结合，通过构造一个鲁棒的评分函数来同时捕捉站点间的空间依赖性与时间非线性动态，并在损失函数中引入对异常值的惩罚机制，从而在统计上提升了模型对污染尖峰和季节波动的稳健性。理论性质上，作者证明了所提方法在非平稳时空数据下的预测一致性，并利用共形预测为点预测提供了具有统计保证的校准预测区间。
+
+### Conformalized Percentile Interval: Finite Sample Validity and Improved Conditional Performance 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-04
+- **链接**: [PDF](http://arxiv.org/abs/2605.03233v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种在概率积分变换（PIT）空间中进行共形校准的方法，通过神经网络估计条件累积分布函数后，构造出由该估计决定最短长度的有限样本调整百分位区间。其核心创新在于：校准PIT值能利用其渐近特征独立性来缓解特征依赖的覆盖偏差，同时百分位校准对条件CDF的估计误差具有鲁棒性，并严格证明了有限样本边际覆盖和渐近条件覆盖的理论性质。
+
+
 ### Stable Localized Conformal Prediction via Transduction 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-02

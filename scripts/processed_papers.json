@@ -406,5 +406,17 @@
         "date": "2026-05-02",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.03795v1": {
+        "title": "Graph Convolutional Support Vector Regression for Robust Spatiotemporal Forecasting of Urban Air Pollution",
+        "date": "2026-05-05",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.03233v1": {
+        "title": "Conformalized Percentile Interval: Finite Sample Validity and Improved Conditional Performance",
+        "date": "2026-05-04",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
