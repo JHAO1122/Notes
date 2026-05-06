@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#assignment-2" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1368,6 +1373,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：极大似然估计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1471,6 +1504,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1488,6 +1541,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-moments-and-expansion-of-cfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 1: Moments and expansion of CFs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-corollary-of-liapounov-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 2: Corollary of Liapounov CLT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-null-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 3: Null array
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sufficiency-of-lindebergs-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 4: Sufficiency of Lindeberg's condition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-m-dependence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 5: M-dependence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-first-order-delta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 6: First-Order Delta Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3750,6 +3888,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-moments-and-expansion-of-cfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 1: Moments and expansion of CFs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-corollary-of-liapounov-clt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 2: Corollary of Liapounov CLT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-null-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 3: Null array
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sufficiency-of-lindebergs-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 4: Sufficiency of Lindeberg's condition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-m-dependence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 5: M-dependence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-first-order-delta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 6: First-Order Delta Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3770,7 +3984,334 @@
   
 
 
-  <h1>AS Homework 2</h1>
+<h1 id="assignment-2">📈 课后习题精解：大样本理论 Assignment 2</h1>
+<h2 id="1-moments-and-expansion-of-cfs">习题 1: Moments and expansion of CFs</h2>
+<p><strong>题目：</strong>
+若 <span class="arithmatex">\(E|X|^{r}&lt;\infty\)</span>，证明特征函数 <span class="arithmatex">\(\phi_{X}(t)\)</span> 具有如下展开式：</p>
+<div class="arithmatex">\[
+\phi_{X}(t)=\sum_{j=0}^{r}\frac{(it)^{j}}{j!}EX^{j}+o(|t|^{r})
+\]</div>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>引理：复指数泰勒展开余项的界限 (Bound on the remainder of the complex exponential Taylor expansion)</strong></p>
+<p>设 <span class="arithmatex">\(R_{r}(x)=e^{ix}-\sum_{j=0}^{r}\frac{(ix)^{j}}{j!}\)</span> 为 <span class="arithmatex">\(e^{ix}\)</span> 的 <span class="arithmatex">\(r\)</span> 阶泰勒展开余项。对于任何实数 <span class="arithmatex">\(x\)</span> 和整数 <span class="arithmatex">\(r\ge0\)</span>，有：</p>
+<div class="arithmatex">\[
+|R_{r}(x)|\le \min \left( \frac{2|x|^{r}}{r!}, \frac{|x|^{r+1}}{(r+1)!} \right)
+\]</div>
+<p><strong>引理证明：</strong>
+我们对 <span class="arithmatex">\(r\)</span> 使用数学归纳法。首先建立余项的递归积分关系：</p>
+<div class="arithmatex">\[
+\int_{0}^{x}iR_{r-1}(u)du=\int_{0}^{x}i \left( e^{iu}-\sum_{j=0}^{r-1}\frac{(iu)^{j}}{j!} \right) du = \left[ e^{iu}-\sum_{j=0}^{r-1}\frac{(iu)^{j+1}}{(j+1)!} \right]_{0}^{x} = e^{ix}-\sum_{k=0}^{r}\frac{(ix)^{k}}{k!} = R_{r}(x)
+\]</div>
+<p>故得递归关系 <span class="arithmatex">\(R_{r}(x)=i\int_{0}^{x}R_{r-1}(u)du\)</span>。</p>
+<ul>
+<li>
+<p><strong>基础步骤 (<span class="arithmatex">\(r=0\)</span>)</strong>：
+    <span class="arithmatex">\(R_{0}(x)=e^{ix}-1\)</span>。一方面，由三角不等式：<span class="arithmatex">\(|R_{0}(x)|=|e^{ix}-1|\le|e^{ix}|+1=2\)</span>。
+    另一方面，由积分形式：<span class="arithmatex">\(|R_{0}(x)|=|i\int_{0}^{x}e^{iu}du|\le\int_{0}^{|x|}|e^{iu}|du=|x|\)</span>。
+    结合得 <span class="arithmatex">\(|R_{0}(x)|\le \min(2,|x|)\)</span>，命题成立。</p>
+</li>
+<li>
+<p><strong>归纳步骤</strong>：
+    假设不等式对 <span class="arithmatex">\(r-1\)</span> 成立，即 <span class="arithmatex">\(|R_{r-1}(x)|\le\frac{2|x|^{r-1}}{(r-1)!}\)</span> 且 <span class="arithmatex">\(|R_{r-1}(x)|\le\frac{|x|^{r}}{r!}\)</span>。
+    利用积分关系 <span class="arithmatex">\(R_{r}(x)=i\int_{0}^{x}R_{r-1}(u)du\)</span>，取绝对值：</p>
+<div class="arithmatex">\[
+|R_{r}(x)|\le\int_{0}^{|x|}|R_{r-1}(u)|du
+\]</div>
+<ol>
+<li>积分归纳假设的第一部分：<span class="arithmatex">\(|R_{r}(x)|\le\int_{0}^{|x|}\frac{2u^{r-1}}{(r-1)!}du = \frac{2|x|^{r}}{r!}\)</span>。</li>
+<li>积分归纳假设的第二部分：<span class="arithmatex">\(|R_{r}(x)|\le\int_{0}^{|x|}\frac{u^{r}}{r!}du = \frac{|x|^{r+1}}{(r+1)!}\)</span>。
+综上，对所有 <span class="arithmatex">\(r\ge0\)</span> 引理成立。</li>
+</ol>
+</li>
+</ul>
+<p><br></p>
+<p><strong>定理证明：</strong>
+由泰勒定理，对任意实数 <span class="arithmatex">\(x\)</span>：</p>
+<div class="arithmatex">\[
+e^{ix}=\sum_{j=0}^{r}\frac{(ix)^{j}}{j!}+R_{r}(x)
+\]</div>
+<p>代入 <span class="arithmatex">\(x=tX\)</span> 并取期望，得到特征函数：</p>
+<div class="arithmatex">\[
+\phi_{X}(t)=E[e^{itX}]=\sum_{j=0}^{r}\frac{(it)^{j}}{j!}E[X^{j}]+E[R_{r}(tX)]
+\]</div>
+<p>需证明 <span class="arithmatex">\(E[R_{r}(tX)]=o(|t|^{r})\)</span>，即当 <span class="arithmatex">\(t\rightarrow0\)</span> 时，<span class="arithmatex">\(\frac{1}{|t|^{r}}E[R_{r}(tX)]\rightarrow0\)</span>。
+定义随机变量 <span class="arithmatex">\(Z_{t}=\frac{R_{r}(tX)}{|t|^{r}}\)</span>。利用引理界限：</p>
+<div class="arithmatex">\[
+|Z_{t}|=\frac{|R_{r}(tX)|}{|t|^{r}}\le \min \left( \frac{2|X|^{r}}{r!}, \frac{|t|\cdot|X|^{r+1}}{(r+1)!} \right)
+\]</div>
+<ul>
+<li><strong>几乎处处收敛</strong>：对于固定 <span class="arithmatex">\(X\)</span>，当 <span class="arithmatex">\(t\rightarrow0\)</span> 时，<span class="arithmatex">\(\frac{|t|\cdot|X|^{r+1}}{(r+1)!}\rightarrow0\)</span>，故 <span class="arithmatex">\(Z_{t} \xrightarrow{a.s.} 0\)</span>。</li>
+<li><strong>受控性</strong>：对于所有 <span class="arithmatex">\(t\)</span>，恒有 <span class="arithmatex">\(|Z_{t}|\le\frac{2}{r!}|X|^{r}\)</span>。由于 <span class="arithmatex">\(E|X|^{r}&lt;\infty\)</span>，该上界是可积的。</li>
+<li><strong>应用控制收敛定理 (DCT)</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+\lim_{t\rightarrow0}E[Z_{t}]=E[\lim_{t\rightarrow0}Z_{t}]=E[0]=0
+\]</div>
+<p>因此 <span class="arithmatex">\(E[R_{r}(tX)]=o(|t|^{r})\)</span>。结论证毕。</p>
+</details>
+<hr />
+<h2 id="2-corollary-of-liapounov-clt">习题 2: Corollary of Liapounov CLT</h2>
+<p><strong>题目：</strong>
+设 <span class="arithmatex">\(\{X_{nj}:1\le j\le k_n\}_{n\ge1}\)</span> 为独立随机变量构成的三角阵列，记 <span class="arithmatex">\(\sigma_{n}^{2}=Var(\sum_{j=1}^{k_n}X_{nj})\)</span>。若存在常数使得 <span class="arithmatex">\(|X_{nj}/\sigma_{n}|\le M_{nj}\)</span> a.e.，且满足 <span class="arithmatex">\(\lim_{n\rightarrow\infty} \max_{1\le j \le k_n} M_{nj}=0\)</span>，证明 <span class="arithmatex">\(S_{n}=\sum_{j=1}^{k_{n}}X_{nj}\)</span> 满足：</p>
+<div class="arithmatex">\[
+\frac{S_{n}-E(S_{n})}{\sigma_{n}} \xrightarrow{d} \mathcal{N}(0,1)
+\]</div>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>证明：</strong>
+令 <span class="arithmatex">\(M_{n}=\max_{1\le j\le k_{n}}M_{nj}\)</span>。已知当 <span class="arithmatex">\(n\rightarrow\infty\)</span> 时 <span class="arithmatex">\(M_{n}\rightarrow0\)</span>。由条件得：</p>
+<div class="arithmatex">\[
+|X_{nj}|\le M_{nj}\sigma_{n}\le M_{n}\sigma_{n} \quad \text{a.e.}
+\]</div>
+<p>为应用 Liapounov 中心极限定理，我们验证 <span class="arithmatex">\(\delta=1\)</span> 时的 Liapounov 条件，即证明三阶绝对中心矩之和趋于 0：</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow\infty} \frac{1}{\sigma_{n}^{3}}\sum_{j=1}^{k_{n}}E|X_{nj}-E[X_{nj}]|^{3} = 0
+\]</div>
+<ol>
+<li>
+<p><strong>偏差估计</strong>：由三角不等式，
+    <span class="arithmatex">\(|X_{nj}-E[X_{nj}]|\le|X_{nj}|+E|X_{nj}|\le M_{n}\sigma_{n}+M_{n}\sigma_{n}=2M_{n}\sigma_{n}\)</span>。</p>
+</li>
+<li>
+<p><strong>三阶矩界限</strong>：
+    <span class="arithmatex">\(E|X_{nj}-E[X_{nj}]|^{3}=E[|X_{nj}-E[X_{nj}]|\cdot|X_{nj}-E[X_{nj}]|^{2}] \le E[(2M_{n}\sigma_{n})\cdot|X_{nj}-E[X_{nj}]|^{2}] = 2M_{n}\sigma_{n}Var(X_{nj})\)</span>。</p>
+</li>
+<li>
+<p><strong>求和化简</strong>：
+    由于三角阵列每行独立，<span class="arithmatex">\(\sum_{j=1}^{k_{n}}Var(X_{nj})=\sigma_{n}^{2}\)</span>。则：</p>
+<div class="arithmatex">\[
+\frac{1}{\sigma_{n}^{3}}\sum_{j=1}^{k_{n}}E|X_{nj}-E[X_{nj}]|^{3} \le \frac{2M_{n}\sigma_{n}}{\sigma_{n}^{3}} \sum_{j=1}^{k_{n}}Var(X_{nj}) = \frac{2M_{n}\sigma_{n}}{\sigma_{n}^{3}} \cdot \sigma_{n}^{2} = 2M_{n}
+\]</div>
+</li>
+</ol>
+<p>由于 <span class="arithmatex">\(M_{n}\rightarrow0\)</span>，Liapounov 条件满足。根据 Liapounov CLT，结论成立。</p>
+</details>
+<hr />
+<h2 id="3-null-array">习题 3: Null array</h2>
+<p><strong>题目：</strong>
+设 <span class="arithmatex">\(\{X_{nj}:1\le j\le k_{n}\}_{n\ge1}\)</span> 为三角阵列，<span class="arithmatex">\(E(X_{nj})=\alpha_{nj}\)</span>。证明如下条件的蕴含关系：<span class="arithmatex">\((d)\Rightarrow(c)\Rightarrow(b)\Rightarrow(a)\)</span>：</p>
+<p>(a) <span class="arithmatex">\(\lim_{n\rightarrow\infty}P(|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n})=0\)</span> 对各 <span class="arithmatex">\(j\)</span> 成立。</p>
+<p>(b) <span class="arithmatex">\(\lim_{n\rightarrow\infty} \max_{j} P(|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n})=0\)</span>。</p>
+<p>(c) <span class="arithmatex">\(\lim_{n\rightarrow\infty}P(\max_{j} |X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n})=0\)</span>。</p>
+<p>(d) <span class="arithmatex">\(\lim_{n\rightarrow\infty} \sum_{j=1}^{k_{n}}P(|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n})=0\)</span>。</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>证明过程：</strong></p>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\((d)\Rightarrow(c)\)</span></strong>：
+    最大值超过阈值的事件是各分量超过阈值事件的并集。由 <strong>Boole 不等式 (概率次可加性)</strong>：</p>
+<div class="arithmatex">\[
+P(\max_{1\le j\le k_{n}}|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n}) = P \left( \bigcup_{j=1}^{k_{n}} \{|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n}\} \right) \le \sum_{j=1}^{k_{n}} P(|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n})
+\]</div>
+<p>若 (d) 成立，右端趋于 0，则 (c) 必然成立。</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\((c)\Rightarrow(b)\)</span></strong>：
+    对于任意固定的 <span class="arithmatex">\(j_{0}\)</span>，有：
+    <span class="arithmatex">\(\{|X_{nj_{0}}-\alpha_{nj_{0}}|&gt;\epsilon\sigma_{n}\} \subseteq \{\max_{1\le j\le k_{n}}|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n}\}\)</span>。
+    由概率的单调性：</p>
+<div class="arithmatex">\[
+P(|X_{nj_{0}}-\alpha_{nj_{0}}|&gt;\epsilon\sigma_{n}) \le P(\max_{1\le j\le k_{n}}|X_{nj}-\alpha_{nj}|&gt;\epsilon\sigma_{n})
+\]</div>
+<p>对左侧取最大值，不等式依然保持。故 (c) 成立蕴含 (b) 成立。</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\((b)\Rightarrow(a)\)</span></strong>：
+    此结论显而易见。各分量的概率被其最大值所控制，最大值趋于 0 则每个分量必趋于 0。</p>
+</li>
+</ul>
+</details>
+<hr />
+<h2 id="4-sufficiency-of-lindebergs-condition">习题 4: Sufficiency of Lindeberg's condition</h2>
+<p><strong>题目：</strong>
+设 <span class="arithmatex">\(X_{n}\sim\mathcal{N}(0,2^{-n})\)</span> 为独立随机变量序列。证明该序列满足中心极限定理，但 <strong>Lindeberg 条件失效</strong>。</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>证明：</strong></p>
+<p><strong>第一步：计算方差与极限分布</strong></p>
+<p>独立随机变量和的方差为方差之和：</p>
+<div class="arithmatex">\[
+\sigma_{n}^{2} = Var \left( \sum_{j=1}^{n}X_{j} \right) = \sum_{j=1}^{n}2^{-j} = \frac{1/2(1-(1/2)^{n})}{1-1/2} = 1-(1/2)^{n}
+\]</div>
+<p>当 <span class="arithmatex">\(n\rightarrow\infty\)</span> 时，<span class="arithmatex">\(\sigma_{n}^{2}\rightarrow1\)</span>。计算标准化和 <span class="arithmatex">\(T_{n} = S_{n}/\sigma_{n}\)</span> 的特征函数：</p>
+<div class="arithmatex">\[
+\phi_{T_{n}}(t) = \prod_{j=1}^{n}\phi_{X_{j}}(t/\sigma_{n}) = \prod_{j=1}^{n} \exp \left( -\frac{1}{2}\cdot2^{-j}\cdot \left( \frac{t}{\sigma_{n}} \right) ^{2} \right) = \exp \left( -\frac{t^{2}}{2\sigma_{n}^{2}} \sum_{j=1}^{n}2^{-j} \right) = \exp \left( -\frac{t^{2}}{2} \right)
+\]</div>
+<p>这正是 <span class="arithmatex">\(\mathcal{N}(0,1)\)</span> 的特征函数。根据 Lévy 连续性定理，<span class="arithmatex">\(S_{n}/\sigma_{n} \xrightarrow{d} \mathcal{N}(0,1)\)</span>，即满足中心极限定理。</p>
+<p><strong>第二步：验证 Lindeberg 条件的失效</strong></p>
+<p>Lindeberg 量定义为 <span class="arithmatex">\(L_{n}(\epsilon) = \frac{1}{\sigma_{n}^{2}}\sum_{j=1}^{n}E[X_{j}^{2}I(|X_{j}|&gt;\epsilon\sigma_{n})]\)</span>。对于任意 <span class="arithmatex">\(n\ge1\)</span>：</p>
+<div class="arithmatex">\[
+L_{n}(\epsilon) \ge \frac{1}{\sigma_{n}^{2}}E[X_{1}^{2}I(|X_{1}|&gt;\epsilon\sigma_{n})]
+\]</div>
+<p>当 <span class="arithmatex">\(n\rightarrow\infty\)</span> 时，<span class="arithmatex">\(\sigma_{n}\rightarrow1\)</span>。因此：</p>
+<div class="arithmatex">\[
+\liminf_{n\rightarrow\infty} L_{n}(\epsilon) \ge E[X_{1}^{2}I(|X_{1}|&gt;\epsilon)]
+\]</div>
+<p>由于 <span class="arithmatex">\(X_{1}\sim\mathcal{N}(0,1/2)\)</span>，对于任何固定的 <span class="arithmatex">\(\epsilon&gt;0\)</span>，上述期望是一个正的常数 <span class="arithmatex">\(C&gt;0\)</span>。
+因此 <span class="arithmatex">\(L_{n}(\epsilon)\)</span> 不会收敛到 0，Lindeberg 条件不成立。这说明 Lindeberg 条件并非中心极限定理成立的必要条件。</p>
+</details>
+<h2 id="5-m-dependence">习题 5: M-dependence</h2>
+<p><strong>题目：</strong>
+设 <span class="arithmatex">\(X_{1}, X_{2}, \dots\)</span> 是独立同分布的随机变量，均值为 <span class="arithmatex">\(\mu\)</span>，方差为 <span class="arithmatex">\(\sigma^{2}\)</span>，且具有有限的四阶矩。</p>
+<p>(a) 求 <span class="arithmatex">\(\overline{X}_{n}\)</span> 与 <span class="arithmatex">\(\overline{Z}_{n} = (1/n)\sum_{i=1}^{n} X_{i}X_{i+1}\)</span> 的联合渐近分布。</p>
+<p>(b) 获取样本自相关系数 <span class="arithmatex">\(r_{n} = \frac{\overline{Z}_{n} - \overline{X}_{n}^{2}}{(1/n)\sum X_{i}^{2} - \overline{X}_{n}^{2}}\)</span> 的渐近分布。</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>(a) 联合渐近分布的证明</strong></p>
+<ul>
+<li><strong>构造线性组合</strong>：
+    定义 <span class="arithmatex">\(Y_{i} = aX_{i} + bX_{i}X_{i+1}\)</span>。由于 <span class="arithmatex">\(X_{i}\)</span> 是 i.i.d. 序列，因此 <span class="arithmatex">\(\{Y_{i}\}\)</span> 是一个 <span class="arithmatex">\(m=1\)</span> 的相依序列。
+    令 <span class="arithmatex">\(W_{n} = a\overline{X}_{n} + b\overline{Z}_{n} = \frac{1}{n}\sum_{i=1}^{n} Y_{i}\)</span>。根据 m-相依序列的中心极限定理：</li>
+</ul>
+<div class="arithmatex">\[
+\sqrt{n}(W_{n} - E[Y_{1}]) \xrightarrow{d} \mathcal{N}(0, V)
+\]</div>
+<div class="arithmatex">\[
+V = Var(Y_{1}) + 2Cov(Y_{1}, Y_{2})
+\]</div>
+<ul>
+<li><strong>计算方差 <span class="arithmatex">\(Var(Y_{1})\)</span></strong>：
+    引入中心化变量 <span class="arithmatex">\(q_{i} = X_{i} - \mu\)</span>。则 <span class="arithmatex">\(E[q_{i}] = 0\)</span>，<span class="arithmatex">\(E[q_{i}^{2}] = \sigma^{2}\)</span>。
+    计算 <span class="arithmatex">\(Y_{1}\)</span> 的偏差：</li>
+</ul>
+<div class="arithmatex">\[
+Y_{1} - E[Y_{1}] = a(X_{1} - \mu) + b(X_{1}X_{2} - \mu^{2})
+\]</div>
+<div class="arithmatex">\[
+= aq_{1} + b[(q_{1} + \mu)(q_{2} + \mu) - \mu^{2}]
+\]</div>
+<div class="arithmatex">\[
+= (a + b\mu)q_{1} + b\mu q_{2} + bq_{1}q_{2}
+\]</div>
+<p>利用 <span class="arithmatex">\(q_{i}\)</span> 的独立性及各阶矩：</p>
+<div class="arithmatex">\[
+Var(Y_{1}) = E[(a + b\mu)^{2}q_{1}^{2} + (b\mu)^{2}q_{2}^{2} + b^{2}q_{1}^{2}q_{2}^{2}]
+\]</div>
+<div class="arithmatex">\[
+= (a + b\mu)^{2}\sigma^{2} + b^{2}\mu^{2}\sigma^{2} + b^{2}\sigma^{4}
+\]</div>
+<ul>
+<li><strong>计算协方差 <span class="arithmatex">\(Cov(Y_{1}, Y_{2})\)</span></strong>：
+    同理可得 <span class="arithmatex">\(Y_{2} - E[Y_{2}] = (a + b\mu)q_{2} + b\mu q_{3} + bq_{2}q_{3}\)</span>。
+    计算乘积期望，仅包含 <span class="arithmatex">\(q_{2}^{2}\)</span> 的项非零：</li>
+</ul>
+<div class="arithmatex">\[
+Cov(Y_{1}, Y_{2}) = E[(b\mu q_{2}) \cdot ((a + b\mu)q_{2})] = ab\mu\sigma^{2} + b^{2}\mu^{2}\sigma^{2}
+\]</div>
+<ul>
+<li><strong>合并计算 <span class="arithmatex">\(V\)</span></strong>：</li>
+</ul>
+<div class="arithmatex">\[
+V = (a^{2} + 2ab\mu + b^{2}\mu^{2})\sigma^{2} + b^{2}\mu^{2}\sigma^{2} + b^{2}\sigma^{4} + 2ab\mu\sigma^{2} + 2b^{2}\mu^{2}\sigma^{2}
+\]</div>
+<div class="arithmatex">\[
+= a^{2}\sigma^{2} + 4ab\mu\sigma^{2} + b^{2}(4\mu^2\sigma^2 + \sigma^4)
+\]</div>
+<ul>
+<li><strong>结论</strong>：
+    根据 Cramer-Wold 设备，联合分布对应的协方差矩阵 <span class="arithmatex">\(\Sigma\)</span> 为：</li>
+</ul>
+<div class="arithmatex">\[
+\sqrt{n} \begin{pmatrix} \overline{X}_{n} - \mu \\ \overline{Z}_{n} - \mu^{2} \end{pmatrix} \xrightarrow{d} \mathcal{N} \left( 0, \begin{pmatrix} \sigma^{2} &amp; 2\mu\sigma^{2} \\ 2\mu\sigma^{2} &amp; 4\mu^{2}\sigma^{2} + \sigma^{4} \end{pmatrix} \right)
+\]</div>
+<p><strong>(b) <span class="arithmatex">\(r_{n}\)</span> 的渐近分布证明</strong></p>
+<ul>
+<li>
+<p><strong>分母分析</strong>：
+    由大数定律，<span class="arithmatex">\(\frac{1}{n}\sum X_{i}^{2} \xrightarrow{p} E[X^{2}] = \mu^{2} + \sigma^{2}\)</span> 且 <span class="arithmatex">\(\overline{X}_{n} \xrightarrow{p} \mu\)</span>。
+    故分母 <span class="arithmatex">\(\frac{1}{n}\sum X_{i}^{2} - \overline{X}_{n}^{2} \xrightarrow{p} \sigma^{2}\)</span>。</p>
+</li>
+<li>
+<p><strong>分子分析 (一阶 Delta 方法)</strong>：
+    令 <span class="arithmatex">\(N_{n} = \overline{Z}_{n} - \overline{X}_{n}^{2}\)</span>。定义函数 <span class="arithmatex">\(f(A, C) = C - A^{2}\)</span>。
+    在 <span class="arithmatex">\((\mu, \mu^{2})\)</span> 处的梯度为：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\nabla f(\mu, \mu^{2}) = \begin{pmatrix} -2\mu \\ 1 \end{pmatrix}
+\]</div>
+<p>分子的渐近方差为 <span class="arithmatex">\(\nabla f^{T} \Sigma \nabla f\)</span>：</p>
+<div class="arithmatex">\[
+\begin{pmatrix} -2\mu &amp; 1 \end{pmatrix} \begin{pmatrix} \sigma^{2} &amp; 2\mu\sigma^{2} \\ 2\mu\sigma^{2} &amp; 4\mu^{2}\sigma^{2} + \sigma^{4} \end{pmatrix} \begin{pmatrix} -2\mu \\ 1 \end{pmatrix} = \sigma^{4}
+\]</div>
+<ul>
+<li><strong>最终结果</strong>：
+    结合 Slutsky 定理：</li>
+</ul>
+<div class="arithmatex">\[
+\sqrt{n}r_{n} = \frac{1}{\sigma^{2} + o_{p}(1)} \sqrt{n}(\overline{Z}_{n} - \overline{X}_{n}^{2}) \xrightarrow{d} \frac{1}{\sigma^{2}} \mathcal{N}(0, \sigma^{4}) \sim \mathcal{N}(0, 1)
+\]</div>
+</details>
+<hr />
+<h2 id="6-first-order-delta-method">习题 6: First-Order Delta Method</h2>
+<p><strong>题目：</strong>
+(a) 寻找 <span class="arithmatex">\((\sqrt{n}(\overline{X} - \mu), \sqrt{n}(S^{2} - \sigma^{2}))\)</span> 的联合极限分布，并讨论渐近独立的条件。</p>
+<p>(b) 设 <span class="arithmatex">\(X_{1}, \dots, X_{n}\)</span> 是均值为 <span class="arithmatex">\(\theta\)</span> 的 Poisson 样本，寻找其样本均值的稳方差变换并构造置信区间。</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>(a) 联合分布与独立性</strong></p>
+<ul>
+<li><strong>多元中心极限定理</strong>：
+    令 <span class="arithmatex">\(M_{n}^{(2)} = \frac{1}{n}\sum_{i=1}^{n}(X_{i} - \mu)^{2}\)</span>。其渐近协方差矩阵 <span class="arithmatex">\(\Sigma^{*}\)</span> 元素为：</li>
+</ul>
+<div class="arithmatex">\[
+\Sigma_{11}^{*} = Var(X_{1}) = \sigma^{2}
+\]</div>
+<div class="arithmatex">\[
+\Sigma_{22}^{*} = Var((X_{1} - \mu)^{2}) = E[(X_{1} - \mu)^{4}] - \sigma^{4}
+\]</div>
+<div class="arithmatex">\[
+\Sigma_{12}^{*} = Cov(X_{1} - \mu, (X_{1} - \mu)^{2}) = E[(X_{1} - \mu)^{3}]
+\]</div>
+<ul>
+<li>
+<p><strong>渐近等价性</strong>：
+    由 <span class="arithmatex">\(S_{n}^{2} = \frac{n}{n-1} [M_{n}^{(2)} - (\overline{X}_{n} - \mu)^{2}]\)</span>，项 <span class="arithmatex">\(\sqrt{n}(\overline{X}_{n} - \mu)^{2} = o_{p}(1)\)</span>。
+    因此 <span class="arithmatex">\(\sqrt{n}(S_{n}^{2} - \sigma^{2})\)</span> 与 <span class="arithmatex">\(\sqrt{n}(M_{n}^{(2)} - \sigma^{2})\)</span> 渐近等价。</p>
+</li>
+<li>
+<p><strong>结论</strong>：
+    联合分布为：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\sqrt{n} \begin{pmatrix} \overline{X}_{n} - \mu \\ S_{n}^{2} - \sigma^{2} \end{pmatrix} \xrightarrow{d} \mathcal{N} \left( 0, \begin{pmatrix} \sigma^{2} &amp; E[(X_{1} - \mu)^{3}] \\ E[(X_{1} - \mu)^{3}] &amp; E[(X_{1} - \mu)^{4}] - \sigma^{4} \end{pmatrix} \right)
+\]</div>
+<p><em>渐近独立条件</em>：协方差项 <span class="arithmatex">\(E[(X_{1} - \mu)^{3}] = 0\)</span>，即分布的三阶中心矩（偏度）为零（如对称分布）。</p>
+<p><strong>(b) 稳方差变换与置信区间</strong></p>
+<ul>
+<li>
+<p><strong>稳方差变换推导</strong>：
+    由 CLT，<span class="arithmatex">\(\sqrt{n}(\overline{X}_{n} - \theta) \xrightarrow{d} \mathcal{N}(0, \theta)\)</span>。
+    设变换为 <span class="arithmatex">\(g(x)\)</span>，由 Delta 方法，渐近方差为 <span class="arithmatex">\([g'(\theta)]^{2}\theta\)</span>。
+    令 <span class="arithmatex">\([g'(\theta)]^{2}\theta = 1\)</span>，则 <span class="arithmatex">\(g'(\theta) = \theta^{-1/2}\)</span>。
+    积分得 <span class="arithmatex">\(g(\theta) = 2\sqrt{\theta}\)</span>。</p>
+</li>
+<li>
+<p><strong>变换后的性质</strong>：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\sqrt{n}(2\sqrt{\overline{X}_{n}} - 2\sqrt{\theta}) \xrightarrow{d} \mathcal{N}(0, 1)
+\]</div>
+<ul>
+<li><strong>构造置信区间</strong>：
+    对于 <span class="arithmatex">\((1-\alpha)\)</span> 置信水平：</li>
+</ul>
+<div class="arithmatex">\[
+P \left( -z_{\alpha/2} \le \sqrt{n}(2\sqrt{\overline{X}_{n}} - 2\sqrt{\theta}) \le z_{\alpha/2} \right) \approx 1 - \alpha
+\]</div>
+<p>整理得：</p>
+<div class="arithmatex">\[
+\sqrt{\overline{X}_{n}} - \frac{z_{\alpha/2}}{2\sqrt{n}} \le \sqrt{\theta} \le \sqrt{\overline{X}_{n}} + \frac{z_{\alpha/2}}{2\sqrt{n}}
+\]</div>
+<p>两边平方得到 <span class="arithmatex">\(\theta\)</span> 的置信区间：</p>
+<div class="arithmatex">\[
+\theta \in \left[ \left( \sqrt{\overline{X}_{n}} - \frac{z_{\alpha/2}}{2\sqrt{n}} \right)^{2}, \left( \sqrt{\overline{X}_{n}} + \frac{z_{\alpha/2}}{2\sqrt{n}} \right)^{2} \right]
+\]</div>
+</details>
 
 
 
@@ -3778,7 +4319,8 @@
 
 
 
-
+  
+  
 
 
 
