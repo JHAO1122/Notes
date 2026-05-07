@@ -418,5 +418,17 @@
         "date": "2026-05-04",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.05051v1": {
+        "title": "Impossibility of Distribution-Free Predictive Inference for Individual Treatment Effects",
+        "date": "2026-05-06",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.04219v1": {
+        "title": "Classification-Powered Conformal Inference for Zero-inflated Outcomes",
+        "date": "2026-05-05",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

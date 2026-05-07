@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-06
+> 更新于: 2026-05-07
 
 ---
+### Impossibility of Distribution-Free Predictive Inference for Individual Treatment Effects 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-06
+- **链接**: [PDF](http://arxiv.org/abs/2605.05051v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过建立有限样本与渐近不可能性定理，严格证明了在连续协变量存在时，任何分布自由的个体处理效应预测集若达到目标覆盖率，其期望长度必然为无穷大。其核心创新在于将个体处理效应推断的不可行性归约为条件独立性检验的统计难度，从而揭示了因果推断中缺失数据机制对评分函数构造的根本性限制。
+
+### Classification-Powered Conformal Inference for Zero-inflated Outcomes 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-05
+- **链接**: [PDF](http://arxiv.org/abs/2605.04219v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种结合分类步骤的共形推断框架，通过构造一个基于分类器输出的评分函数，将零膨胀结果拆解为零点与非零连续部分，从而在保持边际覆盖率的条件下，从理论上证明该方法能渐近达到区间长度的最优性。其核心创新在于利用分类信息修正共形预测的保守性，并证明无论分类或回归模型如何选择，所构造的预测集都能在交换性假设下实现目标覆盖与最小化区间长度的理论平衡。
+
+
 ### Graph Convolutional Support Vector Regression for Robust Spatiotemporal Forecasting of Urban Air Pollution 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-05
