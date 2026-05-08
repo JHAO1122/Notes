@@ -16,7 +16,7 @@ tags:
 
 ---
 
-## 📚 参考教材与文献 (References)
+## 📚 参考教材 (References)
 
 本课程用到的参考教材如下：
 
