@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         { id: "Top", parentId: "Geometry", label: isEn ? "General Topology" : "点集拓扑", radius: 15, color: colors.geometry, collapsed: true },
 
+        { id: "RA", parentId: "Analysis", label: isEn ? "Real Analysis" : "实分析", radius: 15, color: colors.analysisSub, collapsed: true },
+
         // 泛函的内部章节
         { id: "FA-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/0Intro/" },
         { id: "FA-Ch1", label: isEn ? "1. Metric Spaces" : "1.度量空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/1distance_space/" },
@@ -81,7 +83,22 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "Top-Ch5", label: isEn ? "5. Induced Topology" : "5.诱导拓扑", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/5/" },
         { id: "Top-Ch6", label: isEn ? "6.Continuity and Homeomorphisms" : "6.连续与同胚", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/6/" },
         { id: "Top-Ch7", label: isEn ? "7. Connectedness" : "7.连通性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/7/" },
-        { id: "Top-Ch8", label: isEn ? "8. Compactness" : "8.紧性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/8/" }
+        { id: "Top-Ch8", label: isEn ? "8. Compactness" : "8.紧性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/8/" },
+
+        //实分析全部章节
+        { id: "RA-Intro", label: isEn ? "0. Intro" : "实分析课程概览", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/0Intro/" },
+        { id: "RA-Ch1", label: isEn ? "1. Sigma-Algebras" : "1.sigma-代数", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/1_sigma_algebra/" },
+        { id: "RA-Ch2", label: isEn ? "2. Outer Measure" : "2.外测度", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/2_outer_measure/" },
+        { id: "RA-Ch3", label: isEn ? "3. Lebesgue Measure" : "3.Lebesgue测度", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/3_ls_measure/" },
+        { id: "RA-Ch4", label: isEn ? "4. Measurable Functions I" : "4.可测函数（一）", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/4_measurable_functions/" },
+        { id: "RA-Ch5", label: isEn ? "5. Measurable Functions II" : "5.可测函数（二）", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/5_limits_decomposition/" },
+        { id: "RA-Ch6", label: isEn ? "6. Integration Construction" : "6.积分构造", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/6_integration_construction/" },
+        { id: "RA-Ch7", label: isEn ? "7. Convergence Theorems" : "7.收敛定理", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/7_convergence_theorems/" },
+        { id: "RA-Ch8", label: isEn ? "8. Fubini Theorems" : "8.Fubini定理", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/8_fubini_theorems/" },
+        { id: "RA-Ch9", label: isEn ? "9. Hahn-Jordan" : "9.Hahn-Jordan分解", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/9_hahn_jordan/" },
+        { id: "RA-Ch10", label: isEn ? "10. Radon-Nikodym" : "10.Radon-Nikodym定理", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/10_radon_nikodym/" },
+        { id: "RA-Ch11", label: isEn ? "11. FTC in R" : "11.微积分基本定理", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/11_differentiation_ir/" },
+        { id: "RA-Ch12", label: isEn ? "12. Lp Spaces" : "12.L^p空间", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/12_lp_spaces/" },
     ];
 
     const allLinks = [
@@ -97,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Prob-Stat", target: "SDE" },
         { source: "Analysis", target: "SDE" },
         { source: "Geometry", target: "Top" },
+        { source: "Analysis", target: "RA" },
 
         { source: "FA", target: "FA-Intro" }, { source: "FA", target: "FA-Ch1" }, { source: "FA", target: "FA-Ch2" }, { source: "FA", target: "FA-Ch3" },
         { source: "FA", target: "FA-Ch4" }, { source: "FA", target: "FA-Ch5" }, { source: "FA", target: "FA-Ch6" }, { source: "FA", target: "FA-Ch7" },
@@ -107,7 +125,11 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "SDE", target: "SDE-Ch4" }, { source: "SDE", target: "SDE-Ch5" }, { source: "SDE", target: "SDE-Ch6" }, { source: "SDE", target: "SDE-Ch7" },
         { source: "Top", target: "Top-Intro" }, { source: "Top", target: "Top-Ch1" }, { source: "Top", target: "Top-Ch2" }, { source: "Top", target: "Top-Ch3" },
         { source: "Top", target: "Top-Ch4" }, { source: "Top", target: "Top-Ch5" }, { source: "Top", target: "Top-Ch6" }, { source: "Top", target: "Top-Ch7" },
-        { source: "Top", target: "Top-Ch8" }
+        { source: "Top", target: "Top-Ch8" },
+        { source: "RA", target: "RA-Intro" }, { source: "RA", target: "RA-Ch1" }, { source: "RA", target: "RA-Ch2" }, { source: "RA", target: "RA-Ch3" },
+        { source: "RA", target: "RA-Ch4" }, { source: "RA", target: "RA-Ch5" }, { source: "RA", target: "RA-Ch6" }, { source: "RA", target: "RA-Ch7" },
+        { source: "RA", target: "RA-Ch8" }, { source: "RA", target: "RA-Ch9" }, { source: "RA", target: "RA-Ch10" }, { source: "RA", target: "RA-Ch11" },
+        { source: "RA", target: "RA-Ch12" },
     ];
 
     // --- 2. 绘图逻辑 ---
