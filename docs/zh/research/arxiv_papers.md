@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-07
+> 更新于: 2026-05-08
 
 ---
+### History-Aware Conformal Prediction Sets for Censored Time-to-Event Outcomes 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-07
+- **链接**: [PDF](http://arxiv.org/abs/2605.06581v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出历史感知共形预测集（HAPS），通过逆概率删失加权处理时变混杂因素下的右删失数据，并证明在删失权重一致估计时预测集在幸存者中具有渐近近似正确覆盖（PAAC）性质；进一步构造双重稳健扩展版本，放松了对删失分布正确建模的依赖，在统计推导上保证了覆盖率的稳健性。
+
+### When Does Trimming Help Conformal Prediction? A Retained-Law Diagnostic under Calibration Contamination 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-07
+- **链接**: [PDF](http://arxiv.org/abs/2605.06204v1)
+
+!!! note "AI 核心解读"
+
+    该论文将固定阈值修剪重新定义为对校准分布的条件化操作，而非净化过程，并推导出修剪后保留分布下清洁目标覆盖率的精确有限样本恒等式，将其转化为一维评分累积分布函数转移问题。通过构建转移间隙的分量上界，分离出清洁侧协方差成本与保留污染成本，并证明修剪的有效性取决于异常评分能否在保持清洁群体评分中性条件下分离保留概率，否则无法通过保留混合系数实质降低污染。
+
+### Socio-Conformal Calibration in Complex Survey Data: Marginal Validity Is Not Enough for Subgroup Reliability 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-07
+- **链接**: [PDF](http://arxiv.org/abs/2605.05562v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过将Mondrian分位数回归与正则化收缩机制相结合，构造了一种在复杂调查数据中平衡子群覆盖率和预测集大小的评分函数，并严格推导了加权子群覆盖差距的渐近性质。其理论贡献在于证明了在存在校准单元碎片化和群体置信度不匹配时，边际有效性无法保证子群可靠性，且朴素分组校准反而会加剧公平性与效率之间的统计权衡。
+
+
 ### Impossibility of Distribution-Free Predictive Inference for Individual Treatment Effects 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-06

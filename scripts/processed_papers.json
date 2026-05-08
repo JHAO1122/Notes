@@ -430,5 +430,23 @@
         "date": "2026-05-05",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.06581v1": {
+        "title": "History-Aware Conformal Prediction Sets for Censored Time-to-Event Outcomes",
+        "date": "2026-05-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.06204v1": {
+        "title": "When Does Trimming Help Conformal Prediction? A Retained-Law Diagnostic under Calibration Contamination",
+        "date": "2026-05-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.05562v1": {
+        "title": "Socio-Conformal Calibration in Complex Survey Data: Marginal Validity Is Not Enough for Subgroup Reliability",
+        "date": "2026-05-07",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
