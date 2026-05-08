@@ -101,7 +101,7 @@ plugins:
             "第八章：紧性": "Ch 8: Compactness"
             "🧱 实分析": "🧱 Real Analysis"
             "实分析课程概览": "Real Analysis Course Overview"
-            "第一章：sigma-代数": "Ch 1: Sigma-Algebras
+            "第一章：sigma-代数": "Ch 1: Sigma-Algebras"
             "第二章：外测度": "Ch 2: Outer Measure"
             "第三章：Lebesgue测度": "Ch 3: Lebesgue"
             "第四章：可测函数（一）": "Ch 4: Measurable Functions I"
@@ -224,9 +224,7 @@ nav:
               - 第九章：Hahn-Jordan分解: zh/Real_analysis/9_hahn_jordan.md
               - 第十章：Radon-Nikodym定理: zh/Real_analysis/10_radon_nikodym.md
               - 第十一章：微积分基本定理: zh/Real_analysis/11_differentiation_ir.md
-              - 第十二章：L^p空间: zh/Real_analysis/12_lp_space.md
-
-
+              - 第十二章：L^p空间: zh/Real_analysis/12_lp_spaces.md
   - 🛠️ 知识速查:
       - 📖 概览: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
       - 🛠️ 速查:
