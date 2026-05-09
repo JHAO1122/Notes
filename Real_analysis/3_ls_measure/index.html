@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#13-lebesgue-stieltjes-lebesgue" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2712,6 +2717,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：Lebesgue测度
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2729,6 +2754,97 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-borel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 分布函数与 Borel 测度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lebesgue-stieltjes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lebesgue-Stieltjes 测度的构造
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 正则性与近似定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lebesgue-lebesgue-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Lebesgue 测度 (Lebesgue Measure)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Lebesgue 测度 (Lebesgue Measure)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lebesgue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lebesgue 测度的不变性性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cantor-cantor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cantor 集与 Cantor 函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4409,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-borel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 分布函数与 Borel 测度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lebesgue-stieltjes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lebesgue-Stieltjes 测度的构造
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 正则性与近似定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lebesgue-lebesgue-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Lebesgue 测度 (Lebesgue Measure)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Lebesgue 测度 (Lebesgue Measure)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lebesgue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lebesgue 测度的不变性性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cantor-cantor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cantor 集与 Cantor 函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4511,150 @@
   
 
 
-  <h1>第三章：Lebesgue测度</h1>
-
-
+<h1 id="13-lebesgue-stieltjes-lebesgue">1.3 Lebesgue-Stieltjes 测度与 Lebesgue 测度</h1>
+<p>在前面两节中，我们建立了从外测度到测度空间的抽象扩张理论。本节我们将该理论应用到实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 上，通过单调增函数构造一类极其重要的 Borel 测度，即 Lebesgue-Stieltjes 测度，并由此引出分析学的基础——Lebesgue 测度。</p>
+<hr />
+<h2 id="1-borel">1. 分布函数与 Borel 测度</h2>
+<p>在 <span class="arithmatex">\(\mathbb{R}\)</span> 的 Borel <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{B}_{\mathbb{R}}\)</span> 上定义的测度称为 <strong>Borel 测度</strong>。如果该测度在任何有界区间上取值有限，则它与一类特殊的实函数——分布函数一一对应。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.3.1 (分布函数 Distribution Function)</p>
+<p>设 <span class="arithmatex">\(F: \mathbb{R} \to \mathbb{R}\)</span> 为一个函数。如果 <span class="arithmatex">\(F\)</span> 满足以下性质，则称其为分布函数：</p>
+<ul>
+<li>
+<p><strong>单调性</strong>：<span class="arithmatex">\(F\)</span> 是单调递增的，即若 <span class="arithmatex">\(x \le y\)</span>，则 <span class="arithmatex">\(F(x) \le F(y)\)</span>。</p>
+</li>
+<li>
+<p><strong>右连续性</strong>：对于任意 <span class="arithmatex">\(x_0 \in \mathbb{R}\)</span>，<span class="arithmatex">\(F(x_0^+) = \lim_{x \to x_0^+} F(x) = F(x_0)\)</span>。</p>
+</li>
+</ul>
+<p>通过分布函数，我们可以定义半开区间上的测度值为：</p>
+<div class="arithmatex">\[
+\mu((a, b]) = F(b) - F(a)
+\]</div>
+</div>
+<hr />
+<h2 id="2-lebesgue-stieltjes">2. Lebesgue-Stieltjes 测度的构造</h2>
+<p>构造的第一步是在一个代数上定义预测度。令 <span class="arithmatex">\(\mathcal{A}\)</span> 是由所有形如 <span class="arithmatex">\((a, b]\)</span> 的半开区间（包括 <span class="arithmatex">\((a, \infty)\)</span> 和 <span class="arithmatex">\((-\infty, b]\)</span>）的有限不相交并组成的族。易证 <span class="arithmatex">\(\mathcal{A}\)</span> 是一个代数。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.3.1 (预测度的建立)</p>
+<p>给定分布函数 <span class="arithmatex">\(F\)</span>，在代数 <span class="arithmatex">\(\mathcal{A}\)</span> 上定义集函数 <span class="arithmatex">\(\mu_0\)</span>：</p>
+<div class="arithmatex">\[
+\mu_0\left( \bigcup_{j=1}^n (a_j, b_j] \right) = \sum_{j=1}^n [F(b_j) - F(a_j)]
+\]</div>
+<p>则 <span class="arithmatex">\(\mu_0\)</span> 是 <span class="arithmatex">\(\mathcal{A}\)</span> 上的一个预测度。</p>
+</div>
+<details class="proof">
+<summary>定理 1.3.1 的证明要点</summary>
+<p>证明预测度的核心在于验证<strong>可数可加性</strong>。设 <span class="arithmatex">\(I = (a, b]\)</span> 且 <span class="arithmatex">\(I = \bigcup_{j=1}^\infty I_j\)</span>，其中 <span class="arithmatex">\(I_j = (a_j, b_j]\)</span> 为互不相交的区间。</p>
+<p><strong>1. 有限可加性</strong>：</p>
+<p>利用 <span class="arithmatex">\(F\)</span> 的单调性，容易证明对于有限项并集，<span class="arithmatex">\(\mu_0\)</span> 是可加的。对于 <span class="arithmatex">\(n\)</span> 项并集，通过对端点的整理即可得到 <span class="arithmatex">\(\mu_0(\cup_{j=1}^n I_j) = \sum_{j=1}^n \mu_0(I_j)\)</span>。</p>
+<p><strong>2. 可数可加性的证明 (有限覆盖原理)</strong>：</p>
+<ul>
+<li>
+<p><strong>不等式一</strong>：由于有限并包含在可数并中，由单调性可知 <span class="arithmatex">\(\mu_0(I) \ge \sum_{j=1}^n \mu_0(I_j)\)</span>，令 <span class="arithmatex">\(n \to \infty\)</span> 得 <span class="arithmatex">\(\mu_0(I) \ge \sum_{j=1}^\infty \mu_0(I_j)\)</span>。</p>
+</li>
+<li>
+<p><strong>不等式二</strong>：任取 <span class="arithmatex">\(\epsilon &gt; 0\)</span>。由于 <span class="arithmatex">\(F\)</span> 是右连续的，对于 <span class="arithmatex">\(I = (a, b]\)</span>，存在 <span class="arithmatex">\(\delta &gt; 0\)</span> 使得 <span class="arithmatex">\(F(a+\delta) - F(a) &lt; \epsilon\)</span>，从而紧集 <span class="arithmatex">\(K = [a+\delta, b] \subset (a, b]\)</span>。</p>
+</li>
+<li>
+<p>对于每个 <span class="arithmatex">\(I_j = (a_j, b_j]\)</span>，存在 <span class="arithmatex">\(\delta_j &gt; 0\)</span> 使得 <span class="arithmatex">\(F(b_j+\delta_j) - F(b_j) &lt; \epsilon / 2^j\)</span>，从而开区间 <span class="arithmatex">\(O_j = (a_j, b_j+\delta_j) \supset (a_j, b_j]\)</span>。</p>
+</li>
+<li>
+<p>由于紧集 <span class="arithmatex">\(K\)</span> 被开区间族 <span class="arithmatex">\(\{O_j\}\)</span> 覆盖，由 <strong>Heine-Borel 定理</strong>，存在有限个区间 <span class="arithmatex">\(O_{j_1}, \dots, O_{j_N}\)</span> 覆盖 <span class="arithmatex">\(K\)</span>。利用有限可加性的性质并令 <span class="arithmatex">\(\epsilon \to 0\)</span>，最终证得 <span class="arithmatex">\(\mu_0(I) \le \sum_{j=1}^\infty \mu_0(I_j)\)</span>。</p>
+</li>
+</ul>
+</details>
+<div class="admonition success">
+<p class="admonition-title">定理 1.3.2 (Lebesgue-Stieltjes 测度扩张)</p>
+<p>由预测度 <span class="arithmatex">\(\mu_0\)</span> 诱导出的外测度 <span class="arithmatex">\(\mu_F^*\)</span> 限制在 Carathéodory 可测集族 <span class="arithmatex">\(\mathcal{M}_F\)</span> 上得到的测度称为 <strong>Lebesgue-Stieltjes 测度</strong>。由扩张的唯一性定理，若 <span class="arithmatex">\(F\)</span> 确定，该测度在 Borel <span class="arithmatex">\(\sigma\)</span>-代数上的限制是唯一的。</p>
+</div>
+<hr />
+<h2 id="3">3. 正则性与近似定理</h2>
+<p>Lebesgue-Stieltjes 测度具有良好的拓扑逼近性质，这使得我们可以用结构简单的开集或紧集来研究复杂的测度集。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.3.3 (正则性 Regularity)</p>
+<p>对于任何 <span class="arithmatex">\(E \in \mathcal{M}_F\)</span>，其测度满足：</p>
+<ul>
+<li>
+<p><strong>外正则性</strong>：<span class="arithmatex">\(\mu_F(E) = \inf \{ \mu_F(U) : E \subset U, U \text{ 为开集} \}\)</span>。</p>
+</li>
+<li>
+<p><strong>内正则性</strong>：<span class="arithmatex">\(\mu_F(E) = \sup \{ \mu_F(K) : K \subset E, K \text{ 为紧集} \}\)</span>。</p>
+</li>
+</ul>
+</div>
+<p>由此推论，任何可测集 <span class="arithmatex">\(E\)</span> 具有以下结构描述：</p>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(G_\delta\)</span> 逼近</strong>：存在 <span class="arithmatex">\(G_\delta\)</span> 集 <span class="arithmatex">\(V\)</span>（可数个开集的交）使得 <span class="arithmatex">\(E \subset V\)</span> 且 <span class="arithmatex">\(\mu_F(V \setminus E) = 0\)</span>。</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(F_\sigma\)</span> 逼近</strong>：存在 <span class="arithmatex">\(F_\sigma\)</span> 集 <span class="arithmatex">\(H\)</span>（可数个闭集的并）使得 <span class="arithmatex">\(H \subset E\)</span> 且 <span class="arithmatex">\(\mu_F(E \setminus H) = 0\)</span>。</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-lebesgue-lebesgue-measure">4. Lebesgue 测度 (Lebesgue Measure)</h2>
+<p>当分布函数取恒等函数，即 <span class="arithmatex">\(F(x) = x\)</span> 时，所得到的测度即为经典的 <strong>Lebesgue 测度</strong>。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.3.2 (Lebesgue 测度)</p>
+<p>由 <span class="arithmatex">\(F(x) = x\)</span> 诱导的测度空间 <span class="arithmatex">\((\mathbb{R}, \mathcal{L}, m)\)</span> 称为 Lebesgue 测度空间。对于任何半开区间 <span class="arithmatex">\((a, b]\)</span>，其测度恰好等于其几何长度：</p>
+<div class="arithmatex">\[
+m((a, b]) = b - a
+\]</div>
+</div>
+<h3 id="lebesgue">Lebesgue 测度的不变性性质</h3>
+<p>Lebesgue 测度与实数的加法和数乘结构相容，展现出极好的对称性。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.3.4 (平移与伸缩不变性)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 为 Lebesgue 可测集，对于任何 <span class="arithmatex">\(s, r \in \mathbb{R}\)</span>：</p>
+<ul>
+<li>
+<p><strong>平移不变性</strong>：<span class="arithmatex">\(m(E+s) = m(E)\)</span>，其中 <span class="arithmatex">\(E+s = \{x+s : x \in E\}\)</span>。</p>
+</li>
+<li>
+<p><strong>伸缩性质</strong>：<span class="arithmatex">\(m(rE) = |r|m(E)\)</span>，其中 <span class="arithmatex">\(rE = \{rx : x \in E\}\)</span>。</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="5-cantor-cantor">5. Cantor 集与 Cantor 函数</h2>
+<p>Cantor 集是测度论中讨论“大小”与“势”最著名的反例。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.3.3 (Cantor 三分集)</p>
+<p>从闭区间 <span class="arithmatex">\([0, 1]\)</span> 出发，第一步挖去中间的开区间 <span class="arithmatex">\((\frac{1}{3}, \frac{2}{3})\)</span>，第二步挖去剩下两段中间的各三分之一，如此无限循环。最终剩下的点集 <span class="arithmatex">\(C\)</span> 称为 <strong>Cantor 集</strong>。</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Cantor 集的性质</p>
+<ul>
+<li><strong>零测性</strong>：Cantor 集的测度为 0。因为挖去的区间总长度为：</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{n=1}^\infty \frac{2^{n-1}}{3^n} = \frac{1/3}{1-2/3} = 1
+\]</div>
+<ul>
+<li>
+<p><strong>不可数性</strong>：虽然测度为 0，但 Cantor 集的势与 <span class="arithmatex">\([0, 1]\)</span> 相同，即基数为 <span class="arithmatex">\(c\)</span>。</p>
+</li>
+<li>
+<p><strong>拓扑性质</strong>：<span class="arithmatex">\(C\)</span> 是紧集、无处稠密、且没有孤立点（完美集）。</p>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Cantor 函数 (Cantor Function / Devil's Staircase)</p>
+<p>基于 Cantor 集的构造，可以定义一个连续单调函数 <span class="arithmatex">\(f: [0, 1] \to [0, 1]\)</span>：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(f(x)\)</span> 在 Cantor 集的补集（挖去的区间）上是常数。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(0) = 0, f(1) = 1\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f'(x) = 0\)</span> 几乎处处成立，但函数却是连续增长的。这说明了“几乎处处导数为 0”并不一定意味着函数是常数。</p>
+</li>
+</ul>
+</div>
 
 
 

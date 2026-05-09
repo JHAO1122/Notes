@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#11-sigma-" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2656,6 +2661,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：sigma-代数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2673,6 +2698,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-sigma-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 集合的代数与 \(\sigma\)-代数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 集合的代数与 \(\sigma\)-代数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigma-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        乘积 \(\sigma\)-代数与基本族
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 测度与测度空间
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 测度与测度空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        测度的基本性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 零测集与测度空间的完备化
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4404,83 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-sigma-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 集合的代数与 \(\sigma\)-代数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 集合的代数与 \(\sigma\)-代数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigma-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        乘积 \(\sigma\)-代数与基本族
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 测度与测度空间
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 测度与测度空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        测度的基本性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 零测集与测度空间的完备化
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4501,176 @@
   
 
 
-  <h1>第一章：sigma-代数</h1>
-
-
+<h1 id="11-sigma-">1.1 <span class="arithmatex">\(\sigma\)</span>-代数与测度空间基础</h1>
+<p>在本章中，我们将建立测度论最基本的框架。与传统的黎曼积分依赖于区间的划分不同，勒贝格积分（以及抽象测度论）建立在对集合的划分之上。因此，我们需要首先定义哪些集合是“可测的”，这就引入了 <span class="arithmatex">\(\sigma\)</span>-代数的概念。</p>
+<hr />
+<h2 id="1-sigma-">1. 集合的代数与 <span class="arithmatex">\(\sigma\)</span>-代数</h2>
+<p>为了使得测度的加法运算有意义，可测集族必须对集合的基本运算封闭。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.1 (代数 Algebra)</p>
+<p>设 <span class="arithmatex">\(X\)</span> 为一个非空集合，<span class="arithmatex">\(\mathcal{A} \subset 2^X\)</span> 为 <span class="arithmatex">\(X\)</span> 的一个子集族。如果 <span class="arithmatex">\(\mathcal{A}\)</span> 满足以下条件，则称其为一个<strong>代数</strong>：</p>
+<ul>
+<li>
+<p>对于任意 <span class="arithmatex">\(E_1, E_2 \in \mathcal{A}\)</span>，有 <span class="arithmatex">\(E_1 \cup E_2 \in \mathcal{A}\)</span>。</p>
+</li>
+<li>
+<p>对于任意 <span class="arithmatex">\(E \in \mathcal{A}\)</span>，其补集 <span class="arithmatex">\(E^c \in \mathcal{A}\)</span>。</p>
+</li>
+</ul>
+</div>
+<p>由上述定义容易推导，代数对有限次交集运算也是封闭的，并且必然包含全集 <span class="arithmatex">\(X\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span>。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.2 (<span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\sigma\)</span>-Algebra)</p>
+<p>设 <span class="arithmatex">\(\mathcal{M}\)</span> 是一个代数。如果 <span class="arithmatex">\(\mathcal{M}\)</span> 进一步对<strong>可数并</strong>封闭，即对于任意集合列 <span class="arithmatex">\(\{E_k\}_{k=1}^\infty \subset \mathcal{M}\)</span>，都有：</p>
+<div class="arithmatex">\[
+\bigcup_{k=1}^\infty E_k \in \mathcal{M}
+\]</div>
+<p>则称 <span class="arithmatex">\(\mathcal{M}\)</span> 为一个 <strong><span class="arithmatex">\(\sigma\)</span>-代数</strong>。</p>
+</div>
+<p>结合德摩根定律和补集的封闭性，<span class="arithmatex">\(\sigma\)</span>-代数对<strong>可数交</strong>必然也是封闭的。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.1 (生成的 <span class="arithmatex">\(\sigma\)</span>-代数与 Borel <span class="arithmatex">\(\sigma\)</span>-代数)</p>
+<ul>
+<li>
+<p><strong>生成的 <span class="arithmatex">\(\sigma\)</span>-代数</strong>：给定 <span class="arithmatex">\(X\)</span> 上的任意子集族 <span class="arithmatex">\(\mathcal{E} \subset 2^X\)</span>，包含 <span class="arithmatex">\(\mathcal{E}\)</span> 的所有 <span class="arithmatex">\(\sigma\)</span>-代数的交集仍然是一个 <span class="arithmatex">\(\sigma\)</span>-代数，记为 <span class="arithmatex">\(\mathcal{M}(\mathcal{E})\)</span>。它被称为由 <span class="arithmatex">\(\mathcal{E}\)</span> 生成的最小 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+</li>
+<li>
+<p><strong>Borel <span class="arithmatex">\(\sigma\)</span>-代数</strong>：如果 <span class="arithmatex">\(X\)</span> 是一个拓扑空间，设 <span class="arithmatex">\(\mathcal{T}\)</span> 为其上所有开集构成的族，则由 <span class="arithmatex">\(\mathcal{T}\)</span> 生成的 <span class="arithmatex">\(\sigma\)</span>-代数称为 <strong>Borel <span class="arithmatex">\(\sigma\)</span>-代数</strong>，记为 <span class="arithmatex">\(\mathcal{B}_X = \mathcal{M}(\mathcal{T})\)</span>。</p>
+</li>
+</ul>
+</div>
+<p>在实数空间 <span class="arithmatex">\(\mathbb{R}^n\)</span> 中，Borel <span class="arithmatex">\(\sigma\)</span>-代数不仅可以由开集生成，还可以由开区间 <span class="arithmatex">\((a,b)\)</span>、闭区间 <span class="arithmatex">\([a,b]\)</span>、半开半闭区间 <span class="arithmatex">\([a,b)\)</span>，甚至形如 <span class="arithmatex">\((-\infty, a)\)</span> 或 <span class="arithmatex">\([a, +\infty)\)</span> 的射线族生成。</p>
+<h3 id="sigma-">乘积 <span class="arithmatex">\(\sigma\)</span>-代数与基本族</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 1.3 (乘积 <span class="arithmatex">\(\sigma\)</span>-代数)</p>
+<p>设 <span class="arithmatex">\(\{(X_\alpha, \mathcal{M}_\alpha)\}_{\alpha \in A}\)</span> 是一族可测空间。定义乘积空间 <span class="arithmatex">\(X = \prod_{\alpha \in A} X_\alpha\)</span>，并设投影映射为 <span class="arithmatex">\(\pi_\alpha: X \rightarrow X_\alpha\)</span>。</p>
+<p>那么，<span class="arithmatex">\(X\)</span> 上的乘积 <span class="arithmatex">\(\sigma\)</span>-代数定义为使所有投影映射 <span class="arithmatex">\(\pi_\alpha\)</span> 都可测的最小 <span class="arithmatex">\(\sigma\)</span>-代数：</p>
+<div class="arithmatex">\[
+\bigotimes_{\alpha \in A} \mathcal{M}_\alpha = \mathcal{M} \left( \left\{ \pi_\alpha^{-1}(E_\alpha) \mid E_\alpha \in \mathcal{M}_\alpha, \alpha \in A \right\} \right)
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">定义 1.4 (基本族 Elementary Family)</p>
+<p>集族 <span class="arithmatex">\(\mathcal{E} \subset 2^X\)</span> 称为一个<strong>基本族</strong>，如果满足：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\emptyset \in \mathcal{E}\)</span>。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(E, F \in \mathcal{E}\)</span>，则 <span class="arithmatex">\(E \cap F \in \mathcal{E}\)</span>。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(E \in \mathcal{E}\)</span>，则 <span class="arithmatex">\(E^c\)</span> 可以表示为 <span class="arithmatex">\(\mathcal{E}\)</span> 中有限个互不相交集合的并集。</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="2">2. 测度与测度空间</h2>
+<p>在有了 <span class="arithmatex">\(\sigma\)</span>-代数赋予“可测集”概念后，我们现在可以在其上定义“长度”、“面积”或“体积”的抽象概念，即测度。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.5 (测度 Measure)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M})\)</span> 为一个可测空间。如果集函数 <span class="arithmatex">\(\mu: \mathcal{M} \rightarrow [0, +\infty]\)</span> 满足以下条件，则称 <span class="arithmatex">\(\mu\)</span> 为 <span class="arithmatex">\(\mathcal{M}\)</span> 上的一个<strong>测度</strong>：</p>
+<ul>
+<li>
+<p><strong>非负性</strong>：测度的取值在 <span class="arithmatex">\([0, +\infty]\)</span> 之间。</p>
+</li>
+<li>
+<p><strong>空集为零</strong>：<span class="arithmatex">\(\mu(\emptyset) = 0\)</span>。</p>
+</li>
+<li>
+<p><strong>可数可加性 (Countable Additivity)</strong>：对于 <span class="arithmatex">\(\mathcal{M}\)</span> 中任意互不相交的集合列 <span class="arithmatex">\(\{E_k\}_{k=1}^\infty\)</span> （即 <span class="arithmatex">\(E_i \cap E_j = \emptyset, i \ne j\)</span>），有：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{k=1}^\infty E_k\right) = \sum_{k=1}^\infty \mu(E_k)
+\]</div>
+</div>
+<p>如果给定了一个空间 <span class="arithmatex">\(X\)</span>、其上的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{M}\)</span> 以及测度 <span class="arithmatex">\(\mu\)</span>，三元组 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 就构成了一个<strong>测度空间 (Measure Space)</strong>。</p>
+<p><strong>几个常见的简单测度实例：</strong></p>
+<ul>
+<li>
+<p><strong>计数测度 (Counting Measure)</strong>：对于任意集合 <span class="arithmatex">\(E\)</span>，<span class="arithmatex">\(\mu(E)\)</span> 等于集合中包含的元素个数。</p>
+</li>
+<li>
+<p><strong>狄拉克测度 (Dirac Delta Measure)</strong>：给定空间中固定一点 <span class="arithmatex">\(x_0\)</span>，若 <span class="arithmatex">\(x_0 \in E\)</span> 则 <span class="arithmatex">\(\mu(E) = 1\)</span>，若 <span class="arithmatex">\(x_0 \notin E\)</span> 则 <span class="arithmatex">\(\mu(E) = 0\)</span>。</p>
+</li>
+</ul>
+<h3 id="_1">测度的基本性质</h3>
+<p>测度函数由其公理定义，可以自然地推导出以下重要分析性质。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.2 (测度的基本性质)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 为测度空间，则 <span class="arithmatex">\(\mu\)</span> 满足：</p>
+<ul>
+<li>
+<p><strong>单调性 (Monotonicity)</strong>：若 <span class="arithmatex">\(E, F \in \mathcal{M}\)</span> 且 <span class="arithmatex">\(E \subset F\)</span>，则 <span class="arithmatex">\(\mu(E) \le \mu(F)\)</span>。进一步，如果 <span class="arithmatex">\(\mu(E) &lt; \infty\)</span>，则有 <span class="arithmatex">\(\mu(F \setminus E) = \mu(F) - \mu(E)\)</span>。</p>
+</li>
+<li>
+<p><strong>次可加性 (Subadditivity)</strong>：对于任意集合列 <span class="arithmatex">\(\{E_j\}_{j=1}^\infty \subset \mathcal{M}\)</span> （不要求互不相交），恒有：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{j=1}^\infty E_j\right) \le \sum_{j=1}^\infty \mu(E_j)
+\]</div>
+<ul>
+<li><strong>自下连续性 (Continuity from Below)</strong>：对于单调递增的集合列 <span class="arithmatex">\(E_1 \subset E_2 \subset \cdots\)</span>，有：</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{j=1}^\infty E_j\right) = \lim_{j \rightarrow \infty} \mu(E_j)
+\]</div>
+<ul>
+<li><strong>自上连续性 (Continuity from Above)</strong>：对于单调递减的集合列 <span class="arithmatex">\(E_1 \supset E_2 \supset \cdots\)</span>，且满足 <span class="arithmatex">\(\mu(E_1) &lt; \infty\)</span>，有：</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcap_{j=1}^\infty E_j\right) = \lim_{j \rightarrow \infty} \mu(E_j)
+\]</div>
+</div>
+<hr />
+<h2 id="3">3. 零测集与测度空间的完备化</h2>
+<p>在实分析的后续讨论（例如“几乎处处”概念）中，零测集扮演着核心角色。然而，一般的测度空间并不能保证零测集的所有子集都可测，这就引出了完备化的概念。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.6 (零测集与完备测度空间)</p>
+<ul>
+<li>
+<p><strong>零测集 (Null Set)</strong>：若 <span class="arithmatex">\(E \in \mathcal{M}\)</span> 满足 <span class="arithmatex">\(\mu(E) = 0\)</span>，则称 <span class="arithmatex">\(E\)</span> 为 <span class="arithmatex">\(\mu\)</span>-零测集。</p>
+</li>
+<li>
+<p><strong>完备测度空间 (Complete Measure Space)</strong>：如果零测集的任意子集都属于 <span class="arithmatex">\(\mathcal{M}\)</span> （因此其测度也必然为零），则称测度空间 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 是<strong>完备的</strong>。</p>
+</li>
+</ul>
+</div>
+<p>一般测度空间中的零测子集不一定是可测的。但我们可以通过向原 <span class="arithmatex">\(\sigma\)</span>-代数中人为添加这些零测子集，将任何测度空间“完备化”。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.3 (测度空间的完备化)</p>
+<p>对于任意测度空间 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span>，我们可以构造其完备化空间 <span class="arithmatex">\((X, \overline{\mathcal{M}}, \overline{\mu})\)</span>，其中新的 <span class="arithmatex">\(\sigma\)</span>-代数定义为：</p>
+<div class="arithmatex">\[
+\overline{\mathcal{M}} = \{E \cup F \mid E \in \mathcal{M}, F \subset N \text{ 且 } N \in \mathcal{M}, \mu(N)=0\}
+\]</div>
+<p>在这个扩张的 <span class="arithmatex">\(\sigma\)</span>-代数上定义 <span class="arithmatex">\(\overline{\mu}(E \cup F) = \mu(E)\)</span>，则 <span class="arithmatex">\(\overline{\mathcal{M}}\)</span> 构成一个 <span class="arithmatex">\(\sigma\)</span>-代数，且 <span class="arithmatex">\(\overline{\mu}\)</span> 是其上唯一的完备测度扩张。</p>
+</div>
+<details class="proof">
+<summary>完备化定理的证明</summary>
+<p>要证明 <span class="arithmatex">\((X, \overline{\mathcal{M}}, \overline{\mu})\)</span> 是一个完备的测度空间，我们需要验证两点：<span class="arithmatex">\(\overline{\mathcal{M}}\)</span> 是一个 <span class="arithmatex">\(\sigma\)</span>-代数，且 <span class="arithmatex">\(\overline{\mu}\)</span> 在其上是良定义的完备测度。</p>
+<p><strong>第一步：验证 <span class="arithmatex">\(\overline{\mathcal{M}}\)</span> 是 <span class="arithmatex">\(\sigma\)</span>-代数</strong></p>
+<p>对于可数并的封闭性：设 <span class="arithmatex">\(A_j = E_j \cup F_j \in \overline{\mathcal{M}}\)</span>，其中 <span class="arithmatex">\(E_j \in \mathcal{M}\)</span>，<span class="arithmatex">\(F_j \subset N_j\)</span> 且 <span class="arithmatex">\(\mu(N_j) = 0\)</span>。</p>
+<div class="arithmatex">\[
+\bigcup_{j=1}^\infty A_j = \left(\bigcup_{j=1}^\infty E_j\right) \cup \left(\bigcup_{j=1}^\infty F_j\right)
+\]</div>
+<p>因为 <span class="arithmatex">\(\mathcal{M}\)</span> 是 <span class="arithmatex">\(\sigma\)</span>-代数，所以 <span class="arithmatex">\(\bigcup_{j=1}^\infty E_j \in \mathcal{M}\)</span>。同时，<span class="arithmatex">\(\bigcup_{j=1}^\infty F_j \subset \bigcup_{j=1}^\infty N_j\)</span>。由测度的次可加性：</p>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{j=1}^\infty N_j\right) \le \sum_{j=1}^\infty \mu(N_j) = 0
+\]</div>
+<p>所以并集依然具有 <span class="arithmatex">\(E \cup F\)</span> 的形式，证明了对可数并封闭。</p>
+<p>接着验证对补集封闭。设 <span class="arithmatex">\(A = E \cup F \in \overline{\mathcal{M}}\)</span>，为了方便取补集可以假设 <span class="arithmatex">\(E \cap N = \emptyset\)</span>。
+由于 <span class="arithmatex">\(A^c = (E \cup F)^c = E^c \cap F^c\)</span>，并结合 <span class="arithmatex">\(F \subset N\)</span>，可以改写为：</p>
+<div class="arithmatex">\[
+A^c = (E \cup N)^c \cup (N \setminus F) \cap E^c
+\]</div>
+<p>这里 <span class="arithmatex">\((E \cup N)^c \in \mathcal{M}\)</span>，而 <span class="arithmatex">\((N \setminus F) \cap E^c \subset N\)</span> 为零测集的子集，说明 <span class="arithmatex">\(A^c \in \overline{\mathcal{M}}\)</span>，故 <span class="arithmatex">\(\overline{\mathcal{M}}\)</span> 是 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+<p><strong>第二步：验证完备性</strong></p>
+<p>假设存在某个子集 <span class="arithmatex">\(S \subset A \in \overline{\mathcal{M}}\)</span> 且 <span class="arithmatex">\(\overline{\mu}(A) = \mu(E) = 0\)</span>。
+因为 <span class="arithmatex">\(A = E \cup F \subset E \cup N\)</span>，所以 <span class="arithmatex">\(S \subset E \cup N\)</span>。
+由于 <span class="arithmatex">\(\mu(E \cup N) \le \mu(E) + \mu(N) = 0\)</span>，这就说明 <span class="arithmatex">\(S\)</span> 包含在 <span class="arithmatex">\(\mathcal{M}\)</span> 的一个零测集内。按定义 <span class="arithmatex">\(S = \emptyset \cup S \in \overline{\mathcal{M}}\)</span>。这证明了测度空间在完备化下的完备性。</p>
+</details>
 
 
 

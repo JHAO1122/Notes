@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#12-caratheodory" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2684,6 +2689,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：外测度
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2701,6 +2726,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-outer-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 外测度 (Outer Measure)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 外测度 (Outer Measure)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外测度的普遍构造方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-caratheodory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Carathéodory 可测准则
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-caratheodory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Carathéodory 扩张定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 预测度与唯一性扩张
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4398,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-outer-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 外测度 (Outer Measure)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 外测度 (Outer Measure)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外测度的普遍构造方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-caratheodory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Carathéodory 可测准则
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-caratheodory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Carathéodory 扩张定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 预测度与唯一性扩张
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4489,104 @@
   
 
 
-  <h1>第二章：外测度</h1>
-
-
+<h1 id="12-caratheodory">1.2 外测度与 Carathéodory 扩张</h1>
+<p>在建立测度论的过程中，一个核心难题是如何在足够大的 <span class="arithmatex">\(\sigma\)</span>-代数上构造测度。Carathéodory 扩张理论提供了一种标准方法：先定义一个涵盖所有子集的“外测度”，再通过一种巧妙的可测性准则筛选出那些表现良好的集合，从而形成 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+<hr />
+<h2 id="1-outer-measure">1. 外测度 (Outer Measure)</h2>
+<p>外测度是定义在全集 <span class="arithmatex">\(X\)</span> 的所有子集上的集函数。与测度不同，它只需要满足次可加性，而不需要满足可数可加性。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.2.1 (外测度)</p>
+<p>设 <span class="arithmatex">\(X\)</span> 为一个非空集合。称集函数 <span class="arithmatex">\(\mu^*: 2^X \to [0, +\infty]\)</span> 为一个<strong>外测度</strong>，如果它满足以下性质：</p>
+<ul>
+<li>
+<p><strong>空集性质</strong>：<span class="arithmatex">\(\mu^*(\emptyset) = 0\)</span>。</p>
+</li>
+<li>
+<p><strong>单调性</strong>：若 <span class="arithmatex">\(A \subset B \subset X\)</span>，则 <span class="arithmatex">\(\mu^*(A) \le \mu^*(B)\)</span>。</p>
+</li>
+<li>
+<p><strong>可数次可加性</strong>：对于任意子集序列 <span class="arithmatex">\(\{A_j\}_{j=1}^\infty \subset 2^X\)</span>，有：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mu^*\left( \bigcup_{j=1}^\infty A_j \right) \le \sum_{j=1}^\infty \mu^*(A_j)
+\]</div>
+</div>
+<h3 id="_1">外测度的普遍构造方法</h3>
+<p>我们可以通过一个简单的集族 <span class="arithmatex">\(\Sigma\)</span> 上的初等函数 <span class="arithmatex">\(\rho\)</span> 来生成外测度。这种方法在构造勒贝格测度时至关重要。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.2.1 (外测度的生成)</p>
+<p>设 <span class="arithmatex">\(\Sigma \subset 2^X\)</span> 为一族子集，满足 <span class="arithmatex">\(\emptyset \in \Sigma\)</span>。设 <span class="arithmatex">\(\rho: \Sigma \to [0, +\infty]\)</span> 满足 <span class="arithmatex">\(\rho(\emptyset) = 0\)</span>。对于任何 <span class="arithmatex">\(A \subset X\)</span>，定义：</p>
+<div class="arithmatex">\[
+\mu^*(A) = \inf \left\{ \sum_{j=1}^\infty \rho(E_j) : A \subset \bigcup_{j=1}^\infty E_j, E_j \in \Sigma \right\}
+\]</div>
+<p>则 <span class="arithmatex">\(\mu^*\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个外测度。</p>
+</div>
+<hr />
+<h2 id="2-caratheodory">2. Carathéodory 可测准则</h2>
+<p>由于外测度在一般集合上不满足可加性，Carathéodory 提出了一种判别条件，用来定义哪些集合是“可测”的。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.2.2 (Carathéodory 可测性)</p>
+<p>设 <span class="arithmatex">\(\mu^*\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个外测度。称集合 <span class="arithmatex">\(A \subset X\)</span> 是 <strong><span class="arithmatex">\(\mu^*\)</span>-可测的</strong>，如果对任何试验集 <span class="arithmatex">\(E \subset X\)</span>，都满足：</p>
+<div class="arithmatex">\[
+\mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c)
+\]</div>
+<p>习惯上，所有 <span class="arithmatex">\(\mu^*\)</span>-可测集的全体记为 <span class="arithmatex">\(\mathcal{M}\)</span>。</p>
+</div>
+<p><strong>直观理解</strong>：一个集合 <span class="arithmatex">\(A\)</span> 是可测的，意味着它能够对空间中的任何集合 <span class="arithmatex">\(E\)</span> 进行“整齐”的分割，使得 <span class="arithmatex">\(E\)</span> 在 <span class="arithmatex">\(A\)</span> 内外的两部分测度之和等于 <span class="arithmatex">\(E\)</span> 整体的测度。验证可测性时，只需证明不等式 <span class="arithmatex">\(\mu^*(E) \ge \mu^*(E \cap A) + \mu^*(E \cap A^c)\)</span>，因为另一半不等式由次可加性自动成立。</p>
+<hr />
+<h2 id="3-caratheodory">3. Carathéodory 扩张定理</h2>
+<p>这是测度论的基石定理，它揭示了从外测度筛选出的可测集族具有极好的代数结构。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 1.2.2 (Carathéodory Theorem)</p>
+<p>设 <span class="arithmatex">\(\mu^*\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个外测度，<span class="arithmatex">\(\mathcal{M}\)</span> 为所有 <span class="arithmatex">\(\mu^*\)</span>-可测集构成的族。则：</p>
+<ul>
+<li>
+<p><strong>结构</strong>：<span class="arithmatex">\(\mathcal{M}\)</span> 是一个 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+</li>
+<li>
+<p><strong>测度性</strong>：<span class="arithmatex">\(\mu^*\)</span> 限制在 <span class="arithmatex">\(\mathcal{M}\)</span> 上是一个测度（满足可数可加性）。</p>
+</li>
+<li>
+<p><strong>完备性</strong>：测度空间 <span class="arithmatex">\((X, \mathcal{M}, \mu^*)\)</span> 是完备的，即 <span class="arithmatex">\(\mu^*\)</span> 的零测集的所有子集都属于 <span class="arithmatex">\(\mathcal{M}\)</span>。</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Carathéodory 定理证明概要</summary>
+<p><strong>1. 证明 <span class="arithmatex">\(\mathcal{M}\)</span> 是一个代数</strong>：
+由于定义中 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(A^c\)</span> 是对称的，显然 <span class="arithmatex">\(A \in \mathcal{M} \implies A^c \in \mathcal{M}\)</span>。对于并集的封闭性，可以选取试验集 <span class="arithmatex">\(E\)</span>，利用 <span class="arithmatex">\(A\)</span> 的可测性进行第一次拆分，再利用 <span class="arithmatex">\(B\)</span> 的可测性对拆分后的部分进行第二次拆分，通过次可加性组合各项即可。</p>
+<p><strong>2. 证明有限可加性</strong>：
+设 <span class="arithmatex">\(A, B \in \mathcal{M}\)</span> 且 <span class="arithmatex">\(A \cap B = \emptyset\)</span>。利用 <span class="arithmatex">\(A\)</span> 对 <span class="arithmatex">\(E \cap (A \cup B)\)</span> 的分割作用，可得 <span class="arithmatex">\(\mu^*(E \cap (A \cup B)) = \mu^*(E \cap A) + \mu^*(E \cap B)\)</span>。</p>
+<p><strong>3. 扩展到可数可加性</strong>：
+设 <span class="arithmatex">\(\{A_j\}\)</span> 是 <span class="arithmatex">\(\mathcal{M}\)</span> 中互不相交的序列。令 <span class="arithmatex">\(B_n = \bigcup_{j=1}^n A_j\)</span>，<span class="arithmatex">\(B = \bigcup_{j=1}^\infty A_j\)</span>。
+通过归纳可知 <span class="arithmatex">\(\mu^*(E \cap B_n) = \sum_{j=1}^n \mu^*(E \cap A_j)\)</span>。
+由于 <span class="arithmatex">\(\mu^*(E) = \mu^*(E \cap B_n) + \mu^*(E \cap B_n^c) \ge \sum_{j=1}^n \mu^*(E \cap A_j) + \mu^*(E \cap B^c)\)</span>。
+令 <span class="arithmatex">\(n \to \infty\)</span>，并利用次可加性 <span class="arithmatex">\(\mu^*(E \cap B) \le \sum \mu^*(E \cap A_j)\)</span>，两端夹逼即可证明 <span class="arithmatex">\(\mu^*(E) = \mu^*(E \cap B) + \mu^*(E \cap B^c)\)</span> 且测度满足可数可加。</p>
+</details>
+<hr />
+<h2 id="4">4. 预测度与唯一性扩张</h2>
+<p>在实际应用中，测度通常起始于一个较小的集族（如代数 <span class="arithmatex">\(\mathcal{A}\)</span>）。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.2.3 (预测度 Pre-measure)</p>
+<p>设 <span class="arithmatex">\(\mathcal{A}\)</span> 是 <span class="arithmatex">\(X\)</span> 上的一个代数。称集函数 <span class="arithmatex">\(\mu_0: \mathcal{A} \to [0, +\infty]\)</span> 为一个<strong>预测度</strong>，如果它满足 <span class="arithmatex">\(\mu_0(\emptyset) = 0\)</span>，且对 <span class="arithmatex">\(\mathcal{A}\)</span> 中任何互不相交的集合列 <span class="arithmatex">\(\{A_j\}\)</span>，只要 <span class="arithmatex">\(\bigcup A_j \in \mathcal{A}\)</span>，就有：</p>
+<div class="arithmatex">\[
+\mu_0\left(\bigcup_{j=1}^\infty A_j\right) = \sum_{j=1}^\infty \mu_0(A_j)
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">定理 1.2.3 (扩张的唯一性)</p>
+<p>设 <span class="arithmatex">\(\mu_0\)</span> 是代数 <span class="arithmatex">\(\mathcal{A}\)</span> 上的预测度，<span class="arithmatex">\(\mu^*\)</span> 是由 <span class="arithmatex">\(\mu_0\)</span> 诱导的外测度。</p>
+<ul>
+<li>
+<p><strong>存在性</strong>：<span class="arithmatex">\(\mu^*\)</span> 在由 <span class="arithmatex">\(\mathcal{A}\)</span> 生成的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\sigma(\mathcal{A})\)</span> 上的限制是一个测度，且该测度在 <span class="arithmatex">\(\mathcal{A}\)</span> 上与 <span class="arithmatex">\(\mu_0\)</span> 一致。</p>
+</li>
+<li>
+<p><strong>唯一性</strong>：如果 <span class="arithmatex">\(\mu_0\)</span> 是 <strong><span class="arithmatex">\(\sigma\)</span>-有限</strong>的（即 <span class="arithmatex">\(X\)</span> 可表示为 <span class="arithmatex">\(\mathcal{A}\)</span> 中测度有限的集合的可数并），则该测度在 <span class="arithmatex">\(\sigma(\mathcal{A})\)</span> 上的扩张是唯一的。</p>
+</li>
+</ul>
+</div>
+<p>如果预测度不满足 <span class="arithmatex">\(\sigma\)</span>-有限性，扩张后的测度可能不唯一。这一结论强调了 <span class="arithmatex">\(\sigma\)</span>-有限性在测度论研究中的重要性。</p>
 
 
 
