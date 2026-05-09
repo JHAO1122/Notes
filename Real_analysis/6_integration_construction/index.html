@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#31" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2796,6 +2801,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：积分构造
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2813,6 +2838,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 特征函数与简单函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 简单函数的积分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 非负可测函数的积分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-l1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 一般可积函数与 \(L^1\) 空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 特征函数与简单函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 简单函数的积分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 非负可测函数的积分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-l1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 一般可积函数与 \(L^1\) 空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,144 @@
   
 
 
-  <h1>第六章：积分构造</h1>
-
-
+<h1 id="31">3.1 抽象积分的构造与简单函数</h1>
+<p>在黎曼积分中，我们通过划分定义域上的区间来构造积分（即竖切法）。而在 Lebesgue 抽象积分论中，我们通过划分值域来构造积分（即横切法）。这种构造的核心桥梁是<strong>简单函数 (Simple Function)</strong>，它是连接测度与积分的基础。</p>
+<hr />
+<h2 id="1">1. 特征函数与简单函数</h2>
+<div class="admonition info">
+<p class="admonition-title">定义 3.1.1 (特征函数与简单函数)</p>
+<ul>
+<li><strong>特征函数 (Characteristic Function)</strong>：对于测度空间 <span class="arithmatex">\(X\)</span> 中的子集 <span class="arithmatex">\(E \in \mathcal{M}\)</span>，定义其特征函数为：</li>
+</ul>
+<div class="arithmatex">\[
+\chi_E(x) = \begin{cases} 1, &amp; x \in E \\ 0, &amp; x \notin E \end{cases}
+\]</div>
+<ul>
+<li><strong>简单函数 (Simple Function)</strong>：如果一个可测函数 <span class="arithmatex">\(\phi: X \to \mathbb{C}\)</span> 的值域是有限集，则称其为简单函数。任何简单函数都可以表示为特征函数的有限线性组合：</li>
+</ul>
+<div class="arithmatex">\[
+\phi(x) = \sum_{j=1}^n a_j \chi_{E_j}(x)
+\]</div>
+<p>其中 <span class="arithmatex">\(a_j \in \mathbb{C}\)</span>，且 <span class="arithmatex">\(E_j = \{x \in X : \phi(x) = a_j\} \in \mathcal{M}\)</span> 是一组互不相交的可测集分割。这被称为简单函数的<strong>标准表示</strong>。</p>
+</div>
+<p>简单函数的重要性在于，任何可测函数都可以被简单函数完美逼近。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.1.1 (简单函数逼近定理)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M})\)</span> 为可测空间。</p>
+<ul>
+<li>对于任意非负可测函数 <span class="arithmatex">\(f: X \to [0, +\infty]\)</span>，必定存在一列非负简单函数 <span class="arithmatex">\(\{\phi_n\}_{n=1}^\infty\)</span>，满足单调递增且逐点收敛于 <span class="arithmatex">\(f\)</span>：</li>
+</ul>
+<div class="arithmatex">\[
+0 \le \phi_1 \le \phi_2 \le \dots \le f, \quad \lim_{n \to \infty} \phi_n(x) = f(x)
+\]</div>
+<ul>
+<li>若 <span class="arithmatex">\(f\)</span> 是一般复值可测函数，则存在一列复简单函数序列 <span class="arithmatex">\(\{\psi_n\}\)</span>，使得 <span class="arithmatex">\(0 \le |\psi_1| \le |\psi_2| \le \dots \le |f|\)</span> 且 <span class="arithmatex">\(\psi_n \to f\)</span>。</li>
+</ul>
+</div>
+<hr />
+<h2 id="2">2. 简单函数的积分</h2>
+<p>我们将从最简单的阶梯块开始定义“面积”或积分。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.1.2 (非负简单函数的积分)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 为测度空间，<span class="arithmatex">\(\phi = \sum_{j=1}^n a_j \chi_{E_j}\)</span> 是一非负简单函数的标准表示（<span class="arithmatex">\(a_j \ge 0\)</span>），则定义 <span class="arithmatex">\(\phi\)</span> 关于测度 <span class="arithmatex">\(\mu\)</span> 的积分为：</p>
+<div class="arithmatex">\[
+\int_X \phi \, d\mu = \sum_{j=1}^n a_j \mu(E_j)
+\]</div>
+<p><strong>注意</strong>：在测度论中，我们采用约定 <span class="arithmatex">\(0 \cdot \infty = 0\)</span>。这意味着即使某个集合的测度为无穷大，只要函数在该集合上取值为 0，其积分贡献就是 0。对于可测子集 <span class="arithmatex">\(A \subset X\)</span>，局部积分定义为 <span class="arithmatex">\(\int_A \phi \, d\mu = \int_X \phi \cdot \chi_A \, d\mu\)</span>。</p>
+</div>
+<p>简单函数的积分拥有完美的代数结构。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.1.2 (简单函数积分的性质)</p>
+<p>设 <span class="arithmatex">\(\phi, \psi\)</span> 为非负简单函数，<span class="arithmatex">\(c \ge 0\)</span> 为常数，则：</p>
+<ul>
+<li>
+<p><strong>线性性</strong>：<span class="arithmatex">\(\int c\phi = c \int \phi\)</span> 且 <span class="arithmatex">\(\int (\phi + \psi) = \int \phi + \int \psi\)</span>。</p>
+</li>
+<li>
+<p><strong>单调性</strong>：若 <span class="arithmatex">\(\phi \le \psi\)</span>，则 <span class="arithmatex">\(\int \phi \le \int \psi\)</span>。</p>
+</li>
+<li>
+<p><strong>集函数性质</strong>：映射 <span class="arithmatex">\(A \mapsto \nu(A) = \int_A \phi \, d\mu\)</span> 构成了 <span class="arithmatex">\(\mathcal{M}\)</span> 上的一个新测度。</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="3">3. 非负可测函数的积分</h2>
+<p>利用上确界，我们可以将积分从简单函数推广到任意非负可测函数。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.1.3 (非负可测函数的积分)</p>
+<p>设 <span class="arithmatex">\(f: X \to [0, +\infty]\)</span> 是一个非负可测函数（记为 <span class="arithmatex">\(f \in L^+\)</span>）。定义 <span class="arithmatex">\(f\)</span> 的积分为所有位于 <span class="arithmatex">\(f\)</span> 下方的非负简单函数积分的上确界：</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \sup \left\{ \int_X \phi \, d\mu : 0 \le \phi \le f, \phi \text{ 为简单函数} \right\}
+\]</div>
+</div>
+<p>对于非负可测函数的积分，有以下与“几乎处处 (a.e.)”相关的核心性质。</p>
+<div class="admonition success">
+<p class="admonition-title">命题 3.1.1 (非负积分的几乎处处性质)</p>
+<p>设 <span class="arithmatex">\(f \in L^+\)</span>，则：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\int f \, d\mu = 0\)</span> 当且仅当 <span class="arithmatex">\(f = 0\)</span> 几乎处处成立 (<span class="arithmatex">\(f = 0\)</span> a.e.)。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(\int f \, d\mu &lt; \infty\)</span>，则 <span class="arithmatex">\(f &lt; \infty\)</span> 几乎处处成立（即可积函数必然几乎处处有限）。</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>证明：<span class="arithmatex">\(\int f = 0 \iff f = 0 \text{ a.e.}\)</span></summary>
+<p><strong>充分性 (<span class="arithmatex">\(\Leftarrow\)</span>)</strong>：若 <span class="arithmatex">\(f = 0\)</span> a.e.，对于任意满足 <span class="arithmatex">\(0 \le \phi \le f\)</span> 的简单函数 <span class="arithmatex">\(\phi = \sum a_j \chi_{E_j}\)</span>，只要 <span class="arithmatex">\(a_j &gt; 0\)</span>，必有 <span class="arithmatex">\(\mu(E_j) = 0\)</span>。因此 <span class="arithmatex">\(\int \phi = 0\)</span>，由上确界定义得 <span class="arithmatex">\(\int f = 0\)</span>。</p>
+<p><strong>必要性 (<span class="arithmatex">\(\Rightarrow\)</span>)</strong>：若 <span class="arithmatex">\(\int f = 0\)</span>。定义集合 <span class="arithmatex">\(E_n = \{x : f(x) \ge \frac{1}{n}\}\)</span>，那么显然有 <span class="arithmatex">\(\frac{1}{n} \chi_{E_n} \le f\)</span>。</p>
+<p>由积分的单调性：</p>
+<div class="arithmatex">\[
+\int f \ge \int \frac{1}{n} \chi_{E_n} = \frac{1}{n} \mu(E_n)
+\]</div>
+<p>既然 <span class="arithmatex">\(\int f = 0\)</span>，必然推导出 <span class="arithmatex">\(\mu(E_n) = 0\)</span>。
+而 <span class="arithmatex">\(\{x : f(x) &gt; 0\} = \bigcup_{n=1}^\infty E_n\)</span>，由测度的次可加性可知该集合测度为 0，即 <span class="arithmatex">\(f = 0\)</span> a.e.。</p>
+</details>
+<hr />
+<h2 id="4-l1">4. 一般可积函数与 <span class="arithmatex">\(L^1\)</span> 空间</h2>
+<p>有了非负函数的积分，我们就可以通过正负部拆分定义一般的实数或复数积分。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.1.4 (实可积函数与 <span class="arithmatex">\(L^1\)</span> 空间)</p>
+<p>设 <span class="arithmatex">\(f: X \to \mathbb{R}\)</span> 是实可测函数，将其分解为正部和负部 <span class="arithmatex">\(f = f^+ - f^-\)</span>（且 <span class="arithmatex">\(|f| = f^+ + f^-\)</span>）。</p>
+<p>如果正部和负部的积分都有限，即 <span class="arithmatex">\(\int f^+ &lt; \infty\)</span> 且 <span class="arithmatex">\(\int f^- &lt; \infty\)</span>，则称 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(X\)</span> 上是 <strong>Lebesgue 可积的</strong>。全体这样的函数构成的空间记为 <span class="arithmatex">\(L^1(\mu)\)</span>。</p>
+<p>此时，定义 <span class="arithmatex">\(f\)</span> 的积分为：</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \int_X f^+ \, d\mu - \int_X f^- \, d\mu
+\]</div>
+<p>显然，<span class="arithmatex">\(f \in L^1(\mu)\)</span> 当且仅当 <span class="arithmatex">\(\int |f| \, d\mu &lt; \infty\)</span>。</p>
+</div>
+<p>对于复值函数 <span class="arithmatex">\(f(x) = u(x) + i v(x)\)</span>，如果 <span class="arithmatex">\(|f| \in L^1(\mu)\)</span>，则定义其积分为 <span class="arithmatex">\(\int f = \int u + i \int v\)</span>。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.1.3 (积分的绝对不等式)</p>
+<p>若 <span class="arithmatex">\(f \in L^1(\mu)\)</span>，则有绝对值不等式：</p>
+<div class="arithmatex">\[
+\left| \int_X f \, d\mu \right| \le \int_X |f| \, d\mu
+\]</div>
+</div>
+<details class="proof">
+<summary>绝对值不等式的证明 (复数情形)</summary>
+<p>设积分的值为复数 <span class="arithmatex">\(z = \int f d\mu\)</span>。若 <span class="arithmatex">\(z = 0\)</span>，不等式显然成立。
+若 <span class="arithmatex">\(z \ne 0\)</span>，设 <span class="arithmatex">\(z = r e^{i\theta}\)</span> (<span class="arithmatex">\(r &gt; 0\)</span>)，令 <span class="arithmatex">\(\alpha = e^{-i\theta}\)</span>，则 <span class="arithmatex">\(\alpha z = |\int f d\mu|\)</span>。
+由于 <span class="arithmatex">\(\alpha z\)</span> 是实数，有：</p>
+<div class="arithmatex">\[
+\left| \int f \right| = \alpha \int f = \int (\alpha f) = \text{Re} \left( \int \alpha f \right) = \int \text{Re}(\alpha f)
+\]</div>
+<p>因为对于任意复数都有 <span class="arithmatex">\(\text{Re}(\alpha f) \le |\alpha f| = |f|\)</span>，由积分的单调性即得：</p>
+<div class="arithmatex">\[
+\int \text{Re}(\alpha f) \le \int |f|
+\]</div>
+<p>综合即证得绝对不等式成立。</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">命题 3.1.2 (积分在 a.e. 等价下的不变性)</p>
+<p>设 <span class="arithmatex">\(f, g\)</span> 为可测函数。如果 <span class="arithmatex">\(f = g\)</span> 几乎处处成立 (<span class="arithmatex">\(f = g\)</span> a.e.)，且 <span class="arithmatex">\(f \in L^1(\mu)\)</span>，那么 <span class="arithmatex">\(g \in L^1(\mu)\)</span> 且它们具有相同的积分：</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \int_X g \, d\mu
+\]</div>
+</div>
+<p>这一性质表明，Lebesgue 积分对于零测集上的改变是完全“免疫”的。在泛函分析中，我们通常将彼此几乎处处相等的函数视为 <span class="arithmatex">\(L^1\)</span> 空间中的同一个元素。</p>
 
 
 

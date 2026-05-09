@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#41-hahn-jordan" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2880,6 +2885,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：Hahn-Jordan分解
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2897,6 +2922,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 符号测度的基本概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 正集、负集与零集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hahn-hahn-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hahn 分解定理 (Hahn Decomposition)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jordan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Jordan 分解定理与全变差
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Jordan 分解定理与全变差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        符号测度的积分
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4398,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 符号测度的基本概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 正集、负集与零集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hahn-hahn-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hahn 分解定理 (Hahn Decomposition)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jordan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Jordan 分解定理与全变差
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Jordan 分解定理与全变差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        符号测度的积分
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4489,180 @@
   
 
 
-  <h1>第九章：Hahn-Jordan分解</h1>
-
-
+<h1 id="41-hahn-jordan">4.1 符号测度与 Hahn-Jordan 分解</h1>
+<p>在前面的章节中，测度总是被定义为非负的集函数（代表长度、面积、体积或概率）。然而，在很多物理和数学场景中（如电荷分布可以有正负，或者两个积分之间的差值），我们需要允许“测度”取负值。这就引出了<strong>符号测度 (Signed Measure)</strong>，也称为<strong>变号测度</strong>的概念。</p>
+<hr />
+<h2 id="1">1. 符号测度的基本概念</h2>
+<div class="admonition info">
+<p class="admonition-title">定义 4.1.1 (符号测度 Signed Measure)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M})\)</span> 为一个可测空间。集函数 <span class="arithmatex">\(\nu: \mathcal{M} \to [-\infty, +\infty]\)</span> 被称为一个<strong>符号测度</strong>，如果它满足以下三个条件：</p>
+<ul>
+<li><strong>空集为零</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+\nu(\emptyset) = 0
+\]</div>
+<ul>
+<li>
+<p><strong>至多取一个无穷</strong>：<span class="arithmatex">\(\nu\)</span> 最多只能取 <span class="arithmatex">\(+\infty\)</span> 或 <span class="arithmatex">\(-\infty\)</span> 中的一个值（以避免出现 <span class="arithmatex">\(\infty - \infty\)</span> 这种无意义的运算）。</p>
+</li>
+<li>
+<p><strong>可数可加性</strong>：对于 <span class="arithmatex">\(\mathcal{M}\)</span> 中任意互不相交的集合列 <span class="arithmatex">\(\{E_j\}_{j=1}^\infty\)</span>，都有：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\nu\left(\bigcup_{j=1}^\infty E_j\right) = \sum_{j=1}^\infty \nu(E_j)
+\]</div>
+<p>并且，如果并集的测度 <span class="arithmatex">\(\nu(\bigcup_{j=1}^\infty E_j)\)</span> 是有限的，那么上述级数必定是<strong>绝对收敛</strong>的。</p>
+</div>
+<ul>
+<li><strong>注 1</strong>：普通测度（非负测度）自然是符号测度的一种特例。</li>
+<li><strong>注 2</strong>：符号测度最典型的例子是由积分诱导的测度。设 <span class="arithmatex">\(\mu\)</span> 是一般测度，<span class="arithmatex">\(f\)</span> 是一个变号的 <span class="arithmatex">\(\mu\)</span>-可积函数（或者至少其正部或负部之一的积分为有限值），定义：</li>
+</ul>
+<div class="arithmatex">\[
+\nu(E) = \int_E f \, d\mu
+\]</div>
+<p>那么 <span class="arithmatex">\(\nu\)</span> 就是一个符号测度。</p>
+<hr />
+<h2 id="2">2. 正集、负集与零集</h2>
+<p>对于符号测度，由于集合的测度可以被正负抵消，仅知道 <span class="arithmatex">\(\nu(E) &gt; 0\)</span> 并不能说明 <span class="arithmatex">\(E\)</span> 内部全是“正”的（可能只是正的部分比负的部分多）。因此，我们需要严格定义什么是“纯粹”的正集。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 4.1.2 (正集、负集与零集)</p>
+<p>设 <span class="arithmatex">\(\nu\)</span> 为 <span class="arithmatex">\((X, \mathcal{M})\)</span> 上的符号测度，<span class="arithmatex">\(E \in \mathcal{M}\)</span>。</p>
+<ul>
+<li>
+<p><strong>正集 (Positive Set)</strong>：如果对于 <span class="arithmatex">\(E\)</span> 的<strong>任意</strong>可测子集 <span class="arithmatex">\(F \subset E\)</span>（<span class="arithmatex">\(F \in \mathcal{M}\)</span>），都有 <span class="arithmatex">\(\nu(F) \ge 0\)</span>，则称 <span class="arithmatex">\(E\)</span> 为 <span class="arithmatex">\(\nu\)</span> 的一个正集。</p>
+</li>
+<li>
+<p><strong>负集 (Negative Set)</strong>：如果对于 <span class="arithmatex">\(E\)</span> 的任意可测子集 <span class="arithmatex">\(F \subset E\)</span>，都有 <span class="arithmatex">\(\nu(F) \le 0\)</span>，则称 <span class="arithmatex">\(E\)</span> 为 <span class="arithmatex">\(\nu\)</span> 的一个负集。</p>
+</li>
+<li>
+<p><strong>零集 (Null Set)</strong>：如果对于 <span class="arithmatex">\(E\)</span> 的任意可测子集 <span class="arithmatex">\(F \subset E\)</span>，都有 <span class="arithmatex">\(\nu(F) = 0\)</span>，则称 <span class="arithmatex">\(E\)</span> 为 <span class="arithmatex">\(\nu\)</span> 的一个零集。</p>
+</li>
+</ul>
+</div>
+<p>显然，零集既是正集又是负集。同时要注意区分“零集”和“测度为零的集合”：测度为零的集合可能包含测度为一正一负且相互抵消的子集，但零集的所有子集测度必须严格为 0。</p>
+<div class="admonition success">
+<p class="admonition-title">引理 4.1.1</p>
+<p>任意可数个正集的并集仍然是正集。</p>
+</div>
+<details class="proof">
+<summary>引理 4.1.1 的证明</summary>
+<p>设 <span class="arithmatex">\(\{P_j\}_{j=1}^\infty\)</span> 是一列正集。我们希望证明 <span class="arithmatex">\(P = \bigcup_{j=1}^\infty P_j\)</span> 也是正集。</p>
+<p>首先，我们将这列集合正交化（互不相交化）。定义：</p>
+<div class="arithmatex">\[
+E_n = P_n \setminus \bigcup_{j=1}^{n-1} P_j
+\]</div>
+<p>显然 <span class="arithmatex">\(E_n \subset P_n\)</span>，因为正集的任意可测子集仍是正集，所以 <span class="arithmatex">\(E_n\)</span> 全是正集，且它们互不相交，且 <span class="arithmatex">\(\bigcup_{n=1}^\infty E_n = P\)</span>。</p>
+<p>现在任取 <span class="arithmatex">\(F \subset P\)</span> 且 <span class="arithmatex">\(F \in \mathcal{M}\)</span>。我们可以将 <span class="arithmatex">\(F\)</span> 拆分为 <span class="arithmatex">\(F = \bigcup_{n=1}^\infty (F \cap E_n)\)</span>。
+由于 <span class="arithmatex">\(F \cap E_n \subset E_n\)</span>，且 <span class="arithmatex">\(E_n\)</span> 是正集，故 <span class="arithmatex">\(\nu(F \cap E_n) \ge 0\)</span>。</p>
+<p>利用符号测度的可数可加性：</p>
+<div class="arithmatex">\[
+\nu(F) = \sum_{n=1}^\infty \nu(F \cap E_n) \ge 0
+\]</div>
+<p>这证明了 <span class="arithmatex">\(P\)</span> 是一个正集。</p>
+</details>
+<hr />
+<h2 id="3-hahn-hahn-decomposition">3. Hahn 分解定理 (Hahn Decomposition)</h2>
+<p>Hahn 分解定理指出了一个极其优美的几何图景：对于任何符号测度，我们总是可以把全空间像切西瓜一样，“干净利落”地切成完全正的一半和完全负的一半，没有任何模糊地带。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 4.1.1 (Hahn 分解定理)</p>
+<p>设 <span class="arithmatex">\(\nu\)</span> 为可测空间 <span class="arithmatex">\((X, \mathcal{M})\)</span> 上的一个符号测度。</p>
+<p>则必定存在一个正集 <span class="arithmatex">\(P\)</span> 和一个负集 <span class="arithmatex">\(N\)</span>，满足：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(P \cup N = X\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P \cap N = \emptyset\)</span></p>
+</li>
+</ul>
+<p>这对分解 <span class="arithmatex">\((P, N)\)</span> 称为空间 <span class="arithmatex">\(X\)</span> 关于 <span class="arithmatex">\(\nu\)</span> 的 <strong>Hahn 分解</strong>。并且该分解在相差一个 <span class="arithmatex">\(\nu\)</span>-零集的意义下是唯一的。</p>
+</div>
+<details class="proof">
+<summary>Hahn 分解定理的证明（核心思路展开）</summary>
+<p>不失一般性，我们假设符号测度 <span class="arithmatex">\(\nu\)</span> 不取 <span class="arithmatex">\(+\infty\)</span>（若不取 <span class="arithmatex">\(-\infty\)</span> 则对 <span class="arithmatex">\(-\nu\)</span> 证明即可）。这意味着 <span class="arithmatex">\(\nu\)</span> 在所有可测集上有上界。</p>
+<p><strong>第一步：榨取最大的正集</strong></p>
+<p>定义 <span class="arithmatex">\(m = \sup\{\nu(A) \mid A \text{ 是正集}\}\)</span>。因为空集是正集且 <span class="arithmatex">\(\nu(\emptyset) = 0\)</span>，所以 <span class="arithmatex">\(m \ge 0\)</span>。
+由上确界的定义，存在一列正集 <span class="arithmatex">\(\{P_j\}\)</span>，使得 <span class="arithmatex">\(\lim_{j \to \infty} \nu(P_j) = m\)</span>。
+令 <span class="arithmatex">\(P = \bigcup_{j=1}^\infty P_j\)</span>。由引理 4.1.1，<span class="arithmatex">\(P\)</span> 也是一个正集。因此 <span class="arithmatex">\(\nu(P) \le m\)</span>。
+由于 <span class="arithmatex">\(P_j \subset P\)</span>，且 <span class="arithmatex">\(P\)</span> 是正集，所以 <span class="arithmatex">\(\nu(P) = \nu(P_j) + \nu(P \setminus P_j) \ge \nu(P_j)\)</span>。令 <span class="arithmatex">\(j \to \infty\)</span>，得到 <span class="arithmatex">\(\nu(P) \ge m\)</span>。
+综上可知 <span class="arithmatex">\(\nu(P) = m\)</span>。因为 <span class="arithmatex">\(\nu\)</span> 不取 <span class="arithmatex">\(+\infty\)</span>，所以 <span class="arithmatex">\(m &lt; \infty\)</span>。</p>
+<p><strong>第二步：证明剩余部分是负集</strong></p>
+<p>令 <span class="arithmatex">\(N = X \setminus P\)</span>。我们断言 <span class="arithmatex">\(N\)</span> 是一个负集。
+采用反证法：假设 <span class="arithmatex">\(N\)</span> 不是负集，那么 <span class="arithmatex">\(N\)</span> 中必定包含一个测度严格大于 0 的子集 <span class="arithmatex">\(E\)</span>。然而，<span class="arithmatex">\(E\)</span> 未必是正集（它里面可能还夹杂着负的成分）。
+我们可以通过一个不断剔除负子集的过程（穷竭法），在 <span class="arithmatex">\(E\)</span> 中提炼出一个真正的正集 <span class="arithmatex">\(A \subset E\)</span>，且 <span class="arithmatex">\(\nu(A) &gt; 0\)</span>。</p>
+<p>此时，考察集合 <span class="arithmatex">\(P \cup A\)</span>。由于 <span class="arithmatex">\(P\)</span> 是正集，<span class="arithmatex">\(A\)</span> 也是正集，且它们互不相交，所以 <span class="arithmatex">\(P \cup A\)</span> 是一个全新的正集。
+计算其测度：</p>
+<div class="arithmatex">\[
+\nu(P \cup A) = \nu(P) + \nu(A) = m + \nu(A) &gt; m
+\]</div>
+<p>这与 <span class="arithmatex">\(m\)</span> 是所有正集测度的上确界相矛盾！
+因此，<span class="arithmatex">\(N\)</span> 绝不能包含任何具有正测度的子集，<span class="arithmatex">\(N\)</span> 必定是一个负集。</p>
+<p><strong>第三步：唯一性</strong></p>
+<p>假设存在另一组 Hahn 分解 <span class="arithmatex">\((P', N')\)</span>。考察 <span class="arithmatex">\(P \setminus P'\)</span>。
+因为 <span class="arithmatex">\(P \setminus P' \subset P\)</span>，所以它是一个正集，其测度 <span class="arithmatex">\(\ge 0\)</span>。
+同时 <span class="arithmatex">\(P \setminus P' \subset N'\)</span>（因为全空间被互补分割），所以它也是一个负集，其测度 <span class="arithmatex">\(\le 0\)</span>。
+这说明 <span class="arithmatex">\(P \setminus P'\)</span> 只能是一个零集。同理可证它们差异的各个部分均为零集。</p>
+</details>
+<hr />
+<h2 id="4-jordan">4. Jordan 分解定理与全变差</h2>
+<p>利用 Hahn 分解，我们可以将一个符号测度自然地拆分为两个互相独立的、非负的常规测度之差。</p>
+<p>首先，我们需要定义测度之间的“互相独立性”，即<strong>相互奇异 (Mutually Singular)</strong>。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 4.1.3 (相互奇异测度)</p>
+<p>设 <span class="arithmatex">\(\mu_1, \mu_2\)</span> 为同一可测空间上的两个非负测度。如果存在互不相交的集合 <span class="arithmatex">\(E, F \in \mathcal{M}\)</span>，满足：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(E \cup F = X\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mu_1(F) = 0\)</span> 且 <span class="arithmatex">\(\mu_2(E) = 0\)</span></p>
+</li>
+</ul>
+<p>则称测度 <span class="arithmatex">\(\mu_1\)</span> 和 <span class="arithmatex">\(\mu_2\)</span> 是<strong>相互奇异</strong>的，记为 <span class="arithmatex">\(\mu_1 \perp \mu_2\)</span>。这在直观上意味着这两个测度各自“存活”在不相交的地盘上。</p>
+</div>
+<p>基于相互奇异的概念，我们引出 Jordan 分解：</p>
+<div class="admonition success">
+<p class="admonition-title">定理 4.1.2 (Jordan 分解定理)</p>
+<p>任何一个符号测度 <span class="arithmatex">\(\nu\)</span> 都可以被<strong>唯一地</strong>分解为两个相互奇异的非负测度之差，即：</p>
+<div class="arithmatex">\[
+\nu = \nu^+ - \nu^-
+\]</div>
+<p>且 <span class="arithmatex">\(\nu^+ \perp \nu^-\)</span>。这被称为 <span class="arithmatex">\(\nu\)</span> 的 <strong>Jordan 分解</strong>。<span class="arithmatex">\(\nu^+\)</span> 称为正变差，<span class="arithmatex">\(\nu^-\)</span> 称为负变差。</p>
+</div>
+<details class="proof">
+<summary>Jordan 分解定理的构造与证明</summary>
+<p>设 <span class="arithmatex">\((P, N)\)</span> 为 <span class="arithmatex">\(X\)</span> 关于 <span class="arithmatex">\(\nu\)</span> 的 Hahn 分解。
+对于任意可测集 <span class="arithmatex">\(E \in \mathcal{M}\)</span>，我们定义：</p>
+<div class="arithmatex">\[
+\nu^+(E) = \nu(E \cap P)
+\]</div>
+<div class="arithmatex">\[
+\nu^-(E) = -\nu(E \cap N)
+\]</div>
+<p>显然：
+1. 由于 <span class="arithmatex">\(P\)</span> 是正集，<span class="arithmatex">\(N\)</span> 是负集，<span class="arithmatex">\(\nu^+\)</span> 和 <span class="arithmatex">\(\nu^-\)</span> 都是非负的测度。
+2. 对于任意 <span class="arithmatex">\(E \in \mathcal{M}\)</span>，有 <span class="arithmatex">\(\nu(E) = \nu(E \cap P) + \nu(E \cap N) = \nu^+(E) - \nu^-(E)\)</span>。
+3. 取 <span class="arithmatex">\(E=P, F=N\)</span>，显然 <span class="arithmatex">\(P \cup N = X\)</span>。由于 <span class="arithmatex">\(\nu^-(P) = -\nu(P \cap N) = \nu(\emptyset) = 0\)</span>，同理 <span class="arithmatex">\(\nu^+(N) = 0\)</span>，这就证明了 <span class="arithmatex">\(\nu^+ \perp \nu^-\)</span>。</p>
+<p>关于唯一性，任何满足 <span class="arithmatex">\(\nu = \lambda^+ - \lambda^-\)</span> 且 <span class="arithmatex">\(\lambda^+ \perp \lambda^-\)</span> 的分解，其支撑集必然能构成原符号测度的 Hahn 分解，由 Hahn 分解的唯一性（差一个零集）可反推 Jordan 分解测度的唯一性。</p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">定义 4.1.4 (全变差 Total Variation)</p>
+<p>对于符号测度 <span class="arithmatex">\(\nu = \nu^+ - \nu^-\)</span>，我们定义其<strong>全变差 (Total Variation)</strong> 为：</p>
+<div class="arithmatex">\[
+|\nu| = \nu^+ + \nu^-
+\]</div>
+<p><span class="arithmatex">\(|\nu|\)</span> 是一个标准的非负测度。如果 <span class="arithmatex">\(|\nu|(X) &lt; \infty\)</span>，则称 <span class="arithmatex">\(\nu\)</span> 是一个有限符号测度。
+对于任意集合 <span class="arithmatex">\(E\)</span>，全变差测度满足 <span class="arithmatex">\(|\nu(E)| \le |\nu|(E)\)</span>。</p>
+</div>
+<h3 id="_1">符号测度的积分</h3>
+<p>对于一个符号测度 <span class="arithmatex">\(\nu = \nu^+ - \nu^-\)</span>，由于 <span class="arithmatex">\(\nu^+\)</span> 和 <span class="arithmatex">\(\nu^-\)</span> 都是普通的非负测度，我们可以自然地定义关于符号测度的积分。</p>
+<p>设 <span class="arithmatex">\(f\)</span> 为可测函数，如果 <span class="arithmatex">\(\int |f| d|\nu| &lt; \infty\)</span>（即 <span class="arithmatex">\(f \in L^1(|\nu|)\)</span>），则定义 <span class="arithmatex">\(f\)</span> 关于 <span class="arithmatex">\(\nu\)</span> 的积分为：</p>
+<div class="arithmatex">\[
+\int_X f \, d\nu = \int_X f \, d\nu^+ - \int_X f \, d\nu^-
+\]</div>
+<p>由此可见，可积函数空间完全由全变差测度决定，即 <span class="arithmatex">\(L^1(\nu) = L^1(|\nu|)\)</span>。</p>
 
 
 

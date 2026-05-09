@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#22-limits-and-decompositions-of-sequences-of-measurable-functions" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2768,6 +2773,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Measurable Functions II
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2785,6 +2810,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5-complex-measurable-functions-and-extended-real-valued-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Complex Measurable Functions and Extended Real-Valued Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-algebraic-operations-and-limits-of-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Algebraic Operations and Limits of Sequences
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4359,38 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5-complex-measurable-functions-and-extended-real-valued-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Complex Measurable Functions and Extended Real-Valued Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-algebraic-operations-and-limits-of-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Algebraic Operations and Limits of Sequences
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4411,69 @@
   
 
 
-  <h1>Ch 5: Measurable Functions II</h1>
-
-
+<h1 id="22-limits-and-decompositions-of-sequences-of-measurable-functions">2.2 Limits and Decompositions of Sequences of Measurable Functions</h1>
+<h2 id="5-complex-measurable-functions-and-extended-real-valued-functions">5. Complex Measurable Functions and Extended Real-Valued Functions</h2>
+<p>For complex-valued functions <span class="arithmatex">\(f: X \to \mathbb{C}\)</span>, we utilize the product space topology of <span class="arithmatex">\(\mathbb{R}^2\)</span> for the complex plane, namely <span class="arithmatex">\(\mathcal{B}_{\mathbb{C}} = \mathcal{B}_{\mathbb{R}} \otimes \mathcal{B}_{\mathbb{R}}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.1.4 (Complex Measurability)</p>
+<p>A complex-valued function <span class="arithmatex">\(f\)</span> is measurable if and only if its real part <span class="arithmatex">\(\text{Re } f\)</span> and imaginary part <span class="arithmatex">\(\text{Im } f\)</span> are both real measurable functions.</p>
+</div>
+<p>In measure theory, we often allow functions to take values of <span class="arithmatex">\(\pm \infty\)</span>. Define the extended real number set <span class="arithmatex">\(\bar{\mathbb{R}} = \mathbb{R} \cup \{-\infty, +\infty\}\)</span>, whose Borel <span class="arithmatex">\(\sigma\)</span>-algebra is defined as:</p>
+<div class="arithmatex">\[
+\mathcal{B}_{\bar{\mathbb{R}}} = \{E \subset \bar{\mathbb{R}} : E \cap \mathbb{R} \in \mathcal{B}_{\mathbb{R}}\}
+\]</div>
+<p>若 <span class="arithmatex">\(f\)</span> 为广义实可测函数，我们通常约定 <span class="arithmatex">\(0 \cdot \infty = 0\)</span> 且避免无意义的 <span class="arithmatex">\(\infty - \infty\)</span>。</p>
+<hr />
+<h2 id="6-algebraic-operations-and-limits-of-sequences">6. Algebraic Operations and Limits of Sequences</h2>
+<p>Measurable functions possess perfect closure under various operations and limit-taking procedures.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.1.3 (Closure under Algebraic Operations)</p>
+<p>Let <span class="arithmatex">\(f, g: X \to \mathbb{C}\)</span> be measurable functions, then <span class="arithmatex">\(f+g\)</span> and <span class="arithmatex">\(f \cdot g\)</span> are both measurable functions.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 2.1.3</summary>
+<p>We define the mapping <span class="arithmatex">\(F(x) = (f(x), g(x)): X \to \mathbb{C} \times \mathbb{C}\)</span>.
+Since <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are both measurable, according to the measurability of product spaces (Proposition 2.1.3), the joint mapping <span class="arithmatex">\(F\)</span> is measurable.
+Furthermore, since the complex addition mapping <span class="arithmatex">\(S: \mathbb{C} \times \mathbb{C} \to \mathbb{C}\)</span>, i.e., <span class="arithmatex">\(S(z, w) = z + w\)</span>, is a continuous mapping, it is therefore Borel measurable.
+By the composition property, <span class="arithmatex">\(f+g = S \circ F\)</span> must be measurable. The measurability of the product <span class="arithmatex">\(f \cdot g\)</span> can be proved analogously.</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.1.4 (Supremum/Infimum and Limits of Function Sequences)</p>
+<p>Let <span class="arithmatex">\(\{f_j\}_{j=1}^\infty\)</span> be a sequence of extended real-valued measurable functions defined on <span class="arithmatex">\(X\)</span>, then the following functions are also measurable:</p>
+<ul>
+<li><span class="arithmatex">\(g_1(x) = \sup_{j} f_j(x)\)</span></li>
+<li><span class="arithmatex">\(g_2(x) = \inf_{j} f_j(x)\)</span></li>
+<li><span class="arithmatex">\(g_3(x) = \limsup_{j \to \infty} f_j(x)\)</span></li>
+<li><span class="arithmatex">\(g_4(x) = \liminf_{j \to \infty} f_j(x)\)</span></li>
+</ul>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 2.1.4</summary>
+<p>We only prove the measurability of the supremum <span class="arithmatex">\(\sup_j f_j\)</span>; the rest can be derived from algebraic relations.
+For any <span class="arithmatex">\(a \in \mathbb{R}\)</span>, observe the set <span class="arithmatex">\(\{x : \sup_j f_j(x) &gt; a\}\)</span>.
+The supremum is greater than <span class="arithmatex">\(a\)</span> if and only if there exists at least one term in the sequence greater than <span class="arithmatex">\(a\)</span>. Therefore:</p>
+<div class="arithmatex">\[
+\{x : \sup_j f_j(x) &gt; a\} = \bigcup_{j=1}^\infty \{x : f_j(x) &gt; a\}
+\]</div>
+<p>Since each <span class="arithmatex">\(f_j\)</span> is measurable, every set <span class="arithmatex">\(\{x : f_j(x) &gt; a\}\)</span> on the right side of the equation is in <span class="arithmatex">\(\mathcal{M}\)</span>. Because <span class="arithmatex">\(\mathcal{M}\)</span> is closed under countable unions, the supremum function <span class="arithmatex">\(g_1\)</span> satisfies the equivalent condition for measurability (Proposition 2.1.2(b)), and is thus measurable.</p>
+<p>Remaining proof:
+<span class="arithmatex">\(\inf_j f_j = -\sup_j (-f_j)\)</span>, which follows from algebraic operations and the measurability of the <span class="arithmatex">\(\sup\)</span>.
+Since <span class="arithmatex">\(\limsup_{j \to \infty} f_j = \inf_{k \ge 1} (\sup_{j \ge k} f_j)\)</span>, the measurability is naturally preserved after one countable <span class="arithmatex">\(\sup\)</span> and one countable <span class="arithmatex">\(\inf\)</span> operation. The same applies to <span class="arithmatex">\(\liminf\)</span>.</p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Corollary (Positive/Negative Parts and Polar Decomposition)</p>
+<p>For any real measurable function <span class="arithmatex">\(f\)</span>, we can decompose it into positive and negative parts:</p>
+<ul>
+<li><strong>Positive part</strong>: <span class="arithmatex">\(f^+ = \max(f, 0)\)</span></li>
+<li><strong>Negative part</strong>: <span class="arithmatex">\(f^- = \max(-f, 0)\)</span></li>
+<li>At this point, we have <span class="arithmatex">\(f = f^+ - f^-\)</span> and <span class="arithmatex">\(|f| = f^+ + f^-\)</span>. These two functions are also measurable.</li>
+</ul>
+<p>For complex measurable functions, we can perform polar decomposition (sign decomposition):</p>
+<div class="arithmatex">\[
+f = (\text{sgn } f) |f|
+\]</div>
+<p>where <span class="arithmatex">\(\text{sgn } z = z/|z|\)</span> when <span class="arithmatex">\(z \ne 0\)</span>, and 0 otherwise. Both <span class="arithmatex">\(\text{sgn } f\)</span> and <span class="arithmatex">\(|f|\)</span> are also measurable functions.</p>
+</div>
 
 
 

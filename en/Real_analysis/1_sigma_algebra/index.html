@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#11-foundations-of-algebras-and-measure-spaces" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2656,6 +2661,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Sigma-Algebras
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2673,6 +2698,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-algebras-and-algebras-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Algebras and σ-Algebras of Sets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Algebras and σ-Algebras of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-algebra-and-elementary-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product σ-Algebra and Elementary Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-measures-and-measure-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Measures and Measure Spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Measures and Measure Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-properties-of-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Properties of Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-null-sets-and-completion-of-measure-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Null Sets and Completion of Measure Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4404,83 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-algebras-and-algebras-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Algebras and σ-Algebras of Sets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Algebras and σ-Algebras of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-algebra-and-elementary-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product σ-Algebra and Elementary Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-measures-and-measure-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Measures and Measure Spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Measures and Measure Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-properties-of-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Properties of Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-null-sets-and-completion-of-measure-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Null Sets and Completion of Measure Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4501,176 @@
   
 
 
-  <h1>Ch 1: Sigma-Algebras</h1>
-
-
+<h1 id="11-foundations-of-algebras-and-measure-spaces">1.1 Foundations of σ-Algebras and Measure Spaces</h1>
+<p>In this chapter, we will establish the most fundamental framework of measure theory. Unlike the classical Riemann integral, which relies on partitions of intervals, the Lebesgue integral (and abstract measure theory) is built upon partitions of sets. Therefore, we first need to define which sets are "measurable", which leads to the concept of σ-algebras.</p>
+<hr />
+<h2 id="1-algebras-and-algebras-of-sets">1. Algebras and σ-Algebras of Sets</h2>
+<p>In order for addition of measures to be meaningful, the family of measurable sets must be closed under basic set operations.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.1 (Algebra)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a nonempty set and <span class="arithmatex">\(\mathcal{A} \subset 2^X\)</span> be a family of subsets of <span class="arithmatex">\(X\)</span>. <span class="arithmatex">\(\mathcal{A}\)</span> is called an <strong>algebra</strong> if it satisfies the following conditions:</p>
+<ul>
+<li>
+<p>For any <span class="arithmatex">\(E_1, E_2 \in \mathcal{A}\)</span>, we have <span class="arithmatex">\(E_1 \cup E_2 \in \mathcal{A}\)</span>.</p>
+</li>
+<li>
+<p>For any <span class="arithmatex">\(E \in \mathcal{A}\)</span>, its complement <span class="arithmatex">\(E^c \in \mathcal{A}\)</span>.</p>
+</li>
+</ul>
+</div>
+<p>From the definition it follows easily that an algebra is also closed under finite intersections and necessarily contains the whole set <span class="arithmatex">\(X\)</span> and the empty set <span class="arithmatex">\(\emptyset\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.2 (σ-Algebra)</p>
+<p>Let <span class="arithmatex">\(\mathcal{M}\)</span> be an algebra. If <span class="arithmatex">\(\mathcal{M}\)</span> is additionally closed under <strong>countable unions</strong>, i.e., for any sequence of sets <span class="arithmatex">\(\{E_k\}_{k=1}^\infty \subset \mathcal{M}\)</span>,</p>
+<div class="arithmatex">\[
+\bigcup_{k=1}^\infty E_k \in \mathcal{M},
+\]</div>
+<p>then <span class="arithmatex">\(\mathcal{M}\)</span> is called a <strong>σ-algebra</strong>.</p>
+</div>
+<p>By De Morgan's laws and closure under complements, a σ-algebra is necessarily closed under <strong>countable intersections</strong> as well.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.1 (Generated σ-Algebra and Borel σ-Algebra)</p>
+<ul>
+<li>
+<p><strong>Generated σ-algebra</strong>: Given any family <span class="arithmatex">\(\mathcal{E} \subset 2^X\)</span> of subsets of <span class="arithmatex">\(X\)</span>, the intersection of all σ-algebras containing <span class="arithmatex">\(\mathcal{E}\)</span> is still a σ-algebra, denoted by <span class="arithmatex">\(\mathcal{M}(\mathcal{E})\)</span>. It is called the smallest σ-algebra generated by <span class="arithmatex">\(\mathcal{E}\)</span>.</p>
+</li>
+<li>
+<p><strong>Borel σ-algebra</strong>: If <span class="arithmatex">\(X\)</span> is a topological space, let <span class="arithmatex">\(\mathcal{T}\)</span> be the family of all open sets in <span class="arithmatex">\(X\)</span>. The σ-algebra generated by <span class="arithmatex">\(\mathcal{T}\)</span> is called the <strong>Borel σ-algebra</strong>, denoted by <span class="arithmatex">\(\mathcal{B}_X = \mathcal{M}(\mathcal{T})\)</span>.</p>
+</li>
+</ul>
+</div>
+<p>In the Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span>, the Borel σ-algebra can be generated not only by open sets but also by open intervals <span class="arithmatex">\((a,b)\)</span>, closed intervals <span class="arithmatex">\([a,b]\)</span>, half-open intervals <span class="arithmatex">\([a,b)\)</span>, and even families of rays of the form <span class="arithmatex">\((-\infty, a)\)</span> or <span class="arithmatex">\([a, +\infty)\)</span>.</p>
+<h3 id="product-algebra-and-elementary-family">Product σ-Algebra and Elementary Family</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.3 (Product σ-Algebra)</p>
+<p>Let <span class="arithmatex">\(\{(X_\alpha, \mathcal{M}_\alpha)\}_{\alpha \in A}\)</span> be a family of measurable spaces. Define the product space <span class="arithmatex">\(X = \prod_{\alpha \in A} X_\alpha\)</span>, and let the projection maps be <span class="arithmatex">\(\pi_\alpha: X \rightarrow X_\alpha\)</span>.</p>
+<p>Then the <strong>product σ-algebra</strong> on <span class="arithmatex">\(X\)</span> is defined as the smallest σ-algebra that makes all projection maps <span class="arithmatex">\(\pi_\alpha\)</span> measurable:</p>
+<div class="arithmatex">\[
+\bigotimes_{\alpha \in A} \mathcal{M}_\alpha = \mathcal{M} \left( \left\{ \pi_\alpha^{-1}(E_\alpha) \mid E_\alpha \in \mathcal{M}_\alpha, \alpha \in A \right\} \right).
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.4 (Elementary Family)</p>
+<p>A family <span class="arithmatex">\(\mathcal{E} \subset 2^X\)</span> is called an <strong>elementary family</strong> if it satisfies:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\emptyset \in \mathcal{E}\)</span>.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(E, F \in \mathcal{E}\)</span>, then <span class="arithmatex">\(E \cap F \in \mathcal{E}\)</span>.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(E \in \mathcal{E}\)</span>, then <span class="arithmatex">\(E^c\)</span> can be expressed as a finite union of pairwise disjoint sets from <span class="arithmatex">\(\mathcal{E}\)</span>.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="2-measures-and-measure-spaces">2. Measures and Measure Spaces</h2>
+<p>Having the concept of "measurable sets" provided by a σ-algebra, we can now define the abstract notion of "length", "area", or "volume", i.e., a measure.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.5 (Measure)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M})\)</span> be a measurable space. A set function <span class="arithmatex">\(\mu: \mathcal{M} \rightarrow [0, +\infty]\)</span> is called a <strong>measure</strong> on <span class="arithmatex">\(\mathcal{M}\)</span> if it satisfies the following conditions:</p>
+<ul>
+<li>
+<p><strong>Non-negativity</strong>: The values of the measure lie in <span class="arithmatex">\([0, +\infty]\)</span>.</p>
+</li>
+<li>
+<p><strong>Empty set zero</strong>: <span class="arithmatex">\(\mu(\emptyset) = 0\)</span>.</p>
+</li>
+<li>
+<p><strong>Countable additivity</strong>: For any sequence of pairwise disjoint sets <span class="arithmatex">\(\{E_k\}_{k=1}^\infty\)</span> in <span class="arithmatex">\(\mathcal{M}\)</span> (i.e., <span class="arithmatex">\(E_i \cap E_j = \emptyset\)</span> for <span class="arithmatex">\(i \ne j\)</span>), we have</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{k=1}^\infty E_k\right) = \sum_{k=1}^\infty \mu(E_k).
+\]</div>
+</div>
+<p>If we are given a space <span class="arithmatex">\(X\)</span>, a σ-algebra <span class="arithmatex">\(\mathcal{M}\)</span> on it, and a measure <span class="arithmatex">\(\mu\)</span>, the triple <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> is called a <strong>measure space</strong>.</p>
+<p><strong>Some common simple examples of measures:</strong></p>
+<ul>
+<li>
+<p><strong>Counting measure</strong>: For any set <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\mu(E)\)</span> equals the number of elements in the set.</p>
+</li>
+<li>
+<p><strong>Dirac delta measure</strong>: Fix a point <span class="arithmatex">\(x_0\)</span> in the space. Then <span class="arithmatex">\(\mu(E)=1\)</span> if <span class="arithmatex">\(x_0 \in E\)</span> and <span class="arithmatex">\(\mu(E)=0\)</span> if <span class="arithmatex">\(x_0 \notin E\)</span>.</p>
+</li>
+</ul>
+<h3 id="basic-properties-of-measures">Basic Properties of Measures</h3>
+<p>From the axiomatic definition of a measure, the following important analytic properties follow naturally.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.2 (Basic Properties of Measures)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> be a measure space. Then <span class="arithmatex">\(\mu\)</span> satisfies:</p>
+<ul>
+<li>
+<p><strong>Monotonicity</strong>: If <span class="arithmatex">\(E, F \in \mathcal{M}\)</span> and <span class="arithmatex">\(E \subset F\)</span>, then <span class="arithmatex">\(\mu(E) \le \mu(F)\)</span>. Moreover, if <span class="arithmatex">\(\mu(E) &lt; \infty\)</span>, then <span class="arithmatex">\(\mu(F \setminus E) = \mu(F) - \mu(E)\)</span>.</p>
+</li>
+<li>
+<p><strong>Subadditivity</strong>: For any sequence of sets <span class="arithmatex">\(\{E_j\}_{j=1}^\infty \subset \mathcal{M}\)</span> (not necessarily pairwise disjoint), we always have</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{j=1}^\infty E_j\right) \le \sum_{j=1}^\infty \mu(E_j).
+\]</div>
+<ul>
+<li><strong>Continuity from below</strong>: For an increasing sequence of sets <span class="arithmatex">\(E_1 \subset E_2 \subset \cdots\)</span>, we have</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{j=1}^\infty E_j\right) = \lim_{j \rightarrow \infty} \mu(E_j).
+\]</div>
+<ul>
+<li><strong>Continuity from above</strong>: For a decreasing sequence of sets <span class="arithmatex">\(E_1 \supset E_2 \supset \cdots\)</span> with <span class="arithmatex">\(\mu(E_1) &lt; \infty\)</span>, we have</li>
+</ul>
+<div class="arithmatex">\[
+\mu\left(\bigcap_{j=1}^\infty E_j\right) = \lim_{j \rightarrow \infty} \mu(E_j).
+\]</div>
+</div>
+<hr />
+<h2 id="3-null-sets-and-completion-of-measure-spaces">3. Null Sets and Completion of Measure Spaces</h2>
+<p>In later discussions of real analysis (e.g., the concept of "almost everywhere"), null sets play a central role. However, a general measure space does not guarantee that all subsets of a null set are measurable, which leads to the notion of completion.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.6 (Null Set and Complete Measure Space)</p>
+<ul>
+<li>
+<p><strong>Null set</strong>: If <span class="arithmatex">\(E \in \mathcal{M}\)</span> satisfies <span class="arithmatex">\(\mu(E) = 0\)</span>, then <span class="arithmatex">\(E\)</span> is called a <span class="arithmatex">\(\mu\)</span>-null set.</p>
+</li>
+<li>
+<p><strong>Complete measure space</strong>: A measure space <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> is called <strong>complete</strong> if every subset of a null set belongs to <span class="arithmatex">\(\mathcal{M}\)</span> (and therefore its measure is automatically zero).</p>
+</li>
+</ul>
+</div>
+<p>In a general measure space, subsets of a null set are not necessarily measurable. However, we can "complete" any measure space by artificially adding these subsets to the original σ-algebra.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.3 (Completion of a Measure Space)</p>
+<p>For any measure space <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span>, we can construct its completion <span class="arithmatex">\((X, \overline{\mathcal{M}}, \overline{\mu})\)</span>, where the new σ-algebra is defined as</p>
+<div class="arithmatex">\[
+\overline{\mathcal{M}} = \{E \cup F \mid E \in \mathcal{M}, F \subset N \text{ and } N \in \mathcal{M}, \mu(N)=0\}.
+\]</div>
+<p>On this extended σ-algebra, define <span class="arithmatex">\(\overline{\mu}(E \cup F) = \mu(E)\)</span>. Then <span class="arithmatex">\(\overline{\mathcal{M}}\)</span> is a σ-algebra and <span class="arithmatex">\(\overline{\mu}\)</span> is the unique complete measure on it extending <span class="arithmatex">\(\mu\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of the Completion Theorem</summary>
+<p>To prove that <span class="arithmatex">\((X, \overline{\mathcal{M}}, \overline{\mu})\)</span> is a complete measure space, we need to verify two things: <span class="arithmatex">\(\overline{\mathcal{M}}\)</span> is a σ-algebra, and <span class="arithmatex">\(\overline{\mu}\)</span> is a well-defined complete measure on it.</p>
+<p><strong>Step 1: Verify that <span class="arithmatex">\(\overline{\mathcal{M}}\)</span> is a σ-algebra</strong></p>
+<p>For closure under countable unions: Let <span class="arithmatex">\(A_j = E_j \cup F_j \in \overline{\mathcal{M}}\)</span>, where <span class="arithmatex">\(E_j \in \mathcal{M}\)</span>, <span class="arithmatex">\(F_j \subset N_j\)</span> and <span class="arithmatex">\(\mu(N_j) = 0\)</span>.</p>
+<div class="arithmatex">\[
+\bigcup_{j=1}^\infty A_j = \left(\bigcup_{j=1}^\infty E_j\right) \cup \left(\bigcup_{j=1}^\infty F_j\right).
+\]</div>
+<p>Since <span class="arithmatex">\(\mathcal{M}\)</span> is a σ-algebra, <span class="arithmatex">\(\bigcup_{j=1}^\infty E_j \in \mathcal{M}\)</span>. Also, <span class="arithmatex">\(\bigcup_{j=1}^\infty F_j \subset \bigcup_{j=1}^\infty N_j\)</span>. By subadditivity of the measure:</p>
+<div class="arithmatex">\[
+\mu\left(\bigcup_{j=1}^\infty N_j\right) \le \sum_{j=1}^\infty \mu(N_j) = 0,
+\]</div>
+<p>so the union again has the form <span class="arithmatex">\(E \cup F\)</span>, proving closure under countable unions.</p>
+<p>Next, verify closure under complements. Let <span class="arithmatex">\(A = E \cup F \in \overline{\mathcal{M}}\)</span>. For convenience we may assume <span class="arithmatex">\(E \cap N = \emptyset\)</span>.
+Since <span class="arithmatex">\(A^c = (E \cup F)^c = E^c \cap F^c\)</span> and <span class="arithmatex">\(F \subset N\)</span>, we can rewrite it as</p>
+<div class="arithmatex">\[
+A^c = (E \cup N)^c \cup (N \setminus F) \cap E^c.
+\]</div>
+<p>Here <span class="arithmatex">\((E \cup N)^c \in \mathcal{M}\)</span>, while <span class="arithmatex">\((N \setminus F) \cap E^c \subset N\)</span> is a subset of a null set, showing that <span class="arithmatex">\(A^c \in \overline{\mathcal{M}}\)</span>. Hence <span class="arithmatex">\(\overline{\mathcal{M}}\)</span> is a σ-algebra.</p>
+<p><strong>Step 2: Verify completeness</strong></p>
+<p>Suppose there exists a subset <span class="arithmatex">\(S \subset A \in \overline{\mathcal{M}}\)</span> with <span class="arithmatex">\(\overline{\mu}(A) = \mu(E) = 0\)</span>.
+Because <span class="arithmatex">\(A = E \cup F \subset E \cup N\)</span>, we have <span class="arithmatex">\(S \subset E \cup N\)</span>.
+Since <span class="arithmatex">\(\mu(E \cup N) \le \mu(E) + \mu(N) = 0\)</span>, this shows that <span class="arithmatex">\(S\)</span> is contained in a null set of <span class="arithmatex">\(\mathcal{M}\)</span>. By definition, <span class="arithmatex">\(S = \emptyset \cup S \in \overline{\mathcal{M}}\)</span>. This proves the completeness of the completed measure space.</p>
+</details>
 
 
 

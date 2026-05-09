@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#51-lp" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2964,6 +2969,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十二章：L^p空间
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2981,6 +3006,97 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-chebyshev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Chebyshev 不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. \(L^p\) 空间的包含与插值关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. \(L^p\) 空间的包含与插值关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 有限测度下的包含关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 空间的代数分解与插值
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-schur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 积分算子与 Schur 检验
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-minkowski" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 广义 Minkowski 积分不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4409,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-chebyshev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Chebyshev 不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. \(L^p\) 空间的包含与插值关系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. \(L^p\) 空间的包含与插值关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 有限测度下的包含关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 空间的代数分解与插值
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-schur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 积分算子与 Schur 检验
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-minkowski" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 广义 Minkowski 积分不等式
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4511,158 @@
   
 
 
-  <h1>第十二章：L^p空间</h1>
-
-
+<h1 id="51-lp">5.1 <span class="arithmatex">\(L^p\)</span> 空间、不等式与完备性</h1>
+<p>在建立了完备的 Lebesgue 积分理论之后，我们将探讨由可积函数构成的函数空间——<span class="arithmatex">\(L^p\)</span> 空间。它们不仅是实分析的结晶，更是泛函分析的核心研究对象。本节我们将重点讨论 <span class="arithmatex">\(L^p\)</span> 空间中几个极为重要的不等式及其结构包含关系。</p>
+<hr />
+<h2 id="1-chebyshev">1. Chebyshev 不等式</h2>
+<p>在探讨 <span class="arithmatex">\(L^p\)</span> 空间之前，我们先引入测度论中最基础的尾概率控制不等式——Chebyshev 不等式（又称 Markov-Chebyshev 不等式）。它建立了函数的 <span class="arithmatex">\(L^p\)</span> 积分与其水平集测度之间的联系。</p>
+<div class="admonition info">
+<p class="admonition-title">定理 5.1.1 (Chebyshev 不等式)</p>
+<p>设 <span class="arithmatex">\(f \in L^p(X, \mu)\)</span>（其中 <span class="arithmatex">\(0 &lt; p &lt; \infty\)</span>），对于任意 <span class="arithmatex">\(\alpha &gt; 0\)</span>，定义水平集 <span class="arithmatex">\(E_\alpha = \{x \in X : |f(x)| &gt; \alpha\}\)</span>。那么有：</p>
+<div class="arithmatex">\[
+\mu(\{x \in X : |f(x)| &gt; \alpha\}) \le \left( \frac{\|f\|_p}{\alpha} \right)^p = \frac{1}{\alpha^p} \int_X |f|^p \, d\mu
+\]</div>
+</div>
+<details class="proof">
+<summary>Chebyshev 不等式的证明</summary>
+<p>利用特征函数和积分的单调性，证明非常直接。</p>
+<p>显然，在集合 <span class="arithmatex">\(E_\alpha\)</span> 上，我们有 <span class="arithmatex">\(|f(x)| &gt; \alpha\)</span>，从而 <span class="arithmatex">\(|f(x)|^p &gt; \alpha^p\)</span>。</p>
+<p>于是我们可以放大积分：</p>
+<div class="arithmatex">\[
+\int_X |f|^p \, d\mu \ge \int_{E_\alpha} |f|^p \, d\mu \ge \int_{E_\alpha} \alpha^p \, d\mu = \alpha^p \mu(E_\alpha)
+\]</div>
+<p>两边同除以 <span class="arithmatex">\(\alpha^p\)</span> 即可得到结论。这说明，如果一个函数在 <span class="arithmatex">\(L^p\)</span> 空间中，那么它取大值的区域的测度必然衰减得非常快。</p>
+</details>
+<hr />
+<h2 id="2-lp">2. <span class="arithmatex">\(L^p\)</span> 空间的包含与插值关系</h2>
+<p>不同指数 <span class="arithmatex">\(p\)</span> 对应的 <span class="arithmatex">\(L^p\)</span> 空间之间存在着深刻的联系。它们之间的包含关系很大程度上取决于底层测度空间的有限性。</p>
+<h3 id="21">2.1 有限测度下的包含关系</h3>
+<p>如果测度空间是有限的，低阶可积性由高阶可积性保证。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 5.1.2 (有限测度的 <span class="arithmatex">\(L^p\)</span> 包含)</p>
+<p>如果 <span class="arithmatex">\(\mu(A) &lt; \infty\)</span>，且 <span class="arithmatex">\(0 &lt; p &lt; q \le \infty\)</span>，那么：</p>
+<div class="arithmatex">\[
+L^q(A) \subset L^p(A)
+\]</div>
+<p>并且存在常数 <span class="arithmatex">\(C\)</span> 使得 <span class="arithmatex">\(\|f\|_p \le C \|f\|_q\)</span>。</p>
+<p><em>(提示：这可以直接通过 Hölder 不等式，将 <span class="arithmatex">\(\int |f|^p \cdot 1 \, d\mu\)</span> 中的常数 1 视为共轭函数来证明。)</em></p>
+</div>
+<h3 id="22">2.2 空间的代数分解与插值</h3>
+<p>当空间测度无限时（如 <span class="arithmatex">\(\mathbb{R}^n\)</span>），<span class="arithmatex">\(L^p\)</span> 和 <span class="arithmatex">\(L^q\)</span> 之间没有绝对的包含关系。但在 <span class="arithmatex">\(0 &lt; p &lt; q &lt; r \le \infty\)</span> 的条件下，存在以下优美的代数关系。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 5.1.3 (<span class="arithmatex">\(L^q\)</span> 函数的分解)</p>
+<p>对于 <span class="arithmatex">\(0 &lt; p &lt; q &lt; r \le \infty\)</span>，任何处于中间空间 <span class="arithmatex">\(L^q\)</span> 的函数都可以被分解为属于 <span class="arithmatex">\(L^p\)</span> 和 <span class="arithmatex">\(L^r\)</span> 的两部分，即：</p>
+<div class="arithmatex">\[
+L^q \subset L^p + L^r
+\]</div>
+</div>
+<details class="proof">
+<summary>分解定理的证明</summary>
+<p>任取 <span class="arithmatex">\(f \in L^q\)</span>。我们通过高度阈值 1 来截断函数。</p>
+<p>令 <span class="arithmatex">\(E = \{x \in X : |f(x)| \ge 1\}\)</span>。定义分解 <span class="arithmatex">\(f = g + h\)</span>，其中：</p>
+<ul>
+<li>
+<p>尖峰部分：<span class="arithmatex">\(g = f \cdot \chi_E\)</span></p>
+</li>
+<li>
+<p>平缓部分：<span class="arithmatex">\(h = f \cdot (1 - \chi_E)\)</span></p>
+</li>
+</ul>
+<p><strong>证明 <span class="arithmatex">\(g \in L^p\)</span></strong>：
+由于在 <span class="arithmatex">\(E\)</span> 上 <span class="arithmatex">\(|f| \ge 1\)</span>，且 <span class="arithmatex">\(p &lt; q\)</span>，所以 <span class="arithmatex">\(|f|^p \le |f|^q\)</span>。</p>
+<div class="arithmatex">\[
+\int_X |g|^p \, d\mu = \int_E |f|^p \, d\mu \le \int_E |f|^q \, d\mu \le \int_X |f|^q \, d\mu &lt; \infty
+\]</div>
+<p>所以 <span class="arithmatex">\(g \in L^p\)</span>。</p>
+<p><strong>证明 <span class="arithmatex">\(h \in L^r\)</span></strong>：
+由于在 <span class="arithmatex">\(E^c\)</span> 上 <span class="arithmatex">\(|f| &lt; 1\)</span>，且 <span class="arithmatex">\(q &lt; r\)</span>，所以 <span class="arithmatex">\(|f|^r \le |f|^q\)</span>。</p>
+<div class="arithmatex">\[
+\int_X |h|^r \, d\mu = \int_{E^c} |f|^r \, d\mu \le \int_{E^c} |f|^q \, d\mu \le \int_X |f|^q \, d\mu &lt; \infty
+\]</div>
+<p>所以 <span class="arithmatex">\(h \in L^r\)</span>。由此得证 <span class="arithmatex">\(f = g + h \in L^p + L^r\)</span>。</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">定理 5.1.4 (<span class="arithmatex">\(L^p\)</span> 空间的插值性质 / 绝对凸性)</p>
+<p>对于 <span class="arithmatex">\(0 &lt; p &lt; q &lt; r \le \infty\)</span>，两个极端空间的交集必然包含中间空间：</p>
+<div class="arithmatex">\[
+L^p \cap L^r \subset L^q
+\]</div>
+<p>更定量地，存在 <span class="arithmatex">\(\lambda \in (0, 1)\)</span> 满足 <span class="arithmatex">\(\frac{1}{q} = \frac{\lambda}{p} + \frac{1-\lambda}{r}\)</span>（即 <span class="arithmatex">\(\frac{\lambda q}{p} + \frac{(1-\lambda)q}{r} = 1\)</span>），此时对任意 <span class="arithmatex">\(f \in L^p \cap L^r\)</span>，可以通过 Hölder 不等式得到<strong>对数凸性界 (Log-convexity bound)</strong>：</p>
+<div class="arithmatex">\[
+\|f\|_q \le \|f\|_p^\lambda \|f\|_r^{1-\lambda}
+\]</div>
+</div>
+<hr />
+<h2 id="3-schur">3. 积分算子与 Schur 检验</h2>
+<p>泛函分析中，我们经常研究由核函数 (Kernel) 定义的积分算子。Schur 检验给出了这类算子在 <span class="arithmatex">\(L^p\)</span> 空间上有界的一个非常实用的充分条件。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 5.1.2 (积分算子)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 和 <span class="arithmatex">\((Y, \mathcal{N}, \nu)\)</span> 为有限或 <span class="arithmatex">\(\sigma\)</span>-有限测度空间。<span class="arithmatex">\(k: X \times Y \to \mathbb{C}\)</span> 为乘积可测函数。定义积分算子 <span class="arithmatex">\(T\)</span> 为：</p>
+<div class="arithmatex">\[
+Tf(x) = \int_Y k(x, y) f(y) \, d\nu(y)
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">定理 5.1.5 (Schur 检验 / 广义 Young 不等式)</p>
+<p>假设存在常数 <span class="arithmatex">\(C &gt; 0\)</span>，使得核函数 <span class="arithmatex">\(k\)</span> 满足以下两个一致行/列积分为界的条件：</p>
+<ul>
+<li>对于几乎所有的 <span class="arithmatex">\(y \in Y\)</span>：</li>
+</ul>
+<div class="arithmatex">\[
+\int_X |k(x, y)| \, d\mu(x) \le C
+\]</div>
+<ul>
+<li>对于几乎所有的 <span class="arithmatex">\(x \in X\)</span>：</li>
+</ul>
+<div class="arithmatex">\[
+\int_Y |k(x, y)| \, d\nu(y) \le C
+\]</div>
+<p>那么对于任意 <span class="arithmatex">\(1 \le p \le \infty\)</span>，算子 <span class="arithmatex">\(T\)</span> 是从 <span class="arithmatex">\(L^p(\nu)\)</span> 到 <span class="arithmatex">\(L^p(\mu)\)</span> 的有界线性算子，且算子范数满足：</p>
+<div class="arithmatex">\[
+\|Tf\|_{L^p(\mu)} \le C \|f\|_{L^p(\nu)}
+\]</div>
+</div>
+<details class="proof">
+<summary>Schur 检验的证明核心 (基于 Hölder 不等式)</summary>
+<p>我们利用 Hölder 不等式的巧妙拆分（针对 <span class="arithmatex">\(1 &lt; p &lt; \infty\)</span> 的情形，共轭指数 <span class="arithmatex">\(p'\)</span> 满足 <span class="arithmatex">\(1/p + 1/p' = 1\)</span>）。</p>
+<p>将积分中的 <span class="arithmatex">\(|k(x, y)|\)</span> 拆分为 <span class="arithmatex">\(|k(x,y)|^{1/p'} \cdot |k(x,y)|^{1/p}\)</span>：</p>
+<div class="arithmatex">\[
+|Tf(x)| \le \int_Y |k(x, y)|^{1/p'} \cdot \left(|k(x, y)|^{1/p} |f(y)|\right) d\nu(y)
+\]</div>
+<p>关于测度 <span class="arithmatex">\(\nu\)</span>，对这两项应用 Hölder 不等式：</p>
+<div class="arithmatex">\[
+|Tf(x)|^p \le \left( \int_Y |k(x, y)| \, d\nu(y) \right)^{p/p'} \left( \int_Y |k(x, y)| |f(y)|^p \, d\nu(y) \right)
+\]</div>
+<p>利用第二个条件 <span class="arithmatex">\(\int_Y |k(x, y)| d\nu(y) \le C\)</span>，代入并化简（注意到 <span class="arithmatex">\(p/p' = p-1\)</span>）：</p>
+<div class="arithmatex">\[
+|Tf(x)|^p \le C^{p-1} \int_Y |k(x, y)| |f(y)|^p \, d\nu(y)
+\]</div>
+<p>现在对两边关于 <span class="arithmatex">\(x\)</span> 在 <span class="arithmatex">\(X\)</span> 上积分，并使用 Tonelli 定理交换积分顺序：</p>
+<div class="arithmatex">\[
+\int_X |Tf(x)|^p \, d\mu(x) \le C^{p-1} \int_Y |f(y)|^p \left( \int_X |k(x, y)| \, d\mu(x) \right) d\nu(y)
+\]</div>
+<p>利用第一个条件 <span class="arithmatex">\(\int_X |k(x, y)| d\mu(x) \le C\)</span>：</p>
+<div class="arithmatex">\[
+\|Tf\|_{L^p(\mu)}^p \le C^{p-1} \cdot C \int_Y |f(y)|^p \, d\nu(y) = C^p \|f\|_{L^p(\nu)}^p
+\]</div>
+<p>两边开 <span class="arithmatex">\(p\)</span> 次方即得证 <span class="arithmatex">\(\|Tf\|_p \le C \|f\|_p\)</span>。</p>
+</details>
+<hr />
+<h2 id="4-minkowski">4. 广义 Minkowski 积分不等式</h2>
+<p>经典的 Minkowski 不等式确立了 <span class="arithmatex">\(L^p\)</span> 空间满足三角不等式 (<span class="arithmatex">\(\|f + g\|_p \le \|f\|_p + \|g\|_p\)</span>)，从而使其成为一个赋范向量空间。</p>
+<p>而在乘积测度空间中，这一不等式可以推广到对连续参数求积分的形式，即“积分的 <span class="arithmatex">\(L^p\)</span> 范数小于等于 <span class="arithmatex">\(L^p\)</span> 范数的积分”。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 5.1.6 (广义 Minkowski 积分不等式)</p>
+<p>设 <span class="arithmatex">\(f(x, y)\)</span> 是 <span class="arithmatex">\(X \times Y\)</span> 上的非负乘积可测函数，<span class="arithmatex">\(1 \le p &lt; \infty\)</span>。那么有：</p>
+<div class="arithmatex">\[
+\left[ \int_X \left( \int_Y f(x, y) \, d\nu(y) \right)^p d\mu(x) \right]^{1/p} \le \int_Y \left( \int_X f(x, y)^p \, d\mu(x) \right)^{1/p} d\nu(y)
+\]</div>
+<p>用算子范数的语言更直观地表达为：假设 <span class="arithmatex">\(y \mapsto \|f(\cdot, y)\|_{L^p(\mu)}\)</span> 在 <span class="arithmatex">\(Y\)</span> 上是可积的，则函数 <span class="arithmatex">\(F(x) = \int_Y f(x, y) d\nu(y)\)</span> 在 <span class="arithmatex">\(L^p(\mu)\)</span> 中，并且满足：</p>
+<div class="arithmatex">\[
+\left\| \int_Y f(\cdot, y) \, d\nu(y) \right\|_{L^p(\mu)} \le \int_Y \|f(\cdot, y)\|_{L^p(\mu)} \, d\nu(y)
+\]</div>
+</div>
+<p>这个深刻的不等式在处理偏微分方程、算子半群理论以及卷积算子的范数估计时，是一个不可或缺的工具。</p>
 
 
 

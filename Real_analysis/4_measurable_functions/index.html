@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#21" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2740,6 +2745,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：可测函数（一）
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2757,6 +2782,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 映射与逆像的性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 可测函数的定义与基本判定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实可测函数的等价条件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 局部可测性与复合、积空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 映射与逆像的性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 可测函数的定义与基本判定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 实可测函数的等价条件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 局部可测性与复合、积空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,161 @@
   
 
 
-  <h1>第四章：可测函数（一）</h1>
-
-
+<h1 id="21">2.1 可测函数的概念与性质</h1>
+<p>在测度空间 <span class="arithmatex">\((X, \mathcal{M})\)</span> 中，可测函数是研究积分理论的核心对象。正如连续函数保持了拓扑空间中的开集结构，可测函数则保持了可测空间之间的 <span class="arithmatex">\(\sigma\)</span>-代数结构。</p>
+<hr />
+<h2 id="1">1. 映射与逆像的性质</h2>
+<p>在定义可测函数之前，我们需要回顾集合逆像的基本性质。逆像映射 <span class="arithmatex">\(f^{-1}: 2^Y \to 2^X\)</span> 与集合的各种运算是完全相容的。</p>
+<div class="admonition info">
+<p class="admonition-title">引理 2.1.1 (逆像的性质)</p>
+<p>设 <span class="arithmatex">\(f: X \to Y\)</span> 是一个映射，<span class="arithmatex">\(E, E_{\lambda} \subset Y\)</span>，则：</p>
+<ul>
+<li><strong>并集保持</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}\left(\bigcup_{\lambda} E_{\lambda}\right) = \bigcup_{\lambda} f^{-1}(E_{\lambda})
+\]</div>
+<ul>
+<li><strong>交集保持</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}\left(\bigcap_{\lambda} E_{\lambda}\right) = \bigcap_{\lambda} f^{-1}(E_{\lambda})
+\]</div>
+<ul>
+<li><strong>补集保持</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}(E^c) = (f^{-1}(E))^c
+\]</div>
+</div>
+<p>由此性质可知，若 <span class="arithmatex">\(\mathcal{N}\)</span> 是 <span class="arithmatex">\(Y\)</span> 上的 <span class="arithmatex">\(\sigma\)</span>-代数，则集族 <span class="arithmatex">\(\mathcal{F} = \{E \subset Y : f^{-1}(E) \in \mathcal{M}\}\)</span> 构成 <span class="arithmatex">\(Y\)</span> 上的一个 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+<hr />
+<h2 id="2">2. 可测函数的定义与基本判定</h2>
+<div class="admonition info">
+<p class="admonition-title">定义 2.1.1 (<span class="arithmatex">\((M, N)\)</span>-可测性)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M})\)</span> 和 <span class="arithmatex">\((Y, \mathcal{N})\)</span> 是两个可测空间。称映射 <span class="arithmatex">\(f: X \to Y\)</span> 是 <strong><span class="arithmatex">\((M, N)\)</span>-可测的</strong>（或简称为可测的），如果对于任何 <span class="arithmatex">\(E \in \mathcal{N}\)</span>，其逆像都满足：</p>
+<div class="arithmatex">\[
+f^{-1}(E) \in \mathcal{M}
+\]</div>
+</div>
+<p>当目标空间是实数集 <span class="arithmatex">\(\mathbb{R}\)</span> 且配备 Borel <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{B}_{\mathbb{R}}\)</span> 时，我们称 <span class="arithmatex">\(f\)</span> 为 <strong><span class="arithmatex">\(\mathcal{M}\)</span>-可测函数</strong>。</p>
+<ul>
+<li>
+<p><strong>Borel 可测函数</strong>：若 <span class="arithmatex">\(f: (\mathbb{R}, \mathcal{B}_{\mathbb{R}}) \to (\mathbb{R}, \mathcal{B}_{\mathbb{R}})\)</span> 是可测的。</p>
+</li>
+<li>
+<p><strong>Lebesgue 可测函数</strong>：若 <span class="arithmatex">\(f: (\mathbb{R}, \mathcal{L}) \to (\mathbb{R}, \mathcal{B}_{\mathbb{R}})\)</span> 是可测的。</p>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">命题 2.1.1 (生成元判定法)</p>
+<p>若目标空间的 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{N}\)</span> 由集族 <span class="arithmatex">\(\Sigma\)</span> 生成（即 <span class="arithmatex">\(\mathcal{N} = \mathcal{M}(\Sigma)\)</span>），则 <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\((M, N)\)</span>-可测的，当且仅当：</p>
+<div class="arithmatex">\[
+\forall E \in \Sigma, \quad f^{-1}(E) \in \mathcal{M}
+\]</div>
+</div>
+<details class="proof">
+<summary>命题 2.1.1 的证明</summary>
+<p><strong>必要性</strong>：如果 <span class="arithmatex">\(f\)</span> 是可测的，由定义，对所有 <span class="arithmatex">\(E \in \mathcal{N}\)</span> 都有 <span class="arithmatex">\(f^{-1}(E) \in \mathcal{M}\)</span>。因为 <span class="arithmatex">\(\Sigma \subset \mathcal{N}\)</span>，自然对所有 <span class="arithmatex">\(E \in \Sigma\)</span> 成立。</p>
+<p><strong>充分性</strong>：构造集族 <span class="arithmatex">\(\mathcal{F} = \{E \subset Y : f^{-1}(E) \in \mathcal{M}\}\)</span>。由引理 2.1.1 知，因为逆像运算与集合的并、交、补运算完全交换，所以 <span class="arithmatex">\(\mathcal{F}\)</span> 是 <span class="arithmatex">\(Y\)</span> 上的一个 <span class="arithmatex">\(\sigma\)</span>-代数。
+根据条件，<span class="arithmatex">\(\Sigma \subset \mathcal{F}\)</span>。由于 <span class="arithmatex">\(\mathcal{N}\)</span> 是包含 <span class="arithmatex">\(\Sigma\)</span> 的最小 <span class="arithmatex">\(\sigma\)</span>-代数，必然有 <span class="arithmatex">\(\mathcal{N} = \mathcal{M}(\Sigma) \subset \mathcal{F}\)</span>。这说明对任意 <span class="arithmatex">\(E \in \mathcal{N}\)</span>，都有 <span class="arithmatex">\(f^{-1}(E) \in \mathcal{M}\)</span>，即 <span class="arithmatex">\(f\)</span> 是可测的。</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">推论 (连续映射的可测性)</p>
+<p>若 <span class="arithmatex">\(X, Y\)</span> 为拓扑空间，<span class="arithmatex">\(f: X \to Y\)</span> 是连续映射，则 <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\((\mathcal{B}_X, \mathcal{B}_Y)\)</span>-可测的（即 Borel 可测的）。</p>
+</div>
+<details class="proof">
+<summary>推论的证明</summary>
+<p>拓扑空间 <span class="arithmatex">\(Y\)</span> 的 Borel <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{B}_Y\)</span> 是由 <span class="arithmatex">\(Y\)</span> 中所有的开集族 <span class="arithmatex">\(\mathcal{T}_Y\)</span> 生成的。
+任取开集 <span class="arithmatex">\(V \in \mathcal{T}_Y\)</span>，由于 <span class="arithmatex">\(f\)</span> 是连续映射，其逆像 <span class="arithmatex">\(f^{-1}(V)\)</span> 必为 <span class="arithmatex">\(X\)</span> 中的开集。
+而 <span class="arithmatex">\(X\)</span> 中的开集显然属于其 Borel <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{B}_X\)</span>。根据命题 2.1.1，连续函数必然是 Borel 可测的。</p>
+</details>
+<hr />
+<h2 id="3">3. 实可测函数的等价条件</h2>
+<p>对于定义在实数轴上的函数，由于 Borel <span class="arithmatex">\(\sigma\)</span>-代数可以由各种形式的射线生成，我们有以下常用的等价判定准则。</p>
+<div class="admonition success">
+<p class="admonition-title">命题 2.1.2 (实可测函数的等价条件)</p>
+<p>对于映射 <span class="arithmatex">\(f: X \to \mathbb{R}\)</span>，下列命题是等价的：</p>
+<ul>
+<li>
+<p>(a) <span class="arithmatex">\(f\)</span> 是可测的（即 <span class="arithmatex">\(f^{-1}(B) \in \mathcal{M}, \forall B \in \mathcal{B}_{\mathbb{R}}\)</span>）。</p>
+</li>
+<li>
+<p>(b) 对于任何 <span class="arithmatex">\(a \in \mathbb{R}\)</span>，<span class="arithmatex">\(f^{-1}((a, +\infty)) = \{x \in X : f(x) &gt; a\} \in \mathcal{M}\)</span>。</p>
+</li>
+<li>
+<p>(c) 对于任何 <span class="arithmatex">\(a \in \mathbb{R}\)</span>，<span class="arithmatex">\(f^{-1}([a, +\infty)) = \{x \in X : f(x) \ge a\} \in \mathcal{M}\)</span>。</p>
+</li>
+<li>
+<p>(d) 对于任何 <span class="arithmatex">\(a \in \mathbb{R}\)</span>，<span class="arithmatex">\(f^{-1}((-\infty, a)) = \{x \in X : f(x) &lt; a\} \in \mathcal{M}\)</span>。</p>
+</li>
+<li>
+<p>(e) 对于任何 <span class="arithmatex">\(a \in \mathbb{R}\)</span>，<span class="arithmatex">\(f^{-1}((-\infty, a]) = \{x \in X : f(x) \le a\} \in \mathcal{M}\)</span>。</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>命题 2.1.2 的证明</summary>
+<p>因为 <span class="arithmatex">\(\mathbb{R}\)</span> 上的 Borel <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{B}_{\mathbb{R}}\)</span> 是由开射线族 <span class="arithmatex">\(\Sigma = \{(a, +\infty) : a \in \mathbb{R}\}\)</span> 生成的，根据命题 2.1.1，(a) 与 (b) 等价。
+接下来只需证明 (b), (c), (d), (e) 之间可以通过 <span class="arithmatex">\(\sigma\)</span>-代数的封闭性相互推导：</p>
+<ul>
+<li><strong>(b) <span class="arithmatex">\(\Rightarrow\)</span> (c)</strong>：由于 <span class="arithmatex">\([a, +\infty) = \bigcap_{n=1}^\infty (a - \frac{1}{n}, +\infty)\)</span>，两边取逆像得：</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}([a, +\infty)) = \bigcap_{n=1}^\infty f^{-1}\left(\left(a - \frac{1}{n}, +\infty\right)\right)
+\]</div>
+<p>由 (b) 知等号右边每个集合都在 <span class="arithmatex">\(\mathcal{M}\)</span> 中，根据 <span class="arithmatex">\(\sigma\)</span>-代数对可数交封闭，得出左边集合也在 <span class="arithmatex">\(\mathcal{M}\)</span> 中。</p>
+<ul>
+<li><strong>(c) <span class="arithmatex">\(\Rightarrow\)</span> (d)</strong>：由于 <span class="arithmatex">\((-\infty, a) = ([a, +\infty))^c\)</span>，两边取逆像得：</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}((-\infty, a)) = \left(f^{-1}([a, +\infty))\right)^c
+\]</div>
+<p>由 (c) 知 <span class="arithmatex">\(f^{-1}([a, +\infty)) \in \mathcal{M}\)</span>，再由 <span class="arithmatex">\(\sigma\)</span>-代数对补集封闭，得出原像属于 <span class="arithmatex">\(\mathcal{M}\)</span>。</p>
+<ul>
+<li>
+<p><strong>(d) <span class="arithmatex">\(\Rightarrow\)</span> (e)</strong>：类似于前面，利用 <span class="arithmatex">\((-\infty, a] = \bigcap_{n=1}^\infty (-\infty, a + \frac{1}{n})\)</span> 取逆像即可。</p>
+</li>
+<li>
+<p><strong>(e) <span class="arithmatex">\(\Rightarrow\)</span> (b)</strong>：利用 <span class="arithmatex">\((a, +\infty) = ((-\infty, a])^c\)</span> 取逆像和补集即可完成循环论证。</p>
+</li>
+</ul>
+</details>
+<hr />
+<h2 id="4">4. 局部可测性与复合、积空间</h2>
+<div class="admonition info">
+<p class="admonition-title">定义 2.1.2 (局部可测性)</p>
+<p>设 <span class="arithmatex">\(E \in \mathcal{M}\)</span> 为一个可测集。称函数 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(E\)</span> 上是可测的，如果对于任意 <span class="arithmatex">\(B \in \mathcal{B}_{\mathbb{R}}\)</span>，有：</p>
+<div class="arithmatex">\[
+\{x \in E : f(x) \in B\} \in \mathcal{M}
+\]</div>
+<p>这等价于将全空间限制为 <span class="arithmatex">\(E\)</span>，即 <span class="arithmatex">\(f|_E\)</span> 在子 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{M}_E = \{A \cap E : A \in \mathcal{M}\}\)</span> 意义下是可测的。</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">定理 2.1.2 (复合性质)</p>
+<p>若 <span class="arithmatex">\(f: X \to Y\)</span> 是 <span class="arithmatex">\((M, N)\)</span>-可测的，<span class="arithmatex">\(g: Y \to Z\)</span> 是 <span class="arithmatex">\((N, P)\)</span>-可测的，则复合映射 <span class="arithmatex">\(g \circ f: X \to Z\)</span> 是 <span class="arithmatex">\((M, P)\)</span>-可测的。</p>
+</div>
+<details class="proof">
+<summary>定理 2.1.2 的证明</summary>
+<p>对于任意 <span class="arithmatex">\(E \in P\)</span>，由于 <span class="arithmatex">\(g\)</span> 是 <span class="arithmatex">\((N, P)\)</span>-可测的，有 <span class="arithmatex">\(g^{-1}(E) \in N\)</span>。
+又因为 <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\((M, N)\)</span>-可测的，故 <span class="arithmatex">\(f^{-1}(g^{-1}(E)) \in M\)</span>。
+显然 <span class="arithmatex">\((g \circ f)^{-1}(E) = f^{-1}(g^{-1}(E)) \in M\)</span>，得证。特别地，可测函数与连续函数的复合依然是可测的。</p>
+</details>
+<p>对于积空间 <span class="arithmatex">\(Y = \prod_{\alpha \in A} Y_{\alpha}\)</span> 及其上的乘积 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{N} = \bigotimes_{\alpha \in A} \mathcal{N}_{\alpha}\)</span>，设 <span class="arithmatex">\(\pi_\alpha : Y \to Y_\alpha\)</span> 为投影映射。</p>
+<div class="admonition success">
+<p class="admonition-title">命题 2.1.3 (积空间的可测性)</p>
+<p>映射 <span class="arithmatex">\(f: X \to Y\)</span> 是 <span class="arithmatex">\((M, N)\)</span>-可测的，当且仅当其每个坐标映射 <span class="arithmatex">\(f_{\alpha} = \pi_{\alpha} \circ f\)</span> 都是 <span class="arithmatex">\((M, N_{\alpha})\)</span>-可测的。</p>
+</div>
+<details class="proof">
+<summary>命题 2.1.3 的证明</summary>
+<p><strong>必要性 (<span class="arithmatex">\(\Rightarrow\)</span>)</strong>：若 <span class="arithmatex">\(f\)</span> 可测，由于投影映射 <span class="arithmatex">\(\pi_\alpha\)</span> 总是 <span class="arithmatex">\((N, N_\alpha)\)</span>-可测的，根据复合性质，<span class="arithmatex">\(f_\alpha = \pi_\alpha \circ f\)</span> 必定是 <span class="arithmatex">\((M, N_\alpha)\)</span>-可测的。</p>
+<p><strong>充分性 (<span class="arithmatex">\(\Leftarrow\)</span>)</strong>：乘积 <span class="arithmatex">\(\sigma\)</span>-代数 <span class="arithmatex">\(\mathcal{N}\)</span> 是由集族 <span class="arithmatex">\(\Sigma = \{\pi_\alpha^{-1}(E_\alpha) : E_\alpha \in N_\alpha, \alpha \in A\}\)</span> 生成的。
+对于 <span class="arithmatex">\(\Sigma\)</span> 中的任意元素，其逆像为：</p>
+<div class="arithmatex">\[
+f^{-1}(\pi_\alpha^{-1}(E_\alpha)) = ( \pi_\alpha \circ f )^{-1}(E_\alpha) = f_\alpha^{-1}(E_\alpha)
+\]</div>
+<p>由假设 <span class="arithmatex">\(f_\alpha\)</span> 可测，所以上式属于 <span class="arithmatex">\(\mathcal{M}\)</span>。再根据生成元判定法（命题 2.1.1），<span class="arithmatex">\(f\)</span> 是可测的。</p>
+</details>
 
 
 

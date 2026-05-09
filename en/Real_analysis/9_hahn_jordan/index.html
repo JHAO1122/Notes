@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#41-signed-measures-and-hahn-jordan-decomposition" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2880,6 +2885,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Hahn-Jordan Decomposition
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2897,6 +2922,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-concepts-of-signed-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Basic Concepts of Signed Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-positive-negative-and-null-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Positive, Negative, and Null Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hahn-decomposition-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hahn Decomposition Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jordan-decomposition-theorem-and-total-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Jordan Decomposition Theorem and Total Variation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Jordan Decomposition Theorem and Total Variation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-signed-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration of Signed Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4398,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-concepts-of-signed-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Basic Concepts of Signed Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-positive-negative-and-null-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Positive, Negative, and Null Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hahn-decomposition-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hahn Decomposition Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jordan-decomposition-theorem-and-total-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Jordan Decomposition Theorem and Total Variation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Jordan Decomposition Theorem and Total Variation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-signed-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration of Signed Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4489,180 @@
   
 
 
-  <h1>Ch 9: Hahn-Jordan Decomposition</h1>
-
-
+<h1 id="41-signed-measures-and-hahn-jordan-decomposition">4.1 Signed Measures and Hahn-Jordan Decomposition</h1>
+<p>In previous chapters, measures were always defined as non-negative set functions (representing length, area, volume, or probability). However, in many physical and mathematical scenarios (such as charge distributions which can be positive or negative, or the difference between two integrals), we need to allow "measures" to take negative values. This leads to the concept of <strong>Signed Measures</strong>, also known as <strong>variable-sign measures</strong>.</p>
+<hr />
+<h2 id="1-basic-concepts-of-signed-measures">1. Basic Concepts of Signed Measures</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1.1 (Signed Measure)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M})\)</span> be a measurable space. A set function <span class="arithmatex">\(\nu: \mathcal{M} \to [-\infty, +\infty]\)</span> is called a <strong>signed measure</strong> if it satisfies the following three conditions:</p>
+<ul>
+<li><strong>Zero for the empty set</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+\nu(\emptyset) = 0
+\]</div>
+<ul>
+<li>
+<p><strong>Takes at most one infinity</strong>: <span class="arithmatex">\(\nu\)</span> can take at most one of the values <span class="arithmatex">\(+\infty\)</span> or <span class="arithmatex">\(-\infty\)</span> (to avoid meaningless operations like <span class="arithmatex">\(\infty - \infty\)</span>).</p>
+</li>
+<li>
+<p><strong>Countable additivity</strong>: For any sequence of disjoint sets <span class="arithmatex">\(\{E_j\}_{j=1}^\infty\)</span> in <span class="arithmatex">\(\mathcal{M}\)</span>, we have:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\nu\left(\bigcup_{j=1}^\infty E_j\right) = \sum_{j=1}^\infty \nu(E_j)
+\]</div>
+<p>Furthermore, if the measure of the union <span class="arithmatex">\(\nu\left(\bigcup_{j=1}^\infty E_j\right)\)</span> is finite, then the above series must be <strong>absolutely convergent</strong>.</p>
+</div>
+<ul>
+<li><strong>Note 1</strong>: Ordinary measures (non-negative measures) are naturally a special case of signed measures.</li>
+<li><strong>Note 2</strong>: The most typical example of a signed measure is one induced by an integral. Let <span class="arithmatex">\(\mu\)</span> be a general measure and <span class="arithmatex">\(f\)</span> be a variable-sign <span class="arithmatex">\(\mu\)</span>-integrable function (or at least the integral of its positive or negative part is finite). Define:</li>
+</ul>
+<div class="arithmatex">\[
+\nu(E) = \int_E f \, d\mu
+\]</div>
+<p>Then <span class="arithmatex">\(\nu\)</span> is a signed measure.</p>
+<hr />
+<h2 id="2-positive-negative-and-null-sets">2. Positive, Negative, and Null Sets</h2>
+<p>For signed measures, since the measure of a set can be canceled out by positive and negative components, simply knowing <span class="arithmatex">\(\nu(E) &gt; 0\)</span> does not imply that <span class="arithmatex">\(E\)</span> is "positive" internally (it might just mean the positive part is larger than the negative part). Therefore, we need to strictly define what a "purely" positive set is.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1.2 (Positive, Negative, and Null Sets)</p>
+<p>Let <span class="arithmatex">\(\nu\)</span> be a signed measure on <span class="arithmatex">\((X, \mathcal{M})\)</span>, and <span class="arithmatex">\(E \in \mathcal{M}\)</span>.</p>
+<ul>
+<li>
+<p><strong>Positive Set</strong>: If for <strong>every</strong> measurable subset <span class="arithmatex">\(F \subset E\)</span> (<span class="arithmatex">\(F \in \mathcal{M}\)</span>), we have <span class="arithmatex">\(\nu(F) \ge 0\)</span>, then <span class="arithmatex">\(E\)</span> is called a positive set for <span class="arithmatex">\(\nu\)</span>.</p>
+</li>
+<li>
+<p><strong>Negative Set</strong>: If for every measurable subset <span class="arithmatex">\(F \subset E\)</span>, we have <span class="arithmatex">\(\nu(F) \le 0\)</span>, then <span class="arithmatex">\(E\)</span> is called a negative set for <span class="arithmatex">\(\nu\)</span>.</p>
+</li>
+<li>
+<p><strong>Null Set</strong>: If for every measurable subset <span class="arithmatex">\(F \subset E\)</span>, we have <span class="arithmatex">\(\nu(F) = 0\)</span>, then <span class="arithmatex">\(E\)</span> is called a null set for <span class="arithmatex">\(\nu\)</span>.</p>
+</li>
+</ul>
+</div>
+<p>Obviously, a null set is both a positive set and a negative set. At the same time, it is important to distinguish between a "null set" and a "set with measure zero": a set with measure zero might contain subsets with positive and negative measures that cancel each other out, but all subsets of a null set must strictly have measure 0.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma 4.1.1</p>
+<p>The union of any countable collection of positive sets is still a positive set.</p>
+</div>
+<details class="proof">
+<summary>Proof of Lemma 4.1.1</summary>
+<p>Let <span class="arithmatex">\(\{P_j\}_{j=1}^\infty\)</span> be a sequence of positive sets. We wish to prove that <span class="arithmatex">\(P = \bigcup_{j=1}^\infty P_j\)</span> is also a positive set.</p>
+<p>First, we orthogonalize (disjointify) this sequence of sets. Define:</p>
+<div class="arithmatex">\[
+E_n = P_n \setminus \bigcup_{j=1}^{n-1} P_j
+\]</div>
+<p>Clearly <span class="arithmatex">\(E_n \subset P_n\)</span>. Since any measurable subset of a positive set remains a positive set, all <span class="arithmatex">\(E_n\)</span> are positive sets, they are pairwise disjoint, and <span class="arithmatex">\(\bigcup_{n=1}^\infty E_n = P\)</span>.</p>
+<p>Now take any <span class="arithmatex">\(F \subset P\)</span> with <span class="arithmatex">\(F \in \mathcal{M}\)</span>. We can decompose <span class="arithmatex">\(F\)</span> as <span class="arithmatex">\(F = \bigcup_{n=1}^\infty (F \cap E_n)\)</span>.
+Since <span class="arithmatex">\(F \cap E_n \subset E_n\)</span> and <span class="arithmatex">\(E_n\)</span> is a positive set, <span class="arithmatex">\(\nu(F \cap E_n) \ge 0\)</span>.</p>
+<p>Using the countable additivity of signed measures:</p>
+<div class="arithmatex">\[
+\nu(F) = \sum_{n=1}^\infty \nu(F \cap E_n) \ge 0
+\]</div>
+<p>This proves that <span class="arithmatex">\(P\)</span> is a positive set.</p>
+</details>
+<hr />
+<h2 id="3-hahn-decomposition-theorem">3. Hahn Decomposition Theorem</h2>
+<p>The Hahn Decomposition Theorem points to an extremely beautiful geometric picture: for any signed measure, we can always "cleanly" cut the entire space into a completely positive half and a completely negative half, with no ambiguous zones.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.1.1 (Hahn Decomposition Theorem)</p>
+<p>Let <span class="arithmatex">\(\nu\)</span> be a signed measure on the measurable space <span class="arithmatex">\((X, \mathcal{M})\)</span>.</p>
+<p>Then there must exist a positive set <span class="arithmatex">\(P\)</span> and a negative set <span class="arithmatex">\(N\)</span> satisfying:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(P \cup N = X\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P \cap N = \emptyset\)</span></p>
+</li>
+</ul>
+<p>This pair of decomposition <span class="arithmatex">\((P, N)\)</span> is called the <strong>Hahn decomposition</strong> of space <span class="arithmatex">\(X\)</span> with respect to <span class="arithmatex">\(\nu\)</span>. Furthermore, this decomposition is unique up to a <span class="arithmatex">\(\nu\)</span>-null set.</p>
+</div>
+<details class="proof">
+<summary>Proof of Hahn Decomposition Theorem (Core Idea Outline)</summary>
+<p>Without loss of generality, we assume the signed measure <span class="arithmatex">\(\nu\)</span> does not take the value <span class="arithmatex">\(+\infty\)</span> (if it does not take <span class="arithmatex">\(-\infty\)</span>, simply prove for <span class="arithmatex">\(-\nu\)</span>). This means <span class="arithmatex">\(\nu\)</span> is bounded from above on all measurable sets.</p>
+<p><strong>Step 1: Extract the largest positive set</strong></p>
+<p>Define <span class="arithmatex">\(m = \sup\{\nu(A) \mid A \text{ is a positive set}\}\)</span>. Since the empty set is a positive set and <span class="arithmatex">\(\nu(\emptyset) = 0\)</span>, we have <span class="arithmatex">\(m \ge 0\)</span>.
+By the definition of supremum, there exists a sequence of positive sets <span class="arithmatex">\(\{P_j\}\)</span> such that <span class="arithmatex">\(\lim_{j \to \infty} \nu(P_j) = m\)</span>.
+Let <span class="arithmatex">\(P = \bigcup_{j=1}^\infty P_j\)</span>. By Lemma 4.1.1, <span class="arithmatex">\(P\)</span> is also a positive set. Therefore <span class="arithmatex">\(\nu(P) \le m\)</span>.
+Since <span class="arithmatex">\(P_j \subset P\)</span> and <span class="arithmatex">\(P\)</span> is a positive set, <span class="arithmatex">\(\nu(P) = \nu(P_j) + \nu(P \setminus P_j) \ge \nu(P_j)\)</span>. Letting <span class="arithmatex">\(j \to \infty\)</span>, we obtain <span class="arithmatex">\(\nu(P) \ge m\)</span>.
+In summary, <span class="arithmatex">\(\nu(P) = m\)</span>. Since <span class="arithmatex">\(\nu\)</span> does not take <span class="arithmatex">\(+\infty\)</span>, <span class="arithmatex">\(m &lt; \infty\)</span>.</p>
+<p><strong>Step 2: Prove the remaining part is a negative set</strong></p>
+<p>Let <span class="arithmatex">\(N = X \setminus P\)</span>. We claim that <span class="arithmatex">\(N\)</span> is a negative set.
+Suppose for contradiction that <span class="arithmatex">\(N\)</span> is not a negative set, then <span class="arithmatex">\(N\)</span> must contain a subset <span class="arithmatex">\(E\)</span> with measure strictly greater than 0. However, <span class="arithmatex">\(E\)</span> might not be a positive set (it might contain negative components).
+Through a process of continuously removing negative subsets (an exhaustion method), we can extract a true positive set <span class="arithmatex">\(A \subset E\)</span> from <span class="arithmatex">\(E\)</span> with <span class="arithmatex">\(\nu(A) &gt; 0\)</span>.</p>
+<p>Now, consider the set <span class="arithmatex">\(P \cup A\)</span>. Since <span class="arithmatex">\(P\)</span> is a positive set, <span class="arithmatex">\(A\)</span> is a positive set, and they are disjoint, <span class="arithmatex">\(P \cup A\)</span> is a new positive set.
+Calculate its measure:</p>
+<div class="arithmatex">\[
+\nu(P \cup A) = \nu(P) + \nu(A) = m + \nu(A) &gt; m
+\]</div>
+<p>This contradicts the fact that <span class="arithmatex">\(m\)</span> is the supremum of the measures of all positive sets!
+Therefore, <span class="arithmatex">\(N\)</span> cannot contain any subset with positive measure; <span class="arithmatex">\(N\)</span> must be a negative set.</p>
+<p><strong>Step 3: Uniqueness</strong></p>
+<p>Suppose there exists another Hahn decomposition <span class="arithmatex">\((P', N')\)</span>. Consider <span class="arithmatex">\(P \setminus P'\)</span>.
+Since <span class="arithmatex">\(P \setminus P' \subset P\)</span>, it is a positive set with measure <span class="arithmatex">\(\ge 0\)</span>.
+At the same time, <span class="arithmatex">\(P \setminus P' \subset N'\)</span> (since the space is split complementarily), so it is also a negative set with measure <span class="arithmatex">\(\le 0\)</span>.
+This implies <span class="arithmatex">\(P \setminus P'\)</span> must be a null set. Similarly, all other differences between the parts can be proved to be null sets.</p>
+</details>
+<hr />
+<h2 id="4-jordan-decomposition-theorem-and-total-variation">4. Jordan Decomposition Theorem and Total Variation</h2>
+<p>Using the Hahn decomposition, we can naturally split a signed measure into the difference of two independent, non-negative ordinary measures.</p>
+<p>First, we need to define the "independence" between measures, namely <strong>Mutually Singular</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1.3 (Mutually Singular Measures)</p>
+<p>Let <span class="arithmatex">\(\mu_1, \mu_2\)</span> be two non-negative measures on the same measurable space. If there exist disjoint sets <span class="arithmatex">\(E, F \in \mathcal{M}\)</span> such that:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(E \cup F = X\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mu_1(F) = 0\)</span> and <span class="arithmatex">\(\mu_2(E) = 0\)</span></p>
+</li>
+</ul>
+<p>Then the measures <span class="arithmatex">\(\mu_1\)</span> and <span class="arithmatex">\(\mu_2\)</span> are said to be <strong>mutually singular</strong>, denoted as <span class="arithmatex">\(\mu_1 \perp \mu_2\)</span>. Intuitively, this means the two measures "live" on disjoint territories.</p>
+</div>
+<p>Based on the concept of mutual singularity, we introduce the Jordan decomposition:</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.1.2 (Jordan Decomposition Theorem)</p>
+<p>Any signed measure <span class="arithmatex">\(\nu\)</span> can be <strong>uniquely</strong> decomposed into the difference of two mutually singular non-negative measures, namely:</p>
+<div class="arithmatex">\[
+\nu = \nu^+ - \nu^-
+\]</div>
+<p>And <span class="arithmatex">\(\nu^+ \perp \nu^-\)</span>. This is called the <strong>Jordan decomposition</strong> of <span class="arithmatex">\(\nu\)</span>. <span class="arithmatex">\(\nu^+\)</span> is called the positive variation, and <span class="arithmatex">\(\nu^-\)</span> is called the negative variation.</p>
+</div>
+<details class="proof">
+<summary>Construction and Proof of Jordan Decomposition Theorem</summary>
+<p>Let <span class="arithmatex">\((P, N)\)</span> be the Hahn decomposition of <span class="arithmatex">\(X\)</span> with respect to <span class="arithmatex">\(\nu\)</span>.
+For any measurable set <span class="arithmatex">\(E \in \mathcal{M}\)</span>, we define:</p>
+<div class="arithmatex">\[
+\nu^+(E) = \nu(E \cap P)
+\]</div>
+<div class="arithmatex">\[
+\nu^-(E) = -\nu(E \cap N)
+\]</div>
+<p>Clearly:
+1. Since <span class="arithmatex">\(P\)</span> is a positive set and <span class="arithmatex">\(N\)</span> is a negative set, <span class="arithmatex">\(\nu^+\)</span> and <span class="arithmatex">\(\nu^-\)</span> are both non-negative measures.
+2. For any <span class="arithmatex">\(E \in \mathcal{M}\)</span>, we have <span class="arithmatex">\(\nu(E) = \nu(E \cap P) + \nu(E \cap N) = \nu^+(E) - \nu^-(E)\)</span>.
+3. Taking <span class="arithmatex">\(E=P, F=N\)</span>, obviously <span class="arithmatex">\(P \cup N = X\)</span>. Since <span class="arithmatex">\(\nu^-(P) = -\nu(P \cap N) = \nu(\emptyset) = 0\)</span>, and similarly <span class="arithmatex">\(\nu^+(N) = 0\)</span>, this proves <span class="arithmatex">\(\nu^+ \perp \nu^-\)</span>.</p>
+<p>Regarding uniqueness, any decomposition satisfying <span class="arithmatex">\(\nu = \lambda^+ - \lambda^-\)</span> and <span class="arithmatex">\(\lambda^+ \perp \lambda^-\)</span> must have support sets that constitute a Hahn decomposition of the original signed measure. From the uniqueness of the Hahn decomposition (up to a null set), the uniqueness of the Jordan decomposition measures follows.</p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1.4 (Total Variation)</p>
+<p>For a signed measure <span class="arithmatex">\(\nu = \nu^+ - \nu^-\)</span>, we define its <strong>total variation</strong> as:</p>
+<div class="arithmatex">\[
+|\nu| = \nu^+ + \nu^-
+\]</div>
+<p><span class="arithmatex">\(|\nu|\)</span> is a standard non-negative measure. If <span class="arithmatex">\(|\nu|(X) &lt; \infty\)</span>, then <span class="arithmatex">\(\nu\)</span> is called a finite signed measure.
+For any set <span class="arithmatex">\(E\)</span>, the total variation measure satisfies <span class="arithmatex">\(|\nu(E)| \le |\nu|(E)\)</span>.</p>
+</div>
+<h3 id="integration-of-signed-measures">Integration of Signed Measures</h3>
+<p>For a signed measure <span class="arithmatex">\(\nu = \nu^+ - \nu^-\)</span>, since <span class="arithmatex">\(\nu^+\)</span> and <span class="arithmatex">\(\nu^-\)</span> are both ordinary non-negative measures, we can naturally define integration with respect to a signed measure.</p>
+<p>Let <span class="arithmatex">\(f\)</span> be a measurable function. If <span class="arithmatex">\(\int |f| d|\nu| &lt; \infty\)</span> (i.e., <span class="arithmatex">\(f \in L^1(|\nu|)\)</span>), then the integral of <span class="arithmatex">\(f\)</span> with respect to <span class="arithmatex">\(\nu\)</span> is defined as:</p>
+<div class="arithmatex">\[
+\int_X f \, d\nu = \int_X f \, d\nu^+ - \int_X f \, d\nu^-
+\]</div>
+<p>Thus, it can be seen that the space of integrable functions is entirely determined by the total variation measure, i.e., <span class="arithmatex">\(L^1(\nu) = L^1(|\nu|)\)</span>.</p>
 
 
 

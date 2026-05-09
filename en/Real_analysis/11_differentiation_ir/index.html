@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#43-differentiation-on-the-real-line-and-the-fundamental-theorem-of-calculus" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2936,6 +2941,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Fundamental Theorem of Calculus
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2953,6 +2978,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-differentiation-of-measures-and-the-hardylittlewood-maximal-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Differentiation of Measures and the Hardy–Littlewood Maximal Function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-functions-of-bounded-variation-bv-and-borel-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Functions of Bounded Variation (BV) and Borel Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-absolutely-continuous-functions-ac-and-the-fundamental-theorem-of-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Absolutely Continuous Functions (AC) and the Fundamental Theorem of Calculus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lebesgue-decomposition-of-measures-and-singular-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Lebesgue Decomposition of Measures and Singular Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-differentiation-of-measures-and-the-hardylittlewood-maximal-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Differentiation of Measures and the Hardy–Littlewood Maximal Function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-functions-of-bounded-variation-bv-and-borel-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Functions of Bounded Variation (BV) and Borel Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-absolutely-continuous-functions-ac-and-the-fundamental-theorem-of-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Absolutely Continuous Functions (AC) and the Fundamental Theorem of Calculus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lebesgue-decomposition-of-measures-and-singular-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Lebesgue Decomposition of Measures and Singular Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,189 @@
   
 
 
-  <h1>Ch 11: Fundamental Theorem of Calculus</h1>
-
-
+<h1 id="43-differentiation-on-the-real-line-and-the-fundamental-theorem-of-calculus">4.3 Differentiation on the Real Line and the Fundamental Theorem of Calculus</h1>
+<p>In classical mathematical analysis, the Fundamental Theorem of Calculus (Newton–Leibniz formula) reveals the inverse relationship between differentiation and integration. Within the framework of Lebesgue integration and measure theory, not only can integration be extended to abstract measure spaces, but the concept of "derivative" can also be generalized to the derivative of a measure with respect to another measure (i.e., the Radon–Nikodym derivative). In this section, we return to the real line <span class="arithmatex">\(\mathbb{R}\)</span> and <span class="arithmatex">\(\mathbb{R}^n\)</span>, exploring the differential properties of locally integrable functions, functions of bounded variation, absolutely continuous functions, and finally present the Fundamental Theorem of Calculus in the Lebesgue sense.</p>
+<hr />
+<h2 id="1-differentiation-of-measures-and-the-hardylittlewood-maximal-function">1. Differentiation of Measures and the Hardy–Littlewood Maximal Function</h2>
+<p>In <span class="arithmatex">\(\mathbb{R}^n\)</span>, we attempt to define the "derivative" of a measure by examining the average density of the measure in small balls near a point. Let <span class="arithmatex">\(\nu\)</span> be a complex measure or signed measure on <span class="arithmatex">\(\mathbb{R}^n\)</span> and let <span class="arithmatex">\(m\)</span> be Lebesgue measure. Define the derivative at a point <span class="arithmatex">\(x\)</span> as</p>
+<div class="arithmatex">\[
+F(x) := \lim_{r \to 0} \frac{\nu(B(r, x))}{m(B(r, x))}
+\]</div>
+<p>If <span class="arithmatex">\(d\nu = f\,dm\)</span>, i.e., <span class="arithmatex">\(\nu\)</span> is absolutely continuous with respect to <span class="arithmatex">\(m\)</span> with density <span class="arithmatex">\(f\)</span>, then the above limit can be written as the average of <span class="arithmatex">\(f\)</span> over the ball <span class="arithmatex">\(B(r, x)\)</span>:</p>
+<div class="arithmatex">\[
+\frac{\nu(B(r, x))}{m(B(r, x))} = \frac{\int_{B(r, x)} f(y) \, dm(y)}{\int_{B(r, x)} 1 \, dm(y)}
+\]</div>
+<p>We naturally hope that as <span class="arithmatex">\(r \to 0\)</span>, this average converges to <span class="arithmatex">\(f(x)\)</span> almost everywhere. To prove this, we need to introduce a powerful tool in analysis—the Hardy–Littlewood maximal function.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.3.1 (Locally Integrable and Averaging Operator)</p>
+<ul>
+<li>
+<p><strong>Locally integrable space <span class="arithmatex">\(L_{\text{loc}}^1(\mathbb{R}^n)\)</span></strong>: A function <span class="arithmatex">\(f: \mathbb{R}^n \to \mathbb{C}\)</span> is said to belong to <span class="arithmatex">\(L_{\text{loc}}^1(\mathbb{R}^n)\)</span> if it is Lebesgue integrable on every compact (or bounded) set, i.e., for every measurable set <span class="arithmatex">\(K\)</span> of finite measure we have <span class="arithmatex">\(\int_K |f|\,dm &lt; \infty\)</span>.</p>
+</li>
+<li>
+<p><strong>Averaging operator <span class="arithmatex">\(A_r f(x)\)</span></strong>: For <span class="arithmatex">\(f \in L_{\text{loc}}^1(\mathbb{R}^n)\)</span>, define its average over the open ball <span class="arithmatex">\(B(r, x)\)</span> of radius <span class="arithmatex">\(r\)</span> centered at <span class="arithmatex">\(x\)</span> as</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+A_r f(x) = \frac{1}{m(B(r, x))} \int_{B(r, x)} f(y) \, dy
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.3.2 (Hardy–Littlewood Maximal Function)</p>
+<p>For <span class="arithmatex">\(f \in L_{\text{loc}}^1(\mathbb{R}^n)\)</span>, define the maximal function as the supremum of absolute averages over all radii <span class="arithmatex">\(r &gt; 0\)</span>:</p>
+<div class="arithmatex">\[
+Hf(x) = \sup_{r &gt; 0} A_r |f|(x) = \sup_{r &gt; 0} \frac{1}{m(B(r, x))} \int_{B(r, x)} |f(y)| \, dy
+\]</div>
+</div>
+<p>The maximal function <span class="arithmatex">\(Hf(x)\)</span> describes the most extreme local oscillation of <span class="arithmatex">\(f\)</span> near <span class="arithmatex">\(x\)</span>. The most important property of the maximal function is that it satisfies a <strong>weak type (1,1) inequality</strong>, i.e., the tail probability is controlled by the <span class="arithmatex">\(L^1\)</span> norm of the original function.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.3.1 (Maximal Theorem)</p>
+<p>If <span class="arithmatex">\(f \in L^1(\mathbb{R}^n)\)</span>, then for any <span class="arithmatex">\(\alpha &gt; 0\)</span>, the Lebesgue measure of the level set <span class="arithmatex">\(E_\alpha = \{x : Hf(x) &gt; \alpha\}\)</span> satisfies</p>
+<div class="arithmatex">\[
+m(\{x : Hf(x) &gt; \alpha\}) \le \frac{3^n}{\alpha} \int_{\mathbb{R}^n} |f| \, dm
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof Outline of the Maximal Theorem (Covering Lemma)</summary>
+<p>Take any <span class="arithmatex">\(x \in E_\alpha\)</span>. By the definition of supremum, there exists a radius <span class="arithmatex">\(r_x &gt; 0\)</span> such that the average over that ball exceeds <span class="arithmatex">\(\alpha\)</span>:</p>
+<div class="arithmatex">\[
+\frac{1}{m(B(r_x, x))} \int_{B(r_x, x)} |f| \, dm &gt; \alpha \quad \Longrightarrow \quad m(B(r_x, x)) &lt; \frac{1}{\alpha} \int_{B(r_x, x)} |f| \, dm
+\]</div>
+<p>All these balls <span class="arithmatex">\(\{B(r_x, x)\}_{x \in E_\alpha}\)</span> form an open cover of <span class="arithmatex">\(E_\alpha\)</span>.</p>
+<p>Using the <strong>Wiener/Vitali covering lemma</strong>, we can select a <strong>disjoint</strong> finite or countable subcollection <span class="arithmatex">\(\{B_j\}_{j=1}^\infty\)</span> such that after expanding the radii of these selected balls by a factor of 3, the expanded balls cover the core part of the original cover, even every bounded subset. By the geometric property of the covering lemma, the measure magnification factor is <span class="arithmatex">\(3^n\)</span>:</p>
+<div class="arithmatex">\[
+m(E_\alpha) \le m\left(\bigcup_{j} 3 B_j\right) \le 3^n \sum_j m(B_j)
+\]</div>
+<p>Since the balls <span class="arithmatex">\(B_j\)</span> are disjoint, we can estimate the sum:</p>
+<div class="arithmatex">\[
+m(E_\alpha) \le 3^n \sum_j \frac{1}{\alpha} \int_{B_j} |f| \, dm \le \frac{3^n}{\alpha} \int_{\bigcup B_j} |f| \, dm \le \frac{3^n}{\alpha} \int_{\mathbb{R}^n} |f| \, dm
+\]</div>
+<p>The theorem is proved.</p>
+</details>
+<p>Using the maximal theorem, we can prove one of the most beautiful theorems in real analysis—the Lebesgue differentiation theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.3.2 (Lebesgue Differentiation Theorem)</p>
+<p>If <span class="arithmatex">\(f \in L_{\text{loc}}^1(\mathbb{R}^n)\)</span>, then for almost every <span class="arithmatex">\(x \in \mathbb{R}^n\)</span> (i.e., except on a Lebesgue null set), we have</p>
+<div class="arithmatex">\[
+\lim_{r \to 0} A_r f(x) = f(x)
+\]</div>
+<p>More strongly, almost every <span class="arithmatex">\(x\)</span> is actually a <strong>Lebesgue point</strong> of <span class="arithmatex">\(f\)</span>, satisfying</p>
+<div class="arithmatex">\[
+\lim_{r \to 0} \frac{1}{m(B(r, x))} \int_{B(r, x)} |f(y) - f(x)| \, dy = 0
+\]</div>
+</div>
+<hr />
+<h2 id="2-functions-of-bounded-variation-bv-and-borel-measures">2. Functions of Bounded Variation (BV) and Borel Measures</h2>
+<p>On the one-dimensional real line <span class="arithmatex">\(\mathbb{R}\)</span>, signed (or complex) measures can be described by cumulative distribution functions. However, while monotone functions correspond to non‑negative measures, signed measures correspond to <strong>functions of bounded variation</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.3.3 (Function of Bounded Variation, BV)</p>
+<p>Let <span class="arithmatex">\(F: \mathbb{R} \to \mathbb{C}\)</span>. If for any finite strictly increasing partition points <span class="arithmatex">\(x_0 &lt; x_1 &lt; \dots &lt; x_n\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span>, the sum of absolute differences has a uniform upper bound, i.e., the total variation</p>
+<div class="arithmatex">\[
+T_F(x) = \sup \sum_{j=1}^n |F(x_j) - F(x_{j-1})| &lt; \infty
+\]</div>
+<p>then <span class="arithmatex">\(F\)</span> is called a <strong>function of bounded variation</strong>, denoted <span class="arithmatex">\(F \in BV\)</span>.</p>
+</div>
+<p>Any function of bounded variation can be decomposed as the difference of two monotone increasing functions (Jordan decomposition). To establish a one‑to‑one correspondence with Borel measures, we need to normalize BV functions, analogous to requiring measures to be right‑continuous and vanishing at <span class="arithmatex">\(-\infty\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.3.4 (Normalized Bounded Variation Space NBV)</p>
+<p>The space of <strong>normalized bounded variation functions (NBV)</strong> consists of all BV functions <span class="arithmatex">\(F\)</span> satisfying the following two conditions:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(F\)</span> is right‑continuous, i.e., <span class="arithmatex">\(F(x^+) = F(x)\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(F\)</span> vanishes at <span class="arithmatex">\(-\infty\)</span>, i.e., <span class="arithmatex">\(F(-\infty) = \lim_{x \to -\infty} F(x) = 0\)</span>.</p>
+</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.3.3 (Correspondence between NBV and Borel Measures)</p>
+<ul>
+<li>
+<p>If <span class="arithmatex">\(\nu\)</span> is a finite complex Borel measure on <span class="arithmatex">\(\mathbb{R}\)</span>, define <span class="arithmatex">\(F(x) = \nu((-\infty, x])\)</span>. Then <span class="arithmatex">\(F \in NBV\)</span>.</p>
+</li>
+<li>
+<p>Conversely, if <span class="arithmatex">\(F \in NBV\)</span>, then there exists a <strong>unique</strong> finite complex Borel measure <span class="arithmatex">\(\mu_F\)</span> such that for any interval, <span class="arithmatex">\(\mu_F((a, b]) = F(b) - F(a)\)</span>.</p>
+</li>
+<li>
+<p>In this case, the total variation measure corresponds perfectly to the total variation function: <span class="arithmatex">\(|\mu_F| = \mu_{T_F}\)</span>.</p>
+</li>
+</ul>
+</div>
+<p>Since any function of bounded variation can be decomposed into monotone functions, and monotone functions are differentiable almost everywhere by Lebesgue's result, we have the following corollary:</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 4.3.1 (Differentiability of NBV Functions)</p>
+<ul>
+<li>
+<p>If <span class="arithmatex">\(F \in NBV\)</span>, then <span class="arithmatex">\(F\)</span> is differentiable almost everywhere and its derivative <span class="arithmatex">\(F' \in L^1(m)\)</span>.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\mu_F \perp m\)</span> (i.e., <span class="arithmatex">\(\mu_F\)</span> is singular with respect to Lebesgue measure), then <span class="arithmatex">\(F'(x) = 0\)</span> a.e.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="3-absolutely-continuous-functions-ac-and-the-fundamental-theorem-of-calculus">3. Absolutely Continuous Functions (AC) and the Fundamental Theorem of Calculus</h2>
+<p>Although NBV functions are differentiable almost everywhere, the Newton–Leibniz formula does not hold for all of them. To make the Fundamental Theorem of Calculus strictly valid, we need a class of functions that is stronger than continuous functions, where "small local fluctuations cannot accumulate into a large jump" — <strong>absolutely continuous functions</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.3.5 (Absolutely Continuous Function, AC)</p>
+<p>A function <span class="arithmatex">\(F: [a, b] \to \mathbb{C}\)</span> is said to be <strong>absolutely continuous</strong> on <span class="arithmatex">\([a, b]\)</span> if for any given <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there exists <span class="arithmatex">\(\delta &gt; 0\)</span> such that for any finite collection of <strong>pairwise disjoint open intervals</strong> <span class="arithmatex">\(\{(a_j, b_j)\}_{j=1}^n\)</span> in <span class="arithmatex">\([a, b]\)</span>, if their total length satisfies</p>
+<div class="arithmatex">\[
+\sum_{j=1}^n (b_j - a_j) &lt; \delta
+\]</div>
+<p>then the corresponding total fluctuation of the function values satisfies</p>
+<div class="arithmatex">\[
+\sum_{j=1}^n |F(b_j) - F(a_j)| &lt; \epsilon
+\]</div>
+</div>
+<p>Clearly, absolute continuity (AC) implies uniform continuity, hence continuity. Moreover, at the measure level it is equivalent to absolute continuity of the associated measure:</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 4.3.2</p>
+<p>If <span class="arithmatex">\(F \in NBV\)</span>, then <span class="arithmatex">\(F \in AC\)</span> if and only if the measure induced by <span class="arithmatex">\(F\)</span> is absolutely continuous with respect to Lebesgue measure, i.e., <span class="arithmatex">\(\mu_F \ll m\)</span>.</p>
+</div>
+<p>Based on this relationship, we can finally state the Fundamental Theorem of Calculus in real analysis:</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.3.4 (The Fundamental Theorem of Calculus)</p>
+<p>Let <span class="arithmatex">\(F: [a, b] \to \mathbb{C}\)</span> be a function. Then the following statements are equivalent:</p>
+<ul>
+<li>
+<p><strong>1. AC property</strong>: <span class="arithmatex">\(F\)</span> is absolutely continuous on <span class="arithmatex">\([a, b]\)</span> (<span class="arithmatex">\(F \in AC\)</span>).</p>
+</li>
+<li>
+<p><strong>2. Integral representation</strong>: There exists a locally integrable function <span class="arithmatex">\(f \in L^1([a, b])\)</span> such that for all <span class="arithmatex">\(x \in [a, b]\)</span>,</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+F(x) - F(a) = \int_a^x f(t) \, dt
+\]</div>
+<ul>
+<li><strong>3. Almost everywhere differentiable and derivative integrable recovers the function</strong>: <span class="arithmatex">\(F\)</span> is differentiable almost everywhere, <span class="arithmatex">\(F' \in L^1([a, b])\)</span>, and the Newton–Leibniz formula holds exactly:</li>
+</ul>
+<div class="arithmatex">\[
+F(x) - F(a) = \int_a^x F'(t) \, dt
+\]</div>
+</div>
+<hr />
+<h2 id="4-lebesgue-decomposition-of-measures-and-singular-measures">4. Lebesgue Decomposition of Measures and Singular Measures</h2>
+<p>Combining the Radon–Nikodym theorem and the Lebesgue decomposition theorem, any finite Borel measure <span class="arithmatex">\(\nu\)</span> on <span class="arithmatex">\(\mathbb{R}\)</span> can be completely decomposed into three mutually singular pure parts:</p>
+<div class="arithmatex">\[
+\nu = \nu_{ac} + \nu_{cs} + \nu_{d}
+\]</div>
+<ul>
+<li>
+<p><strong>1. Discrete measure <span class="arithmatex">\(\nu_d\)</span></strong>:
+  It is concentrated on a finite or countable set of points, of the form <span class="arithmatex">\(\nu_d = \sum c_j \delta_{x_j}\)</span>, where <span class="arithmatex">\(\delta_{x_j}\)</span> is the Dirac point mass. Its corresponding distribution function is a pure "step function", jumping only at countably many points, and its derivative is zero almost everywhere.</p>
+</li>
+<li>
+<p><strong>2. Absolutely continuous measure <span class="arithmatex">\(\nu_{ac}\)</span></strong>:
+  It is dominated by Lebesgue measure <span class="arithmatex">\(m\)</span>, i.e., <span class="arithmatex">\(\nu_{ac} \ll m\)</span>. There exists a density function <span class="arithmatex">\(f \in L^1\)</span> such that <span class="arithmatex">\(d\nu_{ac} = f\,dm\)</span>. Its corresponding distribution function is absolutely continuous (AC).</p>
+</li>
+<li>
+<p><strong>3. Continuous singular measure <span class="arithmatex">\(\nu_{cs}\)</span></strong>:
+  This is the most counterintuitive existence in measure theory. It is a singular measure (<span class="arithmatex">\(\nu_{cs} \perp m\)</span>), meaning it is entirely concentrated on a set of Lebesgue measure zero; yet it is also a continuous measure, i.e., it has no point masses (no jumps) at any single point.</p>
+</li>
+</ul>
+<p><strong>Classic example</strong>: The Cantor measure built on the Cantor ternary set; the corresponding Cantor function (Devil's staircase) is continuous, monotone increasing, and has derivative zero almost everywhere (it is flat outside the Cantor set, which is a null set), yet it rises from 0 to 1. This demonstrates that not every continuous and almost everywhere differentiable function can be recovered by integrating its derivative!</p>
 
 
 

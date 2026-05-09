@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#32-the-three-fundamental-convergence-theorems-and-convergence-in-measure" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2824,6 +2829,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Convergence Theorems
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2841,6 +2866,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-monotone-convergence-theorem-mct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Monotone Convergence Theorem (MCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fatous-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fatou's Lemma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dominated-convergence-theorem-dct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dominated Convergence Theorem (DCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-convergence-in-measure-and-classical-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Convergence in Measure and Classical Relationships
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-monotone-convergence-theorem-mct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Monotone Convergence Theorem (MCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fatous-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fatou's Lemma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dominated-convergence-theorem-dct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dominated Convergence Theorem (DCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-convergence-in-measure-and-classical-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Convergence in Measure and Classical Relationships
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,176 @@
   
 
 
-  <h1>Ch 7: Convergence Theorems</h1>
-
-
+<h1 id="32-the-three-fundamental-convergence-theorems-and-convergence-in-measure">3.2 The Three Fundamental Convergence Theorems and Convergence in Measure</h1>
+<p>In Riemann integration, exchanging limits and integrals usually requires the extremely harsh condition of "uniform convergence." In the framework of Lebesgue integration, since integration is built on measure, we only need very weak conditions to achieve the exchange of integration and limit. The cornerstone of this grand theory is the famous "Three Fundamental Convergence Theorems."</p>
+<hr />
+<h2 id="1-monotone-convergence-theorem-mct">1. Monotone Convergence Theorem (MCT)</h2>
+<p>The Monotone Convergence Theorem (MCT) is the first cornerstone in establishing integration theory. It states that for a sequence of non-negative increasing functions, the integral of the limit equals the limit of the integrals.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.2.1 (Monotone Convergence Theorem MCT)</p>
+<p>Let <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> be a sequence of non-negative measurable functions. If it is monotonically increasing almost everywhere and converges pointwise to <span class="arithmatex">\(f\)</span>:</p>
+<div class="arithmatex">\[
+0 \le f_1 \le f_2 \le \dots \le f_n \le \dots \text{ a.e.} \quad \text{and} \quad \lim_{n \to \infty} f_n(x) = f(x) \text{ a.e.}
+\]</div>
+<p>Then <span class="arithmatex">\(f \in L^+\)</span>, and we have:</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \lim_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Monotone Convergence Theorem</summary>
+<p>First, since <span class="arithmatex">\(f_n \le f\)</span>, the monotonicity of the integral clearly gives <span class="arithmatex">\(\int f_n \le \int f\)</span>, thus <span class="arithmatex">\(\lim_{n \to \infty} \int f_n \le \int f\)</span>.</p>
+<p>Next, we need to prove the reverse inequality. Take any non-negative simple function <span class="arithmatex">\(\phi\)</span> satisfying <span class="arithmatex">\(0 \le \phi \le f\)</span>, and any constant <span class="arithmatex">\(\alpha \in (0, 1)\)</span>.
+Define a sequence of measurable sets:</p>
+<div class="arithmatex">\[
+E_n = \{x \in X : f_n(x) \ge \alpha \phi(x)\}
+\]</div>
+<p>Since <span class="arithmatex">\(f_n\)</span> is monotonically increasing, the sequence of sets is increasing, i.e., <span class="arithmatex">\(E_1 \subset E_2 \subset \dots\)</span>.
+Also, because <span class="arithmatex">\(f_n \to f \ge \phi &gt; \alpha \phi\)</span> (when <span class="arithmatex">\(\phi &gt; 0\)</span>), we have <span class="arithmatex">\(\bigcup_{n=1}^\infty E_n = X\)</span>.</p>
+<p>According to the properties of the integral, we have:</p>
+<div class="arithmatex">\[
+\int_X f_n \, d\mu \ge \int_{E_n} f_n \, d\mu \ge \alpha \int_{E_n} \phi \, d\mu
+\]</div>
+<p>Letting <span class="arithmatex">\(n \to \infty\)</span>, and using the continuity from below of the measure (and the integral of simple functions):</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \int_X f_n \, d\mu \ge \alpha \int_X \phi \, d\mu
+\]</div>
+<p>Since <span class="arithmatex">\(\alpha \in (0, 1)\)</span> is arbitrary, letting <span class="arithmatex">\(\alpha \to 1\)</span> gives <span class="arithmatex">\(\lim \int f_n \ge \int \phi\)</span>. Taking the supremum over all simple functions satisfying <span class="arithmatex">\(0 \le \phi \le f\)</span>, we get:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \int_X f_n \, d\mu \ge \int_X f \, d\mu
+\]</div>
+<p>Combining both inequalities, the theorem is proved.</p>
+</details>
+<p>Using MCT, we can immediately derive the term-by-term summation property for the integral of a series.</p>
+<div class="admonition info">
+<p class="admonition-title">Corollary (Term-by-term Integration of Non-negative Series)</p>
+<p>Let <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> be a sequence of non-negative measurable functions, then:</p>
+<div class="arithmatex">\[
+\int_X \left( \sum_{n=1}^\infty f_n \right) d\mu = \sum_{n=1}^\infty \int_X f_n \, d\mu
+\]</div>
+</div>
+<hr />
+<h2 id="2-fatous-lemma">2. Fatou's Lemma</h2>
+<p>For a sequence of non-negative functions that is not necessarily monotonic, we cannot directly obtain an equality, but we can obtain a highly valuable inequality. It serves as a bridge connecting MCT and DCT.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.2.2 (Fatou's Lemma)</p>
+<p>Let <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> be a sequence of non-negative measurable functions, then:</p>
+<div class="arithmatex">\[
+\int_X \left( \liminf_{n \to \infty} f_n \right) d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Fatou's Lemma</summary>
+<p>Define a sequence of functions <span class="arithmatex">\(g_n(x) = \inf_{k \ge n} f_k(x)\)</span>.</p>
+<p>Clearly <span class="arithmatex">\(\{g_n\}\)</span> is also a sequence of non-negative measurable functions, and since the range for the infimum shrinks as <span class="arithmatex">\(n\)</span> increases, <span class="arithmatex">\(\{g_n\}\)</span> is monotonically increasing, i.e., <span class="arithmatex">\(g_1 \le g_2 \le \dots\)</span>.
+By the definition of limit inferior:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} g_n(x) = \liminf_{n \to \infty} f_n(x)
+\]</div>
+<p>Since <span class="arithmatex">\(g_n \le f_k\)</span> for all <span class="arithmatex">\(k \ge n\)</span>, and specifically <span class="arithmatex">\(g_n \le f_n\)</span>, we have:</p>
+<div class="arithmatex">\[
+\int_X g_n \, d\mu \le \int_X f_n \, d\mu
+\]</div>
+<p>Taking the limit inferior on both sides:</p>
+<div class="arithmatex">\[
+\liminf_{n \to \infty} \int_X g_n \, d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>On the other hand, since <span class="arithmatex">\(g_n\)</span> is monotonically increasing, apply the Monotone Convergence Theorem (MCT) to <span class="arithmatex">\(\{g_n\}\)</span>:</p>
+<div class="arithmatex">\[
+\liminf_{n \to \infty} \int_X g_n \, d\mu = \lim_{n \to \infty} \int_X g_n \, d\mu = \int_X \left( \lim_{n \to \infty} g_n \right) d\mu = \int_X \left( \liminf_{n \to \infty} f_n \right) d\mu
+\]</div>
+<p>Combining the above results yields Fatou's Lemma.</p>
+</details>
+<hr />
+<h2 id="3-dominated-convergence-theorem-dct">3. Dominated Convergence Theorem (DCT)</h2>
+<p>This is the most frequently used convergence theorem in real analysis. It relaxes the requirement for monotonicity at the cost of requiring an integrable "dominating function."</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.2.3 (Lebesgue Dominated Convergence Theorem DCT)</p>
+<p>Let <span class="arithmatex">\(\{f_n\}\)</span> be a sequence of measurable functions converging almost everywhere to <span class="arithmatex">\(f\)</span>:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} f_n(x) = f(x) \quad \text{a.e.}
+\]</div>
+<p>If there exists a non-negative <strong>integrable function</strong> <span class="arithmatex">\(g \in L^1(\mu)\)</span> such that for all <span class="arithmatex">\(n\)</span>, almost everywhere we have:</p>
+<div class="arithmatex">\[
+|f_n(x)| \le g(x) \quad \text{a.e.}
+\]</div>
+<p>Then <span class="arithmatex">\(f \in L^1(\mu)\)</span>, and:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu \quad \text{and} \quad \lim_{n \to \infty} \int_X |f_n - f| \, d\mu = 0
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Dominated Convergence Theorem</summary>
+<p>Since <span class="arithmatex">\(|f_n| \le g\)</span> and <span class="arithmatex">\(f_n \to f\)</span>, taking the limit gives <span class="arithmatex">\(|f| \le g\)</span> a.e. Since <span class="arithmatex">\(g \in L^1\)</span>, we have <span class="arithmatex">\(f \in L^1\)</span>.</p>
+<p>We construct two sequences of non-negative functions: <span class="arithmatex">\(g + f_n \ge 0\)</span> and <span class="arithmatex">\(g - f_n \ge 0\)</span>.</p>
+<p>Apply Fatou's Lemma to <span class="arithmatex">\(g + f_n\)</span>:</p>
+<div class="arithmatex">\[
+\int_X (g + f) \, d\mu \le \liminf_{n \to \infty} \int_X (g + f_n) \, d\mu = \int_X g \, d\mu + \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>Since <span class="arithmatex">\(g\)</span> is integrable, we can cancel <span class="arithmatex">\(\int g\)</span> on both sides to get:</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>Similarly, apply Fatou's Lemma to <span class="arithmatex">\(g - f_n\)</span>:</p>
+<div class="arithmatex">\[
+\int_X (g - f) \, d\mu \le \liminf_{n \to \infty} \int_X (g - f_n) \, d\mu = \int_X g \, d\mu - \limsup_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>Again, cancelling <span class="arithmatex">\(\int g\)</span> and simplifying yields:</p>
+<div class="arithmatex">\[
+\limsup_{n \to \infty} \int_X f_n \, d\mu \le \int_X f \, d\mu
+\]</div>
+<p>Combining these two inequalities, we must have <span class="arithmatex">\(\liminf = \limsup = \lim\)</span>, thereby proving <span class="arithmatex">\(\lim_{n \to \infty} \int f_n = \int f\)</span>.
+Replacing <span class="arithmatex">\(f_n\)</span> with <span class="arithmatex">\(|f_n - f|\)</span> (which is dominated by <span class="arithmatex">\(2g\)</span>) in the above proof, we can similarly prove <span class="arithmatex">\(\lim \int |f_n - f| = 0\)</span>.</p>
+</details>
+<hr />
+<h2 id="4-convergence-in-measure-and-classical-relationships">4. Convergence in Measure and Classical Relationships</h2>
+<p>In addition to almost everywhere convergence (a.e.) and <span class="arithmatex">\(L^1\)</span> convergence, there is another type of convergence in measure theory that is extremely important in probability theory—convergence in measure (corresponding to convergence in probability).</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.2.1 (Convergence in Measure)</p>
+<p>Let <span class="arithmatex">\(f_n, f\)</span> be measurable functions. If for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, the measure of the set satisfying the following condition tends to 0:</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \mu(\{x \in X : |f_n(x) - f(x)| \ge \epsilon\}) = 0
+\]</div>
+<p>Then <span class="arithmatex">\(f_n\)</span> is said to <strong>converge in measure</strong> to <span class="arithmatex">\(f\)</span>, denoted as <span class="arithmatex">\(f_n \xrightarrow{\mu} f\)</span>.</p>
+</div>
+<p>Similarly, if <span class="arithmatex">\(\mu(\{x : |f_n(x) - f_m(x)| \ge \epsilon\}) \to 0\)</span> as <span class="arithmatex">\(n, m \to \infty\)</span>, then <span class="arithmatex">\(\{f_n\}\)</span> is called a <strong>Cauchy sequence in measure</strong>.</p>
+<p>There is a subtle relationship between convergence in measure and almost everywhere convergence. The famous Riesz Theorem points out the relationship between these two types of convergence via subsequences.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.2.4 (Riesz Theorem)</p>
+<ul>
+<li>
+<p>If <span class="arithmatex">\(\{f_n\}\)</span> is a Cauchy sequence in measure, then it must converge in measure to some measurable function <span class="arithmatex">\(f\)</span>.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(f_n \xrightarrow{\mu} f\)</span>, then there must exist a subsequence <span class="arithmatex">\(\{f_{n_k}\}\)</span> of <span class="arithmatex">\(\{f_n\}\)</span> that converges to <span class="arithmatex">\(f\)</span> almost everywhere:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+f_{n_k}(x) \to f(x) \quad \text{a.e. as } k \to \infty
+\]</div>
+</div>
+<p>On a finite measure space, almost everywhere convergence can even derive a property stronger than convergence in measure, known as <strong>almost uniform convergence</strong>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.2.5 (Egoroff's Theorem)</p>
+<p>Let <span class="arithmatex">\(\mu(X) &lt; \infty\)</span>. If <span class="arithmatex">\(\{f_n\}\)</span> converges to <span class="arithmatex">\(f\)</span> almost everywhere on <span class="arithmatex">\(X\)</span>, then for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there exists a measurable subset <span class="arithmatex">\(E \subset X\)</span> such that:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\mu(E) &lt; \epsilon\)</span> (The measure of the excluded "bad set" is minimal)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f_n\)</span> converges to <span class="arithmatex">\(f\)</span> <strong>uniformly</strong> on the remaining set <span class="arithmatex">\(E^c = X \setminus E\)</span>.</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Core of the Proof for Egoroff's Theorem</summary>
+<p>Construct sets <span class="arithmatex">\(E_n(k) = \bigcup_{m=n}^\infty \{x : |f_m(x) - f(x)| \ge \frac{1}{k}\}\)</span>.
+Since <span class="arithmatex">\(f_n \to f\)</span> a.e., for a fixed <span class="arithmatex">\(k\)</span>, as <span class="arithmatex">\(n \to \infty\)</span>, the sequence of sets <span class="arithmatex">\(E_n(k)\)</span> is monotonically decreasing and the measure of its intersection is 0.
+Since the measure of the entire space is finite, utilizing the continuity from above of the measure, we must have <span class="arithmatex">\(\lim_{n \to \infty} \mu(E_n(k)) = 0\)</span>.</p>
+<p>For each <span class="arithmatex">\(k\)</span>, we can select an <span class="arithmatex">\(N_k\)</span> large enough such that <span class="arithmatex">\(\mu(E_{N_k}(k)) &lt; \epsilon \cdot 2^{-k}\)</span>.
+Let the bad set be <span class="arithmatex">\(E = \bigcup_{k=1}^\infty E_{N_k}(k)\)</span>. By subadditivity, <span class="arithmatex">\(\mu(E) &lt; \sum \epsilon 2^{-k} = \epsilon\)</span>.
+On <span class="arithmatex">\(E^c\)</span>, for any <span class="arithmatex">\(k\)</span>, as long as <span class="arithmatex">\(n &gt; N_k\)</span>, we have <span class="arithmatex">\(|f_n - f| &lt; 1/k\)</span>, which is exactly the definition of uniform convergence.</p>
+</details>
 
 
 

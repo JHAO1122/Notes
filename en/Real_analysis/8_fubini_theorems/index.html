@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#33-product-measures-and-fubinis-theorem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2852,6 +2857,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Fubini's Theorem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2869,6 +2894,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-product-measurable-spaces-and-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Product Measurable Spaces and Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monotone-class-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Monotone Class Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-construction-of-product-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Construction of Product Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tonellis-theorem-and-fubinis-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tonelli's Theorem and Fubini's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-a-brief-note-on-lebesgue-integration-in-mathbbrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. A Brief Note on Lebesgue Integration in \(\mathbb{R}^n\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4392,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-product-measurable-spaces-and-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Product Measurable Spaces and Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monotone-class-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Monotone Class Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-construction-of-product-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Construction of Product Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tonellis-theorem-and-fubinis-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tonelli's Theorem and Fubini's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-a-brief-note-on-lebesgue-integration-in-mathbbrn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. A Brief Note on Lebesgue Integration in \(\mathbb{R}^n\)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4477,194 @@
   
 
 
-  <h1>Ch 8: Fubini's Theorem</h1>
-
-
+<h1 id="33-product-measures-and-fubinis-theorem">3.3 Product Measures and Fubini's Theorem</h1>
+<p>Having established integration theory in one dimension (or on a single abstract space), we naturally need to extend integration to products of multiple dimensions or multiple spaces (e.g., transitioning from single-variable integrals to multiple integrals). This requires introducing the concept of product measures and addressing a central question: <strong>Can a multiple integral be reduced to iterated integrals?</strong> And <strong>Can the order of integration be exchanged?</strong></p>
+<p>These are precisely the questions answered by the famous Tonelli theorem and Fubini theorem. Throughout this discussion, we assume that the involved measure spaces are <strong><span class="arithmatex">\(\sigma\)</span>-finite</strong>.</p>
+<hr />
+<h2 id="1-product-measurable-spaces-and-sections">1. Product Measurable Spaces and Sections</h2>
+<p>To define a measure on the product space <span class="arithmatex">\(X \times Y\)</span>, we first need to establish a <span class="arithmatex">\(\sigma\)</span>-algebra on it. The basic building blocks are "measurable rectangles".</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.3.1 (Measurable Rectangle and Product <span class="arithmatex">\(\sigma\)</span>-Algebra)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M})\)</span> and <span class="arithmatex">\((Y, \mathcal{N})\)</span> be two measurable spaces. A set <span class="arithmatex">\(A \times B\)</span> is called a <strong>measurable rectangle</strong> if <span class="arithmatex">\(A \in \mathcal{M}\)</span> and <span class="arithmatex">\(B \in \mathcal{N}\)</span>.</p>
+<p>The family of all measurable rectangles generates the <strong>product <span class="arithmatex">\(\sigma\)</span>-algebra</strong> on <span class="arithmatex">\(X \times Y\)</span>, denoted by:</p>
+<div class="arithmatex">\[
+\mathcal{M} \otimes \mathcal{N} = \sigma(\{A \times B \mid A \in \mathcal{M}, B \in \mathcal{N}\})
+\]</div>
+</div>
+<p>When dealing with functions and sets of two variables, the "sections" obtained by fixing one variable are important objects of study.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.3.2 (Sections of Sets and Functions)</p>
+<p>For <span class="arithmatex">\(E \subset X \times Y\)</span>, fix <span class="arithmatex">\(x \in X\)</span> or <span class="arithmatex">\(y \in Y\)</span>, and define its <strong>set sections</strong> as:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(x\)</span>-section: <span class="arithmatex">\(E_x = \{y \in Y \mid (x, y) \in E\} \subset Y\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span>-section: <span class="arithmatex">\(E^y = \{x \in X \mid (x, y) \in E\} \subset X\)</span></p>
+</li>
+</ul>
+<p>For a function <span class="arithmatex">\(f\)</span> defined on <span class="arithmatex">\(X \times Y\)</span>, define its <strong>function sections</strong> as:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(f_x(y) = f(x, y)\)</span> (viewed as a function defined on <span class="arithmatex">\(Y\)</span>)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f^y(x) = f(x, y)\)</span> (viewed as a function defined on <span class="arithmatex">\(X\)</span>)</p>
+</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3.1 (Measurability of Sections)</p>
+<p>If <span class="arithmatex">\(E \in \mathcal{M} \otimes \mathcal{N}\)</span>, then for all <span class="arithmatex">\(x \in X\)</span> and <span class="arithmatex">\(y \in Y\)</span>, we have <span class="arithmatex">\(E_x \in \mathcal{N}\)</span> and <span class="arithmatex">\(E^y \in \mathcal{M}\)</span>.</p>
+<p>If <span class="arithmatex">\(f\)</span> is an <span class="arithmatex">\(\mathcal{M} \otimes \mathcal{N}\)</span>-measurable function on <span class="arithmatex">\(X \times Y\)</span>, then <span class="arithmatex">\(f_x\)</span> is <span class="arithmatex">\(\mathcal{N}\)</span>-measurable and <span class="arithmatex">\(f^y\)</span> is <span class="arithmatex">\(\mathcal{M}\)</span>-measurable.</p>
+</div>
+<details class="proof">
+<summary>Proof of Measurability of Set Sections</summary>
+<p>We prove that <span class="arithmatex">\(E_x \in \mathcal{N}\)</span>. Construct the family:</p>
+<div class="arithmatex">\[
+\mathcal{R} = \{E \subset X \times Y \mid E_x \in \mathcal{N}\}
+\]</div>
+<p>First, if <span class="arithmatex">\(E = A \times B\)</span> is a measurable rectangle, then when <span class="arithmatex">\(x \in A\)</span>, <span class="arithmatex">\(E_x = B \in \mathcal{N}\)</span>; when <span class="arithmatex">\(x \notin A\)</span>, <span class="arithmatex">\(E_x = \emptyset \in \mathcal{N}\)</span>. Hence all measurable rectangles belong to <span class="arithmatex">\(\mathcal{R}\)</span>.</p>
+<p>Next, we verify that <span class="arithmatex">\(\mathcal{R}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<ul>
+<li>
+<p><strong>Closed under complements</strong>: <span class="arithmatex">\((E^c)_x = (E_x)^c\)</span>. Since <span class="arithmatex">\(\mathcal{N}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra, if <span class="arithmatex">\(E_x \in \mathcal{N}\)</span>, then <span class="arithmatex">\((E_x)^c \in \mathcal{N}\)</span>, so <span class="arithmatex">\(E^c \in \mathcal{R}\)</span>.</p>
+</li>
+<li>
+<p><strong>Closed under countable unions</strong>: <span class="arithmatex">\((\bigcup_{j=1}^\infty E_j)_x = \bigcup_{j=1}^\infty (E_j)_x\)</span>. By the closure properties of <span class="arithmatex">\(\mathcal{N}\)</span>, the union is also in <span class="arithmatex">\(\mathcal{R}\)</span>.</p>
+</li>
+</ul>
+<p>Since <span class="arithmatex">\(\mathcal{R}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra containing all measurable rectangles, and <span class="arithmatex">\(\mathcal{M} \otimes \mathcal{N}\)</span> is the <strong>smallest</strong> <span class="arithmatex">\(\sigma\)</span>-algebra containing measurable rectangles, we must have <span class="arithmatex">\(\mathcal{M} \otimes \mathcal{N} \subset \mathcal{R}\)</span>. The theorem is proved.</p>
+</details>
+<hr />
+<h2 id="2-monotone-class-theorem">2. Monotone Class Theorem</h2>
+<p>When proving properties of product measures, because <span class="arithmatex">\(\sigma\)</span>-algebras are quite complicated, we often first prove the properties on an algebra and then extend them to the whole <span class="arithmatex">\(\sigma\)</span>-algebra via the "monotone class theorem". This is an extremely powerful proof tool.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.3.3 (Monotone Class)</p>
+<p>Let <span class="arithmatex">\(\mathcal{C} \subset 2^X\)</span> be a family of sets. <span class="arithmatex">\(\mathcal{C}\)</span> is called a <strong>monotone class</strong> if it satisfies:</p>
+<ul>
+<li>
+<p>For an increasing sequence <span class="arithmatex">\(E_1 \subset E_2 \subset \dots\)</span>, if <span class="arithmatex">\(E_j \in \mathcal{C}\)</span>, then <span class="arithmatex">\(\bigcup_{j=1}^\infty E_j \in \mathcal{C}\)</span>.</p>
+</li>
+<li>
+<p>For a decreasing sequence <span class="arithmatex">\(E_1 \supset E_2 \supset \dots\)</span>, if <span class="arithmatex">\(E_j \in \mathcal{C}\)</span>, then <span class="arithmatex">\(\bigcap_{j=1}^\infty E_j \in \mathcal{C}\)</span>.</p>
+</li>
+</ul>
+</div>
+<p>Obviously, any <span class="arithmatex">\(\sigma\)</span>-algebra is a monotone class. Conversely, a family that is both an algebra and a monotone class must be a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3.2 (Monotone Class Theorem)</p>
+<p>Let <span class="arithmatex">\(\mathcal{A}\)</span> be an algebra. If <span class="arithmatex">\(\mathcal{C}\)</span> is a monotone class containing <span class="arithmatex">\(\mathcal{A}\)</span>, then <span class="arithmatex">\(\mathcal{C}\)</span> must contain the <span class="arithmatex">\(\sigma\)</span>-algebra generated by <span class="arithmatex">\(\mathcal{A}\)</span>, i.e.,</p>
+<div class="arithmatex">\[
+\sigma(\mathcal{A}) \subset \mathcal{C}
+\]</div>
+</div>
+<hr />
+<h2 id="3-construction-of-product-measures">3. Construction of Product Measures</h2>
+<p>Now we can define the product of two measures.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3.3 (Section Integrals and Product Measure)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> and <span class="arithmatex">\((Y, \mathcal{N}, \nu)\)</span> be <span class="arithmatex">\(\sigma\)</span>-finite measure spaces. For any <span class="arithmatex">\(E \in \mathcal{M} \otimes \mathcal{N}\)</span>:</p>
+<ul>
+<li>
+<p>The map <span class="arithmatex">\(x \mapsto \nu(E_x)\)</span> is <span class="arithmatex">\(\mathcal{M}\)</span>-measurable;</p>
+</li>
+<li>
+<p>The map <span class="arithmatex">\(y \mapsto \mu(E^y)\)</span> is <span class="arithmatex">\(\mathcal{N}\)</span>-measurable;</p>
+</li>
+<li>
+<p>And their integrals are equal, jointly defining the <strong>product measure <span class="arithmatex">\(\mu \times \nu\)</span></strong> on <span class="arithmatex">\(X \times Y\)</span>:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+(\mu \times \nu)(E) = \int_X \nu(E_x) \, d\mu(x) = \int_Y \mu(E^y) \, d\nu(y)
+\]</div>
+</div>
+<details class="proof">
+<summary>Sketch of Proof of Theorem 3.3.3</summary>
+<p>The core of the proof uses the <strong>Monotone Class Theorem</strong>.</p>
+<p>First, if <span class="arithmatex">\(E = A \times B\)</span> is a measurable rectangle, then <span class="arithmatex">\(\nu(E_x) = \nu(B) \cdot \chi_A(x)\)</span>. This is a simple function, clearly measurable, and its integral is <span class="arithmatex">\(\mu(A)\nu(B)\)</span>. Symmetrically, <span class="arithmatex">\(\int \mu(E^y)d\nu(y) = \mu(A)\nu(B)\)</span> also holds.</p>
+<p>Collect all sets <span class="arithmatex">\(E \in \mathcal{M} \otimes \mathcal{N}\)</span> that satisfy the above properties, forming the family <span class="arithmatex">\(\mathcal{C}\)</span>. By the discussion above, all finite disjoint unions of rectangles (i.e., the algebra <span class="arithmatex">\(\mathcal{A}\)</span> generated by rectangles) are in <span class="arithmatex">\(\mathcal{C}\)</span>.</p>
+<p>Since the measure spaces are <span class="arithmatex">\(\sigma\)</span>-finite, we can use continuity from below (for increasing sequences) and continuity from above (using the Dominated Convergence Theorem for decreasing sequences) to show that <span class="arithmatex">\(\mathcal{C}\)</span> has the <strong>monotone class</strong> property.</p>
+<p>By the Monotone Class Theorem, the monotone class <span class="arithmatex">\(\mathcal{C}\)</span> containing the algebra <span class="arithmatex">\(\mathcal{A}\)</span> must contain <span class="arithmatex">\(\sigma(\mathcal{A}) = \mathcal{M} \otimes \mathcal{N}\)</span>. Hence the property holds for all measurable sets.</p>
+</details>
+<hr />
+<h2 id="4-tonellis-theorem-and-fubinis-theorem">4. Tonelli's Theorem and Fubini's Theorem</h2>
+<p>These are the two core theorems for computing multiple integrals. <strong>Tonelli's theorem</strong> deals with non‑negative functions, while <strong>Fubini's theorem</strong> deals with general integrable functions. They are often used together.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3.4 (Tonelli's Theorem: For Non‑negative Functions)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> and <span class="arithmatex">\((Y, \mathcal{N}, \nu)\)</span> be <span class="arithmatex">\(\sigma\)</span>-finite measure spaces. If <span class="arithmatex">\(f \in L^+(X \times Y)\)</span> (i.e., <span class="arithmatex">\(f\)</span> is a non‑negative measurable function), then:</p>
+<ul>
+<li>
+<p>The functions <span class="arithmatex">\(g(x) = \int_Y f_x \, d\nu\)</span> and <span class="arithmatex">\(h(y) = \int_X f^y \, d\mu\)</span> are non‑negative measurable functions on <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>, respectively.</p>
+</li>
+<li>
+<p>The double integral of <span class="arithmatex">\(f\)</span> can be computed via iterated integrals in any order (even if the result is <span class="arithmatex">\(+\infty\)</span>):</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_{X \times Y} f \, d(\mu \times \nu) = \int_X \left( \int_Y f(x, y) \, d\nu(y) \right) d\mu(x) = \int_Y \left( \int_X f(x, y) \, d\mu(x) \right) d\nu(y)
+\]</div>
+</div>
+<details class="proof">
+<summary>Derivation of Tonelli's Theorem</summary>
+<ol>
+<li>
+<p><strong>Characteristic function</strong>: If <span class="arithmatex">\(f = \chi_E\)</span>, then by the definition of product measure (Theorem 3.3.3), the theorem holds directly.</p>
+</li>
+<li>
+<p><strong>Non‑negative simple function</strong>: If <span class="arithmatex">\(f = \sum a_j \chi_{E_j}\)</span>, by linearity of the integral, the theorem holds.</p>
+</li>
+<li>
+<p><strong>Non‑negative measurable function</strong>: By the Simple Function Approximation Theorem, there exists a monotonically increasing sequence of non‑negative simple functions <span class="arithmatex">\(\phi_n \uparrow f\)</span>.
+   For each <span class="arithmatex">\(\phi_n\)</span>, the iterated integral equals the double integral. Applying the <strong>Monotone Convergence Theorem (MCT)</strong> to both sides, exchanging limit and integral, we obtain that the theorem holds for any non‑negative function <span class="arithmatex">\(f\)</span>.</p>
+</li>
+</ol>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3.5 (Fubini's Theorem: For Absolutely Integrable Functions)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> and <span class="arithmatex">\((Y, \mathcal{N}, \nu)\)</span> be <span class="arithmatex">\(\sigma\)</span>-finite measure spaces. If <span class="arithmatex">\(f \in L^1(\mu \times \nu)\)</span> (i.e., <span class="arithmatex">\(f\)</span> is <strong>absolutely integrable</strong> on the product space), then:</p>
+<ul>
+<li>
+<p>For almost every <span class="arithmatex">\(x \in X\)</span>, <span class="arithmatex">\(f_x \in L^1(\nu)\)</span> (i.e., the section function is integrable); for almost every <span class="arithmatex">\(y \in Y\)</span>, <span class="arithmatex">\(f^y \in L^1(\mu)\)</span>.</p>
+</li>
+<li>
+<p>The functions <span class="arithmatex">\(g(x) = \int_Y f_x \, d\nu\)</span> and <span class="arithmatex">\(h(y) = \int_X f^y \, d\mu\)</span>, obtained by integrating the sections, are integrable on <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> respectively.</p>
+</li>
+<li>
+<p>The double integral equals the iterated integrals:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_{X \times Y} f \, d(\mu \times \nu) = \int_X \left( \int_Y f(x, y) \, d\nu(y) \right) d\mu(x) = \int_Y \left( \int_X f(x, y) \, d\mu(x) \right) d\nu(y)
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof Idea for Fubini's Theorem</summary>
+<p>Since <span class="arithmatex">\(f \in L^1\)</span>, we have <span class="arithmatex">\(\int |f| \, d(\mu \times \nu) &lt; \infty\)</span>.</p>
+<p>Because <span class="arithmatex">\(|f|\)</span> is a non‑negative measurable function, we can apply <strong>Tonelli's theorem</strong> to it:</p>
+<div class="arithmatex">\[
+\int_X \left( \int_Y |f(x, y)| \, d\nu(y) \right) d\mu(x) = \int_{X \times Y} |f| \, d(\mu \times \nu) &lt; \infty
+\]</div>
+<p>This shows that the outer integral is finite. By the "almost everywhere" property of integrals of non‑negative functions, the integrand <span class="arithmatex">\(\int_Y |f_x| d\nu\)</span> must be finite almost everywhere on <span class="arithmatex">\(X\)</span>. This proves <span class="arithmatex">\(f_x \in L^1(\nu)\)</span> a.e.</p>
+<p>Finally, decompose the real function <span class="arithmatex">\(f\)</span> into its positive and negative parts <span class="arithmatex">\(f = f^+ - f^-\)</span> (for complex functions, decompose into real/imaginary parts and then positive/negative parts). Since <span class="arithmatex">\(|f|\)</span> is integrable, both <span class="arithmatex">\(f^+\)</span> and <span class="arithmatex">\(f^-\)</span> are integrable on <span class="arithmatex">\(X \times Y\)</span>.
+Apply Tonelli's theorem to <span class="arithmatex">\(f^+\)</span> and <span class="arithmatex">\(f^-\)</span> separately, then subtract using linearity of the integral, proving Fubini's theorem.</p>
+</details>
+<p><strong>Summary of usage strategy</strong>: In practical computations, we often first apply Tonelli's theorem to <span class="arithmatex">\(|f|\)</span> to verify whether the integral is finite. If <span class="arithmatex">\(\int \int |f| d\mu d\nu &lt; \infty\)</span>, then <span class="arithmatex">\(f \in L^1(\mu \times \nu)\)</span>, and we can safely use Fubini's theorem to exchange the order of integration for <span class="arithmatex">\(f\)</span> itself.</p>
+<hr />
+<h2 id="5-a-brief-note-on-lebesgue-integration-in-mathbbrn">5. A Brief Note on Lebesgue Integration in <span class="arithmatex">\(\mathbb{R}^n\)</span></h2>
+<p>Based on the theory of product measures, integration theory in high‑dimensional Euclidean space <span class="arithmatex">\(\mathbb{R}^n\)</span> becomes very natural.</p>
+<ul>
+<li>
+<p><strong>Product of Lebesgue measures</strong>: The Borel measure on <span class="arithmatex">\(\mathbb{R}^n\)</span> can be viewed as the product of <span class="arithmatex">\(n\)</span> one‑dimensional Borel measures. After completing it, we obtain the Lebesgue measure <span class="arithmatex">\(m_n\)</span> on <span class="arithmatex">\(\mathbb{R}^n\)</span>.</p>
+</li>
+<li>
+<p><strong>Outer measure approximation</strong>: For any measurable set <span class="arithmatex">\(E \subset \mathbb{R}^n\)</span> and its Lebesgue measure <span class="arithmatex">\(m_n(E)\)</span>, we can approximate it from the outside by open sets (<span class="arithmatex">\(\inf \{m(U) \mid U \supset E\}\)</span>) and from the inside by compact sets (<span class="arithmatex">\(\sup \{m(K) \mid K \subset E\}\)</span>).</p>
+</li>
+<li>
+<p><strong>Geometric invariance</strong>: In the one‑dimensional case, we know Lebesgue measure is translation invariant. In <span class="arithmatex">\(\mathbb{R}^n\)</span>, the Lebesgue measure <span class="arithmatex">\(m_n\)</span> is invariant not only under translations but also under <strong>rotations</strong> in space. This gives Lebesgue integration a natural advantage when dealing with geometric and physical problems.</p>
+</li>
+</ul>
 
 
 

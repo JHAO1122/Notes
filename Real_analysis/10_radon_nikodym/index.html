@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#42-radon-nikodym" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2908,6 +2913,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：Radon-Nikodym定理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2925,6 +2950,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 测度的绝对连续性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lebesgue-radon-nikodym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lebesgue-Radon-Nikodym 定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-radon-nikodym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Radon-Nikodym 定理与导数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complex-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 复测度与极分解 (Complex Measures)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 测度的绝对连续性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lebesgue-radon-nikodym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lebesgue-Radon-Nikodym 定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-radon-nikodym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Radon-Nikodym 定理与导数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complex-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 复测度与极分解 (Complex Measures)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,184 @@
   
 
 
-  <h1>第十章：Radon-Nikodym定理</h1>
-
-
+<h1 id="42-radon-nikodym">4.2 绝对连续与 Radon-Nikodym 定理</h1>
+<p>在上一节中，我们探讨了单一符号测度的内部结构（Hahn-Jordan 分解）。本节我们将视角转向同一可测空间上<strong>两个不同测度之间的关系</strong>。如果说“相互奇异”刻画了两个测度完全不相干的极端情况，那么“绝对连续”则描述了另一个极端：一个测度完全受制于另一个测度。</p>
+<p>探索这一关系的顶点，便是现代分析和概率论的核心支柱——<strong>Lebesgue-Radon-Nikodym 定理</strong>。</p>
+<hr />
+<h2 id="1">1. 测度的绝对连续性</h2>
+<p>在微积分中，绝对连续函数具有良好的性质。在测度论中，绝对连续性反映了“零测集的遗传性”。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 4.2.1 (绝对连续 Absolute Continuity)</p>
+<p>设 <span class="arithmatex">\(\mu\)</span> 是可测空间 <span class="arithmatex">\((X, \mathcal{M})\)</span> 上的一个非负测度，<span class="arithmatex">\(\nu\)</span> 是同一个空间上的符号测度（或复测度）。</p>
+<p>如果对于任意满足 <span class="arithmatex">\(\mu(E) = 0\)</span> 的可测集 <span class="arithmatex">\(E \in \mathcal{M}\)</span>，都有：</p>
+<div class="arithmatex">\[
+\nu(E) = 0
+\]</div>
+<p>则称测度 <span class="arithmatex">\(\nu\)</span> 关于 <span class="arithmatex">\(\mu\)</span> <strong>绝对连续</strong>，记作 <span class="arithmatex">\(\nu \ll \mu\)</span>。</p>
+</div>
+<ul>
+<li><strong>注记</strong>：因为全变差测度 <span class="arithmatex">\(|\nu|\)</span> 在 <span class="arithmatex">\(E\)</span> 上的值由 <span class="arithmatex">\(E\)</span> 的子集的 <span class="arithmatex">\(\nu\)</span> 值决定，所以 <span class="arithmatex">\(\nu \ll \mu\)</span> 当且仅当 <span class="arithmatex">\(|\nu| \ll \mu\)</span>。</li>
+</ul>
+<p>绝对连续性有一个极其直观的 <span class="arithmatex">\(\epsilon-\delta\)</span> 等价刻画，它解释了“连续”一词的由来：只要集合的 <span class="arithmatex">\(\mu\)</span> 测度足够小，它的 <span class="arithmatex">\(\nu\)</span> 测度就可以任意小。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 4.2.1 (绝对连续的 <span class="arithmatex">\(\epsilon-\delta\)</span> 刻画)</p>
+<p>设 <span class="arithmatex">\(\nu\)</span> 为一个<strong>有限</strong>符号测度（即 <span class="arithmatex">\(|\nu|(X) &lt; \infty\)</span>）。那么 <span class="arithmatex">\(\nu \ll \mu\)</span> 当且仅当：对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，必定存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得对任意满足 <span class="arithmatex">\(\mu(E) &lt; \delta\)</span> 的可测集 <span class="arithmatex">\(E \in \mathcal{M}\)</span>，都有：</p>
+<div class="arithmatex">\[
+|\nu(E)| &lt; \epsilon
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 4.2.1 的证明</summary>
+<p><strong>充分性 (<span class="arithmatex">\(\Leftarrow\)</span>)</strong>：若 <span class="arithmatex">\(\mu(E) = 0\)</span>，则对于任意 <span class="arithmatex">\(\delta &gt; 0\)</span> 都满足 <span class="arithmatex">\(\mu(E) &lt; \delta\)</span>。由条件可知对任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span> 都有 <span class="arithmatex">\(|\nu(E)| &lt; \epsilon\)</span>，因此必定有 <span class="arithmatex">\(\nu(E) = 0\)</span>，即 <span class="arithmatex">\(\nu \ll \mu\)</span>。</p>
+<p><strong>必要性 (<span class="arithmatex">\(\Rightarrow\)</span>)</strong>：采用反证法。假设结论不成立，那么存在某个 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，使得对任意的 <span class="arithmatex">\(n \in \mathbb{N}\)</span>（取 <span class="arithmatex">\(\delta = 1/2^n\)</span>），都存在对应的集合 <span class="arithmatex">\(E_n \in \mathcal{M}\)</span>，满足：</p>
+<div class="arithmatex">\[
+\mu(E_n) &lt; \frac{1}{2^n} \quad \text{但是} \quad |\nu(E_n)| \ge \epsilon
+\]</div>
+<p>定义集合序列的“上极限”：</p>
+<div class="arithmatex">\[
+F_k = \bigcup_{n=k}^\infty E_n, \quad F = \bigcap_{k=1}^\infty F_k
+\]</div>
+<p>由于测度 <span class="arithmatex">\(\mu\)</span> 的次可加性：</p>
+<div class="arithmatex">\[
+\mu(F_k) \le \sum_{n=k}^\infty \mu(E_n) &lt; \sum_{n=k}^\infty \frac{1}{2^n} = \frac{1}{2^{k-1}}
+\]</div>
+<p>显然当 <span class="arithmatex">\(k \to \infty\)</span> 时，<span class="arithmatex">\(\mu(F_k) \to 0\)</span>。由自上连续性得 <span class="arithmatex">\(\mu(F) = 0\)</span>。</p>
+<p>因为已知 <span class="arithmatex">\(\nu \ll \mu\)</span>，所以必须有 <span class="arithmatex">\(|\nu|(F) = 0\)</span>。</p>
+<p>然而，由于 <span class="arithmatex">\(\nu\)</span> 是有限测度，利用自上连续性：</p>
+<div class="arithmatex">\[
+|\nu|(F) = \lim_{k \to \infty} |\nu|(F_k) \ge \limsup_{k \to \infty} |\nu(E_k)| \ge \epsilon &gt; 0
+\]</div>
+<p>这导致了严重矛盾！因此假设不成立，原命题得证。</p>
+</details>
+<hr />
+<h2 id="2-lebesgue-radon-nikodym">2. Lebesgue-Radon-Nikodym 定理</h2>
+<p>在很多应用场景中，给定积分测度 <span class="arithmatex">\(d\nu = f d\mu\)</span>，我们可以轻易判定 <span class="arithmatex">\(\nu \ll \mu\)</span>。那么反过来，如果已知 <span class="arithmatex">\(\nu \ll \mu\)</span>，能否找到一个函数 <span class="arithmatex">\(f\)</span>，使得 <span class="arithmatex">\(d\nu = f d\mu\)</span> 呢？</p>
+<p>Lebesgue-Radon-Nikodym 定理完美地回答了这个问题，并给出了更为一般的分解结构。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 4.2.2 (Lebesgue-Radon-Nikodym 定理)</p>
+<p>设 <span class="arithmatex">\(\mu\)</span> 和 <span class="arithmatex">\(\nu\)</span> 是可测空间 <span class="arithmatex">\((X, \mathcal{M})\)</span> 上的两个 <strong><span class="arithmatex">\(\sigma\)</span>-有限测度</strong>（<span class="arithmatex">\(\nu\)</span> 可以是符号测度）。</p>
+<p>那么，存在<strong>唯一</strong>的一对测度 <span class="arithmatex">\(\lambda\)</span> 和 <span class="arithmatex">\(\rho\)</span>，使得：</p>
+<div class="arithmatex">\[
+\nu = \lambda + \rho
+\]</div>
+<p>并且满足以下两个核心条件：</p>
+<ul>
+<li>
+<p><strong>奇异性</strong>：<span class="arithmatex">\(\lambda \perp \mu\)</span> （即存在互补集将它们完全隔开）。</p>
+</li>
+<li>
+<p><strong>绝对连续性</strong>：<span class="arithmatex">\(\rho \ll \mu\)</span>。而且存在一个 <span class="arithmatex">\(\mu\)</span>-几乎处处唯一的函数 <span class="arithmatex">\(f \in L^1(\mu)\)</span>（如果 <span class="arithmatex">\(\nu\)</span> 不取负无穷则为扩展的局部可积函数），使得对于所有的可测集 <span class="arithmatex">\(E \in \mathcal{M}\)</span> 有：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\rho(E) = \int_E f \, d\mu
+\]</div>
+</div>
+<ul>
+<li><strong>注记</strong>：这个分解被称为 <span class="arithmatex">\(\nu\)</span> 关于 <span class="arithmatex">\(\mu\)</span> 的 <strong>Lebesgue 分解</strong>。<span class="arithmatex">\(\lambda\)</span> 称为奇异部分，<span class="arithmatex">\(\rho\)</span> 称为绝对连续部分。函数 <span class="arithmatex">\(f\)</span> 正好充当了两者之间的“密度”。</li>
+</ul>
+<details class="proof">
+<summary>Lebesgue-Radon-Nikodym 定理的核心构造证明（针对有限非负测度情形）</summary>
+<p>为简化，假设 <span class="arithmatex">\(\mu\)</span> 和 <span class="arithmatex">\(\nu\)</span> 都是有限非负测度。我们通过构造最大的“下方函数”来寻找 <span class="arithmatex">\(f\)</span>。</p>
+<p>定义如下函数族：</p>
+<div class="arithmatex">\[
+\mathcal{F} = \left\{ g : X \to [0, +\infty] \text{ 为可测函数 } \mid \int_E g \, d\mu \le \nu(E), \forall E \in \mathcal{M} \right\}
+\]</div>
+<p>显然常数函数 <span class="arithmatex">\(g = 0\)</span> 在 <span class="arithmatex">\(\mathcal{F}\)</span> 中，所以 <span class="arithmatex">\(\mathcal{F}\)</span> 非空。并且如果 <span class="arithmatex">\(g_1, g_2 \in \mathcal{F}\)</span>，可以证明 <span class="arithmatex">\(\max(g_1, g_2) \in \mathcal{F}\)</span>。</p>
+<p>令 <span class="arithmatex">\(M = \sup_{g \in \mathcal{F}} \int_X g \, d\mu\)</span>。由于 <span class="arithmatex">\(\nu(X) &lt; \infty\)</span>，故 <span class="arithmatex">\(M &lt; \infty\)</span>。
+我们可以取到一个序列 <span class="arithmatex">\(\{g_n\} \subset \mathcal{F}\)</span>，使得 <span class="arithmatex">\(\int g_n d\mu \to M\)</span>。
+令 <span class="arithmatex">\(f_n = \max(g_1, \dots, g_n)\)</span>，则 <span class="arithmatex">\(\{f_n\}\)</span> 是一个单调递增的函数列，且 <span class="arithmatex">\(f_n \in \mathcal{F}\)</span>。</p>
+<p>根据单调收敛定理 (MCT)，令 <span class="arithmatex">\(f = \lim_{n \to \infty} f_n = \sup_n f_n\)</span>，则 <span class="arithmatex">\(f \in \mathcal{F}\)</span> 并且：</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = M
+\]</div>
+<p>现在，我们定义剩余的测度部分 <span class="arithmatex">\(\lambda\)</span> 为：</p>
+<div class="arithmatex">\[
+\lambda(E) = \nu(E) - \int_E f \, d\mu
+\]</div>
+<p>由 <span class="arithmatex">\(f \in \mathcal{F}\)</span> 可知，<span class="arithmatex">\(\lambda\)</span> 是一个非负测度。现在我们只需证明 <span class="arithmatex">\(\lambda \perp \mu\)</span>。
+如果 <span class="arithmatex">\(\lambda\)</span> 与 <span class="arithmatex">\(\mu\)</span> 不奇异，那么根据测度论技巧，必然能在某个测度为正的集合上找到一个极小的扰动 <span class="arithmatex">\(\epsilon \mu \le \lambda\)</span>，从而使得 <span class="arithmatex">\(f + \epsilon \chi_A\)</span> 依然属于 <span class="arithmatex">\(\mathcal{F}\)</span>。
+但这将导致 <span class="arithmatex">\(\int (f + \epsilon \chi_A) d\mu = M + \epsilon \mu(A) &gt; M\)</span>，与 <span class="arithmatex">\(M\)</span> 是上确界相矛盾！</p>
+<p>因此，<span class="arithmatex">\(\lambda\)</span> 必定关于 <span class="arithmatex">\(\mu\)</span> 奇异，定理的非负情形得证。符号测度或 <span class="arithmatex">\(\sigma\)</span>-有限测度可通过 Hahn 分解和全空间分割转化为该情形。</p>
+</details>
+<hr />
+<h2 id="3-radon-nikodym">3. Radon-Nikodym 定理与导数</h2>
+<p>作为 Lebesgue 分解定理的直接推论，当我们提前知道了 <span class="arithmatex">\(\nu \ll \mu\)</span> 时，奇异部分 <span class="arithmatex">\(\lambda\)</span> 就会退化为 0。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 4.2.3 (Radon-Nikodym 定理)</p>
+<p>设 <span class="arithmatex">\(\mu, \nu\)</span> 为 <span class="arithmatex">\(\sigma\)</span>-有限测度，且 <span class="arithmatex">\(\nu \ll \mu\)</span>。</p>
+<p>那么必定存在一个 <span class="arithmatex">\(\mu\)</span>-几乎处处唯一的函数 <span class="arithmatex">\(f\)</span>，使得对于任意可测集 <span class="arithmatex">\(E \in \mathcal{M}\)</span>：</p>
+<div class="arithmatex">\[
+\nu(E) = \int_E f \, d\mu
+\]</div>
+</div>
+<p>这个神奇的函数 <span class="arithmatex">\(f\)</span> 就被称为 <span class="arithmatex">\(\nu\)</span> 关于 <span class="arithmatex">\(\mu\)</span> 的 <strong>Radon-Nikodym 导数 (Radon-Nikodym Derivative)</strong>，通常记作符号分式：</p>
+<div class="arithmatex">\[
+f = \frac{d\nu}{d\mu}
+\]</div>
+<p>Radon-Nikodym 导数在积分运算中完美模拟了微积分中的导数链式法则。</p>
+<div class="admonition success">
+<p class="admonition-title">命题 4.2.1 (Radon-Nikodym 导数的性质)</p>
+<p>设所有的测度均为 <span class="arithmatex">\(\sigma\)</span>-有限测度。</p>
+<ul>
+<li><strong>积分法则</strong>：如果 <span class="arithmatex">\(g \in L^1(\nu)\)</span>，那么 <span class="arithmatex">\(g \frac{d\nu}{d\mu} \in L^1(\mu)\)</span>，并且有直观的变量代换公式：</li>
+</ul>
+<div class="arithmatex">\[
+\int_X g \, d\nu = \int_X g \frac{d\nu}{d\mu} \, d\mu
+\]</div>
+<ul>
+<li><strong>链式法则</strong>：如果 <span class="arithmatex">\(\nu \ll \mu\)</span> 且 <span class="arithmatex">\(\mu \ll \lambda\)</span>，则 <span class="arithmatex">\(\nu \ll \lambda\)</span>，并且几乎处处有：</li>
+</ul>
+<div class="arithmatex">\[
+\frac{d\nu}{d\lambda} = \frac{d\nu}{d\mu} \frac{d\mu}{d\lambda}
+\]</div>
+<ul>
+<li><strong>倒数法则</strong>：如果 <span class="arithmatex">\(\mu \ll \nu\)</span> 且 <span class="arithmatex">\(\nu \ll \mu\)</span>（即它们<strong>等价</strong>，具有完全相同的零测集），那么几乎处处有：</li>
+</ul>
+<div class="arithmatex">\[
+\frac{d\nu}{d\mu} = \left( \frac{d\mu}{d\nu} \right)^{-1}
+\]</div>
+</div>
+<hr />
+<h2 id="4-complex-measures">4. 复测度与极分解 (Complex Measures)</h2>
+<p>符号测度的取值限于实数。如果我们允许测度取复数值，就得到了泛函分析中非常重要的<strong>复测度</strong>。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 4.2.2 (复测度 Complex Measure)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M})\)</span> 为可测空间。集函数 <span class="arithmatex">\(\nu: \mathcal{M} \to \mathbb{C}\)</span> 称为一个<strong>复测度</strong>，如果它对任何互不相交的可测集列 <span class="arithmatex">\(\{E_j\}\)</span> 满足：</p>
+<div class="arithmatex">\[
+\nu\left(\bigcup_{j=1}^\infty E_j\right) = \sum_{j=1}^\infty \nu(E_j)
+\]</div>
+<p>注意：为使复数级数的和与排列顺序无关，该级数必须是<strong>绝对收敛</strong>的。这意味着复测度<strong>天然地只取有限值</strong>，不能取 <span class="arithmatex">\(\infty\)</span>。</p>
+</div>
+<p>任何复测度 <span class="arithmatex">\(\nu\)</span> 都可以被唯一地分解为实部和虚部：<span class="arithmatex">\(\nu = \nu_r + i \nu_i\)</span>，其中 <span class="arithmatex">\(\nu_r\)</span> 和 <span class="arithmatex">\(\nu_i\)</span> 都是有限的符号测度。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 4.2.3 (全变差 Total Variation)</p>
+<p>对复测度 <span class="arithmatex">\(\nu\)</span>，定义其全变差测度 <span class="arithmatex">\(|\nu|\)</span> 为：</p>
+<div class="arithmatex">\[
+|\nu|(E) = \sup \sum_{j=1}^n |\nu(E_j)|
+\]</div>
+<p>其中上确界是对集合 <span class="arithmatex">\(E\)</span> 的所有有限可测划分 <span class="arithmatex">\(\{E_j\}_{j=1}^n\)</span> 取得的。<span class="arithmatex">\(|\nu|\)</span> 也是一个有限的非负测度。</p>
+</div>
+<p>有了 Radon-Nikodym 定理的加持，我们可以像表示复数的极坐标形式 <span class="arithmatex">\(z = r e^{i\theta}\)</span> 一样，对复测度进行绝妙的“极分解”。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 4.2.4 (复测度的极分解 Polar Decomposition)</p>
+<p>设 <span class="arithmatex">\(\nu\)</span> 为一个复测度。由于根据全变差的定义显然有 <span class="arithmatex">\(\nu \ll |\nu|\)</span>，由 Radon-Nikodym 定理，必定存在一个复可测函数 <span class="arithmatex">\(h = \frac{d\nu}{d|\nu|}\)</span>，使得：</p>
+<div class="arithmatex">\[
+d\nu = h \, d|\nu|
+\]</div>
+<p>更重要的是，这个函数 <span class="arithmatex">\(h\)</span> 满足 <span class="arithmatex">\(|\nu|\)</span>-几乎处处有：</p>
+<div class="arithmatex">\[
+|h(x)| = 1
+\]</div>
+</div>
+<p>利用极分解，关于复测度的积分可以严格地定义转化为关于其全变差测度（非负测度）的积分。如果 <span class="arithmatex">\(f \in L^1(|\nu|)\)</span>，则定义：</p>
+<div class="arithmatex">\[
+\int_X f \, d\nu = \int_X f \cdot h \, d|\nu|
+\]</div>
+<p>从这个定义中，我们可以非常直接地推导出复积分绝对值的不等式界限：</p>
+<div class="arithmatex">\[
+\left| \int_X f \, d\nu \right| \le \int_X |f| \, d|\nu|
+\]</div>
 
 
 

@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#31-construction-of-abstract-integrals-and-simple-functions" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2796,6 +2801,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Construction of the Integral
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2813,6 +2838,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-characteristic-functions-and-simple-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Characteristic Functions and Simple Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-integral-of-simple-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Integral of Simple Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integral-of-nonnegative-measurable-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Integral of Non‑negative Measurable Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-general-integrable-functions-and-l1-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. General Integrable Functions and \(L^1\) Space
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-characteristic-functions-and-simple-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Characteristic Functions and Simple Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-integral-of-simple-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Integral of Simple Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integral-of-nonnegative-measurable-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Integral of Non‑negative Measurable Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-general-integrable-functions-and-l1-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. General Integrable Functions and \(L^1\) Space
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,144 @@
   
 
 
-  <h1>Ch 6: Construction of the Integral</h1>
-
-
+<h1 id="31-construction-of-abstract-integrals-and-simple-functions">3.1 Construction of Abstract Integrals and Simple Functions</h1>
+<p>In Riemann integration, the integral is constructed by partitioning the domain into intervals (the vertical slicing method). In Lebesgue's abstract integration theory, the integral is constructed by partitioning the range (the horizontal slicing method). The core bridge in this construction is the <strong>simple function</strong>, which serves as the foundation linking measure and integration.</p>
+<hr />
+<h2 id="1-characteristic-functions-and-simple-functions">1. Characteristic Functions and Simple Functions</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1.1 (Characteristic Function and Simple Function)</p>
+<ul>
+<li><strong>Characteristic function</strong>: For a subset <span class="arithmatex">\(E \in \mathcal{M}\)</span> of a measure space <span class="arithmatex">\(X\)</span>, define its characteristic function as</li>
+</ul>
+<div class="arithmatex">\[
+\chi_E(x) = \begin{cases} 1, &amp; x \in E \\ 0, &amp; x \notin E \end{cases}
+\]</div>
+<ul>
+<li><strong>Simple function</strong>: A measurable function <span class="arithmatex">\(\phi: X \to \mathbb{C}\)</span> is called a simple function if its range is a finite set. Any simple function can be expressed as a finite linear combination of characteristic functions:</li>
+</ul>
+<div class="arithmatex">\[
+\phi(x) = \sum_{j=1}^n a_j \chi_{E_j}(x)
+\]</div>
+<p>where <span class="arithmatex">\(a_j \in \mathbb{C}\)</span> and the sets <span class="arithmatex">\(E_j = \{x \in X : \phi(x) = a_j\} \in \mathcal{M}\)</span> form a partition of <span class="arithmatex">\(X\)</span> into pairwise disjoint measurable sets. This is called the <strong>standard representation</strong> of a simple function.</p>
+</div>
+<p>The importance of simple functions lies in the fact that every measurable function can be perfectly approximated by simple functions.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.1.1 (Simple Function Approximation Theorem)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M})\)</span> be a measurable space.</p>
+<ul>
+<li>For any non‑negative measurable function <span class="arithmatex">\(f: X \to [0, +\infty]\)</span>, there exists a sequence of non‑negative simple functions <span class="arithmatex">\(\{\phi_n\}_{n=1}^\infty\)</span> such that they increase monotonically and converge pointwise to <span class="arithmatex">\(f\)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+0 \le \phi_1 \le \phi_2 \le \dots \le f, \quad \lim_{n \to \infty} \phi_n(x) = f(x)
+\]</div>
+<ul>
+<li>If <span class="arithmatex">\(f\)</span> is a general complex‑valued measurable function, there exists a sequence of complex simple functions <span class="arithmatex">\(\{\psi_n\}\)</span> such that <span class="arithmatex">\(0 \le |\psi_1| \le |\psi_2| \le \dots \le |f|\)</span> and <span class="arithmatex">\(\psi_n \to f\)</span>.</li>
+</ul>
+</div>
+<hr />
+<h2 id="2-integral-of-simple-functions">2. Integral of Simple Functions</h2>
+<p>We begin by defining “area” or “integral” from the simplest building blocks.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1.2 (Integral of a Non‑negative Simple Function)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> be a measure space and let <span class="arithmatex">\(\phi = \sum_{j=1}^n a_j \chi_{E_j}\)</span> be the standard representation of a non‑negative simple function (<span class="arithmatex">\(a_j \ge 0\)</span>). The integral of <span class="arithmatex">\(\phi\)</span> with respect to <span class="arithmatex">\(\mu\)</span> is defined as</p>
+<div class="arithmatex">\[
+\int_X \phi \, d\mu = \sum_{j=1}^n a_j \mu(E_j)
+\]</div>
+<p><strong>Note</strong>: In measure theory we adopt the convention <span class="arithmatex">\(0 \cdot \infty = 0\)</span>. This means that even if a set has infinite measure, as long as the function takes the value 0 on that set, its contribution to the integral is 0. For a measurable subset <span class="arithmatex">\(A \subset X\)</span>, the local integral is defined by <span class="arithmatex">\(\int_A \phi \, d\mu = \int_X \phi \cdot \chi_A \, d\mu\)</span>.</p>
+</div>
+<p>The integral of simple functions possesses a perfect algebraic structure.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.1.2 (Properties of the Integral of Simple Functions)</p>
+<p>Let <span class="arithmatex">\(\phi, \psi\)</span> be non‑negative simple functions and let <span class="arithmatex">\(c \ge 0\)</span> be a constant. Then:</p>
+<ul>
+<li>
+<p><strong>Linearity</strong>: <span class="arithmatex">\(\int c\phi = c \int \phi\)</span> and <span class="arithmatex">\(\int (\phi + \psi) = \int \phi + \int \psi\)</span>.</p>
+</li>
+<li>
+<p><strong>Monotonicity</strong>: If <span class="arithmatex">\(\phi \le \psi\)</span>, then <span class="arithmatex">\(\int \phi \le \int \psi\)</span>.</p>
+</li>
+<li>
+<p><strong>Set‑function property</strong>: The mapping <span class="arithmatex">\(A \mapsto \nu(A) = \int_A \phi \, d\mu\)</span> defines a new measure on <span class="arithmatex">\(\mathcal{M}\)</span>.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="3-integral-of-nonnegative-measurable-functions">3. Integral of Non‑negative Measurable Functions</h2>
+<p>Using suprema, we extend the integral from simple functions to arbitrary non‑negative measurable functions.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1.3 (Integral of a Non‑negative Measurable Function)</p>
+<p>Let <span class="arithmatex">\(f: X \to [0, +\infty]\)</span> be a non‑negative measurable function (denoted <span class="arithmatex">\(f \in L^+\)</span>). The integral of <span class="arithmatex">\(f\)</span> is defined as the supremum of the integrals of all non‑negative simple functions that lie below <span class="arithmatex">\(f\)</span>:</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \sup \left\{ \int_X \phi \, d\mu : 0 \le \phi \le f,\ \phi \text{ is a simple function} \right\}
+\]</div>
+</div>
+<p>For integrals of non‑negative measurable functions, we have the following core property involving “almost everywhere” (a.e.).</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 3.1.1 (Almost Everywhere Properties of Non‑negative Integrals)</p>
+<p>Let <span class="arithmatex">\(f \in L^+\)</span>. Then:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\int f \, d\mu = 0\)</span> if and only if <span class="arithmatex">\(f = 0\)</span> almost everywhere (<span class="arithmatex">\(f = 0\)</span> a.e.).</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\int f \, d\mu &lt; \infty\)</span>, then <span class="arithmatex">\(f &lt; \infty\)</span> almost everywhere (i.e., an integrable function is necessarily finite almost everywhere).</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Proof: <span class="arithmatex">\(\int f = 0 \iff f = 0 \text{ a.e.}\)</span></summary>
+<p><strong>Sufficiency (<span class="arithmatex">\(\Leftarrow\)</span>)</strong>: If <span class="arithmatex">\(f = 0\)</span> a.e., then for any simple function <span class="arithmatex">\(\phi = \sum a_j \chi_{E_j}\)</span> satisfying <span class="arithmatex">\(0 \le \phi \le f\)</span>, whenever <span class="arithmatex">\(a_j &gt; 0\)</span> we must have <span class="arithmatex">\(\mu(E_j) = 0\)</span>. Hence <span class="arithmatex">\(\int \phi = 0\)</span>, and by the supremum definition we obtain <span class="arithmatex">\(\int f = 0\)</span>.</p>
+<p><strong>Necessity (<span class="arithmatex">\(\Rightarrow\)</span>)</strong>: Assume <span class="arithmatex">\(\int f = 0\)</span>. Define the sets <span class="arithmatex">\(E_n = \{x : f(x) \ge \frac{1}{n}\}\)</span>. Clearly <span class="arithmatex">\(\frac{1}{n} \chi_{E_n} \le f\)</span>.</p>
+<p>By monotonicity of the integral:</p>
+<div class="arithmatex">\[
+\int f \ge \int \frac{1}{n} \chi_{E_n} = \frac{1}{n} \mu(E_n)
+\]</div>
+<p>Since <span class="arithmatex">\(\int f = 0\)</span>, we must have <span class="arithmatex">\(\mu(E_n) = 0\)</span>.
+Now <span class="arithmatex">\(\{x : f(x) &gt; 0\} = \bigcup_{n=1}^\infty E_n\)</span>, and by subadditivity of the measure this set has measure zero, i.e., <span class="arithmatex">\(f = 0\)</span> a.e.</p>
+</details>
+<hr />
+<h2 id="4-general-integrable-functions-and-l1-space">4. General Integrable Functions and <span class="arithmatex">\(L^1\)</span> Space</h2>
+<p>With the integral of non‑negative functions in hand, we can define the integral of general real‑valued or complex‑valued functions by splitting into positive and negative parts.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1.4 (Real‑valued Integrable Functions and <span class="arithmatex">\(L^1\)</span> Space)</p>
+<p>Let <span class="arithmatex">\(f: X \to \mathbb{R}\)</span> be a real‑valued measurable function. Decompose it into its positive and negative parts: <span class="arithmatex">\(f = f^+ - f^-\)</span> (so that <span class="arithmatex">\(|f| = f^+ + f^-\)</span>).</p>
+<p>If both the positive and negative parts have finite integrals, i.e., <span class="arithmatex">\(\int f^+ &lt; \infty\)</span> and <span class="arithmatex">\(\int f^- &lt; \infty\)</span>, then <span class="arithmatex">\(f\)</span> is said to be <strong>Lebesgue integrable</strong> on <span class="arithmatex">\(X\)</span>. The space of all such functions is denoted by <span class="arithmatex">\(L^1(\mu)\)</span>.</p>
+<p>In this case, the integral of <span class="arithmatex">\(f\)</span> is defined as</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \int_X f^+ \, d\mu - \int_X f^- \, d\mu
+\]</div>
+<p>Clearly, <span class="arithmatex">\(f \in L^1(\mu)\)</span> if and only if <span class="arithmatex">\(\int |f| \, d\mu &lt; \infty\)</span>.</p>
+</div>
+<p>For a complex‑valued function <span class="arithmatex">\(f(x) = u(x) + i v(x)\)</span>, if <span class="arithmatex">\(|f| \in L^1(\mu)\)</span>, then its integral is defined by <span class="arithmatex">\(\int f = \int u + i \int v\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.1.3 (Absolute Inequality for Integrals)</p>
+<p>If <span class="arithmatex">\(f \in L^1(\mu)\)</span>, then the following absolute inequality holds:</p>
+<div class="arithmatex">\[
+\left| \int_X f \, d\mu \right| \le \int_X |f| \, d\mu
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of the Absolute Inequality (Complex Case)</summary>
+<p>Let the value of the integral be the complex number <span class="arithmatex">\(z = \int f d\mu\)</span>. If <span class="arithmatex">\(z = 0\)</span>, the inequality is trivially true.
+If <span class="arithmatex">\(z \ne 0\)</span>, write <span class="arithmatex">\(z = r e^{i\theta}\)</span> with <span class="arithmatex">\(r &gt; 0\)</span>, and set <span class="arithmatex">\(\alpha = e^{-i\theta}\)</span>. Then <span class="arithmatex">\(\alpha z = |\int f d\mu|\)</span>.
+Since <span class="arithmatex">\(\alpha z\)</span> is real, we have</p>
+<div class="arithmatex">\[
+\left| \int f \right| = \alpha \int f = \int (\alpha f) = \text{Re} \left( \int \alpha f \right) = \int \text{Re}(\alpha f)
+\]</div>
+<p>Because for any complex number <span class="arithmatex">\(\text{Re}(\alpha f) \le |\alpha f| = |f|\)</span>, the monotonicity of the integral yields</p>
+<div class="arithmatex">\[
+\int \text{Re}(\alpha f) \le \int |f|
+\]</div>
+<p>Combining these steps proves the absolute inequality.</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Proposition 3.1.2 (Invariance of the Integral under a.e. Equivalence)</p>
+<p>Let <span class="arithmatex">\(f, g\)</span> be measurable functions. If <span class="arithmatex">\(f = g\)</span> almost everywhere (<span class="arithmatex">\(f = g\)</span> a.e.) and <span class="arithmatex">\(f \in L^1(\mu)\)</span>, then <span class="arithmatex">\(g \in L^1(\mu)\)</span> and they have the same integral:</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \int_X g \, d\mu
+\]</div>
+</div>
+<p>This property shows that the Lebesgue integral is completely “immune” to changes on sets of measure zero. In functional analysis, functions that are equal almost everywhere are usually identified as the same element in the <span class="arithmatex">\(L^1\)</span> space.</p>
 
 
 

@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#42-absolute-continuity-and-the-radon-nikodym-theorem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2908,6 +2913,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Radon-Nikodym Theorem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2925,6 +2950,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-absolute-continuity-of-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Absolute Continuity of Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lebesgue-radon-nikodym-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lebesgue-Radon-Nikodym Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-radon-nikodym-theorem-and-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Radon-Nikodym Theorem and Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complex-measures-and-polar-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complex Measures and Polar Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-absolute-continuity-of-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Absolute Continuity of Measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lebesgue-radon-nikodym-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lebesgue-Radon-Nikodym Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-radon-nikodym-theorem-and-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Radon-Nikodym Theorem and Derivatives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complex-measures-and-polar-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complex Measures and Polar Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,184 @@
   
 
 
-  <h1>Ch 10: Radon-Nikodym Theorem</h1>
-
-
+<h1 id="42-absolute-continuity-and-the-radon-nikodym-theorem">4.2 Absolute Continuity and the Radon-Nikodym Theorem</h1>
+<p>In the previous section, we explored the internal structure of a single signed measure (the Hahn-Jordan decomposition). In this section, we shift our perspective to the <strong>relationship between two different measures</strong> on the same measurable space. If "mutually singular" characterizes the extreme case where two measures are completely unrelated, then "absolute continuity" describes the other extreme: one measure is entirely governed by another.</p>
+<p>The pinnacle of exploring this relationship is a core pillar of modern analysis and probability theory—the <strong>Lebesgue-Radon-Nikodym Theorem</strong>.</p>
+<hr />
+<h2 id="1-absolute-continuity-of-measures">1. Absolute Continuity of Measures</h2>
+<p>In calculus, absolutely continuous functions possess favorable properties. In measure theory, absolute continuity reflects the "heritability of null sets."</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.2.1 (Absolute Continuity)</p>
+<p>Let <span class="arithmatex">\(\mu\)</span> be a non-negative measure on a measurable space <span class="arithmatex">\((X, \mathcal{M})\)</span>, and <span class="arithmatex">\(\nu\)</span> be a signed measure (or complex measure) on the same space.</p>
+<p>If for any measurable set <span class="arithmatex">\(E \in \mathcal{M}\)</span> satisfying <span class="arithmatex">\(\mu(E) = 0\)</span>, we have:</p>
+<div class="arithmatex">\[
+\nu(E) = 0
+\]</div>
+<p>then <span class="arithmatex">\(\nu\)</span> is said to be <strong>absolutely continuous</strong> with respect to <span class="arithmatex">\(\mu\)</span>, denoted as <span class="arithmatex">\(\nu \ll \mu\)</span>.</p>
+</div>
+<ul>
+<li><strong>Note</strong>: Since the value of the total variation measure <span class="arithmatex">\(|\nu|\)</span> on <span class="arithmatex">\(E\)</span> is determined by the values of <span class="arithmatex">\(\nu\)</span> on subsets of <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\nu \ll \mu\)</span> if and only if <span class="arithmatex">\(|\nu| \ll \mu\)</span>.</li>
+</ul>
+<p>Absolute continuity has an extremely intuitive <span class="arithmatex">\(\epsilon-\delta\)</span> characterization, which explains the origin of the term "continuity": as long as the <span class="arithmatex">\(\mu\)</span>-measure of a set is sufficiently small, its <span class="arithmatex">\(\nu\)</span>-measure can be made arbitrarily small.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.2.1 (<span class="arithmatex">\(\epsilon-\delta\)</span> Characterization of Absolute Continuity)</p>
+<p>Let <span class="arithmatex">\(\nu\)</span> be a <strong>finite</strong> signed measure (i.e., <span class="arithmatex">\(|\nu|(X) &lt; \infty\)</span>). Then <span class="arithmatex">\(\nu \ll \mu\)</span> if and only if: for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, there exists <span class="arithmatex">\(\delta &gt; 0\)</span> such that for any measurable set <span class="arithmatex">\(E \in \mathcal{M}\)</span> satisfying <span class="arithmatex">\(\mu(E) &lt; \delta\)</span>, we have:</p>
+<div class="arithmatex">\[
+|\nu(E)| &lt; \epsilon
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 4.2.1</summary>
+<p><strong>Sufficiency (<span class="arithmatex">\(\Leftarrow\)</span>)</strong>: If <span class="arithmatex">\(\mu(E) = 0\)</span>, then for any <span class="arithmatex">\(\delta &gt; 0\)</span>, the condition <span class="arithmatex">\(\mu(E) &lt; \delta\)</span> is satisfied. From the condition, it follows that for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, <span class="arithmatex">\(|\nu(E)| &lt; \epsilon\)</span>; therefore, we must have <span class="arithmatex">\(\nu(E) = 0\)</span>, i.e., <span class="arithmatex">\(\nu \ll \mu\)</span>.</p>
+<p><strong>Necessity (<span class="arithmatex">\(\Rightarrow\)</span>)</strong>: We use proof by contradiction. Suppose the conclusion does not hold; then there exists some <span class="arithmatex">\(\epsilon &gt; 0\)</span> such that for every <span class="arithmatex">\(n \in \mathbb{N}\)</span> (taking <span class="arithmatex">\(\delta = 1/2^n\)</span>), there exists a corresponding set <span class="arithmatex">\(E_n \in \mathcal{M}\)</span> satisfying:</p>
+<div class="arithmatex">\[
+\mu(E_n) &lt; \frac{1}{2^n} \quad \text{but} \quad |\nu(E_n)| \ge \epsilon
+\]</div>
+<p>Define the "limit superior" of the sequence of sets:</p>
+<div class="arithmatex">\[
+F_k = \bigcup_{n=k}^\infty E_n, \quad F = \bigcap_{k=1}^\infty F_k
+\]</div>
+<p>Due to the subadditivity of the measure <span class="arithmatex">\(\mu\)</span>:</p>
+<div class="arithmatex">\[
+\mu(F_k) \le \sum_{n=k}^\infty \mu(E_n) &lt; \sum_{n=k}^\infty \frac{1}{2^n} = \frac{1}{2^{k-1}}
+\]</div>
+<p>Clearly, as <span class="arithmatex">\(k \to \infty\)</span>, <span class="arithmatex">\(\mu(F_k) \to 0\)</span>. By continuity from above, we have <span class="arithmatex">\(\mu(F) = 0\)</span>.</p>
+<p>Since it is known that <span class="arithmatex">\(\nu \ll \mu\)</span>, we must have <span class="arithmatex">\(|\nu|(F) = 0\)</span>.</p>
+<p>However, since <span class="arithmatex">\(\nu\)</span> is a finite measure, utilizing continuity from above:</p>
+<div class="arithmatex">\[
+|\nu|(F) = \lim_{k \to \infty} |\nu|(F_k) \ge \limsup_{k \to \infty} |\nu(E_k)| \ge \epsilon &gt; 0
+\]</div>
+<p>This leads to a severe contradiction! Thus, the assumption is false and the original proposition is proven.</p>
+</details>
+<hr />
+<h2 id="2-lebesgue-radon-nikodym-theorem">2. Lebesgue-Radon-Nikodym Theorem</h2>
+<p>In many application scenarios, given an integral measure <span class="arithmatex">\(d\nu = f d\mu\)</span>, we can easily determine that <span class="arithmatex">\(\nu \ll \mu\)</span>. Conversely, if it is known that <span class="arithmatex">\(\nu \ll \mu\)</span>, can we find a function <span class="arithmatex">\(f\)</span> such that <span class="arithmatex">\(d\nu = f d\mu\)</span>?</p>
+<p>The Lebesgue-Radon-Nikodym Theorem answers this question perfectly and provides a more general decomposition structure.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.2.2 (Lebesgue-Radon-Nikodym Theorem)</p>
+<p>Let <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\nu\)</span> be two <strong><span class="arithmatex">\(\sigma\)</span>-finite measures</strong> on a measurable space <span class="arithmatex">\((X, \mathcal{M})\)</span> (<span class="arithmatex">\(\nu\)</span> can be a signed measure).</p>
+<p>Then, there exists a <strong>unique</strong> pair of measures <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\rho\)</span> such that:</p>
+<div class="arithmatex">\[
+\nu = \lambda + \rho
+\]</div>
+<p>and satisfying the following two core conditions:</p>
+<ul>
+<li>
+<p><strong>Singularity</strong>: <span class="arithmatex">\(\lambda \perp \mu\)</span> (i.e., there exist complementary sets that separate them completely).</p>
+</li>
+<li>
+<p><strong>Absolute Continuity</strong>: <span class="arithmatex">\(\rho \ll \mu\)</span>. Furthermore, there exists a <span class="arithmatex">\(\mu\)</span>-almost everywhere unique function <span class="arithmatex">\(f \in L^1(\mu)\)</span> (if <span class="arithmatex">\(\nu\)</span> does not take negative infinity, this is an extended locally integrable function) such that for all measurable sets <span class="arithmatex">\(E \in \mathcal{M}\)</span>:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\rho(E) = \int_E f \, d\mu
+\]</div>
+</div>
+<ul>
+<li><strong>Note</strong>: This decomposition is called the <strong>Lebesgue decomposition</strong> of <span class="arithmatex">\(\nu\)</span> with respect to <span class="arithmatex">\(\mu\)</span>. <span class="arithmatex">\(\lambda\)</span> is called the singular part, and <span class="arithmatex">\(\rho\)</span> is called the absolutely continuous part. The function <span class="arithmatex">\(f\)</span> serves exactly as the "density" between the two.</li>
+</ul>
+<details class="proof">
+<summary>Core Constructive Proof of the Lebesgue-Radon-Nikodym Theorem (for the finite non-negative case)</summary>
+<p>For simplicity, assume <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\nu\)</span> are finite non-negative measures. We seek <span class="arithmatex">\(f\)</span> by constructing the largest "under-function."</p>
+<p>Define the following family of functions:</p>
+<div class="arithmatex">\[
+\mathcal{F} = \left\{ g : X \to [0, +\infty] \text{ is a measurable function } \mid \int_E g \, d\mu \le \nu(E), \forall E \in \mathcal{M} \right\}
+\]</div>
+<p>Clearly, the constant function <span class="arithmatex">\(g = 0\)</span> is in <span class="arithmatex">\(\mathcal{F}\)</span>, so <span class="arithmatex">\(\mathcal{F}\)</span> is non-empty. Moreover, if <span class="arithmatex">\(g_1, g_2 \in \mathcal{F}\)</span>, it can be proven that <span class="arithmatex">\(\max(g_1, g_2) \in \mathcal{F}\)</span>.</p>
+<p>Let <span class="arithmatex">\(M = \sup_{g \in \mathcal{F}} \int_X g \, d\mu\)</span>. Since <span class="arithmatex">\(\nu(X) &lt; \infty\)</span>, we have <span class="arithmatex">\(M &lt; \infty\)</span>.
+We can obtain a sequence <span class="arithmatex">\(\{g_n\} \subset \mathcal{F}\)</span> such that <span class="arithmatex">\(\int g_n d\mu \to M\)</span>.
+Let <span class="arithmatex">\(f_n = \max(g_1, \dots, g_n)\)</span>, then <span class="arithmatex">\(\{f_n\}\)</span> is a monotonically increasing sequence of functions, and <span class="arithmatex">\(f_n \in \mathcal{F}\)</span>.</p>
+<p>According to the Monotone Convergence Theorem (MCT), let <span class="arithmatex">\(f = \lim_{n \to \infty} f_n = \sup_n f_n\)</span>, then <span class="arithmatex">\(f \in \mathcal{F}\)</span> and:</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = M
+\]</div>
+<p>Now, we define the remaining measure part <span class="arithmatex">\(\lambda\)</span> as:</p>
+<div class="arithmatex">\[
+\lambda(E) = \nu(E) - \int_E f \, d\mu
+\]</div>
+<p>From <span class="arithmatex">\(f \in \mathcal{F}\)</span>, it follows that <span class="arithmatex">\(\lambda\)</span> is a non-negative measure. We now only need to prove <span class="arithmatex">\(\lambda \perp \mu\)</span>.
+If <span class="arithmatex">\(\lambda\)</span> were not singular to <span class="arithmatex">\(\mu\)</span>, then according to measure theory techniques, we could necessarily find a tiny perturbation <span class="arithmatex">\(\epsilon \mu \le \lambda\)</span> on some set of positive measure, such that <span class="arithmatex">\(f + \epsilon \chi_A\)</span> would still belong to <span class="arithmatex">\(\mathcal{F}\)</span>.
+However, this would result in <span class="arithmatex">\(\int (f + \epsilon \chi_A) d\mu = M + \epsilon \mu(A) &gt; M\)</span>, contradicting the fact that <span class="arithmatex">\(M\)</span> is the supremum!</p>
+<p>Therefore, <span class="arithmatex">\(\lambda\)</span> must be singular with respect to <span class="arithmatex">\(\mu\)</span>, proving the non-negative case of the theorem. Signed measures or <span class="arithmatex">\(\sigma\)</span>-finite measures can be reduced to this case through the Hahn decomposition and space partitioning.</p>
+</details>
+<hr />
+<h2 id="3-radon-nikodym-theorem-and-derivatives">3. Radon-Nikodym Theorem and Derivatives</h2>
+<p>As a direct corollary of the Lebesgue decomposition theorem, when it is known in advance that <span class="arithmatex">\(\nu \ll \mu\)</span>, the singular part <span class="arithmatex">\(\lambda\)</span> collapses to 0.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.2.3 (Radon-Nikodym Theorem)</p>
+<p>Let <span class="arithmatex">\(\mu, \nu\)</span> be <span class="arithmatex">\(\sigma\)</span>-finite measures, and <span class="arithmatex">\(\nu \ll \mu\)</span>.</p>
+<p>Then there must exist a <span class="arithmatex">\(\mu\)</span>-almost everywhere unique function <span class="arithmatex">\(f\)</span> such that for any measurable set <span class="arithmatex">\(E \in \mathcal{M}\)</span>:</p>
+<div class="arithmatex">\[
+\nu(E) = \int_E f \, d\mu
+\]</div>
+</div>
+<p>This miraculous function <span class="arithmatex">\(f\)</span> is called the <strong>Radon-Nikodym derivative</strong> of <span class="arithmatex">\(\nu\)</span> with respect to <span class="arithmatex">\(\mu\)</span>, usually denoted by the fractional symbol:</p>
+<div class="arithmatex">\[
+f = \frac{d\nu}{d\mu}
+\]</div>
+<p>The Radon-Nikodym derivative perfectly simulates the derivative chain rule from calculus within integral operations.</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 4.2.1 (Properties of the Radon-Nikodym Derivative)</p>
+<p>Assume all measures are <span class="arithmatex">\(\sigma\)</span>-finite measures.</p>
+<ul>
+<li><strong>Integration Rule</strong>: If <span class="arithmatex">\(g \in L^1(\nu)\)</span>, then <span class="arithmatex">\(g \frac{d\nu}{d\mu} \in L^1(\mu)\)</span>, and there is an intuitive change-of-variable formula:</li>
+</ul>
+<div class="arithmatex">\[
+\int_X g \, d\nu = \int_X g \frac{d\nu}{d\mu} \, d\mu
+\]</div>
+<ul>
+<li><strong>Chain Rule</strong>: If <span class="arithmatex">\(\nu \ll \mu\)</span> and <span class="arithmatex">\(\mu \ll \lambda\)</span>, then <span class="arithmatex">\(\nu \ll \lambda\)</span>, and almost everywhere we have:</li>
+</ul>
+<div class="arithmatex">\[
+\frac{d\nu}{d\lambda} = \frac{d\nu}{d\mu} \frac{d\mu}{d\lambda}
+\]</div>
+<ul>
+<li><strong>Reciprocal Rule</strong>: If <span class="arithmatex">\(\mu \ll \nu\)</span> and <span class="arithmatex">\(\nu \ll \mu\)</span> (i.e., they are <strong>equivalent</strong>, possessing identical null sets), then almost everywhere we have:</li>
+</ul>
+<div class="arithmatex">\[
+\frac{d\nu}{d\mu} = \left( \frac{d\mu}{d\nu} \right)^{-1}
+\]</div>
+</div>
+<hr />
+<h2 id="4-complex-measures-and-polar-decomposition">4. Complex Measures and Polar Decomposition</h2>
+<p>The values of a signed measure are restricted to real numbers. If we allow measures to take complex values, we obtain <strong>complex measures</strong>, which are very important in functional analysis.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.2.2 (Complex Measure)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M})\)</span> be a measurable space. A set function <span class="arithmatex">\(\nu: \mathcal{M} \to \mathbb{C}\)</span> is called a <strong>complex measure</strong> if for any sequence of disjoint measurable sets <span class="arithmatex">\(\{E_j\}\)</span> it satisfies:</p>
+<div class="arithmatex">\[
+\nu\left(\bigcup_{j=1}^\infty E_j\right) = \sum_{j=1}^\infty \nu(E_j)
+\]</div>
+<p>Note: To ensure the sum of a complex series is independent of the order of terms, the series must be <strong>absolutely convergent</strong>. This means complex measures <strong>naturally take only finite values</strong> and cannot take <span class="arithmatex">\(\infty\)</span>.</p>
+</div>
+<p>Any complex measure <span class="arithmatex">\(\nu\)</span> can be uniquely decomposed into real and imaginary parts: <span class="arithmatex">\(\nu = \nu_r + i \nu_i\)</span>, where <span class="arithmatex">\(\nu_r\)</span> and <span class="arithmatex">\(\nu_i\)</span> are both finite signed measures.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.2.3 (Total Variation)</p>
+<p>For a complex measure <span class="arithmatex">\(\nu\)</span>, define its total variation measure <span class="arithmatex">\(|\nu|\)</span> as:</p>
+<div class="arithmatex">\[
+|\nu|(E) = \sup \sum_{j=1}^n |\nu(E_j)|
+\]</div>
+<p>where the supremum is taken over all finite measurable partitions <span class="arithmatex">\(\{E_j\}_{j=1}^n\)</span> of the set <span class="arithmatex">\(E\)</span>. <span class="arithmatex">\(|\nu|\)</span> is also a finite non-negative measure.</p>
+</div>
+<p>With the support of the Radon-Nikodym theorem, we can perform an exquisite "polar decomposition" of a complex measure, much like representing a complex number in polar form <span class="arithmatex">\(z = r e^{i\theta}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.2.4 (Polar Decomposition of Complex Measures)</p>
+<p>Let <span class="arithmatex">\(\nu\)</span> be a complex measure. Since from the definition of total variation it is clear that <span class="arithmatex">\(\nu \ll |\nu|\)</span>, by the Radon-Nikodym theorem, there must exist a complex measurable function <span class="arithmatex">\(h = \frac{d\nu}{d|\nu|}\)</span> such that:</p>
+<div class="arithmatex">\[
+d\nu = h \, d|\nu|
+\]</div>
+<p>More importantly, this function <span class="arithmatex">\(h\)</span> satisfies, <span class="arithmatex">\(|\nu|\)</span>-almost everywhere:</p>
+<div class="arithmatex">\[
+|h(x)| = 1
+\]</div>
+</div>
+<p>Using polar decomposition, integration with respect to a complex measure can be strictly defined as a conversion to integration with respect to its total variation measure (a non-negative measure). If <span class="arithmatex">\(f \in L^1(|\nu|)\)</span>, we define:</p>
+<div class="arithmatex">\[
+\int_X f \, d\nu = \int_X f \cdot h \, d|\nu|
+\]</div>
+<p>From this definition, we can very directly derive the inequality bound for the absolute value of a complex integral:</p>
+<div class="arithmatex">\[
+\left| \int_X f \, d\nu \right| \le \int_X |f| \, d|\nu|
+\]</div>
 
 
 

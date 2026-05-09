@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#12-outer-measure-and-caratheodory-extension" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2684,6 +2689,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Outer Measure
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2701,6 +2726,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-outer-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Outer Measure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Outer Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-construction-method-for-outer-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Construction Method for Outer Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-caratheodory-measurability-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Carathéodory Measurability Criterion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-caratheodory-extension-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Carathéodory Extension Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pre-measure-and-uniqueness-of-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pre-measure and Uniqueness of Extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4398,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-outer-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Outer Measure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Outer Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-construction-method-for-outer-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Construction Method for Outer Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-caratheodory-measurability-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Carathéodory Measurability Criterion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-caratheodory-extension-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Carathéodory Extension Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-pre-measure-and-uniqueness-of-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pre-measure and Uniqueness of Extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4489,104 @@
   
 
 
-  <h1>Ch 2: Outer Measure</h1>
-
-
+<h1 id="12-outer-measure-and-caratheodory-extension">1.2 Outer Measure and Carathéodory Extension</h1>
+<p>In the process of establishing measure theory, a core challenge is how to construct a measure on a sufficiently large <span class="arithmatex">\(\sigma\)</span>-algebra. Carathéodory extension theory provides a standard method: first define an "outer measure" covering all subsets, then filter out those well-behaved sets through an ingenious measurability criterion, thereby forming a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<hr />
+<h2 id="1-outer-measure">1. Outer Measure</h2>
+<p>An outer measure is a set function defined on all subsets of the universal set <span class="arithmatex">\(X\)</span>. Unlike a measure, it only needs to satisfy subadditivity rather than countable additivity.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.2.1 (Outer Measure)</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a non-empty set. A set function <span class="arithmatex">\(\mu^*: 2^X \to [0, +\infty]\)</span> is called an <strong>outer measure</strong>, if it satisfies the following properties:</p>
+<ul>
+<li>
+<p><strong>Empty Set Property</strong>: <span class="arithmatex">\(\mu^*(\emptyset) = 0\)</span>.</p>
+</li>
+<li>
+<p><strong>Monotonicity</strong>: If <span class="arithmatex">\(A \subset B \subset X\)</span>, then <span class="arithmatex">\(\mu^*(A) \le \mu^*(B)\)</span>.</p>
+</li>
+<li>
+<p><strong>Countable Subadditivity</strong>: For any sequence of subsets <span class="arithmatex">\(\{A_j\}_{j=1}^\infty \subset 2^X\)</span>, we have:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mu^*\left( \bigcup_{j=1}^\infty A_j \right) \le \sum_{j=1}^\infty \mu^*(A_j)
+\]</div>
+</div>
+<h3 id="general-construction-method-for-outer-measures">General Construction Method for Outer Measures</h3>
+<p>We can generate an outer measure through an elementary function <span class="arithmatex">\(\rho\)</span> on a simple family of sets <span class="arithmatex">\(\Sigma\)</span>. This method is crucial in constructing the Lebesgue measure.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.2.1 (Generation of Outer Measure)</p>
+<p>Let <span class="arithmatex">\(\Sigma \subset 2^X\)</span> be a family of subsets, satisfying <span class="arithmatex">\(\emptyset \in \Sigma\)</span>. Let <span class="arithmatex">\(\rho: \Sigma \to [0, +\infty]\)</span> satisfy <span class="arithmatex">\(\rho(\emptyset) = 0\)</span>. For any <span class="arithmatex">\(A \subset X\)</span>, define:</p>
+<div class="arithmatex">\[
+\mu^*(A) = \inf \left\{ \sum_{j=1}^\infty \rho(E_j) : A \subset \bigcup_{j=1}^\infty E_j, E_j \in \Sigma \right\}
+\]</div>
+<p>Then <span class="arithmatex">\(\mu^*\)</span> is an outer measure on <span class="arithmatex">\(X\)</span>.</p>
+</div>
+<hr />
+<h2 id="2-caratheodory-measurability-criterion">2. Carathéodory Measurability Criterion</h2>
+<p>Since outer measures generally do not satisfy additivity on arbitrary sets, Carathéodory proposed a criterion to define which sets are "measurable."</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.2.2 (Carathéodory Measurability)</p>
+<p>Let <span class="arithmatex">\(\mu^*\)</span> be an outer measure on <span class="arithmatex">\(X\)</span>. A set <span class="arithmatex">\(A \subset X\)</span> is said to be <strong><span class="arithmatex">\(\mu^*\)</span>-measurable</strong>, if for any testing set <span class="arithmatex">\(E \subset X\)</span>, it satisfies:</p>
+<div class="arithmatex">\[
+\mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c)
+\]</div>
+<p>By convention, the collection of all <span class="arithmatex">\(\mu^*\)</span>-measurable sets is denoted by <span class="arithmatex">\(\mathcal{M}\)</span>.</p>
+</div>
+<p><strong>Intuitive Understanding</strong>: A set <span class="arithmatex">\(A\)</span> is measurable if it is able to split any set <span class="arithmatex">\(E\)</span> in the space "neatly," such that the sum of the measures of the two parts of <span class="arithmatex">\(E\)</span> inside and outside of <span class="arithmatex">\(A\)</span> equals the measure of the whole <span class="arithmatex">\(E\)</span>. To verify measurability, one only needs to prove the inequality <span class="arithmatex">\(\mu^*(E) \ge \mu^*(E \cap A) + \mu^*(E \cap A^c)\)</span>, as the other half of the inequality holds automatically by subadditivity.</p>
+<hr />
+<h2 id="3-caratheodory-extension-theorem">3. Carathéodory Extension Theorem</h2>
+<p>This is the cornerstone theorem of measure theory, revealing that the family of measurable sets filtered from an outer measure possesses an excellent algebraic structure.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.2.2 (Carathéodory Theorem)</p>
+<p>Let <span class="arithmatex">\(\mu^*\)</span> be an outer measure on <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(\mathcal{M}\)</span> be the family consisting of all <span class="arithmatex">\(\mu^*\)</span>-measurable sets. Then:</p>
+<ul>
+<li>
+<p><strong>Structure</strong>: <span class="arithmatex">\(\mathcal{M}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+</li>
+<li>
+<p><strong>Measurability</strong>: <span class="arithmatex">\(\mu^*\)</span> restricted on <span class="arithmatex">\(\mathcal{M}\)</span> is a measure (satisfies countable additivity).</p>
+</li>
+<li>
+<p><strong>Completeness</strong>: The measure space <span class="arithmatex">\((X, \mathcal{M}, \mu^*)\)</span> is complete, i.e., all subsets of <span class="arithmatex">\(\mu^*\)</span>-null sets belong to <span class="arithmatex">\(\mathcal{M}\)</span>.</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Outline of Proof for Carathéodory Theorem</summary>
+<p><strong>1. Prove that <span class="arithmatex">\(\mathcal{M}\)</span> is an algebra</strong>:
+Since <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A^c\)</span> are symmetric in the definition, it is obvious that <span class="arithmatex">\(A \in \mathcal{M} \implies A^c \in \mathcal{M}\)</span>. For closure under union, one can pick a testing set <span class="arithmatex">\(E\)</span>, use the measurability of <span class="arithmatex">\(A\)</span> for the first split, then use the measurability of <span class="arithmatex">\(B\)</span> to split the remaining parts, and combine terms via subadditivity.</p>
+<p><strong>2. Prove finite additivity</strong>:
+Let <span class="arithmatex">\(A, B \in \mathcal{M}\)</span> and <span class="arithmatex">\(A \cap B = \emptyset\)</span>. Utilizing the splitting effect of <span class="arithmatex">\(A\)</span> on <span class="arithmatex">\(E \cap (A \cup B)\)</span>, we obtain <span class="arithmatex">\(\mu^*(E \cap (A \cup B)) = \mu^*(E \cap A) + \mu^*(E \cap B)\)</span>.</p>
+<p><strong>3. Extend to countable additivity</strong>:
+Let <span class="arithmatex">\(\{A_j\}\)</span> be a sequence of disjoint sets in <span class="arithmatex">\(\mathcal{M}\)</span>. Let <span class="arithmatex">\(B_n = \bigcup_{j=1}^n A_j\)</span> and <span class="arithmatex">\(B = \bigcup_{j=1}^\infty A_j\)</span>.
+By induction, it follows that <span class="arithmatex">\(\mu^*(E \cap B_n) = \sum_{j=1}^n \mu^*(E \cap A_j)\)</span>.
+Since <span class="arithmatex">\(\mu^*(E) = \mu^*(E \cap B_n) + \mu^*(E \cap B_n^c) \ge \sum_{j=1}^n \mu^*(E \cap A_j) + \mu^*(E \cap B^c)\)</span>.
+Let <span class="arithmatex">\(n \to \infty\)</span>, and utilizing the subadditivity <span class="arithmatex">\(\mu^*(E \cap B) \le \sum \mu^*(E \cap A_j)\)</span>, the squeeze theorem confirms <span class="arithmatex">\(\mu^*(E) = \mu^*(E \cap B) + \mu^*(E \cap B^c)\)</span> and the measure satisfies countable additivity.</p>
+</details>
+<hr />
+<h2 id="4-pre-measure-and-uniqueness-of-extension">4. Pre-measure and Uniqueness of Extension</h2>
+<p>In practical applications, measures usually start from a smaller family of sets (such as an algebra <span class="arithmatex">\(\mathcal{A}\)</span>).</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.2.3 (Pre-measure)</p>
+<p>Let <span class="arithmatex">\(\mathcal{A}\)</span> be an algebra on <span class="arithmatex">\(X\)</span>. A set function <span class="arithmatex">\(\mu_0: \mathcal{A} \to [0, +\infty]\)</span> is called a <strong>pre-measure</strong>, if it satisfies <span class="arithmatex">\(\mu_0(\emptyset) = 0\)</span>, and for any disjoint sequence of sets <span class="arithmatex">\(\{A_j\}\)</span> in <span class="arithmatex">\(\mathcal{A}\)</span>, as long as <span class="arithmatex">\(\bigcup A_j \in \mathcal{A}\)</span>, we have:</p>
+<div class="arithmatex">\[
+\mu_0\left(\bigcup_{j=1}^\infty A_j\right) = \sum_{j=1}^\infty \mu_0(A_j)
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.2.3 (Uniqueness of Extension)</p>
+<p>Let <span class="arithmatex">\(\mu_0\)</span> be a pre-measure on algebra <span class="arithmatex">\(\mathcal{A}\)</span>, and <span class="arithmatex">\(\mu^*\)</span> be the outer measure induced by <span class="arithmatex">\(\mu_0\)</span>.</p>
+<ul>
+<li>
+<p><strong>Existence</strong>: The restriction of <span class="arithmatex">\(\mu^*\)</span> on the <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\sigma(\mathcal{A})\)</span> generated by <span class="arithmatex">\(\mathcal{A}\)</span> is a measure, and this measure coincides with <span class="arithmatex">\(\mu_0\)</span> on <span class="arithmatex">\(\mathcal{A}\)</span>.</p>
+</li>
+<li>
+<p><strong>Uniqueness</strong>: If <span class="arithmatex">\(\mu_0\)</span> is <strong><span class="arithmatex">\(\sigma\)</span>-finite</strong> (i.e., <span class="arithmatex">\(X\)</span> can be expressed as a countable union of sets in <span class="arithmatex">\(\mathcal{A}\)</span> with finite measure), then the extension of this measure on <span class="arithmatex">\(\sigma(\mathcal{A})\)</span> is unique.</p>
+</li>
+</ul>
+</div>
+<p>If the pre-measure does not satisfy <span class="arithmatex">\(\sigma\)</span>-finiteness, the measure after extension may not be unique. This conclusion emphasizes the importance of <span class="arithmatex">\(\sigma\)</span>-finiteness in the study of measure theory.</p>
 
 
 

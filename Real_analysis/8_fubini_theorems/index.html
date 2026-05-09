@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#33-fubini" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2852,6 +2857,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：Fubini定理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2869,6 +2894,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 乘积可测空间与截面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monotone-class-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 单调类定理 (Monotone Class Theorem)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 乘积测度的构造
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tonelli-fubini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tonelli 定理与 Fubini 定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mathbbrn-lebesgue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. \(\mathbb{R}^n\) 上的 Lebesgue 积分简述
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4392,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 乘积可测空间与截面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monotone-class-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 单调类定理 (Monotone Class Theorem)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 乘积测度的构造
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tonelli-fubini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tonelli 定理与 Fubini 定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mathbbrn-lebesgue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. \(\mathbb{R}^n\) 上的 Lebesgue 积分简述
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4477,194 @@
   
 
 
-  <h1>第八章：Fubini定理</h1>
-
-
+<h1 id="33-fubini">3.3 乘积测度与 Fubini 定理</h1>
+<p>在建立了一维（或单一抽象空间）的积分理论之后，我们自然需要将积分推广到多维或多个空间的乘积上（如从单变量积分过渡到重积分）。这就需要引入乘积测度的概念，并解决一个核心问题：<strong>重积分是否可以化为累次积分计算？</strong> 以及 <strong>积分的顺序是否可以交换？</strong></p>
+<p>这正是著名的 Tonelli 定理和 Fubini 定理所要回答的问题。在整个讨论中，我们默认涉及的测度空间都是 <strong><span class="arithmatex">\(\sigma\)</span>-有限的 ( <span class="arithmatex">\(\sigma\)</span>-finite )</strong>。</p>
+<hr />
+<h2 id="1">1. 乘积可测空间与截面</h2>
+<p>为了在乘积空间 <span class="arithmatex">\(X \times Y\)</span> 上定义测度，我们首先需要建立其上的 <span class="arithmatex">\(\sigma\)</span>-代数。最基本的构造单元是“可测长方形”。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.3.1 (可测长方形与乘积 <span class="arithmatex">\(\sigma\)</span>-代数)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M})\)</span> 和 <span class="arithmatex">\((Y, \mathcal{N})\)</span> 为两个可测空间。称集合 <span class="arithmatex">\(A \times B\)</span> 为一个<strong>可测长方形</strong>，如果 <span class="arithmatex">\(A \in \mathcal{M}\)</span> 且 <span class="arithmatex">\(B \in \mathcal{N}\)</span>。</p>
+<p>由所有可测长方形构成的集族生成了 <span class="arithmatex">\(X \times Y\)</span> 上的<strong>乘积 <span class="arithmatex">\(\sigma\)</span>-代数</strong>，记为：</p>
+<div class="arithmatex">\[
+\mathcal{M} \otimes \mathcal{N} = \sigma(\{A \times B \mid A \in \mathcal{M}, B \in \mathcal{N}\})
+\]</div>
+</div>
+<p>在处理二元函数和二元集合时，固定其中一个变量所得到的“截面”是重要的研究对象。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.3.2 (集合与函数的截面 Section)</p>
+<p>对于 <span class="arithmatex">\(E \subset X \times Y\)</span>，固定 <span class="arithmatex">\(x \in X\)</span> 或 <span class="arithmatex">\(y \in Y\)</span>，定义其<strong>集合截面</strong>为：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(x\)</span>-截面：<span class="arithmatex">\(E_x = \{y \in Y \mid (x, y) \in E\} \subset Y\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span>-截面：<span class="arithmatex">\(E^y = \{x \in X \mid (x, y) \in E\} \subset X\)</span></p>
+</li>
+</ul>
+<p>对于定义在 <span class="arithmatex">\(X \times Y\)</span> 上的函数 <span class="arithmatex">\(f(x, y)\)</span>，定义其<strong>函数截面</strong>为：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(f_x(y) = f(x, y)\)</span> （视为定义在 <span class="arithmatex">\(Y\)</span> 上的函数）</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f^y(x) = f(x, y)\)</span> （视为定义在 <span class="arithmatex">\(X\)</span> 上的函数）</p>
+</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">定理 3.3.1 (截面的可测性)</p>
+<p>如果 <span class="arithmatex">\(E \in \mathcal{M} \otimes \mathcal{N}\)</span>，那么对于所有的 <span class="arithmatex">\(x \in X\)</span> 和 <span class="arithmatex">\(y \in Y\)</span>，都有 <span class="arithmatex">\(E_x \in \mathcal{N}\)</span> 且 <span class="arithmatex">\(E^y \in \mathcal{M}\)</span>。</p>
+<p>如果 <span class="arithmatex">\(f\)</span> 是 <span class="arithmatex">\(X \times Y\)</span> 上的 <span class="arithmatex">\(\mathcal{M} \otimes \mathcal{N}\)</span>-可测函数，那么 <span class="arithmatex">\(f_x\)</span> 是 <span class="arithmatex">\(\mathcal{N}\)</span>-可测的，<span class="arithmatex">\(f^y\)</span> 是 <span class="arithmatex">\(\mathcal{M}\)</span>-可测的。</p>
+</div>
+<details class="proof">
+<summary>集合截面可测性的证明</summary>
+<p>我们以 <span class="arithmatex">\(E_x \in \mathcal{N}\)</span> 的证明为例。构造集族：</p>
+<div class="arithmatex">\[
+\mathcal{R} = \{E \subset X \times Y \mid E_x \in \mathcal{N}\}
+\]</div>
+<p>首先，如果 <span class="arithmatex">\(E = A \times B\)</span> 是一个可测长方形，那么当 <span class="arithmatex">\(x \in A\)</span> 时 <span class="arithmatex">\(E_x = B \in \mathcal{N}\)</span>；当 <span class="arithmatex">\(x \notin A\)</span> 时 <span class="arithmatex">\(E_x = \emptyset \in \mathcal{N}\)</span>。因此，所有可测长方形都在 <span class="arithmatex">\(\mathcal{R}\)</span> 中。</p>
+<p>其次，我们需要验证 <span class="arithmatex">\(\mathcal{R}\)</span> 是一个 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+<ul>
+<li>
+<p><strong>对补集封闭</strong>：<span class="arithmatex">\((E^c)_x = (E_x)^c\)</span>。因为 <span class="arithmatex">\(\mathcal{N}\)</span> 是 <span class="arithmatex">\(\sigma\)</span>-代数，如果 <span class="arithmatex">\(E_x \in \mathcal{N}\)</span>，则 <span class="arithmatex">\((E_x)^c \in \mathcal{N}\)</span>，故 <span class="arithmatex">\(E^c \in \mathcal{R}\)</span>。</p>
+</li>
+<li>
+<p><strong>对可数并封闭</strong>：<span class="arithmatex">\((\bigcup_{j=1}^\infty E_j)_x = \bigcup_{j=1}^\infty (E_j)_x\)</span>。同样由 <span class="arithmatex">\(\mathcal{N}\)</span> 的封闭性可知并集也在 <span class="arithmatex">\(\mathcal{R}\)</span> 中。</p>
+</li>
+</ul>
+<p>既然 <span class="arithmatex">\(\mathcal{R}\)</span> 是一个包含所有可测长方形的 <span class="arithmatex">\(\sigma\)</span>-代数，而 <span class="arithmatex">\(\mathcal{M} \otimes \mathcal{N}\)</span> 是包含可测长方形的<strong>最小</strong> <span class="arithmatex">\(\sigma\)</span>-代数，必然有 <span class="arithmatex">\(\mathcal{M} \otimes \mathcal{N} \subset \mathcal{R}\)</span>。定理得证。</p>
+</details>
+<hr />
+<h2 id="2-monotone-class-theorem">2. 单调类定理 (Monotone Class Theorem)</h2>
+<p>在证明乘积测度的性质时，由于 <span class="arithmatex">\(\sigma\)</span>-代数非常复杂，我们往往先在代数上证明，然后通过“单调类定理”将其推广到整个 <span class="arithmatex">\(\sigma\)</span>-代数。这是一个极其强大的证明工具。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.3.3 (单调类 Monotone Class)</p>
+<p>设 <span class="arithmatex">\(\mathcal{C} \subset 2^X\)</span> 为一集族。如果 <span class="arithmatex">\(\mathcal{C}\)</span> 满足以下条件，则称为<strong>单调类</strong>：</p>
+<ul>
+<li>
+<p>对于递增集列 <span class="arithmatex">\(E_1 \subset E_2 \subset \dots\)</span>，若 <span class="arithmatex">\(E_j \in \mathcal{C}\)</span>，则 <span class="arithmatex">\(\bigcup_{j=1}^\infty E_j \in \mathcal{C}\)</span>。</p>
+</li>
+<li>
+<p>对于递减集列 <span class="arithmatex">\(E_1 \supset E_2 \supset \dots\)</span>，若 <span class="arithmatex">\(E_j \in \mathcal{C}\)</span>，则 <span class="arithmatex">\(\bigcap_{j=1}^\infty E_j \in \mathcal{C}\)</span>。</p>
+</li>
+</ul>
+</div>
+<p>显然，任何 <span class="arithmatex">\(\sigma\)</span>-代数都是单调类。反之，一个既是代数又是单调类的集族，必定是 <span class="arithmatex">\(\sigma\)</span>-代数。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.3.2 (单调类定理)</p>
+<p>设 <span class="arithmatex">\(\mathcal{A}\)</span> 为一个代数。如果 <span class="arithmatex">\(\mathcal{C}\)</span> 是包含 <span class="arithmatex">\(\mathcal{A}\)</span> 的单调类，那么 <span class="arithmatex">\(\mathcal{C}\)</span> 必定包含由 <span class="arithmatex">\(\mathcal{A}\)</span> 生成的 <span class="arithmatex">\(\sigma\)</span>-代数，即：</p>
+<div class="arithmatex">\[
+\sigma(\mathcal{A}) \subset \mathcal{C}
+\]</div>
+</div>
+<hr />
+<h2 id="3">3. 乘积测度的构造</h2>
+<p>现在我们可以定义两个测度的乘积了。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.3.3 (截面积分与乘积测度)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 和 <span class="arithmatex">\((Y, \mathcal{N}, \nu)\)</span> 为 <span class="arithmatex">\(\sigma\)</span>-有限测度空间。对于任意 <span class="arithmatex">\(E \in \mathcal{M} \otimes \mathcal{N}\)</span>：</p>
+<ul>
+<li>
+<p>映射 <span class="arithmatex">\(x \mapsto \nu(E_x)\)</span> 是 <span class="arithmatex">\(\mathcal{M}\)</span>-可测的；</p>
+</li>
+<li>
+<p>映射 <span class="arithmatex">\(y \mapsto \mu(E^y)\)</span> 是 <span class="arithmatex">\(\mathcal{N}\)</span>-可测的；</p>
+</li>
+<li>
+<p>且它们的积分相等，共同定义了 <span class="arithmatex">\(X \times Y\)</span> 上的<strong>乘积测度 <span class="arithmatex">\(\mu \times \nu\)</span></strong>：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+(\mu \times \nu)(E) = \int_X \nu(E_x) \, d\mu(x) = \int_Y \mu(E^y) \, d\nu(y)
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 3.3.3 的证明简述</summary>
+<p>证明的核心利用了<strong>单调类定理</strong>。</p>
+<p>首先，如果 <span class="arithmatex">\(E = A \times B\)</span> 是可测长方形，<span class="arithmatex">\(\nu(E_x) = \nu(B) \cdot \chi_A(x)\)</span>。这是一个简单函数，显然可测，且其积分为 <span class="arithmatex">\(\mu(A)\nu(B)\)</span>。对称地，<span class="arithmatex">\(\int \mu(E^y)d\nu(y) = \mu(A)\nu(B)\)</span> 也是成立的。</p>
+<p>我们将满足上述性质的所有集合 <span class="arithmatex">\(E \in \mathcal{M} \otimes \mathcal{N}\)</span> 收集起来，构成集族 <span class="arithmatex">\(\mathcal{C}\)</span>。由上述讨论，有限不相交的长方形并集（即由长方形生成的代数 <span class="arithmatex">\(\mathcal{A}\)</span>）都在 <span class="arithmatex">\(\mathcal{C}\)</span> 中。</p>
+<p>由于测度空间是 <span class="arithmatex">\(\sigma\)</span>-有限的，我们可以利用测度的自下连续性（针对递增集列）和自上连续性（结合控制收敛定理 DCT 针对递减集列），证明 <span class="arithmatex">\(\mathcal{C}\)</span> 具有<strong>单调类</strong>的性质。</p>
+<p>根据单调类定理，包含代数 <span class="arithmatex">\(\mathcal{A}\)</span> 的单调类 <span class="arithmatex">\(\mathcal{C}\)</span> 必定包含 <span class="arithmatex">\(\sigma(\mathcal{A}) = \mathcal{M} \otimes \mathcal{N}\)</span>。因此，对所有的可测集，该性质都成立。</p>
+</details>
+<hr />
+<h2 id="4-tonelli-fubini">4. Tonelli 定理与 Fubini 定理</h2>
+<p>这是重积分计算的两大核心定理。<strong>Tonelli 定理</strong>处理非负函数，而 <strong>Fubini 定理</strong>处理一般可积函数。它们通常配合使用。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.3.4 (Tonelli 定理：针对非负函数)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 和 <span class="arithmatex">\((Y, \mathcal{N}, \nu)\)</span> 为 <span class="arithmatex">\(\sigma\)</span>-有限测度空间。如果 <span class="arithmatex">\(f \in L^+(X \times Y)\)</span>（即 <span class="arithmatex">\(f\)</span> 是非负可测函数），那么：</p>
+<ul>
+<li>
+<p>函数 <span class="arithmatex">\(g(x) = \int_Y f_x \, d\nu\)</span> 和 <span class="arithmatex">\(h(y) = \int_X f^y \, d\mu\)</span> 分别是 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 上的非负可测函数。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> 的重积分可以通过任意顺序的累次积分计算（即使结果为 <span class="arithmatex">\(+\infty\)</span>）：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_{X \times Y} f \, d(\mu \times \nu) = \int_X \left( \int_Y f(x, y) \, d\nu(y) \right) d\mu(x) = \int_Y \left( \int_X f(x, y) \, d\mu(x) \right) d\nu(y)
+\]</div>
+</div>
+<details class="proof">
+<summary>Tonelli 定理的推导过程</summary>
+<ol>
+<li>
+<p><strong>特征函数</strong>：若 <span class="arithmatex">\(f = \chi_E\)</span>，由乘积测度的定义（定理 3.3.3），定理直接成立。</p>
+</li>
+<li>
+<p><strong>非负简单函数</strong>：若 <span class="arithmatex">\(f = \sum a_j \chi_{E_j}\)</span>，由积分的线性性质，定理成立。</p>
+</li>
+<li>
+<p><strong>非负可测函数</strong>：由简单函数逼近定理，存在单调递增的非负简单函数列 <span class="arithmatex">\(\phi_n \uparrow f\)</span>。
+   对于每一个 <span class="arithmatex">\(\phi_n\)</span>，累次积分等于重积分。对等式两边应用<strong>单调收敛定理 (MCT)</strong>，极限与积分号交换，即可得到任意非负函数 <span class="arithmatex">\(f\)</span> 满足 Tonelli 定理。</p>
+</li>
+</ol>
+</details>
+<div class="admonition success">
+<p class="admonition-title">定理 3.3.5 (Fubini 定理：针对绝对可积函数)</p>
+<p>设 <span class="arithmatex">\((X, \mathcal{M}, \mu)\)</span> 和 <span class="arithmatex">\((Y, \mathcal{N}, \nu)\)</span> 为 <span class="arithmatex">\(\sigma\)</span>-有限测度空间。如果 <span class="arithmatex">\(f \in L^1(\mu \times \nu)\)</span>（即 <span class="arithmatex">\(f\)</span> 是乘积空间上的<strong>绝对可积函数</strong>），那么：</p>
+<ul>
+<li>
+<p>对于几乎所有的 <span class="arithmatex">\(x \in X\)</span>，<span class="arithmatex">\(f_x \in L^1(\nu)\)</span>（即截面函数是可积的）；对于几乎所有的 <span class="arithmatex">\(y \in Y\)</span>，<span class="arithmatex">\(f^y \in L^1(\mu)\)</span>。</p>
+</li>
+<li>
+<p>对截面积分得到的函数 <span class="arithmatex">\(g(x) = \int_Y f_x \, d\nu\)</span> 和 <span class="arithmatex">\(h(y) = \int_X f^y \, d\mu\)</span> 分别在 <span class="arithmatex">\(X\)</span> 和 <span class="arithmatex">\(Y\)</span> 上是可积的。</p>
+</li>
+<li>
+<p>重积分等于累次积分：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_{X \times Y} f \, d(\mu \times \nu) = \int_X \left( \int_Y f(x, y) \, d\nu(y) \right) d\mu(x) = \int_Y \left( \int_X f(x, y) \, d\mu(x) \right) d\nu(y)
+\]</div>
+</div>
+<details class="proof">
+<summary>Fubini 定理的证明思路</summary>
+<p>因为 <span class="arithmatex">\(f \in L^1\)</span>，可知 <span class="arithmatex">\(\int |f| \, d(\mu \times \nu) &lt; \infty\)</span>。</p>
+<p>由于 <span class="arithmatex">\(|f|\)</span> 是非负可测函数，我们可以对其应用 <strong>Tonelli 定理</strong>：</p>
+<div class="arithmatex">\[
+\int_X \left( \int_Y |f(x, y)| \, d\nu(y) \right) d\mu(x) = \int_{X \times Y} |f| \, d(\mu \times \nu) &lt; \infty
+\]</div>
+<p>这说明外部积分是有限的。由非负函数积分的“几乎处处”性质，被积函数 <span class="arithmatex">\(\int_Y |f_x| d\nu\)</span> 必须在 <span class="arithmatex">\(X\)</span> 上几乎处处有限。这就证明了 <span class="arithmatex">\(f_x \in L^1(\nu)\)</span> a.e.。</p>
+<p>最后，将实函数 <span class="arithmatex">\(f\)</span> 分解为正部和负部 <span class="arithmatex">\(f = f^+ - f^-\)</span>（若为复函数则分解实虚部及正负部）。由于 <span class="arithmatex">\(|f|\)</span> 可积，可知 <span class="arithmatex">\(f^+\)</span> 和 <span class="arithmatex">\(f^-\)</span> 都在 <span class="arithmatex">\(X \times Y\)</span> 上可积。
+分别对 <span class="arithmatex">\(f^+\)</span> 和 <span class="arithmatex">\(f^-\)</span> 应用 Tonelli 定理，然后利用积分的线性性质相减，即证明了 Fubini 定理。</p>
+</details>
+<p><strong>总结使用策略</strong>：在实际计算中，我们经常先对 <span class="arithmatex">\(|f|\)</span> 使用 Tonelli 定理来验证积分是否有限。如果 <span class="arithmatex">\(\int \int |f| d\mu d\nu &lt; \infty\)</span>，则 <span class="arithmatex">\(f \in L^1(\mu \times \nu)\)</span>，此时就可以放心大胆地使用 Fubini 定理交换 <span class="arithmatex">\(f\)</span> 本身的积分顺序了。</p>
+<hr />
+<h2 id="5-mathbbrn-lebesgue">5. <span class="arithmatex">\(\mathbb{R}^n\)</span> 上的 Lebesgue 积分简述</h2>
+<p>基于上述乘积测度的理论，高维欧氏空间 <span class="arithmatex">\(\mathbb{R}^n\)</span> 上的积分理论变得非常自然。</p>
+<ul>
+<li>
+<p><strong>Lebesgue 测度的乘积</strong>：<span class="arithmatex">\(\mathbb{R}^n\)</span> 上的 Borel 测度可视为 <span class="arithmatex">\(n\)</span> 个一维 Borel 测度的乘积。将其进行完备化处理后，就得到了 <span class="arithmatex">\(\mathbb{R}^n\)</span> 上的 Lebesgue 测度 <span class="arithmatex">\(m_n\)</span>。</p>
+</li>
+<li>
+<p><strong>外测度逼近</strong>：对于 <span class="arithmatex">\(\mathbb{R}^n\)</span> 中任何可测集 <span class="arithmatex">\(E\)</span> 及其 Lebesgue 测度 <span class="arithmatex">\(m_n(E)\)</span>，我们既可以通过开集从外部逼近（<span class="arithmatex">\(\inf \{m(U) \mid U \supset E\}\)</span>），也可以通过紧集从内部逼近（<span class="arithmatex">\(\sup \{m(K) \mid K \subset E\}\)</span>）。</p>
+</li>
+<li>
+<p><strong>几何不变性</strong>：在一维情况中，我们知道 Lebesgue 测度具有平移不变性。在 <span class="arithmatex">\(\mathbb{R}^n\)</span> 中，Lebesgue 测度 <span class="arithmatex">\(m_n\)</span> 不仅对于平移保持不变，对于空间中的<strong>旋转变换 (Rotations)</strong> 同样保持不变。这使得 Lebesgue 积分在处理几何与物理问题时具有天然的优势。</p>
+</li>
+</ul>
 
 
 

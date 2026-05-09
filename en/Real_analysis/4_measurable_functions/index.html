@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#21-concepts-and-properties-of-measurable-functions" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2740,6 +2745,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Measurable Functions I
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2757,6 +2782,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-properties-of-mappings-and-inverse-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Properties of Mappings and Inverse Images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definition-and-basic-criterion-of-measurable-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Definition and Basic Criterion of Measurable Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-equivalent-conditions-for-real-valued-measurable-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Equivalent Conditions for Real-Valued Measurable Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-local-measurability-composition-and-product-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Local Measurability, Composition, and Product Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-properties-of-mappings-and-inverse-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Properties of Mappings and Inverse Images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-definition-and-basic-criterion-of-measurable-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Definition and Basic Criterion of Measurable Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-equivalent-conditions-for-real-valued-measurable-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Equivalent Conditions for Real-Valued Measurable Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-local-measurability-composition-and-product-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Local Measurability, Composition, and Product Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,161 @@
   
 
 
-  <h1>Ch 4: Measurable Functions I</h1>
-
-
+<h1 id="21-concepts-and-properties-of-measurable-functions">2.1 Concepts and Properties of Measurable Functions</h1>
+<p>In a measure space <span class="arithmatex">\((X, \mathcal{M})\)</span>, measurable functions are the central objects in the study of integration theory. Just as continuous functions preserve the structure of open sets in topological spaces, measurable functions preserve the σ-algebra structure between measurable spaces.</p>
+<hr />
+<h2 id="1-properties-of-mappings-and-inverse-images">1. Properties of Mappings and Inverse Images</h2>
+<p>Before defining measurable functions, we recall the basic properties of inverse images of sets. The inverse image mapping <span class="arithmatex">\(f^{-1}: 2^Y \to 2^X\)</span> is completely compatible with various set operations.</p>
+<div class="admonition info">
+<p class="admonition-title">Lemma 2.1.1 (Properties of Inverse Images)</p>
+<p>Let <span class="arithmatex">\(f: X \to Y\)</span> be a mapping and <span class="arithmatex">\(E, E_{\lambda} \subset Y\)</span>. Then:</p>
+<ul>
+<li><strong>Preservation of unions</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}\left(\bigcup_{\lambda} E_{\lambda}\right) = \bigcup_{\lambda} f^{-1}(E_{\lambda})
+\]</div>
+<ul>
+<li><strong>Preservation of intersections</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}\left(\bigcap_{\lambda} E_{\lambda}\right) = \bigcap_{\lambda} f^{-1}(E_{\lambda})
+\]</div>
+<ul>
+<li><strong>Preservation of complements</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}(E^c) = (f^{-1}(E))^c
+\]</div>
+</div>
+<p>From these properties it follows that if <span class="arithmatex">\(\mathcal{N}\)</span> is a σ-algebra on <span class="arithmatex">\(Y\)</span>, then the collection <span class="arithmatex">\(\mathcal{F} = \{E \subset Y : f^{-1}(E) \in \mathcal{M}\}\)</span> forms a σ-algebra on <span class="arithmatex">\(Y\)</span>.</p>
+<hr />
+<h2 id="2-definition-and-basic-criterion-of-measurable-functions">2. Definition and Basic Criterion of Measurable Functions</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 2.1.1 (<span class="arithmatex">\((\mathcal{M}, \mathcal{N})\)</span>-Measurability)</p>
+<p>Let <span class="arithmatex">\((X, \mathcal{M})\)</span> and <span class="arithmatex">\((Y, \mathcal{N})\)</span> be two measurable spaces. A mapping <span class="arithmatex">\(f: X \to Y\)</span> is called <strong><span class="arithmatex">\((\mathcal{M}, \mathcal{N})\)</span>-measurable</strong> (or simply measurable) if for every <span class="arithmatex">\(E \in \mathcal{N}\)</span>, its inverse image satisfies</p>
+<div class="arithmatex">\[
+f^{-1}(E) \in \mathcal{M}.
+\]</div>
+</div>
+<p>When the target space is the real line <span class="arithmatex">\(\mathbb{R}\)</span> equipped with the Borel σ-algebra <span class="arithmatex">\(\mathcal{B}_{\mathbb{R}}\)</span>, we call <span class="arithmatex">\(f\)</span> an <strong><span class="arithmatex">\(\mathcal{M}\)</span>-measurable function</strong>.</p>
+<ul>
+<li>
+<p><strong>Borel measurable function</strong>: A function <span class="arithmatex">\(f: (\mathbb{R}, \mathcal{B}_{\mathbb{R}}) \to (\mathbb{R}, \mathcal{B}_{\mathbb{R}})\)</span> that is measurable.</p>
+</li>
+<li>
+<p><strong>Lebesgue measurable function</strong>: A function <span class="arithmatex">\(f: (\mathbb{R}, \mathcal{L}) \to (\mathbb{R}, \mathcal{B}_{\mathbb{R}})\)</span> that is measurable.</p>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.1.1 (Criterion via Generators)</p>
+<p>If the σ-algebra <span class="arithmatex">\(\mathcal{N}\)</span> on the target space is generated by a family <span class="arithmatex">\(\Sigma\)</span> (i.e., <span class="arithmatex">\(\mathcal{N} = \mathcal{M}(\Sigma)\)</span>), then <span class="arithmatex">\(f\)</span> is <span class="arithmatex">\((\mathcal{M}, \mathcal{N})\)</span>-measurable if and only if</p>
+<div class="arithmatex">\[
+\forall E \in \Sigma,\quad f^{-1}(E) \in \mathcal{M}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 2.1.1</summary>
+<p><strong>Necessity</strong>: If <span class="arithmatex">\(f\)</span> is measurable, then by definition <span class="arithmatex">\(f^{-1}(E) \in \mathcal{M}\)</span> for all <span class="arithmatex">\(E \in \mathcal{N}\)</span>. Since <span class="arithmatex">\(\Sigma \subset \mathcal{N}\)</span>, this holds for all <span class="arithmatex">\(E \in \Sigma\)</span>.</p>
+<p><strong>Sufficiency</strong>: Consider the family <span class="arithmatex">\(\mathcal{F} = \{E \subset Y : f^{-1}(E) \in \mathcal{M}\}\)</span>. By Lemma 2.1.1, because the inverse image commutes with unions, intersections, and complements, <span class="arithmatex">\(\mathcal{F}\)</span> is a σ-algebra on <span class="arithmatex">\(Y\)</span>.
+By hypothesis, <span class="arithmatex">\(\Sigma \subset \mathcal{F}\)</span>. Since <span class="arithmatex">\(\mathcal{N}\)</span> is the smallest σ-algebra containing <span class="arithmatex">\(\Sigma\)</span>, we must have <span class="arithmatex">\(\mathcal{N} = \mathcal{M}(\Sigma) \subset \mathcal{F}\)</span>. This means that for every <span class="arithmatex">\(E \in \mathcal{N}\)</span>, <span class="arithmatex">\(f^{-1}(E) \in \mathcal{M}\)</span>; hence <span class="arithmatex">\(f\)</span> is measurable.</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Corollary (Measurability of Continuous Maps)</p>
+<p>If <span class="arithmatex">\(X, Y\)</span> are topological spaces and <span class="arithmatex">\(f: X \to Y\)</span> is continuous, then <span class="arithmatex">\(f\)</span> is <span class="arithmatex">\((\mathcal{B}_X, \mathcal{B}_Y)\)</span>-measurable (i.e., Borel measurable).</p>
+</div>
+<details class="proof">
+<summary>Proof of the Corollary</summary>
+<p>The Borel σ-algebra <span class="arithmatex">\(\mathcal{B}_Y\)</span> on the topological space <span class="arithmatex">\(Y\)</span> is generated by the family <span class="arithmatex">\(\mathcal{T}_Y\)</span> of all open sets in <span class="arithmatex">\(Y\)</span>.
+Take any open set <span class="arithmatex">\(V \in \mathcal{T}_Y\)</span>. Since <span class="arithmatex">\(f\)</span> is continuous, the inverse image <span class="arithmatex">\(f^{-1}(V)\)</span> is an open set in <span class="arithmatex">\(X\)</span>.
+Open sets in <span class="arithmatex">\(X\)</span> certainly belong to its Borel σ-algebra <span class="arithmatex">\(\mathcal{B}_X\)</span>. By Proposition 2.1.1, a continuous function is necessarily Borel measurable.</p>
+</details>
+<hr />
+<h2 id="3-equivalent-conditions-for-real-valued-measurable-functions">3. Equivalent Conditions for Real-Valued Measurable Functions</h2>
+<p>For functions defined on the real line, because the Borel σ-algebra can be generated by various forms of rays, we have the following commonly used equivalent criteria.</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.1.2 (Equivalent Conditions for Real-Valued Measurable Functions)</p>
+<p>For a mapping <span class="arithmatex">\(f: X \to \mathbb{R}\)</span>, the following statements are equivalent:</p>
+<ul>
+<li>
+<p>(a) <span class="arithmatex">\(f\)</span> is measurable (i.e., <span class="arithmatex">\(f^{-1}(B) \in \mathcal{M},\ \forall B \in \mathcal{B}_{\mathbb{R}}\)</span>).</p>
+</li>
+<li>
+<p>(b) For every <span class="arithmatex">\(a \in \mathbb{R}\)</span>, <span class="arithmatex">\(f^{-1}((a, +\infty)) = \{x \in X : f(x) &gt; a\} \in \mathcal{M}\)</span>.</p>
+</li>
+<li>
+<p>(c) For every <span class="arithmatex">\(a \in \mathbb{R}\)</span>, <span class="arithmatex">\(f^{-1}([a, +\infty)) = \{x \in X : f(x) \ge a\} \in \mathcal{M}\)</span>.</p>
+</li>
+<li>
+<p>(d) For every <span class="arithmatex">\(a \in \mathbb{R}\)</span>, <span class="arithmatex">\(f^{-1}((-\infty, a)) = \{x \in X : f(x) &lt; a\} \in \mathcal{M}\)</span>.</p>
+</li>
+<li>
+<p>(e) For every <span class="arithmatex">\(a \in \mathbb{R}\)</span>, <span class="arithmatex">\(f^{-1}((-\infty, a]) = \{x \in X : f(x) \le a\} \in \mathcal{M}\)</span>.</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 2.1.2</summary>
+<p>Because the Borel σ-algebra <span class="arithmatex">\(\mathcal{B}_{\mathbb{R}}\)</span> on <span class="arithmatex">\(\mathbb{R}\)</span> is generated by the family of open rays <span class="arithmatex">\(\Sigma = \{(a, +\infty) : a \in \mathbb{R}\}\)</span>, Proposition 2.1.1 tells us that (a) and (b) are equivalent.
+It remains to show that (b), (c), (d), (e) can be deduced from each other using the closure properties of a σ-algebra:</p>
+<ul>
+<li><strong>(b) <span class="arithmatex">\(\Rightarrow\)</span> (c)</strong>: Since <span class="arithmatex">\([a, +\infty) = \bigcap_{n=1}^\infty (a - \frac{1}{n}, +\infty)\)</span>, taking inverse images gives</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}([a, +\infty)) = \bigcap_{n=1}^\infty f^{-1}\left(\left(a - \frac{1}{n}, +\infty\right)\right).
+\]</div>
+<p>By (b) each set on the right belongs to <span class="arithmatex">\(\mathcal{M}\)</span>; because a σ-algebra is closed under countable intersections, the left-hand side is also in <span class="arithmatex">\(\mathcal{M}\)</span>.</p>
+<ul>
+<li><strong>(c) <span class="arithmatex">\(\Rightarrow\)</span> (d)</strong>: Since <span class="arithmatex">\((-\infty, a) = ([a, +\infty))^c\)</span>, taking inverse images yields</li>
+</ul>
+<div class="arithmatex">\[
+f^{-1}((-\infty, a)) = \left(f^{-1}([a, +\infty))\right)^c.
+\]</div>
+<p>By (c), <span class="arithmatex">\(f^{-1}([a, +\infty)) \in \mathcal{M}\)</span>, and closure under complements gives that the inverse image belongs to <span class="arithmatex">\(\mathcal{M}\)</span>.</p>
+<ul>
+<li>
+<p><strong>(d) <span class="arithmatex">\(\Rightarrow\)</span> (e)</strong>: Similar to above, use <span class="arithmatex">\((-\infty, a] = \bigcap_{n=1}^\infty (-\infty, a + \frac{1}{n})\)</span> and take inverse images.</p>
+</li>
+<li>
+<p><strong>(e) <span class="arithmatex">\(\Rightarrow\)</span> (b)</strong>: Use <span class="arithmatex">\((a, +\infty) = ((-\infty, a])^c\)</span> and take inverse images and complements, completing the circular argument.</p>
+</li>
+</ul>
+</details>
+<hr />
+<h2 id="4-local-measurability-composition-and-product-spaces">4. Local Measurability, Composition, and Product Spaces</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 2.1.2 (Local Measurability)</p>
+<p>Let <span class="arithmatex">\(E \in \mathcal{M}\)</span> be a measurable set. A function <span class="arithmatex">\(f\)</span> is said to be measurable on <span class="arithmatex">\(E\)</span> if for every <span class="arithmatex">\(B \in \mathcal{B}_{\mathbb{R}}\)</span>,</p>
+<div class="arithmatex">\[
+\{x \in E : f(x) \in B\} \in \mathcal{M}.
+\]</div>
+<p>This is equivalent to saying that the restriction <span class="arithmatex">\(f|_E\)</span> is measurable with respect to the sub‑σ-algebra <span class="arithmatex">\(\mathcal{M}_E = \{A \cap E : A \in \mathcal{M}\}\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.1.2 (Composition Property)</p>
+<p>If <span class="arithmatex">\(f: X \to Y\)</span> is <span class="arithmatex">\((\mathcal{M}, \mathcal{N})\)</span>-measurable and <span class="arithmatex">\(g: Y \to Z\)</span> is <span class="arithmatex">\((\mathcal{N}, \mathcal{P})\)</span>-measurable, then the composition <span class="arithmatex">\(g \circ f: X \to Z\)</span> is <span class="arithmatex">\((\mathcal{M}, \mathcal{P})\)</span>-measurable.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 2.1.2</summary>
+<p>For any <span class="arithmatex">\(E \in \mathcal{P}\)</span>, because <span class="arithmatex">\(g\)</span> is <span class="arithmatex">\((\mathcal{N}, \mathcal{P})\)</span>-measurable, we have <span class="arithmatex">\(g^{-1}(E) \in \mathcal{N}\)</span>.
+Since <span class="arithmatex">\(f\)</span> is <span class="arithmatex">\((\mathcal{M}, \mathcal{N})\)</span>-measurable, it follows that <span class="arithmatex">\(f^{-1}(g^{-1}(E)) \in \mathcal{M}\)</span>.
+Clearly <span class="arithmatex">\((g \circ f)^{-1}(E) = f^{-1}(g^{-1}(E)) \in \mathcal{M}\)</span>, which completes the proof. In particular, the composition of a measurable function with a continuous function is again measurable.</p>
+</details>
+<p>For a product space <span class="arithmatex">\(Y = \prod_{\alpha \in A} Y_{\alpha}\)</span> equipped with the product σ-algebra <span class="arithmatex">\(\mathcal{N} = \bigotimes_{\alpha \in A} \mathcal{N}_{\alpha}\)</span>, let <span class="arithmatex">\(\pi_\alpha : Y \to Y_\alpha\)</span> be the projection mapping.</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 2.1.3 (Measurability into Product Spaces)</p>
+<p>A mapping <span class="arithmatex">\(f: X \to Y\)</span> is <span class="arithmatex">\((\mathcal{M}, \mathcal{N})\)</span>-measurable if and only if each of its coordinate mappings <span class="arithmatex">\(f_{\alpha} = \pi_{\alpha} \circ f\)</span> is <span class="arithmatex">\((\mathcal{M}, \mathcal{N}_{\alpha})\)</span>-measurable.</p>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 2.1.3</summary>
+<p><strong>Necessity (<span class="arithmatex">\(\Rightarrow\)</span>)</strong>: If <span class="arithmatex">\(f\)</span> is measurable, then since the projection <span class="arithmatex">\(\pi_\alpha\)</span> is always <span class="arithmatex">\((\mathcal{N}, \mathcal{N}_\alpha)\)</span>-measurable, by the composition property <span class="arithmatex">\(f_\alpha = \pi_\alpha \circ f\)</span> must be <span class="arithmatex">\((\mathcal{M}, \mathcal{N}_\alpha)\)</span>-measurable.</p>
+<p><strong>Sufficiency (<span class="arithmatex">\(\Leftarrow\)</span>)</strong>: The product σ-algebra <span class="arithmatex">\(\mathcal{N}\)</span> is generated by the family <span class="arithmatex">\(\Sigma = \{\pi_\alpha^{-1}(E_\alpha) : E_\alpha \in \mathcal{N}_\alpha,\ \alpha \in A\}\)</span>.
+For any element of <span class="arithmatex">\(\Sigma\)</span>, its inverse image is</p>
+<div class="arithmatex">\[
+f^{-1}(\pi_\alpha^{-1}(E_\alpha)) = (\pi_\alpha \circ f)^{-1}(E_\alpha) = f_\alpha^{-1}(E_\alpha).
+\]</div>
+<p>By hypothesis each <span class="arithmatex">\(f_\alpha\)</span> is measurable, so the above set belongs to <span class="arithmatex">\(\mathcal{M}\)</span>. By the generator criterion (Proposition 2.1.1), <span class="arithmatex">\(f\)</span> is measurable.</p>
+</details>
 
 
 

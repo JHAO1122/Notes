@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#32" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2824,6 +2829,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：收敛定理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2841,6 +2866,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 单调收敛定理 (MCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fatou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fatou 引理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 控制收敛定理 (DCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 依测度收敛与经典关系
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4381,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 单调收敛定理 (MCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fatou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fatou 引理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 控制收敛定理 (DCT)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 依测度收敛与经典关系
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,9 +4455,176 @@
   
 
 
-  <h1>第七章：收敛定理</h1>
-
-
+<h1 id="32">3.2 三大收敛定理与依测度收敛</h1>
+<p>在黎曼积分中，要交换极限和积分号通常需要极为苛刻的“一致收敛”条件。而在勒贝格积分的框架下，由于积分是建立在测度基础上的，我们只需要很弱的条件即可实现积分与极限的交换。构筑这一宏大理论的基石便是著名的“三大收敛定理”。</p>
+<hr />
+<h2 id="1-mct">1. 单调收敛定理 (MCT)</h2>
+<p>单调收敛定理 (Monotone Convergence Theorem) 是建立积分理论的第一块基石。它表明，对于非负递增的函数列，极限的积分等于积分的极限。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.2.1 (单调收敛定理 MCT)</p>
+<p>设 <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> 为一列非负可测函数。如果它几乎处处单调递增，且逐点收敛于 <span class="arithmatex">\(f\)</span>：</p>
+<div class="arithmatex">\[
+0 \le f_1 \le f_2 \le \dots \le f_n \le \dots \text{ a.e.} \quad \text{且} \quad \lim_{n \to \infty} f_n(x) = f(x) \text{ a.e.}
+\]</div>
+<p>那么 <span class="arithmatex">\(f \in L^+\)</span>，并且有：</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu = \lim_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+</div>
+<details class="proof">
+<summary>单调收敛定理的证明</summary>
+<p>首先，由于 <span class="arithmatex">\(f_n \le f\)</span>，由积分的单调性显然有 <span class="arithmatex">\(\int f_n \le \int f\)</span>，从而 <span class="arithmatex">\(\lim_{n \to \infty} \int f_n \le \int f\)</span>。</p>
+<p>接下来我们需要证明反向的不等式。任取一个满足 <span class="arithmatex">\(0 \le \phi \le f\)</span> 的非负简单函数 <span class="arithmatex">\(\phi\)</span>，以及任意常数 <span class="arithmatex">\(\alpha \in (0, 1)\)</span>。
+定义可测集序列：</p>
+<div class="arithmatex">\[
+E_n = \{x \in X : f_n(x) \ge \alpha \phi(x)\}
+\]</div>
+<p>因为 <span class="arithmatex">\(f_n\)</span> 单调递增，所以集合序列是递增的，即 <span class="arithmatex">\(E_1 \subset E_2 \subset \dots\)</span>。
+又因为 <span class="arithmatex">\(f_n \to f \ge \phi &gt; \alpha \phi\)</span> (当 <span class="arithmatex">\(\phi &gt; 0\)</span> 时)，所以 <span class="arithmatex">\(\bigcup_{n=1}^\infty E_n = X\)</span>。</p>
+<p>根据积分的性质，我们有：</p>
+<div class="arithmatex">\[
+\int_X f_n \, d\mu \ge \int_{E_n} f_n \, d\mu \ge \alpha \int_{E_n} \phi \, d\mu
+\]</div>
+<p>令 <span class="arithmatex">\(n \to \infty\)</span>，利用测度（及简单函数积分）的自下连续性：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \int_X f_n \, d\mu \ge \alpha \int_X \phi \, d\mu
+\]</div>
+<p>由于 <span class="arithmatex">\(\alpha \in (0, 1)\)</span> 是任意的，令 <span class="arithmatex">\(\alpha \to 1\)</span>，得到 <span class="arithmatex">\(\lim \int f_n \ge \int \phi\)</span>。再对所有满足 <span class="arithmatex">\(0 \le \phi \le f\)</span> 的简单函数取上确界，即得：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \int_X f_n \, d\mu \ge \int_X f \, d\mu
+\]</div>
+<p>结合两个方向的不等式，定理得证。</p>
+</details>
+<p>利用 MCT，我们可以立刻推导出级数积分的逐项求和性质。</p>
+<div class="admonition info">
+<p class="admonition-title">推论 (非负级数的逐项积分)</p>
+<p>设 <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> 为非负可测函数列，则：</p>
+<div class="arithmatex">\[
+\int_X \left( \sum_{n=1}^\infty f_n \right) d\mu = \sum_{n=1}^\infty \int_X f_n \, d\mu
+\]</div>
+</div>
+<hr />
+<h2 id="2-fatou">2. Fatou 引理</h2>
+<p>对于不一定单调的非负函数列，我们无法直接得到等号，但可以得到一个极具价值的不等式。它是连接 MCT 和 DCT 的桥梁。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.2.2 (Fatou 引理)</p>
+<p>设 <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> 是一列非负可测函数，则：</p>
+<div class="arithmatex">\[
+\int_X \left( \liminf_{n \to \infty} f_n \right) d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+</div>
+<details class="proof">
+<summary>Fatou 引理的证明</summary>
+<p>定义函数列 <span class="arithmatex">\(g_n(x) = \inf_{k \ge n} f_k(x)\)</span>。</p>
+<p>显然 <span class="arithmatex">\(\{g_n\}\)</span> 也是非负可测函数列，且由于随着 <span class="arithmatex">\(n\)</span> 的增大，求下确界的范围在缩小，所以 <span class="arithmatex">\(\{g_n\}\)</span> 是单调递增的，即 <span class="arithmatex">\(g_1 \le g_2 \le \dots\)</span>。
+由下极限的定义：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} g_n(x) = \liminf_{n \to \infty} f_n(x)
+\]</div>
+<p>因为对于所有的 <span class="arithmatex">\(k \ge n\)</span> 都有 <span class="arithmatex">\(g_n \le f_k\)</span>，特别地有 <span class="arithmatex">\(g_n \le f_n\)</span>，所以：</p>
+<div class="arithmatex">\[
+\int_X g_n \, d\mu \le \int_X f_n \, d\mu
+\]</div>
+<p>两边取下极限：</p>
+<div class="arithmatex">\[
+\liminf_{n \to \infty} \int_X g_n \, d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>另一方面，由于 <span class="arithmatex">\(g_n\)</span> 单调递增，应用单调收敛定理 (MCT) 于 <span class="arithmatex">\(\{g_n\}\)</span>：</p>
+<div class="arithmatex">\[
+\liminf_{n \to \infty} \int_X g_n \, d\mu = \lim_{n \to \infty} \int_X g_n \, d\mu = \int_X \left( \lim_{n \to \infty} g_n \right) d\mu = \int_X \left( \liminf_{n \to \infty} f_n \right) d\mu
+\]</div>
+<p>综合以上两式，即得 Fatou 引理。</p>
+</details>
+<hr />
+<h2 id="3-dct">3. 控制收敛定理 (DCT)</h2>
+<p>这是实分析中使用频率最高的收敛定理。它放宽了单调性的要求，代价是需要一个可积的“控制函数”。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.2.3 (Lebesgue 控制收敛定理 DCT)</p>
+<p>设 <span class="arithmatex">\(\{f_n\}\)</span> 是一列可测函数，几乎处处收敛于 <span class="arithmatex">\(f\)</span>：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} f_n(x) = f(x) \quad \text{a.e.}
+\]</div>
+<p>如果存在一个非负的<strong>可积函数</strong> <span class="arithmatex">\(g \in L^1(\mu)\)</span>，使得对于所有的 <span class="arithmatex">\(n\)</span>，几乎处处有：</p>
+<div class="arithmatex">\[
+|f_n(x)| \le g(x) \quad \text{a.e.}
+\]</div>
+<p>那么 <span class="arithmatex">\(f \in L^1(\mu)\)</span>，并且：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu \quad \text{且} \quad \lim_{n \to \infty} \int_X |f_n - f| \, d\mu = 0
+\]</div>
+</div>
+<details class="proof">
+<summary>控制收敛定理的证明</summary>
+<p>由于 <span class="arithmatex">\(|f_n| \le g\)</span> 且 <span class="arithmatex">\(f_n \to f\)</span>，取极限知 <span class="arithmatex">\(|f| \le g\)</span> a.e.。因为 <span class="arithmatex">\(g \in L^1\)</span>，所以 <span class="arithmatex">\(f \in L^1\)</span>。</p>
+<p>我们构造两个非负函数列：<span class="arithmatex">\(g + f_n \ge 0\)</span> 以及 <span class="arithmatex">\(g - f_n \ge 0\)</span>。</p>
+<p>对 <span class="arithmatex">\(g + f_n\)</span> 应用 Fatou 引理：</p>
+<div class="arithmatex">\[
+\int_X (g + f) \, d\mu \le \liminf_{n \to \infty} \int_X (g + f_n) \, d\mu = \int_X g \, d\mu + \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>因为 <span class="arithmatex">\(g\)</span> 可积，可以消去两边的 <span class="arithmatex">\(\int g\)</span>，得到：</p>
+<div class="arithmatex">\[
+\int_X f \, d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>同理，对 <span class="arithmatex">\(g - f_n\)</span> 应用 Fatou 引理：</p>
+<div class="arithmatex">\[
+\int_X (g - f) \, d\mu \le \liminf_{n \to \infty} \int_X (g - f_n) \, d\mu = \int_X g \, d\mu - \limsup_{n \to \infty} \int_X f_n \, d\mu
+\]</div>
+<p>再次消去 <span class="arithmatex">\(\int g\)</span>，化简得到：</p>
+<div class="arithmatex">\[
+\limsup_{n \to \infty} \int_X f_n \, d\mu \le \int_X f \, d\mu
+\]</div>
+<p>结合上述两式，必有 <span class="arithmatex">\(\liminf = \limsup = \lim\)</span>，从而证明了 <span class="arithmatex">\(\lim_{n \to \infty} \int f_n = \int f\)</span>。
+将上述证明中的 <span class="arithmatex">\(f_n\)</span> 替换为 <span class="arithmatex">\(|f_n - f|\)</span>（它被 <span class="arithmatex">\(2g\)</span> 控制），同理可证 <span class="arithmatex">\(\lim \int |f_n - f| = 0\)</span>。</p>
+</details>
+<hr />
+<h2 id="4">4. 依测度收敛与经典关系</h2>
+<p>除了几乎处处收敛 (a.e.) 和 <span class="arithmatex">\(L^1\)</span> 收敛，测度论中还有一种在概率论中极为重要的收敛性——依测度收敛（对应于概率论中的依概率收敛）。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.2.1 (依测度收敛)</p>
+<p>设 <span class="arithmatex">\(f_n, f\)</span> 为可测函数。如果对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，满足以下条件的集合的测度趋于 0：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} \mu(\{x \in X : |f_n(x) - f(x)| \ge \epsilon\}) = 0
+\]</div>
+<p>则称 <span class="arithmatex">\(f_n\)</span> <strong>依测度收敛</strong>于 <span class="arithmatex">\(f\)</span>，记作 <span class="arithmatex">\(f_n \xrightarrow{\mu} f\)</span>。</p>
+</div>
+<p>同理，若 <span class="arithmatex">\(\mu(\{x : |f_n(x) - f_m(x)| \ge \epsilon\}) \to 0\)</span> (<span class="arithmatex">\(n, m \to \infty\)</span>)，则称 <span class="arithmatex">\(\{f_n\}\)</span> 是<strong>依测度的 Cauchy 列</strong>。</p>
+<p>依测度收敛与几乎处处收敛之间有着微妙的关系。著名的 Riesz 定理指出了这两种收敛的子列关系。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.2.4 (Riesz 定理)</p>
+<ul>
+<li>
+<p>如果 <span class="arithmatex">\(\{f_n\}\)</span> 是依测度的 Cauchy 列，则它必然依测度收敛到某个可测函数 <span class="arithmatex">\(f\)</span>。</p>
+</li>
+<li>
+<p>如果 <span class="arithmatex">\(f_n \xrightarrow{\mu} f\)</span>，那么必定存在 <span class="arithmatex">\(\{f_n\}\)</span> 的一个子列 <span class="arithmatex">\(\{f_{n_k}\}\)</span>，使得该子列几乎处处收敛于 <span class="arithmatex">\(f\)</span>：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+f_{n_k}(x) \to f(x) \quad \text{a.e. as } k \to \infty
+\]</div>
+</div>
+<p>在有限测度空间上，几乎处处收敛甚至可以推导出比依测度收敛更强的性质，即<strong>近乎一致收敛</strong>。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.2.5 (Egoroff 定理)</p>
+<p>设 <span class="arithmatex">\(\mu(X) &lt; \infty\)</span>。如果 <span class="arithmatex">\(\{f_n\}\)</span> 在 <span class="arithmatex">\(X\)</span> 上几乎处处收敛于 <span class="arithmatex">\(f\)</span>，那么对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，存在一个可测子集 <span class="arithmatex">\(E \subset X\)</span> 满足：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\mu(E) &lt; \epsilon\)</span> （剔除的坏集测度极小）</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f_n\)</span> 在保留的集合 <span class="arithmatex">\(E^c = X \setminus E\)</span> 上<strong>一致收敛</strong>于 <span class="arithmatex">\(f\)</span>。</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Egoroff 定理的证明核心</summary>
+<p>构造集合 <span class="arithmatex">\(E_n(k) = \bigcup_{m=n}^\infty \{x : |f_m(x) - f(x)| \ge \frac{1}{k}\}\)</span>。
+因为 <span class="arithmatex">\(f_n \to f\)</span> a.e.，对于固定的 <span class="arithmatex">\(k\)</span>，随着 <span class="arithmatex">\(n \to \infty\)</span>，集合序列 <span class="arithmatex">\(E_n(k)\)</span> 单调递减且其交集的测度为 0。
+由于全空间测度有限，利用测度的自上连续性，必然有 <span class="arithmatex">\(\lim_{n \to \infty} \mu(E_n(k)) = 0\)</span>。</p>
+<p>对于每一个 <span class="arithmatex">\(k\)</span>，我们可以选取足够大的 <span class="arithmatex">\(N_k\)</span>，使得 <span class="arithmatex">\(\mu(E_{N_k}(k)) &lt; \epsilon \cdot 2^{-k}\)</span>。
+令坏集 <span class="arithmatex">\(E = \bigcup_{k=1}^\infty E_{N_k}(k)\)</span>。由次可加性，<span class="arithmatex">\(\mu(E) &lt; \sum \epsilon 2^{-k} = \epsilon\)</span>。
+在 <span class="arithmatex">\(E^c\)</span> 上，对于任意 <span class="arithmatex">\(k\)</span> 只要 <span class="arithmatex">\(n &gt; N_k\)</span> 就有 <span class="arithmatex">\(|f_n - f| &lt; 1/k\)</span>，这恰好是一致收敛的定义。</p>
+</details>
 
 
 
