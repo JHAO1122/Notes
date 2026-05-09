@@ -24,7 +24,10 @@ Currently, [the site](https://jhao1122.github.io/Notes/) is divided into **five*
 
   * Covers metric spaces, completeness, linear operators on Banach and Hilbert spaces, and the "Big Four" theorems (Hahn-Banach, Open Mapping, Closed Graph, and Uniform Boundedness).
 
+* **[In Progress] [Real Analysis](https://jhao1122.github.io/Notes/Real_analysis/0Intro/)**
 
+  * Covers core theories including $\sigma$-algebras, Carathéodory Extension, Lebesgue integration (MCT, DCT), Radon-Nikodym derivatives, and $L^p$ spaces.
+  
 ### 🛠️ [Quick Reference](https://jhao1122.github.io/Notes/reference/)
 
 A personal repository of foundational concepts in Mathematics and Statistics that are often elusive or easily forgotten. This section also records my personal interpretations and intuitive grasp of core theorems.
