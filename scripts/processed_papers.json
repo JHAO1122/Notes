@@ -448,5 +448,11 @@
         "date": "2026-05-07",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.07100v1": {
+        "title": "TRACE: Transport Alignment Conformal Prediction via Diffusion and Flow Matching Models",
+        "date": "2026-05-08",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

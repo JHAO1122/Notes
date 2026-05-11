@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-08
+> 更新于: 2026-05-11
 
 ---
+### TRACE: Transport Alignment Conformal Prediction via Diffusion and Flow Matching Models 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-08
+- **链接**: [PDF](http://arxiv.org/abs/2605.07100v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于扩散与流匹配模型中传输对齐的非一致性评分函数，通过沿随机传输轨迹平均去噪或速度匹配误差来度量候选输出与生成动力学的对齐程度，避免了显式似然评估和可逆变换的限制。理论分析表明，该标量评分函数在交换性假设下可通过分裂保形预测实现有限样本、无分布假设的边际覆盖保证，并进一步刻画了计算预算对评分统计性质的影响。
+
+
 ### History-Aware Conformal Prediction Sets for Censored Time-to-Event Outcomes 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-07
