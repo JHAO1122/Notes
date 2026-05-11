@@ -44,6 +44,14 @@ tags:
 * [x] [第七章：Delta方法](7Delta_Method.md)
 * [x] [第八章：MLE](8MLE.md)
 
+### Part IV: 📝 课后习题精解 (Selected Solutions)
+
+* [x] [Homework 1 Solutions](sol_1.md)
+
+* [x] [Homework 2 Solutions](sol_2.md)
+
+* [x] [Homework 3 solutions](sol_3.md)
+
 ---
 
 ## 📝 关于笔记的说明
