@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#detailed-solutions-to-homework-exercises-large-sample-theory-assignment-3" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1555,6 +1560,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1572,6 +1597,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-second-order-delta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 1: Second-Order Delta Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-hodges-1951-superefficiency-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2: Hodges (1951) Superefficiency Estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-irregular-maximum-likelihood-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 3: Irregular Maximum Likelihood Estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-4-different-convergence-rates-of-mles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 4: Different Convergence Rates of MLEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-5-inconsistent-mle-and-the-neyman-scott-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 5: Inconsistent MLE and the Neyman-Scott Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-6-consistency-and-asymptotic-normality-of-sample-quantiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 6: Consistency and Asymptotic Normality of Sample Quantiles
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4293,6 +4403,82 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1-second-order-delta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 1: Second-Order Delta Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-2-hodges-1951-superefficiency-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2: Hodges (1951) Superefficiency Estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-irregular-maximum-likelihood-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 3: Irregular Maximum Likelihood Estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-4-different-convergence-rates-of-mles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 4: Different Convergence Rates of MLEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-5-inconsistent-mle-and-the-neyman-scott-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 5: Inconsistent MLE and the Neyman-Scott Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-6-consistency-and-asymptotic-normality-of-sample-quantiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 6: Consistency and Asymptotic Normality of Sample Quantiles
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4313,7 +4499,496 @@
   
 
 
-  <h1>AS Homework 3</h1>
+<h1 id="detailed-solutions-to-homework-exercises-large-sample-theory-assignment-3">📈 Detailed Solutions to Homework Exercises: Large Sample Theory Assignment 3</h1>
+<h2 id="exercise-1-second-order-delta-method">Exercise 1: Second-Order Delta Method</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(X_1, ..., X_n \stackrel{i.i.d}{\sim} Bernoulli(\theta)\)</span>.</p>
+<p>(a) When <span class="arithmatex">\(\theta = 1/2\)</span>, find the asymptotic distribution of <span class="arithmatex">\(\hat{\theta}_n = \overline{X}_n\)</span>.</p>
+<p>(b) The Kullback-Leibler (KL) divergence from <span class="arithmatex">\(P_\theta\)</span> to <span class="arithmatex">\(P_\eta\)</span> is defined as:</p>
+<div class="arithmatex">\[
+D_{KL}(P_\eta || P_\theta) := -\mathbb{E}_\eta \log \frac{p_\theta}{p_\eta}(X) \quad , X \sim P_\eta
+\]</div>
+<p>where <span class="arithmatex">\(p_\theta, p_\eta\)</span> are the probability mass (density) functions of <span class="arithmatex">\(P_\theta, P_\eta\)</span> respectively. Prove that:</p>
+<div class="arithmatex">\[
+n D_{KL}(P_\theta || P_{\hat{\theta}_n}) \xrightarrow{d} \frac{1}{2}\chi_1^2
+\]</div>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>(a) Asymptotic distribution</strong></p>
+<p>Since <span class="arithmatex">\(X_1, ..., X_n\)</span> are i.i.d. Bernoulli random variables, we have:</p>
+<div class="arithmatex">\[
+E[X_1] = \theta \quad \text{and} \quad Var(X_1) = \theta(1-\theta)
+\]</div>
+<p>The estimator is the sample mean <span class="arithmatex">\(\hat{\theta}_n = \overline{X}_n = \frac{1}{n}\sum_{i=1}^n X_i\)</span>. By the classical Central Limit Theorem (CLT),</p>
+<div class="arithmatex">\[
+\sqrt{n}(\overline{X}_n - \theta) \xrightarrow{d} \mathcal{N}(0, \theta(1-\theta))
+\]</div>
+<p>Substituting <span class="arithmatex">\(\theta = 1/2\)</span>, the mean is <span class="arithmatex">\(1/2\)</span> and the variance is <span class="arithmatex">\((1/2)(1 - 1/2) = 1/4\)</span>. Therefore,</p>
+<div class="arithmatex">\[
+\sqrt{n} \left(\overline{X}_n - \frac{1}{2}\right) \xrightarrow{d} \mathcal{N} \left(0, \frac{1}{4}\right)
+\]</div>
+<p>Equivalently, we can write it in standard normal form:</p>
+<div class="arithmatex">\[
+\sqrt{n}(2\overline{X}_n - 1) \xrightarrow{d} \mathcal{N}(0, 1)
+\]</div>
+<p><strong>(b) Asymptotic distribution of the KL divergence</strong></p>
+<p>The KL divergence from <span class="arithmatex">\(P_\theta\)</span> to <span class="arithmatex">\(P_{\hat{\theta}_n}\)</span> is defined as:</p>
+<div class="arithmatex">\[
+D_{KL}(P_\theta || P_{\hat{\theta}_n}) = \mathbb{E}_\theta \left[ \log \frac{p_\theta(X)}{p_{\hat{\theta}_n}(X)} \right]
+\]</div>
+<p>For the Bernoulli distribution, the probability mass function is <span class="arithmatex">\(p_t(x) = t^x (1-t)^{1-x}\)</span>. To apply the Delta method, we treat the KL divergence as a function <span class="arithmatex">\(g(t)\)</span> of <span class="arithmatex">\(t = \hat{\theta}_n\)</span>:</p>
+<div class="arithmatex">\[
+g(t) = D_{KL}(P_\theta || P_t) = \mathbb{E}_\theta \left[ X \log \frac{\theta}{t} + (1-X) \log \frac{1-\theta}{1-t} \right]
+\]</div>
+<p>Since the expectation is taken under the true <span class="arithmatex">\(\theta\)</span> (i.e., <span class="arithmatex">\(\mathbb{E}_\theta[X] = \theta\)</span>), this becomes:</p>
+<div class="arithmatex">\[
+g(t) = \theta \log \left(\frac{\theta}{t}\right) + (1-\theta) \log \left(\frac{1-\theta}{1-t}\right)
+\]</div>
+<p>Our goal is to find the asymptotic distribution of <span class="arithmatex">\(n g(\hat{\theta}_n) = n(g(\hat{\theta}_n) - g(\theta))\)</span> (since <span class="arithmatex">\(g(\theta) = D_{KL}(P_\theta || P_\theta) = 0\)</span>).</p>
+<p>First, compute the first and second derivatives of <span class="arithmatex">\(g(t)\)</span>:</p>
+<div class="arithmatex">\[
+g'(t) = -\frac{\theta}{t} + \frac{1-\theta}{1-t}
+\]</div>
+<p>Evaluated at the true parameter <span class="arithmatex">\(t = \theta\)</span>:</p>
+<div class="arithmatex">\[
+g'(\theta) = -\frac{\theta}{\theta} + \frac{1-\theta}{1-\theta} = -1 + 1 = 0
+\]</div>
+<p>Since the first derivative is zero, we need to use the <strong>second-order Delta method</strong>. Compute the second derivative:</p>
+<div class="arithmatex">\[
+g''(t) = \frac{\theta}{t^2} + \frac{1-\theta}{(1-t)^2}
+\]</div>
+<p>Evaluated at <span class="arithmatex">\(t = \theta\)</span>:</p>
+<div class="arithmatex">\[
+g''(\theta) = \frac{\theta}{\theta^2} + \frac{1-\theta}{(1-\theta)^2} = \frac{1}{\theta} + \frac{1}{1-\theta} = \frac{1}{\theta(1-\theta)}
+\]</div>
+<p>From the CLT, <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{d} \mathcal{N}(0, \sigma^2)\)</span> with asymptotic variance <span class="arithmatex">\(\sigma^2 = \theta(1-\theta)\)</span>.</p>
+<p>According to the second-order Delta method, since <span class="arithmatex">\(g'(\theta) = 0\)</span> and <span class="arithmatex">\(g''(\theta) \neq 0\)</span>, we have:</p>
+<div class="arithmatex">\[
+n(g(\hat{\theta}_n) - g(\theta)) \xrightarrow{d} \frac{1}{2} g''(\theta) \sigma^2 \chi_1^2
+\]</div>
+<p>Substituting <span class="arithmatex">\(\sigma^2\)</span> and <span class="arithmatex">\(g''(\theta)\)</span>:</p>
+<div class="arithmatex">\[
+g''(\theta)\sigma^2 = \left( \frac{1}{\theta(1-\theta)} \right) \cdot \theta(1-\theta) = 1
+\]</div>
+<p>This simplifies perfectly to 1. Hence,</p>
+<div class="arithmatex">\[
+n D_{KL}(P_\theta || P_{\hat{\theta}_n}) = n(g(\hat{\theta}_n) - 0) \xrightarrow{d} \frac{1}{2} \chi_1^2
+\]</div>
+</details>
+<hr />
+<h2 id="exercise-2-hodges-1951-superefficiency-estimator">Exercise 2: Hodges (1951) Superefficiency Estimator</h2>
+<p><strong>Problem:</strong>
+Suppose <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span> are i.i.d. observations from <span class="arithmatex">\(\mathcal{N}(\theta, 1)\)</span> with <span class="arithmatex">\(\theta \in \mathbb{R}\)</span>. Then <span class="arithmatex">\(\overline{X}_n = n^{-1}\sum_{i=1}^n X_i\)</span> is the MLE of <span class="arithmatex">\(\theta\)</span>. Show that when <span class="arithmatex">\(\theta \neq 0\)</span>,</p>
+<div class="arithmatex">\[
+P(|\overline{X}_n| \le n^{-1/4}) \rightarrow 0
+\]</div>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>Proof:</strong></p>
+<p>Since <span class="arithmatex">\(X_1, X_2, \dots, X_n \stackrel{i.i.d}{\sim} \mathcal{N}(\theta, 1)\)</span>, the exact distribution of the sample mean is:</p>
+<div class="arithmatex">\[
+\overline{X}_n \sim \mathcal{N} \left( \theta, \frac{1}{n} \right)
+\]</div>
+<p>Standardize <span class="arithmatex">\(\overline{X}_n\)</span> to a standard normal random variable <span class="arithmatex">\(Z\)</span>:</p>
+<div class="arithmatex">\[
+Z = \sqrt{n}(\overline{X}_n - \theta) \sim \mathcal{N}(0, 1)
+\]</div>
+<p>Now rewrite the target probability using <span class="arithmatex">\(Z\)</span>:</p>
+<div class="arithmatex">\[
+P(|\overline{X}_n| \le n^{-1/4}) = P(-n^{-1/4} \le \overline{X}_n \le n^{-1/4})
+\]</div>
+<div class="arithmatex">\[
+= P(-n^{-1/4} - \theta \le \overline{X}_n - \theta \le n^{-1/4} - \theta)
+\]</div>
+<div class="arithmatex">\[
+= P(-n^{1/4} - \sqrt{n}\theta \le \sqrt{n}(\overline{X}_n - \theta) \le n^{1/4} - \sqrt{n}\theta)
+\]</div>
+<div class="arithmatex">\[
+= P(-n^{1/4} - \sqrt{n}\theta \le Z \le n^{1/4} - \sqrt{n}\theta)
+\]</div>
+<p>To show that this probability converges to 0 when <span class="arithmatex">\(\theta \neq 0\)</span>, consider two cases:</p>
+<p><strong>Case 1: <span class="arithmatex">\(\theta &gt; 0\)</span></strong></p>
+<p>Examine the upper bound of <span class="arithmatex">\(Z\)</span>:</p>
+<div class="arithmatex">\[
+n^{1/4} - \sqrt{n}\theta = \sqrt{n}(n^{-1/4} - \theta)
+\]</div>
+<p>As <span class="arithmatex">\(n \rightarrow \infty\)</span>, <span class="arithmatex">\(n^{-1/4} \rightarrow 0\)</span>. Since <span class="arithmatex">\(\theta &gt; 0\)</span>, <span class="arithmatex">\((n^{-1/4} - \theta) \rightarrow -\theta &lt; 0\)</span>. Therefore,</p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow \infty} (n^{1/4} - \sqrt{n}\theta) = -\infty
+\]</div>
+<p>The probability is bounded above by the CDF of the standard normal at the upper bound:</p>
+<div class="arithmatex">\[
+P(-n^{1/4} - \sqrt{n}\theta \le Z \le n^{1/4} - \sqrt{n}\theta) \le P(Z \le n^{1/4} - \sqrt{n}\theta)
+\]</div>
+<p>As <span class="arithmatex">\(n \rightarrow \infty\)</span>, <span class="arithmatex">\(P(Z \le n^{1/4} - \sqrt{n}\theta) \rightarrow \Phi(-\infty) = 0\)</span>.</p>
+<p><strong>Case 2: <span class="arithmatex">\(\theta &lt; 0\)</span></strong></p>
+<p>Examine the lower bound of <span class="arithmatex">\(Z\)</span>:</p>
+<div class="arithmatex">\[
+-n^{1/4} - \sqrt{n}\theta = -\sqrt{n}(n^{-1/4} + \theta)
+\]</div>
+<p>As <span class="arithmatex">\(n \rightarrow \infty\)</span>, <span class="arithmatex">\(n^{-1/4} \rightarrow 0\)</span>. Since <span class="arithmatex">\(\theta &lt; 0\)</span>, <span class="arithmatex">\((n^{-1/4} + \theta) \rightarrow \theta &lt; 0\)</span>. Therefore,</p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow \infty} -\sqrt{n}(n^{-1/4} + \theta) = +\infty
+\]</div>
+<p>The probability is bounded above by the right tail probability of the standard normal:</p>
+<div class="arithmatex">\[
+P(-n^{1/4} - \sqrt{n}\theta \le Z \le n^{1/4} - \sqrt{n}\theta) \le P(Z \ge -n^{1/4} - \sqrt{n}\theta)
+\]</div>
+<p>As <span class="arithmatex">\(n \rightarrow \infty\)</span>, <span class="arithmatex">\(P(Z \ge -n^{1/4} - \sqrt{n}\theta) \rightarrow 1 - \Phi(+\infty) = 0\)</span>.</p>
+<p>In both cases where <span class="arithmatex">\(\theta \neq 0\)</span>, the probability vanishes. Hence, as <span class="arithmatex">\(n \rightarrow \infty\)</span>,</p>
+<div class="arithmatex">\[
+P(|\overline{X}_n| \le n^{-1/4}) \rightarrow 0
+\]</div>
+</details>
+<hr />
+<h2 id="exercise-3-irregular-maximum-likelihood-estimator">Exercise 3: Irregular Maximum Likelihood Estimator</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(X_1, X_2, \dots, X_n\)</span> be a random sample from the uniform distribution <span class="arithmatex">\(U(0, \theta)\)</span> (<span class="arithmatex">\(\theta &gt; 0\)</span>).</p>
+<p>(a) Obtain the MLE <span class="arithmatex">\(\hat{\theta}_n\)</span> of <span class="arithmatex">\(\theta\)</span> and show that <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{p} 0\)</span>.</p>
+<p>(b) Find an appropriate scaling factor such that the asymptotic distribution is non-degenerate, and find that asymptotic distribution.</p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>(a) Derive the MLE and prove convergence</strong></p>
+<p>The likelihood function is:</p>
+<div class="arithmatex">\[
+L(\theta) = \prod_{i=1}^n \frac{1}{\theta} I(0 \le X_i \le \theta) = \frac{1}{\theta^n} I(\max_{1 \le i \le n} X_i \le \theta)
+\]</div>
+<p>where <span class="arithmatex">\(I(\cdot)\)</span> is the indicator function. To maximize <span class="arithmatex">\(L(\theta)\)</span>, we need to minimize <span class="arithmatex">\(\theta^n\)</span> subject to <span class="arithmatex">\(\theta \ge \max_{1 \le i \le n} X_i\)</span>.</p>
+<p>Since <span class="arithmatex">\(\theta^n\)</span> is strictly increasing in <span class="arithmatex">\(\theta\)</span> for <span class="arithmatex">\(\theta &gt; 0\)</span>, the value that maximizes the likelihood is the smallest possible <span class="arithmatex">\(\theta\)</span> satisfying the constraint, i.e., the maximum order statistic:</p>
+<div class="arithmatex">\[
+\hat{\theta}_n = X_{(n)} = \max_{1 \le i \le n} X_i
+\]</div>
+<p>To show <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{p} 0\)</span>, analyze the bias <span class="arithmatex">\(\theta - \hat{\theta}_n\)</span>. Clearly <span class="arithmatex">\(\hat{\theta}_n \le \theta\)</span> almost surely, so <span class="arithmatex">\(\theta - \hat{\theta}_n \ge 0\)</span>. Use Markov's inequality.</p>
+<p>First compute the expectation of <span class="arithmatex">\(\hat{\theta}_n\)</span>. The PDF of <span class="arithmatex">\(X_{(n)}\)</span> for <span class="arithmatex">\(0 &lt; x &lt; \theta\)</span> is:</p>
+<div class="arithmatex">\[
+f_{(n)}(x) = \frac{n x^{n-1}}{\theta^n}
+\]</div>
+<p>Thus the expectation is:</p>
+<div class="arithmatex">\[
+E[\hat{\theta}_n] = \int_0^\theta x \cdot \frac{n x^{n-1}}{\theta^n} dx = \frac{n}{\theta^n} \left[ \frac{x^{n+1}}{n+1} \right]_0^\theta = \frac{n}{n+1}\theta
+\]</div>
+<p>The expected bias is:</p>
+<div class="arithmatex">\[
+E[\theta - \hat{\theta}_n] = \theta - \frac{n}{n+1}\theta = \frac{\theta}{n+1}
+\]</div>
+<p>For any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, by Markov's inequality:</p>
+<div class="arithmatex">\[
+P(|\sqrt{n}(\hat{\theta}_n - \theta)| \ge \epsilon) = P(\sqrt{n}(\theta - \hat{\theta}_n) \ge \epsilon) \le \frac{E[\sqrt{n}(\theta - \hat{\theta}_n)]}{\epsilon} = \frac{\sqrt{n}\theta}{\epsilon(n+1)}
+\]</div>
+<p>As <span class="arithmatex">\(n \rightarrow \infty\)</span>, <span class="arithmatex">\(\frac{\sqrt{n}}{n+1} \rightarrow 0\)</span>. The probability tends to 0, which means:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta) \xrightarrow{p} 0
+\]</div>
+<p><strong>(b) Appropriate scaling and non-degenerate asymptotic distribution</strong></p>
+<p>From (a) we have <span class="arithmatex">\(\sqrt{n}(\theta - \hat{\theta}_n) \xrightarrow{p} 0\)</span>, so <span class="arithmatex">\(\hat{\theta}_n\)</span> converges to <span class="arithmatex">\(\theta\)</span> at a rate faster than <span class="arithmatex">\(\sqrt{n}\)</span>. The appropriate scaling factor here is <span class="arithmatex">\(n\)</span>.</p>
+<p>We study the asymptotic distribution of the non‑negative random variable <span class="arithmatex">\(Y_n = n(\theta - \hat{\theta}_n)\)</span> by deriving the limit of its CDF. For any <span class="arithmatex">\(x &gt; 0\)</span>:</p>
+<div class="arithmatex">\[
+P(n(\theta - \hat{\theta}_n) \le x) = P \left( \theta - \hat{\theta}_n \le \frac{x}{n} \right)
+\]</div>
+<div class="arithmatex">\[
+= P \left( \hat{\theta}_n \ge \theta - \frac{x}{n} \right) = 1 - P \left( \hat{\theta}_n &lt; \theta - \frac{x}{n} \right)
+\]</div>
+<p>Since <span class="arithmatex">\(\hat{\theta}_n = \max_{1 \le i \le n} X_i\)</span>, the sample maximum is strictly less than some value iff every individual observation is strictly less than that value. Because <span class="arithmatex">\(X_i\)</span> are i.i.d. <span class="arithmatex">\(U(0, \theta)\)</span>,</p>
+<div class="arithmatex">\[
+P \left( \hat{\theta}_n &lt; \theta - \frac{x}{n} \right) = \prod_{i=1}^n P \left( X_i &lt; \theta - \frac{x}{n} \right) = \left( \frac{\theta - x/n}{\theta} \right)^n = \left( 1 - \frac{x/\theta}{n} \right)^n
+\]</div>
+<p>Taking the limit as <span class="arithmatex">\(n \rightarrow \infty\)</span> using the standard limit definition of the exponential:</p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow \infty} \left( 1 - \frac{x/\theta}{n} \right)^n = e^{-x/\theta}
+\]</div>
+<p>Therefore, the asymptotic CDF of <span class="arithmatex">\(n(\theta - \hat{\theta}_n)\)</span> is:</p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow \infty} P(n(\theta - \hat{\theta}_n) \le x) = 1 - e^{-x/\theta} \quad (\text{for } x &gt; 0)
+\]</div>
+<p>This is exactly the CDF of an <strong>exponential distribution</strong> with mean <span class="arithmatex">\(\theta\)</span> (rate parameter <span class="arithmatex">\(1/\theta\)</span>).</p>
+<p>Conclusion, the non-degenerate asymptotic distribution is:</p>
+<div class="arithmatex">\[
+n(\theta - \hat{\theta}_n) \xrightarrow{d} Exp(mean = \theta)
+\]</div>
+</details>
+<h2 id="exercise-4-different-convergence-rates-of-mles">Exercise 4: Different Convergence Rates of MLEs</h2>
+<p><strong>Problem:</strong>
+Suppose <span class="arithmatex">\(X_1, ..., X_n \stackrel{i.i.d}{\sim} Exp(\mu, \sigma)\)</span> with density <span class="arithmatex">\(f(x) = \frac{1}{\sigma}e^{-\frac{x-\mu}{\sigma}}\)</span>, where <span class="arithmatex">\(x \ge \mu\)</span>. Let <span class="arithmatex">\((\hat{\mu}, \hat{\sigma})\)</span> be the MLE of <span class="arithmatex">\((\mu, \sigma)\)</span>.
+Find the asymptotic distributions of <span class="arithmatex">\(\hat{\mu}\)</span> and <span class="arithmatex">\(\hat{\sigma}\)</span> respectively. (Marginal distributions, not joint.)</p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>Step 1: Derive the MLEs of <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\sigma\)</span></strong></p>
+<p>The likelihood function is:</p>
+<div class="arithmatex">\[
+L(\mu, \sigma) = \prod_{i=1}^n \frac{1}{\sigma}e^{-\frac{X_i-\mu}{\sigma}}I(X_i \ge \mu) = \frac{1}{\sigma^n} \exp \left\{ -\frac{\sum_{i=1}^n X_i - n\mu}{\sigma} \right\} I(\mu \le \min_{1 \le i \le n} X_i)
+\]</div>
+<p>Under the constraint <span class="arithmatex">\(\mu \le X_{(1)}\)</span>, the log-likelihood is:</p>
+<div class="arithmatex">\[
+\ln L(\mu, \sigma) = -n \ln \sigma - \frac{\sum_{i=1}^n X_i - n\mu}{\sigma}
+\]</div>
+<p>First maximize with respect to <span class="arithmatex">\(\mu\)</span>. Note that:</p>
+<div class="arithmatex">\[
+\frac{\partial \ln L}{\partial \mu} = \frac{n}{\sigma} &gt; 0
+\]</div>
+<p>Thus the log-likelihood is strictly increasing in <span class="arithmatex">\(\mu\)</span>. To maximize it, we must make <span class="arithmatex">\(\mu\)</span> as large as possible subject to <span class="arithmatex">\(\mu \le X_{(1)}\)</span>.
+Hence, the MLE of <span class="arithmatex">\(\mu\)</span> is the sample minimum:</p>
+<div class="arithmatex">\[
+\hat{\mu} = X_{(1)} = \min_{1 \le i \le n} X_i
+\]</div>
+<p>Next, differentiate with respect to <span class="arithmatex">\(\sigma\)</span> and set to zero:</p>
+<div class="arithmatex">\[
+\frac{\partial \ln L}{\partial \sigma} = -\frac{n}{\sigma} + \frac{\sum_{i=1}^n X_i - n\mu}{\sigma^2} = 0
+\]</div>
+<p>Solving gives <span class="arithmatex">\(\hat{\sigma} = \overline{X}_n - \mu\)</span>. Substituting <span class="arithmatex">\(\hat{\mu} = X_{(1)}\)</span> yields the MLE of <span class="arithmatex">\(\sigma\)</span>:</p>
+<div class="arithmatex">\[
+\hat{\sigma} = \overline{X}_n - X_{(1)}
+\]</div>
+<p><strong>Step 2: Asymptotic distribution of <span class="arithmatex">\(\hat{\mu}\)</span></strong></p>
+<p>We use the CDF method for <span class="arithmatex">\(\hat{\mu} = X_{(1)}\)</span>. The appropriate scaling factor is <span class="arithmatex">\(n\)</span>.
+For any <span class="arithmatex">\(x &gt; 0\)</span>:</p>
+<div class="arithmatex">\[
+P(n(\hat{\mu} - \mu) &gt; x) = P \left( \hat{\mu} &gt; \mu + \frac{x}{n} \right)
+\]</div>
+<div class="arithmatex">\[
+= P \left( \min_{1 \le i \le n} X_i &gt; \mu + \frac{x}{n} \right) = \prod_{i=1}^n P \left( X_i &gt; \mu + \frac{x}{n} \right)
+\]</div>
+<p>Since <span class="arithmatex">\(X_i \sim Exp(\mu, \sigma)\)</span>, for <span class="arithmatex">\(t \ge \mu\)</span>, <span class="arithmatex">\(P(X_i &gt; t) = e^{-(t-\mu)/\sigma}\)</span>. Therefore:</p>
+<div class="arithmatex">\[
+P \left( X_i &gt; \mu + \frac{x}{n} \right) = \exp \left\{ -\frac{\mu + x/n - \mu}{\sigma} \right\} = e^{-\frac{x}{n\sigma}}
+\]</div>
+<p>Substituting back into the product:</p>
+<div class="arithmatex">\[
+P(n(\hat{\mu} - \mu) &gt; x) = \left( e^{-\frac{x}{n\sigma}} \right)^n = e^{-x/\sigma}
+\]</div>
+<p>This means the limiting CDF is <span class="arithmatex">\(1 - e^{-x/\sigma}\)</span>, which is the CDF of an <strong>exponential distribution</strong> with mean <span class="arithmatex">\(\sigma\)</span> (rate <span class="arithmatex">\(1/\sigma\)</span>). Hence:</p>
+<div class="arithmatex">\[
+n(\hat{\mu} - \mu) \xrightarrow{d} Exp(mean = \sigma)
+\]</div>
+<p><strong>Step 3: Asymptotic distribution of <span class="arithmatex">\(\hat{\sigma}\)</span></strong></p>
+<p>We need the asymptotic distribution of <span class="arithmatex">\(\hat{\sigma} = \overline{X}_n - X_{(1)}\)</span>.</p>
+<p>First, the moments of <span class="arithmatex">\(X_1\)</span> are: <span class="arithmatex">\(E[X_1] = \mu + \sigma\)</span> and <span class="arithmatex">\(Var(X_1) = \sigma^2\)</span>. By the standard CLT for <span class="arithmatex">\(\overline{X}_n\)</span>:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\overline{X}_n - (\mu + \sigma)) \xrightarrow{d} \mathcal{N}(0, \sigma^2)
+\]</div>
+<p>Rewrite the standardized estimator <span class="arithmatex">\(\sqrt{n}(\hat{\sigma} - \sigma)\)</span>:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\sigma} - \sigma) = \sqrt{n}(\overline{X}_n - X_{(1)} - \sigma)
+\]</div>
+<div class="arithmatex">\[
+= \sqrt{n}(\overline{X}_n - \mu - \sigma) - \sqrt{n}(X_{(1)} - \mu)
+\]</div>
+<p>From Step 2, <span class="arithmatex">\(n(X_{(1)} - \mu) \xrightarrow{d} Exp(\sigma)\)</span>, which implies <span class="arithmatex">\(n(X_{(1)} - \mu) = O_p(1)\)</span>.
+Consequently,</p>
+<div class="arithmatex">\[
+\sqrt{n}(X_{(1)} - \mu) = \frac{1}{\sqrt{n}} \cdot n(X_{(1)} - \mu) = o(1) \cdot O_p(1) = o_p(1)
+\]</div>
+<p>That is, <span class="arithmatex">\(\sqrt{n}(X_{(1)} - \mu) \xrightarrow{p} 0\)</span>.</p>
+<p>By Slutsky’s theorem, since the second term converges in probability to 0, the asymptotic distribution is entirely determined by the first term. Hence:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\sigma} - \sigma) \xrightarrow{d} \mathcal{N}(0, \sigma^2)
+\]</div>
+</details>
+<hr />
+<h2 id="exercise-5-inconsistent-mle-and-the-neyman-scott-problem">Exercise 5: Inconsistent MLE and the Neyman-Scott Problem</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(X_{ij}\)</span> (<span class="arithmatex">\(i=1,...,n\)</span>, <span class="arithmatex">\(j=1,...,k\)</span>) be independent with <span class="arithmatex">\(X_{ij} \sim \mathcal{N}(\mu_i, \sigma^2)\)</span>.
+This is essentially a balanced one‑way ANOVA design; assume <span class="arithmatex">\(k\)</span> is fixed and <span class="arithmatex">\(n \rightarrow \infty\)</span>, so that the number of parameters grows with the sample size.
+Show that the MLE <span class="arithmatex">\(\hat{\sigma}^2\)</span> of the common variance satisfies:</p>
+<div class="arithmatex">\[
+\hat{\sigma}^2 \xrightarrow{p} \left(1 - \frac{1}{k}\right)\sigma^2
+\]</div>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>Step 1: Derive the MLEs of <span class="arithmatex">\(\mu_i\)</span> and <span class="arithmatex">\(\sigma^2\)</span></strong></p>
+<p>The likelihood function is:</p>
+<div class="arithmatex">\[
+L(\mu_1, ..., \mu_n, \sigma^2) = \prod_{i=1}^n \prod_{j=1}^k \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(X_{ij} - \mu_i)^2}{2\sigma^2} \right)
+\]</div>
+<p>Taking logarithms gives:</p>
+<div class="arithmatex">\[
+\ln L = -\frac{nk}{2} \ln(2\pi) - \frac{nk}{2} \ln(\sigma^2) - \frac{1}{2\sigma^2} \sum_{i=1}^n \sum_{j=1}^k (X_{ij} - \mu_i)^2
+\]</div>
+<p>To find the MLE of <span class="arithmatex">\(\mu_i\)</span>, take the derivative and set it to zero:</p>
+<div class="arithmatex">\[
+\frac{\partial \ln L}{\partial \mu_i} = \frac{1}{\sigma^2} \sum_{j=1}^k (X_{ij} - \mu_i) = 0 \implies \hat{\mu}_i = \frac{1}{k} \sum_{j=1}^k X_{ij} = \overline{X}_{i.}
+\]</div>
+<p>Next, differentiate with respect to <span class="arithmatex">\(\sigma^2\)</span> and set to zero:</p>
+<div class="arithmatex">\[
+\frac{\partial \ln L}{\partial (\sigma^2)} = -\frac{nk}{2\sigma^2} + \frac{1}{2(\sigma^2)^2} \sum_{i=1}^n \sum_{j=1}^k (X_{ij} - \mu_i)^2 = 0
+\]</div>
+<p>Substituting <span class="arithmatex">\(\hat{\mu}_i = \overline{X}_{i.}\)</span> gives the MLE of the common variance:</p>
+<div class="arithmatex">\[
+\hat{\sigma}^2 = \frac{1}{nk} \sum_{i=1}^n \sum_{j=1}^k (X_{ij} - \overline{X}_{i.})^2
+\]</div>
+<p><strong>Step 2: Prove convergence in probability</strong></p>
+<p>Let <span class="arithmatex">\(Y_i = \sum_{j=1}^k (X_{ij} - \overline{X}_{i.})^2\)</span>. For each group <span class="arithmatex">\(i\)</span>, because <span class="arithmatex">\(X_{ij} \sim \mathcal{N}(\mu_i, \sigma^2)\)</span> for <span class="arithmatex">\(j=1,...,k\)</span>, the scaled sum of squares follows a chi‑square distribution:</p>
+<div class="arithmatex">\[
+\frac{Y_i}{\sigma^2} = \frac{1}{\sigma^2} \sum_{j=1}^k (X_{ij} - \overline{X}_{i.})^2 \sim \chi_{k-1}^2
+\]</div>
+<p>Hence <span class="arithmatex">\(Y_i \sim \sigma^2 \chi_{k-1}^2\)</span>. Since samples across groups (<span class="arithmatex">\(i=1,...,n\)</span>) are independent, the sequence <span class="arithmatex">\(Y_1, Y_2, ..., Y_n\)</span> consists of i.i.d. random variables.</p>
+<p>The expectation of <span class="arithmatex">\(Y_i\)</span> is <span class="arithmatex">\(E[Y_i] = \sigma^2(k-1)\)</span>.</p>
+<p>When <span class="arithmatex">\(n \rightarrow \infty\)</span> (while <span class="arithmatex">\(k\)</span> is fixed), apply the Weak Law of Large Numbers (WLLN) to <span class="arithmatex">\(\{Y_i\}_{i=1}^n\)</span>:</p>
+<div class="arithmatex">\[
+\frac{1}{n} \sum_{i=1}^n Y_i \xrightarrow{p} E[Y_1] = (k-1)\sigma^2
+\]</div>
+<p>Now rewrite the estimator <span class="arithmatex">\(\hat{\sigma}^2\)</span> in terms of this sequence:</p>
+<div class="arithmatex">\[
+\hat{\sigma}^2 = \frac{1}{nk} \sum_{i=1}^n Y_i = \frac{1}{k} \left( \frac{1}{n} \sum_{i=1}^n Y_i \right)
+\]</div>
+<p>By the continuous mapping theorem (or basic properties of convergence in probability), multiplying by the constant <span class="arithmatex">\(1/k\)</span> yields:</p>
+<div class="arithmatex">\[
+\hat{\sigma}^2 \xrightarrow{p} \frac{1}{k} \cdot (k-1)\sigma^2 = \left( 1 - \frac{1}{k} \right)\sigma^2
+\]</div>
+<p>This completes the proof. This result illustrates the famous <strong>Neyman-Scott problem</strong>: the MLE of the common variance is inconsistent because the number of nuisance parameters (<span class="arithmatex">\(\mu_1, ..., \mu_n\)</span>) grows at the same rate as the sample size <span class="arithmatex">\(n\)</span>.</p>
+</details>
+<hr />
+<h2 id="exercise-6-consistency-and-asymptotic-normality-of-sample-quantiles">Exercise 6: Consistency and Asymptotic Normality of Sample Quantiles</h2>
+<p><strong>Problem:</strong>
+(a) Define the check function <span class="arithmatex">\(\rho_\tau(y) = y(\tau - I(y &lt; 0))\)</span> as the loss function, and let the quantile function of a distribution <span class="arithmatex">\(F\)</span> be <span class="arithmatex">\(F^{-1}(p) := \inf\{x \in \mathbb{R} : F(x) \ge p\}\)</span>. Prove that:</p>
+<div class="arithmatex">\[
+\theta_0 = \arg \min_\theta E\rho_\tau(X-\theta) = F^{-1}(\tau)
+\]</div>
+<p>(b) Verify the consistency of the sample quantile defined by the following Z‑estimator:</p>
+<div class="arithmatex">\[
+\Psi_n(\theta) := \frac{1}{n} \sum_{i=1}^n \left( (1-\tau)I(X_i &lt; \theta) - \tau I(X_i &gt; \theta) \right) = 0
+\]</div>
+<p>Hint: Use Theorem 5.7 or Lemma 5.10 from van der Vaart [1] (add regularity conditions if necessary).</p>
+<p>(c) (van der Vaart [1] Ex. 5.11) Assuming consistency, use Theorem 5.23 to prove the asymptotic normality of the sample quantile.</p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>(a) Show that the minimizer of the expected loss is the population quantile</strong></p>
+<p>Assume a regularity condition: the random variable <span class="arithmatex">\(X\)</span> has a continuous density <span class="arithmatex">\(f(x)\)</span> and distribution function <span class="arithmatex">\(F(x)\)</span>.
+Define the objective function <span class="arithmatex">\(M(\theta) = E[\rho_\tau(X-\theta)]\)</span>. Using the definition <span class="arithmatex">\(\rho_\tau(y) = y(\tau - I(y &lt; 0))\)</span>, write the expectation as an integral:</p>
+<div class="arithmatex">\[
+M(\theta) = \int_{-\infty}^{\infty} (x-\theta)(\tau - I(x-\theta &lt; 0)) f(x) dx
+\]</div>
+<p>Split the integral:</p>
+<div class="arithmatex">\[
+M(\theta) = \int_{-\infty}^{\theta} (x-\theta)(\tau - 1) f(x) dx + \int_{\theta}^{\infty} (x-\theta)\tau f(x) dx
+\]</div>
+<p>Differentiate with respect to <span class="arithmatex">\(\theta\)</span> using Leibniz's rule. Note that when <span class="arithmatex">\(x=\theta\)</span>, the term <span class="arithmatex">\((x-\theta)\)</span> vanishes, so boundary terms disappear:</p>
+<div class="arithmatex">\[
+M'(\theta) = \int_{-\infty}^{\theta} \frac{\partial}{\partial \theta} [(x-\theta)(\tau-1)] f(x) dx + \int_{\theta}^{\infty} \frac{\partial}{\partial \theta} [(x-\theta)\tau] f(x) dx
+\]</div>
+<div class="arithmatex">\[
+= \int_{-\infty}^{\theta} (1-\tau) f(x) dx + \int_{\theta}^{\infty} (-\tau) f(x) dx
+\]</div>
+<p>Computing the integrals:</p>
+<div class="arithmatex">\[
+= (1-\tau)F(\theta) - \tau(1-F(\theta)) = F(\theta) - \tau F(\theta) - \tau + \tau F(\theta) = F(\theta) - \tau
+\]</div>
+<p>Set the derivative to zero to find the minimizer:</p>
+<div class="arithmatex">\[
+M'(\theta_0) = 0 \implies F(\theta_0) = \tau
+\]</div>
+<p>By the definition of the generalized inverse distribution function (quantile function) <span class="arithmatex">\(F^{-1}(\tau) = \inf\{x \in \mathbb{R} : F(x) \ge \tau\}\)</span>, we conclude:</p>
+<div class="arithmatex">\[
+\theta_0 = F^{-1}(\tau)
+\]</div>
+<p><strong>(b) Verify consistency of the sample quantile</strong></p>
+<p>We will use <strong>Lemma 5.10</strong> to prove consistency of <span class="arithmatex">\(\hat{\theta}_n\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Lemma 5.10 (van der Vaart)</p>
+<p>Let <span class="arithmatex">\(\Psi_n(\theta)\)</span> be random functions and <span class="arithmatex">\(\Psi(\theta)\)</span> a fixed function such that for each <span class="arithmatex">\(\theta\)</span>, <span class="arithmatex">\(\Psi_n(\theta)\)</span> converges in probability to <span class="arithmatex">\(\Psi(\theta)\)</span>.
+Suppose the map <span class="arithmatex">\(\theta \mapsto \Psi_n(\theta)\)</span> is <strong>nondecreasing</strong> and <span class="arithmatex">\(\Psi_n(\hat{\theta}_n) = o_p(1)\)</span>.
+If <span class="arithmatex">\(\theta_0\)</span> satisfies that for every <span class="arithmatex">\(\epsilon &gt; 0\)</span>, <span class="arithmatex">\(\Psi(\theta_0 - \epsilon) &lt; 0 &lt; \Psi(\theta_0 + \epsilon)\)</span>, then <span class="arithmatex">\(\hat{\theta}_n \xrightarrow{p} \theta_0\)</span>.</p>
+</div>
+<p>We verify the conditions of this lemma one by one:</p>
+<ul>
+<li>
+<p><strong>Condition 1: Monotonicity of <span class="arithmatex">\(\Psi_n(\theta)\)</span></strong></p>
+<p>As <span class="arithmatex">\(\theta\)</span> increases, the indicator <span class="arithmatex">\(I(X_i &lt; \theta)\)</span> is nondecreasing, while <span class="arithmatex">\(I(X_i &gt; \theta)\)</span> is nonincreasing (so <span class="arithmatex">\(-\tau I(X_i &gt; \theta)\)</span> is also nondecreasing). Since <span class="arithmatex">\((1-\tau) &gt; 0\)</span> and <span class="arithmatex">\(\tau &gt; 0\)</span>, the map <span class="arithmatex">\(\theta \mapsto \Psi_n(\theta)\)</span> is a positive linear combination of nondecreasing functions, hence it is <strong>nondecreasing</strong>.</p>
+</li>
+<li>
+<p><strong>Condition 2: Convergence in probability to a fixed function <span class="arithmatex">\(\Psi(\theta)\)</span></strong></p>
+<p>By the Weak Law of Large Numbers, for any fixed <span class="arithmatex">\(\theta\)</span>, <span class="arithmatex">\(\Psi_n(\theta)\)</span> converges in probability to its expectation.
+Assume <span class="arithmatex">\(X\)</span> is continuous (so <span class="arithmatex">\(P(X=\theta)=0\)</span>):</p>
+<div class="arithmatex">\[
+\Psi(\theta) = E[\Psi_n(\theta)] = (1-\tau)P(X &lt; \theta) - \tau P(X &gt; \theta) = (1-\tau)F(\theta) - \tau(1-F(\theta)) = F(\theta) - \tau
+\]</div>
+<p>Thus <span class="arithmatex">\(\Psi_n(\theta) \xrightarrow{p} \Psi(\theta)\)</span> holds.</p>
+</li>
+<li>
+<p><strong>Condition 3: Unique zero crossing (add a regularity condition)</strong></p>
+<p>The lemma requires that for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, <span class="arithmatex">\(\Psi(\theta_0 - \epsilon) &lt; 0 &lt; \Psi(\theta_0 + \epsilon)\)</span>.
+For this we add a regularity condition: <strong>assume the distribution function <span class="arithmatex">\(F(x)\)</span> is strictly increasing in a neighborhood of the true parameter <span class="arithmatex">\(\theta_0 = F^{-1}(\tau)\)</span></strong>.
+Under this condition, for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>,</p>
+<div class="arithmatex">\[
+F(\theta_0 - \epsilon) &lt; F(\theta_0) = \tau &lt; F(\theta_0 + \epsilon)
+\]</div>
+<p>Subtracting <span class="arithmatex">\(\tau\)</span> gives exactly:</p>
+<div class="arithmatex">\[
+\Psi(\theta_0 - \epsilon) &lt; 0 &lt; \Psi(\theta_0 + \epsilon)
+\]</div>
+<p>Since <span class="arithmatex">\(\theta \mapsto \Psi_n(\theta)\)</span> is nondecreasing, the sample quantile satisfies <span class="arithmatex">\(\Psi_n(\hat{\theta}_n) = 0\)</span> (or <span class="arithmatex">\(o_p(1)\)</span>), and the true parameter <span class="arithmatex">\(\theta_0\)</span> uniquely crosses the zero of the limiting function <span class="arithmatex">\(\Psi(\theta)\)</span>, all conditions of Lemma 5.10 are satisfied. Hence the sample quantile is consistent:</p>
+<div class="arithmatex">\[
+\hat{\theta}_n \xrightarrow{p} \theta_0
+\]</div>
+</li>
+</ul>
+<p><strong>(c) Asymptotic normality of the sample quantile</strong></p>
+<p>To prove asymptotic normality, we apply <strong>Theorem 5.23</strong>. To match the notation of the textbook, we denote the quantile as <span class="arithmatex">\(p\)</span> (which corresponds to <span class="arithmatex">\(\tau\)</span> in the previous part).</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem 5.23 (Asymptotic normality of M‑estimators)</p>
+<p>Suppose the map <span class="arithmatex">\(\theta \mapsto m_\theta(x)\)</span> is differentiable at <span class="arithmatex">\(\theta_0\)</span> for <span class="arithmatex">\(P\)</span>-almost every <span class="arithmatex">\(x\)</span>, with derivative <span class="arithmatex">\(\dot{m}_{\theta_0}(x)\)</span>. Moreover, assume a Lipschitz condition:
+<span class="arithmatex">\(|m_{\theta_1}(x) - m_{\theta_2}(x)| \le \dot{m}(x)|\theta_1 - \theta_2|\)</span>, where the envelope satisfies <span class="arithmatex">\(P\dot{m}^2 &lt; \infty\)</span>.
+Also assume that <span class="arithmatex">\(\theta \mapsto P m_\theta\)</span> admits a second‑order Taylor expansion at the maximum <span class="arithmatex">\(\theta_0\)</span> with a non‑singular symmetric second derivative matrix <span class="arithmatex">\(V_{\theta_0}\)</span>.
+If <span class="arithmatex">\(\hat{\theta}_n \xrightarrow{p} \theta_0\)</span> and approximately maximizes the empirical objective function, then:</p>
+<p><span class="arithmatex">\(\sqrt{n}(\hat{\theta}_n - \theta_0) = -V_{\theta_0}^{-1} \frac{1}{\sqrt{n}} \sum_{i=1}^n \dot{m}_{\theta_0}(X_i) + o_p(1)\)</span>.</p>
+</div>
+<p>The sample <span class="arithmatex">\(p\)</span>-quantile <span class="arithmatex">\(\hat{\theta}_n = \mathbb{F}_n^{-1}(p)\)</span> minimizes the empirical objective function <span class="arithmatex">\(\frac{1}{n}\sum \rho_p(X_i - \theta)\)</span>. To fit the "maximization" framework of Theorem 5.23, define the objective function as:</p>
+<div class="arithmatex">\[
+m_\theta(x) = -\rho_p(x-\theta) = -(x-\theta)(p - I(x &lt; \theta))
+\]</div>
+<p>We verify the conditions of Theorem 5.23 at the true parameter <span class="arithmatex">\(\theta_0 = F^{-1}(p)\)</span>:</p>
+<ul>
+<li>
+<p><strong>Condition 1: <span class="arithmatex">\(P\)</span>-almost everywhere differentiability</strong></p>
+<p>The map <span class="arithmatex">\(\theta \mapsto m_\theta(x)\)</span> is differentiable everywhere except at <span class="arithmatex">\(\theta = x\)</span>. Because the distribution <span class="arithmatex">\(F\)</span> is differentiable at <span class="arithmatex">\(\theta_0\)</span> with density <span class="arithmatex">\(f(\theta_0) &gt; 0\)</span>, the probability of an observation exactly equal to <span class="arithmatex">\(\theta_0\)</span> is zero, i.e., <span class="arithmatex">\(P(X=\theta_0)=0\)</span>. Hence <span class="arithmatex">\(m_\theta(x)\)</span> is differentiable at <span class="arithmatex">\(\theta_0\)</span> for <span class="arithmatex">\(P\)</span>-almost every <span class="arithmatex">\(x\)</span>, with derivative:</p>
+<div class="arithmatex">\[
+\dot{m}_{\theta_0}(x) = \frac{\partial}{\partial \theta} [-(x-\theta)p + (x-\theta)I(x &lt; \theta)] \Big|_{\theta=\theta_0} = p - I(x \le \theta_0)
+\]</div>
+</li>
+<li>
+<p><strong>Condition 2: Lipschitz continuity and square‑integrable envelope</strong></p>
+<p>The check function <span class="arithmatex">\(\rho_p(u)\)</span> is Lipschitz continuous with constant bounded by <span class="arithmatex">\(\max(p, 1-p) \le 1\)</span>.
+Therefore, for any <span class="arithmatex">\(\theta_1, \theta_2\)</span>:</p>
+<div class="arithmatex">\[
+|m_{\theta_1}(x) - m_{\theta_2}(x)| = |\rho_p(x-\theta_1) - \rho_p(x-\theta_2)| \le 1 \cdot |\theta_1 - \theta_2|
+\]</div>
+<p>We can choose the envelope <span class="arithmatex">\(\dot{m}(x) = 1\)</span>. The condition <span class="arithmatex">\(P\dot{m}^2 = E[1^2] = 1 &lt; \infty\)</span> is clearly satisfied.</p>
+</li>
+<li>
+<p><strong>Condition 3: Second‑order Taylor expansion and non‑singular <span class="arithmatex">\(V_{\theta_0}\)</span></strong></p>
+<p>The expected objective function is <span class="arithmatex">\(Pm_\theta = -E[\rho_p(X-\theta)]\)</span>. From part (a), its first derivative is:</p>
+<div class="arithmatex">\[
+\frac{d}{d\theta} (Pm_\theta) = p - F(\theta)
+\]</div>
+<p>Differentiating again, we obtain the second derivative at <span class="arithmatex">\(\theta_0\)</span>:</p>
+<div class="arithmatex">\[
+V_{\theta_0} = \frac{d}{d\theta} (p - F(\theta)) \Big|_{\theta=\theta_0} = -f(\theta_0)
+\]</div>
+<p>The problem assumes that <span class="arithmatex">\(F\)</span> has a positive derivative at the population <span class="arithmatex">\(p\)</span>-quantile <span class="arithmatex">\(F^{-1}(p)\)</span>, i.e., <span class="arithmatex">\(f(\theta_0) &gt; 0\)</span>. Therefore, the scalar <span class="arithmatex">\(V_{\theta_0} = -f(\theta_0)\)</span> is strictly negative, satisfying the "non‑singular" condition.</p>
+</li>
+<li>
+<p><strong>Applying Theorem 5.23</strong></p>
+<p>We have already established consistency <span class="arithmatex">\(\hat{\theta}_n \xrightarrow{p} \theta_0\)</span> in part (b). All conditions are met. Applying Theorem 5.23:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta_0) = -V_{\theta_0}^{-1} \frac{1}{\sqrt{n}} \sum_{i=1}^n \dot{m}_{\theta_0}(X_i) + o_p(1)
+\]</div>
+<p>Substituting <span class="arithmatex">\(V_{\theta_0}\)</span> and <span class="arithmatex">\(\dot{m}_{\theta_0}(X_i)\)</span>:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta_0) = \frac{1}{f(\theta_0)} \frac{1}{\sqrt{n}} \sum_{i=1}^n (p - I(X_i \le \theta_0)) + o_p(1)
+\]</div>
+<p>Let <span class="arithmatex">\(Y_i = p - I(X_i \le \theta_0)\)</span>. The sequence <span class="arithmatex">\(\{Y_i\}_{i=1}^n\)</span> is i.i.d. with:
+<span class="arithmatex">\(E[Y_i] = p - P(X_i \le \theta_0) = p - F(\theta_0) = p - p = 0\)</span>
+<span class="arithmatex">\(Var(Y_i) = Var(I(X_i \le \theta_0)) = p(1-p)\)</span></p>
+<p>By the classical CLT:</p>
+<div class="arithmatex">\[
+\frac{1}{\sqrt{n}} \sum_{i=1}^n Y_i \xrightarrow{d} \mathcal{N}(0, p(1-p))
+\]</div>
+<p>Finally, by Slutsky’s theorem, multiplying by the constant scaling <span class="arithmatex">\(1/f(\theta_0)\)</span> gives the asymptotic normal distribution:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta_0) \xrightarrow{d} \mathcal{N}\left(0, \frac{p(1-p)}{f(\theta_0)^2}\right)
+\]</div>
+</li>
+</ul>
+</details>
 
 
 
@@ -4321,7 +4996,8 @@
 
 
 
-
+  
+  
 
 
 
