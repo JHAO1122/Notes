@@ -42,7 +42,8 @@ tags:
 
 ### Part III: 统计推断的渐近方法
 * [x] [第七章：Delta方法](7Delta_Method.md)
-* [x] [第八章：MLE](8MLE.md)
+* [x] [第八章：MLE（一）](8MLE.md)
+* [x] [第九章：MLE（二）](9MLE.md)
 
 ### Part IV: 📝 课后习题精解 (Selected Solutions)
 

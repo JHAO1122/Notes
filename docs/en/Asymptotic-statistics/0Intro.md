@@ -52,6 +52,8 @@ Below is the directory for this course:
 
 * [x] [Chapter 7: Delta Method](7Delta_Method.md)
 
+
+
 ### Part IV: 📝 Selected Solutions
 
 * [x] [Homework 1 Solutions](sol_1.md)
