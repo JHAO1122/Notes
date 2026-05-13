@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-11
+> 更新于: 2026-05-13
 
 ---
+### Multi-Variable Conformal Prediction: Optimizing Prediction Sets without Data Splitting 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-12
+- **链接**: [PDF](http://arxiv.org/abs/2605.12341v1)
+
+!!! note "AI 核心解读"
+
+    该论文将保形预测从标量评分函数推广到向量值评分函数，并引入多个同时校准变量，从而在无需数据分割的情况下，将预测集形状设计与校准统一为单一优化问题。其核心创新在于基于场景理论构建了带约束移除（RemMCP）与约束松弛（RelMCP）的两种计算框架，前者实现了分割保形预测的简洁推广，后者支持非凸评分函数，并严格证明了有限样本覆盖保证。
+
+### A Unified Theory of Conditional Coverage in Conformal Prediction with Applications 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-12
+- **链接**: [PDF](http://arxiv.org/abs/2605.11602v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一个统一的理论框架，通过点态路径和 \(L_p\) 路径分别推导出条件覆盖率的非渐近界，首次系统揭示了渐近条件有效性中误差来源的统计结构。其核心创新在于构造了基于加权对称性的评分函数，并建立了条件覆盖率的理论比较准则，为异质性数据下的共形预测提供了统一的统计推导基础。
+
+### Multi-Fidelity Quantile Regression 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-11
+- **链接**: [PDF](http://arxiv.org/abs/2605.10406v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种两阶段、模型无关的多保真分位数回归方法，核心创新在于构造了“局部分位数链接”：将高保真分位数表示为低保真分位数在协变量依赖水平上的函数，从而将估计问题转化为对更平滑的水平函数的统计推断。理论部分严格刻画了该估计量相较于仅用高保真数据直接分位数回归的收敛速度提升条件，并引入校正步骤以增强在形状相似性减弱时的鲁棒性。
+
+### CONTRA: Conformal Prediction Region via Normalizing Flow Transformation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-08
+- **链接**: [PDF](http://arxiv.org/abs/2605.08561v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出 CONTRA 方法，通过将正态化流变换的潜空间中心距离定义为非一致性评分函数，在统计上保证了预测区域覆盖概率的有限样本有效性，并利用流模型的双射性质将潜空间高密度区域映射为输出空间任意形状的精确预测区域。其扩展版本进一步将评分函数构造为残差的正态化流变换，使得任意预测模型均可获得具有理论覆盖保证的预测区域，突破了传统超矩形或椭圆区域的形状限制。
+
+### Rolling-Origin Conformal Prediction under Local Stationarity and Weak Dependence 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-08
+- **链接**: [PDF](http://arxiv.org/abs/2605.08422v1)
+
+!!! note "AI 核心解读"
+
+    该论文在局部平稳和弱依赖假设下，推导出滚动原点共形预测覆盖误差的四项分解，并证明最优校准窗口长度以 \(T^{2\beta/(2\beta+1)}\) 阶增长，覆盖误差率达到 \(O(T^{-\beta/(2\beta+1)})\)，且通过 Le Cam 两点构造证明该率在 Hölder-\(\beta\) 模型类上达到极小极大最优。此外，论文在 \(\alpha\)-混合和物理依赖框架下建立了 Bahadur 表示，并构造了基于 Winkler 交叉验证的自适应窗口选择器，通过均匀集中不等式给出其理论保证。
+
+
 ### TRACE: Transport Alignment Conformal Prediction via Diffusion and Flow Matching Models 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-08

@@ -454,5 +454,35 @@
         "date": "2026-05-08",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.12341v1": {
+        "title": "Multi-Variable Conformal Prediction: Optimizing Prediction Sets without Data Splitting",
+        "date": "2026-05-12",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.11602v1": {
+        "title": "A Unified Theory of Conditional Coverage in Conformal Prediction with Applications",
+        "date": "2026-05-12",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.10406v1": {
+        "title": "Multi-Fidelity Quantile Regression",
+        "date": "2026-05-11",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.08561v1": {
+        "title": "CONTRA: Conformal Prediction Region via Normalizing Flow Transformation",
+        "date": "2026-05-08",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.08422v1": {
+        "title": "Rolling-Origin Conformal Prediction under Local Stationarity and Weak Dependence",
+        "date": "2026-05-08",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
