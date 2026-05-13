@@ -60,7 +60,7 @@ Built with a static site generator, balancing reading experience and maintenance
 ## 👨‍💻 About the Author
 
 Currently an undergraduate student at the School of Mathematical Sciences, Zhejiang University.
-Deeply interested in High-dimensional Inference, Conformal Prediction, Probability & Stochastic Processes, and Quantitative Finance.
+Deeply interested in High-dimensional Inference, Conformal Prediction, and Probability & Stochastic Processes.
 
 * **Email**: jiahaot1122@gmail.com
 * **GitHub**: [@JHAO1122](https://github.com/JHAO1122)

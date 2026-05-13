@@ -15,7 +15,6 @@ Currently, my research interests focus on the following fields:
 * **High-Dimensional Statistical Inference** (e.g., Knockoff Filter algorithms)
 * **Conformal Prediction**
 * **Probability Theory and Stochastic Processes**
-* **Quantitative Finance**
 
 ## 💡 Philosophy
 
@@ -71,7 +70,7 @@ All mathematical derivations on this website originate from my personal course-t
 
 To improve efficiency, the Markdown formatting, LaTeX typesetting, and the translation of the English version were completed with the assistance of Large Language Models (primarily Gemini 3.1 Pro).
 
-Mathematical derivations inevitably contain typos or blind spots. If you find any errors while reading, or if you share a mutual interest in statistical inference, conformal prediction, probability theory, stochastic processes, or quantitative finance, I would be more than happy to connect!
+Mathematical derivations inevitably contain typos or blind spots. If you find any errors while reading, or if you share a mutual interest in statistical inference, conformal prediction, probability theory, or stochastic processes, I would be more than happy to connect!
 
 * **Email**: jiahaot1122@gmail.com
 * **GitHub**: [@jhao1122](https://github.com/jhao1122)
