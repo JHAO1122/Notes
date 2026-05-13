@@ -52,6 +52,9 @@ Below is the directory for this course:
 
 * [x] [Chapter 7: Delta Method](7Delta_Method.md)
 
+* [x] [Chapter 8: MLE I](8MLE.md)
+
+* [x] [Chapter 9: MLE II](9MLE.md)
 
 
 ### Part IV: 📝 Selected Solutions

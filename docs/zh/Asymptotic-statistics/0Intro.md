@@ -31,16 +31,19 @@ tags:
 以下是本课程的目录：
 
 ### Part I: 随机收敛与极限定理基础
+
 * [x] [第一章：数据分布与随机收敛](1Stochastic_convergence.md) 
 * [x] [第二章：特征函数](2Characteristic_Functions.md)
 * [x] [第三章：中心极限定理（一）](3CLT.md)
 * [x] [第四章：中心极限定理（二）](4CLT.md)
 
 ### Part II: 弱相依分布和平稳过程
+
 * [x] [第五章：弱相依数据（一）](5Weakly_Dep.md)
 * [x] [第五章：弱相依数据（二）](6Stantionary_process.md)
 
 ### Part III: 统计推断的渐近方法
+
 * [x] [第七章：Delta方法](7Delta_Method.md)
 * [x] [第八章：MLE（一）](8MLE.md)
 * [x] [第九章：MLE（二）](9MLE.md)
