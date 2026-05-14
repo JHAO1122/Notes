@@ -484,5 +484,11 @@
         "date": "2026-05-08",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.12668v1": {
+        "title": "Online Conformal Prediction: Enforcing monotonicity via Online Optimization",
+        "date": "2026-05-12",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

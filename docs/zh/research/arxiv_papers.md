@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-13
+> 更新于: 2026-05-14
 
 ---
+### Online Conformal Prediction: Enforcing monotonicity via Online Optimization 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-12
+- **链接**: [PDF](http://arxiv.org/abs/2605.12668v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过在线优化框架构造了新的评分函数，将单调性约束直接嵌入到分位数估计的在线更新过程中，从而在多个置信水平上同时保证预测集的嵌套性与有限样本覆盖保证。其理论贡献在于推导了与分位数估计误差控制直接相关的遗憾界，并证明了所提方法在保持嵌套性的同时，能够实现跨风险谱系的一致统计效率提升。
+
+
 ### Multi-Variable Conformal Prediction: Optimizing Prediction Sets without Data Splitting 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-12
