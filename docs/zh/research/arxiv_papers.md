@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-14
+> 更新于: 2026-05-15
 
 ---
+### On the Burden of Achieving Fairness in Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-14
+- **链接**: [PDF](http://arxiv.org/abs/2605.14260v1)
+
+!!! note "AI 核心解读"
+
+    该论文首先从总体评分分布出发，推导出一个守恒律和下界，证明混合校准必然导致组间覆盖率的不可约扭曲，其幅度由跨组分位数异质性决定。其次，论文严格证明了共形预测中两种主流公平性定义——等覆盖率和等集合大小——在统计上存在根本性冲突，并量化了分组与合并策略之间的权衡代价。
+
+
 ### Online Conformal Prediction: Enforcing monotonicity via Online Optimization 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-12

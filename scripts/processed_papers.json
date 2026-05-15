@@ -490,5 +490,11 @@
         "date": "2026-05-12",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.14260v1": {
+        "title": "On the Burden of Achieving Fairness in Conformal Prediction",
+        "date": "2026-05-14",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
