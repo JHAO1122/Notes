@@ -63,6 +63,25 @@
 
 
 /* ================= 随笔专属“信纸”排版 ================= */
+
+/* 随笔专属：加深并美化标准块引用（> 提示框） */
+.blog-post-style blockquote {
+    border-left: 4px solid #a50044; /* 核心：把默认灰线改成标志性的巴萨红！ */
+    color: #34495e; /* 加深字色：使用高级的深石墨蓝，确保在米白底色上有足够的对比度 */
+    background-color: rgba(165, 0, 68, 0.015); /* 极淡的红润背景，让引用块视觉上沉下来 */
+    padding: 0.6rem 1.2rem;
+    margin: 1.5rem 0;
+    font-style: italic; /* 保持斜体的文学感 */
+    opacity: 1 !important; /* 强制洗掉默认的透明度 */
+}
+
+/* 确保 blockquote 内部的段落标签也继承正确的颜色和粗细 */
+.blog-post-style blockquote p {
+    color: #2c3e50 !important; /* 完美同步你主体的墨蓝色 */
+    font-weight: 500; /* 稍微加粗一点点，让“奉任于败军之际”更有分量 */
+    margin: 0 !important; /* 去掉内部段落的死板间距 */
+}
+
 .blog-post-style {
     font-family: "LXGW WenKai", "Microsoft YaHei", serif; /* 切换到更温和的衬线体/楷体 */
     font-size: 1.05rem; /* 字体稍微放大，适合阅读长文 */
