@@ -496,5 +496,35 @@
         "date": "2026-05-14",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.20468v1": {
+        "title": "CASCADE Conformal Prediction: Uncertainty-Adaptive Prediction Intervals for Two-Stage Clinical Decision Support",
+        "date": "2026-05-19",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.19024v1": {
+        "title": "Conformal Prediction via Transported Beta Laws",
+        "date": "2026-05-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.19014v1": {
+        "title": "SAGA: A Sequence-Adaptive Generative Architecture for Multi-Horizon Probabilistic Forecasting with Adaptive Temporal Conformal Prediction",
+        "date": "2026-05-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.18655v1": {
+        "title": "Self-Supervised Conformal Prediction with Equivariant Bootstrapping for Image Uncertainty Quantification",
+        "date": "2026-05-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.18008v1": {
+        "title": "Uncertainty Reliability Under Domain Shift: An Investigation for Data-Driven Blood Pressure Estimation in Photoplethysmography",
+        "date": "2026-05-18",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

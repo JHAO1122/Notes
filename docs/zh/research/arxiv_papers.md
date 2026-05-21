@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-15
+> 更新于: 2026-05-21
 
 ---
+### CASCADE Conformal Prediction: Uncertainty-Adaptive Prediction Intervals for Two-Stage Clinical Decision Support 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-19
+- **链接**: [PDF](http://arxiv.org/abs/2605.20468v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种名为CASCADE的级联共形预测框架，通过将Venn-Abers多概率不确定性直接映射为非一致性分数，在统计上实现了从分类任务到回归任务的不确定性传播。其核心创新在于利用主分类器的认知不确定性动态缩放回归任务的预测区间，理论性质上保证了在置信样本上区间效率提升38.9%，同时自动扩展区间以维持不确定样本的稳健覆盖。
+
+### Conformal Prediction via Transported Beta Laws 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-18
+- **链接**: [PDF](http://arxiv.org/abs/2605.19024v1)
+
+!!! note "AI 核心解读"
+
+    该论文将分裂保形预测中校准条件覆盖率的精确分布推导为Beta(k, n+1-k)形式，并以此为有限样本参考对象，通过Wasserstein距离量化非独立同分布场景下的分布偏移。其核心创新在于构造了基于传输映射的评分函数变形机制，将测试端偏移与校准依赖分别建模为覆盖尺度上的传输映射与顺序统计量律的变形，并在尺度偏移、聚类和稳态混合等设定下给出了显式或Berry-Esseen近似的理论性质刻画。
+
+### SAGA: A Sequence-Adaptive Generative Architecture for Multi-Horizon Probabilistic Forecasting with Adaptive Temporal Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-18
+- **链接**: [PDF](http://arxiv.org/abs/2605.19014v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于解码器-仅Transformer的序列自适应生成架构SAGA，并创新性地结合了分裂共形校准包装器，从而在有限样本下为个体级预测区间提供了边际覆盖保证。其统计贡献在于通过自适应时间共形预测构造了无需分布假设的评分函数，并严格证明了在面板数据长时序预测中，预测区间的名义覆盖率偏差可控制在0.4个百分点以内，最差子群偏差不超过2.4个百分点。
+
+### Self-Supervised Conformal Prediction with Equivariant Bootstrapping for Image Uncertainty Quantification 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-18
+- **链接**: [PDF](http://arxiv.org/abs/2605.18655v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种自监督共形预测框架，通过等变自举法（equivariant bootstrapping）利用数据对称性生成启发式覆盖，并在此基础上进行共形校准，从而在无需真实校准数据的情况下实现不确定性量化。其核心创新在于构造了基于数据对称性的评分函数，并证明了经等变自举修正后的覆盖概率在共形校准下具有理论上的边际覆盖保证。
+
+### Uncertainty Reliability Under Domain Shift: An Investigation for Data-Driven Blood Pressure Estimation in Photoplethysmography 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-18
+- **链接**: [PDF](http://arxiv.org/abs/2605.18008v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过对比深度集成与蒙特卡洛丢弃法在域偏移下的预测鲁棒性，并系统评估高斯负对数似然损失与均方误差损失结合保形预测、温度缩放等后处理重校准方法对不确定性校准的影响，揭示了深度集成在外部域偏移下具有更强预测稳健性，且重校准后的高斯负对数似然方法在收缩压与舒张压估计中实现了最优的不确定性校准性能。
+
+
 ### On the Burden of Achieving Fairness in Conformal Prediction 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-14
