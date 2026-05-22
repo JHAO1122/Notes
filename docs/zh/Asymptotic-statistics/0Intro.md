@@ -47,6 +47,8 @@ tags:
 * [x] [第七章：Delta方法](7Delta_Method.md)
 * [x] [第八章：MLE（一）](8MLE.md)
 * [x] [第九章：MLE（二）](9MLE.md)
+* [x] [第十章：M估计与Z估计（一）](10M&Z1.md)
+* [x] [第十一章：M估计与Z估计（二）](11M&Z2.md)
 
 ### Part IV: 📝 课后习题精解 (Selected Solutions)
 

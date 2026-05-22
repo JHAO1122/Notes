@@ -179,6 +179,8 @@ nav:
               - 第七章： Delta 方法: zh/Asymptotic-statistics/7Delta_Method.md
               - 第八章：极大似然估计（一）: zh/Asymptotic-statistics/8MLE.md
               - 第九章：极大似然估计（二）: zh/Asymptotic-statistics/9MLE.md
+              - 第十章： M估计和Z估计 (一): zh/Asymptotic-statistics/10M&Z1.md
+              - 第十一章： M估计和Z估计 (二) : zh/Asymptotic-statistics/11M&Z2.md
           - 📝 习题:
               - AS Homework 1: zh/Asymptotic-statistics/sol_1.md
               - AS Homework 2: zh/Asymptotic-statistics/sol_2.md
