@@ -1,5 +1,5 @@
 ---
-date: 2026-05-05
+date: 2026-05-17
 categories:
   - 随笔
   - 足球
@@ -42,5 +42,13 @@ hide:
 <div class="grid cards" markdown>
 
 -   ![再见地中海](../../assets/RL9_1.jpeg)
+
+
+
+<br>
+<p align="right" style="color: #888; font-style: italic; line-height: 1.6;">
+  写于 2026 年 5 月 17 日 晚<br>
+  浙江大学紫金港校区 物理学院
+</p>
 
 </div>
