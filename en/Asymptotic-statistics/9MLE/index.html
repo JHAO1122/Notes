@@ -4821,15 +4821,21 @@ LR_n \xrightarrow{d} \chi^2_{p-r}
 </div>
 <p>Under the null hypothesis, the following three major test statistics are <strong>asymptotically equivalent</strong>:</p>
 <ol>
-<li><strong>Likelihood Ratio Statistic (LR statistic)</strong>: <span class="arithmatex">\(LR_n\)</span></li>
-<li><strong>Wald Test Statistic (based on Delta method)</strong>:
-    [
-    \mathcal{W}_n = R(\hat{\theta}_n)^T \left( \frac{\partial}{\partial \theta} R(\hat{\theta}_n) \left( -\frac{\partial^2 \log L_n(\hat{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial}{\partial \theta} R(\hat{\theta}_n)^T \right)^{-1} R(\hat{\theta}_n)
-    ]</li>
-<li><strong>Rao Score Test Statistic (Lagrange Multiplier method)</strong>:
-    [
-    R_n = \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta^T} \left( -\frac{\partial^2 \log L_n(\tilde{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta}
-    ]</li>
+<li>
+<p><strong>Likelihood Ratio Statistic (LR statistic)</strong>: <span class="arithmatex">\(LR_n\)</span></p>
+</li>
+<li>
+<p><strong>Wald Test Statistic (based on Delta method)</strong>:</p>
+<div class="arithmatex">\[
+\mathcal{W}_n = R(\hat{\theta}_n)^T \left( \frac{\partial}{\partial \theta} R(\hat{\theta}_n) \left( -\frac{\partial^2 \log L_n(\hat{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial}{\partial \theta} R(\hat{\theta}_n)^T \right)^{-1} R(\hat{\theta}_n)
+\]</div>
+</li>
+<li>
+<p><strong>Rao Score Test Statistic (Lagrange Multiplier method)</strong>:</p>
+<div class="arithmatex">\[
+R_n = \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta^T} \left( -\frac{\partial^2 \log L_n(\tilde{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta}
+\]</div>
+</li>
 </ol>
 <details class="proof">
 <summary>Proof Sketch of Wilks' Theorem (click to expand)</summary>

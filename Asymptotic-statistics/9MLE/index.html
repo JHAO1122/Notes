@@ -4821,15 +4821,21 @@ LR_n \xrightarrow{d} \chi^2_{p-r}
 </div>
 <p>在原假设下，以下三大检验统计量是<strong>渐近等价</strong>的：</p>
 <ol>
-<li><strong>似然比统计量 (LR statistic)</strong>: <span class="arithmatex">\(LR_n\)</span></li>
-<li><strong>Wald 检验统计量 (基于 Delta 方法)</strong>:
-    [
-    \mathcal{W}_n = R(\hat{\theta}_n)^T \left( \frac{\partial}{\partial \theta} R(\hat{\theta}_n) \left( -\frac{\partial^2 \log L_n(\hat{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial}{\partial \theta} R(\hat{\theta}_n)^T \right)^{-1} R(\hat{\theta}_n)
-    ]</li>
-<li><strong>Rao 得分检验统计量 (Lagrangian 乘子法)</strong>:
-    [
-    R_n = \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta^T} \left( -\frac{\partial^2 \log L_n(\tilde{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta}
-    ]</li>
+<li>
+<p><strong>似然比统计量 (LR statistic)</strong>: <span class="arithmatex">\(LR_n\)</span></p>
+</li>
+<li>
+<p><strong>Wald 检验统计量 (基于 Delta 方法)</strong>:</p>
+<div class="arithmatex">\[
+\mathcal{W}_n = R(\hat{\theta}_n)^T \left( \frac{\partial}{\partial \theta} R(\hat{\theta}_n) \left( -\frac{\partial^2 \log L_n(\hat{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial}{\partial \theta} R(\hat{\theta}_n)^T \right)^{-1} R(\hat{\theta}_n)
+\]</div>
+</li>
+<li>
+<p><strong>Rao 得分检验统计量 (Lagrangian 乘子法)</strong>:</p>
+<div class="arithmatex">\[
+R_n = \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta^T} \left( -\frac{\partial^2 \log L_n(\tilde{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta}
+\]</div>
+</li>
 </ol>
 <details class="proof">
 <summary>Wilks 定理的证明概要（点击展开）</summary>
