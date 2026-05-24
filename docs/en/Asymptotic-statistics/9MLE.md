@@ -50,14 +50,19 @@ LR_n = -2 \log \frac{L_n(\tilde{\theta}_n)}{L_n(\hat{\theta}_n)}
 Under the null hypothesis, the following three major test statistics are **asymptotically equivalent**:
 
 1.  **Likelihood Ratio Statistic (LR statistic)**: $LR_n$
+
 2.  **Wald Test Statistic (based on Delta method)**:
+
     \[
     \mathcal{W}_n = R(\hat{\theta}_n)^T \left( \frac{\partial}{\partial \theta} R(\hat{\theta}_n) \left( -\frac{\partial^2 \log L_n(\hat{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial}{\partial \theta} R(\hat{\theta}_n)^T \right)^{-1} R(\hat{\theta}_n)
     \]
+
 3.  **Rao Score Test Statistic (Lagrange Multiplier method)**:
+
     \[
     R_n = \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta^T} \left( -\frac{\partial^2 \log L_n(\tilde{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta}
     \]
+
 
 ??? proof "Proof Sketch of Wilks' Theorem (click to expand)"
 

@@ -50,14 +50,19 @@ LR_n = -2 \log \frac{L_n(\tilde{\theta}_n)}{L_n(\hat{\theta}_n)}
 在原假设下，以下三大检验统计量是**渐近等价**的：
 
 1.  **似然比统计量 (LR statistic)**: $LR_n$
+
 2.  **Wald 检验统计量 (基于 Delta 方法)**:
+
     \[
     \mathcal{W}_n = R(\hat{\theta}_n)^T \left( \frac{\partial}{\partial \theta} R(\hat{\theta}_n) \left( -\frac{\partial^2 \log L_n(\hat{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial}{\partial \theta} R(\hat{\theta}_n)^T \right)^{-1} R(\hat{\theta}_n)
     \]
+
 3.  **Rao 得分检验统计量 (Lagrangian 乘子法)**:
+
     \[
     R_n = \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta^T} \left( -\frac{\partial^2 \log L_n(\tilde{\theta}_n)}{\partial \theta \partial \theta^T} \right)^{-1} \frac{\partial \log L_n(\tilde{\theta}_n)}{\partial \theta}
     \]
+
 
 ??? proof "Wilks 定理的证明概要（点击展开）"
 
