@@ -104,12 +104,15 @@ Under the null hypothesis, the following three major test statistics are **asymp
     \[
     (A^{1/2} B A^{1/2})^2 = A^{1/2} B A B A^{1/2}
     \]
+
     \[
     = A^{1/2} (A^{-1} - D^T C^{-1} D) A (A^{-1} - D^T C^{-1} D) A^{1/2}
     \]
+    
     \[
     = (I_p - A^{1/2} D^T C^{-1} D A^{1/2})(I_p - A^{1/2} D^T C^{-1} D A^{1/2})
     \]
+    
     \[
     = I_p - 2 A^{1/2} D^T C^{-1} D A^{1/2} + A^{1/2} D^T C^{-1} D A D^T C^{-1} D A^{1/2}
     \]
