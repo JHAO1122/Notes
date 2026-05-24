@@ -193,6 +193,7 @@ Here $b$ or $(1 + b/n)$ is called the **Bartlett factor**. Let $\hat{b}_n$ be a 
 \[
 LR_{n, bc} := \frac{LR_n}{1 + b/n} \xrightarrow{d} \chi^2_{p-r}
 \]
+
 \[
 \hat{LR}_{n, bc} := \frac{LR_n}{1 + \hat{b}/n} \xrightarrow{d} \chi^2_{p-r}
 \]
@@ -211,6 +212,7 @@ After the Bartlett correction, the convergence rate improves substantially:
 \[
 P\left(\frac{LR_n}{1 + \beta n^{-1}} \le x\right) = P(\chi^2_{p-r} \le x) + O(n^{-2})
 \]
+
 \[
 P\left(\frac{LR_n}{1 + \hat{\beta} n^{-1}} \le x\right) = P(\chi^2_{p-r} \le x) + O(n^{-3/2})
 \]
