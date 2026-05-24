@@ -4920,12 +4920,12 @@ LR_n = -2 \log \frac{\theta_0^{-n}}{X_{(n)}^{-n}} = -2n \log \frac{X_{(n)}}{\the
 E(LR_n) = (p-r) + \frac{b_1}{n} + o(n^{-1}) = (p-r)\left\{ 1 + \frac{b}{n} + o(n^{-1}) \right\}
 \]</div>
 <p>这里 <span class="arithmatex">\(b\)</span> 或 <span class="arithmatex">\((1 + b/n)\)</span> 被称为 <strong>Bartlett 因子</strong>。设 <span class="arithmatex">\(\hat{b}_n\)</span> 是 <span class="arithmatex">\(b\)</span> 的相合估计量（<span class="arithmatex">\(\hat{b}_n \rightarrow b\)</span>），通过 Slutsky 定理，修正后的统计量：</p>
-<p>[
+<div class="arithmatex">\[
 LR_{n, bc} := \frac{LR_n}{1 + b/n} \xrightarrow{d} \chi^2_{p-r}
-]
-[
-\hat{LR}<em p-r="p-r">{n, bc} := \frac{LR_n}{1 + \hat{b}/n} \xrightarrow{d} \chi^2</em>
-]</p>
+\]</div>
+<div class="arithmatex">\[
+\hat{LR}_{n, bc} := \frac{LR_n}{1 + \hat{b}/n} \xrightarrow{d} \chi^2_{p-r}
+\]</div>
 <p><strong>Bartlett 猜想与 Edgeworth 展开</strong>：
 Wilks 定理仅仅保证了 <span class="arithmatex">\(P(LR_n \le x) = P(\chi^2_{p-r} \le x) + o(1)\)</span>。
 如果假设数据尾部具有足够的平滑性且满足更多矩条件 (Cramér 条件)，通过 Edgeworth 展开可以证明（Barndorff-Nielsen and Cox, 1984）：</p>
@@ -4934,12 +4934,12 @@ P(LR_n(\theta_0) \le x) = P(\chi^2_{p-r} \le x) - \beta x g_p(x) n^{-1} + O(n^{-
 \]</div>
 <p>其中 <span class="arithmatex">\(g_p\)</span> 是 <span class="arithmatex">\(\chi^2_{p-r}\)</span> 的概率密度函数。
 而经过 Bartlett 修正后，收敛速度大幅提高：</p>
-<p>[
+<div class="arithmatex">\[
 P\left(\frac{LR_n}{1 + \beta n^{-1}} \le x\right) = P(\chi^2_{p-r} \le x) + O(n^{-2})
-]
-[
+\]</div>
+<div class="arithmatex">\[
 P\left(\frac{LR_n}{1 + \hat{\beta} n^{-1}} \le x\right) = P(\chi^2_{p-r} \le x) + O(n^{-3/2})
-]</p>
+\]</div>
 <p><strong>Bartlett 修正的意义</strong>：
 利用修正后的统计量构造置信区域 <span class="arithmatex">\(I_{\alpha, bc}\)</span>，其覆盖误差 (coverage error) <span class="arithmatex">\(P(\theta \in I_{\alpha, bc}) - (1-\alpha) = O(n^{-3/2})\)</span>，比未修正的 <span class="arithmatex">\(O(n^{-1})\)</span> 具有更小的高阶误差。它为似然比检验提供了极为精确的近似显著性水平。</p>
 <hr />

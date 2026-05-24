@@ -4920,12 +4920,12 @@ LR_n = -2 \log \frac{\theta_0^{-n}}{X_{(n)}^{-n}} = -2n \log \frac{X_{(n)}}{\the
 E(LR_n) = (p-r) + \frac{b_1}{n} + o(n^{-1}) = (p-r)\left\{ 1 + \frac{b}{n} + o(n^{-1}) \right\}
 \]</div>
 <p>Here <span class="arithmatex">\(b\)</span> or <span class="arithmatex">\((1 + b/n)\)</span> is called the <strong>Bartlett factor</strong>. Let <span class="arithmatex">\(\hat{b}_n\)</span> be a consistent estimator of <span class="arithmatex">\(b\)</span> (<span class="arithmatex">\(\hat{b}_n \rightarrow b\)</span>). By Slutsky's theorem, the corrected statistic:</p>
-<p>[
+<div class="arithmatex">\[
 LR_{n, bc} := \frac{LR_n}{1 + b/n} \xrightarrow{d} \chi^2_{p-r}
-]
-[
-\hat{LR}<em p-r="p-r">{n, bc} := \frac{LR_n}{1 + \hat{b}/n} \xrightarrow{d} \chi^2</em>
-]</p>
+\]</div>
+<div class="arithmatex">\[
+\hat{LR}_{n, bc} := \frac{LR_n}{1 + \hat{b}/n} \xrightarrow{d} \chi^2_{p-r}
+\]</div>
 <p><strong>Bartlett's Conjecture and Edgeworth Expansion</strong>:
 Wilks' theorem only guarantees <span class="arithmatex">\(P(LR_n \le x) = P(\chi^2_{p-r} \le x) + o(1)\)</span>.
 If the data tails are sufficiently smooth and additional moment conditions (Cramér's condition) hold, via Edgeworth expansion it can be shown (Barndorff-Nielsen and Cox, 1984):</p>
@@ -4934,12 +4934,12 @@ P(LR_n(\theta_0) \le x) = P(\chi^2_{p-r} \le x) - \beta x g_p(x) n^{-1} + O(n^{-
 \]</div>
 <p>where <span class="arithmatex">\(g_p\)</span> is the probability density function of <span class="arithmatex">\(\chi^2_{p-r}\)</span>.
 After the Bartlett correction, the convergence rate improves substantially:</p>
-<p>[
+<div class="arithmatex">\[
 P\left(\frac{LR_n}{1 + \beta n^{-1}} \le x\right) = P(\chi^2_{p-r} \le x) + O(n^{-2})
-]
-[
+\]</div>
+<div class="arithmatex">\[
 P\left(\frac{LR_n}{1 + \hat{\beta} n^{-1}} \le x\right) = P(\chi^2_{p-r} \le x) + O(n^{-3/2})
-]</p>
+\]</div>
 <p><strong>Significance of the Bartlett Correction</strong>:
 Using the corrected statistic to construct a confidence region <span class="arithmatex">\(I_{\alpha, bc}\)</span>, the coverage error <span class="arithmatex">\(P(\theta \in I_{\alpha, bc}) - (1-\alpha) = O(n^{-3/2})\)</span>, which has a smaller higher-order error compared to the uncorrected <span class="arithmatex">\(O(n^{-1})\)</span>. It provides a highly accurate approximate significance level for the likelihood ratio test.</p>
 <hr />
