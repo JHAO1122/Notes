@@ -4862,18 +4862,18 @@ LR_n = \frac{1}{n} \left( \frac{\partial \log L_n(\theta_0)}{\partial \theta} \r
 <p>Denote <span class="arithmatex">\(A = I_1(\theta_0)\)</span>, <span class="arithmatex">\(C = \tilde{I}_1(\phi_0)\)</span>, <span class="arithmatex">\(D = \frac{\partial g(\phi_0)^T}{\partial \phi}\)</span>, and <span class="arithmatex">\(B = A^{-1} - D^T C^{-1} D\)</span>. It can be verified that <span class="arithmatex">\(C = D A D^T\)</span>.
 Therefore <span class="arithmatex">\(LR_n \Rightarrow Z^T A^{1/2} B A^{1/2} Z\)</span>.</p>
 <p>We need to show that the matrix <span class="arithmatex">\(A^{1/2} B A^{1/2}\)</span> is <strong>idempotent</strong>:</p>
-<p>[
+<div class="arithmatex">\[
 (A^{1/2} B A^{1/2})^2 = A^{1/2} B A B A^{1/2}
-]
-[
+\]</div>
+<div class="arithmatex">\[
 = A^{1/2} (A^{-1} - D^T C^{-1} D) A (A^{-1} - D^T C^{-1} D) A^{1/2}
-]
-[
+\]</div>
+<div class="arithmatex">\[
 = (I_p - A^{1/2} D^T C^{-1} D A^{1/2})(I_p - A^{1/2} D^T C^{-1} D A^{1/2})
-]
-[
+\]</div>
+<div class="arithmatex">\[
 = I_p - 2 A^{1/2} D^T C^{-1} D A^{1/2} + A^{1/2} D^T C^{-1} D A D^T C^{-1} D A^{1/2}
-]</p>
+\]</div>
 <p>Since <span class="arithmatex">\(D A D^T = C\)</span>, the last term simplifies to <span class="arithmatex">\(A^{1/2} D^T C^{-1} C C^{-1} D A^{1/2} = A^{1/2} D^T C^{-1} D A^{1/2}\)</span>. Substituting back yields:</p>
 <div class="arithmatex">\[
 = I_p - A^{1/2} D^T C^{-1} D A^{1/2} = A^{1/2} B A^{1/2}
