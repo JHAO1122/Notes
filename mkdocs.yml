@@ -78,8 +78,9 @@ plugins:
             "第五章：弱相依数据（一）": "Ch 5: Weakly Dependent Data I"
             "第六章：弱相依数据（二）": "Ch 6: Weakly Dependent Data II"
             "第七章： Delta 方法": "Ch 7: Delta Method"
-            "第八章：极大似然估计（一）": "Ch 8: Maximum Likelihood Estimation I"
-            "第九章：极大似然估计（二）": "Ch 9: Maximum Likelihood Estimation II"
+            "第八章：矩估计": "Ch 8: Method of Moments"
+            "第九章：极大似然估计（一）": "Ch 9: Maximum Likelihood Estimation I"
+            "第十章：极大似然估计（二）": "Ch 10: Maximum Likelihood Estimation II"
             "🌌 泛函分析": "🌌 Functional Analysis"
             "第一章：度量空间": "Ch 1: Distance Spaces"
             "第二章：拓扑与完备性": "Ch 2: Topology and Completeness"
@@ -177,10 +178,11 @@ nav:
               - 第五章：弱相依数据（一）: zh/Asymptotic-statistics/5Weakly_Dep.md
               - 第六章：弱相依数据（二）: zh/Asymptotic-statistics/6Stantionary_process.md
               - 第七章： Delta 方法: zh/Asymptotic-statistics/7Delta_Method.md
-              - 第八章：极大似然估计（一）: zh/Asymptotic-statistics/8MLE.md
-              - 第九章：极大似然估计（二）: zh/Asymptotic-statistics/9MLE.md
-              - 第十章： M估计和Z估计 (一): zh/Asymptotic-statistics/10M&Z1.md
-              - 第十一章： M估计和Z估计 (二) : zh/Asymptotic-statistics/11M&Z2.md
+              - 第八章：矩估计: zh/Asymptotic-statistics/12ME.md
+              - 第九章：极大似然估计（一）: zh/Asymptotic-statistics/8MLE.md
+              - 第十章：极大似然估计（二）: zh/Asymptotic-statistics/9MLE.md
+              - 第十一章： M估计和Z估计 (一): zh/Asymptotic-statistics/10M&Z1.md
+              - 第十二章： M估计和Z估计 (二) : zh/Asymptotic-statistics/11M&Z2.md
           - 📝 习题:
               - AS Homework 1: zh/Asymptotic-statistics/sol_1.md
               - AS Homework 2: zh/Asymptotic-statistics/sol_2.md
