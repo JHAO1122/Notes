@@ -526,5 +526,35 @@
         "date": "2026-05-18",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.22004v1": {
+        "title": "Selecting Informative Conformal Prediction Sets with an Optimized FCR-Controlled Approach",
+        "date": "2026-05-21",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.17705v1": {
+        "title": "Online Conformal Prediction for Non-Exchangeable Panel Data",
+        "date": "2026-05-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.16145v1": {
+        "title": "Skew-adaptive conformal prediction",
+        "date": "2026-05-15",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.15789v1": {
+        "title": "Learning Context-conditioned Gaussian Overbounds for Convolution-Based Uncertainty Propagation",
+        "date": "2026-05-15",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.14260v2": {
+        "title": "On the Burden of Achieving Fairness in Conformal Prediction",
+        "date": "2026-05-14",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

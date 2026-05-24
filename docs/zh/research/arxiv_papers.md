@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-21
+> 更新于: 2026-05-24
 
 ---
+### Selecting Informative Conformal Prediction Sets with an Optimized FCR-Controlled Approach 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-21
+- **链接**: [PDF](http://arxiv.org/abs/2605.22004v1)
+
+!!! note "AI 核心解读"
+
+    该论文在选择性推断框架下，推导了最优决策策略以最大化统计功效，并针对预测集概率未知的实际情形，构造了一种校准程序，使得调整后的策略在有限样本下严格控制错误覆盖率（FCR）。其核心创新在于将评分函数与单调约束条件相结合，通过理论推导保证了所选样本上FCR的精确控制，同时显著提升了统计效率。
+
+### Online Conformal Prediction for Non-Exchangeable Panel Data 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-18
+- **链接**: [PDF](http://arxiv.org/abs/2605.17705v1)
+
+!!! note "AI 核心解读"
+
+    该论文针对非可交换面板数据，提出了一种在线共形预测框架，其核心创新在于构造了一个结合历史相似性权重与自适应误覆盖水平的双状态评分函数，并基于此推导出逐步覆盖界与长期覆盖保证的理论性质。通过统计推导证明，相似性权重在目标反馈稀疏时保障覆盖，而自适应水平随反馈累积进一步优化覆盖，二者互补实现了非均匀区间宽度分配，而非简单的整体膨胀。
+
+### Skew-adaptive conformal prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-15
+- **链接**: [PDF](http://arxiv.org/abs/2605.16145v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种基于非对称区间族与规范评分函数的偏态自适应共形预测方法，通过逆双曲正弦变换构造有符号缩放残差的训练目标，使预测区间在保持有限样本边际有效性的同时，能够自适应特征空间中的局部尺度与偏度变化。其核心理论贡献在于推导了偏态自适应评分函数的显式形式，并建立了基于校准样本的期望区间宽度比估计量，从而在统计上保证了区间效率的改进可被可靠评估。
+
+### Learning Context-conditioned Gaussian Overbounds for Convolution-Based Uncertainty Propagation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-15
+- **链接**: [PDF](http://arxiv.org/abs/2605.15789v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种可学习的上下文条件高斯过界框架，通过构造一个基于有限分位数网格的保守性损失函数，并引入Wasserstein型分布距离惩罚项，使得神经网络输出的均值和尺度参数在选定分位数上具有可证明的保守性。在三条显式正则性假设下，该方法进一步将离散网格上的保守性延拓至连续尾部，从而支持保守的线性组合与卷积传播分析，并在理论上保证了过界性质的连续性与目标函数的紧致性。
+
+### On the Burden of Achieving Fairness in Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-14
+- **链接**: [PDF](http://arxiv.org/abs/2605.14260v2)
+
+!!! note "AI 核心解读"
+
+    该论文首先从总体分数分布出发，推导出一个守恒律与下界，证明混合校准必然导致不可消除的组间覆盖率扭曲，其规模由跨组分位数异质性决定；其次，通过构造评分函数与理论分析，揭示了等覆盖率和等集合大小两种公平性定义之间存在根本性权衡，并量化了分组与混合校准策略间的转换代价。
+
+
 ### CASCADE Conformal Prediction: Uncertainty-Adaptive Prediction Intervals for Two-Stage Clinical Decision Support 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-19
