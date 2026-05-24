@@ -1,4 +1,4 @@
-# Chapter 9: Maximum Likelihood Estimation (II)
+# Chapter 10: Maximum Likelihood Estimation (II)
 
 In the previous chapter, we explored the consistency and asymptotic normality of the maximum likelihood estimator (MLE). In this chapter, we will start from the famous Wilks' theorem and delve into the asymptotic properties of the likelihood ratio test. Next, we will discuss how to use the Bartlett correction to improve the accuracy of the likelihood ratio test, and introduce counterexamples when parameters are not identifiable. Finally, we will transcend the limitations of parametric models and introduce the core tool of modern nonparametric statistics—**Empirical Likelihood**—and demonstrate its elegant mathematical structure and the nonparametric version of Wilks' theorem.
 

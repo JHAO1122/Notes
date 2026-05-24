@@ -1,4 +1,4 @@
-# 第八章：极大似然估计（一）
+# 第九章：极大似然估计（一）
 
 极大似然估计 (Maximum Likelihood Estimator, MLE) 是现代统计学中最核心的参数估计方法之一。本章我们将系统性地探讨极大似然估计的渐近理论，包括 Fisher 信息量、Cramér-Rao 下界、极大似然估计的相合性 (Consistency) 以及它的渐近正态性 (Asymptotic Normality)。最后，我们将引入基于似然的假设检验方法，特别是似然比检验 (Likelihood Ratio Test)。
 

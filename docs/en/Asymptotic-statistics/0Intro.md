@@ -52,10 +52,15 @@ Below is the directory for this course:
 
 * [x] [Chapter 7: Delta Method](7Delta_Method.md)
 
-* [x] [Chapter 8: MLE I](8MLE.md)
+* [x] [Chapter 8: Moment Estimator](12ME.md)
 
-* [x] [Chapter 9: MLE II](9MLE.md)
+* [x] [Chapter 9: MLE I](8MLE.md)
 
+* [x] [Chapter 10: MLE II](9MLE.md)
+
+* [x] [Chapter 11: M and Z Estimators I](10M&Z1.md)
+
+* [x] [Chapter 11: M and Z Estimators II](11M&Z1.md)
 
 ### Part IV: 📝 Selected Solutions
 

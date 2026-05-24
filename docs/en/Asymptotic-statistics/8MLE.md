@@ -1,4 +1,4 @@
-# Chapter 8: Maximum Likelihood Estimation (I)
+# Chapter 9: Maximum Likelihood Estimation (I)
 
 Maximum Likelihood Estimator (MLE) is one of the most central parameter estimation methods in modern statistics. In this chapter, we will systematically explore the asymptotic theory of maximum likelihood estimation, including Fisher information, Cramér-Rao lower bound, consistency of MLE, and its asymptotic normality. Finally, we will introduce likelihood-based hypothesis testing methods, particularly the Likelihood Ratio Test.
 
