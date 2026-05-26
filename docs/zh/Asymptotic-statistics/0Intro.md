@@ -30,7 +30,7 @@ tags:
 
 以下笔记正在持续更新中：
 
-### 第一部分：随机收敛基础与极限定理
+### 第一部分：随机收敛基础与极限定理(Foundations of Stochastic Convergence and Limit Theorems)
 
 * [x] [第一章：数据分布与随机收敛](1Stochastic_convergence.md) 
 
@@ -40,13 +40,13 @@ tags:
 
 * [x] [第四章：中心极限定理（二）](4CLT.md)
 
-### 第二部分：弱相关数据
+### 第二部分：弱相关数据(Weakly Dependent Data)
 
 * [x] [第五章：弱相关数据（一）](5Weakly_Dep.md)
 
 * [x] [第六章：弱相关数据（二）](6Stantionary_process.md)
 
-### 第三部分：渐近推断工具
+### 第三部分：渐近推断工具(Asymptotic Inference Tools)
 
 * [x] [第七章：Delta 方法](7Delta_Method.md)
 
@@ -60,7 +60,7 @@ tags:
 
 * [x] [第十二章：M 估计与 Z 估计（二）](11M&Z1.md)
 
-### 第四部分：📝 精选习题解答
+### 第四部分：📝 习题解答(Selected Solutions)
 
 * [x] [作业 1 解答](sol_1.md)
 
