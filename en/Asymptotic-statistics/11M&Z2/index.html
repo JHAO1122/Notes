@@ -4761,9 +4761,15 @@ Assume the missingness mechanism satisfies:</p>
 <div class="arithmatex">\[
 P(R_i = 1 | x_i, y_i) = P(R_i = 1 | x_i) = \omega_{\eta_0}(x_i)
 \]</div>
-<p>where <span class="arithmatex">\(\omega_{\eta_0}(\cdot)\)</span> is called the missing propensity function. Here we assume it follows a parametric binary regression model.
-* <strong>Meaning of MAR</strong>: Given <span class="arithmatex">\(X_i\)</span>, the missing indicator <span class="arithmatex">\(R_i\)</span> and the true response <span class="arithmatex">\(y_i\)</span> are conditionally independent.
-* This missingness mechanism is called <strong>ignorable missing at random</strong>, because as long as we observe <span class="arithmatex">\(x_i\)</span>, the missing <span class="arithmatex">\(y_i\)</span> does not introduce additional bias for inference.</p>
+<p>where <span class="arithmatex">\(\omega_{\eta_0}(\cdot)\)</span> is called the missing propensity function. Here we assume it follows a parametric binary regression model.</p>
+<ul>
+<li>
+<p><strong>Meaning of MAR</strong>: Given <span class="arithmatex">\(X_i\)</span>, the missing indicator <span class="arithmatex">\(R_i\)</span> and the true response <span class="arithmatex">\(y_i\)</span> are conditionally independent.</p>
+</li>
+<li>
+<p>This missingness mechanism is called <strong>ignorable missing at random</strong>, because as long as we observe <span class="arithmatex">\(x_i\)</span>, the missing <span class="arithmatex">\(y_i\)</span> does not introduce additional bias for inference.</p>
+</li>
+</ul>
 <p><strong>How to estimate the target parameter <span class="arithmatex">\(\theta\)</span>?</strong></p>
 <p><strong>Method 1: Least squares estimation (LSE) using only the observed data (i.e., <span class="arithmatex">\(R_i = 1\)</span>)</strong></p>
 <p>The objective function is:</p>
