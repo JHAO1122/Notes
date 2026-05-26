@@ -81,6 +81,8 @@ plugins:
             "第八章：矩估计": "Ch 8: Method of Moments"
             "第九章：极大似然估计（一）": "Ch 9: Maximum Likelihood Estimation I"
             "第十章：极大似然估计（二）": "Ch 10: Maximum Likelihood Estimation II"
+            "第十一章： M估计和Z估计 (一)": "Ch 11: M-Estimation and Z-Estimation I"
+            "第十二章： M估计和Z估计 (二)": "Ch 12: M-Estimation and Z-Estimation II"
             "🌌 泛函分析": "🌌 Functional Analysis"
             "第一章：度量空间": "Ch 1: Distance Spaces"
             "第二章：拓扑与完备性": "Ch 2: Topology and Completeness"
