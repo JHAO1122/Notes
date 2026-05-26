@@ -60,7 +60,7 @@ Below is the directory for this course:
 
 * [x] [Chapter 11: M and Z Estimators I](10M&Z1.md)
 
-* [x] [Chapter 11: M and Z Estimators II](11M&Z1.md)
+* [x] [Chapter 11: M and Z Estimators II](11M&Z2.md)
 
 ### Part IV: 📝 Selected Solutions
 
