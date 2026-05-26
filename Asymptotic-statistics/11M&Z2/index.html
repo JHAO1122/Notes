@@ -4871,9 +4871,15 @@ P\psi_{\theta_0, \hat{\sigma}} = \int \psi\left( \frac{x - \theta_0}{\hat{\sigma
 <hr />
 <h2 id="10-one-step-estimator">10. 单步估计量 (One-step Estimator)</h2>
 <ul>
-<li>在很多复杂的模型中，Z-估计方程 <span class="arithmatex">\(\Psi_n(\theta) = 0\)</span> 的精确根可能非常难以求解（例如存在多个局部极值、高度非线性等）。</li>
-<li>我们可以通过在某个<strong>初始估计量 (initial estimator)</strong> <span class="arithmatex">\(\tilde{\theta}_n\)</span> 的基础上进行一步优化来改进估计结果。这正是基于牛顿-拉夫逊算法 (Newton-Raphson Algorithm) 的思想。</li>
-<li>考虑在 <span class="arithmatex">\(\tilde{\theta}_n\)</span> 处进行一阶泰勒展开：</li>
+<li>
+<p>在很多复杂的模型中，Z-估计方程 <span class="arithmatex">\(\Psi_n(\theta) = 0\)</span> 的精确根可能非常难以求解（例如存在多个局部极值、高度非线性等）。</p>
+</li>
+<li>
+<p>我们可以通过在某个<strong>初始估计量 (initial estimator)</strong> <span class="arithmatex">\(\tilde{\theta}_n\)</span> 的基础上进行一步优化来改进估计结果。这正是基于牛顿-拉夫逊算法 (Newton-Raphson Algorithm) 的思想。</p>
+</li>
+<li>
+<p>考虑在 <span class="arithmatex">\(\tilde{\theta}_n\)</span> 处进行一阶泰勒展开：</p>
+</li>
 </ul>
 <div class="arithmatex">\[
 \Psi_n(\tilde{\theta}_n) + \dot{\Psi}_n(\tilde{\theta}_n)(\theta - \tilde{\theta}_n) = 0 \quad \text{--- (8.16)}
