@@ -4876,17 +4876,9 @@ P\psi_{\theta_0, \hat{\sigma}} = \int \psi\left( \frac{x - \theta_0}{\hat{\sigma
 <p>This means that the estimation procedure is asymptotically equivalent to using the true <span class="arithmatex">\(\eta_0\)</span>. In this model, the estimation error of <span class="arithmatex">\(\hat{\sigma}\)</span> does not appear in the first-order asymptotic expansion.</p>
 <hr />
 <h2 id="10-one-step-estimator">10. One-step Estimator</h2>
-<ul>
-<li>
 <p>In many complex models, the exact root of the Z-estimating equation <span class="arithmatex">\(\Psi_n(\theta) = 0\)</span> can be very difficult to obtain (e.g., multiple local extrema, high nonlinearity).</p>
-</li>
-<li>
 <p>We can improve the estimation by performing one optimization step based on an <strong>initial estimator</strong> <span class="arithmatex">\(\tilde{\theta}_n\)</span>. This is exactly the idea of the Newton-Raphson algorithm.</p>
-</li>
-<li>
 <p>Consider a first-order Taylor expansion around <span class="arithmatex">\(\tilde{\theta}_n\)</span>:</p>
-</li>
-</ul>
 <div class="arithmatex">\[
 \Psi_n(\tilde{\theta}_n) + \dot{\Psi}_n(\tilde{\theta}_n)(\theta - \tilde{\theta}_n) = 0 \quad \text{--- (8.16)}
 \]</div>
