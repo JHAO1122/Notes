@@ -556,5 +556,35 @@
         "date": "2026-05-14",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2605.25460v1": {
+        "title": "Mean-Shift PCA by Knockoff Mean",
+        "date": "2026-05-25",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2605.25852v2": {
+        "title": "A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores",
+        "date": "2026-05-25",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.24848v1": {
+        "title": "Distributional Conformal Prediction for Markov Processes",
+        "date": "2026-05-24",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.24601v1": {
+        "title": "Bayesian Conformal-Projective Prediction",
+        "date": "2026-05-23",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.11602v2": {
+        "title": "A Unified Theory of Conditional Coverage in Conformal Prediction with Applications",
+        "date": "2026-05-12",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

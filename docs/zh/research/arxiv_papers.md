@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-24
+> 更新于: 2026-05-28
 
 ---
+### Mean-Shift PCA by Knockoff Mean 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-05-25
+- **链接**: [PDF](http://arxiv.org/abs/2605.25460v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过引入敲击均值扰动，利用随机矩阵理论严格证明了均值偏移尖峰与原始协方差稳定特征值在谱上可分离，并揭示了原始特征空间在污染下具有渐近不变性。基于此理论性质，构造了一种仅依赖标准PCA操作的两阶段评分函数，通过添加敲击均值识别并移除均值偏移成分。
+
+### A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-25
+- **链接**: [PDF](http://arxiv.org/abs/2605.25852v2)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于将条件覆盖问题等价转化为构造特征独立的非一致性评分，并基于此提出一种后处理校正方法PIT-CP，通过概率积分变换将任意基础评分映射为近似特征不变的评分，同时保持其几何结构和边际覆盖。在理论性质上，作者将问题简化为诱导评分的一维条件密度估计，推导了条件覆盖间隙的边界以及体积和对称差界，并证明了该方法在极小化最优条件估计下的有效性。
+
+### Distributional Conformal Prediction for Markov Processes 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-24
+- **链接**: [PDF](http://arxiv.org/abs/2605.24848v1)
+
+!!! note "AI 核心解读"
+
+    该论文将分布共形预测从独立同分布回归场景推广至严格平稳马尔可夫过程，通过基于核估计的转移分布函数实施概率积分变换，将相依数据转化为近似独立同分布样本。理论贡献在于：在β-混合条件下推导出无条件覆盖率的非渐近误差界，并验证了条件预测区间的渐近有效性，同时将有效性条件放宽至Lp-m-可逼近过程，无需依赖混合性假设。
+
+### Bayesian Conformal-Projective Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-23
+- **链接**: [PDF](http://arxiv.org/abs/2605.24601v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种名为共形-投影预测（CPP）的稳健预测框架，其核心创新在于通过定义分布层面的共形性准则，将候选值纳入数据后对留一预测分布的无扰动程度作为评分函数，而非依赖传统的残差评分。在留一与交换预测分布可解析且交换预测均值对候选值可微的条件下，论文推导了有界影响性质和局部凸性引理，并严格证明了在ε-污染模型下，CPP在渐近方差上优于任何具有无界影响的插件预测器。
+
+### A Unified Theory of Conditional Coverage in Conformal Prediction with Applications 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-12
+- **链接**: [PDF](http://arxiv.org/abs/2605.11602v2)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于提出了一个非渐近的条件覆盖误差分解框架，将条件覆盖不足拆解为评分估计误差、有限样本校准误差和内在条件失配误差三个可解释分量。基于此框架，作者进一步构造了面向条件覆盖的模型选择准则，并开发了在协变量偏移下仍保持渐近条件覆盖保证的局部化方法。
+
+
 ### Selecting Informative Conformal Prediction Sets with an Optimized FCR-Controlled Approach 
 
 - [ ] **分类**: Conformal | **日期**: 2026-05-21
