@@ -62,6 +62,10 @@ Below is the directory for this course:
 
 * [x] [Chapter 12: M and Z Estimators II](11M&Z2.md)
 
+* [x] [Chapter 13: U Statistics](13U.md)
+
+* [x] [Chapter 14: U Statistics](14U.md)
+
 ### Part IV: 📝 Selected Solutions
 
 * [x] [Homework 1 Solutions](sol_1.md)
