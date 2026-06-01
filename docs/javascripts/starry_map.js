@@ -63,7 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "AS-Ch5", label: isEn ? "5. Weak Dependence" : "5.弱相关数据", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/5Weakly_Dep/" },
         { id: "AS-Ch6", label: isEn ? "6. Stationary Process" : "6.平稳过程", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/6Stantionary_process/" },
         { id: "AS-Ch7", label: isEn ? "7. Delta Method" : "7.Delta方法", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/7Delta_Method/" },
-    
+        { id: "AS-Ch8", label: isEn ? "8. Method of Moments" : "8.矩估计", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/12ME/" },
+        { id: "AS-Ch9", label: isEn ? "9. MLE I" : "9.极大似然估计（一）", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/8MLE/" },
+        { id: "AS-Ch10", label: isEn ? "10. MLE II" : "10.极大似然估计（二）", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/9MLE/" },
+        { id: "AS-Ch11", label: isEn ? "11. M-Estimation and Z-Estimation I" : "11.M估计和Z估计 (一)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/10M&Z1/" },
+        { id: "AS-Ch12", label: isEn ? "12. M-Estimation and Z-Estimation II" : "12.M估计和Z估计 (二)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/11M&Z2/" },
+        { id: "AS-Ch13", label: isEn ? "13.  U-Statistics I" : "13.U统计量(一)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/13U.md/" },
+        { id: "AS-Ch14", label: isEn ? "14.  U-Statistics II" : "14.U统计量(二)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/14U.md/" },
         // 随机微分方程章节
         { id: "SDE-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/0Intro/" },
         { id: "SDE-Ch1", label: isEn ? "1. Cond Expectation" : "1.条件期望", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/1conditional_expectation/" },
@@ -121,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "FA", target: "FA-Ch8" },
         { source: "AS", target: "AS-Intro" }, { source: "AS", target: "AS-Ch1" }, { source: "AS", target: "AS-Ch2" }, { source: "AS", target: "AS-Ch3" },
         { source: "AS", target: "AS-Ch4" }, { source: "AS", target: "AS-Ch5" }, { source: "AS", target: "AS-Ch6" }, { source: "AS", target: "AS-Ch7" },
+        { source: "AS", target: "AS-Ch8" }, { source: "AS", target: "AS-Ch9" }, { source: "AS", target: "AS-Ch10" }, { source: "AS", target: "AS-Ch11" },
+        { source: "AS", target: "AS-Ch12" }, { source: "AS", target: "AS-Ch13" }, { source: "AS", target: "AS-Ch14" },
         { source: "SDE", target: "SDE-Intro" }, { source: "SDE", target: "SDE-Ch1" }, { source: "SDE", target: "SDE-Ch2" }, { source: "SDE", target: "SDE-Ch3" },
         { source: "SDE", target: "SDE-Ch4" }, { source: "SDE", target: "SDE-Ch5" }, { source: "SDE", target: "SDE-Ch6" }, { source: "SDE", target: "SDE-Ch7" },
         { source: "Top", target: "Top-Intro" }, { source: "Top", target: "Top-Ch1" }, { source: "Top", target: "Top-Ch2" }, { source: "Top", target: "Top-Ch3" },
