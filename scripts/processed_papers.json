@@ -586,5 +586,29 @@
         "date": "2026-05-12",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2505.20634v2": {
+        "title": "Explaining Concept Shift with Interpretable Feature Attribution",
+        "date": "2025-05-27",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2605.30292v1": {
+        "title": "Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series",
+        "date": "2026-05-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.29200v1": {
+        "title": "Approximating full conformal prediction: distribution free guarantees via the tournament correction",
+        "date": "2026-05-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.28920v1": {
+        "title": "Conf-Gen: Conformal Uncertainty Quantification for Generative Models",
+        "date": "2026-05-27",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

@@ -3,9 +3,46 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-05-28
+> 更新于: 2026-06-01
 
 ---
+### Explaining Concept Shift with Interpretable Feature Attribution 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-05-27
+- **链接**: [PDF](http://arxiv.org/abs/2505.20634v2)
+
+!!! note "AI 核心解读"
+
+    该论文将概念漂移下的性能退化归因问题转化为稀疏特征选择任务，并基于广义加性模型、knockoffs 和吸收统计量构造了评分函数，从而在统计上识别出导致标签条件分布变化的特征子集。理论性质方面，该方法在有限样本下能准确区分真正漂移特征与无关特征，且对复杂漂移模式具有统计鲁棒性。
+
+### Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-28
+- **链接**: [PDF](http://arxiv.org/abs/2605.30292v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种针对时间序列数据的“留窗法”（leave-a-window-out）对经典留一法进行修正，通过量化数据与循环可交换性之间的偏离程度并引入新的度量系数，在模型拟合满足温和稳定性条件下证明了预测区间的有效覆盖性。其核心创新在于构造了基于窗口剔除的评分函数，从理论上推导出该方法能克服传统留一法在弱时间依赖下覆盖度任意丢失的缺陷，同时避免了数据分割带来的效率损失。
+
+### Approximating full conformal prediction: distribution free guarantees via the tournament correction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-28
+- **链接**: [PDF](http://arxiv.org/abs/2605.29200v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于“锦标赛校正”的新型全共形预测近似框架，通过构造一个与原始评分函数耦合的校正项，在无需数据分割的条件下，严格证明了预测集边际覆盖率为 \(1-2\alpha\)，并在稳定性条件下将理论保证收紧至约 \(1-\alpha\)。其核心创新在于将留一交叉共形预测推广为更一般的评分函数构造范式，使得任意近似策略都能在统计推导上获得可验证的分布自由覆盖保证。
+
+### Conf-Gen: Conformal Uncertainty Quantification for Generative Models 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-27
+- **链接**: [PDF](http://arxiv.org/abs/2605.28920v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过放宽传统共形风险控制（CRC）的理论假设，将其推广至无监督生成模型，并构造了适用于生成任务的通用评分函数，从而在无需修改模型结构的前提下，为图像生成、对话系统及AI代理等场景提供了严格的统计不确定性量化保证。其核心创新在于统一并扩展了先前针对大语言模型的共形预测方法，并首次在理论上证明了生成模型输出在非记忆性、充分性与正确性等维度上的共形风险控制性质。
+
+
 ### Mean-Shift PCA by Knockoff Mean 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-05-25
