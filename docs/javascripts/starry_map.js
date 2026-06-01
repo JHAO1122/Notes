@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "AS-Ch10", label: isEn ? "10. MLE II" : "10.极大似然估计（二）", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/9MLE/" },
         { id: "AS-Ch11", label: isEn ? "11. M-Estimation and Z-Estimation I" : "11.M估计和Z估计 (一)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/10M&Z1/" },
         { id: "AS-Ch12", label: isEn ? "12. M-Estimation and Z-Estimation II" : "12.M估计和Z估计 (二)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/11M&Z2/" },
-        { id: "AS-Ch13", label: isEn ? "13.  U-Statistics I" : "13.U统计量(一)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/13U.md/" },
-        { id: "AS-Ch14", label: isEn ? "14.  U-Statistics II" : "14.U统计量(二)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/14U.md/" },
+        { id: "AS-Ch13", label: isEn ? "13.  U-Statistics I" : "13.U统计量(一)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/13U/" },
+        { id: "AS-Ch14", label: isEn ? "14.  U-Statistics II" : "14.U统计量(二)", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/14U/" },
         // 随机微分方程章节
         { id: "SDE-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/0Intro/" },
         { id: "SDE-Ch1", label: isEn ? "1. Cond Expectation" : "1.条件期望", parentId: "SDE", radius: 8, color: colors.analysisLeaf, url: "Stochastic-Differential-Equation/1conditional_expectation/" },
