@@ -1,0 +1,5268 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Functional_Analysis/10Open_Closed/">
+      
+      
+        <link rel="prev" href="../9Linear/">
+      
+      
+        <link rel="next" href="../../Topology/0Intro/">
+      
+      
+        
+          <link rel="alternate" href="../../../Functional_Analysis/10Open_Closed/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Ch 10: Open Mapping and Closed Graph Theorems - Jiahao's Academic Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-10-open-mapping-theorem-and-closed-graph-theorem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jiahao's Academic Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ch 10: Open Mapping and Closed Graph Theorems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="grey"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Functional_Analysis/10Open_Closed/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  📚 Course Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  🛠️ Quick Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+          
+  
+  
+  🛰️ Research Updates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Lectures/" class="md-tabs__link">
+          
+  
+  
+  🎙️ Lectures & Talks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+  ✍️ Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jiahao's Academic Space
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Course Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Course Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 Stochastic Differential Equations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📈 Stochastic Differential Equations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Brownian Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Stochastic Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Itô Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Multivariate Itô Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Existence & Uniqueness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Option Pricing and Stopping Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Asymptotic Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📊 Asymptotic Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic Statistics Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Stochastic Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Characteristic Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Central Limit Theorem I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Central Limit Theorem II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Weakly Dependent Data I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Weakly Dependent Data II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Delta Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/12ME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Method of Moments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/8MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Maximum Likelihood Estimation I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/9MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Maximum Likelihood Estimation II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/10M%26Z1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: M-Estimation and Z-Estimation I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/11M%26Z2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: M-Estimation and Z-Estimation II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/13U/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: U-Statistics I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/14U/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 14: U-Statistics II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌌 Functional Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌌 Functional Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Analysis Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1distance_space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Distance Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Topology and Completeness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4CMT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Contraction Mapping Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Normed Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Banach Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Hilbert Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Hilbert Space Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Linear Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Open Mapping and Closed Graph Theorems
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Open Mapping and Closed Graph Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-strong-convergence-and-algebraic-operations-of-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Strong Convergence and Algebraic Operations of Operators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Strong Convergence and Algebraic Operations of Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-strong-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Strong Convergence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-multiplication-of-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Multiplication of Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-normed-algebras-and-banach-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Normed Algebras and Banach Algebras
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-banach-open-mapping-theorem-and-inverse-operator-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Banach Open Mapping Theorem and Inverse Operator Theorem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Banach Open Mapping Theorem and Inverse Operator Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-banach-open-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Banach Open Mapping Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-corollary-of-the-open-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Corollary of the Open Mapping Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-inverse-operator-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Inverse Operator Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-norm-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Norm Equivalence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-graph-of-an-operator-and-the-closed-graph-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Graph of an Operator and the Closed Graph Theorem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Graph of an Operator and the Closed Graph Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-graph-of-an-operator-and-closed-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Graph of an Operator and Closed Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-closed-graph-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Closed Graph Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍩 Point Set Topology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🍩 Point Set Topology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Point Set Topology Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Set Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Functions and Relations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Countable Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Open Sets and Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Induced Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Continuity and Homeomorphisms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Connectedness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_56/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧱 Real Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧱 Real Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real Analysis Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/1_sigma_algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Sigma-Algebras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/2_outer_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Outer Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/3_ls_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Lebesgue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/4_measurable_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Measurable Functions I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/5_limits_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Measurable Functions II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/6_integration_construction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Construction of the Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/7_convergence_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Convergence Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/8_fubini_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Fubini's Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/9_hahn_jordan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Hahn-Jordan Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/10_radon_nikodym/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Radon-Nikodym Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/11_differentiation_ir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Fundamental Theorem of Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/12_lp_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: L^p Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/prob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎲 Probability Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📏 Measure Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/linalg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 Linear Algebra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stochastic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛰️ Research Updates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛰️ Research Updates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/arxiv_papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Latest Papers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎙️ Lectures & Talks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎙️ Lectures & Talks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ Fundamental Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🏛️ Fundamental Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Course_Lectures/LDP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Deviation Principle (LDP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Paper Discussions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📑 Paper Discussions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Group Meetings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Group Meetings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Group_Seminars/derandomized_knockoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derandomized Knockoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✍️ Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ✍️ Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍃 碎碎念（介绍）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 往期博文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📁 往期博文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    男人的一生只哭十一次
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    何时收敛
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/public/2026-5-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    被烫伤的孩子仍然爱火
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 🔵 红蓝温度
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔴 🔵 红蓝温度
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    序章:不只是一家俱乐部
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 羁绊
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔴 羁绊
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Follow/Blaugrana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polseres Blaugrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔵 溯源
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔵 溯源
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Trace/tito_messi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    百分百蒂托
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Trace/RL9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    了却君王天下事 赢得生前身后名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-strong-convergence-and-algebraic-operations-of-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Strong Convergence and Algebraic Operations of Operators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Strong Convergence and Algebraic Operations of Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-strong-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Strong Convergence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-multiplication-of-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Multiplication of Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-normed-algebras-and-banach-algebras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Normed Algebras and Banach Algebras
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-banach-open-mapping-theorem-and-inverse-operator-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Banach Open Mapping Theorem and Inverse Operator Theorem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Banach Open Mapping Theorem and Inverse Operator Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-banach-open-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Banach Open Mapping Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-corollary-of-the-open-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Corollary of the Open Mapping Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-inverse-operator-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Inverse Operator Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-norm-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Norm Equivalence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-graph-of-an-operator-and-the-closed-graph-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Graph of an Operator and the Closed Graph Theorem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Graph of an Operator and the Closed Graph Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-graph-of-an-operator-and-closed-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Graph of an Operator and Closed Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-closed-graph-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Closed Graph Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-10-open-mapping-theorem-and-closed-graph-theorem">Chapter 10: Open Mapping Theorem and Closed Graph Theorem</h1>
+<p>This part continues from the previous chapter, first introducing strong convergence of operators and algebraic operations, and then focusing on two of the three fundamental theorems of functional analysis: the <strong>Open Mapping Theorem</strong> and the <strong>Closed Graph Theorem</strong>.</p>
+<hr />
+<h2 id="1-strong-convergence-and-algebraic-operations-of-operators">1. Strong Convergence and Algebraic Operations of Operators</h2>
+<h3 id="11-strong-convergence">1.1 Strong Convergence</h3>
+<p>In addition to convergence in operator norm (uniform operator topology), there is another common mode of convergence for sequences of operators, namely pointwise convergence at each point.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.1 (Strong Convergence)</p>
+<p>Let <span class="arithmatex">\(T, T_n \in \mathbb{B}(E, E_1)\)</span>. If for every <span class="arithmatex">\(x \in E\)</span>, we have:</p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow \infty} \|Tx - T_nx\| = 0
+\]</div>
+<p>then <span class="arithmatex">\(\{T_n\}\)</span> is said to converge <strong>strongly</strong> to <span class="arithmatex">\(T\)</span>, or <span class="arithmatex">\(\{T_n\}\)</span> converges to <span class="arithmatex">\(T\)</span> in the <strong>strong operator topology</strong>. It is denoted as:</p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow \infty} T_n = T \text{ (strongly)}
+\]</div>
+</div>
+<ul>
+<li>
+<p><strong>Relationship between strong convergence and uniform convergence</strong>: Any sequence of operators that converges in operator norm to some operator necessarily converges strongly to the same operator. Because:</p>
+<div class="arithmatex">\[
+\|Tx - T_nx\| \le \|T - T_n\|\|x\| \rightarrow 0
+\]</div>
+<p>The converse does not hold. For example, the truncation shift operators <span class="arithmatex">\(T_n\)</span> on <span class="arithmatex">\(l^p\)</span> mentioned at the end of the previous chapter do not converge in operator norm to the zero operator, but they converge strongly to the zero operator, because for any <span class="arithmatex">\(x \in l^p\)</span>:</p>
+<div class="arithmatex">\[
+\|T_n x\|_p = \|x_n\|_p \rightarrow 0
+\]</div>
+</li>
+</ul>
+<hr />
+<h3 id="12-multiplication-of-operators">1.2 Multiplication of Operators</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.2 (Multiplication of Operators)</p>
+<p>Let <span class="arithmatex">\(E, E_1, E_2\)</span> be normed linear spaces, <span class="arithmatex">\(T_1 \in \mathbb{B}(E, E_1)\)</span>, <span class="arithmatex">\(T_2 \in \mathbb{B}(E_1, E_2)\)</span>. Define the product operator <span class="arithmatex">\(T_2 T_1\)</span> of <span class="arithmatex">\(T_1\)</span> and <span class="arithmatex">\(T_2\)</span> as follows:</p>
+<div class="arithmatex">\[
+(T_2 T_1)x = T_2(T_1 x)
+\]</div>
+</div>
+<p>Multiplication of operators satisfies the following algebraic properties:</p>
+<ul>
+<li><strong>Associativity</strong>: <span class="arithmatex">\(T_3(T_2 T_1) = (T_3 T_2)T_1\)</span>, where <span class="arithmatex">\(T_3 \in \mathbb{B}(E_2, E_3)\)</span>.
+  <em>Proof</em>: Take any <span class="arithmatex">\(x \in E\)</span>, then
+  <span class="arithmatex">\((T_3(T_2 T_1))x = T_3((T_2 T_1)x) = T_3(T_2(T_1 x)) = (T_3 T_2)(T_1 x) = ((T_3 T_2)T_1)x\)</span></li>
+<li><strong>Scalar multiplication associativity</strong>: <span class="arithmatex">\((\alpha T_2)T_1 = \alpha(T_2 T_1)\)</span> and <span class="arithmatex">\(T_2(\alpha T_1) = \alpha(T_2 T_1)\)</span>.</li>
+<li><strong>Distributivity</strong>: <span class="arithmatex">\(T_2(T_1 + T_1') = T_2 T_1 + T_2 T_1'\)</span> and <span class="arithmatex">\((T_2 + T_2')T_1 = T_2 T_1 + T_2' T_1\)</span>.</li>
+<li><strong>Boundedness</strong>: <span class="arithmatex">\(T_2 T_1 \in \mathbb{B}(E, E_2)\)</span>, and <span class="arithmatex">\(\|T_2 T_1\| \le \|T_2\|\|T_1\|\)</span>.
+  <em>Proof</em>: Take any <span class="arithmatex">\(x \in E\)</span>, then
+  <span class="arithmatex">\(\|(T_2 T_1)x\| = \|T_2(T_1 x)\| \le \|T_2\|\|T_1 x\| \le \|T_2\|\|T_1\|\|x\|\)</span></li>
+</ul>
+<p>If <span class="arithmatex">\(T_1, T_2 \in \mathbb{B}(E)\)</span>, then both <span class="arithmatex">\(T_2 T_1\)</span> and <span class="arithmatex">\(T_1 T_2\)</span> are well-defined. However, multiplication is generally <strong>non-commutative</strong>, i.e., <span class="arithmatex">\(T_2 T_1 \ne T_1 T_2\)</span>. If they are equal, then <span class="arithmatex">\(T_1, T_2\)</span> are said to commute.
+(Note: <span class="arithmatex">\(T^n\)</span> denotes the product of <span class="arithmatex">\(n\)</span> copies of <span class="arithmatex">\(T\)</span>, and <span class="arithmatex">\(T^0\)</span> denotes the identity operator <span class="arithmatex">\(I\)</span>.)</p>
+<p><strong>Example of non-commutativity</strong>:
+Let <span class="arithmatex">\(E = C[0,1]\)</span>, and consider the following two bounded linear operators:</p>
+<div class="arithmatex">\[
+(T_1 x)(t) = \int_0^t x(s) ds, \quad (T_2 x)(t) = t x(t)
+\]</div>
+<p>(<span class="arithmatex">\(T_1\)</span> is the Volterra integral operator, <span class="arithmatex">\(T_2\)</span> is the multiplication operator). Compute their products:</p>
+<div class="arithmatex">\[
+(T_2 T_1 x)(t) = t \int_0^t x(s) ds, \quad (T_1 T_2 x)(t) = \int_0^t s x(s) ds
+\]</div>
+<p>Take <span class="arithmatex">\(x_0 \equiv 1\)</span>, then:</p>
+<div class="arithmatex">\[
+(T_2 T_1 x_0)(t) = t^2 \ne \frac{t^2}{2} = (T_1 T_2 x_0)(t)
+\]</div>
+<p>Hence <span class="arithmatex">\(T_2 T_1 \ne T_1 T_2\)</span>.</p>
+<hr />
+<h3 id="13-normed-algebras-and-banach-algebras">1.3 Normed Algebras and Banach Algebras</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.3 (Normed Algebra)</p>
+<p>Let <span class="arithmatex">\(\mathscr{B}\)</span> be a non-empty set, with algebraic operations (linear operations and multiplication) defined on <span class="arithmatex">\(\mathscr{B}\)</span>, where multiplication is associative and distributive over addition. Additionally, a norm is defined, such that for any elements <span class="arithmatex">\(T_1, T_2\)</span> in <span class="arithmatex">\(\mathscr{B}\)</span>, we have:</p>
+<div class="arithmatex">\[
+\|T_2 T_1\| \le \|T_2\|\|T_1\|
+\]</div>
+<p>Then <span class="arithmatex">\(\mathscr{B}\)</span> is called a <strong>normed algebra</strong>. If it is also complete, it is called a <strong>Banach algebra</strong>.</p>
+</div>
+<p>For a normed linear space <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\mathbb{B}(E)\)</span> forms a normed algebra; if <span class="arithmatex">\(E\)</span> is complete (i.e., a Banach space), then <span class="arithmatex">\(\mathbb{B}(E)\)</span> is a Banach algebra.</p>
+<hr />
+<h2 id="2-banach-open-mapping-theorem-and-inverse-operator-theorem">2. Banach Open Mapping Theorem and Inverse Operator Theorem</h2>
+<h3 id="21-banach-open-mapping-theorem">2.1 Banach Open Mapping Theorem</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 10.1 (Banach Open Mapping Theorem)</p>
+<p>Let a bounded linear operator <span class="arithmatex">\(T\)</span> map a Banach space <span class="arithmatex">\(E\)</span> onto a set <span class="arithmatex">\(F\)</span> of the second category in a Banach space <span class="arithmatex">\(E_1\)</span>. Then the following conclusions hold:</p>
+<p>(i) <span class="arithmatex">\(F = E_1\)</span>, i.e., the range of the operator <span class="arithmatex">\(T\)</span> is the whole space <span class="arithmatex">\(E_1\)</span>;</p>
+<p>(ii) There exists a positive number <span class="arithmatex">\(K\)</span> such that for every <span class="arithmatex">\(y \in E_1\)</span>, there exists <span class="arithmatex">\(x \in E\)</span> with <span class="arithmatex">\(Tx = y\)</span> and <span class="arithmatex">\(\|x\| \le K\|Tx\|\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 10.1 (Click to Expand)</summary>
+<p>The proof is divided into four steps:</p>
+<p><strong>(i) Prove that the image is dense in some closed ball</strong>:
+Let <span class="arithmatex">\(O_n = \{x \in E : \|x\| \le n\}\)</span>, <span class="arithmatex">\(M_n = T(O_n)\)</span>, i.e., <span class="arithmatex">\(M_n\)</span> is the image of <span class="arithmatex">\(O_n\)</span>. Since <span class="arithmatex">\(E = \bigcup_{n=1}^\infty O_n\)</span>, we have <span class="arithmatex">\(F = \bigcup_{n=1}^\infty M_n\)</span>.
+Because <span class="arithmatex">\(F\)</span> is a set of the second category, by the Baire category theorem, there exists <span class="arithmatex">\(n_0\)</span> such that <span class="arithmatex">\(M_{n_0}\)</span> is not nowhere dense. Hence there exists a closed ball in <span class="arithmatex">\(E_1\)</span>:</p>
+<div class="arithmatex">\[
+Q(y_0, r_0) := \{y \in E_1 : \|y - y_0\| \le r_0\}
+\]</div>
+<p>such that <span class="arithmatex">\(M_{n_0} = T(O_{n_0})\)</span> is dense in <span class="arithmatex">\(Q(y_0, r_0)\)</span>.</p>
+<p><strong>(ii) Prove that <span class="arithmatex">\(M_1 = T(O_1)\)</span> is dense in the ball <span class="arithmatex">\(Q_{\delta_0}\)</span> centered at the origin</strong>:
+Let <span class="arithmatex">\(\delta_0 = \frac{r_0}{n_0}\)</span>; define the ball centered at the origin in <span class="arithmatex">\(E_1\)</span>: <span class="arithmatex">\(Q_{\delta_0} := Q(\theta, \delta_0) = \{y \in E_1 : \|y\| \le \delta_0\}\)</span>.
+Take any <span class="arithmatex">\(y \in Q_{\delta_0}\)</span>, then <span class="arithmatex">\(y_0 \pm n_0 y \in Q(y_0, r_0)\)</span>. Hence there exist sequences <span class="arithmatex">\(\{x_k\}\)</span> and <span class="arithmatex">\(\{x_k'\}\)</span> in <span class="arithmatex">\(O_{n_0}\)</span> such that:</p>
+<div class="arithmatex">\[
+Tx_k \rightarrow y_0 + n_0 y, \quad Tx_k' \rightarrow y_0 - n_0 y
+\]</div>
+<p>Then <span class="arithmatex">\(T(x_k - x_k') \rightarrow 2n_0 y\)</span>, i.e.,</p>
+<div class="arithmatex">\[
+M_1 \ni T\left(\frac{x_k - x_k'}{2n_0}\right) \rightarrow y
+\]</div>
+<p>because <span class="arithmatex">\(\frac{x_k - x_k'}{2n_0} \in O_1\)</span> (norm does not exceed <span class="arithmatex">\(\frac{2n_0}{2n_0} = 1\)</span>). This shows that <span class="arithmatex">\(M_1\)</span> is dense in <span class="arithmatex">\(Q_{\delta_0}\)</span>.</p>
+<p><strong>(iii) Prove that <span class="arithmatex">\(M_1 \supseteq Q_{\delta_0/2}\)</span></strong>:
+Denote <span class="arithmatex">\(O_{1/2^n} = \{x \in E : \|x\| \le 1/2^n\}\)</span>, <span class="arithmatex">\(Q_{\delta_0/2^n} = \{y \in E_1 : \|y\| \le \delta_0/2^n\}\)</span>.
+By scaling from step (ii), <span class="arithmatex">\(T(O_{1/2^n})\)</span> is dense in <span class="arithmatex">\(Q_{\delta_0/2^n}\)</span>.
+Take any <span class="arithmatex">\(y \in Q_{\delta_0/2}\)</span>. Since <span class="arithmatex">\(T(O_{1/2})\)</span> is dense, there exists <span class="arithmatex">\(x_1 \in O_{1/2}\)</span> such that:</p>
+<div class="arithmatex">\[
+\|y - Tx_1\| \le \frac{\delta_0}{2^2}
+\]</div>
+<p>i.e., <span class="arithmatex">\(y - Tx_1 \in Q_{\delta_0/2^2}\)</span>. Since <span class="arithmatex">\(T(O_{1/2^2})\)</span> is dense in this ball, there exists <span class="arithmatex">\(x_2 \in O_{1/2^2}\)</span> such that:</p>
+<div class="arithmatex">\[
+\|y - Tx_1 - Tx_2\| \le \frac{\delta_0}{2^3}
+\]</div>
+<p>By induction, we can prove that there exists a sequence <span class="arithmatex">\(x_n \in O_{1/2^n}\)</span> such that:</p>
+<div class="arithmatex">\[
+\|y - T(x_1 + x_2 + \dots + x_n)\| \le \frac{\delta_0}{2^{n+1}}
+\]</div>
+<p>Since <span class="arithmatex">\(E\)</span> is a Banach space, the series <span class="arithmatex">\(x = \sum_{n=1}^\infty x_n\)</span> converges in <span class="arithmatex">\(E\)</span>:</p>
+<div class="arithmatex">\[
+\|x\| \le \sum_{n=1}^\infty \|x_n\| \le \sum_{n=1}^\infty \frac{1}{2^n} = 1
+\]</div>
+<p>Hence <span class="arithmatex">\(x \in O_1\)</span>, and by continuity of the operator, <span class="arithmatex">\(Tx = y\)</span>. Therefore <span class="arithmatex">\(M_1 = T(O_1) \supseteq Q_{\delta_0/2}\)</span>.</p>
+<p><strong>(iv) Prove the conclusions of the theorem</strong>:
+Take any <span class="arithmatex">\(y \in E_1, y \ne \theta\)</span>. Let <span class="arithmatex">\(y' = \frac{\delta_0}{2} \frac{y}{\|y\|} \in Q_{\delta_0/2}\)</span>.
+By (iii), there exists <span class="arithmatex">\(x' \in O_1\)</span> such that <span class="arithmatex">\(Tx' = y'\)</span>. Let <span class="arithmatex">\(x = \frac{2\|y\|}{\delta_0} x'\)</span>, then:</p>
+<div class="arithmatex">\[
+Tx = y
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\|x\| = \frac{2\|y\|}{\delta_0} \|x'\| \le \frac{2\|y\|}{\delta_0} = \frac{2}{\delta_0} \|Tx\|
+\]</div>
+<p>Thus we have proven <span class="arithmatex">\(F = E_1\)</span>, and taking <span class="arithmatex">\(K = \frac{2}{\delta_0}\)</span> satisfies condition (ii) of the theorem. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h3 id="22-corollary-of-the-open-mapping-theorem">2.2 Corollary of the Open Mapping Theorem</h3>
+<div class="admonition success">
+<p class="admonition-title">Corollary 10.2 (Open Mapping)</p>
+<p>Suppose a bounded linear operator <span class="arithmatex">\(T\)</span> satisfies the conditions of the above theorem. Then <span class="arithmatex">\(T\)</span> maps every <strong>open set</strong> in <span class="arithmatex">\(E\)</span> to an <strong>open set</strong> in <span class="arithmatex">\(E_1\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of Corollary 10.2 (Click to Expand)</summary>
+<p>From step (iii) of the proof of the Banach Open Mapping Theorem, we have <span class="arithmatex">\(T(O_1) \supseteq Q_{\delta_0/2}\)</span>. By linear scaling, for any <span class="arithmatex">\(n\)</span>, we have:</p>
+<div class="arithmatex">\[
+T(O_{1/2^n}) \supseteq Q_{\delta_0/2^{n+1}}
+\]</div>
+<p>Now let <span class="arithmatex">\(G \subset E\)</span> be an open set. Take any <span class="arithmatex">\(y \in T(G)\)</span>, then there exists <span class="arithmatex">\(x \in G\)</span> such that <span class="arithmatex">\(Tx = y\)</span>. Since <span class="arithmatex">\(G\)</span> is open, <span class="arithmatex">\(x\)</span> is an interior point of <span class="arithmatex">\(G\)</span>, so there exists <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(x + O_{1/2^n} \subset G\)</span>. Then:</p>
+<div class="arithmatex">\[
+y + T(O_{1/2^n}) \subset T(G)
+\]</div>
+<p>Note that <span class="arithmatex">\(Q_{\delta_0/2^{n+1}} \subseteq T(O_{1/2^n})\)</span>, therefore:</p>
+<div class="arithmatex">\[
+y + Q_{\delta_0/2^{n+1}} \subset T(x + O_{1/2^n}) \subset T(G)
+\]</div>
+<p>This shows that <span class="arithmatex">\(y\)</span> is an interior point of <span class="arithmatex">\(T(G)\)</span>, hence <span class="arithmatex">\(T(G)\)</span> is open. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p><em>Note: Another corollary is that the range of a bounded linear operator <span class="arithmatex">\(T: E \rightarrow E_1\)</span> is either the whole <span class="arithmatex">\(E_1\)</span> or a set of the first category in <span class="arithmatex">\(E_1\)</span>; one of the two must hold.</em></p>
+<hr />
+<h3 id="23-inverse-operator-theorem">2.3 Inverse Operator Theorem</h3>
+<p>If <span class="arithmatex">\(T\)</span> is bijective (injective and surjective), then the inverse mapping <span class="arithmatex">\(T^{-1}\)</span> of <span class="arithmatex">\(T\)</span> exists, called the <strong>inverse operator</strong> of <span class="arithmatex">\(T\)</span>. The following theorem provides an important condition for the boundedness of the inverse operator.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 10.3 (Inverse Operator Theorem)</p>
+<p>Let a bounded linear operator <span class="arithmatex">\(T\)</span> map a Banach space <span class="arithmatex">\(E\)</span> onto a set of the second category in a Banach space <span class="arithmatex">\(E_1\)</span>, and let <span class="arithmatex">\(T\)</span> be injective. Then <span class="arithmatex">\(T\)</span> possesses a <strong>bounded</strong> inverse operator.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 10.3 (Click to Expand)</summary>
+<p>By the Banach Open Mapping Theorem, since the image is a set of the second category, the range of <span class="arithmatex">\(T\)</span> must be the whole space <span class="arithmatex">\(E_1\)</span>.
+By assumption, <span class="arithmatex">\(T\)</span> is injective, so <span class="arithmatex">\(T\)</span> is bijective, and its inverse operator <span class="arithmatex">\(T^{-1}\)</span> exists.</p>
+<p>Write <span class="arithmatex">\(x = T^{-1}y\)</span>. From conclusion (ii) of the Open Mapping Theorem, there exists <span class="arithmatex">\(K\)</span> such that:</p>
+<div class="arithmatex">\[
+\|x\| \le K\|Tx\|
+\]</div>
+<p>Substituting <span class="arithmatex">\(y\)</span>, we get:</p>
+<div class="arithmatex">\[
+\|T^{-1}y\| = \|x\| \le K\|Tx\| = K\|y\|
+\]</div>
+<p>This directly proves that <span class="arithmatex">\(T^{-1}\)</span> is bounded. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="3-norm-equivalence">3. Norm Equivalence</h2>
+<p>In normed spaces, studying the equivalence between different norms is crucial for understanding the topological structure of the space.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.4 (Norm Equivalence)</p>
+<p>Let <span class="arithmatex">\(E\)</span> be a linear space, and <span class="arithmatex">\(\|\cdot\|_1\)</span> and <span class="arithmatex">\(\|\cdot\|_2\)</span> be two norms defined on <span class="arithmatex">\(E\)</span>. If there exist positive numbers <span class="arithmatex">\(K_1, K_2\)</span> such that the inequality:</p>
+<div class="arithmatex">\[
+K_1\|x\|_1 \le \|x\|_2 \le K_2\|x\|_1
+\]</div>
+<p>holds for all <span class="arithmatex">\(x \in E\)</span>, then the norms <span class="arithmatex">\(\|\cdot\|_1\)</span> and <span class="arithmatex">\(\|\cdot\|_2\)</span> are said to be <strong>equivalent</strong>. Equivalent norms induce completely isomorphic topological structures.</p>
+</div>
+<p>Using the Inverse Operator Theorem, we can obtain a very strong conclusion on Banach spaces:</p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 10.4</p>
+<p>Let <span class="arithmatex">\((E, \|\cdot\|_1)\)</span> and <span class="arithmatex">\((E, \|\cdot\|_2)\)</span> both be Banach spaces. If there exists a positive number <span class="arithmatex">\(K\)</span> such that for all <span class="arithmatex">\(x \in E\)</span>:</p>
+<div class="arithmatex">\[
+\|x\|_2 \le K\|x\|_1
+\]</div>
+<p>then the two norms are equivalent, and hence the topologies are isomorphic.</p>
+</div>
+<details class="proof">
+<summary>Proof of Corollary 10.4 (Click to Expand)</summary>
+<p>Let <span class="arithmatex">\(I\)</span> be the identity operator on <span class="arithmatex">\(E\)</span>, which can be viewed as an operator from the Banach space <span class="arithmatex">\((E, \|\cdot\|_1)\)</span> onto the Banach space <span class="arithmatex">\((E, \|\cdot\|_2)\)</span>. Clearly <span class="arithmatex">\(I\)</span> is bijective.</p>
+<p>From the inequality <span class="arithmatex">\(\|Ix\|_2 = \|x\|_2 \le K\|x\|_1\)</span>, we see that the operator <span class="arithmatex">\(I\)</span> is bounded (continuous).</p>
+<p>By the <strong>Inverse Operator Theorem</strong>, the inverse operator <span class="arithmatex">\(I^{-1}\)</span> of <span class="arithmatex">\(I\)</span> is also bounded. That is, there exists <span class="arithmatex">\(K' &gt; 0\)</span> such that:</p>
+<div class="arithmatex">\[
+\|x\|_1 = \|I^{-1}x\|_1 \le K'\|x\|_2
+\]</div>
+<p>Combining the two inequalities, the norms <span class="arithmatex">\(\|\cdot\|_1\)</span> and <span class="arithmatex">\(\|\cdot\|_2\)</span> are equivalent. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="4-graph-of-an-operator-and-the-closed-graph-theorem">4. Graph of an Operator and the Closed Graph Theorem</h2>
+<h3 id="41-graph-of-an-operator-and-closed-operators">4.1 Graph of an Operator and Closed Operators</h3>
+<p>In mathematical analysis, the graph of a unary function <span class="arithmatex">\(y = f(x)\)</span> is a curve in the plane consisting of points <span class="arithmatex">\((x, f(x))\)</span>. For general linear operators, we can also introduce the graph.</p>
+<p>Let <span class="arithmatex">\(E, E_1\)</span> be normed linear spaces. Form the direct sum <span class="arithmatex">\(E \oplus E_1\)</span>, and define the norm:</p>
+<div class="arithmatex">\[
+\|(x, y)\| = \|x\| + \|y\|
+\]</div>
+<p>It is easy to verify that <span class="arithmatex">\(E \oplus E_1\)</span> is a normed linear space with this norm (if both spaces are complete, then it is also a Banach space).</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.5 (Closed Operator)</p>
+<p>Let <span class="arithmatex">\(T\)</span> be a linear operator defined on a subspace <span class="arithmatex">\(D\)</span> of <span class="arithmatex">\(E\)</span> with range contained in <span class="arithmatex">\(E_1\)</span>. The set of all elements of the form <span class="arithmatex">\((x, Tx)\)</span> (<span class="arithmatex">\(x \in D\)</span>) in <span class="arithmatex">\(E \oplus E_1\)</span> is called the <strong>graph</strong> of <span class="arithmatex">\(T\)</span>, denoted by <span class="arithmatex">\(G_T\)</span>.</p>
+<p>If the graph <span class="arithmatex">\(G_T\)</span> of <span class="arithmatex">\(T\)</span> is a <strong>closed subspace</strong> of <span class="arithmatex">\(E \oplus E_1\)</span>, then <span class="arithmatex">\(T\)</span> is called a <strong>closed linear operator</strong> or <strong>closed operator</strong>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Property 10.5 (Equivalent Characterization of Closed Operators)</p>
+<p><span class="arithmatex">\(T\)</span> is a closed operator if and only if for any sequence <span class="arithmatex">\(\{x_n\} \in D\)</span>, if <span class="arithmatex">\(\{x_n\}\)</span> and <span class="arithmatex">\(\{Tx_n\}\)</span> converge in <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(E_1\)</span> respectively to <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, then necessarily <span class="arithmatex">\(x \in D\)</span> and <span class="arithmatex">\(Tx = y\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of Property 10.5 (Click to Expand)</summary>
+<p><strong>Sufficiency</strong>: Take any <span class="arithmatex">\((x,y) \in \overline{G_T}\)</span>. Then there exists <span class="arithmatex">\(\{x_n\} \in D\)</span> such that <span class="arithmatex">\((x_n, Tx_n) \rightarrow (x, y)\)</span>, i.e.,</p>
+<div class="arithmatex">\[
+\|(x_n, Tx_n) - (x,y)\| = \|x_n - x\| + \|Tx_n - y\| \rightarrow 0
+\]</div>
+<p>Hence <span class="arithmatex">\(x_n \rightarrow x\)</span> and <span class="arithmatex">\(Tx_n \rightarrow y\)</span>. By assumption, we have <span class="arithmatex">\(x \in D\)</span> and <span class="arithmatex">\(Tx = y\)</span>, so <span class="arithmatex">\((x,y) = (x, Tx) \in G_T\)</span>. Therefore <span class="arithmatex">\(G_T = \overline{G_T}\)</span>, and <span class="arithmatex">\(T\)</span> is closed.</p>
+<p><strong>Necessity</strong>: Let <span class="arithmatex">\(\{x_n\} \in D\)</span>, and suppose <span class="arithmatex">\(x_n \rightarrow x\)</span>, <span class="arithmatex">\(Tx_n \rightarrow y\)</span>. Then <span class="arithmatex">\(\|(x_n, Tx_n) - (x,y)\| \rightarrow 0\)</span>. Since <span class="arithmatex">\(G_T\)</span> is closed, the limit must belong to <span class="arithmatex">\(G_T\)</span>, i.e., <span class="arithmatex">\((x, y) \in G_T\)</span>. This implies <span class="arithmatex">\(x \in D\)</span> and <span class="arithmatex">\(Tx = y\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p><strong>Example: The differential operator is an unbounded closed operator</strong></p>
+<p>The domain of the differential operator <span class="arithmatex">\(T = \frac{d}{dt}\)</span> is the set <span class="arithmatex">\(C^1[a,b]\)</span> of functions in <span class="arithmatex">\(C[a,b]\)</span> that have continuous derivatives.
+If <span class="arithmatex">\(\{x_n\} \in C^1[a,b]\)</span>, and in <span class="arithmatex">\(C[a,b]\)</span> we have <span class="arithmatex">\(x_n \rightarrow x\)</span> and <span class="arithmatex">\(Tx_n \rightarrow y\)</span>. That is, the sequence of functions <span class="arithmatex">\(x_n(t)\)</span> and their derivatives <span class="arithmatex">\(x_n'(t)\)</span> converge <strong>uniformly</strong> to <span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(y(t)\)</span>, respectively.</p>
+<p>By a classical theorem in mathematical analysis, the limit function <span class="arithmatex">\(x(t)\)</span> must have a continuous derivative, and <span class="arithmatex">\(x'(t) = y(t)\)</span>.
+Hence <span class="arithmatex">\(x \in C^1[a,b]\)</span>, and <span class="arithmatex">\(Tx = y\)</span>. Therefore <span class="arithmatex">\(T\)</span> is a closed operator. We have already proven earlier that it is unbounded.</p>
+<hr />
+<h3 id="42-closed-graph-theorem">4.2 Closed Graph Theorem</h3>
+<p>A closed operator is not necessarily bounded, but if its domain is the whole Banach space, then it must be bounded. This leads to the <strong>Closed Graph Theorem</strong> in functional analysis.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 10.6 (Closed Graph Theorem)</p>
+<p>Let <span class="arithmatex">\(T\)</span> be a linear operator mapping a Banach space <span class="arithmatex">\(E\)</span> into a Banach space <span class="arithmatex">\(E_1\)</span> (note that the domain is the whole space <span class="arithmatex">\(E\)</span>). Then <span class="arithmatex">\(T\)</span> is <strong>bounded</strong> if and only if <span class="arithmatex">\(T\)</span> is a <strong>closed operator</strong>.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 10.6 (Click to Expand)</summary>
+<p><strong>Necessity</strong>: Suppose <span class="arithmatex">\(T\)</span> is bounded. Take any <span class="arithmatex">\((x,y) \in \overline{G_T}\)</span>. Then there exists <span class="arithmatex">\(\{x_n\} \in E\)</span> such that <span class="arithmatex">\((x_n, Tx_n) \rightarrow (x, y)\)</span>, i.e.,</p>
+<div class="arithmatex">\[
+x_n \rightarrow x, \quad Tx_n \rightarrow y
+\]</div>
+<p>Since <span class="arithmatex">\(T\)</span> is bounded (hence continuous), we have <span class="arithmatex">\(Tx_n \rightarrow Tx\)</span>. By uniqueness of the limit, we must have <span class="arithmatex">\(y = Tx\)</span>. Thus <span class="arithmatex">\((x,y) \in G_T\)</span>. This shows that <span class="arithmatex">\(G_T\)</span> is closed, i.e., <span class="arithmatex">\(T\)</span> is a closed operator.</p>
+<p><strong>Sufficiency</strong>: Suppose <span class="arithmatex">\(T\)</span> is a closed operator. Then <span class="arithmatex">\(G_T\)</span> is a closed subspace of <span class="arithmatex">\(E \oplus E_1\)</span>. Since <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(E_1\)</span> are Banach spaces, <span class="arithmatex">\(E \oplus E_1\)</span> is also a Banach space, and its closed subspace <span class="arithmatex">\(G_T\)</span> is likewise a Banach space.</p>
+<p>Define an operator <span class="arithmatex">\(\tilde{T}\)</span> from <span class="arithmatex">\(G_T\)</span> onto <span class="arithmatex">\(E\)</span> by projection:</p>
+<div class="arithmatex">\[
+\tilde{T}(x, Tx) = x
+\]</div>
+<p>Clearly <span class="arithmatex">\(\tilde{T}\)</span> is linear. Since the domain is the whole space <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\tilde{T}\)</span> is surjective.
+If <span class="arithmatex">\(\tilde{T}(x, Tx) = \theta\)</span>, then <span class="arithmatex">\(x = \theta\)</span>, so <span class="arithmatex">\(Tx = \theta\)</span>. That is, <span class="arithmatex">\((x, Tx) = (\theta, \theta)\)</span>, hence <span class="arithmatex">\(\tilde{T}\)</span> is injective. In summary, <span class="arithmatex">\(\tilde{T}\)</span> is bijective.</p>
+<p>Now check its boundedness:</p>
+<div class="arithmatex">\[
+\|\tilde{T}(x, Tx)\| = \|x\| \le \|x\| + \|Tx\| = \|(x, Tx)\|
+\]</div>
+<p>This shows that <span class="arithmatex">\(\tilde{T}\)</span> is a bounded linear bijection. By the <strong>Inverse Operator Theorem</strong>, <span class="arithmatex">\(\tilde{T}\)</span> has a bounded inverse operator <span class="arithmatex">\(\tilde{T}^{-1}\)</span>.</p>
+<p>For any <span class="arithmatex">\(x \in E\)</span>, since <span class="arithmatex">\((x, Tx) = \tilde{T}^{-1}(x)\)</span>, we have:</p>
+<div class="arithmatex">\[
+\|(x, Tx)\| \le \|\tilde{T}^{-1}\|\|x\|
+\]</div>
+<p>Because <span class="arithmatex">\(\|Tx\| \le \|x\| + \|Tx\| = \|(x, Tx)\|\)</span>, we further obtain:</p>
+<div class="arithmatex">\[
+\|Tx\| \le \|\tilde{T}^{-1}\|\|x\|
+\]</div>
+<p>This proves that the original operator <span class="arithmatex">\(T\)</span> is bounded. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p><strong>Significance of the Closed Graph Theorem</strong>: It transforms the problem of determining whether a linear operator defined on a Banach space is bounded into the problem of determining whether the operator is closed. In practice, verifying the condition <span class="arithmatex">\(x_n \rightarrow x\)</span> and <span class="arithmatex">\(Tx_n \rightarrow y \implies Tx = y\)</span> is often much more convenient than directly proving boundedness. However, it must be noted that the premise is that the domain of the operator must be the complete whole space.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+
+  <h2 id="__comments">💬 Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="JHAO1122/Notes"
+        data-repo-id="R_kgDORuXyyw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORuXyy84C6uAS"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/security.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../../javascripts/starry_map.js"></script>
+      
+    
+  </body>
+</html>

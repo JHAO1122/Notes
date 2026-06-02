@@ -1,0 +1,5378 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/Functional_Analysis/9Linear/">
+      
+      
+        <link rel="prev" href="../8Hilbert/">
+      
+      
+        <link rel="next" href="../10Open_Closed/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/Functional_Analysis/9Linear/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第九章：线性算子 - Jiahao's Academic Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jiahao's Academic Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第九章：线性算子
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="grey"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/Functional_Analysis/9Linear/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  📚 笔记库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  🛠️ 知识速查
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+          
+  
+  
+  🛰️ 前沿追踪
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Lectures/" class="md-tabs__link">
+          
+  
+  
+  🎙️ 讲座与报告
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+  ✍️ 随笔
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jiahao's Academic Space
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jhao1122/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 笔记库
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 笔记库
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 随机微分方程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📈 随机微分方程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    随机微分方程课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：条件期望
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：Itô 积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：多元 Itô 积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：解的存在唯一性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：期权定价与停时
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 习题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 习题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 渐近统计
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📊 渐近统计
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    渐近统计课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：随机收敛
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：特征函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：中心极限定理（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：中心极限定理（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：弱相依数据（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：弱相依数据（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章： Delta 方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/12ME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：矩估计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/8MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：极大似然估计（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/9MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：极大似然估计（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/10M%26Z1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十一章： M估计和Z估计 (一)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/11M%26Z2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十二章： M估计和Z估计 (二)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/13U/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十三章： U统计量(一)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/14U/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十四章： U统计量(二)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 习题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 习题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌌 泛函分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌌 泛函分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    泛函分析课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1distance_space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：度量空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：拓扑与完备性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：紧性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4CMT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：压缩映射定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：赋范线性空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：巴拿赫空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：希尔伯特空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：希尔伯特空间理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：线性算子
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：线性算子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 有界线性算子的基本概念与性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 有界线性算子的基本概念与性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 线性算子的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 连续与有界线性算子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 无界算子的典型示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 线性算子有界性与连续性的等价关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 有界线性算子的范数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 算子范数的计算示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 线性算子空间
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 线性算子空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mathbbbe-e_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 \(\mathbb{B}(E, E_1)\) 空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 按算子范数收敛 (一致算子拓扑)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mathbbbe-e_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 \(\mathbb{B}(E, E_1)\) 空间的完备性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 不按算子范数收敛的例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10Open_Closed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：开映射与闭图定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍩 点集拓扑
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🍩 点集拓扑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    点集拓扑课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：集合论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：函数与关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：可数集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：开集与拓扑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：诱导拓扑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：连续与同胚
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：连通性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：紧性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 习题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 习题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_56/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧱 实分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧱 实分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实分析课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/1_sigma_algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：sigma-代数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/2_outer_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：外测度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/3_ls_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：Lebesgue测度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/4_measurable_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：可测函数（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/5_limits_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：可测函数（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/6_integration_construction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：积分构造
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/7_convergence_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：收敛定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/8_fubini_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：Fubini定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/9_hahn_jordan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：Hahn-Jordan分解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/10_radon_nikodym/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：Radon-Nikodym定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/11_differentiation_ir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十一章：微积分基本定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/12_lp_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十二章：L^p空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ 知识速查
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ 知识速查
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ 速查
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ 速查
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 数理统计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/prob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎲 概率论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📏 测度论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/linalg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 线性代数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stochastic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 随机过程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛰️ 前沿追踪
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛰️ 前沿追踪
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/arxiv_papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 最新论文
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎙️ 讲座与报告
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎙️ 讲座与报告
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ 基础理论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🏛️ 基础理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025秋季高等概率论讨论班
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025秋季高等概率论讨论班
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Course_Lectures/LDP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大偏差原理 (LDP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 文献研讨
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📑 文献研讨
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025秋季组会
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025秋季组会
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Group_Seminars/derandomized_knockoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derandomized Knockoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✍️ 随笔
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ✍️ 随笔
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍃 碎碎念（介绍）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📁 往期博文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📁 往期博文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    男人的一生只哭十一次
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/private/2026-4-23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    何时收敛
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/public/2026-5-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    被烫伤的孩子仍然爱火
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 🔵 红蓝温度
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔴 🔵 红蓝温度
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    序章:不只是一家俱乐部
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔴 羁绊
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔴 羁绊
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Follow/Blaugrana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polseres Blaugrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔵 溯源
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔵 溯源
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Trace/tito_messi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    百分百蒂托
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/Barca/Trace/RL9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    了却君王天下事 赢得生前身后名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 有界线性算子的基本概念与性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 有界线性算子的基本概念与性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 线性算子的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 连续与有界线性算子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 无界算子的典型示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 线性算子有界性与连续性的等价关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 有界线性算子的范数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 算子范数的计算示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 线性算子空间
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 线性算子空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mathbbbe-e_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 \(\mathbb{B}(E, E_1)\) 空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 按算子范数收敛 (一致算子拓扑)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mathbbbe-e_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 \(\mathbb{B}(E, E_1)\) 空间的完备性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 不按算子范数收敛的例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="_1">第九章：线性算子</h1>
+<p>本章我们将深入探讨泛函分析中的核心对象——线性算子。这部分内容将涵盖有界线性算子的基本概念、性质，以及线性算子空间的完备性结构。</p>
+<hr />
+<h2 id="1">1. 有界线性算子的基本概念与性质</h2>
+<h3 id="11">1.1 线性算子的定义</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 9.1 (线性算子)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是实（或复）的线性空间，<span class="arithmatex">\(T\)</span> 是由 <span class="arithmatex">\(E\)</span> 的某个子空间 <span class="arithmatex">\(D\)</span> 到线性空间 <span class="arithmatex">\(E_1\)</span> 中的映射。</p>
+<p>如果对任意的 <span class="arithmatex">\(x, y \in D\)</span>，有：</p>
+<div class="arithmatex">\[
+T(x+y) = T(x) + T(y)
+\]</div>
+<p>则称 <span class="arithmatex">\(T\)</span> 是<strong>可加的</strong>。</p>
+<p>若对任意的实（或复）数 <span class="arithmatex">\(a\)</span> 及任意的 <span class="arithmatex">\(x \in D\)</span>，有：</p>
+<div class="arithmatex">\[
+T(ax) = aT(x)
+\]</div>
+<p>则称 <span class="arithmatex">\(T\)</span> 是<strong>齐次的</strong>。</p>
+<p>既满足可加性又满足齐次性的映射称为<strong>线性映射</strong>或<strong>线性算子</strong>。</p>
+</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(D\)</span> 称为 <span class="arithmatex">\(T\)</span> 的定义域，通常记为 <span class="arithmatex">\(D_T\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(T(D)\)</span> 称为 <span class="arithmatex">\(T\)</span> 的值域，通常记为 <span class="arithmatex">\(T(D_T)\)</span>。</p>
+</li>
+<li>
+<p><span class="arithmatex">\(D\)</span> 中使 <span class="arithmatex">\(Tx = \theta\)</span> 的元素的集合称为 <span class="arithmatex">\(T\)</span> 的<strong>零空间</strong>，常用 <span class="arithmatex">\(N_T\)</span> 或类似记号表示。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(E_1\)</span> 是实（或复）数域，于是 <span class="arithmatex">\(T\)</span> 成为由 <span class="arithmatex">\(D\)</span> 到实（或复）数域的算子。这时称 <span class="arithmatex">\(T\)</span> 为<strong>泛函</strong>。如果 <span class="arithmatex">\(T\)</span> 还是线性的，则称 <span class="arithmatex">\(T\)</span> 为<strong>线性泛函</strong>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="12">1.2 连续与有界线性算子</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 9.2 (连续与有界线性算子)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是实（或复）的赋范线性空间，<span class="arithmatex">\(T\)</span> 是由 <span class="arithmatex">\(E\)</span> 的某个子空间 <span class="arithmatex">\(D\)</span> 到线性空间 <span class="arithmatex">\(E_1\)</span> 中的线性算子。</p>
+<ul>
+<li>
+<p><strong>连续线性算子</strong>：如果 <span class="arithmatex">\(T\)</span> 在定义域上是连续的，则称 <span class="arithmatex">\(T\)</span> 为连续线性算子。</p>
+</li>
+<li>
+<p><strong>有界线性算子</strong>：如果 <span class="arithmatex">\(T\)</span> 将 <span class="arithmatex">\(D\)</span> 中任一有界集映成 <span class="arithmatex">\(E_1\)</span> 中的有界集，则称 <span class="arithmatex">\(T\)</span> 是有界线性算子。</p>
+</li>
+<li>
+<p><strong>无界线性算子</strong>：如果存在 <span class="arithmatex">\(D\)</span> 中的有界集 <span class="arithmatex">\(A\)</span> 使得 <span class="arithmatex">\(T(A)\)</span> 是 <span class="arithmatex">\(E_1\)</span> 中的无界集，则称 <span class="arithmatex">\(T\)</span> 是无界线性算子。</p>
+</li>
+</ul>
+</div>
+<ul>
+<li>
+<p>将赋范线性空间 <span class="arithmatex">\(E\)</span> 中的每个元素 <span class="arithmatex">\(x\)</span> 映成 <span class="arithmatex">\(x\)</span> 自身的算子称为 <span class="arithmatex">\(E\)</span> 上的<strong>单位算子</strong>，常以 <span class="arithmatex">\(I\)</span> 表示。</p>
+</li>
+<li>
+<p>将 <span class="arithmatex">\(E\)</span> 中的每个元素 <span class="arithmatex">\(x\)</span> 映成零元素 <span class="arithmatex">\(\theta\)</span> 的算子称为<strong>零算子</strong>。</p>
+</li>
+<li>
+<p>单位算子与零算子既是有界线性算子也是连续线性算子。</p>
+</li>
+</ul>
+<hr />
+<h3 id="13">1.3 无界算子的典型示例</h3>
+<p>在连续函数空间 <span class="arithmatex">\(C[a,b]\)</span> 中讨论微分算子 <span class="arithmatex">\(T = \frac{d}{dt}\)</span>。</p>
+<p>将 <span class="arithmatex">\([a,b]\)</span> 上连续可微函数构成的集 <span class="arithmatex">\(C^1[a,b]\)</span> 作为 <span class="arithmatex">\(T\)</span> 的定义域 <span class="arithmatex">\(D\)</span>。则 <span class="arithmatex">\(T\)</span> 是定义在 <span class="arithmatex">\(C^1[a,b]\)</span> 上，并且在 <span class="arithmatex">\(C[a,b]\)</span> 中取值的线性算子。</p>
+<p>我们可以证明 <span class="arithmatex">\(T\)</span> 是一个<strong>无界算子</strong>：</p>
+<p>取函数序列：</p>
+<div class="arithmatex">\[
+x_n(t) = \sin(nt)
+\]</div>
+<p>则 <span class="arithmatex">\(x_n \in C^1[0,1]\)</span> 且 <span class="arithmatex">\(\|x_n\| = 1\)</span>，但是：</p>
+<div class="arithmatex">\[
+\|Tx_n\| = \left\| \frac{d}{dt} \sin(nt) \right\| = n\|\cos(nt)\| = n
+\]</div>
+<p>故 <span class="arithmatex">\(T\)</span> 将 <span class="arithmatex">\(C[0,1]\)</span> 中的单位球面映成 <span class="arithmatex">\(C[0,1]\)</span> 中的无界集。因此 <span class="arithmatex">\(T\)</span> 是无界的。</p>
+<hr />
+<h3 id="14">1.4 线性算子有界性与连续性的等价关系</h3>
+<p>首先看一个连续线性泛函的例子。连续函数的积分：</p>
+<div class="arithmatex">\[
+f(x) = \int_a^b x(t) dt
+\]</div>
+<p>是定义在连续函数空间 <span class="arithmatex">\(C[a,b]\)</span> 上的一个有界线性泛函，也是连续线性泛函。因为：</p>
+<div class="arithmatex">\[
+|f(x)| \le (b-a)\|x\|
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">定理 9.1</p>
+<p>设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是实赋范线性空间，<span class="arithmatex">\(T\)</span> 是由 <span class="arithmatex">\(E\)</span> 的子空间 <span class="arithmatex">\(D\)</span> 到 <span class="arithmatex">\(E_1\)</span> 的连续可加算子，则 <span class="arithmatex">\(T\)</span> 满足齐次性。因此 <span class="arithmatex">\(T\)</span> 是连续线性算子。</p>
+</div>
+<details class="proof">
+<summary>定理 9.1 的证明（点击展开）</summary>
+<p>对任给的 <span class="arithmatex">\(x \in D\)</span>，令 <span class="arithmatex">\(f(\alpha) = T(\alpha x)\)</span>，则 <span class="arithmatex">\(f\)</span> 连续。</p>
+<p>若 <span class="arithmatex">\(\alpha_n \rightarrow \alpha_0\)</span>，则 <span class="arithmatex">\(\alpha_n x \rightarrow \alpha_0 x\)</span>。所以 <span class="arithmatex">\(T(\alpha_n x) \rightarrow T(\alpha_0 x)\)</span>，即 <span class="arithmatex">\(f(\alpha_n) \rightarrow f(\alpha_0)\)</span>。</p>
+<p>对任意两个实数 <span class="arithmatex">\(\alpha, \beta\)</span>：</p>
+<div class="arithmatex">\[
+f(\alpha+\beta) = T((\alpha+\beta)x) = T(\alpha x + \beta x) = T(\alpha x) + T(\beta x) = f(\alpha) + f(\beta)
+\]</div>
+<p>由实变函数引理可知，对任何实数有 <span class="arithmatex">\(f(\alpha) = \alpha f(1)\)</span>，即 <span class="arithmatex">\(T(\alpha x) = \alpha T(x)\)</span>。证明完毕。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<ul>
+<li>
+<p><strong>推论</strong>：设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是复赋范线性空间，<span class="arithmatex">\(T\)</span> 是由 <span class="arithmatex">\(E\)</span> 的子空间 <span class="arithmatex">\(D\)</span> 到 <span class="arithmatex">\(E_1\)</span> 的连续可加算子，且满足 <span class="arithmatex">\(T(ix) = iT(x)\)</span>，则 <span class="arithmatex">\(T\)</span> 满足齐次性。</p>
+<p>证明如下：令 <span class="arithmatex">\(\alpha = a + ib\)</span>，</p>
+<div class="arithmatex">\[
+T(\alpha x) = T(ax+ibx) = T(ax) + T(ibx) = aT(x) + bT(ix) = aT(x) + biT(x) = \alpha T(x)
+\]</div>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">定理 9.2 (线性算子有界的等价定义)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是赋范线性空间，<span class="arithmatex">\(T\)</span> 是由 <span class="arithmatex">\(E\)</span> 的子空间 <span class="arithmatex">\(D\)</span> 到 <span class="arithmatex">\(E_1\)</span> 的线性算子。则 <span class="arithmatex">\(T\)</span> 有界的充分必要条件是存在 <span class="arithmatex">\(M &gt; 0\)</span> 使得对一切 <span class="arithmatex">\(x \in D\)</span>，有：</p>
+<div class="arithmatex">\[
+\|Tx\| \le M\|x\|
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 9.2 的证明（点击展开）</summary>
+<p><strong>充分性</strong>：设 <span class="arithmatex">\(A \subset D\)</span> 为任一有界集。则存在数 <span class="arithmatex">\(K\)</span>，使得对一切 <span class="arithmatex">\(x \in A\)</span> 有 <span class="arithmatex">\(\|x\| \le K\)</span>。故当 <span class="arithmatex">\(x \in A\)</span> 时，</p>
+<div class="arithmatex">\[
+\|Tx\| \le M\|x\| \le MK
+\]</div>
+<p>因此 <span class="arithmatex">\(T(A)\)</span> 是 <span class="arithmatex">\(E_1\)</span> 中的有界集，即 <span class="arithmatex">\(T\)</span> 有界。</p>
+<p><strong>必要性</strong>：在 <span class="arithmatex">\(D\)</span> 中取单位球面 <span class="arithmatex">\(S := \{x : \|x\| = 1, x \in D\}\)</span>。
+因 <span class="arithmatex">\(S\)</span> 有界，故 <span class="arithmatex">\(T(S)\)</span> 也有界。于是存在正数 <span class="arithmatex">\(M &gt; 0\)</span> 使得当 <span class="arithmatex">\(x \in S\)</span> 时，<span class="arithmatex">\(\|Tx\| \le M\)</span>。</p>
+<p>设 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(D\)</span> 中任一非零元，则 <span class="arithmatex">\(\frac{x}{\|x\|} \in S\)</span>。所以：</p>
+<div class="arithmatex">\[
+\left\| T\left(\frac{x}{\|x\|}\right) \right\| \le M
+\]</div>
+<p>由 <span class="arithmatex">\(T\)</span> 的齐次性可知，</p>
+<div class="arithmatex">\[
+\|Tx\| \le M\|x\|
+\]</div>
+<p>当 <span class="arithmatex">\(x = \theta\)</span> 时，不等式显然成立。证明完毕。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">定理 9.3 (有界性与连续性等价)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是赋范线性空间，<span class="arithmatex">\(T\)</span> 是由 <span class="arithmatex">\(E\)</span> 的子空间 <span class="arithmatex">\(D\)</span> 到 <span class="arithmatex">\(E_1\)</span> 的线性算子。则下列性质等价：</p>
+<p>(i) <span class="arithmatex">\(T\)</span> 连续；</p>
+<p>(ii) <span class="arithmatex">\(T\)</span> 在原点 <span class="arithmatex">\(\theta\)</span> 处连续；</p>
+<p>(iii) <span class="arithmatex">\(T\)</span> 有界。</p>
+</div>
+<details class="proof">
+<summary>定理 9.3 的证明（点击展开）</summary>
+<p><strong>(i) <span class="arithmatex">\(\Rightarrow\)</span> (ii)</strong>：显然成立。</p>
+<p><strong>(ii) <span class="arithmatex">\(\Rightarrow\)</span> (iii)</strong>：因 <span class="arithmatex">\(T\)</span> 在原点连续，故对 <span class="arithmatex">\(\epsilon=1\)</span>，存在 <span class="arithmatex">\(\delta&gt;0\)</span>，使得对任给的 <span class="arithmatex">\(x \in D\)</span> 当 <span class="arithmatex">\(\|x\| \le \delta\)</span> 时，有：</p>
+<div class="arithmatex">\[
+\|Tx\| = \|Tx - T\theta\| \le 1
+\]</div>
+<p>设 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(D\)</span> 中任一非零元，则 <span class="arithmatex">\(\left\| \frac{\delta x}{\|x\|} \right\| = \delta \le \delta\)</span>。所以：</p>
+<div class="arithmatex">\[
+\left\| T\left(\frac{\delta x}{\|x\|}\right) \right\| \le 1
+\]</div>
+<p>由齐次性提出系数，即得：</p>
+<div class="arithmatex">\[
+\|Tx\| \le \frac{1}{\delta}\|x\|
+\]</div>
+<p>说明算子是有界的。</p>
+<p><strong>(iii) <span class="arithmatex">\(\Rightarrow\)</span> (i)</strong>：设 <span class="arithmatex">\(x_n, x \in D\)</span>，且 <span class="arithmatex">\(x_n \rightarrow x\)</span>。因 <span class="arithmatex">\(T\)</span> 有界，故：</p>
+<div class="arithmatex">\[
+\|Tx_n - Tx\| = \|T(x_n - x)\| \le M\|x_n - x\| \rightarrow 0
+\]</div>
+<p>即 <span class="arithmatex">\(Tx_n \rightarrow Tx\)</span>，这证明了连续性。</p>
+<p>对线性算子来说，有界性、连续性以及在原点的连续性均相互等价。这些条件也与 <span class="arithmatex">\(T\)</span> 在 <span class="arithmatex">\(D\)</span> 中任一给定点 <span class="arithmatex">\(x_0\)</span> 处的连续性等价。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h3 id="15">1.5 有界线性算子的范数</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 9.3 (算子范数)</p>
+<p>设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是赋范线性空间，<span class="arithmatex">\(T\)</span> 是由 <span class="arithmatex">\(E\)</span> 的子空间 <span class="arithmatex">\(D\)</span> 到 <span class="arithmatex">\(E_1\)</span> 的有界线性算子。使得 <span class="arithmatex">\(\|Tx\| \le M\|x\|\)</span> 对一切 <span class="arithmatex">\(x \in D\)</span> 都成立的正数 <span class="arithmatex">\(M\)</span> 的下确界称为 <span class="arithmatex">\(T\)</span> 的<strong>范数</strong>，记为 <span class="arithmatex">\(\|T\|\)</span>。</p>
+</div>
+<p>因 <span class="arithmatex">\(M\)</span> 是集合 <span class="arithmatex">\(\{\frac{\|Tx\|}{\|x\|} : x \in D, x \ne \theta\}\)</span> 的一个上界，因此算子 <span class="arithmatex">\(T\)</span> 的范数 <span class="arithmatex">\(\|T\|\)</span> 作为所有上界 <span class="arithmatex">\(M\)</span> 的下确界，也是上述集合的最小上界（即上确界）。于是有：</p>
+<div class="arithmatex">\[
+\|T\| = \sup_{x \in D, x \ne \theta} \frac{\|Tx\|}{\|x\|}
+\]</div>
+<p>由此容易导出下列结论：</p>
+<ul>
+<li>
+<p>对一切 <span class="arithmatex">\(x \in D\)</span>，有 <span class="arithmatex">\(\|Tx\| \le \|T\|\|x\|\)</span>。</p>
+</li>
+<li>
+<p>范数的其他等价计算形式：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\|T\| = \sup_{x \in D, x \ne \theta} \left\| T\left(\frac{x}{\|x\|}\right) \right\| = \sup_{x \in D, \|x\|=1} \|Tx\| = \sup_{x \in D, \|x\| \le 1} \|Tx\|
+\]</div>
+<p>算子的范数是刻画有界线性算子的一个重要的量。一般情形下求有界线性算子的范数是很困难的，下面我们通过几个例子说明如何估计或精确求出其范数。</p>
+<hr />
+<h3 id="16">1.6 算子范数的计算示例</h3>
+<p><strong>示例 1：矩阵表示的线性算子</strong></p>
+<p>设 <span class="arithmatex">\((a_{ij})\)</span> 为一给定的 <span class="arithmatex">\(n \times n\)</span> 实方阵，由等式：</p>
+<div class="arithmatex">\[
+\eta_i = \sum_{j=1}^n a_{ij} \xi_j
+\]</div>
+<p>定义了一个由 <span class="arithmatex">\(\mathbb{R}^n\)</span> 到 <span class="arithmatex">\(\mathbb{R}^n\)</span> 的算子 <span class="arithmatex">\(T : Tx = y\)</span>。它将元素 <span class="arithmatex">\(x = (\xi_1, \dots, \xi_n)\)</span> 映成元素 <span class="arithmatex">\(y = (\eta_1, \dots, \eta_n)\)</span>。</p>
+<p>在 <span class="arithmatex">\(\mathbb{R}^n\)</span> 中取另一个向量 <span class="arithmatex">\(x' = (\xi_1', \dots, \xi_n')\)</span>，易证 <span class="arithmatex">\(T(x+x') = Tx + Tx'\)</span> 及 <span class="arithmatex">\(T(ax) = aTx\)</span>，因此 <span class="arithmatex">\(T\)</span> 是线性算子。</p>
+<p>我们估计其有界性。由 Cauchy 不等式，有：</p>
+<div class="arithmatex">\[
+\|Tx\|^2 = \sum_{i=1}^n \eta_i^2 = \sum_{i=1}^n \left(\sum_{j=1}^n a_{ij} \xi_j\right)^2 \le \sum_{i=1}^n \left( \sum_{j=1}^n a_{ij}^2 \sum_{j=1}^n \xi_j^2 \right) \le \sum_{i=1}^n \sum_{j=1}^n a_{ij}^2 \cdot \|x\|^2
+\]</div>
+<p>由此可得：</p>
+<div class="arithmatex">\[
+\|T\| \le \left( \sum_{i,j=1}^n a_{ij}^2 \right)^{\frac{1}{2}}
+\]</div>
+<p>因此算子连续且有界。</p>
+<p><strong>示例 2：Fourier 形式的积分算子</strong></p>
+<p><span class="arithmatex">\(C(\mathbb{R})\)</span>：定义在 <span class="arithmatex">\(\mathbb{R}\)</span> 上有界连续函数构成的集，定义其范数为 <span class="arithmatex">\(\|y\| = \sup_{t \in \mathbb{R}} |y(t)|\)</span>。则 <span class="arithmatex">\(C(\mathbb{R})\)</span> 是一个 Banach 空间。</p>
+<p>设 <span class="arithmatex">\(x \in L(\mathbb{R})\)</span>（即可积函数空间）。令 <span class="arithmatex">\(y = Tx\)</span>，且</p>
+<div class="arithmatex">\[
+y(t) = \int_{-\infty}^\infty e^{-ist} x(s) ds
+\]</div>
+<p><span class="arithmatex">\(T\)</span> 是定义在 <span class="arithmatex">\(L(\mathbb{R})\)</span> 上而值域包含在 <span class="arithmatex">\(C(\mathbb{R})\)</span> 中的线性算子。由范数定义：</p>
+<div class="arithmatex">\[
+|Tx(t)| = |y(t)| \le \int_{-\infty}^\infty |e^{-ist} x(s)| ds = \int_{-\infty}^\infty |x(s)| ds = \|x\|
+\]</div>
+<p>所以 <span class="arithmatex">\(\|T\| \le 1\)</span>。<span class="arithmatex">\(T\)</span> 有界，因此连续。</p>
+<p><strong>示例 3：Lagrange 插值多项式</strong></p>
+<p>设 <span class="arithmatex">\(x \in C[a,b]\)</span>，在 <span class="arithmatex">\([a,b]\)</span> 中任取 <span class="arithmatex">\(n\)</span> 个点 <span class="arithmatex">\(a \le t_1 &lt; t_2 &lt; \dots &lt; t_n \le b\)</span>，作多项式：</p>
+<div class="arithmatex">\[
+l_k(t) = \frac{(t-t_1)\dots(t-t_{k-1})(t-t_{k+1})\dots(t-t_n)}{(t_k-t_1)\dots(t_k-t_{k-1})(t_k-t_{k+1})\dots(t_k-t_n)}
+\]</div>
+<p>定义算子 <span class="arithmatex">\(y = L_n x = \sum_{k=1}^n x(t_k) l_k(t)\)</span>。</p>
+<p>则有：</p>
+<div class="arithmatex">\[
+\|L_n x\| = \max_{t \in [a,b]} \left| \sum_{k=1}^n x(t_k) l_k(t) \right| \le \max_{t \in [a,b]} \sum_{k=1}^n |l_k(t)| \max_{t \in [a,b]} |x(t)| = \left( \max_{t \in [a,b]} \sum_{k=1}^n |l_k(t)| \right) \|x\|
+\]</div>
+<p>令 <span class="arithmatex">\(\gamma := \max_{t \in [a,b]} \sum_{k=1}^n |l_k(t)|\)</span>，则有 <span class="arithmatex">\(\|L_n\| \le \gamma\)</span>。</p>
+<p>另一方面，由于 <span class="arithmatex">\(\sum_{k=1}^n |l_k(t)|\)</span> 在 <span class="arithmatex">\([a,b]\)</span> 上连续，故存在 <span class="arithmatex">\(t_0 \in [a,b]\)</span> 使得：</p>
+<div class="arithmatex">\[
+\gamma = \sum_{k=1}^n |l_k(t_0)|
+\]</div>
+<p>取 <span class="arithmatex">\(x_0 \in C[a,b]\)</span> 满足 <span class="arithmatex">\(\|x_0\| = 1\)</span> 且在各节点处 <span class="arithmatex">\(x_0(t_k) = \text{sgn}(l_k(t_0))\)</span>，于是：</p>
+<div class="arithmatex">\[
+\|L_n\| \ge \|L_n(x_0)\| \ge |L_n(x_0)(t_0)| = \left| \sum_{k=1}^n l_k(t_0) x_0(t_k) \right| = \left| \sum_{k=1}^n l_k(t_0) \text{sgn}(l_k(t_0)) \right| = \sum_{k=1}^n |l_k(t_0)| = \gamma
+\]</div>
+<p>从而证明了精确范数 <span class="arithmatex">\(\|L_n\| = \gamma\)</span>。</p>
+<p><strong>示例 4：含核积分算子</strong></p>
+<p>设 <span class="arithmatex">\(K(t,s)\)</span> 是定义在 <span class="arithmatex">\(a \le t \le b\)</span>, <span class="arithmatex">\(a \le s \le b\)</span> 上的连续函数。在空间 <span class="arithmatex">\(C[a,b]\)</span> 上定义如下的积分算子：</p>
+<div class="arithmatex">\[
+y(t) = Tx(t) = \int_a^b K(t,s) x(s) ds
+\]</div>
+<p>则 <span class="arithmatex">\(T\)</span> 为 <span class="arithmatex">\(C[a,b]\)</span> 到其自身的有界线性算子，且范数满足：</p>
+<div class="arithmatex">\[
+\|T\| = \gamma, \quad \gamma := \max_{t \in [a,b]} \int_a^b |K(t,s)| ds
+\]</div>
+<p><em>上界的证明</em>：</p>
+<div class="arithmatex">\[
+\|Tx\| = \max_{t \in [a,b]} \left| \int_a^b K(t,s) x(s) ds \right| \le \max_{s \in [a,b]} |x(s)| \max_{t \in [a,b]} \int_a^b |K(t,s)| ds = \gamma \|x\|
+\]</div>
+<p>即 <span class="arithmatex">\(\|T\| \le \gamma\)</span>。</p>
+<p><em>下界的证明</em>：
+由于 <span class="arithmatex">\(\int_a^b |K(t,s)| ds\)</span> 连续，存在 <span class="arithmatex">\(t_0\)</span> 使其达到最大值 <span class="arithmatex">\(\gamma\)</span>。取 <span class="arithmatex">\(\|\varphi\| = 1\)</span>，</p>
+<div class="arithmatex">\[
+\|T\| \ge \|T\varphi\| = \max_{t \in [a,b]} \left| \int_a^b K(t,s) \varphi(s) ds \right| \ge \left| \int_a^b K(t_0,s) \varphi(s) ds \right|
+\]</div>
+<p>令 <span class="arithmatex">\(E_0 = \{s : K(t_0, s) \ge 0\}\)</span>。作函数：</p>
+<div class="arithmatex">\[
+\varphi_n(s) = \frac{1 - n d(s, E_0)}{1 + n d(s, E_0)}
+\]</div>
+<p>其中 <span class="arithmatex">\(d(s, E_0)\)</span> 为 <span class="arithmatex">\(s\)</span> 与 <span class="arithmatex">\(E_0\)</span> 的距离。则 <span class="arithmatex">\(\varphi_n\)</span> 于 <span class="arithmatex">\([a,b]\)</span> 上连续，且 <span class="arithmatex">\(|\varphi_n| \le 1\)</span>。
+更进一步，<span class="arithmatex">\(\varphi_n|_{E_0} \equiv 1\)</span>，且 <span class="arithmatex">\(\varphi_n|_{E_0^c} \rightarrow -1\)</span>。</p>
+<p>由 Lebesgue 控制收敛定理，当 <span class="arithmatex">\(n \rightarrow \infty\)</span> 时：</p>
+<div class="arithmatex">\[
+T\varphi_n(t_0) = \int_a^b K(t_0, s) \varphi_n(s) ds \rightarrow \int_a^b |K(t_0, s)| ds = \gamma
+\]</div>
+<p>所以：</p>
+<div class="arithmatex">\[
+\gamma = \lim_{n \rightarrow \infty} T\varphi_n(t_0) \le \lim_{n \rightarrow \infty} \|T\varphi_n\| \le \lim_{n \rightarrow \infty} \|T\|\|\varphi_n\| = \|T\|
+\]</div>
+<p>即得 <span class="arithmatex">\(\|T\| \ge \gamma\)</span>。</p>
+<hr />
+<h2 id="2">2. 线性算子空间</h2>
+<h3 id="21-mathbbbe-e_1">2.1 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 空间</h3>
+<p>我们将赋范线性空间 <span class="arithmatex">\(E\)</span> 到赋范线性空间 <span class="arithmatex">\(E_1\)</span> 的<strong>有界线性算子全体</strong>构成的集合记为 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span>。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 9.4</p>
+<p>设 <span class="arithmatex">\(E\)</span> 及 <span class="arithmatex">\(E_1\)</span> 都是赋范线性空间，在 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 中定义线性运算如下：</p>
+<ul>
+<li>加法：<span class="arithmatex">\((T + T')x = Tx + T'x\)</span></li>
+<li>数乘：<span class="arithmatex">\((\alpha T)x = \alpha Tx\)</span></li>
+</ul>
+<p>其中 <span class="arithmatex">\(T, T' \in \mathbb{B}(E, E_1)\)</span>，<span class="arithmatex">\(\alpha\)</span> 为数。那么 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 按照上述线性运算是一个线性空间。若以算子的范数作为其范数，则 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 是一个赋范线性空间。</p>
+</div>
+<details class="proof">
+<summary>定理 9.4 的证明（点击展开）</summary>
+<p>首先，按定义可知它是线性空间。需要验证算子范数满足范数的三大公理：</p>
+<ul>
+<li>
+<p><strong>非负性</strong>： <span class="arithmatex">\(\|T\| = \sup_{\|x\|=1} \|Tx\| \ge 0\)</span>。若 <span class="arithmatex">\(T = \theta\)</span> (零算子)，显然有 <span class="arithmatex">\(\|T\| = 0\)</span>。反之，若 <span class="arithmatex">\(\|T\| = 0\)</span>，则对一切 <span class="arithmatex">\(x \in E\)</span> 有 <span class="arithmatex">\(Tx = 0\)</span>，故 <span class="arithmatex">\(T = \theta\)</span>。</p>
+</li>
+<li>
+<p><strong>齐次性</strong>：</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\|\alpha T\| = \sup_{\|x\|=1} \|\alpha Tx\| = |\alpha| \sup_{\|x\|=1} \|Tx\| = |\alpha|\|T\|
+\]</div>
+<ul>
+<li><strong>三角不等式</strong>：</li>
+</ul>
+<div class="arithmatex">\[
+\|T + T'\| = \sup_{\|x\|=1} \|(T + T')x\| = \sup_{\|x\|=1} \|Tx + T'x\| \le \sup_{\|x\|=1} (\|Tx\| + \|T'x\|) \le \sup_{\|x\|=1} \|Tx\| + \sup_{\|x\|=1} \|T'x\| \le \|T\| + \|T'\|
+\]</div>
+<p>因此，这是一个赋范线性空间。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p><em>注：我们将 <span class="arithmatex">\(\mathbb{B}(E, E)\)</span> 简记为 <span class="arithmatex">\(\mathbb{B}(E)\)</span>，代表 <span class="arithmatex">\(E\)</span> 到其自身的有界线性算子全体。</em></p>
+<hr />
+<h3 id="22">2.2 按算子范数收敛 (一致算子拓扑)</h3>
+<p>设 <span class="arithmatex">\(T, T_n \in \mathbb{B}(E, E_1)\)</span> (<span class="arithmatex">\(n=1,2,3,\dots\)</span>)。若 <span class="arithmatex">\(T_n\)</span> 按 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 中的范数收敛于 <span class="arithmatex">\(T\)</span>，即：</p>
+<div class="arithmatex">\[
+\|T - T_n\| \rightarrow 0
+\]</div>
+<p>则称 <span class="arithmatex">\(T_n\)</span> <strong>按算子范数收敛</strong>于 <span class="arithmatex">\(T\)</span>，或称 <span class="arithmatex">\(T_n\)</span> 按<strong>一致算子拓扑</strong>收敛于 <span class="arithmatex">\(T\)</span>。
+使用“按一致算子拓扑收敛”这一名称的原因在于下面的定理：</p>
+<div class="admonition success">
+<p class="admonition-title">定理 9.5</p>
+<p>设 <span class="arithmatex">\(T, T_n \in \mathbb{B}(E, E_1)\)</span>。<span class="arithmatex">\(T_n\)</span> 按算子范数收敛于 <span class="arithmatex">\(T\)</span> 的充分必要条件是：<span class="arithmatex">\(\{T_n\}\)</span> 在 <span class="arithmatex">\(E\)</span> 中的<strong>任一有界集上一致收敛</strong>于 <span class="arithmatex">\(T\)</span>。</p>
+</div>
+<details class="proof">
+<summary>定理 9.5 的证明（点击展开）</summary>
+<p><strong>必要性</strong>：设 <span class="arithmatex">\(A \subset E\)</span> 为有界集。则存在正数 <span class="arithmatex">\(K &gt; 0\)</span>，使得当 <span class="arithmatex">\(x \in A\)</span> 时，<span class="arithmatex">\(\|x\| \le K\)</span>。故：</p>
+<div class="arithmatex">\[
+\|Tx - T_nx\| \le \|T - T_n\|\|x\| \le K\|T - T_n\|
+\]</div>
+<p>因为 <span class="arithmatex">\(\|T - T_n\| \rightarrow 0\)</span>，则任给 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，使得当 <span class="arithmatex">\(n &gt; N\)</span> 时，<span class="arithmatex">\(\|T - T_n\| &lt; \epsilon/K\)</span>。代入上式得：</p>
+<div class="arithmatex">\[
+\|Tx - T_nx\| \le \epsilon
+\]</div>
+<p>这对于所有的 <span class="arithmatex">\(x \in A\)</span> 是一致成立的。故 <span class="arithmatex">\(\{T_n\}\)</span> 在 <span class="arithmatex">\(A\)</span> 上一致收敛于 <span class="arithmatex">\(T\)</span>。</p>
+<p><strong>充分性</strong>：设 <span class="arithmatex">\(\{T_n\}\)</span> 在 <span class="arithmatex">\(E\)</span> 中的任一有界集上一致收敛于 <span class="arithmatex">\(T\)</span>。取 <span class="arithmatex">\(E\)</span> 中的单位球面 <span class="arithmatex">\(S = \{x : \|x\| = 1, x \in E\}\)</span>。
+根据假定，对任给的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，使得当 <span class="arithmatex">\(n &gt; N\)</span> 时，不等式：</p>
+<div class="arithmatex">\[
+\|Tx - T_nx\| \le \epsilon
+\]</div>
+<p>对于所有的 <span class="arithmatex">\(x \in S\)</span> 一致地成立。于是：</p>
+<div class="arithmatex">\[
+\|T - T_n\| = \sup_{\|x\|=1} \|Tx - T_nx\| \le \epsilon
+\]</div>
+<p>故 <span class="arithmatex">\(\{T_n\}\)</span> 按算子范数收敛于 <span class="arithmatex">\(T\)</span>。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h3 id="23-mathbbbe-e_1">2.3 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 空间的完备性</h3>
+<p>算子空间本身的完备性由目标空间的完备性决定。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 9.6</p>
+<p>设 <span class="arithmatex">\(E_1\)</span> 是 Banach 空间，则算子空间 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 也是 Banach 空间。</p>
+</div>
+<details class="proof">
+<summary>定理 9.6 的证明（点击展开）</summary>
+<p>设 <span class="arithmatex">\(\{T_n\}\)</span> 是 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 中的 Cauchy 列。则对任给的 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N &gt; 0\)</span>，使得当 <span class="arithmatex">\(m, n &gt; N\)</span> 时：</p>
+<div class="arithmatex">\[
+\|T_m - T_n\| &lt; \epsilon
+\]</div>
+<p>任取 <span class="arithmatex">\(x \in E\)</span>，考察序列 <span class="arithmatex">\(\{T_n x\}\)</span>：</p>
+<div class="arithmatex">\[
+\|T_mx - T_nx\| \le \|T_m - T_n\|\|x\| \le \epsilon\|x\|
+\]</div>
+<p>故对于固定的 <span class="arithmatex">\(x\)</span>，序列 <span class="arithmatex">\(\{T_n x\}\)</span> 是 <span class="arithmatex">\(E_1\)</span> 中的 Cauchy 列。因 <span class="arithmatex">\(E_1\)</span> 是完备的，故 <span class="arithmatex">\(\{T_n x\}\)</span> 在 <span class="arithmatex">\(E_1\)</span> 中收敛于某一元素 <span class="arithmatex">\(y\)</span>。于是可以定义点态极限算子 <span class="arithmatex">\(T\)</span>：</p>
+<div class="arithmatex">\[
+Tx = \lim_{n \rightarrow \infty} T_nx = y
+\]</div>
+<p>接下来我们需要证明 <span class="arithmatex">\(T\)</span> 属于 <span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span>，且 <span class="arithmatex">\(T_n \to T\)</span> 是依范数收敛的。</p>
+<p><strong>1. 线性性</strong>：</p>
+<div class="arithmatex">\[
+T(ax+by) = \lim_{n \rightarrow \infty} T_n(ax+by) = \lim_{n \rightarrow \infty} (aT_nx + bT_ny) = aTx + bTy
+\]</div>
+<p><strong>2. 有界性及算子范数收敛</strong>：
+在前面的 Cauchy 列条件 <span class="arithmatex">\(\|T_mx - T_nx\| \le \epsilon\|x\|\)</span> 中，令 <span class="arithmatex">\(m \rightarrow \infty\)</span>，由范数的连续性可得，对于所有的 <span class="arithmatex">\(n &gt; N\)</span>：</p>
+<div class="arithmatex">\[
+\|Tx - T_nx\| \le \epsilon\|x\|
+\]</div>
+<p>这说明 <span class="arithmatex">\(T - T_n\)</span> 是有界算子，即 <span class="arithmatex">\(T - T_n \in \mathbb{B}(E, E_1)\)</span>。既然 <span class="arithmatex">\(T_n\)</span> 是有界的，从而 <span class="arithmatex">\(T = (T - T_n) + T_n\)</span> 必然也是有界线性算子，故 <span class="arithmatex">\(T \in \mathbb{B}(E, E_1)\)</span>。</p>
+<p>同时这也表明，当 <span class="arithmatex">\(n &gt; N\)</span> 时：</p>
+<div class="arithmatex">\[
+\|T - T_n\| \le \epsilon
+\]</div>
+<p>故 <span class="arithmatex">\(\{T_n\}\)</span> 按算子范数收敛于 <span class="arithmatex">\(T\)</span>。由此可知，<span class="arithmatex">\(\mathbb{B}(E, E_1)\)</span> 中任一基本点列必有极限，因此它是完备的 Banach 空间。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h3 id="24">2.4 不按算子范数收敛的例子</h3>
+<p>虽然点态收敛可以定义一个极限算子，但点态收敛并不蕴含算子范数收敛。</p>
+<p>在 <span class="arithmatex">\(l^p\)</span> 空间中定义<strong>截断位移算子</strong> <span class="arithmatex">\(T_n\)</span>：</p>
+<div class="arithmatex">\[
+T_n x = x_n
+\]</div>
+<p>其中输入向量为 <span class="arithmatex">\(x = (\xi_1, \xi_2, \dots, \xi_n, \dots) \in l^p\)</span>，截断输出向量为 <span class="arithmatex">\(x_n = (\xi_n, \xi_{n+1}, \dots) \in l^p\)</span>（这里符号根据讲义上下文，即截断前 <span class="arithmatex">\(n-1\)</span> 项）。</p>
+<p><span class="arithmatex">\(T_n\)</span> 是有界线性算子，且 <span class="arithmatex">\(\|T_nx\|_p \le \|x\|_p\)</span>。
+对任意给定的 <span class="arithmatex">\(x \in l^p\)</span>，由于级数 <span class="arithmatex">\(\sum |\xi_k|^p\)</span> 收敛，其尾部必然趋于 0，有 <span class="arithmatex">\(\|x_n\|_p \rightarrow 0\)</span>。因此在逐点意义下：</p>
+<div class="arithmatex">\[
+\lim_{n \rightarrow \infty} T_n x = \theta
+\]</div>
+<p>（即算子列点态收敛于零算子）。</p>
+<p>然而，考察算子范数 <span class="arithmatex">\(\|T_n\|\)</span>。取特定单位向量：</p>
+<div class="arithmatex">\[
+y_n = (0, \dots, 0, 1, 0, \dots) \quad \text{（第 } n \text{ 个位置为 1）}
+\]</div>
+<p>则 <span class="arithmatex">\(T_n y_n = (1, 0, \dots)\)</span>。故：</p>
+<div class="arithmatex">\[
+\|T_n\| \ge \|T_n y_n\|_p = 1
+\]</div>
+<p>所以 <span class="arithmatex">\(\|T_n\| = 1\)</span>。这说明 <span class="arithmatex">\(\|T_n - 0\| = 1 \not\rightarrow 0\)</span>。</p>
+<p>因此，序列 <span class="arithmatex">\(\{T_n\}\)</span> <strong>不按算子范数收敛</strong>于零算子。</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+
+  <h2 id="__comments">💬 Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="JHAO1122/Notes"
+        data-repo-id="R_kgDORuXyyw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORuXyy84C6uAS"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/security.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/starry_map.js"></script>
+      
+    
+  </body>
+</html>
