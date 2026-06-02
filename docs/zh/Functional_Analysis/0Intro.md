@@ -50,6 +50,10 @@ tags:
 
 * [x] [第八章：Hilbert 空间理论](8Hilbert.md)
 
+* [x] [第九章：线性算子](9Linear.md)
+
+* [x] [第十章：开映射与闭图像定理](10Open_Closed.md)
+
 ---
 
 ## 📝 关于笔记的说明

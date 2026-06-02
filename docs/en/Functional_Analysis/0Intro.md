@@ -51,6 +51,10 @@ The following notes are continuously being updated:
 
 * [x] [Chapter 8: Hilbert Space Theory](8Hilbert.md)
 
+* [x] [Chapter 9: Linear Operators](9Linear.md)
+
+* [x] [Chapter 10: Open Mapping and Closed Graph Theorems](10Open_Closed.md)
+
 ---
 
 ## 📝 About the Notes

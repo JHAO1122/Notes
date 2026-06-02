@@ -94,6 +94,8 @@ plugins:
             "第六章：巴拿赫空间": "Ch 6: Banach Spaces"
             "第七章：希尔伯特空间": "Ch 7: Hilbert Spaces"
             "第八章：希尔伯特空间理论": "Ch 8: Hilbert Space Theory"
+            "第九章：线性算子": "Ch 9: Linear Operators"
+            "第十章：开映射与闭图定理": "Ch 10: Open Mapping and Closed Graph Theorems"
             "🍩 点集拓扑": "🍩 Point Set Topology"
             "点集拓扑课程概览": "Point Set Topology Course Overview"
             "第一章：集合论": "Ch 1: Set Theory"
@@ -205,6 +207,8 @@ nav:
               - 第六章：巴拿赫空间: zh/Functional_Analysis/6Banach.md
               - 第七章：希尔伯特空间: zh/Functional_Analysis/7Hilbert.md
               - 第八章：希尔伯特空间理论: zh/Functional_Analysis/8Hilbert.md
+              - 第九章：线性算子: zh/Functional_Analysis/9Linear.md
+              - 第十章：开映射与闭图定理: zh/Functional_Analysis/10Open_Closed.md
       - 🍩 点集拓扑:
           - 点集拓扑课程概览: zh/Topology/0Intro.md
           - 📖 笔记:
