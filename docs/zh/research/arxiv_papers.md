@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-01
+> 更新于: 2026-06-02
 
 ---
+### A Distribution-Free Framework for Rewrite-Based Human-text Detection via Knockoff Filtering 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-05-29
+- **链接**: [PDF](http://arxiv.org/abs/2606.00402v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过将改写式检测隐式构造的knockoff样本转化为多重假设检验框架，提出了一种无需重训练即可为任意改写检测器赋予有限样本FDR保证的分布自由方法。其核心创新在于分离了检测统计量的设计与错误发现控制，利用knockoff滤波的统计性质，通过简单校准过程使现有改写检测器继承严格的FDR理论保证。
+
+### Network knockoffs: controlling false discovery in dyadic space 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-05-29
+- **链接**: [PDF](http://arxiv.org/abs/2606.00346v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：针对高维二元回归中因数据依赖导致传统伪发现率控制失效的问题，直接在拓扑网络上模拟合成特征，再构造二元空间中的增广设计矩阵，从而提出一种新型的Knockoff变量选择程序。理论性质上，该方法在节点级和边级特征上均能有效控制伪发现率，而Benjamini-Hochberg、Benjamini-Yekutieli、Storey Q值、数据拆分及标准Knockoff等方法均表现为反保守。
+
+### Multi-Agent Conformal Prediction with Personalized Statistical Validity 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-30
+- **链接**: [PDF](http://arxiv.org/abs/2606.00717v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出个性化联邦加权共形预测框架，通过构造基于局部密度比加权的评分函数与加权分位数聚合，在异质性数据下为每个智能体提供渐近有效的边际和校准条件覆盖保证；理论推导揭示了由有效样本量表达式调控的覆盖方差调整机制，这是加权共形预测中必要的统计性质。
+
+### Parameter-Free and Group Conditional Online Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-29
+- **链接**: [PDF](http://arxiv.org/abs/2606.00419v1)
+
+!!! note "AI 核心解读"
+
+    该论文在统计推导上首次将无参数在线优化框架与分组条件覆盖相结合，通过构造基于梯度下降的评分函数自适应更新机制，在不依赖学习率调参的前提下实现了对任意数据漂移的鲁棒性。其核心理论性质在于证明了所提算法能够同时达到最优的分组条件覆盖保证，且分组误差界与最优后验分组阈值匹配，从而在非交换数据流中统一了公平性与参数无关性。
+
+### Approximating full conformal prediction: distribution free guarantees via the tournament correction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-28
+- **链接**: [PDF](http://arxiv.org/abs/2605.29200v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出基于“锦标赛校正”的通用近似框架，将全共形预测的计算复杂度转化为可处理的统计推断问题，并严格证明了在任意分布下预测集边际覆盖率为 \(1-2\alpha\)，且在稳定性条件下可收紧至约 \(1-\alpha\)。其核心创新在于构造了一种新的评分函数校正机制，通过引入锦标赛式比较与留一交叉共形预测的泛化，在无需数据分割的前提下保留了全共形预测的理论效率与分布自由保证。
+
+
 ### Explaining Concept Shift with Interpretable Feature Attribution 
 
 - [ ] **分类**: Knockoff | **日期**: 2025-05-27

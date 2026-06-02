@@ -610,5 +610,35 @@
         "date": "2026-05-27",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.00402v1": {
+        "title": "A Distribution-Free Framework for Rewrite-Based Human-text Detection via Knockoff Filtering",
+        "date": "2026-05-29",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2606.00346v1": {
+        "title": "Network knockoffs: controlling false discovery in dyadic space",
+        "date": "2026-05-29",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2606.00717v1": {
+        "title": "Multi-Agent Conformal Prediction with Personalized Statistical Validity",
+        "date": "2026-05-30",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.00419v1": {
+        "title": "Parameter-Free and Group Conditional Online Conformal Prediction",
+        "date": "2026-05-29",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.29200v2": {
+        "title": "Approximating full conformal prediction: distribution free guarantees via the tournament correction",
+        "date": "2026-05-28",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
