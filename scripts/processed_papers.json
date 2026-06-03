@@ -640,5 +640,35 @@
         "date": "2026-05-28",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.03731v1": {
+        "title": "Conformal Language Modeling via Posterior Sampling",
+        "date": "2026-06-02",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.03600v1": {
+        "title": "Set-Preserving Calibration from Conformal P-Values to E-Values",
+        "date": "2026-06-02",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.00419v2": {
+        "title": "Parameter-Free and Group Conditional Online Conformal Prediction",
+        "date": "2026-05-29",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.29200v3": {
+        "title": "Approximating full conformal prediction: distribution free guarantees via the tournament correction",
+        "date": "2026-05-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.11602v3": {
+        "title": "A Unified Theory of Conditional Coverage in Conformal Prediction with Applications",
+        "date": "2026-05-12",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

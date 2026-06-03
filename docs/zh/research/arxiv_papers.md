@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-02
+> 更新于: 2026-06-03
 
 ---
+### Conformal Language Modeling via Posterior Sampling 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-02
+- **链接**: [PDF](http://arxiv.org/abs/2606.03731v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于后验采样的共形语言建模方法，通过构造一个校准的高分区域作为条件事件，并设计针对条件序列生成的校准程序，实现了对目标风险的有效控制。其核心创新在于将共形预测的统计保证直接嵌入生成过程，而非事后过滤，从而在保持理论风险控制的同时提升了生成样本的连贯性与模型内在一致性。
+
+### Set-Preserving Calibration from Conformal P-Values to E-Values 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-02
+- **链接**: [PDF](http://arxiv.org/abs/2606.03600v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种新颖的P2E校准器，通过构造一个保序且保集合的评分函数，将共形p值转化为e值，并严格证明了该转化不改变原始p值诱导的预测集，从而克服了经典p值到e值校准器在共形预测中导致预测集过度保守的统计缺陷。在理论性质上，作者建立了该转化在合并依赖证据时的效率优势，并证明了基于e值的交叉共形预测和共形聚合方法能够严格保证目标覆盖概率，同时显著提升统计效率。
+
+### Parameter-Free and Group Conditional Online Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-29
+- **链接**: [PDF](http://arxiv.org/abs/2606.00419v2)
+
+!!! note "AI 核心解读"
+
+    该论文在统计推导上提出了一种无需学习率调参的在线共形预测算法，并严格证明了其能在数据分布非交换的对抗性环境下实现最优的分组条件覆盖保证；其核心创新在于构造了一种自适应的评分函数更新规则，使得分组误差控制与参数无关的在线学习理论得以统一，从而在理论上确保了分组覆盖率的长期累积界。
+
+### Approximating full conformal prediction: distribution free guarantees via the tournament correction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-28
+- **链接**: [PDF](http://arxiv.org/abs/2605.29200v3)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于“锦标赛校正”的通用近似框架，通过构造新的评分函数和引入双重覆盖校正机制，在无需数据分割的条件下，严格证明了预测集可实现至少 \(1-2\alpha\) 的边际覆盖保证，并在稳定性条件下将理论保证收紧至接近 \(1-\alpha\)。其统计推导统一并推广了留一交叉共形预测方法，为各类近似策略提供了分布自由的理论保障。
+
+### A Unified Theory of Conditional Coverage in Conformal Prediction with Applications 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-12
+- **链接**: [PDF](http://arxiv.org/abs/2605.11602v3)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于提出了一种非渐近的条件覆盖误差分解框架，将条件覆盖不足拆解为评分函数估计误差、有限样本校准误差与内在条件失配误差三个可解释分量。基于此分解，作者构造了面向条件覆盖的模型选择准则，并发展了在协变量偏移下具有渐近条件覆盖保证的局部化评分函数方法。
+
+
 ### A Distribution-Free Framework for Rewrite-Based Human-text Detection via Knockoff Filtering 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-05-29
