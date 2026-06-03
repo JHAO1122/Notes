@@ -64,7 +64,7 @@ Below is the directory for this course:
 
 * [x] [Chapter 13: U Statistics](13U.md)
 
-* [x] [Chapter 14: U Statistics](14U.md)
+* [x] [Chapter 14: Bootstrap](14Bootstrap.md)
 
 ### Part IV: 📝 Selected Solutions
 

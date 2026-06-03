@@ -60,9 +60,9 @@ tags:
 
 * [x] [第十二章：M 估计与 Z 估计（二）](11M&Z2.md)
 
-* [x] [第十三章：U统计量（一）](13U.md)
+* [x] [第十三章：U统计量](13U.md)
 
-* [x] [第十四章：U统计量（二）](14U.md)
+* [x] [第十四章: Bootstrap](14Bootstrap.md)
 
 ### 第四部分：📝 习题解答(Selected Solutions)
 

@@ -83,8 +83,8 @@ plugins:
             "第十章：极大似然估计（二）": "Ch 10: Maximum Likelihood Estimation II"
             "第十一章： M估计和Z估计 (一)": "Ch 11: M-Estimation and Z-Estimation I"
             "第十二章： M估计和Z估计 (二)": "Ch 12: M-Estimation and Z-Estimation II"
-            "第十三章： U统计量(一)": "Ch 13: U-Statistics I"
-            "第十四章： U统计量(二)": "Ch 14: U-Statistics II"
+            "第十三章： U统计量": "Ch 13: U-Statistics"
+            "第十四章： Bootstrap": "Ch 14: Bootstrap"
             "🌌 泛函分析": "🌌 Functional Analysis"
             "第一章：度量空间": "Ch 1: Distance Spaces"
             "第二章：拓扑与完备性": "Ch 2: Topology and Completeness"
@@ -189,8 +189,8 @@ nav:
               - 第十章：极大似然估计（二）: zh/Asymptotic-statistics/9MLE.md
               - 第十一章： M估计和Z估计 (一): zh/Asymptotic-statistics/10M&Z1.md
               - 第十二章： M估计和Z估计 (二) : zh/Asymptotic-statistics/11M&Z2.md
-              - 第十三章： U统计量(一): zh/Asymptotic-statistics/13U.md
-              - 第十四章： U统计量(二): zh/Asymptotic-statistics/14U.md
+              - 第十三章： U统计量: zh/Asymptotic-statistics/13U.md
+              - 第十四章： Bootstrap: zh/Asymptotic-statistics/14Bootstrap.md
           - 📝 习题:
               - AS Homework 1: zh/Asymptotic-statistics/sol_1.md
               - AS Homework 2: zh/Asymptotic-statistics/sol_2.md
