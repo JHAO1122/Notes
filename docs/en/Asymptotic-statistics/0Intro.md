@@ -12,7 +12,7 @@ tags:
 
     * **Offered by**: School of Mathematical Sciences & Center for Data Science
     
-    * **Prerequisites**: Mathematical Analysis, Advanced Algebra, Probability Theory, Mathematical Statistics, Functions of Real Variables
+    * **Prerequisites**: Mathematical Analysis, Advanced Algebra, Probability Theory, Mathematical Statistics, Functions of Real Variables, Functional Analysis (Recommended)
     
     * **Course Type**: 32-hour PhD Core Course
 
