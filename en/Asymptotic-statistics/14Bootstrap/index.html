@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#chapter-14-bootstrap" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1551,6 +1556,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 14: Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1568,6 +1593,581 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-from-wald-inference-to-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. From Wald Inference to Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. From Wald Inference to Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-first-order-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 First-order approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-edgeworth-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Edgeworth Expansion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-core-idea-of-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Core Idea of Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Core Idea of Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-correspondence-between-the-real-world-and-the-bootstrap-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Correspondence between the Real World and the Bootstrap World
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-two-main-uses-of-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Two Main Uses of Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-notations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Notations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-consistency-of-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Consistency of Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Consistency of Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-example-bootstrap-for-sample-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Example: Bootstrap for Sample Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-bootstrap-clt-for-sample-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Bootstrap CLT for Sample Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-example-where-bootstrap-fails-maximum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Example Where Bootstrap Fails: Maximum
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Example Where Bootstrap Fails: Maximum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-behavior-of-the-maximum-in-the-bootstrap-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Behavior of the Maximum in the Bootstrap World
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-why-does-it-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Why Does It Fail?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-bootstrap-delta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Bootstrap Delta Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-generalized-delta-method-and-functional-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Generalized Delta Method and Functional Derivatives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Generalized Delta Method and Functional Derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-gateaux-derivative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Gateaux Derivative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-frechet-and-hadamard-differentiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Frechet and Hadamard Differentiability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-asymptotic-linear-estimators-and-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Asymptotic Linear Estimators and Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Asymptotic Linear Estimators and Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-z-estimators-as-asymptotically-linear-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Z-estimators as Asymptotically Linear Estimators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bootstrap-consistency-of-asymptotically-linear-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Bootstrap Consistency of Asymptotically Linear Estimators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-bootstrap-for-z-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Bootstrap for Z-estimators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-bootstrap-for-m-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Bootstrap for M-estimators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-estimating-standard-errors-and-bias-with-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Estimating Standard Errors and Bias with Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Estimating Standard Errors and Bias with Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-estimating-standard-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Estimating Standard Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-estimating-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Estimating Bias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-bootstrap-confidence-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Bootstrap Confidence Intervals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Bootstrap Confidence Intervals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-normal-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Normal Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-basic-bootstrap-confidence-interval-pivotal-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Basic Bootstrap Confidence Interval (Pivotal Method)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-percentile-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Percentile Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-studentized-bootstrap-bootstrap-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Studentized Bootstrap (Bootstrap-t)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Studentized Bootstrap (Bootstrap-t)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-studentized-bootstrap-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Studentized Bootstrap Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-why-studentize-second-order-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Why Studentize? (Second-order accuracy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-double-bootstrap-iterated-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Double Bootstrap (Iterated Bootstrap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-bootstrap-for-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Bootstrap for Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Bootstrap for Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-method-1-residual-bootstrap-model-based-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Method 1: Residual Bootstrap (Model-based Bootstrap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-method-2-pairs-bootstrap-nonparametric-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Method 2: Pairs Bootstrap (Nonparametric Bootstrap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-when-does-bootstrap-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. When does Bootstrap fail?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. When does Bootstrap fail?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-1-heavy-tails-infinite-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1 1. Heavy tails / Infinite variance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-2-boundary-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2 2. Boundary parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-3-non-differentiable-functionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.3 3. Non-differentiable functionals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-remedies-for-failure-subsampling-and-m-out-of-n-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Remedies for Failure: Subsampling and m-out-of-n Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Remedies for Failure: Subsampling and m-out-of-n Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-subsampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.1 Subsampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-m-out-of-n-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.2 m-out-of-n Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4517,6 +5117,572 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-from-wald-inference-to-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. From Wald Inference to Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. From Wald Inference to Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-first-order-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 First-order approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-edgeworth-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Edgeworth Expansion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-core-idea-of-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Core Idea of Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Core Idea of Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-correspondence-between-the-real-world-and-the-bootstrap-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Correspondence between the Real World and the Bootstrap World
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-two-main-uses-of-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Two Main Uses of Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-notations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Notations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-consistency-of-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Consistency of Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Consistency of Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-example-bootstrap-for-sample-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Example: Bootstrap for Sample Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-bootstrap-clt-for-sample-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Bootstrap CLT for Sample Mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-example-where-bootstrap-fails-maximum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Example Where Bootstrap Fails: Maximum
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Example Where Bootstrap Fails: Maximum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-behavior-of-the-maximum-in-the-bootstrap-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Behavior of the Maximum in the Bootstrap World
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-why-does-it-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Why Does It Fail?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-bootstrap-delta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Bootstrap Delta Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-generalized-delta-method-and-functional-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Generalized Delta Method and Functional Derivatives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Generalized Delta Method and Functional Derivatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-gateaux-derivative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Gateaux Derivative
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-frechet-and-hadamard-differentiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Frechet and Hadamard Differentiability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-asymptotic-linear-estimators-and-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Asymptotic Linear Estimators and Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Asymptotic Linear Estimators and Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-z-estimators-as-asymptotically-linear-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Z-estimators as Asymptotically Linear Estimators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-bootstrap-consistency-of-asymptotically-linear-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Bootstrap Consistency of Asymptotically Linear Estimators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-bootstrap-for-z-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Bootstrap for Z-estimators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-bootstrap-for-m-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Bootstrap for M-estimators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-estimating-standard-errors-and-bias-with-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Estimating Standard Errors and Bias with Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Estimating Standard Errors and Bias with Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-estimating-standard-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Estimating Standard Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-estimating-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Estimating Bias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-bootstrap-confidence-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Bootstrap Confidence Intervals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Bootstrap Confidence Intervals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-normal-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Normal Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-basic-bootstrap-confidence-interval-pivotal-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Basic Bootstrap Confidence Interval (Pivotal Method)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-percentile-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Percentile Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-studentized-bootstrap-bootstrap-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Studentized Bootstrap (Bootstrap-t)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Studentized Bootstrap (Bootstrap-t)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-studentized-bootstrap-confidence-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Studentized Bootstrap Confidence Interval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-why-studentize-second-order-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Why Studentize? (Second-order accuracy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-double-bootstrap-iterated-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Double Bootstrap (Iterated Bootstrap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-bootstrap-for-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Bootstrap for Regression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Bootstrap for Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-method-1-residual-bootstrap-model-based-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Method 1: Residual Bootstrap (Model-based Bootstrap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-method-2-pairs-bootstrap-nonparametric-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Method 2: Pairs Bootstrap (Nonparametric Bootstrap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-when-does-bootstrap-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. When does Bootstrap fail?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. When does Bootstrap fail?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-1-heavy-tails-infinite-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1 1. Heavy tails / Infinite variance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-2-boundary-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2 2. Boundary parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-3-non-differentiable-functionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.3 3. Non-differentiable functionals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-remedies-for-failure-subsampling-and-m-out-of-n-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Remedies for Failure: Subsampling and m-out-of-n Bootstrap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Remedies for Failure: Subsampling and m-out-of-n Bootstrap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171-subsampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.1 Subsampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-m-out-of-n-bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17.2 m-out-of-n Bootstrap
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Final Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4537,9 +5703,679 @@
   
 
 
-  <h1>Ch 14: Bootstrap</h1>
-
-
+<h1 id="chapter-14-bootstrap">Chapter 14: Bootstrap</h1>
+<hr />
+<h2 id="1-from-wald-inference-to-bootstrap">1. From Wald Inference to Bootstrap</h2>
+<p>In previous chapters, we have obtained asymptotic normality for many estimators. For example:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrow N(0, \Sigma)
+\]</div>
+<p>For regular M-estimators, we have:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrow N(0, A^{-1}BA^{-1})
+\]</div>
+<p>For regular maximum likelihood estimators (MLE), we have:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrow N(0, I(\theta_0)^{-1})
+\]</div>
+<p><strong>Raising the question:</strong> Since we already have asymptotic normality, why do we still need the Bootstrap?</p>
+<h3 id="11-first-order-approximation">1.1 First-order approximation</h3>
+<p>Let <span class="arithmatex">\(T_n\)</span> be a standardized or studentized statistic:</p>
+<div class="arithmatex">\[
+T_n = \frac{\hat{\theta}_n - \theta_0}{\hat{se}_n}
+\]</div>
+<p>The usual Wald approximation is:</p>
+<div class="arithmatex">\[
+P(T_n \le x) \approx \Phi(x)
+\]</div>
+<p>This is called a <strong>first-order approximation</strong>. In many regular problems, the error order is:</p>
+<div class="arithmatex">\[
+P(T_n \le x) = \Phi(x) + O(n^{-1/2})
+\]</div>
+<ul>
+<li>
+<p>This approximation successfully captures the center and variance of the limiting distribution.</p>
+</li>
+<li>
+<p>However, it typically ignores skewness, bias, and curvature effects.</p>
+</li>
+<li>
+<p>These ignored effects are usually of order <span class="arithmatex">\(O(n^{-1/2})\)</span>.</p>
+</li>
+</ul>
+<h3 id="12-edgeworth-expansion">1.2 Edgeworth Expansion</h3>
+<p>To obtain higher-order approximations, we can use an Edgeworth expansion:</p>
+<div class="arithmatex">\[
+P(T_n \le x) = \Phi(x) + n^{-1/2} p_1(x) \phi(x) + n^{-1} p_2(x) \phi(x) + \dots + O(n^{-k/2})
+\]</div>
+<ul>
+<li>
+<p>Here <span class="arithmatex">\(p_1(x)\)</span> is a polynomial related to the population <strong>skewness</strong>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p_2(x)\)</span> is a polynomial related to the population <strong>kurtosis</strong>.</p>
+</li>
+<li>
+<p>However, these polynomials <span class="arithmatex">\(p_1, p_2\)</span> depend on unknown population moments and are difficult to compute analytically in practice.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-core-idea-of-bootstrap">2. Core Idea of Bootstrap</h2>
+<p>The Bootstrap (resampling method) proposed by Efron (1979) provides an extremely ingenious solution.</p>
+<p><strong>Core idea:</strong> Replace the unknown population distribution <span class="arithmatex">\(P\)</span> with the empirical distribution <span class="arithmatex">\(\mathbb{P}_n\)</span>.
+Sample from <span class="arithmatex">\(\mathbb{P}_n\)</span> to mimic the process of sampling from the true distribution <span class="arithmatex">\(P\)</span>.</p>
+<p>What is most remarkable is that this extremely simple data-driven operation <strong>automatically captures higher-order terms!</strong></p>
+<h3 id="21-correspondence-between-the-real-world-and-the-bootstrap-world">2.1 Correspondence between the Real World and the Bootstrap World</h3>
+<ul>
+<li>
+<p><strong>The Real World</strong>:
+  Unknown population distribution <span class="arithmatex">\(P \implies\)</span> draw sample <span class="arithmatex">\(X_1, \dots, X_n \implies\)</span> compute estimator <span class="arithmatex">\(\hat{\theta}_n\)</span></p>
+</li>
+<li>
+<p><strong>The Bootstrap World</strong>:
+  Empirical distribution <span class="arithmatex">\(\mathbb{P}_n \implies\)</span> draw Bootstrap sample <span class="arithmatex">\(X_1^*, \dots, X_n^* \implies\)</span> compute Bootstrap estimator <span class="arithmatex">\(\hat{\theta}_n^*\)</span></p>
+</li>
+</ul>
+<p>The cornerstone of Bootstrap inference is: <strong>the distribution of <span class="arithmatex">\(\hat{\theta}_n^*\)</span> relative to <span class="arithmatex">\(\hat{\theta}_n\)</span> in the Bootstrap world mimics extremely well the distribution of <span class="arithmatex">\(\hat{\theta}_n\)</span> relative to <span class="arithmatex">\(\theta_0\)</span> in the real world.</strong></p>
+<h3 id="22-two-main-uses-of-bootstrap">2.2 Two Main Uses of Bootstrap</h3>
+<ul>
+<li>
+<p><strong>1. Estimating distribution and standard errors</strong>: When the analytic form of the estimator's variance is too complex or difficult to derive, Bootstrap provides a computation-based nonparametric estimation method.</p>
+</li>
+<li>
+<p><strong>2. Refining approximations</strong>: Used to replace the first-order normal approximation, automatically implementing Edgeworth corrections, thus obtaining confidence intervals with smaller error bounds (e.g., <span class="arithmatex">\(O(n^{-1})\)</span> instead of <span class="arithmatex">\(O(n^{-1/2})\)</span>).</p>
+</li>
+</ul>
+<h3 id="23-notations">2.3 Notations</h3>
+<ul>
+<li>
+<p><strong>Original data</strong>: <span class="arithmatex">\(X_1, \dots, X_n \sim P\)</span></p>
+</li>
+<li>
+<p><strong>Empirical measure</strong>: <span class="arithmatex">\(\mathbb{P}_n = \frac{1}{n} \sum_{i=1}^n \delta_{X_i}\)</span></p>
+</li>
+<li>
+<p><strong>Bootstrap sample</strong>: <span class="arithmatex">\(X_1^*, \dots, X_n^*\)</span> are drawn independently <strong>with replacement</strong> from <span class="arithmatex">\(\mathbb{P}_n\)</span>. That is, <span class="arithmatex">\(X_i^* \sim \mathbb{P}_n\)</span>.</p>
+</li>
+<li>
+<p><strong>Bootstrap empirical measure</strong>: <span class="arithmatex">\(\mathbb{P}_n^* = \frac{1}{n} \sum_{i=1}^n \delta_{X_i^*}\)</span></p>
+</li>
+<li>
+<p><strong>Estimator</strong>: <span class="arithmatex">\(\hat{\theta}_n = T(\mathbb{P}_n)\)</span></p>
+</li>
+<li>
+<p><strong>Bootstrap estimator</strong>: <span class="arithmatex">\(\hat{\theta}_n^* = T(\mathbb{P}_n^*)\)</span></p>
+</li>
+</ul>
+<hr />
+<h2 id="3-consistency-of-bootstrap">3. Consistency of Bootstrap</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.1 (Consistency of Bootstrap)</p>
+<p>If, given the original data, the conditional distribution of <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n)\)</span> converges weakly to the same limit as the unconditional distribution of <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_n - \theta_0)\)</span>, then the Bootstrap is called <strong>consistent</strong>.</p>
+</div>
+<p>Specifically, define the true cumulative distribution function as:</p>
+<div class="arithmatex">\[
+R_n(x, P) = P(\sqrt{n}(\hat{\theta}_n - \theta_0) \le x)
+\]</div>
+<p>The Bootstrap estimated distribution function (conditional distribution) is:</p>
+<div class="arithmatex">\[
+R_n(x, \mathbb{P}_n) = P^*(\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) \le x \mid X_1, \dots, X_n)
+\]</div>
+<p>Then Bootstrap consistency means:</p>
+<div class="arithmatex">\[
+\sup_x |R_n(x, \mathbb{P}_n) - R_n(x, P)| \xrightarrow{P} 0 \quad (\text{or almost surely a.s.})
+\]</div>
+<h3 id="31-example-bootstrap-for-sample-mean">3.1 Example: Bootstrap for Sample Mean</h3>
+<div class="admonition example">
+<p class="admonition-title">Example 10.2 (Sample Mean)</p>
+<p>Let <span class="arithmatex">\(X_i \sim P\)</span>, with mean <span class="arithmatex">\(\mu\)</span> and variance <span class="arithmatex">\(\sigma^2\)</span>. The target parameter <span class="arithmatex">\(\theta_0 = \mu\)</span>, estimator <span class="arithmatex">\(\hat{\theta}_n = \bar{X}_n\)</span>.</p>
+<p>By the Central Limit Theorem (CLT), in the real world:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2)
+\]</div>
+<p>Now examine the Bootstrap world: Draw <span class="arithmatex">\(X_1^*, \dots, X_n^* \sim \mathbb{P}_n\)</span>.</p>
+<p>The Bootstrap estimator is <span class="arithmatex">\(\hat{\theta}_n^* = \bar{X}_n^* = \frac{1}{n}\sum_{i=1}^n X_i^*\)</span>.</p>
+<p>Given the original data <span class="arithmatex">\((X_1, \dots, X_n)\)</span>, compute conditional expectation and conditional variance:</p>
+<ul>
+<li><strong>Conditional expectation</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+E^*(\bar{X}_n^*) = E^*(X_1^*) = \frac{1}{n} \sum_{i=1}^n X_i = \bar{X}_n
+\]</div>
+<ul>
+<li><strong>Conditional variance</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+Var^*(\sqrt{n}\bar{X}_n^*) = Var^*(X_1^*) = \frac{1}{n} \sum_{i=1}^n (X_i - \bar{X}_n)^2 = \hat{\sigma}_n^2
+\]</div>
+</div>
+<h3 id="32-bootstrap-clt-for-sample-mean">3.2 Bootstrap CLT for Sample Mean</h3>
+<p>Since <span class="arithmatex">\(X_1^*, \dots, X_n^*\)</span> are i.i.d. conditional on the original data, we can apply the Lindeberg-Feller CLT or Berry-Esseen theorem to the Bootstrap sample.</p>
+<p>Also, because the sample variance is consistent by the law of large numbers: <span class="arithmatex">\(\hat{\sigma}_n^2 \xrightarrow{p} \sigma^2\)</span>, so:</p>
+<div class="arithmatex">\[
+\sup_x \left| P^*(\sqrt{n}(\bar{X}_n^* - \bar{X}_n) \le x) - \Phi(x/\hat{\sigma}_n) \right| \xrightarrow{P} 0
+\]</div>
+<p>At the same time, since <span class="arithmatex">\(\hat{\sigma}_n \xrightarrow{p} \sigma\)</span> and the normal cumulative distribution function <span class="arithmatex">\(\Phi\)</span> is continuous:</p>
+<div class="arithmatex">\[
+\Phi(x/\hat{\sigma}_n) \xrightarrow{P} \Phi(x/\sigma)
+\]</div>
+<p>Thus we conclude that the Bootstrap for the sample mean is consistent.</p>
+<p><strong>Remark: Why not directly use <span class="arithmatex">\(N(0, \hat{\sigma}_n^2)\)</span>?</strong>
+For the simple sample mean, using the normal approximation directly is indeed sufficient. However, for complex estimators (such as sample median, general M-estimators, etc.), the analytic form of the asymptotic variance <span class="arithmatex">\(\Sigma\)</span> may be very complex or difficult to estimate accurately. Bootstrap cleverly bypasses the step of explicitly computing the asymptotic variance.</p>
+<hr />
+<h2 id="4-example-where-bootstrap-fails-maximum">4. Example Where Bootstrap Fails: Maximum</h2>
+<p>The Bootstrap is <strong>not</strong> consistent in all cases. For extremal statistics or parameters on the boundary, the standard Bootstrap fails.</p>
+<div class="admonition warning">
+<p class="admonition-title">Example 10.3 (Bootstrap Failure: The Maximum)</p>
+<p>Suppose <span class="arithmatex">\(X_i \sim U(0, \theta)\)</span> are i.i.d. samples from a uniform distribution.</p>
+<p>We want to estimate the parameter <span class="arithmatex">\(\theta\)</span>. The natural choice is the maximum statistic:</p>
+<div class="arithmatex">\[
+\hat{\theta}_n = X_{(n)} = \max_{1 \le i \le n}(X_i)
+\]</div>
+<p>In the real world, the maximum has the following extreme value limiting distribution:</p>
+<div class="arithmatex">\[
+n(\theta - X_{(n)}) \xrightarrow{d} \text{Exp}(1/\theta)
+\]</div>
+<p>where the limiting distribution is an exponential distribution.</p>
+</div>
+<h3 id="41-behavior-of-the-maximum-in-the-bootstrap-world">4.1 Behavior of the Maximum in the Bootstrap World</h3>
+<p>Now let's see what happens in the Bootstrap world.
+The Bootstrap estimator is <span class="arithmatex">\(\hat{\theta}_n^* = X_{(n)}^* = \max_{1 \le i \le n}(X_i^*)\)</span>.</p>
+<p>Compute the probability that the Bootstrap maximum equals the original sample maximum:</p>
+<div class="arithmatex">\[
+P^*(X_{(n)}^* = X_{(n)}) = P^*(\text{at least one } X_i^* \text{ equals } X_{(n)})
+\]</div>
+<p>This equals <span class="arithmatex">\(1\)</span> minus the probability that none of the Bootstrap samples equals <span class="arithmatex">\(X_{(n)}\)</span>. Since the probability of not drawing <span class="arithmatex">\(X_{(n)}\)</span> in one draw is <span class="arithmatex">\(1 - 1/n\)</span>:</p>
+<div class="arithmatex">\[
+P^*(X_{(n)}^* = X_{(n)}) = 1 - \left(1 - \frac{1}{n}\right)^n
+\]</div>
+<p>As <span class="arithmatex">\(n \rightarrow \infty\)</span>, we have the very famous limit:</p>
+<div class="arithmatex">\[
+1 - \left(1 - \frac{1}{n}\right)^n \rightarrow 1 - e^{-1} \approx 0.632
+\]</div>
+<ul>
+<li>
+<p><strong>Real world</strong>: Since the population is continuous, <span class="arithmatex">\(P(X_{(n)} = \theta) = 0\)</span>.</p>
+</li>
+<li>
+<p><strong>Bootstrap world</strong>: The Bootstrap distribution has a huge <strong>point mass</strong> of approximately <span class="arithmatex">\(0.632\)</span> at the point <span class="arithmatex">\(0\)</span>!</p>
+</li>
+</ul>
+<p>Clearly, a Bootstrap distribution containing a huge point mass can never converge to a continuous exponential distribution. Therefore, <strong>Bootstrap fails here</strong>.</p>
+<h3 id="42-why-does-it-fail">4.2 Why Does It Fail?</h3>
+<p>The fundamental reason is the conflict between discreteness and continuity:
+The empirical distribution <span class="arithmatex">\(\mathbb{P}_n\)</span> is essentially a <strong>discrete distribution</strong>, while the true population distribution <span class="arithmatex">\(P\)</span> is <strong>continuous</strong> at the boundary.
+Extremal statistics are extremely sensitive to such local discrete properties of the empirical distribution.</p>
+<p><em>(A common approach to solve such problems is to use "m-out-of-n bootstrap" or subsampling, where the resampling size <span class="arithmatex">\(m\)</span> is much smaller than the original sample size <span class="arithmatex">\(n\)</span>.)</em></p>
+<hr />
+<h2 id="5-bootstrap-delta-method">5. Bootstrap Delta Method</h2>
+<p>If a statistic <span class="arithmatex">\(T_n\)</span> is Bootstrap-consistent, is <span class="arithmatex">\(g(T_n)\)</span> after a nonlinear smooth transformation still consistent? The answer is yes.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 10.4 (Bootstrap Delta Method)</p>
+<p>Suppose in the real world <span class="arithmatex">\(\sqrt{n}(T_n - \theta) \xrightarrow{d} T\)</span>.</p>
+<p>Let the function <span class="arithmatex">\(g\)</span> be differentiable at <span class="arithmatex">\(\theta\)</span> with derivative <span class="arithmatex">\(g'(\theta)\)</span>.</p>
+<p>If <span class="arithmatex">\(T_n\)</span> is Bootstrap-consistent, then the Bootstrap is also consistent for <span class="arithmatex">\(g(T_n)\)</span>. That is, conditional on the data, we have:</p>
+<div class="arithmatex">\[
+\sqrt{n}(g(T_n^*) - g(T_n)) \xrightarrow{d} g'(\theta) T \quad \text{(under } P^* \text{ measure)}
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof Outline of Theorem 10.4 (Click to Expand)</summary>
+<p>Use the Mean Value Theorem or Taylor expansion:</p>
+<div class="arithmatex">\[
+g(T_n^*) - g(T_n) = g'(\tilde{T}_n^*)(T_n^* - T_n)
+\]</div>
+<p>where <span class="arithmatex">\(\tilde{T}_n^*\)</span> lies between <span class="arithmatex">\(T_n^*\)</span> and <span class="arithmatex">\(T_n\)</span>.</p>
+<p>Since <span class="arithmatex">\(T_n\)</span> is Bootstrap-consistent, under the conditional measure <span class="arithmatex">\(\sqrt{n}(T_n^* - T_n) = O_{P^*}(1)\)</span>, i.e., it is bounded in <span class="arithmatex">\(P^*\)</span> probability.</p>
+<p>At the same time, since in the real world <span class="arithmatex">\(T_n \xrightarrow{p} \theta\)</span>, this implies <span class="arithmatex">\(T_n^* \xrightarrow{p^*} \theta\)</span>.</p>
+<p>Because <span class="arithmatex">\(\tilde{T}_n^*\)</span> is sandwiched between them, <span class="arithmatex">\(\tilde{T}_n^* \xrightarrow{p^*} \theta\)</span>.</p>
+<p>Since the derivative is continuous, we have <span class="arithmatex">\(g'(\tilde{T}_n^*) \xrightarrow{p^*} g'(\theta)\)</span>.</p>
+<p>Finally, applying Slutsky's theorem to the product, since one part converges in conditional probability to a constant matrix and the other part converges in conditional distribution to <span class="arithmatex">\(T\)</span>, we obtain:</p>
+<div class="arithmatex">\[
+\sqrt{n}(g(T_n^*) - g(T_n)) \xrightarrow{d} g'(\theta) T
+\]</div>
+<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="6-generalized-delta-method-and-functional-derivatives">6. Generalized Delta Method and Functional Derivatives</h2>
+<p>For parametric models, parameters are typically just functions of moments, and the classical Delta method suffices.
+However, in nonparametric problems, the parameter of interest is often a functional of the entire distribution:</p>
+<div class="arithmatex">\[
+\theta = \phi(P)
+\]</div>
+<p>The corresponding plug-in estimator is:</p>
+<div class="arithmatex">\[
+\hat{\theta}_n = \phi(\mathbb{P}_n)
+\]</div>
+<p>To apply the Delta method to such functionals, we need the concept of a <strong>generalized derivative for functionals</strong>.</p>
+<h3 id="61-gateaux-derivative">6.1 Gateaux Derivative</h3>
+<p>The Gateaux derivative is analogous to the <strong>directional derivative</strong> in multivariate calculus.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition (Gateaux Derivative)</p>
+<p>If the limit:</p>
+<div class="arithmatex">\[
+\lim_{t \downarrow 0} \frac{\phi((1-t)P + tH) - \phi(P)}{t} = \int \phi'_P d(H-P)
+\]</div>
+<p>exists and is linear in the direction <span class="arithmatex">\((H-P)\)</span>, then the functional <span class="arithmatex">\(\phi\)</span> is said to be <strong>Gateaux differentiable</strong> at <span class="arithmatex">\(P\)</span> in the direction <span class="arithmatex">\(H-P\)</span>.</p>
+</div>
+<h3 id="62-frechet-and-hadamard-differentiability">6.2 Frechet and Hadamard Differentiability</h3>
+<p>Gateaux differentiability only guarantees convergence along a single fixed direction. In functional analysis this is often insufficient; some form of uniform convergence is required.</p>
+<ul>
+<li>
+<p><strong>Frechet differentiability</strong>: requires the limit to be uniform over <strong>all directions</strong>. This is often too strong.</p>
+</li>
+<li>
+<p><strong>Hadamard differentiability</strong>: also called <strong>compact differentiability</strong>. It requires the limit to be uniform over <strong>compact sets of directions</strong>.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Definition (Hadamard Differentiability)</p>
+<p>Let <span class="arithmatex">\(\phi: \mathcal{P} \to \mathbb{R}\)</span>. If for any sequence of directions <span class="arithmatex">\(H_t\)</span> such that <span class="arithmatex">\(H_t \to H\)</span> as <span class="arithmatex">\(t \to 0\)</span>, we have:</p>
+<div class="arithmatex">\[
+\frac{\phi(P + t H_t) - \phi(P)}{t} \to \phi'_P(H)
+\]</div>
+<p>then <span class="arithmatex">\(\phi\)</span> is said to be Hadamard differentiable at <span class="arithmatex">\(P\)</span>.</p>
+</div>
+<p><strong>Why does statistics favor Hadamard differentiability?</strong>
+Because, by Prohorov's theorem, weak convergence of empirical processes is inherently related to compact sets in infinite-dimensional spaces. Hadamard differentiability provides exactly the requisite uniformity for applying the Continuous Mapping Theorem and the nonparametric Delta method.</p>
+<h2 id="7-asymptotic-linear-estimators-and-bootstrap">7. Asymptotic Linear Estimators and Bootstrap</h2>
+<p>Many widely used estimators in practice can be expressed as (or approximated by) averages of i.i.d. random variables. This leads to the concept of asymptotic linear estimators.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.5 (Asymptotically linear estimator)</p>
+<p>An estimator <span class="arithmatex">\(\hat{\theta}_n\)</span> is said to be an <strong>asymptotically linear estimator</strong> of the parameter <span class="arithmatex">\(\theta(P_0)\)</span> if it can be expanded as:</p>
+<div class="arithmatex">\[
+\hat{\theta}_n - \theta_0 = \frac{1}{n} \sum_{i=1}^n \dot{\phi}_{P_0}(X_i) + o_P(n^{-1/2})
+\]</div>
+<p>where the function <span class="arithmatex">\(\dot{\phi}_{P_0}(x)\)</span> is called the <strong>influence function</strong> and satisfies:</p>
+<div class="arithmatex">\[
+E_{P_0} \dot{\phi}_{P_0}(X) = 0, \quad E_{P_0} \|\dot{\phi}_{P_0}(X)\|^2 &lt; \infty
+\]</div>
+</div>
+<h3 id="71-z-estimators-as-asymptotically-linear-estimators">7.1 Z-estimators as Asymptotically Linear Estimators</h3>
+<p>Z-estimators are an excellent example of asymptotically linear estimators. Recalling the theorem on asymptotic normality of Z-estimators, if the estimator satisfies the estimating equation <span class="arithmatex">\(\Psi_n(\hat{\theta}_n) = 0\)</span>, then under certain regularity conditions we have:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n - \theta_0) = \frac{1}{\sqrt{n}} \sum_{i=1}^n (-V_{\theta_0}^{-1} \psi_{\theta_0}(X_i)) + o_P(1)
+\]</div>
+<p>Comparing with the definition, we see that the Z-estimator is asymptotically linear with <strong>influence function</strong>:</p>
+<div class="arithmatex">\[
+\dot{\phi}_{P_0}(x) = -V_{\theta_0}^{-1} \psi_{\theta_0}(x)
+\]</div>
+<hr />
+<h2 id="8-bootstrap-consistency-of-asymptotically-linear-estimators">8. Bootstrap Consistency of Asymptotically Linear Estimators</h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem 10.5 (Bootstrap Consistency of Asymptotically Linear Estimators)</p>
+<p>Suppose <span class="arithmatex">\(\hat{\theta}_n\)</span> is an asymptotically linear estimator of <span class="arithmatex">\(\theta(P_0)\)</span> with influence function <span class="arithmatex">\(\dot{\phi}_{P_0}(x)\)</span>. Let <span class="arithmatex">\(\hat{\theta}_n^*\)</span> be the bootstrap estimator obtained by applying the same estimation procedure to the bootstrap sample <span class="arithmatex">\(\mathbb{P}_n^*\)</span>.</p>
+<p>If <span class="arithmatex">\(E_{P_0} \|\dot{\phi}_{P_0}(X)\|^2 &lt; \infty\)</span>, and conditional on the original sample, under the bootstrap probability measure <span class="arithmatex">\(P^*\)</span> we have the following asymptotic linear expansion:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) = \frac{1}{\sqrt{n}} \sum_{i=1}^n (\dot{\phi}_{P_0}(X_i^*) - \mathbb{P}_n \dot{\phi}_{P_0}) + o_{P^*}(1)
+\]</div>
+<p>then the bootstrap is consistent.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 10.5 (Click to Expand)</summary>
+<p><strong>Step 1: Convert to an i.i.d. mean sequence</strong></p>
+<p>Let <span class="arithmatex">\(Y_i = \dot{\phi}_{P_0}(X_i)\)</span>. By the law of large numbers and the given conditions:</p>
+<div class="arithmatex">\[
+\bar{Y}_n = \mathbb{P}_n \dot{\phi}_{P_0} \xrightarrow{p} E_{P_0} \dot{\phi}_{P_0}(X) = 0
+\]</div>
+<p>In the bootstrap sampling, <span class="arithmatex">\(X_1^*, \dots, X_n^*\)</span> are i.i.d. draws with replacement from the empirical distribution <span class="arithmatex">\(\mathbb{P}_n\)</span>. Define the corresponding bootstrap random variables:</p>
+<div class="arithmatex">\[
+Y_i^* = \dot{\phi}_{P_0}(X_i^*)
+\]</div>
+<p>Given the original data <span class="arithmatex">\(X_1, \dots, X_n\)</span>, the variables <span class="arithmatex">\(Y_1^*, \dots, Y_n^*\)</span> are i.i.d., and their expectation and variance under the bootstrap measure are:</p>
+<ul>
+<li><strong>Conditional expectation</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+E^*(Y_1^*) = \bar{Y}_n = \mathbb{P}_n \dot{\phi}_{P_0}
+\]</div>
+<ul>
+<li><strong>Conditional variance</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+Var^*(Y_1^*) = \frac{1}{n} \sum_{i=1}^n (Y_i - \bar{Y}_n)^2 = \frac{1}{n} \sum_{i=1}^n Y_i^2 - (\bar{Y}_n)^2
+\]</div>
+<p>Since <span class="arithmatex">\(E_{P_0} Y_1^2 &lt; \infty\)</span> and <span class="arithmatex">\(E_{P_0} Y_1 = 0\)</span>, by the law of large numbers:</p>
+<div class="arithmatex">\[
+Var^*(Y_1^*) \xrightarrow{p} E_{P_0} Y_1^2 \quad (\text{as } n \rightarrow \infty)
+\]</div>
+<p><strong>Step 2: Apply the Lindeberg-Feller central limit theorem</strong></p>
+<p>We need to verify that, conditional on the data, the sequence <span class="arithmatex">\(\frac{1}{\sqrt{n}} \sum_{i=1}^n (Y_i^* - \bar{Y}_n)\)</span> satisfies the Lindeberg condition. Specifically, for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>, we need to show:</p>
+<div class="arithmatex">\[
+E^* \left[ (Y_1^* - \bar{Y}_n)^2 I(|Y_1^* - \bar{Y}_n| &gt; \epsilon \sqrt{n}) \right] \xrightarrow{p} 0
+\]</div>
+<p>Expand the expectation under the bootstrap measure:</p>
+<div class="arithmatex">\[
+= \frac{1}{n} \sum_{i=1}^n (Y_i - \bar{Y}_n)^2 I(|Y_i - \bar{Y}_n| &gt; \epsilon \sqrt{n})
+\]</div>
+<p>Using the inequality <span class="arithmatex">\((a-b)^2 \le 2a^2 + 2b^2\)</span> and noting that when <span class="arithmatex">\(|Y_i - \bar{Y}_n| &gt; \epsilon \sqrt{n}\)</span>, we must have either <span class="arithmatex">\(|Y_i| &gt; \frac{\epsilon}{2}\sqrt{n}\)</span> or <span class="arithmatex">\(|\bar{Y}_n| &gt; \frac{\epsilon}{2}\sqrt{n}\)</span>, we obtain:</p>
+<div class="arithmatex">\[
+\le \frac{1}{n} \sum_{i=1}^n 2(Y_i^2 + \bar{Y}_n^2) \left[ I\left(|Y_i| &gt; \frac{\epsilon}{2}\sqrt{n}\right) + I\left(|\bar{Y}_n| &gt; \frac{\epsilon}{2}\sqrt{n}\right) \right]
+\]</div>
+<p>Since <span class="arithmatex">\(E_{P_0} Y_1^2 &lt; \infty\)</span>, by the dominated convergence theorem:</p>
+<div class="arithmatex">\[
+E_{P_0} \left[ Y_1^2 I\left(|Y_1| &gt; \frac{\epsilon}{2}\sqrt{n}\right) \right] \rightarrow 0
+\]</div>
+<p>And we know <span class="arithmatex">\(\bar{Y}_n \xrightarrow{p} 0\)</span>. Therefore, the above bound converges to 0 in probability. This verifies the Lindeberg condition.</p>
+<p><strong>Step 3: Conclude</strong></p>
+<p>By the Lindeberg-Feller central limit theorem, we obtain:</p>
+<div class="arithmatex">\[
+\frac{1}{\sqrt{n}} \sum_{i=1}^n (Y_i^* - \bar{Y}_n) \xrightarrow{d} N(0, E_{P_0} Y_1^2) \quad \text{(under } P^* \text{)}
+\]</div>
+<p>Combined with the given condition:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) = \frac{1}{\sqrt{n}} \sum_{i=1}^n (Y_i^* - \bar{Y}_n) + o_{P^*}(1)
+\]</div>
+<p>By Slutsky’s theorem, the limiting distribution of the bootstrap replicates that of <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_n - \theta_0)\)</span> in the real world, so the bootstrap is consistent. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="9-bootstrap-for-z-estimators">9. Bootstrap for Z-estimators</h2>
+<p>For a Z-estimator, the original estimator <span class="arithmatex">\(\hat{\theta}_n\)</span> satisfies an estimating equation:</p>
+<div class="arithmatex">\[
+\Psi_n(\theta) = \mathbb{P}_n \psi_\theta = 0 \quad (\text{or } = o_P(n^{-1/2}))
+\]</div>
+<p>In the bootstrap world, the corresponding bootstrap Z-estimator <span class="arithmatex">\(\hat{\theta}_n^*\)</span> is defined to satisfy the estimating equation based on the empirical measure <span class="arithmatex">\(\mathbb{P}_n^*\)</span>:</p>
+<div class="arithmatex">\[
+\Psi_n^*(\theta) = \mathbb{P}_n^* \psi_\theta = 0 \quad (\text{or } = o_{P^*}(n^{-1/2}))
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 10.6 (Bootstrap Consistency of Z-estimators)</p>
+<p>Assume all standard conditions for asymptotic normality of Z-estimators hold. Further assume the bootstrap estimator <span class="arithmatex">\(\hat{\theta}_n^*\)</span> satisfies:</p>
+<div class="arithmatex">\[
+\sqrt{n}\mathbb{P}_n^* \psi_{\hat{\theta}_n^*} = o_{P^*}(1)
+\]</div>
+<p>and is consistent in conditional probability: <span class="arithmatex">\(\hat{\theta}_n^* \xrightarrow{P} \theta_0\)</span>.</p>
+<p>Then, under the bootstrap measure, analogous to the original Taylor expansion, we have the following asymptotic linear representation:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) = -V_{\theta_0}^{-1} \sqrt{n}(\mathbb{P}_n^* - \mathbb{P}_n)\psi_{\theta_0} + o_{P^*}(1)
+\]</div>
+</div>
+<p><strong>Remark on Theorem 10.6:</strong></p>
+<ul>
+<li>We need to show that <span class="arithmatex">\(\hat{\theta}_n^*\)</span> is consistent for <span class="arithmatex">\(\theta_0\)</span> in <span class="arithmatex">\(P^*\)</span>-probability.</li>
+<li>In practical computational implementation, we do not necessarily have to solve this optimization problem exactly, which is often non-convex. To avoid computational cost, we often start from <span class="arithmatex">\(\hat{\theta}_n\)</span> and perform a <strong>one-step</strong> Newton-Raphson iteration; the resulting one-step bootstrap estimator already guarantees asymptotic consistency.</li>
+</ul>
+<hr />
+<h2 id="10-bootstrap-for-m-estimators">10. Bootstrap for M-estimators</h2>
+<p>For an M-estimator, the original estimator <span class="arithmatex">\(\hat{\theta}_n\)</span> maximizes the random criterion function <span class="arithmatex">\(\mathbb{P}_n m_\theta\)</span>.
+Similarly, the bootstrap M-estimator <span class="arithmatex">\(\hat{\theta}_n^*\)</span> maximizes the bootstrap criterion function <span class="arithmatex">\(\mathbb{P}_n^* m_\theta\)</span>.</p>
+<p>In the theory of M-estimators, we expand the objective function around the maximum as a quadratic (similar to a first-order Taylor expansion of the derivative for Z-estimators).</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 10.7 (Bootstrap Consistency of M-estimators)</p>
+<p>Assume all standard conditions for asymptotic normality of M-estimators hold, and <span class="arithmatex">\(\hat{\theta}_n^*\)</span> is consistent in conditional probability: <span class="arithmatex">\(\hat{\theta}_n^* \xrightarrow{P} \theta_0\)</span>.</p>
+<p>Then, under the bootstrap measure, we have the following expansion:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) = -V_{\theta_0}^{-1} \sqrt{n}(\mathbb{P}_n^* - \mathbb{P}_n)\dot{m}_{\theta_0} + o_{P^*}(1)
+\]</div>
+<p>This shows that M-estimators are bootstrap-consistent and can be expressed in an asymptotically linear form.</p>
+</div>
+<hr />
+<h2 id="11-estimating-standard-errors-and-bias-with-bootstrap">11. Estimating Standard Errors and Bias with Bootstrap</h2>
+<p>Through the bootstrap, we can directly estimate the standard error and bias of a statistic using computation and resampling, without deriving complex analytical asymptotic expressions.</p>
+<h3 id="111-estimating-standard-errors">11.1 Estimating Standard Errors</h3>
+<p>The steps to compute the bootstrap standard error are as follows:</p>
+<ol>
+<li>Draw <span class="arithmatex">\(B\)</span> independent bootstrap samples with replacement from the original sample.</li>
+<li>For each bootstrap sample, compute the corresponding estimator, denoted <span class="arithmatex">\(\hat{\theta}_{n,1}^*, \dots, \hat{\theta}_{n,B}^*\)</span>.</li>
+<li>Compute the sample standard deviation of these <span class="arithmatex">\(B\)</span> estimators as the bootstrap estimate of the standard error <span class="arithmatex">\(\widehat{se}_B\)</span>:</li>
+</ol>
+<div class="arithmatex">\[
+\widehat{se}_B = \sqrt{ \frac{1}{B-1} \sum_{b=1}^B (\hat{\theta}_{n,b}^* - \bar{\hat{\theta}}_n^*)^2 }
+\]</div>
+<p>where <span class="arithmatex">\(\bar{\hat{\theta}}_n^* = \frac{1}{B} \sum_{b=1}^B \hat{\theta}_{n,b}^*\)</span>.</p>
+<h3 id="112-estimating-bias">11.2 Estimating Bias</h3>
+<p>The bias of an estimator <span class="arithmatex">\(\hat{\theta}_n\)</span> is defined as:</p>
+<div class="arithmatex">\[
+Bias = E(\hat{\theta}_n) - \theta
+\]</div>
+<p>By replacing the population distribution with the empirical distribution in the bootstrap world, we can approximate <span class="arithmatex">\(E(\hat{\theta}_n)\)</span> by <span class="arithmatex">\(\bar{\hat{\theta}}_n^*\)</span> and <span class="arithmatex">\(\theta\)</span> by <span class="arithmatex">\(\hat{\theta}_n\)</span>. Therefore, the bootstrap bias estimator is:</p>
+<div class="arithmatex">\[
+\widehat{Bias} = E^*(\hat{\theta}_n^*) - \hat{\theta}_n \approx \bar{\hat{\theta}}_n^* - \hat{\theta}_n
+\]</div>
+<p><em>(Note: In practice, if <span class="arithmatex">\(\widehat{Bias}\)</span> is small, it is usually not advisable to apply a bias correction directly, as it may increase the overall mean squared error (MSE); correction is only recommended when the bias is significantly larger than the standard error.)</em></p>
+<hr />
+<h2 id="12-bootstrap-confidence-intervals">12. Bootstrap Confidence Intervals</h2>
+<p>Bootstrap is often used to construct confidence intervals. Three of the most common methods are introduced below.</p>
+<h3 id="121-normal-confidence-interval">12.1 Normal Confidence Interval</h3>
+<p>The simplest method assumes the bootstrap distribution is approximately normal, and constructs the interval using the estimated standard error:</p>
+<div class="arithmatex">\[
+C_n = \left[ \hat{\theta}_n - z_{1-\alpha/2} \widehat{se}, \quad \hat{\theta}_n + z_{1-\alpha/2} \widehat{se} \right]
+\]</div>
+<ul>
+<li><strong>Advantages</strong>: Simple to compute.</li>
+<li><strong>Disadvantages</strong>: It is not strictly nonparametric; it imposes assumptions of symmetry and normality.</li>
+</ul>
+<hr />
+<h3 id="122-basic-bootstrap-confidence-interval-pivotal-method">12.2 Basic Bootstrap Confidence Interval (Pivotal Method)</h3>
+<p>This method is based on constructing a <strong>pivotal quantity</strong>.</p>
+<p>Define the root <span class="arithmatex">\(R_n = \hat{\theta}_n - \theta\)</span>. We approximate the distribution of the real-world root <span class="arithmatex">\(R_n\)</span> by the distribution of the bootstrap root <span class="arithmatex">\(R_n^* = \hat{\theta}_n^* - \hat{\theta}_n\)</span>.</p>
+<p>Let <span class="arithmatex">\(q_{\alpha/2}^*\)</span> and <span class="arithmatex">\(q_{1-\alpha/2}^*\)</span> be the <span class="arithmatex">\(\alpha/2\)</span> and <span class="arithmatex">\(1-\alpha/2\)</span> quantiles of <span class="arithmatex">\(R_n^*\)</span>, respectively. Since we approximate the true distribution by the bootstrap distribution, we have:</p>
+<div class="arithmatex">\[
+P(q_{\alpha/2}^* \le \hat{\theta}_n - \theta \le q_{1-\alpha/2}^*) \approx 1 - \alpha
+\]</div>
+<p>Rearranging the inequality for <span class="arithmatex">\(\theta\)</span>, we obtain the confidence interval for <span class="arithmatex">\(\theta\)</span>:</p>
+<div class="arithmatex">\[
+\left[ \hat{\theta}_n - q_{1-\alpha/2}^*, \quad \hat{\theta}_n - q_{\alpha/2}^* \right]
+\]</div>
+<p>Furthermore, if we let <span class="arithmatex">\(\theta_p^*\)</span> denote the <span class="arithmatex">\(p\)</span>-quantile of the bootstrap estimator <span class="arithmatex">\(\hat{\theta}_n^*\)</span> itself, then <span class="arithmatex">\(q_p^* = \theta_p^* - \hat{\theta}_n\)</span>. Substituting into the formula, the basic bootstrap confidence interval can be rewritten in a "pivoted" form:</p>
+<div class="arithmatex">\[
+C_n = \left[ 2\hat{\theta}_n - \theta_{1-\alpha/2}^*, \quad 2\hat{\theta}_n - \theta_{\alpha/2}^* \right]
+\]</div>
+<hr />
+<h3 id="123-percentile-confidence-interval">12.3 Percentile Confidence Interval</h3>
+<p>The percentile interval is the most intuitive and most commonly used method in practice. It directly takes the lower and upper quantiles of the bootstrap distribution <span class="arithmatex">\(\hat{\theta}_n^*\)</span> as the endpoints of the interval:</p>
+<div class="arithmatex">\[
+C_n = \left[ \theta_{\alpha/2}^*, \quad \theta_{1-\alpha/2}^* \right]
+\]</div>
+<p><strong>Why is the percentile method valid? (Justification)</strong></p>
+<p>The percentile method has an excellent property: <strong>monotone transformation invariance</strong>.
+Suppose there exists an unknown monotone increasing transformation <span class="arithmatex">\(g\)</span> such that the transformed estimator is exactly normally distributed, i.e.,</p>
+<div class="arithmatex">\[
+g(\hat{\theta}_n) - g(\theta) \sim N(0, c^2)
+\]</div>
+<p>Since <span class="arithmatex">\(g\)</span> is monotone, the relative positions of quantiles are preserved under the transformation (quantiles of the transformation equal the transformation of the quantiles):</p>
+<div class="arithmatex">\[
+g(\theta_\alpha^*) = (g(\theta))_\alpha^*
+\]</div>
+<p>If we construct a confidence interval on the transformed scale for <span class="arithmatex">\(g(\theta)\)</span>, the interval is exactly <span class="arithmatex">\([ (g(\theta))_{\alpha/2}^*, (g(\theta))_{1-\alpha/2}^* ]\)</span>. Transforming back to the original parameter <span class="arithmatex">\(\theta\)</span> via <span class="arithmatex">\(g^{-1}\)</span>, we obtain exactly:</p>
+<div class="arithmatex">\[
+\left[ g^{-1}((g(\theta))_{\alpha/2}^*), \quad g^{-1}((g(\theta))_{1-\alpha/2}^*) \right] = \left[ \theta_{\alpha/2}^*, \quad \theta_{1-\alpha/2}^* \right]
+\]</div>
+<p>This means that <strong>as long as there exists some monotone transformation that normalises the distribution, even if we do not know what this transformation <span class="arithmatex">\(g\)</span> is, the percentile interval implicitly performs this normalisation and thus yields correct interval bounds</strong>.</p>
+<h2 id="13-studentized-bootstrap-bootstrap-t">13. Studentized Bootstrap (Bootstrap-t)</h2>
+<p>In the standard normal approximation, we typically use a standardized or studentized statistic (i.e., a pivot):</p>
+<div class="arithmatex">\[
+T_n = \frac{\hat{\theta}_n - \theta_0}{\widehat{se}}
+\]</div>
+<p>In the Bootstrap world, we construct the corresponding studentized statistic:</p>
+<div class="arithmatex">\[
+T_n^* = \frac{\hat{\theta}_n^* - \hat{\theta}_n}{\widehat{se}^*}
+\]</div>
+<ul>
+<li>Note that here <span class="arithmatex">\(\widehat{se}^*\)</span> is the standard error estimate computed from the <strong>current Bootstrap sample</strong>, not from the original sample.</li>
+</ul>
+<h3 id="131-studentized-bootstrap-confidence-interval">13.1 Studentized Bootstrap Confidence Interval</h3>
+<p>Let <span class="arithmatex">\(t_{\alpha/2}^*\)</span> and <span class="arithmatex">\(t_{1-\alpha/2}^*\)</span> be the <span class="arithmatex">\(\alpha/2\)</span> and <span class="arithmatex">\(1-\alpha/2\)</span> quantiles of the Bootstrap statistic <span class="arithmatex">\(T_n^*\)</span>, respectively.
+We approximate the true distribution using the Bootstrap distribution, i.e., we assume that <span class="arithmatex">\(P(t_{\alpha/2}^* \le T_n \le t_{1-\alpha/2}^*) \approx 1-\alpha\)</span>.</p>
+<p>Expanding this and solving for <span class="arithmatex">\(\theta_0\)</span>, we obtain the studentized Bootstrap confidence interval:</p>
+<div class="arithmatex">\[
+C_n = \left[ \hat{\theta}_n - t_{1-\alpha/2}^* \widehat{se}, \quad \hat{\theta}_n - t_{\alpha/2}^* \widehat{se} \right]
+\]</div>
+<h3 id="132-why-studentize-second-order-accuracy">13.2 Why Studentize? (Second-order accuracy)</h3>
+<ul>
+<li>
+<p>The Basic Bootstrap Interval and the Percentile Interval typically have a coverage error of <span class="arithmatex">\(O(n^{-1/2})\)</span>. This is the same order as the interval based on the normal approximation (first-order accurate).</p>
+</li>
+<li>
+<p><strong>The studentized Bootstrap is second-order accurate</strong>. Its coverage error is <span class="arithmatex">\(O(n^{-1})\)</span>.</p>
+</li>
+</ul>
+<p><strong>Reason: Edgeworth Expansion</strong></p>
+<p>The studentized statistic <span class="arithmatex">\(T_n\)</span> is an <strong>asymptotic pivot</strong>; its limiting distribution <span class="arithmatex">\(N(0,1)\)</span> does not depend on any unknown population parameters.
+When we resample the pivot in the Bootstrap, the Bootstrap can automatically estimate and correct the <strong>skewness correction term</strong> of order <span class="arithmatex">\(n^{-1/2}\)</span> in the Edgeworth expansion, thereby eliminating the first-order error and reducing the final approximation error to <span class="arithmatex">\(O(n^{-1})\)</span>.</p>
+<hr />
+<h2 id="14-double-bootstrap-iterated-bootstrap">14. Double Bootstrap (Iterated Bootstrap)</h2>
+<p>In the studentized Bootstrap, we need to compute <span class="arithmatex">\(T_n^* = (\hat{\theta}_n^* - \hat{\theta}_n) / \widehat{se}^*\)</span>. However, in some complex models, the standard error <span class="arithmatex">\(\widehat{se}^*\)</span> may not have an analytic expression or may be very difficult to compute directly for each Bootstrap sample.</p>
+<p><strong>Solution: Nest another Bootstrap inside the Bootstrap!</strong></p>
+<p><strong>Specific algorithm steps:</strong></p>
+<ol>
+<li>
+<p>Draw a first-level Bootstrap sample <span class="arithmatex">\(\mathbb{P}_n^*\)</span> with replacement from the original empirical distribution <span class="arithmatex">\(\mathbb{P}_n\)</span>. Compute the estimator <span class="arithmatex">\(\hat{\theta}_n^*\)</span> using this sample.</p>
+</li>
+<li>
+<p>From the current first-level Bootstrap sample <span class="arithmatex">\(\mathbb{P}_n^*\)</span>, draw a second-level (inner) Bootstrap sample <span class="arithmatex">\(\mathbb{P}_n^{**}\)</span> with replacement again, and compute <span class="arithmatex">\(\hat{\theta}_n^{**}\)</span>.</p>
+</li>
+<li>
+<p>Repeat step 2 <span class="arithmatex">\(M\)</span> times, and compute the standard error <span class="arithmatex">\(\widehat{se}^*\)</span> as the empirical standard deviation of these <span class="arithmatex">\(M\)</span> values <span class="arithmatex">\(\hat{\theta}_n^{**}\)</span>.</p>
+</li>
+<li>
+<p>Compute the current Bootstrap pivot <span class="arithmatex">\(T_n^* = \frac{\hat{\theta}_n^* - \hat{\theta}_n}{\widehat{se}^*}\)</span>.</p>
+</li>
+<li>
+<p>Repeat steps 1 through 4 <span class="arithmatex">\(B\)</span> times, obtaining the full empirical distribution of <span class="arithmatex">\(T_n^*\)</span>, from which quantiles are extracted to construct the confidence interval.</p>
+</li>
+<li>
+<p><strong>Disadvantage</strong>: Extremely high computational cost. If the outer loop requires <span class="arithmatex">\(B\)</span> resamples and the inner loop requires <span class="arithmatex">\(M\)</span> resamples, a total of <span class="arithmatex">\(B \times M\)</span> model fits are needed.</p>
+</li>
+</ol>
+<hr />
+<h2 id="15-bootstrap-for-regression">15. Bootstrap for Regression</h2>
+<p>Consider the standard linear or nonlinear regression model:</p>
+<div class="arithmatex">\[
+Y_i = x_i^T \beta + \epsilon_i
+\]</div>
+<p>In regression analysis, how we resample depends on the degree of assumption we are willing to make about the model. There are generally two main approaches:</p>
+<h3 id="151-method-1-residual-bootstrap-model-based-bootstrap">15.1 Method 1: Residual Bootstrap (Model-based Bootstrap)</h3>
+<p>If we strongly believe in the correctness of the model structure and assume that the errors <span class="arithmatex">\(\epsilon_i\)</span> are i.i.d. and independent of the covariates <span class="arithmatex">\(x_i\)</span> (homoscedasticity).</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>
+<p>Fit the model to the original data, obtaining the parameter estimate <span class="arithmatex">\(\hat{\beta}\)</span> and the corresponding residuals <span class="arithmatex">\(\hat{\epsilon}_i = Y_i - x_i^T \hat{\beta}\)</span>.</p>
+</li>
+<li>
+<p>Center the residuals (recommended): <span class="arithmatex">\(\tilde{\epsilon}_i = \hat{\epsilon}_i - \bar{\hat{\epsilon}}\)</span>.</p>
+</li>
+<li>
+<p>Randomly draw <span class="arithmatex">\(n\)</span> Bootstrap residuals <span class="arithmatex">\(\epsilon_1^*, \dots, \epsilon_n^*\)</span> with replacement from the set of centered residuals <span class="arithmatex">\(\{\tilde{\epsilon}_1, \dots, \tilde{\epsilon}_n\}\)</span>.</p>
+</li>
+<li>
+<p>Keep the covariates <span class="arithmatex">\(x_i\)</span> unchanged, and generate new Bootstrap response variables:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+Y_i^* = x_i^T \hat{\beta} + \epsilon_i^*
+\]</div>
+<ol>
+<li>
+<p>Refit the model using the generated <span class="arithmatex">\((x_i, Y_i^*)\)</span> to obtain the Bootstrap estimator <span class="arithmatex">\(\hat{\beta}^*\)</span>.</p>
+</li>
+<li>
+<p><strong>Characteristics</strong>: Fully utilizes the parametric structure of the model; extremely efficient when the model is correctly specified and the errors satisfy the homoscedasticity assumption.</p>
+</li>
+</ol>
+<h3 id="152-method-2-pairs-bootstrap-nonparametric-bootstrap">15.2 Method 2: Pairs Bootstrap (Nonparametric Bootstrap)</h3>
+<p>If we are uncertain about homoscedasticity (i.e., heteroscedasticity may be present) or doubt the correctness of the linear model, we can use a more nonparametric approach.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>
+<p>Treat each observation as a data pair <span class="arithmatex">\(Z_i = (x_i, Y_i)\)</span>.</p>
+</li>
+<li>
+<p>Randomly draw <span class="arithmatex">\(n\)</span> data pairs with replacement directly from the dataset <span class="arithmatex">\(\{Z_1, \dots, Z_n\}\)</span>, denoted as <span class="arithmatex">\(Z_1^*, \dots, Z_n^*\)</span> (where <span class="arithmatex">\(Z_i^* = (x_i^*, Y_i^*)\)</span>).</p>
+</li>
+<li>
+<p>Refit the model to this new set of pairs to obtain the Bootstrap estimator <span class="arithmatex">\(\hat{\beta}^*\)</span>.</p>
+</li>
+<li>
+<p><strong>Characteristics</strong>: Highly robust to heteroscedasticity and model misspecification. This is because the resampling preserves the joint distribution structure between <span class="arithmatex">\(x_i\)</span> and <span class="arithmatex">\(Y_i\)</span>.</p>
+</li>
+</ol>
+<hr />
+<h2 id="16-when-does-bootstrap-fail">16. When does Bootstrap fail?</h2>
+<p>Although Bootstrap is extremely powerful, it is not a panacea. In the following typical scenarios, the standard Bootstrap fails (i.e., consistency does not hold):</p>
+<h3 id="161-1-heavy-tails-infinite-variance">16.1 1. Heavy tails / Infinite variance</h3>
+<ul>
+<li>
+<p>If the population distribution has infinite variance (e.g., <span class="arithmatex">\(E[X^2] = \infty\)</span>), then the sample mean does not satisfy the classical normal limiting distribution (it may converge in distribution to some <span class="arithmatex">\(\alpha\)</span>-stable distribution).</p>
+</li>
+<li>
+<p>In this case, the conditional distribution of the Bootstrap sample mean does not converge weakly to a deterministic non-random measure; it remains random in the limit.</p>
+</li>
+</ul>
+<h3 id="162-2-boundary-parameters">16.2 2. Boundary parameters</h3>
+<ul>
+<li>
+<p>The <strong>maximum statistic</strong> we discussed earlier is a typical example (e.g., <span class="arithmatex">\(X_i \sim U(0, \theta)\)</span> with estimator <span class="arithmatex">\(X_{(n)}\)</span>).</p>
+</li>
+<li>
+<p>When the parameter lies on the boundary of the parameter space, the discreteness of the empirical distribution <span class="arithmatex">\(\mathbb{P}_n\)</span> introduces a large probability "point mass" at the extreme value, making it impossible to mimic the true continuous limiting distribution.</p>
+</li>
+</ul>
+<h3 id="163-3-non-differentiable-functionals">16.3 3. Non-differentiable functionals</h3>
+<ul>
+<li>
+<p>If the parameter of interest is a non-smooth or non-differentiable functional of the empirical measure, the Bootstrap may fail.</p>
+</li>
+<li>
+<p><strong>Example 1: Hodges estimator</strong> (super-efficient estimator). Such estimators exhibit a non-differentiable "shrinkage" behavior at a point (e.g., 0), so the Bootstrap cannot capture its local abrupt nature.</p>
+</li>
+<li>
+<p><strong>Example 2: Sample median when there are ties</strong>. Although the sample median is Bootstrap-consistent for continuous distributions, if the true distribution is not sufficiently smooth around the population median (e.g., a distribution with a discontinuity or high discreteness), the performance of the Bootstrap median can be very unstable.</p>
+</li>
+</ul>
+<hr />
+<h2 id="17-remedies-for-failure-subsampling-and-m-out-of-n-bootstrap">17. Remedies for Failure: Subsampling and m-out-of-n Bootstrap</h2>
+<p>When faced with situations where the standard Bootstrap fails, we usually adopt the following two alternative strategies:</p>
+<h3 id="171-subsampling">17.1 Subsampling</h3>
+<ul>
+<li>
+<p><strong>Mechanism</strong>: Draw <strong>without replacement</strong> a subsample of size <span class="arithmatex">\(m\)</span> from the original sample of size <span class="arithmatex">\(n\)</span>.</p>
+</li>
+<li>
+<p><strong>Condition</strong>: Requires that the subsample size <span class="arithmatex">\(m \rightarrow \infty\)</span> and <span class="arithmatex">\(m/n \rightarrow 0\)</span>.</p>
+</li>
+<li>
+<p><strong>Advantage</strong>: The conditions for consistency are very mild. It only requires that the original statistic converges to some non-degenerate limiting distribution under the true measure, without requiring the functional to be differentiable or not on the boundary.</p>
+</li>
+</ul>
+<h3 id="172-m-out-of-n-bootstrap">17.2 m-out-of-n Bootstrap</h3>
+<ul>
+<li>
+<p><strong>Mechanism</strong>: Draw <strong>with replacement</strong> a Bootstrap sample of size <span class="arithmatex">\(m\)</span> from the original sample of size <span class="arithmatex">\(n\)</span>.</p>
+</li>
+<li>
+<p><strong>Condition</strong>: Also requires <span class="arithmatex">\(m \rightarrow \infty\)</span> and <span class="arithmatex">\(m/n \rightarrow 0\)</span>.</p>
+</li>
+<li>
+<p><strong>Advantage</strong>: By reducing the resampling size <span class="arithmatex">\(m\)</span>, it breaks the excessive "ties" and clustering at extreme values caused by resampling <span class="arithmatex">\(n\)</span> times, thereby restoring consistency in boundary parameter and some heavy-tailed cases.</p>
+</li>
+</ul>
+<hr />
+<h2 id="18-final-summary">18. Final Summary</h2>
+<ol>
+<li>
+<p><strong>First-order inference</strong>: Asymptotic normality theory provides the primary first-order inference tool (Asymptotic normality gives first-order inference).</p>
+</li>
+<li>
+<p><strong>Finite-sample error</strong>: The Edgeworth expansion theoretically explains the leading finite-sample error sources (Edgeworth expansion explains the leading finite-sample error).</p>
+</li>
+<li>
+<p><strong>Automatic correction</strong>: The power of Bootstrap lies in its ability to automatically estimate the higher-order correction terms in the Edgeworth expansion using the data (Bootstrap often estimates Edgeworth correction terms automatically).</p>
+</li>
+<li>
+<p><strong>Second-order accuracy</strong>: <strong>Studentized Bootstrap</strong> is the main and recommended route to obtain second-order accurate confidence intervals (Studentized bootstrap is the main route to second-order accurate intervals).</p>
+</li>
+<li>
+<p><strong>Theoretical consistency</strong>: For M-estimators, Z-estimators, and maximum likelihood estimators (MLE), the consistency of the Bootstrap can be derived by the same linearization argument used to prove asymptotic normality.</p>
+</li>
+<li>
+<p><strong>Limitations</strong>: Bootstrap is an extremely powerful tool, but it is <strong>not universally valid</strong> (Bootstrap is powerful, but it is not universally valid). Pay attention to the prerequisites before using it.</p>
+</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">One-line summary</p>
+<p>The essence of Bootstrap is to imitate the real world with a "parallel universe": the real fluctuation <span class="arithmatex">\(\hat{\theta}_n - \theta_0\)</span> is perfectly mimicked by <span class="arithmatex">\(\hat{\theta}_n^* - \hat{\theta}_n\)</span> in the Bootstrap world; and the invisible god—the population distribution <span class="arithmatex">\(P\)</span>, is replaced by the data in our hands—the empirical distribution <span class="arithmatex">\(\mathbb{P}_n\)</span>.</p>
+</div>
 
 
 
