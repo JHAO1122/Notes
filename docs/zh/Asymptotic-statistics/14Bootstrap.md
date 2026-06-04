@@ -6,21 +6,21 @@
 
 在前面的章节中，对于许多估计量，我们已经得出了它们满足渐近正态性的结论。例如：
 
-\\[
+\[
 \sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrow N(0, \Sigma)
-\\]
+\]
 
 对于正则的 M-估计量，我们有：
 
-\\[
+\[
 \sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrow N(0, A^{-1}BA^{-1})
-\\]
+\]
 
 对于正则的极大似然估计量 (MLE)，我们有：
 
-\\[
+\[
 \sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrow N(0, I(\theta_0)^{-1})
-\\]
+\]
 
 **提出问题：** 既然我们已经有了渐近正态性，为什么我们仍然需要 Bootstrap 呢？
 
@@ -28,21 +28,21 @@
 
 令 $T_n$ 为标准化或学生化 (studentized) 的统计量：
 
-\\[
+\[
 T_n = \frac{\hat{\theta}_n - \theta_0}{\hat{se}_n}
-\\]
+\]
 
 通常的 Wald 近似为：
 
-\\[
+\[
 P(T_n \le x) \approx \Phi(x)
-\\]
+\]
 
 这被称为**一阶近似 (first-order approximation)**。在许多正则问题中，误差阶数为：
 
-\\[
+\[
 P(T_n \le x) = \Phi(x) + O(n^{-1/2})
-\\]
+\]
 
 * 这种近似成功捕捉了极限分布的中心和方差。
 
@@ -54,9 +54,9 @@ P(T_n \le x) = \Phi(x) + O(n^{-1/2})
 
 为了获得更高阶的近似，我们可以使用 Edgeworth 展开：
 
-\\[
+\[
 P(T_n \le x) = \Phi(x) + n^{-1/2} p_1(x) \phi(x) + n^{-1} p_2(x) \phi(x) + \dots + O(n^{-k/2})
-\\]
+\]
 
 * 其中 $p_1(x)$ 是一个与总体的**偏度**相关的多项式。
 
@@ -115,21 +115,21 @@ Bootstrap 推断的基石在于：**在 Bootstrap 世界中 $\hat{\theta}_n^*$ �
 
 具体而言，定义真实的累积分布函数为：
 
-\\[
+\[
 R_n(x, P) = P(\sqrt{n}(\hat{\theta}_n - \theta_0) \le x)
-\\]
+\]
 
 Bootstrap 估计的分布函数（条件分布）为：
 
-\\[
+\[
 R_n(x, \mathbb{P}_n) = P^*(\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) \le x \mid X_1, \dots, X_n)
-\\]
+\]
 
 那么 Bootstrap 相合意味着：
 
-\\[
+\[
 \sup_x |R_n(x, \mathbb{P}_n) - R_n(x, P)| \xrightarrow{P} 0 \quad (\text{或者几乎必然成立 a.s.})
-\\]
+\]
 
 ### 3.1 示例：样本均值的 Bootstrap
 
@@ -139,7 +139,7 @@ R_n(x, \mathbb{P}_n) = P^*(\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) \le x \mi
     
     由中心极限定理 (CLT) 可知，在真实世界中：
 
-    \\[
+    \[
     \sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2)
     \]
 
@@ -151,13 +151,13 @@ R_n(x, \mathbb{P}_n) = P^*(\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) \le x \mi
 
     * **条件期望**：
     
-    \\[
+    \[
     E^*(\bar{X}_n^*) = E^*(X_1^*) = \frac{1}{n} \sum_{i=1}^n X_i = \bar{X}_n
     \]
 
     * **条件方差**：
     
-    \\[
+    \[
     Var^*(\sqrt{n}\bar{X}_n^*) = Var^*(X_1^*) = \frac{1}{n} \sum_{i=1}^n (X_i - \bar{X}_n)^2 = \hat{\sigma}_n^2
     \]
 
@@ -167,15 +167,15 @@ R_n(x, \mathbb{P}_n) = P^*(\sqrt{n}(\hat{\theta}_n^* - \hat{\theta}_n) \le x \mi
 
 又因为由大数定律可知样本方差是相合的：$\hat{\sigma}_n^2 \xrightarrow{p} \sigma^2$，所以：
 
-\\[
+\[
 \sup_x \left| P^*(\sqrt{n}(\bar{X}_n^* - \bar{X}_n) \le x) - \Phi(x/\hat{\sigma}_n) \right| \xrightarrow{P} 0
-\\]
+\]
 
 同时，由于 $\hat{\sigma}_n \xrightarrow{p} \sigma$ 以及正态累积分布函数 $\Phi$ 的连续性：
 
-\\[
+\[
 \Phi(x/\hat{\sigma}_n) \xrightarrow{P} \Phi(x/\sigma)
-\\]
+\]
 
 由此得出结论，样本均值的 Bootstrap 是相合的。
 
@@ -194,13 +194,13 @@ Bootstrap **并不是**在所有情况下都相合的。对于极值或处于参
     
     我们要估计参数 $\theta$，自然的选择是最大值统计量：
     
-    \\[
+    \[
     \hat{\theta}_n = X_{(n)} = \max_{1 \le i \le n}(X_i)
     \]
 
     在真实世界中，最大值具有如下的极值极限分布：
 
-    \\[
+    \[
     n(\theta - X_{(n)}) \xrightarrow{d} \text{Exp}(1/\theta)
     \]
 
@@ -213,21 +213,21 @@ Bootstrap 估计量为 $\hat{\theta}_n^* = X_{(n)}^* = \max_{1 \le i \le n}(X_i^
 
 我们来计算 Bootstrap 最大值恰好等于原始样本最大值的概率：
 
-\\[
+\[
 P^*(X_{(n)}^* = X_{(n)}) = P^*(\text{至少有一个 } X_i^* \text{ 等于 } X_{(n)})
-\\]
+\]
 
 这等于 $1$ 减去所有 Bootstrap 样本都不等于 $X_{(n)}$ 的概率。因为每次抽样抽不到 $X_{(n)}$ 的概率是 $1 - 1/n$：
 
-\\[
+\[
 P^*(X_{(n)}^* = X_{(n)}) = 1 - \left(1 - \frac{1}{n}\right)^n
-\\]
+\]
 
 当 $n \rightarrow \infty$ 时，我们有极其著名的极限：
 
-\\[
+\[
 1 - \left(1 - \frac{1}{n}\right)^n \rightarrow 1 - e^{-1} \approx 0.632
-\\]
+\]
 
 * **真实世界**：由于总体是连续分布，$P(X_{(n)} = \theta) = 0$。
 
@@ -257,7 +257,7 @@ P^*(X_{(n)}^* = X_{(n)}) = 1 - \left(1 - \frac{1}{n}\right)^n
     
     如果 $T_n$ 是 Bootstrap 相合的，那么对于 $g(T_n)$，Bootstrap 也是相合的。即在给定数据的条件下，有：
 
-    \\[
+    \[
     \sqrt{n}(g(T_n^*) - g(T_n)) \xrightarrow{d} g'(\theta) T \quad \text{(在 } P^* \text{ 测度下)}
     \]
 
@@ -265,7 +265,7 @@ P^*(X_{(n)}^* = X_{(n)}) = 1 - \left(1 - \frac{1}{n}\right)^n
 
     利用均值定理 (Mean Value Theorem) 或泰勒展开：
 
-    \\[
+    \[
     g(T_n^*) - g(T_n) = g'(\tilde{T}_n^*)(T_n^* - T_n)
     \]
 
@@ -281,7 +281,7 @@ P^*(X_{(n)}^* = X_{(n)}) = 1 - \left(1 - \frac{1}{n}\right)^n
 
     最后，对乘积应用 Slutsky 定理，由于一部分依条件概率收敛于常数矩阵，另一部分依条件分布收敛于 $T$，即证：
 
-    \\[
+    \[
     \sqrt{n}(g(T_n^*) - g(T_n)) \xrightarrow{d} g'(\theta) T
     \]
 
@@ -294,15 +294,15 @@ P^*(X_{(n)}^* = X_{(n)}) = 1 - \left(1 - \frac{1}{n}\right)^n
 对于参数模型，参数通常仅仅是矩的函数，使用经典的 Delta 方法即可。
 但是，在非参数问题中，我们感兴趣的参数往往是整个分布的泛函：
 
-\\[
+\[
 \theta = \phi(P)
-\\]
+\]
 
 对应的插入式 (plug-in) 估计量为：
 
-\\[
+\[
 \hat{\theta}_n = \phi(\mathbb{P}_n)
-\\]
+\]
 
 为了对这类的泛函应用 Delta 方法，我们需要引入**泛函导数 (generalized derivative for functionals)** 的概念。
 
@@ -314,7 +314,7 @@ Gateaux 导数类似于多变量微积分中的**方向导数 (directional deriv
 
     如果极限：
 
-    \\[
+    \[
     \lim_{t \downarrow 0} \frac{\phi((1-t)P + tH) - \phi(P)}{t} = \int \phi'_P d(H-P)
     \]
 
@@ -332,7 +332,7 @@ Gateaux 可微仅仅保证了在单个确定方向上的收敛性。这在泛函
 
     设 $\phi: \mathcal{P} \to \mathbb{R}$。如果对于任意满足当 $t \to 0$ 时 $H_t \to H$ 的方向序列，都有：
 
-    \\[
+    \[
     \frac{\phi(P + t H_t) - \phi(P)}{t} \to \phi'_P(H)
     \]
 
