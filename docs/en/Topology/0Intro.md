@@ -29,27 +29,35 @@ This course does not use PPT or other digital presentation tools; it is taught e
 
 The following is a detailed directory of the notes and lecture materials for this course:
 
-### Part I: Set Theory and Topological Foundations
+### Part I: Foundations of Set Theory and Topological Spaces
 
-* [x] [Chapter 1: Set Theory and Logic Foundations](1.md)
+* [x] [Chapter 1: Set Theory and Foundations of Logic](1.md)
 
 * [x] [Chapter 2: Functions and Relations](2.md)
 
 * [x] [Chapter 3: Countable and Uncountable Sets](3.md)
 
-* [x] [Chapter 4: Open Sets and Topological Structure](4.md)
+* [x] [Chapter 4: Open Sets and Topological Structures](4.md)
 
-### Part II: Construction of Topological Spaces and Continuity
+### Part II: Constructions of Topological Spaces and Continuity
 
-* [x] [Chapter 5: Induced Topology and Basic Topological Operations](5.md)
+* [x] [Chapter 5: Induced Topologies and Basic Topological Operations](5.md)
 
-* [x] [Chapter 6: Closure, Continuity, and Homeomorphisms](6.md)
+* [x] [Chapter 6: Closures, Continuity, and Homeomorphisms](6.md)
 
-### Part III: Core Topological Invariants
+### Part III: Core Topological Invariants and Space Properties
 
 * [x] [Chapter 7: Mappings in Product Spaces and Connectedness](7.md)
 
 * [x] [Chapter 8: Compactness](8.md)
+
+* [x] [Chapter 9: Compactness in Euclidean Spaces](9.md)
+
+* [x] [Chapter 10: Sequential Compactness](10.md)
+
+* [x] [Chapter 11: One-Point Compactification](11.md)
+
+* [x] [Chapter 12: Countability Axioms and Separation Axioms](12.md)
 
 ### Part IV: 📝 Selected Solutions
 

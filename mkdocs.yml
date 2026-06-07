@@ -106,6 +106,10 @@ plugins:
             "第六章：连续与同胚": "Ch 6: Continuity and Homeomorphisms"
             "第七章：连通性": "Ch 7: Connectedness"
             "第八章：紧性": "Ch 8: Compactness"
+            "第九章：欧式空间的紧性": "Ch 9: Compactness in Euclidean Spaces"
+            "第十章：序列紧": "Ch 10: Sequential Compactness"
+            "第十一章：单点紧化": "Ch 11: One-Point Compactification"
+            "第十二章：可数性": "Ch 12: Countability"
             "🧱 实分析": "🧱 Real Analysis"
             "实分析课程概览": "Real Analysis Course Overview"
             "第一章：sigma-代数": "Ch 1: Sigma-Algebras"
@@ -220,6 +224,10 @@ nav:
               - 第六章：连续与同胚: zh/Topology/6.md
               - 第七章：连通性: zh/Topology/7.md
               - 第八章：紧性: zh/Topology/8.md
+              - 第九章：欧式空间的紧性: zh/Topology/9.md
+              - 第十章：序列紧: zh/Topology/10.md
+              - 第十一章：单点紧化: zh/Topology/11.md
+              - 第十二章：可数性: zh/Topology/12.md
           - 📝 习题:
               - Homework 1-2: zh/Topology/sol_12.md
               - Homework 3-4: zh/Topology/sol_34.md
