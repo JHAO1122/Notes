@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#after-class-exercise-detailed-explanation-large-sample-theory-assignment-4" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1723,6 +1728,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 4
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1740,6 +1765,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-one-step-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. One-step estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-unbiased-estimator-and-u-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Unbiased estimator and U-statistic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hoeffdings-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hoeffding's theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-4-u-statistics-and-v-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 4: U-statistics and V-statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-5-divide-and-conquered-u-statistics-for-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 5: Divide and Conquered U-statistics for big data
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4629,6 +4728,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-one-step-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. One-step estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-unbiased-estimator-and-u-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Unbiased estimator and U-statistic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hoeffdings-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hoeffding's theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-4-u-statistics-and-v-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 4: U-statistics and V-statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-5-divide-and-conquered-u-statistics-for-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 5: Divide and Conquered U-statistics for big data
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4649,9 +4813,392 @@
   
 
 
-  <h1>AS Homework 4</h1>
-
-
+<h1 id="after-class-exercise-detailed-explanation-large-sample-theory-assignment-4">📈 After-Class Exercise Detailed Explanation: Large Sample Theory Assignment 4</h1>
+<h2 id="1-one-step-estimator">1. One-step estimator</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(\{P_{\theta}\}_{\theta\in\Theta}\)</span> be a model family, where <span class="arithmatex">\(\Theta\subset\mathbb{R}^{d}\)</span> is an open set, and <span class="arithmatex">\(X_{1},...,X_{n} \stackrel{i.i.d}{\sim} P_{\theta_{0}}\)</span>. The log-likelihood function <span class="arithmatex">\(l_{\theta}(x)=\log p_{\theta}(x)\)</span> satisfies the given regularity conditions. Let <span class="arithmatex">\(\hat{\theta}_{n}\)</span> be an <span class="arithmatex">\(n\)</span>-consistent estimator. The one-step estimator <span class="arithmatex">\(\delta_{n}\)</span> satisfies the following equation:</p>
+<div class="arithmatex">\[
+\nabla L_{n}(\hat{\theta}_{n})+\nabla^{2}L_{n}(\hat{\theta}_{n})(\delta_{n}-\hat{\theta}_{n})=0
+\]</div>
+<p>(a) Assume the model family <span class="arithmatex">\(\{P_{\theta}\}_{\theta\in\mathbb{R}}\)</span> is the Cauchy family, with probability density function <span class="arithmatex">\(p_{\theta}(x)= \frac{1}{\pi(1+(x-\theta)^{2})}\)</span>. Let <span class="arithmatex">\(X_{1},...,X_{n} \stackrel{i.i.d}{\sim} P_{\theta}\)</span> and define <span class="arithmatex">\(\hat{\theta}_{n}=\text{Median}(X_{1},...,X_{n})\)</span>. Find the limiting distribution of <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_{n}-\theta)\)</span>.</p>
+<p>(b) Let <span class="arithmatex">\(\delta_{n}\)</span> be the one-step estimator for this Cauchy family. What is its asymptotic distribution? In (a), is <span class="arithmatex">\(\delta_{n}\)</span> more efficient than <span class="arithmatex">\(\hat{\theta}_{n}\)</span>?</p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>(a) Find the asymptotic distribution of the sample median</strong></p>
+<p>The sample median <span class="arithmatex">\(\hat{\theta}_{n}\)</span> corresponds to the sample quantile at <span class="arithmatex">\(p=1/2\)</span>. According to the established asymptotic theory for sample quantiles (e.g., Theorem 5.23 in van der Vaart), if the cumulative distribution function <span class="arithmatex">\(F\)</span> has a continuous and strictly positive derivative (density) <span class="arithmatex">\(f\)</span> at the true population quantile <span class="arithmatex">\(\theta\)</span>, then the sample median is asymptotically normal:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_{n}-\theta)\xrightarrow{d}\mathcal{N}\left(0,\frac{p(1-p)}{f(\theta)^{2}}\right)
+\]</div>
+<p>For <span class="arithmatex">\(p=1/2,\)</span> the numerator of the variance is <span class="arithmatex">\(1/4.\)</span> We now compute the Cauchy density at the true median <span class="arithmatex">\(\theta\)</span>:</p>
+<div class="arithmatex">\[
+f(\theta)=p_{\theta}(\theta)=\frac{1}{\pi(1+(\theta-\theta)^{2})}=\frac{1}{\pi}
+\]</div>
+<p>Substituting <span class="arithmatex">\(f(\theta)=1/\pi\)</span> into the asymptotic variance formula:</p>
+<div class="arithmatex">\[
+V=\frac{1/4}{(1/\pi)^{2}}=\frac{\pi^{2}}{4}
+\]</div>
+<p>Therefore, the limiting distribution of the sample median is:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_{n}-\theta)\xrightarrow{d}\mathcal{N}\left(0,\frac{\pi^{2}}{4}\right)
+\]</div>
+<p><strong>(b) Find the asymptotic distribution of the one-step estimator and compare efficiency</strong></p>
+<p>According to the definition of the one-step estimator, we can rewrite it as:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)=\sqrt{n}(\hat{\theta}_{n}-\theta)-\left[\frac{1}{n}\nabla^{2}L_{n}(\hat{\theta}_{n})\right]^{-1}\frac{1}{\sqrt{n}}\nabla L_{n}(\hat{\theta}_{n})
+\]</div>
+<p>We use Taylor's theorem to expand the score function <span class="arithmatex">\(\frac{1}{\sqrt{n}}\nabla L_{n}(\hat{\theta}_{n})\)</span> around the true parameter <span class="arithmatex">\(\theta\)</span>:</p>
+<div class="arithmatex">\[
+\frac{1}{\sqrt{n}}\nabla L_{n}(\hat{\theta}_{n})=\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)+\frac{1}{n}\nabla^{2}L_{n}(\tilde{\theta})\sqrt{n}(\hat{\theta}_{n}-\theta)
+\]</div>
+<p>where <span class="arithmatex">\(\tilde{\theta}\)</span> lies between <span class="arithmatex">\(\hat{\theta}_{n}\)</span> and <span class="arithmatex">\(\theta\)</span>. Since <span class="arithmatex">\(\hat{\theta}_{n}\)</span> is <span class="arithmatex">\(\sqrt{n}\)</span>-consistent, <span class="arithmatex">\(\tilde{\theta}\xrightarrow{P}\theta\)</span>. By the Weak Law of Large Numbers and the Lipschitz continuity of the second derivative, we have:</p>
+<div class="arithmatex">\[
+-\frac{1}{n}\nabla^{2}L_{n}(\hat{\theta}_{n})\xrightarrow{p}I(\theta) \quad \text{and} \quad -\frac{1}{n}\nabla^{2}L_{n}(\tilde{\theta})\xrightarrow{p}I(\theta)
+\]</div>
+<p>where <span class="arithmatex">\(I(\theta)=-E[\nabla^{2}l_{\theta}(X)]\)</span> is the Fisher information. Substituting the Taylor expansion back into our estimator, we obtain:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)=\sqrt{n}(\hat{\theta}_{n}-\theta)+I(\theta)^{-1}\left(\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)-I(\theta)\sqrt{n}(\hat{\theta}_{n}-\theta)\right)+o_{p}(1)
+\]</div>
+<div class="arithmatex">\[
+=\sqrt{n}(\hat{\theta}_{n}-\theta)+I(\theta)^{-1}\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)-\sqrt{n}(\hat{\theta}_{n}-\theta)+o_{p}(1)
+\]</div>
+<div class="arithmatex">\[
+=I(\theta)^{-1}\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)+o_{p}(1)
+\]</div>
+<p>By the Central Limit Theorem, the standardized score function <span class="arithmatex">\(\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)\xrightarrow{d}\mathcal{N}(0,I(\theta))\)</span>. By Slutsky's theorem, the one-step estimator achieves the efficiency of the maximum likelihood estimator:</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)\xrightarrow{d}\mathcal{N}(0,I(\theta)^{-1})
+\]</div>
+<p>Now, we compute the Fisher information <span class="arithmatex">\(I(\theta)\)</span> for the Cauchy distribution. The log-density is:</p>
+<div class="arithmatex">\[
+l_{\theta}(x)=-\log\pi-\log(1+(x-\theta)^{2})
+\]</div>
+<p>The first derivative (score function) is:</p>
+<div class="arithmatex">\[
+\nabla l_{\theta}(x)=\frac{2(x-\theta)}{1+(x-\theta)^{2}}
+\]</div>
+<p>The Fisher information is the expectation of the squared score:</p>
+<div class="arithmatex">\[
+I(\theta)=E[(\nabla l_{\theta}(X))^{2}]=\int_{-\infty}^{\infty}\left(\frac{2(x-\theta)}{1+(x-\theta)^{2}}\right)^{2}\frac{1}{\pi(1+(x-\theta)^{2})}dx
+\]</div>
+<p>Let <span class="arithmatex">\(y=x-\theta\)</span>. Since the integrand is an even function:</p>
+<div class="arithmatex">\[
+I(\theta)=\frac{4}{\pi}\int_{-\infty}^{\infty}\frac{y^{2}}{(1+y^{2})^{3}}dy=\frac{8}{\pi}\int_{0}^{\infty}\frac{y^{2}}{(1+y^{2})^{3}}dy
+\]</div>
+<p>We can solve this via the trigonometric substitution <span class="arithmatex">\(y=\tan z\)</span>, which gives <span class="arithmatex">\(dy=\sec^{2}z dz\)</span> and <span class="arithmatex">\(1+y^{2}=\sec^{2}z\)</span>. The interval changes from <span class="arithmatex">\([0,\infty)\)</span> to <span class="arithmatex">\([0,\pi/2)\)</span>:</p>
+<div class="arithmatex">\[
+I(\theta)=\frac{8}{\pi}\int_{0}^{\pi/2}\frac{\tan^{2}z}{\sec^{6}z}\sec^{2}z dz
+\]</div>
+<div class="arithmatex">\[
+=\frac{8}{\pi}\int_{0}^{\pi/2}\sin^{2}z \cos^{2}z dz
+\]</div>
+<div class="arithmatex">\[
+=\frac{8}{\pi}\int_{0}^{\pi/2}\frac{1}{4}\sin^{2}(2z)dz
+\]</div>
+<div class="arithmatex">\[
+=\frac{2}{\pi}\int_{0}^{\pi/2}\sin^{2}(2z)dz
+\]</div>
+<p>Let <span class="arithmatex">\(u=2z\)</span>, so <span class="arithmatex">\(du=2dz\)</span>, and the interval becomes <span class="arithmatex">\([0, \pi]\)</span>:</p>
+<div class="arithmatex">\[
+I(\theta)=\frac{1}{\pi}\int_{0}^{\pi}\sin^{2}u du=\frac{1}{\pi}\cdot\frac{\pi}{2}=\frac{1}{2}
+\]</div>
+<p>Therefore, the asymptotic variance of the one-step estimator is <span class="arithmatex">\(I(\theta)^{-1}=2\)</span>.</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)\xrightarrow{d}\mathcal{N}(0,2)
+\]</div>
+<p><strong>Efficiency comparison</strong>: From part (a), the asymptotic variance of the sample median <span class="arithmatex">\(\hat{\theta}_{n}\)</span> is <span class="arithmatex">\(\frac{\pi^{2}}{4}\approx2.467\)</span>. Since <span class="arithmatex">\(2&lt;\frac{\pi^{2}}{4}\)</span>, the asymptotic variance of the one-step estimator <span class="arithmatex">\(\delta_{n}\)</span> is strictly smaller than that of the initial median estimator <span class="arithmatex">\(\hat{\theta}_{n}\)</span>. Therefore, <span class="arithmatex">\(\delta_{n}\)</span> is more efficient.</p>
+</details>
+<hr />
+<h2 id="2-unbiased-estimator-and-u-statistic">2. Unbiased estimator and U-statistic</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(X_{1},...,X_{n}\)</span> be i.i.d. random variables, with finite <span class="arithmatex">\(\mu=\mathbb{E}(X_{1})\)</span> and <span class="arithmatex">\(\overline{\mu}=\mathbb{E}(X_{1}^{-1})\)</span>.
+Find a U-statistic that is an unbiased estimator of <span class="arithmatex">\(\overline{\mu}\mu\)</span>, and derive its variance and asymptotic distribution.</p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>Step 1: Construct a symmetric kernel and the U-statistic</strong></p>
+<p>We want to estimate <span class="arithmatex">\(\theta=\mu\overline{\mu}\)</span>. Consider a pair of independent observations <span class="arithmatex">\((X_{1},X_{2})\)</span>. Since they are independent, we have:</p>
+<div class="arithmatex">\[
+\mathbb{E}[X_{1}X_{2}^{-1}]=\mathbb{E}[X_{1}]\mathbb{E}[X_{2}^{-1}]=\mu\overline{\mu}
+\]</div>
+<p>Thus, <span class="arithmatex">\(g(x_{1},x_{2})=x_{1}x_{2}^{-1}\)</span> is an unbiased estimator of <span class="arithmatex">\(\theta\)</span>, but it is asymmetric. We construct a symmetric kernel of degree <span class="arithmatex">\(m=2\)</span> by averaging over permutations:</p>
+<div class="arithmatex">\[
+h(X_{1},X_{2})=\frac{1}{2}(g(X_{1},X_{2})+g(X_{2},X_{1}))=\frac{1}{2}\left(\frac{X_{1}}{X_{2}}+\frac{X_{2}}{X_{1}}\right)
+\]</div>
+<p>Clearly, <span class="arithmatex">\(\mathbb{E}[h(X_{1},X_{2})]=\frac{1}{2}(\mu\overline{\mu}+\mu\overline{\mu})=\mu\overline{\mu}\)</span>. The corresponding U-statistic is:</p>
+<div class="arithmatex">\[
+U_{n}=\binom{n}{2}^{-1}\sum_{1\le i&lt;j\le n}h(X_{i},X_{j})=\binom{n}{2}^{-1}\sum_{1\le i&lt;j\le n}\frac{1}{2}\left(\frac{X_{i}}{X_{j}}+\frac{X_{j}}{X_{i}}\right)
+\]</div>
+<p><strong>Step 2: Derive the variance of <span class="arithmatex">\(U_{n}\)</span></strong></p>
+<p>According to Hoeffding's theorem, the variance of a U-statistic of degree <span class="arithmatex">\(m=2\)</span> is given by:</p>
+<div class="arithmatex">\[
+Var(U_{n})=\binom{n}{2}^{-1}\sum_{k=1}^{2}\binom{2}{k}\binom{n-2}{2-k}\zeta_{k}=\frac{2}{n(n-1)}(2(n-2)\zeta_{1}+\zeta_{2})
+\]</div>
+<p>First, we compute <span class="arithmatex">\(h_{1}(x_{1})=\mathbb{E}[h(X_{1},X_{2})|X_{1}=x_{1}]\)</span>:</p>
+<div class="arithmatex">\[
+h_{1}(x_{1})=\mathbb{E}\left[\frac{1}{2}\left(\frac{x_{1}}{X_{2}}+\frac{X_{2}}{x_{1}}\right)\right]=\frac{1}{2}\overline{\mu}x_{1}+\frac{1}{2}\frac{\mu}{x_{1}}
+\]</div>
+<p>Now we compute <span class="arithmatex">\(\zeta_{1}=Var(h_{1}(X_{1}))\)</span>. Let <span class="arithmatex">\(\sigma^{2}=Var(X_{1})\)</span> and <span class="arithmatex">\(\overline{\sigma}^{2}=Var(X_{1}^{-1})\)</span>. Using the property <span class="arithmatex">\(Var(aX+bY)=a^{2}Var(X)+b^{2}Var(Y)+2abCov(X,Y)\)</span>:</p>
+<div class="arithmatex">\[
+\zeta_{1}=Var\left(\frac{1}{2}\overline{\mu}X_{1}+\frac{1}{2}\mu X_{1}^{-1}\right)
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}\overline{\mu}^{2}Var(X_{1})+\frac{1}{4}\mu^{2}Var(X_{1}^{-1})+2\left(\frac{1}{2}\overline{\mu}\right)\left(\frac{1}{2}\mu\right)Cov(X_{1},X_{1}^{-1})
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}(\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(\mathbb{E}[X_{1}X_{1}^{-1}]-\mathbb{E}[X_{1}]\mathbb{E}[X_{1}^{-1}]))
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}(\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu}))
+\]</div>
+<p>Next, we compute <span class="arithmatex">\(\zeta_{2}=Var(h(X_{1},X_{2}))=\mathbb{E}[h^{2}(X_{1},X_{2})]-(\mu\overline{\mu})^{2}\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[h^{2}(X_{1},X_{2})]=\mathbb{E}\left[\frac{1}{4}\left(\frac{X_{1}^{2}}{X_{2}^{2}}+\frac{X_{2}^{2}}{X_{1}^{2}}+2\frac{X_{1}X_{2}}{X_{2}X_{1}}\right)\right]
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}(\mathbb{E}[X_{1}^{2}]\mathbb{E}[X_{2}^{-2}]+\mathbb{E}[X_{2}^{2}]\mathbb{E}[X_{1}^{-2}]+2)
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{2}\mathbb{E}[X_{1}^{2}]\mathbb{E}[X_{1}^{-2}]+\frac{1}{2}
+\]</div>
+<p>Recall the relations between second moments and variances: <span class="arithmatex">\(\mathbb{E}[X_{1}^{2}]=\sigma^{2}+\mu^{2}\)</span> and <span class="arithmatex">\(\mathbb{E}[X_{1}^{-2}]=\overline{\sigma}^{2}+\overline{\mu}^{2}\)</span>. Substituting these into the equation:</p>
+<div class="arithmatex">\[
+\zeta_{2}=\frac{1}{2}(\sigma^{2}+\mu^{2})(\overline{\sigma}^{2}+\overline{\mu}^{2})+\frac{1}{2}-\mu^{2}\overline{\mu}^{2}
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{2}(\sigma^{2}\overline{\sigma}^{2}+\sigma^{2}\overline{\mu}^{2}+\mu^{2}\overline{\sigma}^{2}+\mu^{2}\overline{\mu}^{2})+\frac{1}{2}-\mu^{2}\overline{\mu}^{2}
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{2}(\sigma^{2}\overline{\sigma}^{2}+\sigma^{2}\overline{\mu}^{2}+\mu^{2}\overline{\sigma}^{2}-\mu^{2}\overline{\mu}^{2}+1)
+\]</div>
+<p>Substituting <span class="arithmatex">\(\zeta_{1}\)</span> and <span class="arithmatex">\(\zeta_{2}\)</span> back into the formula gives the exact variance:</p>
+<div class="arithmatex">\[
+Var(U_{n})=\frac{4(n-2)}{n(n-1)}\zeta_{1}+\frac{2}{n(n-1)}\zeta_{2}
+\]</div>
+<div class="arithmatex">\[
+=\frac{n-2}{n(n-1)}(\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu}))+\frac{1}{n(n-1)}(\sigma^{2}\overline{\sigma}^{2}+\sigma^{2}\overline{\mu}^{2}+\mu^{2}\overline{\sigma}^{2}-\mu^{2}\overline{\mu}^{2}+1)
+\]</div>
+<p><strong>Step 3: Derive the asymptotic distribution</strong></p>
+<p>According to the projection theorem for U-statistics (Hoeffding's CLT), since <span class="arithmatex">\(\mathbb{E}[h^{2}]&lt;\infty\)</span> and <span class="arithmatex">\(\zeta_{1}&gt;0\)</span>, the U-statistic is asymptotically normal, driven by the first-order projection:</p>
+<div class="arithmatex">\[
+\sqrt{n}(U_{n}-\mu\overline{\mu})\rightarrow\mathcal{N}(0,m^{2}\zeta_{1})
+\]</div>
+<p>where the kernel degree is <span class="arithmatex">\(m=2\)</span>. Therefore, the asymptotic variance is <span class="arithmatex">\(4\zeta_{1}\)</span>:</p>
+<div class="arithmatex">\[
+4\zeta_{1}=\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu})
+\]</div>
+<p>Thus, the asymptotic distribution is:</p>
+<div class="arithmatex">\[
+\sqrt{n}(U_{n}-\mu\overline{\mu})\rightarrow\mathcal{N}(0,\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu}))
+\]</div>
+</details>
+<hr />
+<h2 id="3-hoeffdings-theorem">3. Hoeffding's theorem</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(X_{1},...,X_{n} \stackrel{i.i.d}{\sim} P\in\mathcal{P}\)</span> and <span class="arithmatex">\(\mathbb{E}_{P}h^{2}(X_{1},...,X_{m})&lt;\infty\)</span>, then:</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})=\binom{n}{m}^{-1}\sum_{k=1}^{m}\binom{m}{k}\binom{n-m}{m-k}\xi_{k}
+\]</div>
+<p>where <span class="arithmatex">\(\xi_{k}=Var_{P}(h_{k}(X_{1},...,X_{k}))\)</span>.</p>
+<p>(a) Prove <span class="arithmatex">\(\frac{m^{2}}{n}\xi_{1}\le Var_{P}(U_{n})\le\frac{m}{n}\xi_{m}\)</span></p>
+<p>(b) Prove <span class="arithmatex">\((n+1)Var_{P}(U_{n+1})\le nVar_{P}(U_{n})\)</span></p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>(a) Prove the upper and lower bounds</strong></p>
+<p>According to the Hoeffding H-decomposition (ANOVA decomposition) for U-statistics, we can rewrite the variance of <span class="arithmatex">\(U_{n}\)</span> in terms of the projection variances <span class="arithmatex">\(\eta_{j}\)</span> (the variances of the <span class="arithmatex">\(j\)</span>-th order orthogonal projection kernels):</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})=\sum_{j=1}^{m}\binom{m}{j}^{2}\binom{n}{j}^{-1}\eta_{j}
+\]</div>
+<p>By definition, for all <span class="arithmatex">\(j=1,...,m\)</span>, <span class="arithmatex">\(\eta_{j}\ge0\)</span>. The relationship between <span class="arithmatex">\(\xi_{k}\)</span> and <span class="arithmatex">\(\eta_{j}\)</span> is given by:</p>
+<div class="arithmatex">\[
+\xi_{k}=\sum_{j=1}^{k}\binom{k}{j}\eta_{j}
+\]</div>
+<p>In particular, for <span class="arithmatex">\(k=1\)</span>, we have <span class="arithmatex">\(\xi_{1}=\binom{1}{1}\eta_{1}=\eta_{1}\)</span>. For <span class="arithmatex">\(k=m\)</span>, we have <span class="arithmatex">\(\xi_{m}=\sum_{j=1}^{m}\binom{m}{j}\eta_{j}\)</span>.</p>
+<p><strong>Lower bound:</strong> Since all terms in the variance sum are non-negative <span class="arithmatex">\((\eta_{j}\ge0)\)</span>, the total variance is bounded below by its first term <span class="arithmatex">\((j=1)\)</span>:</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})\ge\binom{m}{1}^{2}\binom{n}{1}^{-1}\eta_{1}=\frac{m^{2}}{n}\eta_{1}=\frac{m^{2}}{n}\xi_{1}
+\]</div>
+<p><strong>Upper bound:</strong> We analyze the combinatorial coefficients in the variance sum. We can rewrite them as:</p>
+<div class="arithmatex">\[
+\binom{m}{j}^{2}\binom{n}{j}^{-1}=\binom{m}{j}\left[\binom{m}{j}\binom{n}{j}^{-1}\right]
+\]</div>
+<p>Expanding the term in brackets:</p>
+<div class="arithmatex">\[
+\binom{m}{j}\binom{n}{j}^{-1}=\frac{m!}{j!(m-j)!}\frac{j!(n-j)!}{n!}=\frac{m(m-1)...(m-j+1)}{n(n-1)...(n-j+1)}=\prod_{i=0}^{j-1}\frac{m-i}{n-i}
+\]</div>
+<p>Since <span class="arithmatex">\(m\le n\)</span>, for any <span class="arithmatex">\(i\ge0\)</span>, we have <span class="arithmatex">\(nn-in\le mn-im\)</span>, which implies <span class="arithmatex">\(\frac{m-i}{n-i}\le\frac{m}{n}\)</span>. Therefore, the product is bounded by:</p>
+<div class="arithmatex">\[
+\prod_{i=0}^{j-1}\frac{m-i}{n-i}\le\frac{m}{n}\cdot1...1=\frac{m}{n}
+\]</div>
+<p>Substituting this inequality back into the variance formula, we obtain:</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})=\sum_{j=1}^{m}\binom{m}{j}\left[\binom{m}{j}\binom{n}{j}^{-1}\right]\eta_{j}\le\sum_{j=1}^{m}\binom{m}{j}\left(\frac{m}{n}\right)\eta_{j}=\frac{m}{n}\sum_{j=1}^{m}\binom{m}{j}\eta_{j}
+\]</div>
+<p>Since <span class="arithmatex">\(\xi_{m}=\sum_{j=1}^{m}\binom{m}{j}\eta_{j}\)</span>, we conclude:</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})\le\frac{m}{n}\xi_{m}
+\]</div>
+<p><strong>(b) Prove the sample size recursion inequality</strong></p>
+<p>Using the variance formula from the H-decomposition, we write the scaled variances for sample sizes <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(n+1\)</span>:</p>
+<div class="arithmatex">\[
+nVar_{P}(U_{n})=\sum_{j=1}^{m}\binom{m}{j}^{2}\left[n\binom{n}{j}^{-1}\right]\eta_{j}
+\]</div>
+<div class="arithmatex">\[
+(n+1)Var_{P}(U_{n+1})=\sum_{j=1}^{m}\binom{m}{j}^{2}\left[(n+1)\binom{n+1}{j}^{-1}\right]\eta_{j}
+\]</div>
+<p>To prove the inequality, it suffices to show that the coefficient of each <span class="arithmatex">\(\eta_{j}\)</span> is non-increasing when the sample size increases from <span class="arithmatex">\(n\)</span> to <span class="arithmatex">\(n+1\)</span>. We compare the terms in brackets. For size <span class="arithmatex">\(n+1\)</span>:</p>
+<div class="arithmatex">\[
+(n+1)\binom{n+1}{j}^{-1}=(n+1)\frac{j!(n+1-j)!}{(n+1)!}=\frac{j!(n-j+1)!}{n!}
+\]</div>
+<p>We can factor out <span class="arithmatex">\((n-j+1)\)</span> from the numerator:</p>
+<div class="arithmatex">\[
+\frac{j!(n-j+1)!}{n!}=(n-j+1)\frac{j!(n-j)!}{n!}=(n-j+1)\binom{n}{j}^{-1}
+\]</div>
+<p>Since for all terms in the sum <span class="arithmatex">\(j\ge1\)</span>, we clearly have <span class="arithmatex">\(n-j+1\le n\)</span>. Therefore:</p>
+<div class="arithmatex">\[
+(n+1)\binom{n+1}{j}^{-1}=(n-j+1)\binom{n}{j}^{-1}\le n\binom{n}{j}^{-1}
+\]</div>
+<p>Because <span class="arithmatex">\(\binom{m}{j}^{2}\eta_{j}\ge0\)</span> for all <span class="arithmatex">\(j\)</span>, multiplying this non-negative constant to both sides of the inequality preserves the direction. Summing over all <span class="arithmatex">\(j=1,...,m\)</span> yields:</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{m}\binom{m}{j}^{2}\left[(n+1)\binom{n+1}{j}^{-1}\right]\eta_{j}\le\sum_{j=1}^{m}\binom{m}{j}^{2}\left[n\binom{n}{j}^{-1}\right]\eta_{j}
+\]</div>
+<p>This is precisely:</p>
+<div class="arithmatex">\[
+(n+1)Var_{P}(U_{n+1})\le nVar_{P}(U_{n})
+\]</div>
+</details>
+<h2 id="exercise-4-u-statistics-and-v-statistics">Exercise 4: U-statistics and V-statistics</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(X_1, X_2, \dots\)</span> be a sequence of i.i.d. random variables, and let <span class="arithmatex">\(h\)</span> be a symmetric kernel function satisfying <span class="arithmatex">\(0 &lt; E[h^2(X_1, X_2)] &lt; \infty\)</span> and <span class="arithmatex">\(E[h^2(X_1, X_1)] &lt; \infty\)</span>. Define <span class="arithmatex">\(V_n\)</span> as:</p>
+<div class="arithmatex">\[
+V_n := \frac{1}{n^2} \sum_{i=1}^n \sum_{j=1}^n h(X_i, X_j)
+\]</div>
+<p>(a) Use the central limit theorem for U-statistics to prove that <span class="arithmatex">\(V_n\)</span> is asymptotically normal.</p>
+<p>(b) Can <span class="arithmatex">\(V_n\)</span> be written as a U-statistic? Why?</p>
+<p>(c) Now assume <span class="arithmatex">\(E X_1 = 0\)</span> and <span class="arithmatex">\(E X_1^4 &lt; \infty\)</span>. Take the kernel <span class="arithmatex">\(h(x, y) = xy\)</span>. Find the asymptotic relative efficiency (ARE) of <span class="arithmatex">\(V_n\)</span> relative to the U-statistic <span class="arithmatex">\(U_n := \frac{2}{n(n-1)} \sum_{1 \le i &lt; j \le n} X_i X_j\)</span>, i.e., <span class="arithmatex">\(\frac{Avar(U_n)}{Avar(V_n)}\)</span>.</p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>(a) Prove the asymptotic normality of <span class="arithmatex">\(V_n\)</span></strong></p>
+<p>Let <span class="arithmatex">\(\theta = E[h(X_1, X_2)]\)</span> be the expectation of the kernel for independent observations. The corresponding U-statistic is:</p>
+<div class="arithmatex">\[
+U_n = \frac{2}{n(n-1)} \sum_{1 \le i &lt; j \le n} h(X_i, X_j)
+\]</div>
+<p>We can decompose the V-statistic into the U-statistic part (off-diagonal terms) and the diagonal part:</p>
+<div class="arithmatex">\[
+V_n = \frac{1}{n^2} \sum_{i \ne j} h(X_i, X_j) + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<div class="arithmatex">\[
+= \frac{n(n-1)}{n^2} U_n + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<div class="arithmatex">\[
+= \left( 1 - \frac{1}{n} \right) U_n + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<p>To analyze its asymptotic distribution, we scale the centered V-statistic by <span class="arithmatex">\(\sqrt{n}\)</span>:</p>
+<div class="arithmatex">\[
+\sqrt{n}(V_n - \theta) = \sqrt{n} \left( \left( 1 - \frac{1}{n} \right) U_n + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i) - \theta \right)
+\]</div>
+<div class="arithmatex">\[
+= \left( 1 - \frac{1}{n} \right) \sqrt{n}(U_n - \theta) - \frac{1}{\sqrt{n}} \theta + \frac{1}{n\sqrt{n}} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<p>Let <span class="arithmatex">\(\mu_D = E[h(X_1, X_1)]\)</span>. By the Weak Law of Large Numbers (WLLN), <span class="arithmatex">\(\frac{1}{n} \sum_{i=1}^n h(X_i, X_i) \xrightarrow{p} \mu_D\)</span>.
+Therefore, the last term in the expression is <span class="arithmatex">\(\frac{1}{n} (\frac{1}{n} \sum h(X_i, X_i)) = O_p(n^{-1})\)</span>, which is <span class="arithmatex">\(o_p(1)\)</span>.
+Meanwhile, the scaling factor <span class="arithmatex">\((1 - 1/n) \rightarrow 1\)</span>.</p>
+<p>By Slutsky's theorem, the scaled difference of the V-statistic converges to that of the U-statistic:</p>
+<div class="arithmatex">\[
+\sqrt{n}(V_n - \theta) = \sqrt{n}(U_n - \theta) + o_p(1)
+\]</div>
+<p>According to the central limit theorem for U-statistics, <span class="arithmatex">\(\sqrt{n}(U_n - \theta) \xrightarrow{d} \mathcal{N}(0, 4\zeta_1)\)</span>. Hence <span class="arithmatex">\(V_n\)</span> has the same asymptotic normal distribution:</p>
+<div class="arithmatex">\[
+\sqrt{n}(V_n - \theta) \xrightarrow{d} \mathcal{N}(0, 4\zeta_1)
+\]</div>
+<p><strong>(b) Can <span class="arithmatex">\(V_n\)</span> be written as a U-statistic?</strong></p>
+<p>No. By definition, a U-statistic <span class="arithmatex">\(U_n\)</span> of size <span class="arithmatex">\(n\)</span> must be an unbiased estimator of its population parameter <span class="arithmatex">\(\theta\)</span>, i.e., <span class="arithmatex">\(E[U_n] = \theta\)</span> for all <span class="arithmatex">\(n \ge m\)</span>.
+Compute the expectation of <span class="arithmatex">\(V_n\)</span>:</p>
+<div class="arithmatex">\[
+E[V_n] = \left( 1 - \frac{1}{n} \right) \theta + \frac{1}{n} \mu_D = \theta + \frac{\mu_D - \theta}{n}
+\]</div>
+<p>Since <span class="arithmatex">\(E[V_n]\)</span> explicitly depends on the sample size <span class="arithmatex">\(n\)</span> (unless <span class="arithmatex">\(\theta = \mu_D\)</span>, which is not generally true), <span class="arithmatex">\(V_n\)</span> is a biased estimator and cannot be a U-statistic.</p>
+<p><strong>(c) Compute the asymptotic relative efficiency (ARE)</strong></p>
+<p>Since <span class="arithmatex">\(E X_1 = 0\)</span> and <span class="arithmatex">\(h(x, y) = xy\)</span>, we compute <span class="arithmatex">\(\theta\)</span> and the projection variance <span class="arithmatex">\(\zeta_1\)</span>:</p>
+<div class="arithmatex">\[
+\theta = E[X_1 X_2] = E[X_1] E[X_2] = 0 \cdot 0 = 0
+\]</div>
+<p>The projection function is:</p>
+<div class="arithmatex">\[
+h_1(x_1) = E[h(x_1, X_2)] = x_1 E[X_2] = 0
+\]</div>
+<p>Because <span class="arithmatex">\(h_1(x_1) \equiv 0\)</span>, we have <span class="arithmatex">\(\zeta_1 = Var(h_1(X_1)) = 0\)</span>. This means <span class="arithmatex">\(U_n\)</span> is a degenerate U-statistic, and the standard <span class="arithmatex">\(\sqrt{n}\)</span> scaling yields a limit of 0.
+We need to use a scaling factor of <span class="arithmatex">\(n\)</span>.</p>
+<p><strong>Analysis of <span class="arithmatex">\(n V_n\)</span></strong>:</p>
+<div class="arithmatex">\[
+V_n = \frac{1}{n^2} \sum_{i=1}^n \sum_{j=1}^n X_i X_j = \left( \frac{1}{n} \sum_{i=1}^n X_i \right)^2 = \bar{X}_n^2
+\]</div>
+<p>By the CLT, <span class="arithmatex">\(\sqrt{n}\bar{X}_n \xrightarrow{d} \mathcal{N}(0, \sigma^2)\)</span>. By the Continuous Mapping Theorem (CMT):</p>
+<div class="arithmatex">\[
+n V_n = (\sqrt{n} \bar{X}_n)^2 \xrightarrow{d} \sigma^2 \chi_1^2
+\]</div>
+<p>Its asymptotic variance is <span class="arithmatex">\(Var(\sigma^2 \chi_1^2) = \sigma^4 Var(\chi_1^2) = \sigma^4 \cdot 2 = 2\sigma^4\)</span>.</p>
+<p><strong>Analysis of <span class="arithmatex">\(n U_n\)</span></strong>:</p>
+<div class="arithmatex">\[
+n U_n = \frac{n}{n(n-1)} \sum_{i \ne j} X_i X_j = \frac{n}{n-1} \left[ \left( \sum X_i \right)^2 - \sum X_i^2 \right] \cdot \frac{1}{n}
+\]</div>
+<div class="arithmatex">\[
+= \frac{1}{n-1} \left[ n (\sqrt{n} \bar{X}_n)^2 - \sum X_i^2 \right] \xrightarrow{d} \sigma^2 \chi_1^2 - \sigma^2 = \sigma^2(\chi_1^2 - 1)
+\]</div>
+<p>Its asymptotic variance is <span class="arithmatex">\(Var(\sigma^2(\chi_1^2 - 1)) = \sigma^4 Var(\chi_1^2) = 2\sigma^4\)</span>.</p>
+<p>Hence, the ARE is:</p>
+<div class="arithmatex">\[
+ARE(U_n, V_n) = \frac{Avar(n U_n)}{Avar(n V_n)} = \frac{2\sigma^4}{2\sigma^4} = 1
+\]</div>
+</details>
+<hr />
+<h2 id="exercise-5-divide-and-conquered-u-statistics-for-big-data">Exercise 5: Divide and Conquered U-statistics for big data</h2>
+<p><strong>Problem:</strong>
+Let <span class="arithmatex">\(U_N\)</span> be a U-statistic with kernel <span class="arithmatex">\(h(x_1, \dots, x_m)\)</span>. Assume <span class="arithmatex">\(\theta = E[h(X_1, \dots, X_m)]\)</span> and <span class="arithmatex">\(E[|h|] &lt; \infty\)</span>. Define <span class="arithmatex">\(h_1(x_1) = E[h(X_1, X_2, \dots, X_m) | X_1 = x_1]\)</span> and assume <span class="arithmatex">\(\zeta_1 = Var(h_1(X_1)) &gt; 0\)</span>. Suppose the total sample size is <span class="arithmatex">\(N = nK\)</span>, and the data are partitioned into <span class="arithmatex">\(K\)</span> non-overlapping subsets <span class="arithmatex">\(D_k\)</span> (each of size <span class="arithmatex">\(n\)</span>). Let <span class="arithmatex">\(U_{kn}\)</span> be the U-statistic based on the <span class="arithmatex">\(k\)</span>-th subset <span class="arithmatex">\(D_k\)</span>. Define <span class="arithmatex">\(AU_N = K^{-1} \sum_{k=1}^K U_{kn}\)</span>. Prove: if <span class="arithmatex">\(K = o(N)\)</span>, then <span class="arithmatex">\(\sqrt{N}(AU_N - \theta) \xrightarrow{d} \mathcal{N}(0, m^2\zeta_1)\)</span>.</p>
+<details class="success">
+<summary>Solution (click to expand)</summary>
+<p><strong>Proof:</strong></p>
+<p>We need to show that <span class="arithmatex">\(\sqrt{N}(AU_N - \theta) \xrightarrow{d} \mathcal{N}(0, m^2\zeta_1)\)</span>. We rewrite the scaled averaged U-statistic as a sum of independent random variables.
+Since <span class="arithmatex">\(N = nK\)</span>, we have:</p>
+<div class="arithmatex">\[
+\sqrt{N}(AU_N - \theta) = \sqrt{nK} \left( \frac{1}{K} \sum_{k=1}^K (U_{kn} - \theta) \right) = \sum_{k=1}^K \sqrt{\frac{n}{K}} (U_{kn} - \theta)
+\]</div>
+<p>For a given total sample size <span class="arithmatex">\(N\)</span> (hence <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(K\)</span> fixed), define <span class="arithmatex">\(Z_{N,k} = \sqrt{\frac{n}{K}} (U_{kn} - \theta)\)</span>. Because the <span class="arithmatex">\(K\)</span> subsets are non-overlapping, <span class="arithmatex">\(\{Z_{N,k}\}_{k=1}^K\)</span> forms a triangular array of row-wise independent random variables. We will use the Lindeberg-Feller central limit theorem.</p>
+<p><strong>Step 1: Convergence of the row sum variance</strong></p>
+<p>Let <span class="arithmatex">\(S_N = \sum_{k=1}^K Z_{N,k}\)</span>. Since the <span class="arithmatex">\(Z_{N,k}\)</span> are i.i.d. for fixed <span class="arithmatex">\(N\)</span>:</p>
+<div class="arithmatex">\[
+Var(S_N) = \sum_{k=1}^K Var(Z_{N,k}) = K \cdot Var\left( \sqrt{\frac{n}{K}} U_{kn} \right) = n Var(U_{kn})
+\]</div>
+<p>From standard U-statistic theory, for a sample of size <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(n Var(U_{kn}) \rightarrow m^2 \zeta_1\)</span> (as <span class="arithmatex">\(n \rightarrow \infty\)</span>). Because <span class="arithmatex">\(K = o(N)\)</span>, i.e., <span class="arithmatex">\(K/N \rightarrow 0\)</span>, this implies <span class="arithmatex">\(n = N/K \rightarrow \infty\)</span>. Therefore:</p>
+<div class="arithmatex">\[
+Var(S_N) \rightarrow m^2 \zeta_1
+\]</div>
+<p><strong>Step 2: Verification of the Lindeberg condition</strong></p>
+<p>We need to show that for any <span class="arithmatex">\(\epsilon &gt; 0\)</span>:</p>
+<div class="arithmatex">\[
+\lim_{N \rightarrow \infty} \sum_{k=1}^K E[Z_{N,k}^2 I(|Z_{N,k}| &gt; \epsilon)] = 0
+\]</div>
+<p>Since the <span class="arithmatex">\(Z_{N,k}\)</span> are identically distributed, the sum simplifies to:</p>
+<div class="arithmatex">\[
+K \cdot E[Z_{N,1}^2 I(|Z_{N,1}| &gt; \epsilon)] = K \cdot E\left[ \frac{n}{K} (U_{1n} - \theta)^2 I\left(\sqrt{\frac{n}{K}}|U_{1n} - \theta| &gt; \epsilon\right) \right]
+\]</div>
+<div class="arithmatex">\[
+= E[n(U_{1n} - \theta)^2 I(| \sqrt{n}(U_{1n} - \theta) | &gt; \epsilon \sqrt{K})]
+\]</div>
+<p>Let <span class="arithmatex">\(W_n = \sqrt{n}(U_{1n} - \theta)\)</span>. The above expectation becomes <span class="arithmatex">\(E[W_n^2 I(|W_n| &gt; \epsilon \sqrt{K})]\)</span>.
+By the CLT for regular U-statistics, <span class="arithmatex">\(W_n \xrightarrow{d} \mathcal{N}(0, m^2\zeta_1)\)</span>.
+Moreover, we know <span class="arithmatex">\(E[W_n^2] = n Var(U_{1n}) \rightarrow m^2 \zeta_1\)</span>.
+Convergence in distribution together with convergence of second moments implies that <span class="arithmatex">\(\{W_n^2\}\)</span> is <strong>uniformly integrable (UI)</strong>.
+For any uniformly integrable sequence, if the truncation threshold tends to infinity, the truncated expectation tends to 0. Since <span class="arithmatex">\(K \rightarrow \infty\)</span>, the threshold <span class="arithmatex">\(\epsilon \sqrt{K} \rightarrow \infty\)</span>. Hence:</p>
+<div class="arithmatex">\[
+\lim_{N \rightarrow \infty} E[W_n^2 I(|W_n| &gt; \epsilon \sqrt{K})] = 0
+\]</div>
+<p>This satisfies the Lindeberg condition.</p>
+<p><strong>Step 3: Conclusion</strong></p>
+<p>Since the Lindeberg condition holds and the variance of the row sums converges to <span class="arithmatex">\(m^2\zeta_1\)</span>, by the Lindeberg-Feller central limit theorem:</p>
+<div class="arithmatex">\[
+\sum_{k=1}^K Z_{N,k} = \sqrt{N}(AU_N - \theta) \xrightarrow{d} \mathcal{N}(0, m^2 \zeta_1)
+\]</div>
+<p>The proof is complete. <span class="arithmatex">\(\square\)</span></p>
+</details>
 
 
 

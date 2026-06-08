@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#assignment-4" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1723,6 +1728,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 4
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1740,6 +1765,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-one-step-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 单步估计量 (One-step estimator)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-u-unbiased-estimator-and-u-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 无偏估计量与 U-统计量 (Unbiased estimator and U-statistic)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hoeffding-hoeffdings-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hoeffding 定理 (Hoeffding's theorem)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-u-v-u-statistics-and-v-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 4: U-统计量与 V-统计量 (U-statistics and V-statistics)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-u-divide-and-conquered-u-statistics-for-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 5: 大数据下的分治 U-统计量 (Divide and Conquered U-statistics for big data)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4629,6 +4728,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-one-step-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 单步估计量 (One-step estimator)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-u-unbiased-estimator-and-u-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 无偏估计量与 U-统计量 (Unbiased estimator and U-statistic)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hoeffding-hoeffdings-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hoeffding 定理 (Hoeffding's theorem)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-u-v-u-statistics-and-v-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 4: U-统计量与 V-统计量 (U-statistics and V-statistics)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-u-divide-and-conquered-u-statistics-for-big-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题 5: 大数据下的分治 U-统计量 (Divide and Conquered U-statistics for big data)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4649,9 +4813,392 @@
   
 
 
-  <h1>AS Homework 4</h1>
-
-
+<h1 id="assignment-4">📈 课后习题精解：大样本理论 Assignment 4</h1>
+<h2 id="1-one-step-estimator">1. 单步估计量 (One-step estimator)</h2>
+<p><strong>题目：</strong>
+设 <span class="arithmatex">\(\{P_{\theta}\}_{\theta\in\Theta}\)</span> 是一个模型族，其中 <span class="arithmatex">\(\Theta\subset\mathbb{R}^{d}\)</span> 是开集，且 <span class="arithmatex">\(X_{1},...,X_{n} \stackrel{i.i.d}{\sim} P_{\theta_{0}}\)</span>。对数似然函数 <span class="arithmatex">\(l_{\theta}(x)=\log p_{\theta}(x)\)</span> 满足给定的正则性条件。令 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 为一个 <span class="arithmatex">\(n\)</span>-相合 (n-consistent) 估计量。单步估计量 <span class="arithmatex">\(\delta_{n}\)</span> 满足以下等式：</p>
+<div class="arithmatex">\[
+\nabla L_{n}(\hat{\theta}_{n})+\nabla^{2}L_{n}(\hat{\theta}_{n})(\delta_{n}-\hat{\theta}_{n})=0
+\]</div>
+<p>(a) 假设模型族 <span class="arithmatex">\(\{P_{\theta}\}_{\theta\in\mathbb{R}}\)</span> 是柯西 (Cauchy) 族，其概率密度函数为 <span class="arithmatex">\(p_{\theta}(x)= \frac{1}{\pi(1+(x-\theta)^{2})}\)</span>。令 <span class="arithmatex">\(X_{1},...,X_{n} \stackrel{i.i.d}{\sim} P_{\theta}\)</span> 并定义 <span class="arithmatex">\(\hat{\theta}_{n}=\text{Median}(X_{1},...,X_{n})\)</span>。求 <span class="arithmatex">\(\sqrt{n}(\hat{\theta}_{n}-\theta)\)</span> 的极限分布。</p>
+<p>(b) 令 <span class="arithmatex">\(\delta_{n}\)</span> 为该柯西族的单步估计量。它的渐近分布是什么？在 (a) 中，<span class="arithmatex">\(\delta_{n}\)</span> 是否比 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 更有效 (more efficient)？</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>(a) 求样本中位数的渐近分布</strong></p>
+<p>样本中位数 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 对应于 <span class="arithmatex">\(p=1/2\)</span> 处的样本分位数。根据已建立的样本分位数渐近理论（例如，van der Vaart 中的定理 5.23），如果累积分布函数 <span class="arithmatex">\(F\)</span> 在真实总体分位数 <span class="arithmatex">\(\theta\)</span> 处具有连续且严格为正的导数（密度）<span class="arithmatex">\(f\)</span>，则样本中位数是渐近正态的：</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_{n}-\theta)\xrightarrow{d}\mathcal{N}\left(0,\frac{p(1-p)}{f(\theta)^{2}}\right)
+\]</div>
+<p>对于 <span class="arithmatex">\(p=1/2,\)</span> 方差的分子为 <span class="arithmatex">\(1/4.\)</span> 我们现在计算柯西密度函数在真实中位数 <span class="arithmatex">\(\theta\)</span> 处的值：</p>
+<div class="arithmatex">\[
+f(\theta)=p_{\theta}(\theta)=\frac{1}{\pi(1+(\theta-\theta)^{2})}=\frac{1}{\pi}
+\]</div>
+<p>将 <span class="arithmatex">\(f(\theta)=1/\pi\)</span> 代入渐近方差公式：</p>
+<div class="arithmatex">\[
+V=\frac{1/4}{(1/\pi)^{2}}=\frac{\pi^{2}}{4}
+\]</div>
+<p>因此，样本中位数的极限分布为：</p>
+<div class="arithmatex">\[
+\sqrt{n}(\hat{\theta}_{n}-\theta)\xrightarrow{d}\mathcal{N}\left(0,\frac{\pi^{2}}{4}\right)
+\]</div>
+<p><strong>(b) 求单步估计量的渐近分布并比较有效性</strong></p>
+<p>根据单步估计量的定义，我们可以将其重写为：</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)=\sqrt{n}(\hat{\theta}_{n}-\theta)-\left[\frac{1}{n}\nabla^{2}L_{n}(\hat{\theta}_{n})\right]^{-1}\frac{1}{\sqrt{n}}\nabla L_{n}(\hat{\theta}_{n})
+\]</div>
+<p>我们利用泰勒定理 (Taylor's theorem) 将得分函数 <span class="arithmatex">\(\frac{1}{\sqrt{n}}\nabla L_{n}(\hat{\theta}_{n})\)</span> 在真实参数 <span class="arithmatex">\(\theta\)</span> 附近展开：</p>
+<div class="arithmatex">\[
+\frac{1}{\sqrt{n}}\nabla L_{n}(\hat{\theta}_{n})=\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)+\frac{1}{n}\nabla^{2}L_{n}(\tilde{\theta})\sqrt{n}(\hat{\theta}_{n}-\theta)
+\]</div>
+<p>其中 <span class="arithmatex">\(\tilde{\theta}\)</span> 位于 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 和 <span class="arithmatex">\(\theta\)</span> 之间。因为 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 是 <span class="arithmatex">\(\sqrt{n}\)</span>-相合的，<span class="arithmatex">\(\tilde{\theta}\xrightarrow{P}\theta\)</span>。由弱大数定律 (Weak Law of Large Numbers) 和二阶导数的 Lipschitz 连续性，我们有：</p>
+<div class="arithmatex">\[
+-\frac{1}{n}\nabla^{2}L_{n}(\hat{\theta}_{n})\xrightarrow{p}I(\theta) \quad \text{和} \quad -\frac{1}{n}\nabla^{2}L_{n}(\tilde{\theta})\xrightarrow{p}I(\theta)
+\]</div>
+<p>其中 <span class="arithmatex">\(I(\theta)=-E[\nabla^{2}l_{\theta}(X)]\)</span> 是 Fisher 信息量。将泰勒展开代回我们的估计量，得到：</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)=\sqrt{n}(\hat{\theta}_{n}-\theta)+I(\theta)^{-1}\left(\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)-I(\theta)\sqrt{n}(\hat{\theta}_{n}-\theta)\right)+o_{p}(1)
+\]</div>
+<div class="arithmatex">\[
+=\sqrt{n}(\hat{\theta}_{n}-\theta)+I(\theta)^{-1}\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)-\sqrt{n}(\hat{\theta}_{n}-\theta)+o_{p}(1)
+\]</div>
+<div class="arithmatex">\[
+=I(\theta)^{-1}\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)+o_{p}(1)
+\]</div>
+<p>由中心极限定理，标准化后的得分函数 <span class="arithmatex">\(\frac{1}{\sqrt{n}}\nabla L_{n}(\theta)\xrightarrow{d}\mathcal{N}(0,I(\theta))\)</span>。由 Slutsky 定理，单步估计量达到了极大似然估计量的有效性：</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)\xrightarrow{d}\mathcal{N}(0,I(\theta)^{-1})
+\]</div>
+<p>现在，我们计算柯西分布的 Fisher 信息量 <span class="arithmatex">\(I(\theta)\)</span>。对数密度为：</p>
+<div class="arithmatex">\[
+l_{\theta}(x)=-\log\pi-\log(1+(x-\theta)^{2})
+\]</div>
+<p>一阶导数（得分函数）为：</p>
+<div class="arithmatex">\[
+\nabla l_{\theta}(x)=\frac{2(x-\theta)}{1+(x-\theta)^{2}}
+\]</div>
+<p>Fisher 信息量是得分函数平方的期望：</p>
+<div class="arithmatex">\[
+I(\theta)=E[(\nabla l_{\theta}(X))^{2}]=\int_{-\infty}^{\infty}\left(\frac{2(x-\theta)}{1+(x-\theta)^{2}}\right)^{2}\frac{1}{\pi(1+(x-\theta)^{2})}dx
+\]</div>
+<p>令 <span class="arithmatex">\(y=x-\theta\)</span>。由于被积函数是偶函数：</p>
+<div class="arithmatex">\[
+I(\theta)=\frac{4}{\pi}\int_{-\infty}^{\infty}\frac{y^{2}}{(1+y^{2})^{3}}dy=\frac{8}{\pi}\int_{0}^{\infty}\frac{y^{2}}{(1+y^{2})^{3}}dy
+\]</div>
+<p>我们可以通过三角代换 <span class="arithmatex">\(y=\tan z\)</span> 来求解，这给出 <span class="arithmatex">\(dy=\sec^{2}z dz\)</span> 和 <span class="arithmatex">\(1+y^{2}=\sec^{2}z\)</span>。积分区间从 <span class="arithmatex">\([0,\infty)\)</span> 变为 <span class="arithmatex">\([0,\pi/2)\)</span>：</p>
+<div class="arithmatex">\[
+I(\theta)=\frac{8}{\pi}\int_{0}^{\pi/2}\frac{\tan^{2}z}{\sec^{6}z}\sec^{2}z dz
+\]</div>
+<div class="arithmatex">\[
+=\frac{8}{\pi}\int_{0}^{\pi/2}\sin^{2}z \cos^{2}z dz
+\]</div>
+<div class="arithmatex">\[
+=\frac{8}{\pi}\int_{0}^{\pi/2}\frac{1}{4}\sin^{2}(2z)dz
+\]</div>
+<div class="arithmatex">\[
+=\frac{2}{\pi}\int_{0}^{\pi/2}\sin^{2}(2z)dz
+\]</div>
+<p>令 <span class="arithmatex">\(u=2z\)</span>，所以 <span class="arithmatex">\(du=2dz\)</span>，积分区间变为 <span class="arithmatex">\([0, \pi]\)</span>：</p>
+<div class="arithmatex">\[
+I(\theta)=\frac{1}{\pi}\int_{0}^{\pi}\sin^{2}u du=\frac{1}{\pi}\cdot\frac{\pi}{2}=\frac{1}{2}
+\]</div>
+<p>因此，单步估计量的渐近方差为 <span class="arithmatex">\(I(\theta)^{-1}=2\)</span>。</p>
+<div class="arithmatex">\[
+\sqrt{n}(\delta_{n}-\theta)\xrightarrow{d}\mathcal{N}(0,2)
+\]</div>
+<p><strong>有效性比较</strong>：由 (a) 部分，样本中位数 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 的渐近方差为 <span class="arithmatex">\(\frac{\pi^{2}}{4}\approx2.467\)</span>。因为 <span class="arithmatex">\(2&lt;\frac{\pi^{2}}{4}\)</span>，单步估计量 <span class="arithmatex">\(\delta_{n}\)</span> 的渐近方差严格小于初始中位数估计量 <span class="arithmatex">\(\hat{\theta}_{n}\)</span> 的渐近方差。因此，<span class="arithmatex">\(\delta_{n}\)</span> 更有效。</p>
+</details>
+<hr />
+<h2 id="2-u-unbiased-estimator-and-u-statistic">2. 无偏估计量与 U-统计量 (Unbiased estimator and U-statistic)</h2>
+<p><strong>题目：</strong>
+令 <span class="arithmatex">\(X_{1},...,X_{n}\)</span> 为 i.i.d. 随机变量，具有有限的 <span class="arithmatex">\(\mu=\mathbb{E}(X_{1})\)</span> 和 <span class="arithmatex">\(\overline{\mu}=\mathbb{E}(X_{1}^{-1})\)</span>。
+寻找一个 U-统计量，它是 <span class="arithmatex">\(\overline{\mu}\mu\)</span> 的无偏估计量，并推导其方差和渐近分布。</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>步骤 1：构造对称核和 U-统计量</strong></p>
+<p>我们想估计 <span class="arithmatex">\(\theta=\mu\overline{\mu}\)</span>。考虑一对独立的观测值 <span class="arithmatex">\((X_{1},X_{2})\)</span>。由于它们是独立的，我们有：</p>
+<div class="arithmatex">\[
+\mathbb{E}[X_{1}X_{2}^{-1}]=\mathbb{E}[X_{1}]\mathbb{E}[X_{2}^{-1}]=\mu\overline{\mu}
+\]</div>
+<p>因此，<span class="arithmatex">\(g(x_{1},x_{2})=x_{1}x_{2}^{-1}\)</span> 是 <span class="arithmatex">\(\theta\)</span> 的一个无偏估计量，但它是不对称的。我们通过排列参数构造一个次数 <span class="arithmatex">\(m=2\)</span> 的对称核：</p>
+<div class="arithmatex">\[
+h(X_{1},X_{2})=\frac{1}{2}(g(X_{1},X_{2})+g(X_{2},X_{1}))=\frac{1}{2}\left(\frac{X_{1}}{X_{2}}+\frac{X_{2}}{X_{1}}\right)
+\]</div>
+<p>显然，<span class="arithmatex">\(\mathbb{E}[h(X_{1},X_{2})]=\frac{1}{2}(\mu\overline{\mu}+\mu\overline{\mu})=\mu\overline{\mu}\)</span>。相应的 U-统计量为：</p>
+<div class="arithmatex">\[
+U_{n}=\binom{n}{2}^{-1}\sum_{1\le i&lt;j\le n}h(X_{i},X_{j})=\binom{n}{2}^{-1}\sum_{1\le i&lt;j\le n}\frac{1}{2}\left(\frac{X_{i}}{X_{j}}+\frac{X_{j}}{X_{i}}\right)
+\]</div>
+<p><strong>步骤 2：推导 <span class="arithmatex">\(U_{n}\)</span> 的方差</strong></p>
+<p>根据 Hoeffding 定理，次数 <span class="arithmatex">\(m=2\)</span> 的 U-统计量的方差由下式给出：</p>
+<div class="arithmatex">\[
+Var(U_{n})=\binom{n}{2}^{-1}\sum_{k=1}^{2}\binom{2}{k}\binom{n-2}{2-k}\zeta_{k}=\frac{2}{n(n-1)}(2(n-2)\zeta_{1}+\zeta_{2})
+\]</div>
+<p>首先，我们计算 <span class="arithmatex">\(h_{1}(x_{1})=\mathbb{E}[h(X_{1},X_{2})|X_{1}=x_{1}]\)</span>：</p>
+<div class="arithmatex">\[
+h_{1}(x_{1})=\mathbb{E}\left[\frac{1}{2}\left(\frac{x_{1}}{X_{2}}+\frac{X_{2}}{x_{1}}\right)\right]=\frac{1}{2}\overline{\mu}x_{1}+\frac{1}{2}\frac{\mu}{x_{1}}
+\]</div>
+<p>现在我们计算 <span class="arithmatex">\(\zeta_{1}=Var(h_{1}(X_{1}))\)</span>。令 <span class="arithmatex">\(\sigma^{2}=Var(X_{1})\)</span> 和 <span class="arithmatex">\(\overline{\sigma}^{2}=Var(X_{1}^{-1})\)</span>。利用性质 <span class="arithmatex">\(Var(aX+bY)=a^{2}Var(X)+b^{2}Var(Y)+2abCov(X,Y)\)</span>：</p>
+<div class="arithmatex">\[
+\zeta_{1}=Var\left(\frac{1}{2}\overline{\mu}X_{1}+\frac{1}{2}\mu X_{1}^{-1}\right)
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}\overline{\mu}^{2}Var(X_{1})+\frac{1}{4}\mu^{2}Var(X_{1}^{-1})+2\left(\frac{1}{2}\overline{\mu}\right)\left(\frac{1}{2}\mu\right)Cov(X_{1},X_{1}^{-1})
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}(\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(\mathbb{E}[X_{1}X_{1}^{-1}]-\mathbb{E}[X_{1}]\mathbb{E}[X_{1}^{-1}]))
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}(\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu}))
+\]</div>
+<p>接下来，我们计算 <span class="arithmatex">\(\zeta_{2}=Var(h(X_{1},X_{2}))=\mathbb{E}[h^{2}(X_{1},X_{2})]-(\mu\overline{\mu})^{2}\)</span>：</p>
+<div class="arithmatex">\[
+\mathbb{E}[h^{2}(X_{1},X_{2})]=\mathbb{E}\left[\frac{1}{4}\left(\frac{X_{1}^{2}}{X_{2}^{2}}+\frac{X_{2}^{2}}{X_{1}^{2}}+2\frac{X_{1}X_{2}}{X_{2}X_{1}}\right)\right]
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{4}(\mathbb{E}[X_{1}^{2}]\mathbb{E}[X_{2}^{-2}]+\mathbb{E}[X_{2}^{2}]\mathbb{E}[X_{1}^{-2}]+2)
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{2}\mathbb{E}[X_{1}^{2}]\mathbb{E}[X_{1}^{-2}]+\frac{1}{2}
+\]</div>
+<p>回顾二阶矩和方差之间的关系：<span class="arithmatex">\(\mathbb{E}[X_{1}^{2}]=\sigma^{2}+\mu^{2}\)</span> 和 <span class="arithmatex">\(\mathbb{E}[X_{1}^{-2}]=\overline{\sigma}^{2}+\overline{\mu}^{2}\)</span>，将它们代入方程：</p>
+<div class="arithmatex">\[
+\zeta_{2}=\frac{1}{2}(\sigma^{2}+\mu^{2})(\overline{\sigma}^{2}+\overline{\mu}^{2})+\frac{1}{2}-\mu^{2}\overline{\mu}^{2}
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{2}(\sigma^{2}\overline{\sigma}^{2}+\sigma^{2}\overline{\mu}^{2}+\mu^{2}\overline{\sigma}^{2}+\mu^{2}\overline{\mu}^{2})+\frac{1}{2}-\mu^{2}\overline{\mu}^{2}
+\]</div>
+<div class="arithmatex">\[
+=\frac{1}{2}(\sigma^{2}\overline{\sigma}^{2}+\sigma^{2}\overline{\mu}^{2}+\mu^{2}\overline{\sigma}^{2}-\mu^{2}\overline{\mu}^{2}+1)
+\]</div>
+<p>将 <span class="arithmatex">\(\zeta_{1}\)</span> 和 <span class="arithmatex">\(\zeta_{2}\)</span> 代回公式即可得到精确方差：</p>
+<div class="arithmatex">\[
+Var(U_{n})=\frac{4(n-2)}{n(n-1)}\zeta_{1}+\frac{2}{n(n-1)}\zeta_{2}
+\]</div>
+<div class="arithmatex">\[
+=\frac{n-2}{n(n-1)}(\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu}))+\frac{1}{n(n-1)}(\sigma^{2}\overline{\sigma}^{2}+\sigma^{2}\overline{\mu}^{2}+\mu^{2}\overline{\sigma}^{2}-\mu^{2}\overline{\mu}^{2}+1)
+\]</div>
+<p><strong>步骤 3：推导渐近分布</strong></p>
+<p>根据 U-统计量的投影定理（Hoeffding's CLT），由于 <span class="arithmatex">\(\mathbb{E}[h^{2}]&lt;\infty\)</span> 且 <span class="arithmatex">\(\zeta_{1}&gt;0\)</span>，U-统计量是渐近正态的，由一阶投影驱动：</p>
+<div class="arithmatex">\[
+\sqrt{n}(U_{n}-\mu\overline{\mu})\rightarrow\mathcal{N}(0,m^{2}\zeta_{1})
+\]</div>
+<p>其中核的次数为 <span class="arithmatex">\(m=2\)</span>。因此，渐近方差为 <span class="arithmatex">\(4\zeta_{1}\)</span>：</p>
+<div class="arithmatex">\[
+4\zeta_{1}=\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu})
+\]</div>
+<p>因此，渐近分布为：</p>
+<div class="arithmatex">\[
+\sqrt{n}(U_{n}-\mu\overline{\mu})\rightarrow\mathcal{N}(0,\overline{\mu}^{2}\sigma^{2}+\mu^{2}\overline{\sigma}^{2}+2\mu\overline{\mu}(1-\mu\overline{\mu}))
+\]</div>
+</details>
+<hr />
+<h2 id="3-hoeffding-hoeffdings-theorem">3. Hoeffding 定理 (Hoeffding's theorem)</h2>
+<p><strong>题目：</strong>
+令 <span class="arithmatex">\(X_{1},...,X_{n} \stackrel{i.i.d}{\sim} P\in\mathcal{P}\)</span> 且 <span class="arithmatex">\(\mathbb{E}_{P}h^{2}(X_{1},...,X_{m})&lt;\infty\)</span>，则：</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})=\binom{n}{m}^{-1}\sum_{k=1}^{m}\binom{m}{k}\binom{n-m}{m-k}\xi_{k}
+\]</div>
+<p>其中 <span class="arithmatex">\(\xi_{k}=Var_{P}(h_{k}(X_{1},...,X_{k}))\)</span>。</p>
+<p>(a) 证明 <span class="arithmatex">\(\frac{m^{2}}{n}\xi_{1}\le Var_{P}(U_{n})\le\frac{m}{n}\xi_{m}\)</span></p>
+<p>(b) 证明 <span class="arithmatex">\((n+1)Var_{P}(U_{n+1})\le nVar_{P}(U_{n})\)</span></p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>(a) 证明上下界</strong></p>
+<p>根据 U-统计量的 Hoeffding H-分解 (ANOVA decomposition)，我们可以将 <span class="arithmatex">\(U_{n}\)</span> 的方差重写为投影方差 <span class="arithmatex">\(\eta_{j}\)</span>（第 <span class="arithmatex">\(j\)</span> 阶正交投影核的方差）的形式：</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})=\sum_{j=1}^{m}\binom{m}{j}^{2}\binom{n}{j}^{-1}\eta_{j}
+\]</div>
+<p>根据定义，对于所有 <span class="arithmatex">\(j=1,...,m\)</span>，<span class="arithmatex">\(\eta_{j}\ge0\)</span>。<span class="arithmatex">\(\xi_{k}\)</span> 和 <span class="arithmatex">\(\eta_{j}\)</span> 之间的关系由下式给出：</p>
+<div class="arithmatex">\[
+\xi_{k}=\sum_{j=1}^{k}\binom{k}{j}\eta_{j}
+\]</div>
+<p>特别地，对于 <span class="arithmatex">\(k=1\)</span>，我们有 <span class="arithmatex">\(\xi_{1}=\binom{1}{1}\eta_{1}=\eta_{1}\)</span>。对于 <span class="arithmatex">\(k=m\)</span>，我们有 <span class="arithmatex">\(\xi_{m}=\sum_{j=1}^{m}\binom{m}{j}\eta_{j}\)</span>。</p>
+<p><strong>下界：</strong> 由于方差和中的所有项都是非负的 <span class="arithmatex">\((\eta_{j}\ge0)\)</span>，总方差有以下界，由它的第一项 <span class="arithmatex">\((j=1)\)</span> 给出：</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})\ge\binom{m}{1}^{2}\binom{n}{1}^{-1}\eta_{1}=\frac{m^{2}}{n}\eta_{1}=\frac{m^{2}}{n}\xi_{1}
+\]</div>
+<p><strong>上界：</strong> 我们分析方差和中的组合系数。我们可以将其重写为：</p>
+<div class="arithmatex">\[
+\binom{m}{j}^{2}\binom{n}{j}^{-1}=\binom{m}{j}\left[\binom{m}{j}\binom{n}{j}^{-1}\right]
+\]</div>
+<p>展开方括号中的项：</p>
+<div class="arithmatex">\[
+\binom{m}{j}\binom{n}{j}^{-1}=\frac{m!}{j!(m-j)!}\frac{j!(n-j)!}{n!}=\frac{m(m-1)...(m-j+1)}{n(n-1)...(n-j+1)}=\prod_{i=0}^{j-1}\frac{m-i}{n-i}
+\]</div>
+<p>由于 <span class="arithmatex">\(m\le n\)</span>，对于任意 <span class="arithmatex">\(i\ge0\)</span>，我们有 <span class="arithmatex">\(nn-in\le mn-im\)</span>，这蕴含着 <span class="arithmatex">\(\frac{m-i}{n-i}\le\frac{m}{n}\)</span>。因此，该乘积的边界为：</p>
+<div class="arithmatex">\[
+\prod_{i=0}^{j-1}\frac{m-i}{n-i}\le\frac{m}{n}\cdot1...1=\frac{m}{n}
+\]</div>
+<p>将此不等式代回方差公式，我们得到：</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})=\sum_{j=1}^{m}\binom{m}{j}\left[\binom{m}{j}\binom{n}{j}^{-1}\right]\eta_{j}\le\sum_{j=1}^{m}\binom{m}{j}\left(\frac{m}{n}\right)\eta_{j}=\frac{m}{n}\sum_{j=1}^{m}\binom{m}{j}\eta_{j}
+\]</div>
+<p>由于 <span class="arithmatex">\(\xi_{m}=\sum_{j=1}^{m}\binom{m}{j}\eta_{j}\)</span>，我们得出结论：</p>
+<div class="arithmatex">\[
+Var_{P}(U_{n})\le\frac{m}{n}\xi_{m}
+\]</div>
+<p><strong>(b) 证明样本量递推不等式</strong></p>
+<p>使用 H-分解方差公式，我们写出样本大小 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(n+1\)</span> 的按比例缩放的方差：</p>
+<div class="arithmatex">\[
+nVar_{P}(U_{n})=\sum_{j=1}^{m}\binom{m}{j}^{2}\left[n\binom{n}{j}^{-1}\right]\eta_{j}
+\]</div>
+<div class="arithmatex">\[
+(n+1)Var_{P}(U_{n+1})=\sum_{j=1}^{m}\binom{m}{j}^{2}\left[(n+1)\binom{n+1}{j}^{-1}\right]\eta_{j}
+\]</div>
+<p>为了证明该不等式，只需证明对于每个 <span class="arithmatex">\(\eta_{j}\)</span> 的系数，当样本大小从 <span class="arithmatex">\(n\)</span> 增加到 <span class="arithmatex">\(n+1\)</span> 时，它是不增的。我们比较方括号中的项。对于大小 <span class="arithmatex">\(n+1\)</span>：</p>
+<div class="arithmatex">\[
+(n+1)\binom{n+1}{j}^{-1}=(n+1)\frac{j!(n+1-j)!}{(n+1)!}=\frac{j!(n-j+1)!}{n!}
+\]</div>
+<p>我们可以从分子中提取出 <span class="arithmatex">\((n-j+1)\)</span>：</p>
+<div class="arithmatex">\[
+\frac{j!(n-j+1)!}{n!}=(n-j+1)\frac{j!(n-j)!}{n!}=(n-j+1)\binom{n}{j}^{-1}
+\]</div>
+<p>由于对于和中的所有项 <span class="arithmatex">\(j\ge1\)</span>，我们显然有 <span class="arithmatex">\(n-j+1\le n\)</span>。因此：</p>
+<div class="arithmatex">\[
+(n+1)\binom{n+1}{j}^{-1}=(n-j+1)\binom{n}{j}^{-1}\le n\binom{n}{j}^{-1}
+\]</div>
+<p>因为对所有 <span class="arithmatex">\(j\)</span>，<span class="arithmatex">\(\binom{m}{j}^{2}\eta_{j}\ge0\)</span>，将这个非负常数乘到不等式两边保持方向不变。对所有 <span class="arithmatex">\(j=1,...,m\)</span> 求和得出：</p>
+<div class="arithmatex">\[
+\sum_{j=1}^{m}\binom{m}{j}^{2}\left[(n+1)\binom{n+1}{j}^{-1}\right]\eta_{j}\le\sum_{j=1}^{m}\binom{m}{j}^{2}\left[n\binom{n}{j}^{-1}\right]\eta_{j}
+\]</div>
+<p>这正是：</p>
+<div class="arithmatex">\[
+(n+1)Var_{P}(U_{n+1})\le nVar_{P}(U_{n})
+\]</div>
+</details>
+<h2 id="4-u-v-u-statistics-and-v-statistics">习题 4: U-统计量与 V-统计量 (U-statistics and V-statistics)</h2>
+<p><strong>题目：</strong>
+设 <span class="arithmatex">\(X_1, X_2, \dots\)</span> 为独立同分布的随机变量序列，且 <span class="arithmatex">\(h\)</span> 为对称核函数，满足 <span class="arithmatex">\(0 &lt; E[h^2(X_1, X_2)] &lt; \infty\)</span> 及 <span class="arithmatex">\(E[h^2(X_1, X_1)] &lt; \infty\)</span>。定义 <span class="arithmatex">\(V_n\)</span> 为：</p>
+<div class="arithmatex">\[
+V_n := \frac{1}{n^2} \sum_{i=1}^n \sum_{j=1}^n h(X_i, X_j)
+\]</div>
+<p>(a) 利用 U-统计量的中心极限定理证明 <span class="arithmatex">\(V_n\)</span> 是渐近正态的。</p>
+<p>(b) <span class="arithmatex">\(V_n\)</span> 能否写成一个 U-统计量？为什么？</p>
+<p>(c) 现假设 <span class="arithmatex">\(E X_1 = 0\)</span> 且 <span class="arithmatex">\(E X_1^4 &lt; \infty\)</span>。取核函数 <span class="arithmatex">\(h(x, y) = xy\)</span>，求 <span class="arithmatex">\(V_n\)</span> 相对于 U-统计量 <span class="arithmatex">\(U_n := \frac{2}{n(n-1)} \sum_{1 \le i &lt; j \le n} X_i X_j\)</span> 的渐近相对效率 (ARE)，即 <span class="arithmatex">\(\frac{Avar(U_n)}{Avar(V_n)}\)</span>。</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>(a) 证明 <span class="arithmatex">\(V_n\)</span> 的渐近正态性</strong></p>
+<p>令 <span class="arithmatex">\(\theta = E[h(X_1, X_2)]\)</span> 为核函数对于独立观测值的期望。对应的 U-统计量为：</p>
+<div class="arithmatex">\[
+U_n = \frac{2}{n(n-1)} \sum_{1 \le i &lt; j \le n} h(X_i, X_j)
+\]</div>
+<p>我们可以将 V-统计量分解为 U-统计量部分（非对角线项）和对角线部分：</p>
+<div class="arithmatex">\[
+V_n = \frac{1}{n^2} \sum_{i \ne j} h(X_i, X_j) + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<div class="arithmatex">\[
+= \frac{n(n-1)}{n^2} U_n + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<div class="arithmatex">\[
+= \left( 1 - \frac{1}{n} \right) U_n + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<p>为了分析其渐近分布，我们将中心化的 V-统计量乘以 <span class="arithmatex">\(\sqrt{n}\)</span> 进行缩放：</p>
+<div class="arithmatex">\[
+\sqrt{n}(V_n - \theta) = \sqrt{n} \left( \left( 1 - \frac{1}{n} \right) U_n + \frac{1}{n^2} \sum_{i=1}^n h(X_i, X_i) - \theta \right)
+\]</div>
+<div class="arithmatex">\[
+= \left( 1 - \frac{1}{n} \right) \sqrt{n}(U_n - \theta) - \frac{1}{\sqrt{n}} \theta + \frac{1}{n\sqrt{n}} \sum_{i=1}^n h(X_i, X_i)
+\]</div>
+<p>令 <span class="arithmatex">\(\mu_D = E[h(X_1, X_1)]\)</span>。由弱大数定律 (WLLN) 可知，<span class="arithmatex">\(\frac{1}{n} \sum_{i=1}^n h(X_i, X_i) \xrightarrow{p} \mu_D\)</span>。
+因此，上式中的最后一项为 <span class="arithmatex">\(\frac{1}{n} (\frac{1}{n} \sum h(X_i, X_i)) = O_p(n^{-1})\)</span>，它是 <span class="arithmatex">\(o_p(1)\)</span> 的。
+同时，缩放因子 <span class="arithmatex">\((1 - 1/n) \rightarrow 1\)</span>。</p>
+<p>由 Slutsky 定理，V-统计量的缩放差趋于 U-统计量的缩放差：</p>
+<div class="arithmatex">\[
+\sqrt{n}(V_n - \theta) = \sqrt{n}(U_n - \theta) + o_p(1)
+\]</div>
+<p>根据 U-统计量的中心极限定理，<span class="arithmatex">\(\sqrt{n}(U_n - \theta) \xrightarrow{d} \mathcal{N}(0, 4\zeta_1)\)</span>。因此 <span class="arithmatex">\(V_n\)</span> 具有相同的渐近正态分布：</p>
+<div class="arithmatex">\[
+\sqrt{n}(V_n - \theta) \xrightarrow{d} \mathcal{N}(0, 4\zeta_1)
+\]</div>
+<p><strong>(b) <span class="arithmatex">\(V_n\)</span> 能否写成 U-统计量</strong></p>
+<p>不能。根据定义，大小为 <span class="arithmatex">\(n\)</span> 的 U-统计量 <span class="arithmatex">\(U_n\)</span> 必须是其总体参数 <span class="arithmatex">\(\theta\)</span> 的无偏估计量，即对所有的 <span class="arithmatex">\(n \ge m\)</span> 满足 <span class="arithmatex">\(E[U_n] = \theta\)</span>。
+计算 <span class="arithmatex">\(V_n\)</span> 的期望：</p>
+<div class="arithmatex">\[
+E[V_n] = \left( 1 - \frac{1}{n} \right) \theta + \frac{1}{n} \mu_D = \theta + \frac{\mu_D - \theta}{n}
+\]</div>
+<p>由于 <span class="arithmatex">\(E[V_n]\)</span> 显式依赖于样本量 <span class="arithmatex">\(n\)</span>（除非 <span class="arithmatex">\(\theta = \mu_D\)</span>，这在一般情况下并不成立），因此 <span class="arithmatex">\(V_n\)</span> 是一个有偏估计量，不可能成为 U-统计量。</p>
+<p><strong>(c) 计算渐近相对效率 (ARE)</strong></p>
+<p>由于 <span class="arithmatex">\(E X_1 = 0\)</span> 且 <span class="arithmatex">\(h(x, y) = xy\)</span>，我们计算 <span class="arithmatex">\(\theta\)</span> 和投影方差 <span class="arithmatex">\(\zeta_1\)</span>：</p>
+<div class="arithmatex">\[
+\theta = E[X_1 X_2] = E[X_1] E[X_2] = 0 \cdot 0 = 0
+\]</div>
+<p>投影函数为：</p>
+<div class="arithmatex">\[
+h_1(x_1) = E[h(x_1, X_2)] = x_1 E[X_2] = 0
+\]</div>
+<p>因为 <span class="arithmatex">\(h_1(x_1) \equiv 0\)</span>，所以 <span class="arithmatex">\(\zeta_1 = Var(h_1(X_1)) = 0\)</span>。这意味着 <span class="arithmatex">\(U_n\)</span> 是一个退化的 (degenerate) U-统计量，标准 <span class="arithmatex">\(\sqrt{n}\)</span> 缩放后的极限为 0。
+我们需要使用 <span class="arithmatex">\(n\)</span> 的缩放因子。</p>
+<p><strong>分析 <span class="arithmatex">\(n V_n\)</span></strong>：</p>
+<div class="arithmatex">\[
+V_n = \frac{1}{n^2} \sum_{i=1}^n \sum_{j=1}^n X_i X_j = \left( \frac{1}{n} \sum_{i=1}^n X_i \right)^2 = \bar{X}_n^2
+\]</div>
+<p>由 CLT，<span class="arithmatex">\(\sqrt{n}\bar{X}_n \xrightarrow{d} \mathcal{N}(0, \sigma^2)\)</span>。由连续映射定理 (CMT)：</p>
+<div class="arithmatex">\[
+n V_n = (\sqrt{n} \bar{X}_n)^2 \xrightarrow{d} \sigma^2 \chi_1^2
+\]</div>
+<p>其渐近方差为 <span class="arithmatex">\(Var(\sigma^2 \chi_1^2) = \sigma^4 Var(\chi_1^2) = \sigma^4 \cdot 2 = 2\sigma^4\)</span>。</p>
+<p><strong>分析 <span class="arithmatex">\(n U_n\)</span></strong>：</p>
+<div class="arithmatex">\[
+n U_n = \frac{n}{n(n-1)} \sum_{i \ne j} X_i X_j = \frac{n}{n-1} \left[ \left( \sum X_i \right)^2 - \sum X_i^2 \right] \cdot \frac{1}{n}
+\]</div>
+<div class="arithmatex">\[
+= \frac{1}{n-1} \left[ n (\sqrt{n} \bar{X}_n)^2 - \sum X_i^2 \right] \xrightarrow{d} \sigma^2 \chi_1^2 - \sigma^2 = \sigma^2(\chi_1^2 - 1)
+\]</div>
+<p>其渐近方差为 <span class="arithmatex">\(Var(\sigma^2(\chi_1^2 - 1)) = \sigma^4 Var(\chi_1^2) = 2\sigma^4\)</span>。</p>
+<p>因此，ARE 为：</p>
+<div class="arithmatex">\[
+ARE(U_n, V_n) = \frac{Avar(n U_n)}{Avar(n V_n)} = \frac{2\sigma^4}{2\sigma^4} = 1
+\]</div>
+</details>
+<hr />
+<h2 id="5-u-divide-and-conquered-u-statistics-for-big-data">习题 5: 大数据下的分治 U-统计量 (Divide and Conquered U-statistics for big data)</h2>
+<p><strong>题目：</strong>
+设 <span class="arithmatex">\(U_N\)</span> 为核函数为 <span class="arithmatex">\(h(x_1, \dots, x_m)\)</span> 的 U-统计量。假设 <span class="arithmatex">\(\theta = E[h(X_1, \dots, X_m)]\)</span> 且 <span class="arithmatex">\(E[|h|] &lt; \infty\)</span>。定义 <span class="arithmatex">\(h_1(x_1) = E[h(X_1, X_2, \dots, X_m) | X_1 = x_1]\)</span> 并假设 <span class="arithmatex">\(\zeta_1 = Var(h_1(X_1)) &gt; 0\)</span>。假设总样本量 <span class="arithmatex">\(N = nK\)</span>，数据被划分为 <span class="arithmatex">\(K\)</span> 个非重叠子集 <span class="arithmatex">\(D_k\)</span>（每个大小为 <span class="arithmatex">\(n\)</span>）。令 <span class="arithmatex">\(U_{kn}\)</span> 为基于第 <span class="arithmatex">\(k\)</span> 个子集 <span class="arithmatex">\(D_k\)</span> 的 U-统计量。定义 <span class="arithmatex">\(AU_N = K^{-1} \sum_{k=1}^K U_{kn}\)</span>。证明：若 <span class="arithmatex">\(K = o(N)\)</span>，则 <span class="arithmatex">\(\sqrt{N}(AU_N - \theta) \xrightarrow{d} \mathcal{N}(0, m^2\zeta_1)\)</span>。</p>
+<details class="success">
+<summary>解答 (点击展开)</summary>
+<p><strong>证明过程：</strong></p>
+<p>我们要证明 <span class="arithmatex">\(\sqrt{N}(AU_N - \theta) \xrightarrow{d} \mathcal{N}(0, m^2\zeta_1)\)</span>。我们将缩放后的平均 U-统计量重写为独立随机变量之和。
+因为 <span class="arithmatex">\(N = nK\)</span>，我们有：</p>
+<div class="arithmatex">\[
+\sqrt{N}(AU_N - \theta) = \sqrt{nK} \left( \frac{1}{K} \sum_{k=1}^K (U_{kn} - \theta) \right) = \sum_{k=1}^K \sqrt{\frac{n}{K}} (U_{kn} - \theta)
+\]</div>
+<p>对于给定的总样本量 <span class="arithmatex">\(N\)</span>（从而 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(K\)</span> 固定），定义 <span class="arithmatex">\(Z_{N,k} = \sqrt{\frac{n}{K}} (U_{kn} - \theta)\)</span>。因为 <span class="arithmatex">\(K\)</span> 个子集是非重叠的，所以 <span class="arithmatex">\(\{Z_{N,k}\}_{k=1}^K\)</span> 构成了一个行间独立的随机变量三角阵列。我们使用 Lindeberg-Feller 中心极限定理。</p>
+<p><strong>步骤 1：行和方差的收敛性</strong></p>
+<p>令 <span class="arithmatex">\(S_N = \sum_{k=1}^K Z_{N,k}\)</span>。由于 <span class="arithmatex">\(Z_{N,k}\)</span> 对固定的 <span class="arithmatex">\(N\)</span> 是独立同分布的：</p>
+<div class="arithmatex">\[
+Var(S_N) = \sum_{k=1}^K Var(Z_{N,k}) = K \cdot Var\left( \sqrt{\frac{n}{K}} U_{kn} \right) = n Var(U_{kn})
+\]</div>
+<p>从标准 U-统计量理论可知，对于大小为 <span class="arithmatex">\(n\)</span> 的样本，<span class="arithmatex">\(n Var(U_{kn}) \rightarrow m^2 \zeta_1\)</span> (当 <span class="arithmatex">\(n \rightarrow \infty\)</span> 时)。因为 <span class="arithmatex">\(K = o(N)\)</span>，即 <span class="arithmatex">\(K/N \rightarrow 0\)</span>，这意味着 <span class="arithmatex">\(n = N/K \rightarrow \infty\)</span>。因此：</p>
+<div class="arithmatex">\[
+Var(S_N) \rightarrow m^2 \zeta_1
+\]</div>
+<p><strong>步骤 2：验证 Lindeberg 条件</strong></p>
+<p>我们需要证明对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>：</p>
+<div class="arithmatex">\[
+\lim_{N \rightarrow \infty} \sum_{k=1}^K E[Z_{N,k}^2 I(|Z_{N,k}| &gt; \epsilon)] = 0
+\]</div>
+<p>因为 <span class="arithmatex">\(Z_{N,k}\)</span> 是同分布的，该和简化为：</p>
+<div class="arithmatex">\[
+K \cdot E[Z_{N,1}^2 I(|Z_{N,1}| &gt; \epsilon)] = K \cdot E\left[ \frac{n}{K} (U_{1n} - \theta)^2 I\left(\sqrt{\frac{n}{K}}|U_{1n} - \theta| &gt; \epsilon\right) \right]
+\]</div>
+<div class="arithmatex">\[
+= E[n(U_{1n} - \theta)^2 I(| \sqrt{n}(U_{1n} - \theta) | &gt; \epsilon \sqrt{K})]
+\]</div>
+<p>令 <span class="arithmatex">\(W_n = \sqrt{n}(U_{1n} - \theta)\)</span>。上述期望变为 <span class="arithmatex">\(E[W_n^2 I(|W_n| &gt; \epsilon \sqrt{K})]\)</span>。
+由正则 U-统计量的 CLT，<span class="arithmatex">\(W_n \xrightarrow{d} \mathcal{N}(0, m^2\zeta_1)\)</span>。
+此外，我们已知 <span class="arithmatex">\(E[W_n^2] = n Var(U_{1n}) \rightarrow m^2 \zeta_1\)</span>。
+收敛分布加上二阶矩的收敛，意味着 <span class="arithmatex">\(\{W_n^2\}\)</span> 是<strong>一致可积 (uniformly integrable, UI)</strong> 的。
+对于任何一致可积序列，如果截断阈值趋于无穷大，则截断期望趋于 0。因为 <span class="arithmatex">\(K \rightarrow \infty\)</span>，所以阈值 <span class="arithmatex">\(\epsilon \sqrt{K} \rightarrow \infty\)</span>。因此：</p>
+<div class="arithmatex">\[
+\lim_{N \rightarrow \infty} E[W_n^2 I(|W_n| &gt; \epsilon \sqrt{K})] = 0
+\]</div>
+<p>这满足了 Lindeberg 条件。</p>
+<p><strong>步骤 3：结论</strong></p>
+<p>由于 Lindeberg 条件满足，且行和的方差收敛于 <span class="arithmatex">\(m^2\zeta_1\)</span>，根据 Lindeberg-Feller 中心极限定理：</p>
+<div class="arithmatex">\[
+\sum_{k=1}^K Z_{N,k} = \sqrt{N}(AU_N - \theta) \xrightarrow{d} \mathcal{N}(0, m^2 \zeta_1)
+\]</div>
+<p>证明完毕。 <span class="arithmatex">\(\square\)</span></p>
+</details>
 
 
 
