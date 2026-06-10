@@ -3,9 +3,64 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-03
+> 更新于: 2026-06-10
 
 ---
+### Knockoffs-based False Discovery Rate Control and Simplification for Deep Neural Networks 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-06-03
+- **链接**: [PDF](http://arxiv.org/abs/2606.04404v1)
+
+!!! note "AI 核心解读"
+
+    该论文将knockoffs框架拓展至深度神经网络，通过构造基于正则化网络权重的评分函数，在控制错误发现率的前提下提出了三种变量筛选方法；理论性质上，证明了所提方法在有限样本下对FDR的控制能力，并推导了单层与多层筛选过程中统计量的渐近分布。
+
+### Conformal Prediction for Dyadic Regression Under Complex Missingness 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-09
+- **链接**: [PDF](http://arxiv.org/abs/2606.11136v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过构造保测度双射论证，在弱于可交换性的分布不变条件下证明了共形预测的超均匀性，并针对索引集随机子样本这一现有理论未覆盖的情形建立了严格统计推导。其核心创新在于为联合可交换数组设计了行-列相似性评分函数与图模型加权共形程序，首次在非随机缺失假设下证明了加权共形预测的渐近条件有效性。
+
+### Generalized Conformal Predictive Systems Under Distributional Shifts 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-09
+- **链接**: [PDF](http://arxiv.org/abs/2606.11044v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过引入观测特定的置换权重，将广义共形预测系统从可交换性假设推广至非可交换环境，并基于条件加权抽样构造了具有有限样本或渐近置信保证的鲁棒预测包络。其核心创新在于推导了权重不确定性箱的统计性质，并针对共形度量、分箱及保序分布回归设计了高效计算方法，使得预测带在分布偏移下保持校准性。
+
+### SPACR: Single-Pass Adaptive Training of Uncertainty-Aware Conformal Regressors 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-09
+- **链接**: [PDF](http://arxiv.org/abs/2606.10734v1)
+
+!!! note "AI 核心解读"
+
+    SPACR 提出了一种可微分的单次训练损失函数，该损失函数直接优化共形预测区间的效率（即区间宽度）与边际有效性，无需在训练时预设置信水平或进行批次分割。其核心创新在于构造了一个基于排序的评分函数，使得单次训练后的模型能在推理时同时输出多个置信水平下的有效预测区间，并从理论上保证了区间覆盖率的边际控制。
+
+### Predicting Current Outcomes From Historical Survey Data With Weighted Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-09
+- **链接**: [PDF](http://arxiv.org/abs/2606.10563v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：针对历史调查数据与目标总体间的协变量偏移，构造了结合子组密度比与子组比例估计的加权评分函数，并基于此建立了加权共形预测框架，从理论上证明了预测集覆盖率的有限样本保证。
+
+### Data augmented bootstrap: Unifying confidence interval construction by approximate invariance 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-08
+- **链接**: [PDF](http://arxiv.org/abs/2606.09049v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出数据增强自助法（DAB），通过将数据集的近似不变性量化为Kolmogorov距离，并利用满足高斯普适性的统计量简化为条件均值与方差匹配，从而统一了置信区间的构造框架。其核心创新在于：无需假设群结构，即可在有限样本与渐近保证之间插值得到理论覆盖结果，并系统地将机器学习中的数据增强启发式方法融入经典自助法、野自助法和共形预测等统计方法中。
+
+
 ### Conformal Language Modeling via Posterior Sampling 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-02

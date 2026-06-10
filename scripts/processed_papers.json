@@ -670,5 +670,41 @@
         "date": "2026-05-12",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.04404v1": {
+        "title": "Knockoffs-based False Discovery Rate Control and Simplification for Deep Neural Networks",
+        "date": "2026-06-03",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2606.11136v1": {
+        "title": "Conformal Prediction for Dyadic Regression Under Complex Missingness",
+        "date": "2026-06-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.11044v1": {
+        "title": "Generalized Conformal Predictive Systems Under Distributional Shifts",
+        "date": "2026-06-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.10734v1": {
+        "title": "SPACR: Single-Pass Adaptive Training of Uncertainty-Aware Conformal Regressors",
+        "date": "2026-06-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.10563v1": {
+        "title": "Predicting Current Outcomes From Historical Survey Data With Weighted Conformal Prediction",
+        "date": "2026-06-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.09049v1": {
+        "title": "Data augmented bootstrap: Unifying confidence interval construction by approximate invariance",
+        "date": "2026-06-08",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
