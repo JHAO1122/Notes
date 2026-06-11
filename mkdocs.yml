@@ -110,6 +110,7 @@ plugins:
             "第十章：序列紧": "Ch 10: Sequential Compactness"
             "第十一章：单点紧化": "Ch 11: One-Point Compactification"
             "第十二章：可数性": "Ch 12: Countability"
+            "第十三章：分离公理": "Ch 13: Separation Axioms"
             "🧱 实分析": "🧱 Real Analysis"
             "实分析课程概览": "Real Analysis Course Overview"
             "第一章：sigma-代数": "Ch 1: Sigma-Algebras"
@@ -228,6 +229,7 @@ nav:
               - 第十章：序列紧: zh/Topology/10.md
               - 第十一章：单点紧化: zh/Topology/11.md
               - 第十二章：可数性: zh/Topology/12.md
+              - 第十三章：分离公理: zh/Topology/13.md
           - 📝 习题:
               - Homework 1-2: zh/Topology/sol_12.md
               - Homework 3-4: zh/Topology/sol_34.md
