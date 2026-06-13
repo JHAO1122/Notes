@@ -76,5 +76,6 @@ tags:
 
 ## 📝 关于笔记的说明
 
-!!! warning "Work in Progress"
-    本页面正在持续建设中。笔记中的所有长篇定理证明均采用了 `折叠框` 设计，如有问题欢迎通过 Issue 或直接联系我指正！
+!!! success "Construction Complete"
+    本页面内容基本已建设完毕。
+    笔记中的长篇定理与习题解答均采用了 `折叠框` 设计，如发现 Typo，欢迎通过 Issue 或直接联系我指正！

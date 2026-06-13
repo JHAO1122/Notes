@@ -67,11 +67,16 @@ The following is a detailed directory of the notes and lecture materials for thi
 
 * [x] [Exercises 03: HW05 & HW06](sol_56.md)
 
+* [x] [Exercises 04: HW07 & HW08 & HW09](sol_789.md)
+
 ---
 
-## 📝 About the Notes
+## 📝 Notes & Formatting Details
 
-!!! warning "Work in Progress"
-    This page is currently under continuous construction. All long-form theorem proofs in the notes utilize a `collapsible box` design. If you find any issues, please feel free to correct them via an Issue or contact me directly!
+!!! success "Construction Complete"
+    This page is now substantially complete. 
+    Long theorems and exercise solutions in the notes feature a `folded box` design. 
+    If you spot any typos, please feel free to raise an Issue or contact me directly for corrections!
+
 
 ---

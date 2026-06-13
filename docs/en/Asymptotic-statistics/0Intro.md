@@ -74,9 +74,11 @@ Below is the directory for this course:
 
 * [x] [Homework 3 solutions](sol_3.md)
 
+* [x] [Homework 4 solutions](sol_4.md)
 
+## 📝 Notes & Formatting Details
 
-## 📝 Note on the Contents
-
-!!! warning "Work in Progress"
-    This page is currently under construction. All lengthy theorem proofs in the notes utilize a `collapsible box` design. If you have any questions or find errors, please feel free to point them out via Issues or contact me directly!
+!!! success "Construction Complete"
+    This page is now substantially complete. 
+    Long theorems and exercise solutions in the notes feature a `folded box` design. 
+    If you spot any typos, please feel free to raise an Issue or contact me directly for corrections!
