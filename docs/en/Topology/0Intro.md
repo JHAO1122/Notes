@@ -57,7 +57,9 @@ The following is a detailed directory of the notes and lecture materials for thi
 
 * [x] [Chapter 11: One-Point Compactification](11.md)
 
-* [x] [Chapter 12: Countability Axioms and Separation Axioms](12.md)
+* [x] [Chapter 12: Countability Axioms](12.md)
+
+* [x] [Chapter 13: Separation Axioms](13.md)
 
 ### Part IV: 📝 Selected Solutions
 
