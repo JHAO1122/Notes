@@ -3,9 +3,64 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-10
+> 更新于: 2026-06-14
 
 ---
+### Estimating the local false discovery rate under an unknown symmetric null 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-06-10
+- **链接**: [PDF](http://arxiv.org/abs/2606.11548v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出在零分布仅已知对称性（关于零点对称）的条件下，通过估计代理密度比 \( f(-w)/f(w) \) 来构造局部错误发现率（lfdr）的评分函数，并证明任何对该比值的相合估计都能在名义水平上实现 lfdr 的渐近控制。其统计推导核心在于利用自然三次样条基函数的逻辑回归方法估计该密度比，从而绕开对零分布具体形式的依赖，并建立了估计量与多重检验过程渐近有效性的理论联系。
+
+### Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-10
+- **链接**: [PDF](http://arxiv.org/abs/2606.11949v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：1）构建了基于校准序贯统计量的在线漂移检测框架，通过加权共形预测的密度比估计实现分布外检测，并理论证明了高维嵌入空间中逻辑密度比估计导致重要性权重截断的统计失效机制；2）提出自适应共形弃权层动态调整决策阈值以恢复目标错误率，并通过方差分解（分类器η²=0.243、漂移类型η²=0.237及交互效应η²=0.185）揭示了检测延迟的统计异质性来源。
+
+### Enhanced localized conformal prediction with imperfect auxiliary information 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-07
+- **链接**: [PDF](http://arxiv.org/abs/2606.08551v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出增强型局部共形预测（ELCP），通过构造密度比加权核估计量，将辅助数据与校准数据融合，在保持有限样本边际覆盖保证的同时，改进了渐近测试条件覆盖的理论性质。其核心创新在于利用统计推导的评分函数调整局部预测集，有效缓解了稀疏校准数据区域中局部覆盖不可靠的问题。
+
+### Conformal Risk-Averse Decision Making with Action Conditional Guarantee 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-04
+- **链接**: [PDF](http://arxiv.org/abs/2606.05551v2)
+
+!!! note "AI 核心解读"
+
+    该论文通过引入动作条件共形预测，将边际安全保证强化为对每个决策动作的显式条件保证，并基于分位数损失最小化构造了有限样本下的评分函数，从而在理论上证明了动作条件预测集可作为风险厌恶决策中条件风险价值优化的可行决策空间代理。
+
+### Conformal Risk Prediction for Non-Alcoholic Fatty Liver Disease Using Gradient Boosting with Distribution-Free Coverages 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-31
+- **链接**: [PDF](http://arxiv.org/abs/2606.09860v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：将梯度提升树与共形预测结合，构造了无需分布假设的个体风险预测评分函数，并严格证明了其预测集在有限样本下边际覆盖率可超过预设置信水平；同时，基于互信息的稳定性选择过程通过自助重采样筛选出紧凑特征子集，确保了评分函数的统计可解释性与理论覆盖保证。
+
+### Parameter-Free and Group Conditional Online Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-29
+- **链接**: [PDF](http://arxiv.org/abs/2606.00419v3)
+
+!!! note "AI 核心解读"
+
+    该论文在统计推导上提出了一种无需学习率调参的在线共形预测算法，并严格证明了其能在数据分布非平稳变化下达到最优的分组条件覆盖保证。其核心创新在于构造了一个自适应的评分函数更新规则，使得算法无需依赖任何先验参数即可同时控制各组预测区间的边际与条件覆盖误差。
+
+
 ### Knockoffs-based False Discovery Rate Control and Simplification for Deep Neural Networks 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-06-03

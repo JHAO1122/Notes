@@ -706,5 +706,41 @@
         "date": "2026-06-08",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.11548v1": {
+        "title": "Estimating the local false discovery rate under an unknown symmetric null",
+        "date": "2026-06-10",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2606.11949v1": {
+        "title": "Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers",
+        "date": "2026-06-10",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.08551v1": {
+        "title": "Enhanced localized conformal prediction with imperfect auxiliary information",
+        "date": "2026-06-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.05551v2": {
+        "title": "Conformal Risk-Averse Decision Making with Action Conditional Guarantee",
+        "date": "2026-06-04",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.09860v1": {
+        "title": "Conformal Risk Prediction for Non-Alcoholic Fatty Liver Disease Using Gradient Boosting with Distribution-Free Coverages",
+        "date": "2026-05-31",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.00419v3": {
+        "title": "Parameter-Free and Group Conditional Online Conformal Prediction",
+        "date": "2026-05-29",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
