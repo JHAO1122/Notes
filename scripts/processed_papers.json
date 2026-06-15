@@ -742,5 +742,23 @@
         "date": "2026-05-29",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.13780v1": {
+        "title": "Conformal calibration and look-elsewhere effect in anomaly detection for new-physics searches",
+        "date": "2026-06-11",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.30292v2": {
+        "title": "Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series",
+        "date": "2026-05-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.20468v2": {
+        "title": "CASCADE Conformal Prediction: Uncertainty-Adaptive Prediction Intervals for Two-Stage Clinical Decision Support",
+        "date": "2026-05-19",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

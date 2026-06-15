@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-14
+> 更新于: 2026-06-15
 
 ---
+### Conformal calibration and look-elsewhere effect in anomaly detection for new-physics searches 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-11
+- **链接**: [PDF](http://arxiv.org/abs/2606.13780v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于：基于共形预测理论，构造了将任意异常检测评分转化为具有分布无关、有限样本保证的局部p值的校准层，并通过加权和Mondrian变体修正了共振搜索中旁带与信号区域的可交换性失效问题。在理论性质上，该方法进一步结合Gross-Vitells步骤，将局部p值整合为考虑“look-elsewhere效应”的全局显著性，从而在无重训练条件下暴露并校正标准流程无法识别的背景误校准，且其全局假阳性率可通过背景伪实验验证。
+
+### Leave a Window Out: Modifying the Jackknife for Predictive Inference in Time Series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-28
+- **链接**: [PDF](http://arxiv.org/abs/2605.30292v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种名为“留窗口法”（leave-a-window-out）的改进型刀切法，通过构造基于循环交换性偏离程度的评分函数，在温和稳定性条件下证明了其能有效恢复时间序列预测的覆盖有效性。其理论核心在于引入新的系数量化数据依赖结构对交换性的破坏，从而在统计推导中严格控制了因时序相关性导致的覆盖损失。
+
+### CASCADE Conformal Prediction: Uncertainty-Adaptive Prediction Intervals for Two-Stage Clinical Decision Support 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-19
+- **链接**: [PDF](http://arxiv.org/abs/2605.20468v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种名为 CASCADE 的级联共形预测框架，其核心创新在于将来自二分类任务的认知不确定性（通过 Venn-Abers 多概率映射）直接构造为非一致性评分，从而动态调节回归任务的预测区间宽度。理论性质上，该方法在保证边际覆盖保证的同时，实现了对高置信度样本区间效率的显著提升（较标准共形方法窄 38.9%），并自动为低置信度样本扩大区间以维持稳健覆盖。
+
+
 ### Estimating the local false discovery rate under an unknown symmetric null 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-06-10
