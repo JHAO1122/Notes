@@ -760,5 +760,35 @@
         "date": "2026-05-19",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.17014v1": {
+        "title": "Filtered Conformal Ellipsoids for Graph-Native Time Series",
+        "date": "2026-06-15",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.16488v1": {
+        "title": "An Energy-Driven Framework for Privacy-Aware Synthetic Data Generation",
+        "date": "2026-06-15",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.15964v1": {
+        "title": "PromptShift-CRC: Drift-Aware Conformal Risk Control for Foundation Models Under Prompt and Domain Shift",
+        "date": "2026-06-14",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.15953v1": {
+        "title": "Drift-Aware Spectral Conformal Prediction for Non-Exchangeable Streaming Data",
+        "date": "2026-06-14",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.15950v1": {
+        "title": "Spectral Adaptive Conformal Prediction for Structured Non-Exchangeable Data",
+        "date": "2026-06-14",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

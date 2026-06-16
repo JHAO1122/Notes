@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-15
+> 更新于: 2026-06-16
 
 ---
+### Filtered Conformal Ellipsoids for Graph-Native Time Series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-15
+- **链接**: [PDF](http://arxiv.org/abs/2606.17014v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种过滤共形椭球方法，通过冻结状态空间滤波器生成一步预测均值和协方差，并利用马氏距离评分函数进行分裂共形校准，从而在无需依赖高斯尾部概率的前提下实现覆盖率的自适应控制。其理论贡献在于：在稳定贝叶斯高斯投影滤波器、协方差界及有限时域可观测性费雪条件下，证明了学习到的发射律的收缩性，并基于阈值自协方差包络推导了依赖数据下的切比雪夫型近似覆盖界，进一步在几何混合浓度假设下得到了更尖锐的伯恩斯坦型界。
+
+### An Energy-Driven Framework for Privacy-Aware Synthetic Data Generation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-15
+- **链接**: [PDF](http://arxiv.org/abs/2606.16488v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于能量函数的可解释框架，通过构造包含似然性、隐私性、多样性和结构一致性惩罚项的评分函数，将隐私感知的合成数据生成转化为带约束的随机探索问题。其理论贡献在于将贝叶斯网络提议机制与Metropolis-Hastings采样相结合，在混合型数据中实现了统计保真度与披露风险的多目标平衡，并通过分裂共形预测等工具验证了生成数据对原始数据多元依赖结构的保持能力。
+
+### PromptShift-CRC: Drift-Aware Conformal Risk Control for Foundation Models Under Prompt and Domain Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-14
+- **链接**: [PDF](http://arxiv.org/abs/2606.15964v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种针对基础模型提示与领域漂移的自适应共形风险控制方法，其核心创新在于：通过嵌入提示与响应构建漂移度量，并据此对校准样本进行加权（赋予近期或相关样本更高权重），从而在理论上证明了在分布失配与加权分位数不确定性条件下，风险可被控制在预设水平内。此外，该方法在线更新风险阈值并引入三个实用诊断指标（实际风险误差、提示漂移度、有效校准集大小），实现了对静态共形风险控制因漂移而失效的显著改进。
+
+### Drift-Aware Spectral Conformal Prediction for Non-Exchangeable Streaming Data 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-14
+- **链接**: [PDF](http://arxiv.org/abs/2606.15953v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出漂移感知谱共形预测（DASC），通过基于局部谱相似性加权的校准残差构造预测区间，并引入基于传输的漂移评分实时监测测试分布与历史校准分布的偏离程度。理论贡献在于建立了近似覆盖率的分解界，将覆盖损失归因于漂移、残差不匹配和加权有效样本量，同时通过在线调整目标误覆盖水平与校准池收缩策略，在非可交换流数据中维持了名义覆盖率的统计稳健性。
+
+### Spectral Adaptive Conformal Prediction for Structured Non-Exchangeable Data 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-14
+- **链接**: [PDF](http://arxiv.org/abs/2606.15950v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种结合局部谱相似性加权分位数与在线自适应误覆盖率更新的混合方法，用于处理具有季节性或周期性依赖的非可交换数据。其核心创新在于：一方面通过谱权重构造条件分位数，并证明了该固定加权分位数具有近似覆盖率的理论保证；另一方面通过自适应更新机制实现了长期误覆盖率的确定性校准，从而在结构依赖场景下同时提升了覆盖率的稳健性与时效性。
+
+
 ### Conformal calibration and look-elsewhere effect in anomaly detection for new-physics searches 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-11
