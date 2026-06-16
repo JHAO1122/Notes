@@ -194,11 +194,7 @@ Using the fact that a complex functional is completely determined by its real pa
 
     (i) $F$ is an extension of $f$ to $E$, i.e., $F(x) = f(x)$ for all $x \in G$;
 
-    (ii) The domination condition is preserved for every $x \in E$:
-  
-        \[
-        |F(x)| \le p(x)
-        \]
+    (ii) The domination condition is preserved for every $x \in E$: $|F(x)| \le p(x)$
 
 ??? proof "Proof of Theorem 12.2 – Complex Space Version (Click to expand)"
 
