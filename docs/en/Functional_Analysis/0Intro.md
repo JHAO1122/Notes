@@ -29,7 +29,7 @@ The construction of these notes is primarily based on the following resources:
 
 The following notes are continuously being updated:
 
-### Part I: Metric Spaces Theory
+### Part I: Theory of Metric Spaces
 
 * [x] [Chapter 1: Metric Spaces](1distance_space.md)
 
@@ -37,15 +37,15 @@ The following notes are continuously being updated:
 
 * [x] [Chapter 3: Compactness](3compactness.md)
 
-* [x] [Chapter 4: Fixed Point Theorems](4CMT.md)
+* [x] [Chapter 4: Contraction Mapping Theorem](4CMT.md)
 
-### Part II: Normed Spaces & Banach Spaces
+### Part II: Normed Linear Spaces and Banach Spaces
 
 * [x] [Chapter 5: Normed Linear Spaces](5Linear.md)
 
 * [x] [Chapter 6: Banach Spaces](6Banach.md)
 
-### Part III: Inner Product Spaces & Hilbert Spaces
+### Part III: Inner Product Spaces and Hilbert Spaces
 
 * [x] [Chapter 7: Inner Product Spaces](7Hilbert.md)
 
@@ -53,15 +53,21 @@ The following notes are continuously being updated:
 
 * [x] [Chapter 9: Linear Operators](9Linear.md)
 
+### Part IV: Four Fundamental Theorems and Dual Spaces
+
 * [x] [Chapter 10: Open Mapping and Closed Graph Theorems](10Open_Closed.md)
 
----
+* [x] [Chapter 11: Dual Spaces](11dual.md)
 
-## 📝 About the Notes
-
-!!! warning "Work in Progress"
-    This page is under active construction. All long-form mathematical proofs in the notes utilize the `collapsible box` (foldable) design. If you find any issues, please feel free to correct me via Issues or direct contact!
+* [x] [Chapter 12: Extension of Bounded Linear Functionals and the Uniform Boundedness Principle](12Hahn-Banach.md)
 
 ---
+
+## 📝 Notes & Formatting Details
+
+!!! success "Construction Complete"
+    This page is now substantially complete. 
+    Long theorems and exercise solutions in the notes feature a `folded box` design. 
+    If you spot any typos, please feel free to raise an Issue or contact me directly for corrections!
 
 > *"The passage from finite to infinite dimensions is a fundamental shift in mathematical thinking."*

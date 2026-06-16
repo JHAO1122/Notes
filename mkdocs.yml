@@ -96,6 +96,8 @@ plugins:
             "第八章：希尔伯特空间理论": "Ch 8: Hilbert Space Theory"
             "第九章：线性算子": "Ch 9: Linear Operators"
             "第十章：开映射与闭图定理": "Ch 10: Open Mapping and Closed Graph Theorems"
+            "第十一章：对偶空间": "Ch 11: Dual Spaces"
+            "第十二章：有界线性泛函的延拓与共鸣定理": "Ch 12: Extension of Bounded Linear Functionals and Hahn-Banach Theorem"
             "🍩 点集拓扑": "🍩 Point Set Topology"
             "点集拓扑课程概览": "Point Set Topology Course Overview"
             "第一章：集合论": "Ch 1: Set Theory"
@@ -214,6 +216,8 @@ nav:
               - 第八章：希尔伯特空间理论: zh/Functional_Analysis/8Hilbert.md
               - 第九章：线性算子: zh/Functional_Analysis/9Linear.md
               - 第十章：开映射与闭图定理: zh/Functional_Analysis/10Open_Closed.md
+              - 第十一章：对偶空间:  zh/Functional_Analysis/11dual.md
+              - 第十二章：有界线性泛函的延拓与共鸣定理: zh/Functional_Analysis/12Hahn-Banach.md
       - 🍩 点集拓扑:
           - 点集拓扑课程概览: zh/Topology/0Intro.md
           - 📖 笔记:
@@ -234,6 +238,7 @@ nav:
               - Homework 1-2: zh/Topology/sol_12.md
               - Homework 3-4: zh/Topology/sol_34.md
               - Homework 5-6: zh/Topology/sol_56.md   
+              - Homework 7-9: zh/Topology/sol_789.md
       - 🧱 实分析:
           - 实分析课程概览: zh/Real_analysis/0Intro.md
           - 📖 笔记:
