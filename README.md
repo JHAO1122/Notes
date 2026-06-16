@@ -17,10 +17,10 @@ Currently, [the site](https://jhao1122.github.io/Notes/) is divided into **five*
   * Covers core theories including Brownian Motion, Itô Calculus, SDE solutions, Black-Scholes pricing, and the Feynman-Kac formula.
   * Includes detailed solutions to exercises.
 
-* **[In Progress] [Asymptotic Statistics](https://jhao1122.github.io/Notes/Asymptotic-statistics/0Intro/)**
+* **[Completed] [Asymptotic Statistics](https://jhao1122.github.io/Notes/Asymptotic-statistics/0Intro/)**
   * Covers advanced statistical theories such as weak convergence, CLT for dependent data, and asymptotic inference methods.
 
-* **[In Progress] [Functional Analysis](https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/)**
+* **[Completed] [Functional Analysis](https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/)**
 
   * Covers metric spaces, completeness, linear operators on Banach and Hilbert spaces, and the "Big Four" theorems (Hahn-Banach, Open Mapping, Closed Graph, and Uniform Boundedness).
 
