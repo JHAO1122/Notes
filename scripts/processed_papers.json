@@ -790,5 +790,35 @@
         "date": "2026-06-14",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.18199v1": {
+        "title": "Conformal Prediction Intervals with Tail-Specific Guarantees",
+        "date": "2026-06-16",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.15217v1": {
+        "title": "Conformal Candidate Certification for Offline Model-Based Optimization",
+        "date": "2026-06-13",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.14909v1": {
+        "title": "Audited Conformal Prediction for Classification under Unknown Distribution Shift",
+        "date": "2026-06-12",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.09049v2": {
+        "title": "Data augmented bootstrap: Unifying confidence interval construction by approximate invariance",
+        "date": "2026-06-08",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.29200v4": {
+        "title": "Approximating full conformal prediction: distribution free guarantees via the tournament correction",
+        "date": "2026-05-28",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

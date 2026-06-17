@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-16
+> 更新于: 2026-06-17
 
 ---
+### Conformal Prediction Intervals with Tail-Specific Guarantees 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-16
+- **链接**: [PDF](http://arxiv.org/abs/2606.18199v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过分别构造具有边际有效性的单侧上、下置信区间并取交集，首次在分裂保形预测框架下实现了对上下尾部分别校准的双侧区间覆盖。理论证明在可交换数据下该区间具有有限样本的尾部特定覆盖保证，并在非可交换数据下建立了渐近性质，其构造的评分函数通过方向性校准显著提升了偏态数据中区间预测的尾部精度。
+
+### Conformal Candidate Certification for Offline Model-Based Optimization 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-13
+- **链接**: [PDF](http://arxiv.org/abs/2606.15217v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种名为“共形候选认证”（CCC）的后处理框架，通过加权共形预测为离线模型优化中的每个候选设计构造经校准的单侧统计下界，并严格证明了熵正则化代理最大化所诱导的吉布斯倾斜分布可直接用于计算重要性权重，从而避免了额外的密度比估计步骤。其核心理论贡献在于，在协变量偏移下，该评分函数能够保证认证候选集的经验覆盖率在名义水平附近，而标准共形方法因忽略分布偏移会导致覆盖率严重崩溃。
+
+### Audited Conformal Prediction for Classification under Unknown Distribution Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-12
+- **链接**: [PDF](http://arxiv.org/abs/2606.14909v1)
+
+!!! note "AI 核心解读"
+
+    本文提出Audited Conformal Prediction方法，通过构造一个辅助审计模型并设计两种评分函数整合策略，在未知分布偏移下实现了对预测集边际覆盖率的严格保证，同时显著提升了条件覆盖率的理论性质；其中一种策略基于统计推导建立了显式的组条件覆盖保证，另一种则通过优化评分函数在边际覆盖约束下最大化条件性能。
+
+### Data augmented bootstrap: Unifying confidence interval construction by approximate invariance 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-08
+- **链接**: [PDF](http://arxiv.org/abs/2606.09049v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出数据增强自助法（DAB），通过将数据变换的近似不变性量化为Kolmogorov距离，并利用满足高斯普适性统计量的条件均值与方差匹配，统一构造置信区间；其理论贡献在于无需群结构假设，即可在有限样本与渐近保证之间插值，并证明经典自助法、共形预测及SymmPI等方法均为其特例。
+
+### Approximating full conformal prediction: distribution free guarantees via the tournament correction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-28
+- **链接**: [PDF](http://arxiv.org/abs/2605.29200v4)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于“锦标赛”修正的通用近似框架，通过构造新的评分函数并引入对抗性校正项，在无需数据分割的条件下，严格证明了预测集可实现 \(1-2\alpha\) 的边缘覆盖保证，且在稳定性条件下可收紧至约 \(1-\alpha\)，从而在统计效率与计算可行性之间建立了理论上的最优权衡。
+
+
 ### Filtered Conformal Ellipsoids for Graph-Native Time Series 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-15
