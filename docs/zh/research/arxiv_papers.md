@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-17
+> 更新于: 2026-06-18
 
 ---
+### Knockoffs-based False Discovery Rate Control and Simplification for Deep Neural Networks 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-06-03
+- **链接**: [PDF](http://arxiv.org/abs/2606.04404v2)
+
+!!! note "AI 核心解读"
+
+    该论文将高维回归中的knockoffs框架拓展至深度神经网络，通过构造正则化网络下的逐层筛选与变量权重聚合评分函数，在控制错误发现率的同时实现了对冗余参数和输入变量的统计推断。其理论贡献在于证明了所提筛选方法在有限样本下对FDR的渐近控制性质，并基于惩罚似然推导了变量重要性的可交换性条件。
+
+### Conformal Prediction for Dyadic Regression Under Complex Missingness 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-09
+- **链接**: [PDF](http://arxiv.org/abs/2606.11136v2)
+
+!!! note "AI 核心解读"
+
+    该论文针对二元回归中复杂缺失机制，首次通过构造测度保持的双射论证，在样本为索引集随机子集的非可交换条件下建立了共形预测的有限样本有效性。此外，论文为联合可交换阵列设计了行-列相似性评分函数与加权共形程序，并在非参数图模型下证明了缺失非随机假设中加权共形预测的渐近条件有效性。
+
+
 ### Conformal Prediction Intervals with Tail-Specific Guarantees 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-16

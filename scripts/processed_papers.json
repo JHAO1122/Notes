@@ -820,5 +820,17 @@
         "date": "2026-05-28",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.04404v2": {
+        "title": "Knockoffs-based False Discovery Rate Control and Simplification for Deep Neural Networks",
+        "date": "2026-06-03",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2606.11136v2": {
+        "title": "Conformal Prediction for Dyadic Regression Under Complex Missingness",
+        "date": "2026-06-09",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
