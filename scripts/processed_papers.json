@@ -832,5 +832,17 @@
         "date": "2026-06-09",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.20191v1": {
+        "title": "AK-MCS-C2 : Active Kriging Monte Carlo Simulation method with conformal certification for failure probability estimation",
+        "date": "2026-06-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.19642v1": {
+        "title": "Rigorous uncertainty quantification of probabilistic AI weather forecasts with conformal prediction",
+        "date": "2026-06-17",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

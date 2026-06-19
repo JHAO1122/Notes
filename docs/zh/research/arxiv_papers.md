@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-18
+> 更新于: 2026-06-19
 
 ---
+### AK-MCS-C2 : Active Kriging Monte Carlo Simulation method with conformal certification for failure probability estimation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-18
+- **链接**: [PDF](http://arxiv.org/abs/2606.20191v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：将交叉共形预测与J+GP估计器嵌入AK-MCS框架，构造了无需分布假设的评分函数，从而在极限状态面附近实现样本分类误差的分布自由保证；理论性质上，通过自适应共形策略在小样本下推导出预测区间的有限样本覆盖概率，显著提升了稀有事件失效概率估计的鲁棒性与准确性。
+
+### Rigorous uncertainty quantification of probabilistic AI weather forecasts with conformal prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-17
+- **链接**: [PDF](http://arxiv.org/abs/2606.19642v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于将在线共形预测（online conformal prediction）引入概率性AI天气预报的后处理，通过构造无需分布假设的评分函数，在数学上严格保证了预测区间对极端事件的覆盖概率，克服了现有AI模型校准不足的理论缺陷。其统计推导的关键在于利用自适应更新规则动态调整预测区间宽度，使得长期平均覆盖误差收敛至零，且不牺牲连续排名概率评分（CRPS）等其他概率度量。
+
+
 ### Knockoffs-based False Discovery Rate Control and Simplification for Deep Neural Networks 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-06-03
