@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-19
+> 更新于: 2026-06-24
 
 ---
+### Null-Calibrated Conformal Selection via Target-Membership Scores 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-21
+- **链接**: [PDF](http://arxiv.org/abs/2606.22336v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出以目标隶属概率作为评分函数，取代传统预测导向的非一致性分数，并证明其任意单调变换在固定零假设选择水平下等价于Neyman-Pearson最优排序。通过零校准共形选择（NCCS）方法，在零假设可交换性下构造出有限样本有效的零p值，并可与BY或BH程序结合以控制错误发现率，理论性质上显著优于传统评分在方差驱动、多模态等非均值单调目标上的表现。
+
+### A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores 
+
+- [ ] **分类**: Conformal | **日期**: 2026-05-25
+- **链接**: [PDF](http://arxiv.org/abs/2605.25852v3)
+
+!!! note "AI 核心解读"
+
+    该论文的理论创新在于严格证明了独立同分布数据下条件覆盖等价于构造一个与特征独立的非一致性评分函数，从而将条件覆盖问题转化为评分函数的条件分布不变性。基于此，作者提出PIT-CP后处理校正方法，通过一维条件密度估计将任意基础评分映射为近似特征不变的枢轴量，并推导了条件覆盖间隙的显式上界以及体积与对称差界，在保留原评分几何结构与边际覆盖的同时实现了条件覆盖的改进。
+
+
 ### AK-MCS-C2 : Active Kriging Monte Carlo Simulation method with conformal certification for failure probability estimation 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-18

@@ -844,5 +844,17 @@
         "date": "2026-06-17",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.22336v1": {
+        "title": "Null-Calibrated Conformal Selection via Target-Membership Scores",
+        "date": "2026-06-21",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2605.25852v3": {
+        "title": "A Post-Processing Conformal Prediction Approach for Conditional Coverage via Pivotal Scores",
+        "date": "2026-05-25",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
