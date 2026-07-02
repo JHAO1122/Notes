@@ -53,7 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "FA-Ch6", label: isEn ? "6. Banach Spaces" : "6.巴拿赫空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/6Banach/" },
         { id: "FA-Ch7", label: isEn ? "7. Hilbert Spaces" : "7.希尔伯特空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/7Hilbert/" },
         { id: "FA-Ch8", label: isEn ? "8. Hilbert Spaces Theory" : "8.希尔伯特空间理论", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/8Hilbert/" },
-
+        { id: "FA-Ch9", label: isEn ? "9. Linear Operators" : "9.线性算子", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/9Linear/" },
+        { id: "FA-Ch10", label: isEn ? "10. Open Mapping Theorem and Closed Graph Theorem" : "10.开映射与闭图定理", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/10Open_Closed/" },
+        { id: "FA-Ch11", label: isEn ? "11. Dual Spaces" : "11.对偶空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/11dual/" },
+        { id: "FA-Ch12", label: isEn ? "12. Hahn-Banach Theorem" : "12.Hahn-Banach定理", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/12Hahn_Banach/" },
         // 渐近统计章节
         { id: "AS-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/0Intro/" },
         { id: "AS-Ch1", label: isEn ? "1. Convergence" : "1.随机收敛", parentId: "AS", radius: 8, color: colors.analysisLeaf, url: "Asymptotic-statistics/1Stochastic_convergence/" },
@@ -90,7 +93,11 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "Top-Ch6", label: isEn ? "6.Continuity and Homeomorphisms" : "6.连续与同胚", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/6/" },
         { id: "Top-Ch7", label: isEn ? "7. Connectedness" : "7.连通性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/7/" },
         { id: "Top-Ch8", label: isEn ? "8. Compactness" : "8.紧性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/8/" },
-
+        { id: "Top-Ch9", label: isEn ? "9. Compactness in Euclidean Spaces" : "9.欧氏空间紧性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/9/" },
+        { id: "Top-Ch10", label: isEn ? "10. Sequential Compactness" : "10.序列紧", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/10/" },
+        { id: "Top-Ch11", label: isEn ? "11. One-Point Compactification" : "11.单点紧化", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/11/" },
+        { id: "Top-Ch12", label: isEn ? "12. Countability" : "可数性", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/12/" },
+        { id: "Top-Ch13", label: isEn ? "13. Separation Axioms" : "分离公理", parentId: "Top", radius: 8, color: colors.geometry, url: "Topology/13/" },
         //实分析全部章节
         { id: "RA-Intro", label: isEn ? "0. Intro" : "实分析课程概览", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/0Intro/" },
         { id: "RA-Ch1", label: isEn ? "1. Sigma-Algebras" : "1.sigma-代数", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/1_sigma_algebra/" },
@@ -124,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         { source: "FA", target: "FA-Intro" }, { source: "FA", target: "FA-Ch1" }, { source: "FA", target: "FA-Ch2" }, { source: "FA", target: "FA-Ch3" },
         { source: "FA", target: "FA-Ch4" }, { source: "FA", target: "FA-Ch5" }, { source: "FA", target: "FA-Ch6" }, { source: "FA", target: "FA-Ch7" },
-        { source: "FA", target: "FA-Ch8" },
+        { source: "FA", target: "FA-Ch8" }, { source: "FA", target: "FA-Ch9" }, { source: "FA", target: "FA-Ch10" }, { source: "FA", target: "FA-Ch11" }, { source: "FA", target: "FA-Ch12" },
         { source: "AS", target: "AS-Intro" }, { source: "AS", target: "AS-Ch1" }, { source: "AS", target: "AS-Ch2" }, { source: "AS", target: "AS-Ch3" },
         { source: "AS", target: "AS-Ch4" }, { source: "AS", target: "AS-Ch5" }, { source: "AS", target: "AS-Ch6" }, { source: "AS", target: "AS-Ch7" },
         { source: "AS", target: "AS-Ch8" }, { source: "AS", target: "AS-Ch9" }, { source: "AS", target: "AS-Ch10" }, { source: "AS", target: "AS-Ch11" },
@@ -133,7 +140,8 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "SDE", target: "SDE-Ch4" }, { source: "SDE", target: "SDE-Ch5" }, { source: "SDE", target: "SDE-Ch6" }, { source: "SDE", target: "SDE-Ch7" },
         { source: "Top", target: "Top-Intro" }, { source: "Top", target: "Top-Ch1" }, { source: "Top", target: "Top-Ch2" }, { source: "Top", target: "Top-Ch3" },
         { source: "Top", target: "Top-Ch4" }, { source: "Top", target: "Top-Ch5" }, { source: "Top", target: "Top-Ch6" }, { source: "Top", target: "Top-Ch7" },
-        { source: "Top", target: "Top-Ch8" },
+        { source: "Top", target: "Top-Ch8" }, { source: "Top", target: "Top-Ch9" }, { source: "Top", target: "Top-Ch10" }, { source: "Top", target: "Top-Ch11" },
+        { source: "Top", target: "Top-Ch12" }, { source: "Top", target: "Top-Ch13" },
         { source: "RA", target: "RA-Intro" }, { source: "RA", target: "RA-Ch1" }, { source: "RA", target: "RA-Ch2" }, { source: "RA", target: "RA-Ch3" },
         { source: "RA", target: "RA-Ch4" }, { source: "RA", target: "RA-Ch5" }, { source: "RA", target: "RA-Ch6" }, { source: "RA", target: "RA-Ch7" },
         { source: "RA", target: "RA-Ch8" }, { source: "RA", target: "RA-Ch9" }, { source: "RA", target: "RA-Ch10" }, { source: "RA", target: "RA-Ch11" },
