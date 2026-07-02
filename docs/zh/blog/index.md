@@ -34,8 +34,8 @@
 * **2026-05-05** | [被烫伤的孩子仍然爱火](./posts/public/2026-5-5.md) 
     > *二十岁的青春就在那里，眼里都是十岁时的影子*
 
-* **2026-06-13** | [暂时留白的情感总结](./posts/private/2026-6-13.md) 🔒
-    > *考试周前不久分手了，暂时留白...*
+* **2026-06-13** | [就这样吧](./posts/private/2026-6-13.md) 🔒
+    > *个人私生活的感情变故*
 
 
 <div style="background-color: rgba(67, 161, 213, 0.05); border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 20px 0; border: 1px solid rgba(67, 161, 213, 0.2);">
