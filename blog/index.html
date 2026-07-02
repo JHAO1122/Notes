@@ -4941,38 +4941,6 @@
   }, 1000);
 </script>
 
-<div style="background-color: rgba(128, 128, 128, 0.05); border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 20px 0; border: 1px solid rgba(128,128,128,0.2);">
-  <h3 style="margin-top: 0; font-weight: 600;">🏆 距离 2026 美加墨世界杯开幕还有</h3>
-  <div id="world-cup-countdown" style="display: flex; justify-content: center; gap: 20px; font-size: 1.6rem; font-weight: bold; color: #D32F2F; margin-top: 15px;">
-    <div><span id="wc-days">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">天</span></div>
-    <div><span id="wc-hours">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">时</span></div>
-    <div><span id="wc-minutes">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">分</span></div>
-    <div><span id="wc-seconds">--</span> <span style="font-size: 0.9rem; font-weight: normal; color: #757575;">秒</span></div>
-  </div>
-</div>
-
-<script>
-  // 使用 ISO 8601 格式强制指定为北京时间 (UTC+8) 的 2026年6月12日 03:00:00
-  const wcDate = new Date("2026-06-12T03:00:00+08:00").getTime();
-
-  const wcTimer = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = wcDate - now;
-
-    if (distance < 0) {
-      clearInterval(wcTimer);
-      document.getElementById("world-cup-countdown").innerHTML = "⚽ 比赛已经开始啦！熬夜看球走起！";
-      document.getElementById("world-cup-countdown").style.color = "#2E7D32"; // 变绿色
-      return;
-    }
-
-    document.getElementById("wc-days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.getElementById("wc-hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-    document.getElementById("wc-minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-    document.getElementById("wc-seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
-  }, 1000);
-</script>
-
 
 
 
