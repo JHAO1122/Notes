@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-06-24
+> 更新于: 2026-07-03
 
 ---
+### Prediction Sets for Counterfactual Decisions: Coverage, Optimality, and Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-02
+- **链接**: [PDF](http://arxiv.org/abs/2607.02206v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种名为“策略耦合覆盖”的新概念，将预测集覆盖概率与决策规则本身绑定，并证明在此框架下，基于最大最小规则的决策在分布不确定性下具有极小化最优性。通过将策略耦合覆盖下的预测集优化等价转化为风险厌恶型策略与效用证书的直接优化，作者推导出了总体最优预测集的显式形式，并构造了有限样本下具有严格覆盖保证的两阶段共形预测方法（PC-RACP）。
+
+### Approximate full-conformal multi-task regression with reproducing kernels 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-01
+- **链接**: [PDF](http://arxiv.org/abs/2607.00645v1)
+
+!!! note "AI 核心解读"
+
+    该论文针对多任务回归中的全共形预测计算难题，在向量值再生核希尔伯特空间框架下，通过构造一个包含精确全共形区域的近似预测区域，并分别在任务间协方差矩阵已知与估计两种情形下给出理论推导。其核心创新在于：在已知协方差情形下，推导了近似区域体积的紧致性上界，从而在统计上保证了近似精度；在协方差估计情形下，所构造的评分函数仍能确保近似区域优于分裂共形预测。
+
+### Accelerating Conformal Prediction via Approximate Leave-One-Out 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-30
+- **链接**: [PDF](http://arxiv.org/abs/2606.31915v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过引入近似留一法（ALO）估计量来替代精确的留一法重拟合，从而显著加速共形预测的计算过程，并证明了在渐近意义下该方法仍能保持覆盖率和效率的理论性质。其核心创新在于针对共形预测中需要预测新点 \(x_{n+1}\) 而非仅训练点 \(x_i\) 的特殊性，对高维统计中ALO交叉验证风险估计的一致性证明进行了适应性改造，构造了基于ALO的评分函数并推导了其渐近有效性。
+
+### Relational and Sequential Conformal Inference for Energy Time Series over Graphs via Foundation Models 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-30
+- **链接**: [PDF](http://arxiv.org/abs/2606.31804v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种结合图神经网络点预测与表格基础模型零样本校准的时空图共形预测框架，通过将时空残差重构为表格形式并利用上下文学习机制，在无需任务重训练的条件下同时捕获序列依赖与图结构关系。其核心创新在于构造了能适应图结构时序残差的评分函数，并证明了所生成预测区间在保持边际覆盖保证的同时，对复杂时空依赖具有更强的适应性。
+
+### On Optimal Data Splitting for Split Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-30
+- **链接**: [PDF](http://arxiv.org/abs/2606.31600v1)
+
+!!! note "AI 核心解读"
+
+    该论文首次从理论上推导了分裂保形预测中训练-校准最优分割比例的解析表达式，并针对对称与非对称误差分布分别构造了基于模型复杂度与噪声水平的评分函数。其核心理论贡献在于证明了最优分割比例仅依赖于模型拟合能力与校准样本量的渐近关系，从而为最小化预测区间长度提供了统计上严谨的分配准则。
+
+
 ### Null-Calibrated Conformal Selection via Target-Membership Scores 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-21

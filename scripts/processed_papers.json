@@ -856,5 +856,35 @@
         "date": "2026-05-25",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2607.02206v1": {
+        "title": "Prediction Sets for Counterfactual Decisions: Coverage, Optimality, and Conformal Prediction",
+        "date": "2026-07-02",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.00645v1": {
+        "title": "Approximate full-conformal multi-task regression with reproducing kernels",
+        "date": "2026-07-01",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.31915v1": {
+        "title": "Accelerating Conformal Prediction via Approximate Leave-One-Out",
+        "date": "2026-06-30",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.31804v1": {
+        "title": "Relational and Sequential Conformal Inference for Energy Time Series over Graphs via Foundation Models",
+        "date": "2026-06-30",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.31600v1": {
+        "title": "On Optimal Data Splitting for Split Conformal Prediction",
+        "date": "2026-06-30",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
