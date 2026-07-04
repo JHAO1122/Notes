@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-03
+> 更新于: 2026-07-04
 
 ---
+### Accelerometry-Derived Digital Biomarkers for Cardiometabolic Risk: A Population-Representative Tabular Benchmark with Uncertainty Quantification 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-29
+- **链接**: [PDF](http://arxiv.org/abs/2606.30702v1)
+
+!!! note "AI 核心解读"
+
+    该论文首次将拆分共形预测（split conformal prediction）引入加速计衍生的心脏代谢数字生物标志物预测任务，构建了无需分布假设的90%预测区间，并系统评估了性别与种族/民族子组间的覆盖公平性。通过对比岭回归、XGBoost与TabPFN v2三种方法，论文揭示了边际覆盖与条件覆盖之间的显著差距（如墨西哥裔美国受试者HbA1c预测的局部覆盖不足），为临床公平性量化提供了统计框架。
+
+### Self-Organized Conformal Prediction: Reducing Regional Coverage Gaps with Unsupervised Group Discovery 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-28
+- **链接**: [PDF](http://arxiv.org/abs/2606.29403v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出自组织共形预测（SOCP），通过自组织映射（SOM）在输入空间中无监督地发现数据分组，并基于查询点的最佳匹配单元（BMU）或固定网格邻域构建局部校准缓冲区，从而在无需监督划分或重新训练预测器的情况下实现组内局部校准。其理论贡献在于：对于BMU单元检索，SOCP提供精确的有效性保证；对于邻域缓冲区检索，则给出固定的检索集有效性；而中心单元的有效性在邻域检索下仅受限于一个Kolmogorov-Smirnov（KS）偏差项。
+
+### Full Conformal Prediction under Stochastic Non-Conformity Measure 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-27
+- **链接**: [PDF](http://arxiv.org/abs/2606.28730v1)
+
+!!! note "AI 核心解读"
+
+    该论文指出，在非一致性度量具有随机性时，传统认为的“分布置换不变性”不足以保证全共形预测的有效性，并提出了一个更严格且正确的充分条件：条件独立性与分布置换不变性。通过严格的统计推导，论文构造了在该条件下评分函数的理论性质，确保了预测区间的覆盖概率在随机非一致性度量下依然成立。
+
+### Conformal Prediction with Macro-Coverage Guarantees 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-26
+- **链接**: [PDF](http://arxiv.org/abs/2606.28598v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于标签加权共形预测的通用框架，通过构造新的评分函数，在有限样本下严格保证了宏覆盖率的理论下界，并推广至任意类别分组的加权平均覆盖率目标。作者进一步刻画了满足广义宏覆盖率目标的最小预测集形式，并推导了其最优评分函数的显式表达式，从而在统计上平衡了类别条件覆盖与边缘覆盖的极端要求。
+
+### An Energy-Driven Framework for Privacy-Aware Synthetic Data Generation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-15
+- **链接**: [PDF](http://arxiv.org/abs/2606.16488v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种基于能量函数的约束随机探索框架，通过显式构造包含似然性、隐私性、多样性和结构一致性的惩罚评分函数，将合成数据生成转化为多目标采样优化问题。其核心创新在于利用贝叶斯网络提议机制与Metropolis-Hastings采样的结合，在混合类型数据中实现了统计保真度与披露风险之间的可解释性平衡，并证明了该方法在限制精确记忆的同时保留原始数据多元依赖结构的理论性质。
+
+
 ### Prediction Sets for Counterfactual Decisions: Coverage, Optimality, and Conformal Prediction 
 
 - [ ] **分类**: Conformal | **日期**: 2026-07-02

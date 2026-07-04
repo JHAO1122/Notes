@@ -886,5 +886,35 @@
         "date": "2026-06-30",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.30702v1": {
+        "title": "Accelerometry-Derived Digital Biomarkers for Cardiometabolic Risk: A Population-Representative Tabular Benchmark with Uncertainty Quantification",
+        "date": "2026-06-29",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.29403v1": {
+        "title": "Self-Organized Conformal Prediction: Reducing Regional Coverage Gaps with Unsupervised Group Discovery",
+        "date": "2026-06-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.28730v1": {
+        "title": "Full Conformal Prediction under Stochastic Non-Conformity Measure",
+        "date": "2026-06-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.28598v1": {
+        "title": "Conformal Prediction with Macro-Coverage Guarantees",
+        "date": "2026-06-26",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.16488v2": {
+        "title": "An Energy-Driven Framework for Privacy-Aware Synthetic Data Generation",
+        "date": "2026-06-15",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
