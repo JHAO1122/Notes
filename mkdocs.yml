@@ -134,6 +134,9 @@ plugins:
             "📏 测度论基础": "📏 Measure Theory"
             "🔢 线性代数": "🔢 Linear Algebra"
             "🌊 随机过程": "🌊 Stochastic Processes"
+            "🎯 凸优化": "🎯 Convex Optimization"
+            "📈 回归分析": "📈 Regression Analysis"
+            "♾️ 数学分析": "♾️ Mathematical Analysis"
             "🛰️ 前沿追踪": "🛰️ Research Updates"
             "📝 最新论文": "📝 Latest Papers"
             "🎙️ 讲座与报告": "🎙️ Lectures & Talks"
@@ -262,6 +265,9 @@ nav:
           - 📏 测度论基础: zh/reference/measure.md
           - 🔢 线性代数: zh/reference/linalg.md
           - 🌊 随机过程: zh/reference/stochastic.md 
+          - 🎯 凸优化: zh/reference/optimization.md
+          - 📈 回归分析: zh/reference/regression.md
+          - ♾️ 数学分析: zh/reference/analysis.md
   - 🛰️ 前沿追踪: 
       - 📝 最新论文: zh/research/arxiv_papers.md
   - 🎙️ 讲座与报告:
