@@ -916,5 +916,11 @@
         "date": "2026-06-15",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2606.11949v2": {
+        "title": "Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers",
+        "date": "2026-06-10",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

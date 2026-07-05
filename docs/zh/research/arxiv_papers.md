@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-04
+> 更新于: 2026-07-05
 
 ---
+### Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-10
+- **链接**: [PDF](http://arxiv.org/abs/2606.11949v2)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于：第一，通过滑动窗口KS统计量结合经验校准阈值，构建了无需真实标签即可在线检测分类器分数分布漂移的监控框架，并基于预注册因子实验揭示了分类器与漂移类型间的显著交互效应（η²=0.185）；第二，理论证明了生成式分类器中密度比估计在3584-4096维嵌入空间因逻辑回归完美分离而崩溃，提出投影至≤32维可恢复加权共形预测的覆盖率，并推导出置信门控均衡下对抗攻击者停滞的精确安全边界gap=1/(2λ)，同时给出无需逐模型调参的校准自由扫描鞅，实现全分类器假警报率≤1%。
+
+
 ### Accelerometry-Derived Digital Biomarkers for Cardiometabolic Risk: A Population-Representative Tabular Benchmark with Uncertainty Quantification 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-29
