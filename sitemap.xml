@@ -344,6 +344,83 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Real_analysis/9_hahn_jordan/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/0Intro/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/0Intro/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/10Causal_Inference/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/10Causal_Inference/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/10Causal_Inference/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/1KNN/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/1KNN/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/1KNN/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/2Linear_Regression/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/2Linear_Regression/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/2Linear_Regression/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/3Penalized/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/3Penalized/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/3Penalized/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/4Penalized/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/4Penalized/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/4Penalized/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/5Classification/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/5Classification/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/5Classification/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/6SVM/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/6SVM/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/6SVM/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/7RKHS/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/7RKHS/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/7RKHS/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/8Kernel_Density/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/8Kernel_Density/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/8Kernel_Density/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/Statistical_Learning/9Tree_Model/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/9Tree_Model/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/9Tree_Model/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/0Intro/</loc>
         <lastmod>2026-07-05</lastmod>
         <changefreq>daily</changefreq>
@@ -1028,6 +1105,83 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Real_analysis/9_hahn_jordan/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Real_analysis/9_hahn_jordan/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/0Intro/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/0Intro/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/10Causal_Inference/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/10Causal_Inference/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/10Causal_Inference/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/1KNN/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/1KNN/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/1KNN/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/2Linear_Regression/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/2Linear_Regression/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/2Linear_Regression/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/3Penalized/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/3Penalized/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/3Penalized/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/4Penalized/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/4Penalized/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/4Penalized/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/5Classification/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/5Classification/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/5Classification/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/6SVM/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/6SVM/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/6SVM/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/7RKHS/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/7RKHS/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/7RKHS/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/8Kernel_Density/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/8Kernel_Density/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/8Kernel_Density/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Statistical_Learning/9Tree_Model/</loc>
+        <lastmod>2026-07-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Statistical_Learning/9Tree_Model/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Statistical_Learning/9Tree_Model/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Stochastic-Differential-Equation/0Intro/</loc>
