@@ -127,6 +127,18 @@ plugins:
             "第十章：Radon-Nikodym定理": "Ch 10: Radon-Nikodym Theorem"
             "第十一章：微积分基本定理": "Ch 11: Fundamental Theorem of Calculus"
             "第十二章：L^p空间": "Ch 12: L^p Spaces"
+            "🤖 统计学习": "🤖 Statistical Learning"
+            "统计学习课程概览": "Statistical Learning Course Overview"
+            "第一章：KNN": "Ch 1: K-Nearest Neighbors"
+            "第二章：线性回归": "Ch 2: Linear Regression"
+            "第三章：惩罚线性回归（一）": "Ch 3: Penalized Linear Regression I"
+            "第四章：惩罚线性回归（二）": "Ch 4: Penalized Linear Regression II"
+            "第五章：分类问题": "Ch 5: Classification Problems"
+            "第六章：支持向量机": "Ch 6: Support Vector Machines"
+            "第七章：RKHS与核回归": "Ch 7: RKHS and Kernel Regression"
+            "第八章：核密度估计": "Ch 8: Kernel Density Estimation"
+            "第九章：树模型": "Ch 9: Tree Models"
+            "第十章：因果推断": "Ch 10: Causal Inference"
             "🛠️ 知识速查": "🛠️ Quick Reference"
             "🛠️ 速查": "🛠️ Quick Reference"
             "📊 数理统计": "📊 Mathematical Statistics"
@@ -257,6 +269,19 @@ nav:
               - 第十章：Radon-Nikodym定理: zh/Real_analysis/10_radon_nikodym.md
               - 第十一章：微积分基本定理: zh/Real_analysis/11_differentiation_ir.md
               - 第十二章：L^p空间: zh/Real_analysis/12_lp_spaces.md
+      - 🤖 统计学习:
+          - 统计学习课程概览: zh/Statistical_Learning/0Intro.md
+          - 📖 笔记:
+              - 第一章：KNN: zh/Statistical_Learning/1KNN.md
+              - 第二章：线性回归: zh/Statistical_Learning/2Linear_Regression.md
+              - 第三章：惩罚线性回归（一）: zh/Statistical_Learning/3Penalized.md
+              - 第四章：惩罚线性回归（二）: zh/Statistical_Learning/4Penalized.md
+              - 第五章：分类问题: zh/Statistical_Learning/5Classification.md
+              - 第六章：支持向量机: zh/Statistical_Learning/6SVM.md
+              - 第七章：RKHS与核回归: zh/Statistical_Learning/7RKHS.md
+              - 第八章：核密度估计: zh/Statistical_Learning/8Kernel_Density.md
+              - 第九章：树模型: zh/Statistical_Learning/9Tree_Model.md
+              - 第十章：因果推断: zh/Statistical_Learning/10Causal_Inference.md
   - 🛠️ 知识速查:
       - 📖 概览: zh/reference/index.md  # 可以在这里写一个总览，说明这个速查表的构建逻辑
       - 🛠️ 速查:
