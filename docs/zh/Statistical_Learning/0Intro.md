@@ -24,7 +24,35 @@ tags:
 
 ## 🗺️ 课程地图 (Syllabus & Navigation)
 
-### 第一部分
+以下是本课程的详细笔记目录：
+
+### Part I: 基础监督学习方法
+
+* [x] [第一章：KNN](1KNN.md)
+* [x] [第二章：线性回归](2Linear_Regression.md)
+
+### Part II: 正则化与高维线性模型
+
+* [x] [第三章：惩罚线性回归（一）](3Penalized.md)
+* [x] [第四章：惩罚线性回归（二）](4Penalized.md)
+
+### Part III: 分类问题与最大间隔方法
+
+* [x] [第五章：分类问题](5Classification.md)
+* [x] [第六章：支持向量机](6SVM.md)
+
+### Part IV: 核方法与非参数估计
+
+* [x] [第七章：RKHS与核回归](7RKHS.md)
+* [x] [第八章：核密度估计](8Kernel_Density.md)
+
+### Part V: 树模型与集成学习
+
+* [x] [第九章：树模型](9Tree_Model.md)
+
+### Part VI: 因果推断
+
+* [x] [第十章：因果推断](10Causal_Inference.md)
 
 
 ---

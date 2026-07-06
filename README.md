@@ -31,6 +31,9 @@ Currently, [the site](https://jhao1122.github.io/Notes/) is divided into **five*
 * **[Completed] [General Topology](https://jhao1122.github.io/Notes/Topology/0Intro/)**
   * Based on Munkres' classic *Topology*, covering foundational topology, continuity & homeomorphisms, and core topological properties (connectedness, compactness, separation & countability axioms).
 
+* **[Completed] [Statistical Learning](https://jhao1122.github.io/Notes/Statistical_Learning/0Intro/)**
+  * Covers core topics in statistical learning, including KNN, linear regression, penalized regression, classification, support vector machines, RKHS and kernel regression, kernel density estimation, tree-based models, and causal inference.
+
 ### 🛠️ [Quick Reference](https://jhao1122.github.io/Notes/reference/)
 
 A personal repository of foundational concepts in Mathematics and Statistics that are often elusive or easily forgotten. This section also records my personal interpretations and intuitive grasp of core theorems.

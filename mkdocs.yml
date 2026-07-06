@@ -332,6 +332,11 @@ markdown_extensions:
   - admonition          # 提示框 (!!! info)
   - pymdownx.details    # 折叠框 (??? success)
   - pymdownx.superfences # 支持嵌套
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list  # 必须添加这个，否则图标的大小和位置设置不生效
   - md_in_html
   - pymdownx.blocks.caption
