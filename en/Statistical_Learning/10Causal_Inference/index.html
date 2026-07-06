@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#chapter-10-foundations-of-causal-inference-potential-outcomes-identification-estimation-and-causal-graphs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3815,6 +3820,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Causal Inference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -3832,6 +3857,575 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-potential-outcomes-framework-counterfactuals-potential-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Potential Outcomes Framework (Counterfactuals / Potential Outcomes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Potential Outcomes Framework (Counterfactuals / Potential Outcomes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-the-fundamental-problem-of-causal-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 The Fundamental Problem of Causal Inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-statistical-measures-of-causal-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Statistical Measures of Causal Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Statistical Measures of Causal Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-fundamental-difference-between-correlation-and-causation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 The Fundamental Difference between Correlation and Causation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identifiability-of-causal-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Identifiability of Causal Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Identifiability of Causal Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-causal-identification-theorem-via-stratification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Causal Identification Theorem via Stratification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-propensity-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Propensity Score
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Propensity Score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-balancing-score-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Balancing Score Property
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inverse-probability-treatment-weighting-iptw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Inverse Probability Treatment Weighting (IPTW)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dual-representation-of-the-iptw-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dual Representation of the IPTW Estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-standardization-g-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Standardization / G-Formula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-marginal-structural-models-msm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Marginal Structural Models (MSM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Marginal Structural Models (MSM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-weighted-least-squares-estimation-in-a-pseudo-population" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Weighted Least Squares Estimation in a Pseudo-Population
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-doubly-robust-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Doubly Robust Estimation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-g-estimation-of-structural-nested-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. G-Estimation (of Structural Nested Models)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. G-Estimation (of Structural Nested Models)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-estimating-equation-under-the-zero-causal-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Estimating Equation under the Zero Causal Association
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-causal-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Causal Diagrams
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Causal Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-antihistamine-and-asthma-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 The Antihistamine and Asthma Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-paths-ancestors-parents-and-children" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Paths, Ancestors, Parents, and Children
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-backdoor-paths-colliders-and-blocking-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Backdoor Paths, Colliders, and Blocking Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-directed-acyclic-graph-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Directed Acyclic Graph (DAG)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Directed Acyclic Graph (DAG)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-definition-of-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Definition of DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-nonparametric-nature-and-causal-implications-of-dags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Nonparametric Nature and Causal Implications of DAGs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-statistical-independence-encoded-in-a-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Statistical Independence Encoded in a DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-markov-factorization-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Markov Factorization Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-two-types-of-unblocked-paths-in-a-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Two Types of Unblocked Paths in a DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-relationship-between-blocking-paths-and-marginal-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Relationship between Blocking Paths and Marginal Association
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-dags-and-confounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. DAGs and Confounding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. DAGs and Confounding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-graph-theoretic-definition-of-confounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Graph-Theoretic Definition of Confounding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-algorithm-for-checking-confounding-in-a-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Algorithm for Checking Confounding in a DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-potential-confounders-in-the-asthma-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Potential Confounders in the Asthma DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-the-trap-of-conditioning-why-adjusting-only-for-c-is-not-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 The Trap of Conditioning: Why Adjusting Only for \(C\) Is Not Enough?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-numerical-example-conditioning-on-a-collider-induces-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 Numerical Example: Conditioning on a Collider Induces Association
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-back-to-the-original-dag-what-should-be-adjusted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6 Back to the Original DAG: What Should Be Adjusted?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137-another-counterexample-when-not-to-adjust-for-a-collider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7 Another Counterexample: When Not to Adjust for a Collider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-d-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. d-Separation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. d-Separation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-d-separation-of-a-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 d-Separation of a Trail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-d-separation-between-sets-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 d-Separation between Sets of Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-relationship-between-d-separation-and-conditional-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 Relationship between d-Separation and Conditional Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-backdoor-path-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Backdoor Path Criterion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Backdoor Path Criterion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-sufficient-set-for-confounding-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Sufficient Set for Confounding Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-backdoor-criterion-and-the-adjustment-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Backdoor Criterion and the Adjustment Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-unification-with-the-earlier-potential-outcomes-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 Unification with the Earlier Potential Outcomes Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-chapter-summary-from-potential-outcomes-to-causal-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Chapter Summary: From Potential Outcomes to Causal Graphs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5291,6 +5885,566 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-potential-outcomes-framework-counterfactuals-potential-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Potential Outcomes Framework (Counterfactuals / Potential Outcomes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Potential Outcomes Framework (Counterfactuals / Potential Outcomes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-the-fundamental-problem-of-causal-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 The Fundamental Problem of Causal Inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-statistical-measures-of-causal-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Statistical Measures of Causal Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Statistical Measures of Causal Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-fundamental-difference-between-correlation-and-causation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 The Fundamental Difference between Correlation and Causation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identifiability-of-causal-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Identifiability of Causal Effects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Identifiability of Causal Effects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-causal-identification-theorem-via-stratification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Causal Identification Theorem via Stratification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-propensity-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Propensity Score
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Propensity Score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-balancing-score-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Balancing Score Property
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inverse-probability-treatment-weighting-iptw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Inverse Probability Treatment Weighting (IPTW)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dual-representation-of-the-iptw-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dual Representation of the IPTW Estimator
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-standardization-g-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Standardization / G-Formula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-marginal-structural-models-msm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Marginal Structural Models (MSM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Marginal Structural Models (MSM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-weighted-least-squares-estimation-in-a-pseudo-population" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Weighted Least Squares Estimation in a Pseudo-Population
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-doubly-robust-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Doubly Robust Estimation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-g-estimation-of-structural-nested-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. G-Estimation (of Structural Nested Models)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. G-Estimation (of Structural Nested Models)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-estimating-equation-under-the-zero-causal-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Estimating Equation under the Zero Causal Association
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-causal-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Causal Diagrams
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Causal Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-antihistamine-and-asthma-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 The Antihistamine and Asthma Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-paths-ancestors-parents-and-children" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Paths, Ancestors, Parents, and Children
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-backdoor-paths-colliders-and-blocking-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Backdoor Paths, Colliders, and Blocking Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-directed-acyclic-graph-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Directed Acyclic Graph (DAG)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Directed Acyclic Graph (DAG)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-definition-of-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Definition of DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-nonparametric-nature-and-causal-implications-of-dags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Nonparametric Nature and Causal Implications of DAGs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-statistical-independence-encoded-in-a-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Statistical Independence Encoded in a DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-markov-factorization-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Markov Factorization Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-two-types-of-unblocked-paths-in-a-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Two Types of Unblocked Paths in a DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-relationship-between-blocking-paths-and-marginal-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Relationship between Blocking Paths and Marginal Association
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-dags-and-confounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. DAGs and Confounding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. DAGs and Confounding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-graph-theoretic-definition-of-confounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Graph-Theoretic Definition of Confounding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-algorithm-for-checking-confounding-in-a-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Algorithm for Checking Confounding in a DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-potential-confounders-in-the-asthma-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Potential Confounders in the Asthma DAG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-the-trap-of-conditioning-why-adjusting-only-for-c-is-not-enough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 The Trap of Conditioning: Why Adjusting Only for \(C\) Is Not Enough?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-numerical-example-conditioning-on-a-collider-induces-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 Numerical Example: Conditioning on a Collider Induces Association
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-back-to-the-original-dag-what-should-be-adjusted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6 Back to the Original DAG: What Should Be Adjusted?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137-another-counterexample-when-not-to-adjust-for-a-collider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7 Another Counterexample: When Not to Adjust for a Collider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-d-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. d-Separation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. d-Separation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-d-separation-of-a-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 d-Separation of a Trail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-d-separation-between-sets-of-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 d-Separation between Sets of Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-relationship-between-d-separation-and-conditional-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 Relationship between d-Separation and Conditional Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-backdoor-path-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Backdoor Path Criterion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Backdoor Path Criterion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-sufficient-set-for-confounding-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Sufficient Set for Confounding Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-backdoor-criterion-and-the-adjustment-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Backdoor Criterion and the Adjustment Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-unification-with-the-earlier-potential-outcomes-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 Unification with the Earlier Potential Outcomes Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-chapter-summary-from-potential-outcomes-to-causal-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Chapter Summary: From Potential Outcomes to Causal Graphs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -5311,9 +6465,1006 @@
   
 
 
-  <h1>Ch 10: Causal Inference</h1>
-
-
+<h1 id="chapter-10-foundations-of-causal-inference-potential-outcomes-identification-estimation-and-causal-graphs">Chapter 10: Foundations of Causal Inference (Potential Outcomes, Identification, Estimation, and Causal Graphs)</h1>
+<p>In the previous chapters of statistical learning, we focused more on the association between variables, predictive ability, and generalization error. However, in problems such as medicine, public policy, economics, social sciences, and recommendation systems, researchers are often genuinely interested in: how would the outcome change if a treatment, policy, or exposure were actively changed? Such questions cannot be answered solely by conditional association or predictive accuracy; they require the language of <strong>intervention</strong>, <strong>counterfactuals</strong>, and <strong>identifiability</strong>.</p>
+<p>This chapter systematically introduces two main threads of modern causal inference. The first is the <strong>Rubin Potential Outcomes Framework</strong>: using <span class="arithmatex">\(Y^1,Y^0\)</span> to define individual and population causal effects, explaining the fundamental missing-data difficulty of causal inference, and deriving identification and estimation formulas such as G-formula, IPTW, AIPW, and G-estimation under assumptions of consistency, positivity, and randomization or conditional exchangeability. The second is the <strong>Pearl Causal Graph Framework</strong>: using DAGs to express direct causal relationships between variables, using backdoor paths, colliders, d-separation, and the backdoor path criterion to determine which variables should be adjusted and which should not. Both languages ultimately serve the same goal: transforming causal quantities that cannot be directly observed into statistical functionals that can be estimated from observational data.</p>
+<hr />
+<h2 id="1-potential-outcomes-framework-counterfactuals-potential-outcomes">1. Potential Outcomes Framework (Counterfactuals / Potential Outcomes)</h2>
+<p>The core of causal inference lies in comparing the difference in an individual's outcome under "receiving an intervention" versus "not receiving an intervention".</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.1 (Potential Outcomes and Observed Outcome)</p>
+<p>Let the binary intervention variable be <span class="arithmatex">\(A \in \{0, 1\}\)</span>, where <span class="arithmatex">\(A = 1\)</span> indicates receiving a treatment/intervention (e.g., taking a drug) and <span class="arithmatex">\(A = 0\)</span> indicates not receiving it (e.g., taking a placebo).</p>
+<p>For each individual, we define two <strong>potential outcomes</strong>:</p>
+<ul>
+<li><span class="arithmatex">\(Y^1\)</span>: the outcome that would occur if the individual received the intervention (<span class="arithmatex">\(A=1\)</span>).</li>
+<li><span class="arithmatex">\(Y^0\)</span>: the outcome that would occur if the individual did not receive the intervention (<span class="arithmatex">\(A=0\)</span>).</li>
+</ul>
+<p>In the real world, for any individual, we can only observe one of the two intervention states. The actually observed response variable <span class="arithmatex">\(Y\)</span> satisfies the following <strong>consistency</strong> relationship with the potential outcomes:</p>
+<div class="arithmatex">\[
+Y = A Y^1 + (1 - A) Y^0
+\]</div>
+</div>
+<h3 id="11-the-fundamental-problem-of-causal-inference">1.1 The Fundamental Problem of Causal Inference</h3>
+<p>Since the definition of a causal effect relies on comparing <span class="arithmatex">\(Y^1\)</span> and <span class="arithmatex">\(Y^0\)</span> for the same individual at the same time, and in reality at least one of <span class="arithmatex">\(Y^1\)</span> and <span class="arithmatex">\(Y^0\)</span> is an unobservable counterfactual, <strong>causal effects at the individual level can never be directly observed or computed</strong>.</p>
+<p>To overcome this difficulty, statistics shifts the perspective from "individual causal effects" to "population average causal effects".</p>
+<hr />
+<h2 id="2-statistical-measures-of-causal-effects">2. Statistical Measures of Causal Effects</h2>
+<p>At the population level, we define solvable causal metrics by taking expectations over the potential outcomes.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 2.1 (Average Treatment Effect, ATE, and Conditional Average Treatment Effect, CATE)</p>
+<ul>
+<li><strong>Average Causal Effect (ATE)</strong>: defined as the absolute difference in the expected potential outcomes under the two treatments for the entire population:</li>
+</ul>
+<div class="arithmatex">\[
+\text{ATE} = \mathbb{E}[Y^1 - Y^0] = \mathbb{E}[Y^1] - \mathbb{E}[Y^0]
+\]</div>
+<ul>
+<li><strong>Conditional Average Causal Effect (CATE)</strong>: if there exists a set of multidimensional covariates/confounders <span class="arithmatex">\(X \in \mathbb{R}^p\)</span>, the average causal effect within a specific subpopulation <span class="arithmatex">\(X=x\)</span> is defined as:</li>
+</ul>
+<div class="arithmatex">\[
+\text{CATE}(x) = \mathbb{E}[Y^1 - Y^0 \mid X = x]
+\]</div>
+</div>
+<h3 id="21-the-fundamental-difference-between-correlation-and-causation">2.1 The Fundamental Difference between Correlation and Causation</h3>
+<p>In observational data, we can often only directly compute the difference in observed conditional expectations, i.e., the <strong>association measure</strong>:</p>
+<div class="arithmatex">\[
+\text{Association} = \mathbb{E}[Y \mid A = 1] - \mathbb{E}[Y \mid A = 0]
+\]</div>
+<p>In general, <span class="arithmatex">\(\mathbb{E}[Y \mid A = 1] - \mathbb{E}[Y \mid A = 0] \neq \mathbb{E}[Y^1] - \mathbb{E}[Y^0]\)</span>.</p>
+<p>This is because, in observational data, due to the presence of confounders, the assignment of intervention <span class="arithmatex">\(A\)</span> is often not independent of the potential outcomes <span class="arithmatex">\((Y^1, Y^0)\)</span>. For example, patients with more severe illness (whose potential health <span class="arithmatex">\(Y^0\)</span> is lower) are more likely to choose medication (<span class="arithmatex">\(A=1\)</span>).</p>
+<hr />
+<h2 id="3-identifiability-of-causal-effects">3. Identifiability of Causal Effects</h2>
+<p>To transform causal quantities containing unobservable terms (such as <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span>) into statistical quantities that depend only on observable sample data, we need three core identifiability assumptions.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1 (Three Core Identifiability Assumptions)</p>
+<ol>
+<li>
+<p><strong>Consistency</strong>: As described above, the observed value is exactly equal to the corresponding potential outcome: when <span class="arithmatex">\(A=a\)</span>, <span class="arithmatex">\(Y = Y^a\)</span>.</p>
+</li>
+<li>
+<p><strong>Positivity / Overlap</strong>: For any value of the covariate <span class="arithmatex">\(X\)</span>, the probability of receiving each intervention must be strictly between 0 and 1:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+0 &lt; P(A = 1 \mid X = x) &lt; 1, \quad \forall x
+\]</div>
+<ol>
+<li><strong>Conditional Exchangeability / Unconfoundedness</strong>: After controlling for the observable covariates <span class="arithmatex">\(X\)</span>, the intervention assignment is independent of the potential outcomes:</li>
+</ol>
+<div class="arithmatex">\[
+(Y^1, Y^0) \perp \! \! \! \perp A \mid X
+\]</div>
+</div>
+<h3 id="31-causal-identification-theorem-via-stratification">3.1 Causal Identification Theorem via Stratification</h3>
+<div class="admonition note">
+<p class="admonition-title">Theorem 3.1 (Causal Identification Theorem / Adjustment Formula)</p>
+<p>Under the assumptions of consistency, positivity, and conditional exchangeability, the population average potential outcome <span class="arithmatex">\(\mathbb{E}[Y^a]\)</span> (for <span class="arithmatex">\(a \in \{0, 1\}\)</span>) is fully identifiable, and its formula in terms of the observable data distribution is:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \mathbb{E}_X \left[ \mathbb{E}[Y \mid A = a, X] \right] = \int \mathbb{E}[Y \mid A = a, X = x] dF_X(x)
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof: Mathematical Derivation of the Causal Identification Theorem</summary>
+<p>By the law of total expectation, first condition on the covariates <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \mathbb{E}_X \left[ \mathbb{E}[Y^a \mid X] \right]
+\]</div>
+<p>Next, use the third assumption, <strong>conditional exchangeability</strong> <span class="arithmatex">\((Y^1, Y^0) \perp \! \! \! \perp A \mid X\)</span>. This implies that, given <span class="arithmatex">\(X\)</span>, the expectation of the potential outcome <span class="arithmatex">\(Y^a\)</span> is independent of the actual treatment status <span class="arithmatex">\(A=a\)</span>. Therefore, we can condition on <span class="arithmatex">\(A=a\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a \mid X] = \mathbb{E}[Y^a \mid A = a, X]
+\]</div>
+<p>Then, apply the <strong>consistency</strong> assumption: when the treatment is fixed to <span class="arithmatex">\(A=a\)</span>, the potential outcome <span class="arithmatex">\(Y^a\)</span> can be replaced by the actually observed outcome <span class="arithmatex">\(Y\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a \mid A = a, X] = \mathbb{E}[Y \mid A = a, X]
+\]</div>
+<p>Substituting back into the outer expectation yields:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \mathbb{E}_X \left[ \mathbb{E}[Y \mid A = a, X] \right]
+\]</div>
+<p>This completes the proof. All probability distributions and conditional expectations on the right-hand side can be directly estimated from the observed dataset <span class="arithmatex">\(\mathcal{D}_n = \{(X_i, A_i, Y_i)\}_{i=1}^n\)</span>.</p>
+</details>
+<hr />
+<h2 id="4-propensity-score">4. Propensity Score</h2>
+<p>When the dimension <span class="arithmatex">\(p\)</span> of the covariates <span class="arithmatex">\(X\)</span> is high, directly performing multidimensional integration or nonparametric stratification based on the theorem above encounters the severe "curse of dimensionality". To address this computational difficulty, the propensity score is introduced as a one-dimensional dimension-reduction tool.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1 (Propensity Score)</p>
+<p>The propensity score is defined as the conditional probability of receiving the intervention (<span class="arithmatex">\(A=1\)</span>) given the individual's characteristics <span class="arithmatex">\(X\)</span>, denoted <span class="arithmatex">\(e(X)\)</span>:</p>
+<div class="arithmatex">\[
+e(X) = P(A = 1 \mid X)
+\]</div>
+<p>Typically, the propensity score can be estimated by fitting a logistic regression model to the observed data.</p>
+</div>
+<h3 id="41-balancing-score-property">4.1 Balancing Score Property</h3>
+<p>The propensity score is a remarkably effective dimension-reduction functional that naturally possesses the following "balancing" property.</p>
+<div class="admonition note">
+<p class="admonition-title">Theorem 4.1 (Balancing Score Theorem)</p>
+<p>Given the propensity score <span class="arithmatex">\(e(X)\)</span>, the original multidimensional features <span class="arithmatex">\(X\)</span> are conditionally independent of the treatment assignment <span class="arithmatex">\(A\)</span>:</p>
+<div class="arithmatex">\[
+X \perp \! \! \! \perp A \mid e(X)
+\]</div>
+<p>This means that within subpopulations with the same propensity score, the feature distributions of the treated and control groups are statistically balanced, achieving an effect similar to that of a randomized controlled trial (RCT).</p>
+</div>
+<hr />
+<h2 id="5-inverse-probability-treatment-weighting-iptw">5. Inverse Probability Treatment Weighting (IPTW)</h2>
+<p>Inverse Probability Treatment Weighting (IPTW) is a classic nonparametric/semiparametric estimation method that uses the propensity score to correct for selection bias due to confounders. Its core idea is to assign each sample a weight inversely proportional to the probability of receiving the treatment it actually received, thereby creating a virtual "pseudo-population" in which the confounders are no longer associated with the treatment variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Theorem 5.1 (IPTW Core Equivalence Theorem)</p>
+<p>If consistency, positivity, and conditional exchangeability hold, then the average potential outcomes <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span> and <span class="arithmatex">\(\mathbb{E}[Y^0]\)</span> can be exactly computed via the following inverse-probability-weighted observable expectations:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^1] = \mathbb{E}\left[ \frac{A Y}{e(X)} \right]
+\]</div>
+<div class="arithmatex">\[
+\mathbb{E}[Y^0] = \mathbb{E}\left[ \frac{(1 - A) Y}{1 - e(X)} \right]
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof: Rigorous Mathematical Derivation of the IPTW Identity</summary>
+<p>We prove the identity for the treated group <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span>. Expand the weighted observable expectation using the law of total expectation, conditioning on <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}_X \left[ \mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] \right]
+\]</div>
+<p>Since the denominator <span class="arithmatex">\(e(X)\)</span> is a deterministic function of <span class="arithmatex">\(X\)</span>, it can be treated as a constant factor inside the conditional expectation:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] = \frac{1}{e(X)} \mathbb{E}[A Y \mid X]
+\]</div>
+<p>Apply the consistency assumption and expand <span class="arithmatex">\(Y\)</span> as <span class="arithmatex">\(A Y^1 + (1 - A) Y^0\)</span>. When multiplied by <span class="arithmatex">\(A\)</span>, note that <span class="arithmatex">\(A(1-A)=0\)</span> and <span class="arithmatex">\(A^2 = A\)</span> (since <span class="arithmatex">\(A \in \{0, 1\}\)</span>). Hence:</p>
+<div class="arithmatex">\[
+A Y = A (A Y^1 + (1 - A) Y^0) = A^2 Y^1 + A(1 - A) Y^0 = A Y^1
+\]</div>
+<p>Substituting back into the conditional expectation:</p>
+<div class="arithmatex">\[
+\frac{1}{e(X)} \mathbb{E}[A Y \mid X] = \frac{1}{e(X)} \mathbb{E}[A Y^1 \mid X]
+\]</div>
+<p>Now, crucially, use the <strong>conditional exchangeability</strong> assumption <span class="arithmatex">\(Y^1 \perp \! \! \! \perp A \mid X\)</span>. Under conditional independence, the expectation of a product equals the product of expectations:</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y^1 \mid X] = \mathbb{E}[A \mid X] \cdot \mathbb{E}[Y^1 \mid X]
+\]</div>
+<p>By the definition of the propensity score, <span class="arithmatex">\(\mathbb{E}[A \mid X] = P(A = 1 \mid X) = e(X)\)</span>. Substituting:</p>
+<div class="arithmatex">\[
+\frac{1}{e(X)} \mathbb{E}[A Y^1 \mid X] = \frac{1}{e(X)} \cdot e(X) \cdot \mathbb{E}[Y^1 \mid X] = \mathbb{E}[Y^1 \mid X]
+\]</div>
+<p>Finally, substituting the simplified inner conditional expectation back into the outer expectation over <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}_X \left[ \mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] \right] = \mathbb{E}_X \left[ \mathbb{E}[Y^1 \mid X] \right] = \mathbb{E}[Y^1]
+\]</div>
+<p>This completes the proof. The derivation for the control group <span class="arithmatex">\(\mathbb{E}\left[ \frac{(1 - A) Y}{1 - e(X)} \right] = \mathbb{E}[Y^0]\)</span> follows analogously.</p>
+</details>
+<p>Through this identity, the population average treatment effect ATE can be uniformly written in the IPTW framework as:</p>
+<div class="arithmatex">\[
+\text{ATE} = \mathbb{E}\left[ \frac{A Y}{e(X)} - \frac{(1 - A) Y}{1 - e(X)} \right]
+\]</div>
+<p>In practical sample calculations, we often use the corresponding empirical sample mean form (Horvitz-Thompson estimator):</p>
+<div class="arithmatex">\[
+\widehat{\text{ATE}}_{\text{IPTW}} = \frac{1}{n} \sum_{i=1}^n \frac{A_i Y_i}{\hat{e}(X_i)} - \frac{1}{n} \sum_{i=1}^n \frac{(1 - A_i) Y_i}{1 - \hat{e}(X_i)}
+\]</div>
+<h2 id="6-dual-representation-of-the-iptw-estimator">6. Dual Representation of the IPTW Estimator</h2>
+<p>In practice, we can also understand and compute IPTW using conditional expectations.</p>
+<div class="admonition note">
+<p class="admonition-title">Theorem 6.1 (Smoothing Property of IPTW)</p>
+<p>Let <span class="arithmatex">\(Y\)</span> be the observed outcome, <span class="arithmatex">\(A\)</span> the binary treatment, and <span class="arithmatex">\(e(X) = P(A=1 \mid X)\)</span> the propensity score. Then the two parts of the IPTW operator satisfy the following dual integral representations:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}\left[ \frac{A \cdot \mathbb{E}[Y \mid A=1, X]}{e(X)} \right]
+\]</div>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{(1 - A) Y}{1 - e(X)} \right] = \mathbb{E}\left[ \frac{(1 - A) \cdot \mathbb{E}[Y \mid A=0, X]}{1 - e(X)} \right]
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof: Derivation of the IPTW Dual Equality</summary>
+<p>Using the law of iterated expectations, condition on <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}_X \left[ \mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] \right] = \mathbb{E}_X \left[ \frac{1}{e(X)} \mathbb{E}[A Y \mid X] \right]
+\]</div>
+<p>Expand <span class="arithmatex">\(\mathbb{E}[A Y \mid X]\)</span> using the law of total expectation over <span class="arithmatex">\(A \in \{0,1\}\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y \mid X] = P(A=1 \mid X) \cdot \mathbb{E}[A Y \mid A=1, X] + P(A=0 \mid X) \cdot \mathbb{E}[A Y \mid A=0, X]
+\]</div>
+<p>When <span class="arithmatex">\(A=1\)</span>, <span class="arithmatex">\(A Y = Y\)</span>; when <span class="arithmatex">\(A=0\)</span>, <span class="arithmatex">\(A Y = 0\)</span>. Hence the second term vanishes. Substituting <span class="arithmatex">\(P(A=1 \mid X) = e(X)\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y \mid X] = e(X) \cdot \mathbb{E}[Y \mid A=1, X]
+\]</div>
+<p>Now construct the same quantity from the expression on the right. Since <span class="arithmatex">\(A\)</span> is binary and <span class="arithmatex">\(\mathbb{E}[Y \mid A=1, X]\)</span> is a deterministic function of <span class="arithmatex">\(X\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[A \cdot \mathbb{E}[Y \mid A=1, X] \mid X] = \mathbb{E}[Y \mid A=1, X] \cdot \mathbb{E}[A \mid X] = \mathbb{E}[Y \mid A=1, X] \cdot e(X)
+\]</div>
+<p>Thus:</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y \mid X] = \mathbb{E}[A \cdot \mathbb{E}[Y \mid A=1, X] \mid X]
+\]</div>
+<p>Substituting this identity into the outer expectation:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}\left[ \frac{A \cdot \mathbb{E}[Y \mid A=1, X]}{e(X)} \right]
+\]</div>
+<p>This completes the proof.</p>
+</details>
+<hr />
+<h2 id="7-standardization-g-formula">7. Standardization / G-Formula</h2>
+<p>Standardization (also called conditional regression extrapolation) is another fundamental method for identifying the ATE. It directly models the regression surface <span class="arithmatex">\(m(a, x) = \mathbb{E}[Y \mid A=a, X=x]\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 7.1 (Standardization Estimator)</p>
+<p>Fitting the observed regression model <span class="arithmatex">\(\hat{m}(a, x)\)</span>, the standardization estimator of the population average treatment effect is:</p>
+<div class="arithmatex">\[
+\widehat{\text{ATE}}_{\text{Std}} = \frac{1}{n} \sum_{i=1}^n \hat{m}(1, X_i) - \frac{1}{n} \sum_{i=1}^n \hat{m}(0, X_i)
+\]</div>
+</div>
+<ul>
+<li><strong>Philosophical Comparison of IPTW and Standardization</strong>:</li>
+<li>IPTW focuses on the treatment assignment model (Propensity Score), aiming to rebalance the feature distributions between the two groups.</li>
+<li>Standardization focuses on the outcome model, directly extrapolating conditional expectations to estimate counterfactuals.</li>
+</ul>
+<hr />
+<h2 id="8-marginal-structural-models-msm">8. Marginal Structural Models (MSM)</h2>
+<p>When dealing with continuous treatments, time-varying multiple interventions, or when one wishes to impose a parametric regression structure on potential outcomes, plain IPTW is not directly applicable. Marginal Structural Models (MSM) are introduced for such scenarios.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 8.1 (Marginal Structural Model)</p>
+<p>A marginal structural model is a model directly on the <strong>marginal expectation of potential outcomes</strong>. For example, for binary or continuous treatment <span class="arithmatex">\(A\)</span>, a classic linear MSM takes the form:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \beta_0 + \beta_1 a
+\]</div>
+<p>Here, the parameter <span class="arithmatex">\(\beta_1\)</span> has a purely causal interpretation: <span class="arithmatex">\(\beta_1 = \mathbb{E}[Y^1] - \mathbb{E}[Y^0] = \text{ATE}\)</span>.</p>
+</div>
+<h3 id="81-weighted-least-squares-estimation-in-a-pseudo-population">8.1 Weighted Least Squares Estimation in a Pseudo-Population</h3>
+<p>In observational data, due to confounding, directly fitting <span class="arithmatex">\(Y = \beta_0 + \beta_1 A + \epsilon\)</span> on the original data yields a biased <span class="arithmatex">\(\beta_1\)</span>. MSM achieves unbiased estimation by solving the following <strong>Weighted Least Squares (WLS)</strong> problem:</p>
+<div class="arithmatex">\[
+\min_{\beta_0, \beta_1} \sum_{i=1}^n W_i \left( Y_i - \beta_0 - \beta_1 A_i \right)^2
+\]</div>
+<p>where the sample weights are typically the <strong>stabilized weights</strong>:</p>
+<div class="arithmatex">\[
+W_i = \frac{P(A = A_i)}{\hat{e}(X_i)^{A_i} (1 - \hat{e}(X_i))^{1 - A_i}}
+\]</div>
+<hr />
+<h2 id="9-doubly-robust-estimation">9. Doubly Robust Estimation</h2>
+<p>To combine the advantages of both the propensity score model and the outcome regression model, statisticians have developed the Doubly Robust (DR) estimator. The key property is that if <strong>at least one of</strong> the propensity score model and the outcome regression model is correctly specified, the estimator is unbiased.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 9.1 (Doubly Robust Estimator Expression)</p>
+<p>The doubly robust estimator for <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span> is given by:</p>
+<div class="arithmatex">\[
+\hat{\mu}_{\text{DR}}^1 = \frac{1}{n} \sum_{i=1}^n \left[ \frac{A_i Y_i}{\hat{e}(X_i)} - \frac{A_i - \hat{e}(X_i)}{\hat{e}(X_i)} \hat{m}(1, X_i) \right]
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Theorem 9.1 (Doubly Robustness Theorem)</p>
+<p>Under consistency, positivity, and conditional exchangeability, if either the propensity score model <span class="arithmatex">\(e(X)\)</span> is correctly specified <strong>or</strong> the outcome regression model <span class="arithmatex">\(m(1, X)\)</span> is correctly specified, then <span class="arithmatex">\(\hat{\mu}_{\text{DR}}^1\)</span> is asymptotically unbiased, i.e., <span class="arithmatex">\(\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}[Y^1]\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof: Dual-Model Robustness of the Doubly Robust Estimator</summary>
+<p>Rewrite the DR estimator in a more intuitive algebraic form:</p>
+<div class="arithmatex">\[
+\hat{\mu}_{\text{DR}}^1 = \frac{1}{n} \sum_{i=1}^n \left[ \hat{m}(1, X_i) + \frac{A_i (Y_i - \hat{m}(1, X_i))}{\hat{e}(X_i)} \right]
+\]</div>
+<p>We consider two worst-case scenarios and show that in each case the expectation converges to <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span>.</p>
+<p><strong>Case 1: The outcome regression model <span class="arithmatex">\(\hat{m}\)</span> is correctly specified, but the propensity score model <span class="arithmatex">\(\hat{e}\)</span> is misspecified.</strong></p>
+<p>Since <span class="arithmatex">\(\hat{m}(1, X) = \mathbb{E}[Y \mid A=1, X]\)</span> holds exactly, take the conditional expectation of the second term given <span class="arithmatex">\((A, X)\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A (Y - \hat{m}(1, X))}{\hat{e}(X)} \;\middle|\; A, X \right] = \frac{A}{\hat{e}(X)} \mathbb{E}[Y - \hat{m}(1, X) \mid A, X]
+\]</div>
+<p>When <span class="arithmatex">\(A=1\)</span>:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y - \hat{m}(1, X) \mid A=1, X] = \mathbb{E}[Y \mid A=1, X] - \hat{m}(1, X) = 0
+\]</div>
+<p>When <span class="arithmatex">\(A=0\)</span>, the factor <span class="arithmatex">\(A=0\)</span> makes the whole term zero.</p>
+<p>Therefore, regardless of the (wrong) <span class="arithmatex">\(\hat{e}(X)\)</span>, the expectation of the second term is always zero. The overall expectation becomes:</p>
+<div class="arithmatex">\[
+\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}_X [\hat{m}(1, X)] + 0 = \mathbb{E}_X [ \mathbb{E}[Y^1 \mid X] ] = \mathbb{E}[Y^1]
+\]</div>
+<p><strong>Case 2: The propensity score model <span class="arithmatex">\(\hat{e}\)</span> is correctly specified, but the outcome regression model <span class="arithmatex">\(\hat{m}\)</span> is misspecified.</strong></p>
+<p>Here <span class="arithmatex">\(\hat{e}(X) = e(X) = P(A=1 \mid X)\)</span>. Expand the expectation of the DR estimator:</p>
+<div class="arithmatex">\[
+\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}\left[ \hat{m}(1, X) \right] + \mathbb{E}\left[ \frac{A Y}{e(X)} \right] - \mathbb{E}\left[ \frac{A \hat{m}(1, X)}{e(X)} \right]
+\]</div>
+<p>Using the <strong>dual representation theorem of IPTW</strong> from Section 6, the last term can be transformed:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A \hat{m}(1, X)}{e(X)} \right] = \mathbb{E}_X \left[ \frac{\mathbb{E}[A \mid X] \hat{m}(1, X)}{e(X)} \right] = \mathbb{E}_X \left[ \frac{e(X) \hat{m}(1, X)}{e(X)} \right] = \mathbb{E}\left[ \hat{m}(1, X) \right]
+\]</div>
+<p>Substituting back:</p>
+<div class="arithmatex">\[
+\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}\left[ \hat{m}(1, X) \right] + \mathbb{E}\left[ \frac{A Y}{e(X)} \right] - \mathbb{E}\left[ \hat{m}(1, X) \right] = \mathbb{E}\left[ \frac{A Y}{e(X)} \right]
+\]</div>
+<p>Since the propensity score model is correct, the IPTW identification theorem ensures that this equals <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span>.</p>
+<p>Combining both cases proves double robustness.</p>
+</details>
+<hr />
+<h2 id="10-g-estimation-of-structural-nested-models">10. G-Estimation (of Structural Nested Models)</h2>
+<p>G-estimation is a more advanced semi-parametric causal inference technique for Structural Nested Models (SNMs). Its core idea is to find the causal parameter such that the counterfactual outcome is independent of the treatment assignment.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.1 (Basic Setup of Structural Nested Model)</p>
+<p>Consider a parametric nested form for the conditional average causal effect CATE:</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^1 - Y^0 \mid A=1, X] = \psi \cdot X
+\]</div>
+<p>This implies that the parameter <span class="arithmatex">\(\psi\)</span> captures the moderation (interaction) effect of covariates <span class="arithmatex">\(X\)</span> on the causal effect.</p>
+</div>
+<h3 id="101-estimating-equation-under-the-zero-causal-association">10.1 Estimating Equation under the Zero Causal Association</h3>
+<p>To solve for the unknown causal parameter <span class="arithmatex">\(\psi\)</span>, we use the conditional exchangeability assumption: <span class="arithmatex">\(Y^0 \perp \! \! \! \perp A \mid X\)</span>. This means that the counterfactual zero-state outcome <span class="arithmatex">\(Y^0\)</span> should have no predictive power for the treatment assignment <span class="arithmatex">\(A\)</span> after controlling for <span class="arithmatex">\(X\)</span>.</p>
+<p>We construct for each individual an estimate of their counterfactual outcome:</p>
+<div class="arithmatex">\[
+H_i(\psi) = Y_i - A_i \cdot (\psi \cdot X_i)
+\]</div>
+<p>Under the unconfoundedness assumption, when <span class="arithmatex">\(\psi\)</span> takes its true value, the following orthogonality (estimating) equation must hold:</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ (A - e(X)) \cdot H(\psi) \;\middle|\; X \right] = 0
+\]</div>
+<p>By forming the corresponding empirical estimating equation on the sample data and setting it to zero:</p>
+<div class="arithmatex">\[
+\frac{1}{n} \sum_{i=1}^n (A_i - \hat{e}(X_i)) \cdot \left( Y_i - A_i \psi X_i \right) = 0
+\]</div>
+<p>From this, we can directly solve for an unbiased estimate of the causal parameter <span class="arithmatex">\(\psi\)</span> via a closed-form expression (or by fitting generalized estimating equations, GEE).</p>
+<hr />
+<h2 id="11-causal-diagrams">11. Causal Diagrams</h2>
+<p>Sections 1–10 mainly used the potential outcomes framework to define causal quantities, explain identification assumptions, and present estimation methods such as standardization, IPTW, doubly robust estimation, and G-estimation. Starting from this section, we introduce another equally important language: <strong>causal diagrams</strong>. The role of causal diagrams is not to replace potential outcomes, but to use graph structures to clearly express direct causal relationships between variables, confounding paths, collider structures, and the set of covariates that should be adjusted.</p>
+<div class="admonition info">
+<p class="admonition-title">Main Thread for the Latter Part of This Chapter</p>
+<p>The core questions addressed by causal diagrams are:</p>
+<ol>
+<li>How to use a directed graph to represent the researcher's scientific assumptions about the causal structure;</li>
+<li>How to read statistical independence and conditional independence from the graph;</li>
+<li>How to determine whether confounding exists between the exposure and outcome variables;</li>
+<li>How to use <strong>d-separation</strong> and the <strong>backdoor path criterion</strong> to find an adjustment set sufficient to control confounding.</li>
+</ol>
+</div>
+<h3 id="111-the-antihistamine-and-asthma-example">11.1 The Antihistamine and Asthma Example</h3>
+<p>Consider a hypothetical study on the relationship between <strong>antihistamine use</strong> and <strong>asthma occurrence</strong> among first-grade children. Define the following variables:</p>
+<p>Let air pollution level be denoted <span class="arithmatex">\(A\)</span>, sex denote <span class="arithmatex">\(B\)</span>, bronchial reactivity denote <span class="arithmatex">\(C\)</span>, asthma denote <span class="arithmatex">\(D\)</span>, and antihistamine use denote <span class="arithmatex">\(E\)</span>. Suppose the researcher has the following background knowledge:</p>
+<ol>
+<li>Air pollution level <span class="arithmatex">\(A\)</span> and sex <span class="arithmatex">\(B\)</span> are independent;</li>
+<li>The effect of sex <span class="arithmatex">\(B\)</span> on antihistamine use <span class="arithmatex">\(E\)</span> is entirely mediated through bronchial reactivity <span class="arithmatex">\(C\)</span>, but <span class="arithmatex">\(B\)</span> directly affects asthma risk <span class="arithmatex">\(D\)</span>;</li>
+<li>Industrial air pollution <span class="arithmatex">\(A\)</span> leads to asthma only through antihistamine use <span class="arithmatex">\(E\)</span> and bronchial reactivity <span class="arithmatex">\(C\)</span>; there is no direct <span class="arithmatex">\(A \to D\)</span> effect;</li>
+<li>Apart from sex <span class="arithmatex">\(B\)</span>, bronchial reactivity <span class="arithmatex">\(C\)</span>, and air pollution <span class="arithmatex">\(A\)</span>, there are no other important confounders.</li>
+</ol>
+<p>These assumptions can be represented by the following directed graph:</p>
+<pre class="mermaid"><code>graph TD
+    A["A: air pollution"] --&gt; C["C: bronchial reactivity"]
+    B["B: sex"] --&gt; C
+    A --&gt; E["E: antihistamine"]
+    C --&gt; E
+    B --&gt; D["D: asthma"]
+    C --&gt; D
+    E --&gt; D</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Definition 11.1 (Basic Objects in a Graph)</p>
+<p>In a causal graph:</p>
+<ul>
+<li>The points representing variables are called <strong>vertices</strong> or <strong>nodes</strong>;</li>
+<li>The lines or arrows connecting two variables are called <strong>edges</strong> or <strong>arcs</strong>;</li>
+<li>An arrow <span class="arithmatex">\(X \to Y\)</span> denotes a <strong>direct causal link</strong> from cause to effect, meaning that this part of the influence of <span class="arithmatex">\(X\)</span> on <span class="arithmatex">\(Y\)</span> does not pass through other variables in the graph.</li>
+</ul>
+</div>
+<p>For example, <span class="arithmatex">\(A \to C\)</span> indicates that air pollution <span class="arithmatex">\(A\)</span> has a direct causal effect on bronchial reactivity <span class="arithmatex">\(C\)</span>; the absence of an arrow between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(D\)</span> expresses "there is no direct causal effect of <span class="arithmatex">\(A\)</span> on <span class="arithmatex">\(D\)</span>", meaning that the effect of pollution on asthma occurs through intermediate variables such as <span class="arithmatex">\(C\)</span> or <span class="arithmatex">\(E\)</span>.</p>
+<h3 id="112-paths-ancestors-parents-and-children">11.2 Paths, Ancestors, Parents, and Children</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 11.2 (Path and Interception)</p>
+<p>A sequence of nodes connected by edges is called a <strong>path</strong>. If an intermediate node lies on that path, it is said to <strong>intercept</strong> the path.</p>
+<p>For example, <span class="arithmatex">\(C\)</span> intercepts the path</p>
+<div class="arithmatex">\[
+A - C - D
+\]</div>
+<p>as well as the path</p>
+<div class="arithmatex">\[
+E - C - D.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 11.3 (Ancestors, Descendants, Parents, and Children)</p>
+<p>If there exists a directed path from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>, then <span class="arithmatex">\(X\)</span> is called an <strong>ancestor</strong> (or cause) of <span class="arithmatex">\(Y\)</span>, and <span class="arithmatex">\(Y\)</span> is called a <strong>descendant</strong> of <span class="arithmatex">\(X\)</span>.</p>
+<p>If there exists a single directed edge</p>
+<div class="arithmatex">\[
+X \to Y,
+\]</div>
+<p>then <span class="arithmatex">\(X\)</span> is called a <strong>parent</strong> of <span class="arithmatex">\(Y\)</span>, and <span class="arithmatex">\(Y\)</span> is called a <strong>child</strong> of <span class="arithmatex">\(X\)</span>.</p>
+</div>
+<p>In the asthma DAG above, <span class="arithmatex">\(A,B,C\)</span> are all ancestors of <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span>; <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span> are descendants of <span class="arithmatex">\(A,B,C\)</span>. <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span> are parents of <span class="arithmatex">\(E\)</span>; <span class="arithmatex">\(E\)</span> is a child of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span>. <span class="arithmatex">\(C\)</span> and <span class="arithmatex">\(E\)</span> are parents of <span class="arithmatex">\(D\)</span>; <span class="arithmatex">\(D\)</span> is a child of <span class="arithmatex">\(C\)</span> and <span class="arithmatex">\(E\)</span>.</p>
+<h3 id="113-backdoor-paths-colliders-and-blocking-paths">11.3 Backdoor Paths, Colliders, and Blocking Paths</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 11.4 (Backdoor Path)</p>
+<p>A path connecting <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> that begins with an arrow pointing into <span class="arithmatex">\(X\)</span> (i.e., <span class="arithmatex">\(X\)</span> is not the cause at the start of that path) is called a <strong>backdoor path</strong> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>.</p>
+<p>In other words, if we are interested in the causal effect of <span class="arithmatex">\(X\)</span> on <span class="arithmatex">\(Y\)</span>, then a path that starts with</p>
+<div class="arithmatex">\[
+X \leftarrow \cdots \cdots Y
+\]</div>
+<p>is a backdoor path. It is not a causal path emanating from <span class="arithmatex">\(X\)</span>; it may reflect common causes of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>, thereby introducing confounding.</p>
+</div>
+<p>In the diagram above, if we are interested in the causal effect of antihistamine <span class="arithmatex">\(E\)</span> on asthma <span class="arithmatex">\(D\)</span>, besides the direct path</p>
+<div class="arithmatex">\[
+E \to D,
+\]</div>
+<p>all other paths from <span class="arithmatex">\(E\)</span> to <span class="arithmatex">\(D\)</span> are backdoor paths, for example:</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow C \leftarrow B \to D,
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 11.5 (Collider)</p>
+<p>If a path enters a node <span class="arithmatex">\(X\)</span> via an arrowhead and leaves that node also via an arrowhead, i.e., the local structure is</p>
+<div class="arithmatex">\[
+U \to X \leftarrow V,
+\]</div>
+<p>then the path is said to <strong>collide</strong> at <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(X\)</span> is called a <strong>collider</strong> on that path.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 11.6 (Blocked and Unblocked Paths)</p>
+<p>When no variables are conditioned on, a path that contains at least one collider is said to be <strong>blocked</strong>; a path that contains no colliders is said to be <strong>unblocked</strong>.</p>
+</div>
+<p>In the asthma DAG:</p>
+<ul>
+<li>The backdoor path</li>
+</ul>
+<p><span class="arithmatex">\(E \leftarrow A \to C \leftarrow B \to D\)</span></p>
+<p>has a collider at <span class="arithmatex">\(C\)</span> (<span class="arithmatex">\(A \to C \leftarrow B\)</span>), so this path is blocked;</p>
+<ul>
+<li>The backdoor path</li>
+</ul>
+<p><span class="arithmatex">\(E \leftarrow A \to C \to D\)</span></p>
+<p>contains no collider, so it is unblocked;</p>
+<ul>
+<li>The backdoor path</li>
+</ul>
+<p><span class="arithmatex">\(E \leftarrow C \to D\)</span></p>
+<p>contains no collider, so it is also unblocked.</p>
+<hr />
+<h2 id="12-directed-acyclic-graph-dag">12. Directed Acyclic Graph (DAG)</h2>
+<h3 id="121-definition-of-dag">12.1 Definition of DAG</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 12.1 (Directed Acyclic Graph, DAG)</p>
+<p>A graph is called a <strong>Directed Acyclic Graph (DAG)</strong> if:</p>
+<ol>
+<li><strong>Directed</strong>: all edges are directed arrows;</li>
+<li><strong>Acyclic</strong>: there is no closed loop formed by directed paths.</li>
+</ol>
+<p>In a causal context, a directed path</p>
+<div class="arithmatex">\[
+X \to \cdots \to Y
+\]</div>
+<p>represents a causal path from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 12.2 (Causal DAG)</p>
+<p>A DAG is called a <strong>causal DAG</strong> if all common causes of any pair of variables in the graph are included in the graph.</p>
+<p>Note: The researcher does not need to include all real-world variables in the DAG; only those relevant to the research question and important common causes between variable pairs need be included.</p>
+</div>
+<h3 id="122-nonparametric-nature-and-causal-implications-of-dags">12.2 Nonparametric Nature and Causal Implications of DAGs</h3>
+<p>A DAG itself is <strong>nonparametric</strong>. It does not specify functional forms between variables, nor does it assume linear models, normality, or homoscedasticity. It encodes only the following structural information:</p>
+<ol>
+<li>Which pairs of variables have a direct causal connection;</li>
+<li>Which pairs of variables do not have a direct causal connection;</li>
+<li>Which paths may generate statistical association;</li>
+<li>Which paths may generate confounding.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Proposition 12.1 (Directed Paths and Causal Effects)</p>
+<p>If there is no directed path from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span> in the graph, then, under the structural assumptions of the causal DAG, <span class="arithmatex">\(X\)</span> has no causal effect on <span class="arithmatex">\(Y\)</span>.</p>
+<p>For example, if there is no directed path <span class="arithmatex">\(A \to \cdots \to B\)</span> between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, then <span class="arithmatex">\(A\)</span> has no causal effect on <span class="arithmatex">\(B\)</span>. Furthermore, if there is no path <span class="arithmatex">\(A \to \cdots \to B \to \cdots \to D\)</span>, then <span class="arithmatex">\(A\)</span> cannot have a causal effect on <span class="arithmatex">\(D\)</span> through <span class="arithmatex">\(B\)</span>.</p>
+</div>
+<h3 id="123-statistical-independence-encoded-in-a-dag">12.3 Statistical Independence Encoded in a DAG</h3>
+<p>A graph not only encodes causal structure but also statistical independencies between variables. Intuitively, if there is no unblocked path between two variables, they should be statistically independent.</p>
+<p>In the asthma DAG, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> have no edge between them, and the path</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B
+\]</div>
+<p>has a collider at <span class="arithmatex">\(C\)</span>, so it is marginally blocked. Therefore, the DAG encodes</p>
+<div class="arithmatex">\[
+A \perp\!\!\!\perp B.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Proposition 12.2 (Two Main Sources of Statistical Dependence between Variables)</p>
+<p>In a causal DAG, the statistical dependence between two variables typically arises from only two reasons:</p>
+<ol>
+<li>They share a common cause, i.e., there is a confounding path;</li>
+<li>One variable is a cause of the other, or there is a directed causal path between them.</li>
+</ol>
+</div>
+<h3 id="124-markov-factorization-formula">12.4 Markov Factorization Formula</h3>
+<p>One of the most important mathematical properties of a DAG is that it provides a factorization of the joint distribution. Let <span class="arithmatex">\(pa(V)\)</span> denote the set of parents of node <span class="arithmatex">\(V\)</span>. In a DAG, the joint density can be factorized as the product of the conditional density of each node given its parents.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 12.1 (Markov Factorization for a DAG)</p>
+<p>Let the set of variables be <span class="arithmatex">\(V_1,\dots,V_p\)</span>, and let their causal structure be described by a DAG <span class="arithmatex">\(G\)</span>. If the joint distribution satisfies the Markov property with respect to <span class="arithmatex">\(G\)</span>, then:</p>
+<div class="arithmatex">\[
+f(v_1,\dots,v_p)=\prod_{j=1}^p f\bigl(v_j\mid pa(v_j)\bigr).
+\]</div>
+</div>
+<p>For the asthma example, the parent sets are:</p>
+<div class="arithmatex">\[
+pa(A)=\varnothing,\quad pa(B)=\varnothing,
+\]</div>
+<div class="arithmatex">\[
+pa(C)=\{A,B\},\quad pa(E)=\{A,C\},\quad pa(D)=\{B,C,E\}.
+\]</div>
+<p>Thus the joint density factorizes as</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(A,E,C,B,D)
+&amp;= f(D\mid B,C,E) f(C\mid A,B) f(E\mid A,C) f(A) f(B) \\
+&amp;= f(D\mid pa(D)) f(C\mid pa(C)) f(E\mid pa(E)) f(A\mid pa(A)) f(B\mid pa(B)).
+\end{aligned}
+\]</div>
+<details class="proof">
+<summary>Proof: Markov Factorization for the Asthma DAG</summary>
+<p>For any five variables, the chain rule of probability gives</p>
+<div class="arithmatex">\[
+f(A,E,C,B,D)
+= f(D\mid A,E,C,B) f(E\mid A,C,B) f(C\mid A,B) f(A\mid B) f(B).
+\]</div>
+<p>The local Markov property for a DAG states: each node, given its parents, is conditionally independent of its non-descendants.</p>
+<p>For <span class="arithmatex">\(D\)</span>, its parents are <span class="arithmatex">\(B,C,E\)</span>. Given <span class="arithmatex">\(B,C,E\)</span>, <span class="arithmatex">\(D\)</span> does not require additional conditioning on <span class="arithmatex">\(A\)</span>:</p>
+<div class="arithmatex">\[
+f(D\mid A,E,C,B)=f(D\mid B,C,E).
+\]</div>
+<p>For <span class="arithmatex">\(E\)</span>, its parents are <span class="arithmatex">\(A,C\)</span>. Given <span class="arithmatex">\(A,C\)</span>, <span class="arithmatex">\(E\)</span> is conditionally independent of <span class="arithmatex">\(B\)</span>:</p>
+<div class="arithmatex">\[
+f(E\mid A,C,B)=f(E\mid A,C).
+\]</div>
+<p>For <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, they have no parents and are marginally independent, so</p>
+<div class="arithmatex">\[
+f(A\mid B)=f(A).
+\]</div>
+<p>Substituting back into the chain-rule factorization gives</p>
+<div class="arithmatex">\[
+f(A,E,C,B,D)
+= f(D\mid B,C,E) f(E\mid A,C) f(C\mid A,B) f(A) f(B).
+\]</div>
+<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="125-two-types-of-unblocked-paths-in-a-dag">12.5 Two Types of Unblocked Paths in a DAG</h3>
+<p>In a DAG, there are two main types of unblocked paths between two variables:</p>
+<ol>
+<li><strong>Directed path</strong>: e.g.</li>
+</ol>
+<p><span class="arithmatex">\(E \to D.\)</span></p>
+<p>This type of path implies that the association is at least partially due to a causal effect; the outcome is a descendant of the cause.</p>
+<ol>
+<li><strong>Backdoor path through a shared ancestor</strong>: e.g.</li>
+</ol>
+<p><span class="arithmatex">\(E \leftarrow C \to D.\)</span></p>
+<p>This type of path implies that the association is at least partially due to confounding.</p>
+<p>Of course, both types can exist simultaneously. For example, in the asthma DAG, between <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span> there is a direct causal path</p>
+<div class="arithmatex">\[
+E \to D,
+\]</div>
+<p>as well as several backdoor paths, such as</p>
+<div class="arithmatex">\[
+E \leftarrow C \to D,
+\quad
+E \leftarrow A \to C \to D,
+\quad
+E \leftarrow C \leftarrow B \to D.
+\]</div>
+<h3 id="126-relationship-between-blocking-paths-and-marginal-association">12.6 Relationship between Blocking Paths and Marginal Association</h3>
+<p>A key nuance: the existence of an unblocked path means that two variables <strong>can be associated</strong>, but does not guarantee that they are necessarily associated. Multiple paths may cancel each other out numerically. For instance, the three backdoor paths and the direct path between <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span> could numerically cancel, leading to a marginal association that is zero even though causal and confounding paths exist.</p>
+<p>Conversely, the presence or absence of blocked paths should not affect the marginal association between variables. In particular, for a collider structure</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B,
+\]</div>
+<p>the marginal association between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, as two causes of the same outcome <span class="arithmatex">\(C\)</span>, is determined before <span class="arithmatex">\(C\)</span> occurs and should not be altered by conditioning on their common consequence <span class="arithmatex">\(C\)</span>.</p>
+<hr />
+<h2 id="13-dags-and-confounding">13. DAGs and Confounding</h2>
+<h3 id="131-graph-theoretic-definition-of-confounding">13.1 Graph-Theoretic Definition of Confounding</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 13.1 (Confounding)</p>
+<p><strong>Confounding</strong> occurs when the probability distributions of the outcome differ between the exposed and unexposed groups for reasons other than the causal effect of the exposure itself.</p>
+<p>This non-causal difference usually arises from external variables called <strong>confounders</strong>.</p>
+</div>
+<p>In more graph-theoretic terms: if, after removing, blocking, or disabling all causal effects of the exposure on the outcome, the exposure and outcome remain associated, then confounding is present.</p>
+<h3 id="132-algorithm-for-checking-confounding-in-a-dag">13.2 Algorithm for Checking Confounding in a DAG</h3>
+<p>Suppose we are interested in the causal effect of exposure <span class="arithmatex">\(E\)</span> on disease/outcome <span class="arithmatex">\(D\)</span>. The following graphical algorithm can be used to check for confounding.</p>
+<div class="admonition success">
+<p class="admonition-title">Algorithm 13.1 (Checking Confounding in a DAG)</p>
+<ol>
+<li>Delete all arrows emanating from the exposure variable <span class="arithmatex">\(E\)</span>, i.e., remove all causal effects of the exposure;</li>
+<li>In the new graph, check whether there still exists an unblocked path from <span class="arithmatex">\(E\)</span> to <span class="arithmatex">\(D\)</span>.</li>
+</ol>
+<p>If, after removing the exposure effects, there is still an unblocked path between <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span>, then under the assumption of zero causal effect, <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span> would still be associated, indicating the presence of confounding.</p>
+</div>
+<p>The statistical meaning of this algorithm is: in a world where there is no causal effect <span class="arithmatex">\(E \to D\)</span>, would <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span> still be associated due to common causes? If yes, that association is confounding.</p>
+<p>Note that descendants of the disease <span class="arithmatex">\(D\)</span> are not of primary importance in this algorithm because any path that goes from <span class="arithmatex">\(E\)</span> to <span class="arithmatex">\(D\)</span> and then back through a descendant of <span class="arithmatex">\(D\)</span> would have to pass through a collider, and is therefore usually blocked.</p>
+<h3 id="133-potential-confounders-in-the-asthma-dag">13.3 Potential Confounders in the Asthma DAG</h3>
+<p>In the asthma DAG, when studying the effect of <span class="arithmatex">\(E\)</span> on <span class="arithmatex">\(D\)</span>, after deleting the edge <span class="arithmatex">\(E \to D\)</span>, there remain several unblocked backdoor paths from <span class="arithmatex">\(E\)</span> to <span class="arithmatex">\(D\)</span>:</p>
+<div class="arithmatex">\[
+E \leftarrow C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow A \to C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow C \leftarrow B \to D.
+\]</div>
+<p>Therefore, <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(C\)</span>, and <span class="arithmatex">\(B\)</span> are potential confounders. A natural question is: is it sufficient to adjust for all variables that look like confounders? The answer is no, because conditioning on a collider may open a path that was previously blocked.</p>
+<h3 id="134-the-trap-of-conditioning-why-adjusting-only-for-c-is-not-enough">13.4 The Trap of Conditioning: Why Adjusting Only for <span class="arithmatex">\(C\)</span> Is Not Enough?</h3>
+<p>A conventional approach might suggest conditioning on all potential confounders. For the asthma DAG:</p>
+<ul>
+<li>
+<p>If we adjust only for <span class="arithmatex">\(A\)</span>, the path <span class="arithmatex">\(E \leftarrow A \to C \to D\)</span> is blocked, but <span class="arithmatex">\(E \leftarrow C \to D\)</span> and <span class="arithmatex">\(E \leftarrow C \leftarrow B \to D\)</span> remain unblocked;</p>
+</li>
+<li>
+<p>If we adjust only for <span class="arithmatex">\(B\)</span>, the path <span class="arithmatex">\(E \leftarrow C \leftarrow B \to D\)</span> is blocked, but <span class="arithmatex">\(E \leftarrow C \to D\)</span> and <span class="arithmatex">\(E \leftarrow A \to C \to D\)</span> remain unblocked;</p>
+</li>
+<li>
+<p>If we adjust only for <span class="arithmatex">\(C\)</span>, it seems that we block</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(
+  E \leftarrow A \to C \to D,
+  \quad
+  E \leftarrow C \leftarrow B \to D,
+  \quad
+  E \leftarrow C \to D.\)</span></p>
+<p>However, the problem is that <span class="arithmatex">\(C\)</span> is also a common effect of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, i.e., there exists a collider structure</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B.
+\]</div>
+<p>Conditioning on the collider <span class="arithmatex">\(C\)</span> induces association between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, thereby opening the previously blocked path</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<p>More intuitively, after adjusting for <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are no longer independent within strata of <span class="arithmatex">\(C\)</span>, and since <span class="arithmatex">\(B\)</span> directly affects <span class="arithmatex">\(D\)</span>, a new backdoor path from <span class="arithmatex">\(E\)</span> to <span class="arithmatex">\(D\)</span> is created.</p>
+<h3 id="135-numerical-example-conditioning-on-a-collider-induces-association">13.5 Numerical Example: Conditioning on a Collider Induces Association</h3>
+<p>Consider the following three-way contingency table. Rows represent values of <span class="arithmatex">\(C\)</span>, columns are grouped by <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=1,B=1\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=1,B=0\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=0,B=1\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=0,B=0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(C=1\)</span></td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(C=0\)</span></td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">800</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">1000</td>
+</tr>
+</tbody>
+</table>
+<p>From the totals we have</p>
+<div class="arithmatex">\[
+\Pr(A=1\mid B)=\Pr(A=1)=\Pr(B=1\mid A)=\Pr(B=1)=0.5.
+\]</div>
+<p>Thus <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are marginally independent. Furthermore,</p>
+<div class="arithmatex">\[
+\Pr(C=1\mid A=1,B)-\Pr(C=1\mid A=0,B)=0.4,
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\Pr(C=1\mid A,B=1)-\Pr(C=1\mid A,B=0)=0.2.
+\]</div>
+<p>This is consistent with the local structure</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B
+\]</div>
+<p>: both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> affect <span class="arithmatex">\(C\)</span>.</p>
+<p>However, within strata of <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are no longer independent. For example, the conditional odds ratio:</p>
+<p>When <span class="arithmatex">\(C=1\)</span>:</p>
+<div class="arithmatex">\[
+OR_{AB\mid C=1}
+=\frac{800\times 200}{600\times 400}
+=\frac{2}{3}\neq 1.
+\]</div>
+<p>When <span class="arithmatex">\(C=0\)</span>:</p>
+<div class="arithmatex">\[
+OR_{AB\mid C=0}
+=\frac{200\times 800}{400\times 600}
+=\frac{2}{3}\neq 1.
+\]</div>
+<p>This shows that although marginally <span class="arithmatex">\(A \perp\!\!\!\perp B\)</span>, after conditioning on <span class="arithmatex">\(C\)</span> we generally have</p>
+<div class="arithmatex">\[
+A \not\perp\!\!\!\perp B\mid C.
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Rule on Conditioning on Colliders</p>
+<p>If <span class="arithmatex">\(C\)</span> is a common effect of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, i.e.,</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B,
+\]</div>
+<p>then the association between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> within strata of <span class="arithmatex">\(C\)</span> typically differs from their marginal association. In particular, even if <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are marginally independent, conditioning on <span class="arithmatex">\(C\)</span> may induce conditional dependence between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>.</p>
+</div>
+<h3 id="136-back-to-the-original-dag-what-should-be-adjusted">13.6 Back to the Original DAG: What Should Be Adjusted?</h3>
+<p>Returning to the asthma DAG, conditioning on <span class="arithmatex">\(C\)</span> may open the path</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<p>Therefore, <strong>adjusting for <span class="arithmatex">\(A\)</span> alone, <span class="arithmatex">\(B\)</span> alone, or <span class="arithmatex">\(C\)</span> alone is insufficient to control confounding</strong>.</p>
+<p>However, if we adjust for <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span>:</p>
+<ul>
+<li><span class="arithmatex">\(C\)</span> blocks <span class="arithmatex">\(E \leftarrow C \to D\)</span>;</li>
+<li><span class="arithmatex">\(C\)</span> blocks <span class="arithmatex">\(E \leftarrow C \leftarrow B \to D\)</span>;</li>
+<li><span class="arithmatex">\(A\)</span> blocks the newly opened path <span class="arithmatex">\(E \leftarrow A \to C \leftarrow B \to D\)</span> (because adjusting for <span class="arithmatex">\(C\)</span> created a path through <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, but adjusting for <span class="arithmatex">\(A\)</span> itself blocks its own tail).</li>
+</ul>
+<p>Thus</p>
+<div class="arithmatex">\[
+S=\{A,C\}
+\]</div>
+<p>is a sufficient adjustment set.</p>
+<p>Similarly, if we adjust for <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(C\)</span>, then <span class="arithmatex">\(B\)</span> blocks the path created by conditioning on <span class="arithmatex">\(C\)</span> that goes through <span class="arithmatex">\(B\)</span>. Hence</p>
+<div class="arithmatex">\[
+S=\{B,C\}
+\]</div>
+<p>is also a sufficient adjustment set.</p>
+<h3 id="137-another-counterexample-when-not-to-adjust-for-a-collider">13.7 Another Counterexample: When Not to Adjust for a Collider</h3>
+<p>Consider the following DAG:</p>
+<pre class="mermaid"><code>graph TD
+    A["A"] --&gt; E["E"]
+    A --&gt; C["C"]
+    B["B"] --&gt; C
+    B --&gt; D["D"]</code></pre>
+<p>If we study the effect of <span class="arithmatex">\(E\)</span> on <span class="arithmatex">\(D\)</span>, the only backdoor path is</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<p>This path has a collider at <span class="arithmatex">\(C\)</span>, so it is blocked without conditioning on <span class="arithmatex">\(C\)</span>. Therefore, there is no confounding in this DAG.</p>
+<p>However, conventional wisdom might notice: <span class="arithmatex">\(C\)</span> is associated with <span class="arithmatex">\(E\)</span>, and <span class="arithmatex">\(C\)</span> is associated with <span class="arithmatex">\(D\)</span> given <span class="arithmatex">\(E\)</span>; thus one might treat <span class="arithmatex">\(C\)</span> as a potential confounder and adjust for it. Doing so would open the collider path</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D,
+\]</div>
+<p>creating an artificial non-causal association between <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(D\)</span>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Important Conclusion</p>
+<p>Not every variable associated with both the exposure and the outcome should be adjusted for. If a variable is a collider or a descendant of a collider, conditioning on it can introduce selection bias or collider bias.</p>
+</div>
+<hr />
+<h2 id="14-d-separation">14. d-Separation</h2>
+<p>The preceding discussion on whether a path is "blocked" can be unified into a single graph-theoretic concept: <strong>d-separation</strong>. It is the core rule for reading conditional independencies from a DAG.</p>
+<h3 id="141-d-separation-of-a-trail">14.1 d-Separation of a Trail</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 14.1 (Trail Blocked / d-Separated by a Set)</p>
+<p>Let <span class="arithmatex">\(G\)</span> be a DAG. A trail between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(Y\)</span> is said to be <strong>blocked</strong> or <strong>d-separated</strong> by a set <span class="arithmatex">\(B\)</span> (disjoint from <span class="arithmatex">\(\{A,Y\}\)</span>) if either of the following conditions holds:</p>
+<ol>
+<li>The trail contains a collider <span class="arithmatex">\(C\)</span>, and neither <span class="arithmatex">\(C\)</span> nor any of its descendants is in <span class="arithmatex">\(B\)</span>;</li>
+<li>The trail contains a chain or fork structure, and the intermediate node in that structure is in <span class="arithmatex">\(B\)</span>.</li>
+</ol>
+</div>
+<p>The three basic local structures are:</p>
+<ol>
+<li>Chain:</li>
+</ol>
+<p><span class="arithmatex">\(
+   X \to Z \to Y
+   \quad\text{or}\quad
+   X \leftarrow Z \leftarrow Y;
+   \)</span></p>
+<ol>
+<li>Fork:</li>
+</ol>
+<p><span class="arithmatex">\(
+   X \leftarrow Z \to Y;
+   \)</span></p>
+<ol>
+<li>Collider:</li>
+</ol>
+<p><span class="arithmatex">\(
+   X \to Z \leftarrow Y.
+   \)</span></p>
+<p>Conditioning on the intermediate node <span class="arithmatex">\(Z\)</span> in a chain or fork blocks the path; conditioning on a collider <span class="arithmatex">\(Z\)</span> (or a descendant of <span class="arithmatex">\(Z\)</span>) opens the path.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 14.2 (Two Nodes d-Separated by a Set)</p>
+<p>If <strong>every</strong> trail between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(Y\)</span> is d-separated by the node set <span class="arithmatex">\(B\)</span>, then we say that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(Y\)</span> are <strong>d-separated</strong> (or <strong>blocked</strong>) by <span class="arithmatex">\(B\)</span> in DAG <span class="arithmatex">\(G\)</span>.</p>
+<p>This can be denoted as</p>
+<div class="arithmatex">\[
+(A \perp\!\!\!\perp Y\mid B)_G.
+\]</div>
+<p>This notation denotes a <strong>graph-theoretic d-separation property</strong>; it should not be confused with the probabilistic conditional independence</p>
+<div class="arithmatex">\[
+A \perp\!\!\!\perp Y\mid B.
+\]</div>
+<p>The former is a graph property, the latter is a distributional property. If the distribution satisfies the Markov property with respect to the DAG, then d-separation usually implies conditional independence in the distribution.</p>
+</div>
+<h3 id="142-d-separation-between-sets-of-variables">14.2 d-Separation between Sets of Variables</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 14.3 (d-Separation between Sets of Variables)</p>
+<p>If at least one of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(Y\)</span> is a set of nodes, and <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(Y\)</span>, <span class="arithmatex">\(B\)</span> are pairwise disjoint, then the set <span class="arithmatex">\(A\)</span> is said to be d-separated from the set <span class="arithmatex">\(Y\)</span> by <span class="arithmatex">\(B\)</span> if and only if <span class="arithmatex">\(B\)</span> d-separates every node in <span class="arithmatex">\(A\)</span> from every node in <span class="arithmatex">\(Y\)</span> in <span class="arithmatex">\(G\)</span>.</p>
+</div>
+<p>Therefore, <span class="arithmatex">\(B\)</span> d-separates <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(Y\)</span> if:</p>
+<ol>
+<li>Every original unblocked path from any node in <span class="arithmatex">\(A\)</span> to any node in <span class="arithmatex">\(Y\)</span> is blocked by a node in <span class="arithmatex">\(B\)</span>;</li>
+<li>Every path that would be newly opened due to conditioning on nodes in <span class="arithmatex">\(B\)</span> is also blocked by some other node in <span class="arithmatex">\(B\)</span>.</li>
+</ol>
+<p>If two nodes or sets of nodes are not d-separated, they are said to be <strong>d-connected</strong> or <strong>unblocked</strong>.</p>
+<h3 id="143-relationship-between-d-separation-and-conditional-independence">14.3 Relationship between d-Separation and Conditional Independence</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 14.1 (Global Markov Property)</p>
+<p>If a joint distribution <span class="arithmatex">\(P\)</span> satisfies the Markov property with respect to a DAG <span class="arithmatex">\(G\)</span>, and node sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(Y\)</span> are d-separated by <span class="arithmatex">\(B\)</span>, i.e.,</p>
+<div class="arithmatex">\[
+(A \perp\!\!\!\perp Y\mid B)_G,
+\]</div>
+<p>then the conditional independence</p>
+<div class="arithmatex">\[
+A \perp\!\!\!\perp Y\mid B
+\]</div>
+<p>holds in the distribution <span class="arithmatex">\(P\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof Sketch: Why d-Separation Implies Conditional Independence</summary>
+<p>The Markov factorization of a DAG implies that the joint density can be written as</p>
+<div class="arithmatex">\[
+f(v_1,\dots,v_p)=\prod_{j=1}^p f(v_j\mid pa(v_j)).
+\]</div>
+<p>This factorization ensures that each node, given its parents, is conditionally independent of its non-descendants. The three local rules of d-separation are generalizations of the following three basic structures:</p>
+<p><strong>1. Chain</strong> <span class="arithmatex">\(X\to Z\to Y\)</span>:</p>
+<div class="arithmatex">\[
+f(x,z,y)=f(x)f(z\mid x)f(y\mid z).
+\]</div>
+<p>Given <span class="arithmatex">\(Z\)</span>,</p>
+<div class="arithmatex">\[
+f(x,y\mid z)=f(x\mid z)f(y\mid z),
+\]</div>
+<p>so</p>
+<div class="arithmatex">\[
+X\perp\!\!\!\perp Y\mid Z.
+\]</div>
+<p><strong>2. Fork</strong> <span class="arithmatex">\(X\leftarrow Z\to Y\)</span>:</p>
+<div class="arithmatex">\[
+f(x,z,y)=f(z)f(x\mid z)f(y\mid z).
+\]</div>
+<p>Given the common cause <span class="arithmatex">\(Z\)</span>,</p>
+<div class="arithmatex">\[
+f(x,y\mid z)=f(x\mid z)f(y\mid z),
+\]</div>
+<p>thus</p>
+<div class="arithmatex">\[
+X\perp\!\!\!\perp Y\mid Z.
+\]</div>
+<p><strong>3. Collider</strong> <span class="arithmatex">\(X\to Z\leftarrow Y\)</span>:</p>
+<div class="arithmatex">\[
+f(x,z,y)=f(x)f(y)f(z\mid x,y).
+\]</div>
+<p>Without conditioning on <span class="arithmatex">\(Z\)</span>, integrating/summing over <span class="arithmatex">\(Z\)</span>:</p>
+<div class="arithmatex">\[
+f(x,y)=\sum_z f(x)f(y)f(z\mid x,y)=f(x)f(y),
+\]</div>
+<p>so marginally</p>
+<div class="arithmatex">\[
+X\perp\!\!\!\perp Y.
+\]</div>
+<p>However, conditioning on <span class="arithmatex">\(Z\)</span> generally yields</p>
+<div class="arithmatex">\[
+f(x,y\mid z)=\frac{f(x)f(y)f(z\mid x,y)}{f(z)},
+\]</div>
+<p>which does not factorize into <span class="arithmatex">\(f(x\mid z)f(y\mid z)\)</span>, thus conditioning on a collider opens the path.</p>
+<p>The general d-separation theorem for arbitrary DAGs can be viewed as a recursive composition of these three local structures over trails of any length. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="15-backdoor-path-criterion">15. Backdoor Path Criterion</h2>
+<h3 id="151-sufficient-set-for-confounding-control">15.1 Sufficient Set for Confounding Control</h3>
+<p>As we have seen, controlling confounding is not simply "adjust for all associated variables". Rather, we need to adjust for a set that blocks all backdoor paths without introducing new bias. Pearl's backdoor path criterion provides a graph-theoretic sufficient condition.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 15.1 (Backdoor Path Criterion)</p>
+<p>Given a DAG, let <span class="arithmatex">\(E\)</span> be the exposure and <span class="arithmatex">\(D\)</span> the outcome. A set of variables <span class="arithmatex">\(S\)</span> is sufficient to control for confounding of the effect of <span class="arithmatex">\(E\)</span> on <span class="arithmatex">\(D\)</span> if:</p>
+<ol>
+<li><span class="arithmatex">\(S\)</span> contains no descendant of <span class="arithmatex">\(E\)</span>;</li>
+<li>In the graph obtained by deleting all arrows emanating from <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(S\)</span> d-separates <span class="arithmatex">\(E\)</span> from <span class="arithmatex">\(D\)</span>.</li>
+</ol>
+<p>Equivalently, <span class="arithmatex">\(S\)</span> must block all backdoor paths from <span class="arithmatex">\(E\)</span> to <span class="arithmatex">\(D\)</span>, and must not introduce selection bias or mediation bias by adjusting for descendants of the exposure.</p>
+</div>
+<p>For the asthma example, the backdoor criterion yields two sufficient adjustment sets:</p>
+<div class="arithmatex">\[
+S_1=\{A,C\},
+\qquad
+S_2=\{B,C\}.
+\]</div>
+<p>That is, to identify the average causal effect of antihistamine use <span class="arithmatex">\(E\)</span> on asthma <span class="arithmatex">\(D\)</span>, one can adjust for <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span>, or adjust for <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(C\)</span>.</p>
+<h3 id="152-backdoor-criterion-and-the-adjustment-formula">15.2 Backdoor Criterion and the Adjustment Formula</h3>
+<p>If <span class="arithmatex">\(S\)</span> satisfies the backdoor criterion, and consistency and positivity hold, then the mean potential outcome can be identified via the adjustment formula:</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\sum_s \mathbb{E}[D\mid E=e,S=s]\Pr(S=s),
+\]</div>
+<p>where <span class="arithmatex">\(e\in\{0,1\}\)</span>. If <span class="arithmatex">\(S\)</span> contains continuous variables, the sum is replaced by an integral:</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\int \mathbb{E}[D\mid E=e,S=s] f_S(s)\,ds.
+\]</div>
+<p>The average causal effect is then</p>
+<div class="arithmatex">\[
+\psi
+=\mathbb{E}[D^1-D^0]
+=\sum_s \left\{\mathbb{E}[D\mid E=1,S=s]-\mathbb{E}[D\mid E=0,S=s]\right\}\Pr(S=s).
+\]</div>
+<details class="proof">
+<summary>Proof: Backdoor Criterion Implies the Adjustment Formula</summary>
+<p>If <span class="arithmatex">\(S\)</span> satisfies the backdoor criterion, then in the graph we have</p>
+<div class="arithmatex">\[
+(D^e \perp\!\!\!\perp E\mid S)_G,
+\]</div>
+<p>which, in the potential outcomes framework, corresponds to conditional exchangeability:</p>
+<div class="arithmatex">\[
+D^e \perp\!\!\!\perp E\mid S.
+\]</div>
+<p>Then by the law of total expectation:</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\sum_s \mathbb{E}[D^e\mid S=s]\Pr(S=s).
+\]</div>
+<p>Using conditional exchangeability,</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e\mid S=s]
+=\mathbb{E}[D^e\mid E=e,S=s].
+\]</div>
+<p>Then by consistency: when <span class="arithmatex">\(E=e\)</span>, the observed outcome is <span class="arithmatex">\(D=D^e\)</span>. Hence</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e\mid E=e,S=s]
+=\mathbb{E}[D\mid E=e,S=s].
+\]</div>
+<p>Substituting back gives</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\sum_s \mathbb{E}[D\mid E=e,S=s]\Pr(S=s).
+\]</div>
+<p>The continuous version follows analogously. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="153-unification-with-the-earlier-potential-outcomes-framework">15.3 Unification with the Earlier Potential Outcomes Framework</h3>
+<p>The graph language in this section and the potential outcomes language in earlier sections are essentially unified:</p>
+<ul>
+<li>The potential outcomes framework formulates identification as the assumption</li>
+</ul>
+<p><span class="arithmatex">\(Y^a \perp\!\!\!\perp A\mid X;\)</span></p>
+<ul>
+<li>
+<p>The DAG framework uses the backdoor criterion to help determine which <span class="arithmatex">\(X\)</span> make the above conditional exchangeability hold;</p>
+</li>
+<li>
+<p>Once a valid adjustment set <span class="arithmatex">\(S\)</span> is found, the estimation still returns to the earlier methods such as standardization, IPTW, AIPW, or TMLE.</p>
+</li>
+</ul>
+<p>Thus, causal diagrams primarily answer the question <strong>"what to adjust for"</strong>; statistical estimation methods primarily answer <strong>"given the adjustment set, how to stably and efficiently estimate the causal quantity"</strong>.</p>
+<hr />
+<h2 id="16-chapter-summary-from-potential-outcomes-to-causal-graphs">16. Chapter Summary: From Potential Outcomes to Causal Graphs</h2>
+<div class="admonition summary">
+<p class="admonition-title">Structure of Chapter 10</p>
+<p>The complete logic of this chapter can be summarized as:</p>
+<ol>
+<li><strong>Define causal quantities</strong>: use potential outcomes <span class="arithmatex">\(Y^1,Y^0\)</span> to define causal targets like ATE and CATE;</li>
+<li><strong>Explain the fundamental difficulty</strong>: it is impossible to observe both <span class="arithmatex">\(Y^1\)</span> and <span class="arithmatex">\(Y^0\)</span> for the same individual;</li>
+<li><strong>Propose identification assumptions</strong>: consistency, positivity, randomization or conditional exchangeability;</li>
+<li><strong>Give identification formulas</strong>: G-formula, IPTW, AIPW, etc.;</li>
+<li><strong>Perform statistical estimation</strong>: outcome regression, propensity score weighting, doubly robust estimation, and G-estimation;</li>
+<li><strong>Introduce causal diagrams</strong>: use DAGs to express scientific background knowledge;</li>
+<li><strong>Judge confounding paths</strong>: use backdoor paths, colliders, and d-separation to determine whether adjustment is needed;</li>
+<li><strong>Choose an adjustment set</strong>: use the backdoor path criterion to find a set of variables sufficient to control confounding.</li>
+</ol>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Basic Workflow in Practice</p>
+<p>When conducting a causal inference problem in practice, it is recommended to follow this sequence:</p>
+<ol>
+<li>Clarify the exposure <span class="arithmatex">\(A\)</span>, outcome <span class="arithmatex">\(Y\)</span>, and the target estimand, e.g., <span class="arithmatex">\(\mathbb{E}[Y^1-Y^0]\)</span>;</li>
+<li>Draw a DAG based on domain knowledge;</li>
+<li>Use the backdoor criterion to find a legitimate adjustment set <span class="arithmatex">\(S\)</span>;</li>
+<li>
+<p>Check positivity:</p>
+<div class="arithmatex">\[
+0&lt;\Pr(A=a\mid S=s)&lt;1;
+\]</div>
+</li>
+<li>
+<p>Choose an estimation method according to data size and dimensionality: standardization, IPTW, AIPW, TMLE, or G-estimation;</p>
+</li>
+<li>Report the estimate, uncertainty interval, and discuss untestable assumptions, especially the no unmeasured confounding assumption.</li>
+</ol>
+</div>
 
 
 

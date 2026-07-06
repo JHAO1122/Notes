@@ -91,6 +91,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3815,6 +3820,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：因果推断
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -3832,6 +3857,586 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-counterfactuals-potential-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 潜在结果框架（Counterfactuals / Potential Outcomes）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 潜在结果框架（Counterfactuals / Potential Outcomes）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-fundamental-problem-of-causal-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 因果推断的根本问题（Fundamental Problem of Causal Inference）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 因果效应的统计测度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 因果效应的统计测度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 相关性与因果性的本质区别
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identifiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 因果效应的可识别性（Identifiability）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 因果效应的可识别性（Identifiability）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 基于后置分层的因果识别定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-propensity-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 倾向性得分（Propensity Score）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 倾向性得分（Propensity Score）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-balancing-score-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 平衡得分性质（Balancing Score Property）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inverse-probability-treatment-weighting-iptw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 逆概率加权法（Inverse Probability Treatment Weighting, IPTW）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-iptw-dual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. IPTW 估计量的对偶表示（Dual Representation）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-standardization-g-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 标准化法（Standardization / G-Formula）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-marginal-structural-models-msm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 边际结构模型（Marginal Structural Models, MSM）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 边际结构模型（Marginal Structural Models, MSM）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 基于伪总体的加权最小二乘求解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-doubly-robust-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 双重稳健估计（Doubly Robust Estimation）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-g-g-estimation-of-structural-nested-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. G-估计（G-estimation of Structural Nested Models）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. G-估计（G-estimation of Structural Nested Models）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-estimating-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 零因果关系估计方程（Estimating Equation）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gee-psi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        由此可直接通过解析闭式解（或拟合广义估计方程 GEE）精确反解出因果核心参数 \(\psi\) 的无偏估计值。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-causal-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 因果图（Causal Diagrams）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 因果图（Causal Diagrams）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 抗组胺药与哮喘的例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 路径、祖先、父节点与子节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 后门路径、碰撞点与阻断路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-directed-acyclic-graph-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 有向无环图（Directed Acyclic Graph, DAG）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. 有向无环图（Directed Acyclic Graph, DAG）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 DAG 的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 DAG 的非参数性与因果含义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 DAG 编码的统计独立性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-markov" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Markov 分解公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 DAG 中的两类非阻断路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 阻断路径与边际关联的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-dag-dags-and-confounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. DAG 与混杂（DAGs and Confounding）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. DAG 与混杂（DAGs and Confounding）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 混杂的图论定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 在 DAG 中检查混杂的算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 哮喘 DAG 中的潜在混杂变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 条件化调整的陷阱：只调整 \(C\) 为什么不够？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 数值例子：条件化碰撞点会诱导关联
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6 回到原 DAG：应该调整什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7 另一个反例：不该调整碰撞点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-d-d-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. d-分离（d-separation）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. d-分离（d-separation）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-trail-d-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 trail 的 d-分离定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-d-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 变量集合之间的 d-分离
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-d-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 d-separation 与条件独立的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-backdoor-path-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 后门路径准则（Backdoor Path Criterion）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. 后门路径准则（Backdoor Path Criterion）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 控制混杂的充分集合
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 后门准则与调整公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 与前文潜在结果框架的统一
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 本章小结：从潜在结果到因果图
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5291,6 +5896,577 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-counterfactuals-potential-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 潜在结果框架（Counterfactuals / Potential Outcomes）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 潜在结果框架（Counterfactuals / Potential Outcomes）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-fundamental-problem-of-causal-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 因果推断的根本问题（Fundamental Problem of Causal Inference）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 因果效应的统计测度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 因果效应的统计测度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 相关性与因果性的本质区别
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-identifiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 因果效应的可识别性（Identifiability）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 因果效应的可识别性（Identifiability）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 基于后置分层的因果识别定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-propensity-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 倾向性得分（Propensity Score）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 倾向性得分（Propensity Score）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-balancing-score-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 平衡得分性质（Balancing Score Property）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-inverse-probability-treatment-weighting-iptw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 逆概率加权法（Inverse Probability Treatment Weighting, IPTW）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-iptw-dual-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. IPTW 估计量的对偶表示（Dual Representation）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-standardization-g-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 标准化法（Standardization / G-Formula）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-marginal-structural-models-msm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 边际结构模型（Marginal Structural Models, MSM）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 边际结构模型（Marginal Structural Models, MSM）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 基于伪总体的加权最小二乘求解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-doubly-robust-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 双重稳健估计（Doubly Robust Estimation）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-g-g-estimation-of-structural-nested-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. G-估计（G-estimation of Structural Nested Models）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. G-估计（G-estimation of Structural Nested Models）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-estimating-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 零因果关系估计方程（Estimating Equation）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gee-psi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        由此可直接通过解析闭式解（或拟合广义估计方程 GEE）精确反解出因果核心参数 \(\psi\) 的无偏估计值。
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-causal-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 因果图（Causal Diagrams）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 因果图（Causal Diagrams）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 抗组胺药与哮喘的例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 路径、祖先、父节点与子节点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 后门路径、碰撞点与阻断路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-directed-acyclic-graph-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 有向无环图（Directed Acyclic Graph, DAG）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. 有向无环图（Directed Acyclic Graph, DAG）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 DAG 的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 DAG 的非参数性与因果含义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 DAG 编码的统计独立性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-markov" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Markov 分解公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 DAG 中的两类非阻断路径
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 阻断路径与边际关联的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-dag-dags-and-confounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. DAG 与混杂（DAGs and Confounding）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. DAG 与混杂（DAGs and Confounding）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 混杂的图论定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 在 DAG 中检查混杂的算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 哮喘 DAG 中的潜在混杂变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 条件化调整的陷阱：只调整 \(C\) 为什么不够？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 数值例子：条件化碰撞点会诱导关联
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6 回到原 DAG：应该调整什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7 另一个反例：不该调整碰撞点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-d-d-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. d-分离（d-separation）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. d-分离（d-separation）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-trail-d-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 trail 的 d-分离定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-d-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 变量集合之间的 d-分离
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-d-separation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.3 d-separation 与条件独立的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-backdoor-path-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. 后门路径准则（Backdoor Path Criterion）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. 后门路径准则（Backdoor Path Criterion）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 控制混杂的充分集合
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 后门准则与调整公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 与前文潜在结果框架的统一
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. 本章小结：从潜在结果到因果图
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -5311,9 +6487,1008 @@
   
 
 
-  <h1>第十章：因果推断</h1>
-
-
+<h1 id="_1">第十章：因果推断基础（潜在结果、识别、估计与因果图）</h1>
+<p>在前述统计学习章节中，我们更多关注变量之间的相关性（association）、预测能力与泛化误差。然而，在医学、公共政策、经济学、社会科学与推荐系统等问题中，研究者往往真正关心的是：如果主动改变某个处理、政策或暴露，结局变量会如何变化？这类问题不能仅靠条件相关或预测精度回答，而必须引入<strong>干预（intervention）</strong>、<strong>反事实（counterfactual）</strong>与<strong>可识别性（identifiability）</strong>的语言。</p>
+<p>本章系统介绍现代因果推断的两条主线。第一条是 <strong>Rubin 潜在结果框架</strong>：用 <span class="arithmatex">\(Y^1,Y^0\)</span> 定义个体与总体因果效应，说明因果推断的根本缺失数据困难，并在一致性、正值性、随机化或条件交换性假设下推导 G-formula、IPTW、AIPW 与 G-估计等识别和估计公式。第二条是 <strong>Pearl 因果图框架</strong>：用 DAG 表达变量之间的直接因果关系，通过后门路径、碰撞点、d-separation 与 backdoor path criterion 判断哪些变量应当调整、哪些变量不应调整。两套语言最终服务于同一个目标：把不可直接观测的因果量转化为可由观测数据估计的统计泛函。</p>
+<hr />
+<h2 id="1-counterfactuals-potential-outcomes">1. 潜在结果框架（Counterfactuals / Potential Outcomes）</h2>
+<p>因果推断的核心在于对比“若接受某种干预”与“若不接受某种干预”下个体结果的差异。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 1.1 (潜在结果与可观测结果)</p>
+<p>设二元干预变量为 <span class="arithmatex">\(A \in \{0, 1\}\)</span>，其中 <span class="arithmatex">\(A = 1\)</span> 表示接受某种处理/干预（如服药），<span class="arithmatex">\(A = 0\)</span> 表示未接受干预（如服对照剂）。</p>
+<p>对于每一个个体，我们定义两个<strong>潜在结果（Potential Outcomes）</strong>：</p>
+<ul>
+<li><span class="arithmatex">\(Y^1\)</span>：个体在接受干预（<span class="arithmatex">\(A=1\)</span>）时将会出现的潜在结果。</li>
+<li><span class="arithmatex">\(Y^0\)</span>：个体在不接受干预（<span class="arithmatex">\(A=0\)</span>）时将会出现的潜在结果。</li>
+</ul>
+<p>在现实世界中，对于任一个体，我们只能观测到其中一种干预状态。现实中真实可观测的响应变量 <span class="arithmatex">\(Y\)</span> 与潜在结果之间满足如下<strong>一致性（Consistency）</strong>关系：</p>
+<div class="arithmatex">\[
+Y = A Y^1 + (1 - A) Y^0
+\]</div>
+</div>
+<h3 id="11-fundamental-problem-of-causal-inference">1.1 因果推断的根本问题（Fundamental Problem of Causal Inference）</h3>
+<p>由于因果效应的定义依赖于同一个体同时刻 <span class="arithmatex">\(Y^1\)</span> 与 <span class="arithmatex">\(Y^0\)</span> 的对比，而现实中 <span class="arithmatex">\(Y^1\)</span> 和 <span class="arithmatex">\(Y^0\)</span> 至少有一个是无法被观测到的反事实（Counterfactual）。因此，在<strong>个体层面上，因果效应是永远无法直接观测和计算的</strong>。</p>
+<p>为了打破这一困境，统计学将视角从“个体因果效应”转向“群体平均因果效应”。</p>
+<hr />
+<h2 id="2">2. 因果效应的统计测度</h2>
+<p>在总体（Population）层面上，我们通过对潜在结果赋予期望算子，来定义可解的因果度量指标。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 2.1 (平均因果效应 ATE 与条件平均因果效应 CATE)</p>
+<ul>
+<li><strong>平均因果效应（Average Causal Effect, ATE）</strong>：定义为全总体中两种潜在结果期望的绝对差值：</li>
+</ul>
+<div class="arithmatex">\[
+\text{ATE} = \mathbb{E}[Y^1 - Y^0] = \mathbb{E}[Y^1] - \mathbb{E}[Y^0]
+\]</div>
+<ul>
+<li><strong>条件平均因果效应（Conditional Average Causal Effect, CATE）</strong>：若存在一组多维协变量/混杂因素 <span class="arithmatex">\(X \in \mathbb{R}^p\)</span>，在特定子群体 <span class="arithmatex">\(X=x\)</span> 内部的平均因果效应定义为：</li>
+</ul>
+<div class="arithmatex">\[
+\text{CATE}(x) = \mathbb{E}[Y^1 - Y^0 \mid X = x]
+\]</div>
+</div>
+<h3 id="21">2.1 相关性与因果性的本质区别</h3>
+<p>在观测数据（Observational Data）中，我们往往只能直接计算可观测的条件期望之差，即<strong>相关性测度（Association Measure）</strong>：</p>
+<div class="arithmatex">\[
+\text{Association} = \mathbb{E}[Y \mid A = 1] - \mathbb{E}[Y \mid A = 0]
+\]</div>
+<p>一般情况下，<span class="arithmatex">\(\mathbb{E}[Y \mid A = 1] - \mathbb{E}[Y \mid A = 0] \neq \mathbb{E}[Y^1] - \mathbb{E}[Y^0]\)</span>。</p>
+<p>这是因为在观测数据中，由于混杂因素（Confounders）的存在，干预的分配 <span class="arithmatex">\(A\)</span> 往往与潜在结果 <span class="arithmatex">\((Y^1, Y^0)\)</span> 本身不独立。例如，病情更严重的患者（其潜在健康的 <span class="arithmatex">\(Y^0\)</span> 较低）更有可能选择服药（<span class="arithmatex">\(A=1\)</span>）。</p>
+<hr />
+<h2 id="3-identifiability">3. 因果效应的可识别性（Identifiability）</h2>
+<p>为了能够将包含不可观测项的因果量（如 <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span>）转化为仅包含可观测样本数据的统计量，我们需要引入三条核心的可识别性假设。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.1 (核心可识别性假设 三剑客)</p>
+<ol>
+<li>
+<p><strong>一致性（Consistency）</strong>：如前文所述，真实观测值与对应的潜在结果严格一致，即当 <span class="arithmatex">\(A=a\)</span> 时，<span class="arithmatex">\(Y = Y^a\)</span>。</p>
+</li>
+<li>
+<p><strong>正值性 / 满分配假设（Positivity / Overlap）</strong>：在协变量 <span class="arithmatex">\(X\)</span> 的任意取值下，个体接受每种干预的概率都必须严格大于 0 且小于 1：</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+0 &lt; P(A = 1 \mid X = x) &lt; 1, \quad \forall x
+\]</div>
+<ol>
+<li><strong>条件独立性 / 无忽略混杂假设（Conditional Exchangeability / Unconfoundedness）</strong>：在控制了可观测的协变量 <span class="arithmatex">\(X\)</span> 之后，干预分配与潜在结果之间相互独立：</li>
+</ol>
+<div class="arithmatex">\[
+(Y^1, Y^0) \perp \! \! \! \perp A \mid X
+\]</div>
+</div>
+<h3 id="31">3.1 基于后置分层的因果识别定理</h3>
+<div class="admonition note">
+<p class="admonition-title">定理 3.1 (因果识别定理 / 调整公式)</p>
+<p>在满足一致性、正值性和条件独立性假设下，全总体的平均潜在结果期望 <span class="arithmatex">\(\mathbb{E}[Y^a]\)</span>（<span class="arithmatex">\(a \in \{0, 1\}\)</span>）可以被完全识别，且其关于可观测数据分布的计算公式为：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \mathbb{E}_X \left[ \mathbb{E}[Y \mid A = a, X] \right] = \int \mathbb{E}[Y \mid A = a, X = x] dF_X(x)
+\]</div>
+</div>
+<details class="proof">
+<summary>证明：因果识别定理的数学推导</summary>
+<p>根据全期望公式（Law of Total Expectation），首先对潜在结果以协变量 <span class="arithmatex">\(X\)</span> 进行条件展开：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \mathbb{E}_X \left[ \mathbb{E}[Y^a \mid X] \right]
+\]</div>
+<p>接下来，利用第三条<strong>条件独立性假设</strong> <span class="arithmatex">\((Y^1, Y^0) \perp \! \! \! \perp A \mid X\)</span>，这意味着在给定 <span class="arithmatex">\(X\)</span> 的条件下，潜在结果 <span class="arithmatex">\(Y^a\)</span> 的期望与真实的干预状态 <span class="arithmatex">\(A=a\)</span> 是独立的。因此，我们可以将干预状态 <span class="arithmatex">\(A=a\)</span> 作为条件强行写入条件期望中：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a \mid X] = \mathbb{E}[Y^a \mid A = a, X]
+\]</div>
+<p>随后，利用第一条<strong>一致性假设</strong>，当干预状态条件被限定为 <span class="arithmatex">\(A=a\)</span> 时，潜在结果 <span class="arithmatex">\(Y^a\)</span> 可以等价地替换为现实世界中的真实观测响应变量 <span class="arithmatex">\(Y\)</span>：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a \mid A = a, X] = \mathbb{E}[Y \mid A = a, X]
+\]</div>
+<p>将上述转化链代回最外层的全期望中，即得：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \mathbb{E}_X \left[ \mathbb{E}[Y \mid A = a, X] \right]
+\]</div>
+<p>即证。上式右端所有的概率分布与条件期望均可直接从观测到的数据集 <span class="arithmatex">\(\mathcal{D}_n = \{(X_i, A_i, Y_i)\}_{i=1}^n\)</span> 中估计得到。</p>
+</details>
+<hr />
+<h2 id="4-propensity-score">4. 倾向性得分（Propensity Score）</h2>
+<p>当协变量 <span class="arithmatex">\(X\)</span> 的维度 <span class="arithmatex">\(p\)</span> 极高时，直接基于上述定理进行多维多元积分或非参数分层会遭遇严重的“维数灾难”。为了解决这一计算难题，模型引入了倾向性得分这一一维降维工具。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 4.1 (倾向性得分 Propensity Score)</p>
+<p>倾向性得分定义为在给定个体特征 <span class="arithmatex">\(X\)</span> 的条件下，该个体接受干预（<span class="arithmatex">\(A=1\)</span>）的条件概率，记为 <span class="arithmatex">\(e(X)\)</span>：</p>
+<div class="arithmatex">\[
+e(X) = P(A = 1 \mid X)
+\]</div>
+<p>通常，倾向性得分可以通过对观测数据拟合一个逻辑回归（Logistic Regression）模型来隐式估计。</p>
+</div>
+<h3 id="41-balancing-score-property">4.1 平衡得分性质（Balancing Score Property）</h3>
+<p>倾向性得分是一个非常神奇的降维泛函，它天然具有如下的“平衡性”特征。</p>
+<div class="admonition note">
+<p class="admonition-title">定理 4.1 (平衡得分定理)</p>
+<p>给定倾向性得分 <span class="arithmatex">\(e(X)\)</span> 的条件下，原始多维特征 <span class="arithmatex">\(X\)</span> 与干预分配 <span class="arithmatex">\(A\)</span> 之间相互独立，即：</p>
+<div class="arithmatex">\[
+X \perp \! \! \! \perp A \mid e(X)
+\]</div>
+<p>这意味着，在倾向性得分相同的子群体中，接受干预组与对照组的特征分布在统计学上是完全均衡的，达到了类似随机对照试验（RCT）的效果。</p>
+</div>
+<hr />
+<h2 id="5-inverse-probability-treatment-weighting-iptw">5. 逆概率加权法（Inverse Probability Treatment Weighting, IPTW）</h2>
+<p>逆概率加权法（IPTW）是利用倾向性得分去修正由于混杂因素导致的样本选择偏差（Selection Bias）的一种极其经典的非参数/半参数估计方法。其核心思想是通过赋予每个样本一个与其接受该干预的概率成反比的权重，从而创造出一个虚拟的“伪总体（Pseudo-population）”，在该伪总体中，混杂因素与干预变量之间不再具有相关性。</p>
+<div class="admonition note">
+<p class="admonition-title">定理 5.1 (IPTW 核心等价性定理)</p>
+<p>若一致性、正值性与条件独立性假设成立，则平均潜在结果 <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span> 和 <span class="arithmatex">\(\mathbb{E}[Y^0]\)</span> 可以通过如下逆概率加权的可观测期望公式进行精确计算：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^1] = \mathbb{E}\left[ \frac{A Y}{e(X)} \right]
+\]</div>
+<div class="arithmatex">\[
+\mathbb{E}[Y^0] = \mathbb{E}\left[ \frac{(1 - A) Y}{1 - e(X)} \right]
+\]</div>
+</div>
+<details class="proof">
+<summary>证明：IPTW 恒等式的严格数学推导</summary>
+<p>我们以证明干预组 <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span> 为例。对右端的加权可观测期望算子，利用全期望公式按照特征 <span class="arithmatex">\(X\)</span> 进行展开：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}_X \left[ \mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] \right]
+\]</div>
+<p>由于分母 <span class="arithmatex">\(e(X)\)</span> 是关于 <span class="arithmatex">\(X\)</span> 的确定性函数，在内层关于 <span class="arithmatex">\(X\)</span> 的条件期望中，它可以作为常数因子提取到期望算子的外面：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] = \frac{1}{e(X)} \mathbb{E}[A Y \mid X]
+\]</div>
+<p>再次运用一致性假设，将内层项中的 <span class="arithmatex">\(Y\)</span> 展开为 <span class="arithmatex">\(A Y^1 + (1 - A) Y^0\)</span>。注意到当有系数 <span class="arithmatex">\(A\)</span> 相乘时，<span class="arithmatex">\(A(1-A) = 0\)</span> 且 <span class="arithmatex">\(A^2 = A\)</span>（因为 <span class="arithmatex">\(A \in \{0, 1\}\)</span>）。因此：</p>
+<div class="arithmatex">\[
+A Y = A (A Y^1 + (1 - A) Y^0) = A^2 Y^1 + A(1 - A) Y^0 = A Y^1
+\]</div>
+<p>将该结果代回条件期望中，得：</p>
+<div class="arithmatex">\[
+\frac{1}{e(X)} \mathbb{E}[A Y \mid X] = \frac{1}{e(X)} \mathbb{E}[A Y^1 \mid X]
+\]</div>
+<p>现在，关键性地使用<strong>条件独立性假设</strong> <span class="arithmatex">\(Y^1 \perp \! \! \! \perp A \mid X\)</span>。根据条件独立下乘积的期望等于期望的乘积这一数学性质，有：</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y^1 \mid X] = \mathbb{E}[A \mid X] \cdot \mathbb{E}[Y^1 \mid X]
+\]</div>
+<p>根据倾向性得分的定义，<span class="arithmatex">\(\mathbb{E}[A \mid X] = P(A = 1 \mid X) = e(X)\)</span>。将其代入式中：</p>
+<div class="arithmatex">\[
+\frac{1}{e(X)} \mathbb{E}[A Y^1 \mid X] = \frac{1}{e(X)} \cdot e(X) \cdot \mathbb{E}[Y^1 \mid X] = \mathbb{E}[Y^1 \mid X]
+\]</div>
+<p>最后，将化简完的内层条件期望重新代回外层的关于 <span class="arithmatex">\(X\)</span> 的总体期望中：</p>
+<div class="arithmatex">\[
+\mathbb{E}_X \left[ \mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] \right] = \mathbb{E}_X \left[ \mathbb{E}[Y^1 \mid X] \right] = \mathbb{E}[Y^1]
+\]</div>
+<p>即证毕。同理可严格推导对照组分量 <span class="arithmatex">\(\mathbb{E}\left[ \frac{(1 - A) Y}{1 - e(X)} \right] = \mathbb{E}[Y^0]\)</span>。</p>
+</details>
+<p>通过这一恒等式，全总体的平均因果效应 ATE 可以在 IPTW 框架下统一写为：</p>
+<div class="arithmatex">\[
+\text{ATE} = \mathbb{E}\left[ \frac{A Y}{e(X)} - \frac{(1 - A) Y}{1 - e(X)} \right]
+\]</div>
+<p>在实际样本计算中，我们常通过其对应的经验样本均值形式（Horvitz-Thompson 估计量）进行求解：</p>
+<div class="arithmatex">\[
+\widehat{\text{ATE}}_{\text{IPTW}} = \frac{1}{n} \sum_{i=1}^n \frac{A_i Y_i}{\hat{e}(X_i)} - \frac{1}{n} \sum_{i=1}^n \frac{(1 - A_i) Y_i}{1 - \hat{e}(X_i)}
+\]</div>
+<h2 id="6-iptw-dual-representation">6. IPTW 估计量的对偶表示（Dual Representation）</h2>
+<p>在实际中，我们还可以利用条件期望来理解和计算 IPTW。</p>
+<div class="admonition note">
+<p class="admonition-title">定理 6.1 (IPTW 的期望平滑性质)</p>
+<p>设 <span class="arithmatex">\(Y\)</span> 为观测响应变量，<span class="arithmatex">\(A\)</span> 为二元干预变量，<span class="arithmatex">\(e(X) = P(A=1 \mid X)\)</span> 为倾向性得分。则 IPTW 算子中的两个部分分别满足如下对偶积分表示：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}\left[ \frac{A \cdot \mathbb{E}[Y \mid A=1, X]}{e(X)} \right]
+\]</div>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{(1 - A) Y}{1 - e(X)} \right] = \mathbb{E}\left[ \frac{(1 - A) \cdot \mathbb{E}[Y \mid A=0, X]}{1 - e(X)} \right]
+\]</div>
+</div>
+<details class="proof">
+<summary>证明：IPTW 对偶等式的数学推导</summary>
+<p>根据重叠期望定律（Law of Iterated Expectations），对算子内部进行关于 <span class="arithmatex">\(X\)</span> 的条件展开：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}_X \left[ \mathbb{E}\left[ \frac{A Y}{e(X)} \;\middle|\; X \right] \right] = \mathbb{E}_X \left[ \frac{1}{e(X)} \mathbb{E}[A Y \mid X] \right]
+\]</div>
+<p>利用全期望公式进一步分解内层项 <span class="arithmatex">\(\mathbb{E}[A Y \mid X]\)</span>，对干预变量 <span class="arithmatex">\(A \in \{0, 1\}\)</span> 的取值进行离散求和展开：</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y \mid X] = P(A=1 \mid X) \cdot \mathbb{E}[A Y \mid A=1, X] + P(A=0 \mid X) \cdot \mathbb{E}[A Y \mid A=0, X]
+\]</div>
+<p>由于当 <span class="arithmatex">\(A=1\)</span> 时 <span class="arithmatex">\(A Y = Y\)</span>，而当 <span class="arithmatex">\(A=0\)</span> 时 <span class="arithmatex">\(A Y = 0\)</span>，因此上式第二项完全消除。代入倾向性得分 <span class="arithmatex">\(P(A=1 \mid X) = e(X)\)</span> 得到：</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y \mid X] = e(X) \cdot \mathbb{E}[Y \mid A=1, X] + 0 = e(X) \cdot \mathbb{E}[Y \mid A=1, X]
+\]</div>
+<p>现在，我们将这个结果以另一种形式反向构造。注意到 <span class="arithmatex">\(A\)</span> 只能取 0 或 1，如果我们在期望内部用 <span class="arithmatex">\(\mathbb{E}[Y \mid A=1, X]\)</span> 这一条件期望函数（它是关于 <span class="arithmatex">\(X\)</span> 的确定性函数）去替换原本的随机变量 <span class="arithmatex">\(Y\)</span>，我们可以重新计算：</p>
+<div class="arithmatex">\[
+\mathbb{E}[A \cdot \mathbb{E}[Y \mid A=1, X] \mid X] = \mathbb{E}[Y \mid A=1, X] \cdot \mathbb{E}[A \mid X] = \mathbb{E}[Y \mid A=1, X] \cdot e(X)
+\]</div>
+<p>由于两侧在给定 <span class="arithmatex">\(X\)</span> 后的条件期望结果完全相等，即：</p>
+<div class="arithmatex">\[
+\mathbb{E}[A Y \mid X] = \mathbb{E}[A \cdot \mathbb{E}[Y \mid A=1, X] \mid X]
+\]</div>
+<p>将该恒等式代回最外层的 <span class="arithmatex">\(\mathbb{E}_X\)</span> 中，即可证得：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A Y}{e(X)} \right] = \mathbb{E}\left[ \frac{A \cdot \mathbb{E}[Y \mid A=1, X]}{e(X)} \right]
+\]</div>
+</details>
+<hr />
+<h2 id="7-standardization-g-formula">7. 标准化法（Standardization / G-Formula）</h2>
+<p>标准化法（又称条件回归外推法）是另一种识别 ATE 的基本方法。其直接对响应变量的回归表面 <span class="arithmatex">\(m(a, x) = \mathbb{E}[Y \mid A=a, X=x]\)</span> 进行建模。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 7.1 (标准化估计量)</p>
+<p>通过拟合观测回归模型 <span class="arithmatex">\(\hat{m}(a, x)\)</span>，全总体平均因果效应的标准化估计量为：</p>
+<div class="arithmatex">\[
+\widehat{\text{ATE}}_{\text{Std}} = \frac{1}{n} \sum_{i=1}^n \hat{m}(1, X_i) - \frac{1}{n} \sum_{i=1}^n \hat{m}(0, X_i)
+\]</div>
+</div>
+<ul>
+<li><strong>IPTW 与 Standardization 的哲学对比</strong>：</li>
+<li>IPTW 专注于干预分配模型（Exposure Model / Propensity Score），试图使两组的特征分布重新平衡。</li>
+<li>标准化法专注于结果响应模型（Outcome Model），通过对反事实进行直接的条件期望外推来求解。</li>
+</ul>
+<hr />
+<h2 id="8-marginal-structural-models-msm">8. 边际结构模型（Marginal Structural Models, MSM）</h2>
+<p>当我们需要分析连续型干预、多时点动态干预，或者想要对潜在结果施加参数化回归形式时，普通的 IPTW 无法直接使用。为此，我们引入边际结构模型（MSM）。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 8.1 (边际结构模型)</p>
+<p>边际结构模型是直接建立在<strong>潜在结果的边际期望</strong>上的模型。例如，对于二元或连续干预 <span class="arithmatex">\(A\)</span>，一个经典的线性 MSM 形式为：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^a] = \beta_0 + \beta_1 a
+\]</div>
+<p>这里的参数 <span class="arithmatex">\(\beta_1\)</span> 具有极其纯粹的因果含义：<span class="arithmatex">\(\beta_1 = \mathbb{E}[Y^1] - \mathbb{E}[Y^0] = \text{ATE}\)</span>。</p>
+</div>
+<h3 id="81">8.1 基于伪总体的加权最小二乘求解</h3>
+<p>在现实观测数据中，由于混杂因素的存在，若直接对真实观测值拟合 <span class="arithmatex">\(Y = \beta_0 + \beta_1 A + \epsilon\)</span>，得到的 <span class="arithmatex">\(\beta_1\)</span> 将带有偏置。MSM 通过求解如下<strong>加权最小二乘（Weighted Least Squares, WLS）</strong>问题来实现无偏估计：</p>
+<div class="arithmatex">\[
+\min_{\beta_0, \beta_1} \sum_{i=1}^n W_i \left( Y_i - \beta_0 - \beta_1 A_i \right)^2
+\]</div>
+<p>其中样本权重系数通常采用<strong>稳定权重（Stabilized Weights）</strong>：</p>
+<div class="arithmatex">\[
+W_i = \frac{P(A = A_i)}{\hat{e}(X_i)^{A_i} (1 - \hat{e}(X_i))^{1 - A_i}}
+\]</div>
+<hr />
+<h2 id="9-doubly-robust-estimation">9. 双重稳健估计（Doubly Robust Estimation）</h2>
+<p>为了结合倾向性得分模型与结果响应模型的各自优势，统计学家设计了双重稳健估计量（DR Estimator）。该估计量的最大特点是：只要倾向性得分模型与结果回归模型中<strong>至少有一个是正确的</strong>，因果效应的估计就是无偏的。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 9.1 (双重稳健估计量表达式)</p>
+<p>定义潜在结果 <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span> 的双重稳健估计算子如下：</p>
+<div class="arithmatex">\[
+\hat{\mu}_{\text{DR}}^1 = \frac{1}{n} \sum_{i=1}^n \left[ \frac{A_i Y_i}{\hat{e}(X_i)} - \frac{A_i - \hat{e}(X_i)}{\hat{e}(X_i)} \hat{m}(1, X_i) \right]
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">定理 9.1 (双重稳健性定理)</p>
+<p>若一致性、正值性与条件独立性成立，且当倾向性得分模型 <span class="arithmatex">\(e(X)\)</span> 设定正确 或 结果回归模型 <span class="arithmatex">\(m(1, X)\)</span> 设定正确时，<span class="arithmatex">\(\hat{\mu}_{\text{DR}}^1\)</span> 渐近无偏，即 <span class="arithmatex">\(\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}[Y^1]\)</span>。</p>
+</div>
+<details class="proof">
+<summary>证明：双重稳健估计量的双模型鲁棒性证明</summary>
+<p>我们将 DR 算子重写为如下更加直观的代数格式：</p>
+<div class="arithmatex">\[
+\hat{\mu}_{\text{DR}}^1 = \frac{1}{n} \sum_{i=1}^n \left[ \hat{m}(1, X_i) + \frac{A_i (Y_i - \hat{m}(1, X_i))}{\hat{e}(X_i)} \right]
+\]</div>
+<p>下面我们分两种最坏的情景分别论证其期望收敛到 <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span>：</p>
+<p><strong>情况 1：结果回归模型 <span class="arithmatex">\(\hat{m}\)</span> 设定完全正确，但倾向得分模型 <span class="arithmatex">\(\hat{e}\)</span> 设定错误。</strong></p>
+<p>此时，由于 <span class="arithmatex">\(\hat{m}(1, X) = \mathbb{E}[Y \mid A=1, X]\)</span> 完美成立。根据重叠期望定律，我们对其第二项算子关于 <span class="arithmatex">\((A, X)\)</span> 求条件期望：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A (Y - \hat{m}(1, X))}{\hat{e}(X)} \;\middle|\; A, X \right] = \frac{A}{\hat{e}(X)} \mathbb{E}[Y - \hat{m}(1, X) \mid A, X]
+\]</div>
+<p>当干预变量 <span class="arithmatex">\(A=1\)</span> 时：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y - \hat{m}(1, X) \mid A=1, X] = \mathbb{E}[Y \mid A=1, X] - \hat{m}(1, X) = 0
+\]</div>
+<p>当干预变量 <span class="arithmatex">\(A=0\)</span> 时，分子上的 <span class="arithmatex">\(A=0\)</span> 直接使得整项变为 0。</p>
+<p>因此，无论错误的 <span class="arithmatex">\(\hat{e}(X)\)</span> 取何值，第二项的期望值都恒为 0。整个式子的总体期望退化为：</p>
+<div class="arithmatex">\[
+\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}_X [\hat{m}(1, X)] + 0 = \mathbb{E}_X [ \mathbb{E}[Y^1 \mid X] ] = \mathbb{E}[Y^1]
+\]</div>
+<p><strong>情况 2：倾向得分模型 <span class="arithmatex">\(\hat{e}\)</span> 设定完全正确，但结果回归模型 <span class="arithmatex">\(\hat{m}\)</span> 设定错误。</strong></p>
+<p>此时 <span class="arithmatex">\(\hat{e}(X) = e(X) = P(A=1 \mid X)\)</span>。我们将原展开式按照真实期望展开：</p>
+<div class="arithmatex">\[
+\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}\left[ \hat{m}(1, X) \right] + \mathbb{E}\left[ \frac{A Y}{e(X)} \right] - \mathbb{E}\left[ \frac{A \hat{m}(1, X)}{e(X)} \right]
+\]</div>
+<p>根据前文第 6 节中推导出的 <strong>IPTW 对偶表示定理</strong>，最后一项可以平滑转化为：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ \frac{A \hat{m}(1, X)}{e(X)} \right] = \mathbb{E}_X \left[ \frac{\mathbb{E}[A \mid X] \hat{m}(1, X)}{e(X)} \right] = \mathbb{E}_X \left[ \frac{e(X) \hat{m}(1, X)}{e(X)} \right] = \mathbb{E}\left[ \hat{m}(1, X) \right]
+\]</div>
+<p>代回式中，我们可以发现第一项 <span class="arithmatex">\(\mathbb{E}\left[ \hat{m}(1, X) \right]\)</span> 与 third 项完全正负抵消：</p>
+<div class="arithmatex">\[
+\mathbb{E}[\hat{\mu}_{\text{DR}}^1] = \mathbb{E}\left[ \hat{m}(1, X) \right] + \mathbb{E}\left[ \frac{A Y}{e(X)} \right] - \mathbb{E}\left[ \hat{m}(1, X) \right] = \mathbb{E}\left[ \frac{A Y}{e(X)} \right]
+\]</div>
+<p>由于倾向性得分模型正确，利用 IPTW 识别定理，该项严格等于 <span class="arithmatex">\(\mathbb{E}[Y^1]\)</span>。</p>
+<p>综合两种情况，即证双重稳健性。</p>
+</details>
+<hr />
+<h2 id="10-g-g-estimation-of-structural-nested-models">10. G-估计（G-estimation of Structural Nested Models）</h2>
+<p>G-估计是针对结构嵌套模型（Structural Nested Models, SNM）的一种更高级的半参数因果推断技术，其核心思想是寻找使反事实结果与干预分配不相关的因果效应参数。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 10.1 (结构嵌套模型基本设定)</p>
+<p>考虑条件平均因果效应 CATE 具有如下参数化嵌套形式：</p>
+<div class="arithmatex">\[
+\mathbb{E}[Y^1 - Y^0 \mid A=1, X] = \psi \cdot X
+\]</div>
+<p>这意味着参数 <span class="arithmatex">\(\psi\)</span> 捕捉了协变量 <span class="arithmatex">\(X\)</span> 对因果效应的调节作用（交互效应）。</p>
+</div>
+<h3 id="101-estimating-equation">10.1 零因果关系估计方程（Estimating Equation）</h3>
+<p>为了解出未知因果参数 <span class="arithmatex">\(\psi\)</span>，根据条件独立性假设，<span class="arithmatex">\(Y^0 \perp \! \! \! \perp A \mid X\)</span>。这意味着反事实零状态结果 <span class="arithmatex">\(Y^0\)</span> 在控制 <span class="arithmatex">\(X\)</span> 后不应该对干预分配 <span class="arithmatex">\(A\)</span> 具有任何预测能力。</p>
+<p>我们可以为每个体构造其对应的反事实结果估计值：</p>
+<div class="arithmatex">\[
+H_i(\psi) = Y_i - A_i \cdot (\psi \cdot X_i)
+\]</div>
+<p>根据无忽略混杂假设，当 <span class="arithmatex">\(\psi\)</span> 取得真实值时，下述无相关性估计方程必须成立：</p>
+<div class="arithmatex">\[
+\mathbb{E}\left[ (A - e(X)) \cdot H(\psi) \;\middle|\; X \right] = 0
+\]</div>
+<p>通过在样本数据上建立对应的经验样本方程并令其等于 0：</p>
+<div class="arithmatex">\[
+\frac{1}{n} \sum_{i=1}^n (A_i - \hat{e}(X_i)) \cdot \left( Y_i - A_i \psi X_i \right) = 0
+\]</div>
+<h2 id="gee-psi">由此可直接通过解析闭式解（或拟合广义估计方程 GEE）精确反解出因果核心参数 <span class="arithmatex">\(\psi\)</span> 的无偏估计值。</h2>
+<h2 id="11-causal-diagrams">11. 因果图（Causal Diagrams）</h2>
+<p>前面 1--10 节主要采用潜在结果框架来定义因果量、说明识别假设，并给出标准化、IPTW、双重稳健估计与 G-估计等估计方法。从本节开始，我们引入另一套同样重要的语言：<strong>因果图（causal diagrams）</strong>。因果图的作用不是替代潜在结果，而是用图结构清晰表达变量之间的直接因果关系、混杂路径、碰撞点结构以及应当调整的协变量集合。</p>
+<div class="admonition info">
+<p class="admonition-title">本章后半部分的主线</p>
+<p>因果图部分的核心问题是：</p>
+<ol>
+<li>如何用有向图表达研究者关于因果结构的科学假设；</li>
+<li>如何从图中读出变量之间的统计独立性与条件独立性；</li>
+<li>如何判断暴露变量与结局变量之间是否存在混杂；</li>
+<li>如何用 <strong>d-separation</strong> 和 <strong>backdoor path criterion</strong> 找到足以控制混杂的调整集合。</li>
+</ol>
+</div>
+<h3 id="111">11.1 抗组胺药与哮喘的例子</h3>
+<p>考虑一个关于小学一年级儿童中<strong>抗组胺药使用</strong>与<strong>哮喘发生</strong>之间关系的假想研究。定义变量：</p>
+<p>air pollution level 记为 <span class="arithmatex">\(A\)</span>，sex 记为 <span class="arithmatex">\(B\)</span>，bronchial reactivity 记为 <span class="arithmatex">\(C\)</span>，asthma 记为 <span class="arithmatex">\(D\)</span>，antihistamine use 记为 <span class="arithmatex">\(E\)</span>。我们假设研究者掌握如下背景知识：</p>
+<ol>
+<li>空气污染水平 <span class="arithmatex">\(A\)</span> 与性别 <span class="arithmatex">\(B\)</span> 独立；</li>
+<li>性别 <span class="arithmatex">\(B\)</span> 对抗组胺药使用 <span class="arithmatex">\(E\)</span> 的影响只通过支气管反应性 <span class="arithmatex">\(C\)</span> 实现，但 <span class="arithmatex">\(B\)</span> 会直接影响哮喘风险 <span class="arithmatex">\(D\)</span>；</li>
+<li>工业空气污染 <span class="arithmatex">\(A\)</span> 只会通过抗组胺药使用 <span class="arithmatex">\(E\)</span> 与支气管反应性 <span class="arithmatex">\(C\)</span> 导致哮喘发作，不存在 <span class="arithmatex">\(A \to D\)</span> 的直接效应；</li>
+<li>除了性别 <span class="arithmatex">\(B\)</span>、支气管反应性 <span class="arithmatex">\(C\)</span> 与空气污染 <span class="arithmatex">\(A\)</span> 之外，没有其他重要混杂因素。</li>
+</ol>
+<p>上述假设可以用如下有向图表达：</p>
+<pre class="mermaid"><code>graph TD
+    A["A: air pollution"] --&gt; C["C: bronchial reactivity"]
+    B["B: sex"] --&gt; C
+    A --&gt; E["E: antihistamine"]
+    C --&gt; E
+    B --&gt; D["D: asthma"]
+    C --&gt; D
+    E --&gt; D</code></pre>
+<div class="admonition info">
+<p class="admonition-title">定义 11.1（图中的基本对象）</p>
+<p>在一个因果图中：</p>
+<ul>
+<li>表示变量的点称为<strong>顶点（vertices）</strong>或<strong>节点（nodes）</strong>；</li>
+<li>连接两个变量的线或箭头称为<strong>边（edges）</strong>或<strong>弧（arcs）</strong>；</li>
+<li>箭头 <span class="arithmatex">\(X \to Y\)</span> 表示从原因到结果的一个<strong>直接因果连接（direct causal link）</strong>，也就是说，<span class="arithmatex">\(X\)</span> 对 <span class="arithmatex">\(Y\)</span> 的这部分影响不通过图中的其他变量中介。</li>
+</ul>
+</div>
+<p>例如，<span class="arithmatex">\(A \to C\)</span> 表示空气污染 <span class="arithmatex">\(A\)</span> 对支气管反应性 <span class="arithmatex">\(C\)</span> 有直接因果效应；<span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(D\)</span> 之间没有箭头，表达的是“不存在 <span class="arithmatex">\(A \to D\)</span> 的直接因果效应”，即污染水平对哮喘的影响要通过 <span class="arithmatex">\(C\)</span> 或 <span class="arithmatex">\(E\)</span> 等中间变量发生。</p>
+<h3 id="112">11.2 路径、祖先、父节点与子节点</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 11.2（路径与截断）</p>
+<p>一个由若干条边连接起来的节点序列称为一条<strong>路径（path）</strong>。如果路径中的某个中间节点位于这条路径上，则称该节点<strong>截断（intercept）</strong>这条路径。</p>
+<p>例如，<span class="arithmatex">\(C\)</span> 截断路径</p>
+<div class="arithmatex">\[
+A - C - D
+\]</div>
+<p>以及路径</p>
+<div class="arithmatex">\[
+E - C - D.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">定义 11.3（祖先、后代、父节点与子节点）</p>
+<p>若从 <span class="arithmatex">\(X\)</span> 出发存在一条有向路径指向 <span class="arithmatex">\(Y\)</span>，则称 <span class="arithmatex">\(X\)</span> 是 <span class="arithmatex">\(Y\)</span> 的<strong>祖先（ancestor）</strong>或原因，称 <span class="arithmatex">\(Y\)</span> 是 <span class="arithmatex">\(X\)</span> 的<strong>后代（descendant）</strong>。</p>
+<p>若存在一条单箭头边</p>
+<div class="arithmatex">\[
+X \to Y,
+\]</div>
+<p>则称 <span class="arithmatex">\(X\)</span> 是 <span class="arithmatex">\(Y\)</span> 的<strong>父节点（parent）</strong>，称 <span class="arithmatex">\(Y\)</span> 是 <span class="arithmatex">\(X\)</span> 的<strong>子节点（child）</strong>。</p>
+</div>
+<p>在上面的哮喘 DAG 中，<span class="arithmatex">\(A,B,C\)</span> 都是 <span class="arithmatex">\(E,D\)</span> 的祖先；<span class="arithmatex">\(E,D\)</span> 是 <span class="arithmatex">\(A,B,C\)</span> 的后代。<span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(C\)</span> 是 <span class="arithmatex">\(E\)</span> 的父节点，<span class="arithmatex">\(E\)</span> 是 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(C\)</span> 的子节点。<span class="arithmatex">\(C\)</span> 与 <span class="arithmatex">\(E\)</span> 是 <span class="arithmatex">\(D\)</span> 的父节点，<span class="arithmatex">\(D\)</span> 是 <span class="arithmatex">\(C\)</span> 与 <span class="arithmatex">\(E\)</span> 的子节点。</p>
+<h3 id="113">11.3 后门路径、碰撞点与阻断路径</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 11.4（后门路径 Backdoor Path）</p>
+<p>连接 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 的一条路径如果在 <span class="arithmatex">\(X\)</span> 端有箭头指向 <span class="arithmatex">\(X\)</span>，则称为从 <span class="arithmatex">\(X\)</span> 到 <span class="arithmatex">\(Y\)</span> 的一条<strong>后门路径（backdoor path）</strong>。</p>
+<p>换言之，若我们关心 <span class="arithmatex">\(X\)</span> 对 <span class="arithmatex">\(Y\)</span> 的因果效应，那么以</p>
+<div class="arithmatex">\[
+X \leftarrow \cdots \cdots Y
+\]</div>
+<p>形式开始的路径就是后门路径。它不是从 <span class="arithmatex">\(X\)</span> 发出的因果路径，而是可能反映了 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 的共同原因，从而带来混杂。</p>
+</div>
+<p>在上述图中，如果关心抗组胺药 <span class="arithmatex">\(E\)</span> 对哮喘 <span class="arithmatex">\(D\)</span> 的因果效应，除直接路径</p>
+<div class="arithmatex">\[
+E \to D
+\]</div>
+<p>之外，从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(D\)</span> 的其他路径都属于后门路径，例如：</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow C \leftarrow B \to D,
+\]</div>
+<p>以及</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">定义 11.5（碰撞点 Collider）</p>
+<p>若一条路径进入某个节点 <span class="arithmatex">\(X\)</span> 时带有箭头头部，离开该节点时也带有箭头头部，即局部结构形如</p>
+<div class="arithmatex">\[
+U \to X \leftarrow V,
+\]</div>
+<p>则称这条路径在 <span class="arithmatex">\(X\)</span> 处<strong>碰撞（collide）</strong>，并称 <span class="arithmatex">\(X\)</span> 是这条路径上的<strong>碰撞点（collider）</strong>。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">定义 11.6（阻断与非阻断路径）</p>
+<p>在不调整任何变量时，如果一条路径上含有至少一个碰撞点，则这条路径称为<strong>被阻断（blocked）</strong>；如果路径上不含碰撞点，则称为<strong>非阻断（unblocked）</strong>。</p>
+</div>
+<p>在哮喘 DAG 中：</p>
+<ul>
+<li>后门路径</li>
+</ul>
+<p><span class="arithmatex">\(E \leftarrow A \to C \leftarrow B \to D\)</span></p>
+<p>在 <span class="arithmatex">\(C\)</span> 处形成碰撞结构 <span class="arithmatex">\(A \to C \leftarrow B\)</span>，因此该路径被 <span class="arithmatex">\(C\)</span> 阻断；</p>
+<ul>
+<li>后门路径</li>
+</ul>
+<p><span class="arithmatex">\(E \leftarrow A \to C \to D\)</span></p>
+<p>不包含碰撞点，因此是非阻断路径；</p>
+<ul>
+<li>后门路径</li>
+</ul>
+<p><span class="arithmatex">\(E \leftarrow C \to D\)</span></p>
+<p>不包含碰撞点，因此也是非阻断路径。</p>
+<hr />
+<h2 id="12-directed-acyclic-graph-dag">12. 有向无环图（Directed Acyclic Graph, DAG）</h2>
+<h3 id="121-dag">12.1 DAG 的定义</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 12.1（有向无环图 DAG）</p>
+<p>一个图称为<strong>有向无环图（Directed Acyclic Graph, DAG）</strong>，如果它满足：</p>
+<ol>
+<li><strong>Directed</strong>：所有边都是有方向的箭头；</li>
+<li><strong>Acyclic</strong>：不存在任何由有向路径构成的闭合环路。</li>
+</ol>
+<p>在因果语境下，一条有向路径</p>
+<div class="arithmatex">\[
+X \to \cdots \to Y
+\]</div>
+<p>表示从 <span class="arithmatex">\(X\)</span> 到 <span class="arithmatex">\(Y\)</span> 的因果路径。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">定义 12.2（因果 DAG）</p>
+<p>一个 DAG 称为<strong>因果 DAG（causal DAG）</strong>，如果图中任意一对变量的所有共同原因都已经包含在图中。</p>
+<p>注意：研究者不需要把所有现实世界变量都放入 DAG 中；只需要包含与研究问题有关的变量，以及变量对之间的重要共同原因。</p>
+</div>
+<h3 id="122-dag">12.2 DAG 的非参数性与因果含义</h3>
+<p>DAG 本身是<strong>非参数的（nonparametric）</strong>。它不规定变量之间的函数形式，也不假设线性模型、正态性或方差齐性。它只编码如下结构性信息：</p>
+<ol>
+<li>哪些变量之间存在直接因果连接；</li>
+<li>哪些变量之间不存在直接因果连接；</li>
+<li>哪些路径可能产生统计关联；</li>
+<li>哪些路径可能产生混杂。</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">命题 12.1（有向路径与因果效应）</p>
+<p>若图中不存在从 <span class="arithmatex">\(X\)</span> 到 <span class="arithmatex">\(Y\)</span> 的有向路径，则在该因果 DAG 所表达的结构假设下，<span class="arithmatex">\(X\)</span> 对 <span class="arithmatex">\(Y\)</span> 不存在因果效应。</p>
+<p>例如，如果 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 之间不存在任何从 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(B\)</span> 的有向路径，则 <span class="arithmatex">\(A\)</span> 对 <span class="arithmatex">\(B\)</span> 没有因果效应。进一步地，如果不存在路径 <span class="arithmatex">\(A \to \cdots \to B \to \cdots \to D\)</span>，那么 <span class="arithmatex">\(A\)</span> 也不可能通过 <span class="arithmatex">\(B\)</span> 对 <span class="arithmatex">\(D\)</span> 产生因果效应。</p>
+</div>
+<h3 id="123-dag">12.3 DAG 编码的统计独立性</h3>
+<p>图不仅表达因果结构，也会编码变量之间的统计独立性。直观地说：如果两个变量之间没有非阻断路径，那么它们在统计上应该独立。</p>
+<p>在哮喘 DAG 中，<span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 没有边相连，且它们之间的路径</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B
+\]</div>
+<p>在 <span class="arithmatex">\(C\)</span> 处是碰撞点，所以边际上被阻断。因此 DAG 表达了</p>
+<div class="arithmatex">\[
+A \perp\!\!\!\perp B.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">命题 12.2（变量统计相关的两个主要来源）</p>
+<p>在因果 DAG 中，两个变量产生统计依赖通常只有两个原因：</p>
+<ol>
+<li>二者共享共同原因，即存在混杂路径；</li>
+<li>一个变量是另一个变量的原因，或二者之间存在有向因果路径。</li>
+</ol>
+</div>
+<h3 id="124-markov">12.4 Markov 分解公式</h3>
+<p>DAG 最重要的数学内容之一是它给出了联合分布的分解方式。设 <span class="arithmatex">\(pa(V)\)</span> 表示节点 <span class="arithmatex">\(V\)</span> 的父节点集合。在一个 DAG 上，联合密度可以分解为每个节点在其父节点条件下的条件密度乘积。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 12.1（DAG 的 Markov 分解）</p>
+<p>设变量集合为 <span class="arithmatex">\(V_1,\dots,V_p\)</span>，其因果结构由一个 DAG <span class="arithmatex">\(G\)</span> 描述。若联合分布服从该 DAG 的 Markov 性，则有：</p>
+<div class="arithmatex">\[
+f(v_1,\dots,v_p)=\prod_{j=1}^p f\bigl(v_j\mid pa(v_j)\bigr).
+\]</div>
+</div>
+<p>对于哮喘例子，父节点集合为</p>
+<div class="arithmatex">\[
+pa(A)=\varnothing,\quad pa(B)=\varnothing,
+\]</div>
+<div class="arithmatex">\[
+pa(C)=\{A,B\},\quad pa(E)=\{A,C\},\quad pa(D)=\{B,C,E\}.
+\]</div>
+<p>因此联合密度分解为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(A,E,C,B,D)
+&amp;= f(D\mid B,C,E) f(C\mid A,B) f(E\mid A,C) f(A) f(B) \\
+&amp;= f(D\mid pa(D)) f(C\mid pa(C)) f(E\mid pa(E)) f(A\mid pa(A)) f(B\mid pa(B)).
+\end{aligned}
+\]</div>
+<details class="proof">
+<summary>证明：哮喘 DAG 的 Markov 分解</summary>
+<p>对任意五个变量，概率链式法则给出</p>
+<div class="arithmatex">\[
+f(A,E,C,B,D)
+= f(D\mid A,E,C,B) f(E\mid A,C,B) f(C\mid A,B) f(A\mid B) f(B).
+\]</div>
+<p>DAG 的局部 Markov 性说明：每个节点在给定其父节点后，与其非后代变量条件独立。</p>
+<p>对 <span class="arithmatex">\(D\)</span> 而言，其父节点为 <span class="arithmatex">\(B,C,E\)</span>。给定 <span class="arithmatex">\(B,C,E\)</span> 后，<span class="arithmatex">\(D\)</span> 不再需要额外条件 <span class="arithmatex">\(A\)</span>：</p>
+<div class="arithmatex">\[
+f(D\mid A,E,C,B)=f(D\mid B,C,E).
+\]</div>
+<p>对 <span class="arithmatex">\(E\)</span> 而言，其父节点为 <span class="arithmatex">\(A,C\)</span>。给定 <span class="arithmatex">\(A,C\)</span> 后，<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(B\)</span> 条件独立：</p>
+<div class="arithmatex">\[
+f(E\mid A,C,B)=f(E\mid A,C).
+\]</div>
+<p>对 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 而言，二者均没有父节点，并且边际独立，因此</p>
+<div class="arithmatex">\[
+f(A\mid B)=f(A).
+\]</div>
+<p>代回链式分解可得</p>
+<div class="arithmatex">\[
+f(A,E,C,B,D)
+= f(D\mid B,C,E) f(E\mid A,C) f(C\mid A,B) f(A) f(B).
+\]</div>
+<p>即证。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="125-dag">12.5 DAG 中的两类非阻断路径</h3>
+<p>在一个 DAG 中，两个变量之间的非阻断路径主要有两种：</p>
+<ol>
+<li><strong>有向路径（directed path）</strong>：例如</li>
+</ol>
+<p><span class="arithmatex">\(E \to D.\)</span></p>
+<p>这种路径表示关联至少部分来自因果效应；结果变量是原因变量的后代。</p>
+<ol>
+<li><strong>通过共同祖先形成的后门路径（backdoor path through a shared ancestor）</strong>：例如</li>
+</ol>
+<p><span class="arithmatex">\(E \leftarrow C \to D.\)</span></p>
+<p>这种路径表示关联至少部分来自混杂。</p>
+<p>当然，二者可以同时存在。例如在哮喘 DAG 中，<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span> 之间既有直接因果路径</p>
+<div class="arithmatex">\[
+E \to D,
+\]</div>
+<p>也有若干后门路径，如</p>
+<div class="arithmatex">\[
+E \leftarrow C \to D,
+\quad
+E \leftarrow A \to C \to D,
+\quad
+E \leftarrow C \leftarrow B \to D.
+\]</div>
+<h3 id="126">12.6 阻断路径与边际关联的关系</h3>
+<p>需要特别注意：一条非阻断路径的存在只表示两个变量<strong>可以相关</strong>，但不保证它们一定相关。多个路径的作用可能相互抵消。例如，<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span> 之间的三条后门路径和直接路径可能在数值上抵消，从而导致边际上观察不到 <span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span> 的关联。</p>
+<p>另一方面，被阻断路径的存在与否不应影响变量之间的边际关联。特别是对于碰撞点结构</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B,
+\]</div>
+<p><span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 作为同一结果 <span class="arithmatex">\(C\)</span> 的两个原因，其边际关联在 <span class="arithmatex">\(C\)</span> 发生之前已经确定，不应由其共同结果 <span class="arithmatex">\(C\)</span> 的后果改变。</p>
+<hr />
+<h2 id="13-dag-dags-and-confounding">13. DAG 与混杂（DAGs and Confounding）</h2>
+<h3 id="131">13.1 混杂的图论定义</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 13.1（混杂 Confounding）</p>
+<p>当研究暴露组与对照组在结局变量的概率分布上存在差异，而这种差异并非由暴露本身的因果效应造成时，就称存在<strong>混杂（confounding）</strong>。</p>
+<p>这种非因果差异通常来自外部变量的影响，这些外部变量称为<strong>混杂变量（confounders）</strong>。</p>
+</div>
+<p>更图论化地说：若即使移除、阻止或屏蔽所有暴露变量对结局变量的因果效应后，暴露变量与结局变量仍然相关，则说明存在混杂。</p>
+<h3 id="132-dag">13.2 在 DAG 中检查混杂的算法</h3>
+<p>假设我们关心暴露 <span class="arithmatex">\(E\)</span> 对疾病或结局 <span class="arithmatex">\(D\)</span> 的因果效应。判断是否存在混杂可以使用如下图算法。</p>
+<div class="admonition success">
+<p class="admonition-title">算法 13.1（DAG 中混杂的检查）</p>
+<ol>
+<li>删除所有从暴露变量 <span class="arithmatex">\(E\)</span> 发出的箭头，即删除所有暴露效应；</li>
+<li>在新的图中，检查从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(D\)</span> 是否仍然存在非阻断路径。</li>
+</ol>
+<p>若删除暴露效应后，<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span> 之间仍有非阻断路径，则说明在零因果效应假设下，<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span> 仍会相关，因此存在混杂。</p>
+</div>
+<p>该算法的统计含义是：在没有 <span class="arithmatex">\(E \to D\)</span> 因果效应的世界里，<span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span> 是否还会由于共同原因而相关？如果会，则这种相关性就是混杂。</p>
+<p>需要注意，疾病 <span class="arithmatex">\(D\)</span> 的后果在该算法中不起关键作用。因为任何从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(D\)</span>、再通过 <span class="arithmatex">\(D\)</span> 的后代返回的路径，都必须经过碰撞点，因此通常会被阻断。</p>
+<h3 id="133-dag">13.3 哮喘 DAG 中的潜在混杂变量</h3>
+<p>对于哮喘 DAG，若研究 <span class="arithmatex">\(E\)</span> 对 <span class="arithmatex">\(D\)</span> 的效应，删除 <span class="arithmatex">\(E \to D\)</span> 后，仍存在多条从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(D\)</span> 的非阻断后门路径：</p>
+<div class="arithmatex">\[
+E \leftarrow C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow A \to C \to D,
+\]</div>
+<div class="arithmatex">\[
+E \leftarrow C \leftarrow B \to D.
+\]</div>
+<p>因此，<span class="arithmatex">\(A,C,B\)</span> 都是潜在混杂变量。自然的问题是：是否只要调整所有看起来像混杂变量的变量，就一定能控制混杂？答案是否定的，因为对碰撞点的调整可能反而打开原本被阻断的路径。</p>
+<h3 id="134-c">13.4 条件化调整的陷阱：只调整 <span class="arithmatex">\(C\)</span> 为什么不够？</h3>
+<p>一种传统思路是：只要对潜在混杂变量进行条件化即可。对哮喘 DAG 来说：</p>
+<ul>
+<li>
+<p>若只调整 <span class="arithmatex">\(A\)</span>，路径 <span class="arithmatex">\(E \leftarrow A \to C \to D\)</span> 被阻断，但 <span class="arithmatex">\(E \leftarrow C \to D\)</span> 与 <span class="arithmatex">\(E \leftarrow C \leftarrow B \to D\)</span> 仍然非阻断；</p>
+</li>
+<li>
+<p>若只调整 <span class="arithmatex">\(B\)</span>，路径 <span class="arithmatex">\(E \leftarrow C \leftarrow B \to D\)</span> 被阻断，但 <span class="arithmatex">\(E \leftarrow C \to D\)</span> 与 <span class="arithmatex">\(E \leftarrow A \to C \to D\)</span> 仍然非阻断；</p>
+</li>
+<li>
+<p>若只调整 <span class="arithmatex">\(C\)</span>，看起来似乎能阻断</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(
+  E \leftarrow A \to C \to D,
+  \quad
+  E \leftarrow C \leftarrow B \to D,
+  \quad
+  E \leftarrow C \to D.\)</span></p>
+<p>但问题在于：<span class="arithmatex">\(C\)</span> 同时也是 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 的共同结果，即存在碰撞结构</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B.
+\]</div>
+<p>对碰撞点 <span class="arithmatex">\(C\)</span> 条件化会在 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 之间诱导关联，从而打开原本被阻断的路径</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<p>更直观地说，调整 <span class="arithmatex">\(C\)</span> 后，<span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 在 <span class="arithmatex">\(C\)</span> 的层内不再独立，而 <span class="arithmatex">\(B\)</span> 又直接影响 <span class="arithmatex">\(D\)</span>，于是形成了从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(D\)</span> 的新后门路径。</p>
+<h3 id="135">13.5 数值例子：条件化碰撞点会诱导关联</h3>
+<p>考虑如下三维列联表。行表示 <span class="arithmatex">\(C\)</span> 的取值，列按 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 分组：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=1,B=1\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=1,B=0\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=0,B=1\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(A=0,B=0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(C=1\)</span></td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">200</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(C=0\)</span></td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">800</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">1000</td>
+</tr>
+</tbody>
+</table>
+<p>由总计数可得</p>
+<div class="arithmatex">\[
+\Pr(A=1\mid B)=\Pr(A=1)=\Pr(B=1\mid A)=\Pr(B=1)=0.5.
+\]</div>
+<p>因此 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 边际独立。进一步，</p>
+<div class="arithmatex">\[
+\Pr(C=1\mid A=1,B)-\Pr(C=1\mid A=0,B)=0.4,
+\]</div>
+<p>并且</p>
+<div class="arithmatex">\[
+\Pr(C=1\mid A,B=1)-\Pr(C=1\mid A,B=0)=0.2.
+\]</div>
+<p>这与局部结构</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B
+\]</div>
+<p>一致：<span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 都会影响 <span class="arithmatex">\(C\)</span>。</p>
+<p>但是，在 <span class="arithmatex">\(C\)</span> 的层内，<span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 不再独立。以条件优势比为例：</p>
+<p>当 <span class="arithmatex">\(C=1\)</span> 时，</p>
+<div class="arithmatex">\[
+OR_{AB\mid C=1}
+=\frac{800\times 200}{600\times 400}
+=\frac{2}{3}\neq 1.
+\]</div>
+<p>当 <span class="arithmatex">\(C=0\)</span> 时，</p>
+<div class="arithmatex">\[
+OR_{AB\mid C=0}
+=\frac{200\times 800}{400\times 600}
+=\frac{2}{3}\neq 1.
+\]</div>
+<p>这说明虽然边际上 <span class="arithmatex">\(A \perp\!\!\!\perp B\)</span>，但在给定 <span class="arithmatex">\(C\)</span> 后，一般有</p>
+<div class="arithmatex">\[
+A \not\perp\!\!\!\perp B\mid C.
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">碰撞点调整规则</p>
+<p>如果 <span class="arithmatex">\(C\)</span> 是 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 的共同结果，即</p>
+<div class="arithmatex">\[
+A \to C \leftarrow B,
+\]</div>
+<p>那么 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 在给定 <span class="arithmatex">\(C\)</span> 的层内的关联通常会不同于二者的边际关联。特别地，即使 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 边际独立，条件化 <span class="arithmatex">\(C\)</span> 也可能诱导 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 的条件相关。</p>
+</div>
+<h3 id="136-dag">13.6 回到原 DAG：应该调整什么？</h3>
+<p>回到哮喘 DAG，对 <span class="arithmatex">\(C\)</span> 条件化可能打开路径</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<p>因此，<strong>仅仅调整 <span class="arithmatex">\(A\)</span>、仅仅调整 <span class="arithmatex">\(B\)</span> 或仅仅调整 <span class="arithmatex">\(C\)</span> 都不足以控制混杂</strong>。</p>
+<p>然而，如果调整 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(C\)</span>，则：</p>
+<ul>
+<li><span class="arithmatex">\(C\)</span> 阻断 <span class="arithmatex">\(E \leftarrow C \to D\)</span>；</li>
+<li><span class="arithmatex">\(C\)</span> 阻断 <span class="arithmatex">\(E \leftarrow C \leftarrow B \to D\)</span>；</li>
+<li><span class="arithmatex">\(A\)</span> 阻断由调整 <span class="arithmatex">\(C\)</span> 打开的 <span class="arithmatex">\(E \leftarrow A \to C \leftarrow B \to D\)</span>。</li>
+</ul>
+<p>因此</p>
+<div class="arithmatex">\[
+S=\{A,C\}
+\]</div>
+<p>是一个充分调整集合。</p>
+<p>同理，如果调整 <span class="arithmatex">\(B\)</span> 与 <span class="arithmatex">\(C\)</span>，则 <span class="arithmatex">\(B\)</span> 会阻断由调整 <span class="arithmatex">\(C\)</span> 打开的通过 <span class="arithmatex">\(B\)</span> 的路径，因此</p>
+<div class="arithmatex">\[
+S=\{B,C\}
+\]</div>
+<p>也是一个充分调整集合。</p>
+<h3 id="137">13.7 另一个反例：不该调整碰撞点</h3>
+<p>考虑如下 DAG：</p>
+<pre class="mermaid"><code>graph TD
+    A["A"] --&gt; E["E"]
+    A --&gt; C["C"]
+    B["B"] --&gt; C
+    B --&gt; D["D"]</code></pre>
+<p>如果研究 <span class="arithmatex">\(E\)</span> 对 <span class="arithmatex">\(D\)</span> 的效应，唯一的后门路径是</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D.
+\]</div>
+<p>该路径在 <span class="arithmatex">\(C\)</span> 处是碰撞点，所以在不调整 <span class="arithmatex">\(C\)</span> 时是阻断的。因此该 DAG 下不存在混杂。</p>
+<p>但是，传统经验可能会认为：<span class="arithmatex">\(C\)</span> 与 <span class="arithmatex">\(E\)</span> 相关，且 <span class="arithmatex">\(C\)</span> 在给定 <span class="arithmatex">\(E\)</span> 后也与 <span class="arithmatex">\(D\)</span> 相关，于是把 <span class="arithmatex">\(C\)</span> 当成潜在混杂变量来调整。这样做反而会打开碰撞点路径</p>
+<div class="arithmatex">\[
+E \leftarrow A \to C \leftarrow B \to D,
+\]</div>
+<p>使 <span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span> 之间出现人为诱导的非因果关联。</p>
+<div class="admonition danger">
+<p class="admonition-title">重要结论</p>
+<p>不是所有与暴露和结局都相关的变量都应该调整。若一个变量是碰撞点或碰撞点的后代，对其条件化可能引入选择偏差或碰撞偏差（collider bias）。</p>
+</div>
+<hr />
+<h2 id="14-d-d-separation">14. d-分离（d-separation）</h2>
+<p>前面关于“路径是否被阻断”的讨论可以统一为一个图论概念：<strong>d-separation</strong>。它是从 DAG 读出条件独立性的核心规则。</p>
+<h3 id="141-trail-d-">14.1 trail 的 d-分离定义</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 14.1（trail 被集合阻断 / d-separated）</p>
+<p>设 <span class="arithmatex">\(G\)</span> 是一个 DAG。若 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(Y\)</span> 之间的一条 trail 被一个与 <span class="arithmatex">\(\{A,Y\}\)</span> 不相交的节点集合 <span class="arithmatex">\(B\)</span> 阻断，则称这条 trail 被 <span class="arithmatex">\(B\)</span> <strong>d-separated</strong> 或 <strong>blocked</strong>。</p>
+<p>具体地，若满足以下任一条件，则该 trail 被 <span class="arithmatex">\(B\)</span> 阻断：</p>
+<ol>
+<li>该 trail 含有一个碰撞点 <span class="arithmatex">\(C\)</span>，且 <span class="arithmatex">\(C\)</span> 及其任意后代都不在 <span class="arithmatex">\(B\)</span> 中；</li>
+<li>该 trail 含有一个 chain 或 fork 结构，并且其中的中间节点属于 <span class="arithmatex">\(B\)</span>。</li>
+</ol>
+</div>
+<p>这里的三种基本局部结构为：</p>
+<ol>
+<li>chain：</li>
+</ol>
+<p><span class="arithmatex">\(
+   X \to Z \to Y
+   \quad\text{或}\quad
+   X \leftarrow Z \leftarrow Y;
+   \)</span></p>
+<ol>
+<li>fork：</li>
+</ol>
+<p><span class="arithmatex">\(
+   X \leftarrow Z \to Y;
+   \)</span></p>
+<ol>
+<li>collider：</li>
+</ol>
+<p><span class="arithmatex">\(
+   X \to Z \leftarrow Y.
+   \)</span></p>
+<p>其中，对 chain 或 fork 的中间节点 <span class="arithmatex">\(Z\)</span> 条件化会阻断路径；对 collider <span class="arithmatex">\(Z\)</span> 或其后代条件化则会打开路径。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 14.2（两个节点被集合 d-separated）</p>
+<p>若 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(Y\)</span> 之间的所有 trail 都被节点集合 <span class="arithmatex">\(B\)</span> d-separated，则称节点 <span class="arithmatex">\(A\)</span> 与节点 <span class="arithmatex">\(Y\)</span> 被 <span class="arithmatex">\(B\)</span> 在 DAG <span class="arithmatex">\(G\)</span> 中 d-separated 或 blocked。</p>
+<p>记号上可写作</p>
+<div class="arithmatex">\[
+(A \perp\!\!\!\perp Y\mid B)_G.
+\]</div>
+<p>这个记号表示的是<strong>图上的 d-分离关系</strong>，不要与概率论中的条件独立</p>
+<div class="arithmatex">\[
+A \perp\!\!\!\perp Y\mid B
+\]</div>
+<p>混淆。前者是图论性质，后者是分布性质。若分布满足 DAG 的 Markov 性，则图上的 d-分离通常蕴含分布中的条件独立。</p>
+</div>
+<h3 id="142-d-">14.2 变量集合之间的 d-分离</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 14.3（变量集合之间的 d-separation）</p>
+<p>若 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(Y\)</span> 中至少一个是节点集合，并且 <span class="arithmatex">\(A,Y,B\)</span> 两两不交，则称集合 <span class="arithmatex">\(A\)</span> 与集合 <span class="arithmatex">\(Y\)</span> 被集合 <span class="arithmatex">\(B\)</span> d-separated，当且仅当 <span class="arithmatex">\(B\)</span> 在 <span class="arithmatex">\(G\)</span> 中 d-separates <span class="arithmatex">\(A\)</span> 中每一个节点与 <span class="arithmatex">\(Y\)</span> 中每一个节点。</p>
+</div>
+<p>因此，<span class="arithmatex">\(B\)</span> d-separates 两组变量 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(Y\)</span>，可以理解为同时满足：</p>
+<ol>
+<li>每条从 <span class="arithmatex">\(A\)</span> 到 <span class="arithmatex">\(Y\)</span> 的原始非阻断路径都被 <span class="arithmatex">\(B\)</span> 中某个变量截断；</li>
+<li>每条由于调整 <span class="arithmatex">\(B\)</span> 中变量而新打开的路径，也被 <span class="arithmatex">\(B\)</span> 中其他变量截断。</li>
+</ol>
+<p>若两个节点或变量集合没有被 d-separated，则称它们是 <strong>d-connected</strong> 或 <strong>unblocked</strong>。</p>
+<h3 id="143-d-separation">14.3 d-separation 与条件独立的关系</h3>
+<div class="admonition success">
+<p class="admonition-title">定理 14.1（全局 Markov 性）</p>
+<p>若联合分布 <span class="arithmatex">\(P\)</span> 对 DAG <span class="arithmatex">\(G\)</span> 满足 Markov 性，并且节点集合 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(Y\)</span> 被 <span class="arithmatex">\(B\)</span> d-separated，即</p>
+<div class="arithmatex">\[
+(A \perp\!\!\!\perp Y\mid B)_G,
+\]</div>
+<p>则在分布 <span class="arithmatex">\(P\)</span> 下有条件独立关系</p>
+<div class="arithmatex">\[
+A \perp\!\!\!\perp Y\mid B.
+\]</div>
+</div>
+<details class="proof">
+<summary>证明思路：为什么 d-separation 蕴含条件独立</summary>
+<p>DAG 的 Markov 分解说明联合密度可以写成</p>
+<div class="arithmatex">\[
+f(v_1,\dots,v_p)=\prod_{j=1}^p f(v_j\mid pa(v_j)).
+\]</div>
+<p>这个分解使得每个节点在给定父节点后与非后代节点条件独立。d-separation 的三条局部规则正是对如下三类基本分解的推广：</p>
+<p><strong>1. Chain 结构</strong> <span class="arithmatex">\(X\to Z\to Y\)</span>：</p>
+<div class="arithmatex">\[
+f(x,z,y)=f(x)f(z\mid x)f(y\mid z).
+\]</div>
+<p>给定 <span class="arithmatex">\(Z\)</span> 后，</p>
+<div class="arithmatex">\[
+f(x,y\mid z)=f(x\mid z)f(y\mid z),
+\]</div>
+<p>所以</p>
+<div class="arithmatex">\[
+X\perp\!\!\!\perp Y\mid Z.
+\]</div>
+<p><strong>2. Fork 结构</strong> <span class="arithmatex">\(X\leftarrow Z\to Y\)</span>：</p>
+<div class="arithmatex">\[
+f(x,z,y)=f(z)f(x\mid z)f(y\mid z).
+\]</div>
+<p>给定共同原因 <span class="arithmatex">\(Z\)</span> 后，</p>
+<div class="arithmatex">\[
+f(x,y\mid z)=f(x\mid z)f(y\mid z),
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
+X\perp\!\!\!\perp Y\mid Z.
+\]</div>
+<p><strong>3. Collider 结构</strong> <span class="arithmatex">\(X\to Z\leftarrow Y\)</span>：</p>
+<div class="arithmatex">\[
+f(x,z,y)=f(x)f(y)f(z\mid x,y).
+\]</div>
+<p>不给定 <span class="arithmatex">\(Z\)</span> 时，对 <span class="arithmatex">\(Z\)</span> 积分或求和：</p>
+<div class="arithmatex">\[
+f(x,y)=\sum_z f(x)f(y)f(z\mid x,y)=f(x)f(y),
+\]</div>
+<p>所以边际上</p>
+<div class="arithmatex">\[
+X\perp\!\!\!\perp Y.
+\]</div>
+<p>但是给定 <span class="arithmatex">\(Z\)</span> 后，通常有</p>
+<div class="arithmatex">\[
+f(x,y\mid z)=\frac{f(x)f(y)f(z\mid x,y)}{f(z)},
+\]</div>
+<p>该式一般不能分解为 <span class="arithmatex">\(f(x\mid z)f(y\mid z)\)</span>，因此条件化碰撞点会打开路径。</p>
+<p>一般 DAG 上的 d-separation 定理可以看作上述三类局部结构在任意长 trail 上的递归拼接。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="15-backdoor-path-criterion">15. 后门路径准则（Backdoor Path Criterion）</h2>
+<h3 id="151">15.1 控制混杂的充分集合</h3>
+<p>前面已经看到，混杂控制不是“看到相关变量就调整”，而是要调整一个能阻断所有后门路径、且不会引入新偏差的集合。Pearl 的后门路径准则给出了一个图论化的充分条件。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 15.1（后门路径准则 Backdoor Path Criterion）</p>
+<p>给定一个 DAG，设暴露变量为 <span class="arithmatex">\(E\)</span>，结局变量为 <span class="arithmatex">\(D\)</span>。变量集合 <span class="arithmatex">\(S\)</span> 足以控制 <span class="arithmatex">\(E\)</span> 对 <span class="arithmatex">\(D\)</span> 的混杂，如果满足：</p>
+<ol>
+<li><span class="arithmatex">\(S\)</span> 中不包含 <span class="arithmatex">\(E\)</span> 的任何后代；</li>
+<li>在删除所有从 <span class="arithmatex">\(E\)</span> 发出的箭头之后得到的新图中，<span class="arithmatex">\(S\)</span> d-separates <span class="arithmatex">\(E\)</span> 与 <span class="arithmatex">\(D\)</span>。</li>
+</ol>
+<p>等价地说，<span class="arithmatex">\(S\)</span> 必须阻断所有从 <span class="arithmatex">\(E\)</span> 到 <span class="arithmatex">\(D\)</span> 的后门路径，同时不能通过调整暴露的后代来引入新的选择偏差或中介偏差。</p>
+</div>
+<p>对于哮喘例子，后门准则给出两个充分调整集合：</p>
+<div class="arithmatex">\[
+S_1=\{A,C\},
+\qquad
+S_2=\{B,C\}.
+\]</div>
+<p>也就是说，若要识别抗组胺药使用 <span class="arithmatex">\(E\)</span> 对哮喘 <span class="arithmatex">\(D\)</span> 的平均因果效应，可以选择调整 <span class="arithmatex">\(A,C\)</span>，也可以选择调整 <span class="arithmatex">\(B,C\)</span>。</p>
+<h3 id="152">15.2 后门准则与调整公式</h3>
+<p>如果 <span class="arithmatex">\(S\)</span> 满足后门准则，并且一致性与正值性也成立，则潜在结果均值可以用调整公式识别：</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\sum_s \mathbb{E}[D\mid E=e,S=s]\Pr(S=s),
+\]</div>
+<p>其中 <span class="arithmatex">\(e\in\{0,1\}\)</span>。若 <span class="arithmatex">\(S\)</span> 是连续变量，则求和替换为积分：</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\int \mathbb{E}[D\mid E=e,S=s] f_S(s)\,ds.
+\]</div>
+<p>平均因果效应为</p>
+<div class="arithmatex">\[
+\psi
+=\mathbb{E}[D^1-D^0]
+=\sum_s \left\{\mathbb{E}[D\mid E=1,S=s]-\mathbb{E}[D\mid E=0,S=s]\right\}\Pr(S=s).
+\]</div>
+<details class="proof">
+<summary>证明：后门准则推出调整公式</summary>
+<p>若 <span class="arithmatex">\(S\)</span> 满足后门路径准则，则在图结构上有</p>
+<div class="arithmatex">\[
+(D^e \perp\!\!\!\perp E\mid S)_G,
+\]</div>
+<p>对应到潜在结果框架，就是条件交换性</p>
+<div class="arithmatex">\[
+D^e \perp\!\!\!\perp E\mid S.
+\]</div>
+<p>于是由全期望公式，</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\sum_s \mathbb{E}[D^e\mid S=s]\Pr(S=s).
+\]</div>
+<p>利用条件交换性，</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e\mid S=s]
+=\mathbb{E}[D^e\mid E=e,S=s].
+\]</div>
+<p>再利用一致性：当 <span class="arithmatex">\(E=e\)</span> 时，观测结局满足</p>
+<div class="arithmatex">\[
+D=D^e.
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e\mid E=e,S=s]
+=\mathbb{E}[D\mid E=e,S=s].
+\]</div>
+<p>代回即可得到</p>
+<div class="arithmatex">\[
+\mathbb{E}[D^e]
+=\sum_s \mathbb{E}[D\mid E=e,S=s]\Pr(S=s).
+\]</div>
+<p>连续型 <span class="arithmatex">\(S\)</span> 的积分版本同理。 <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="153">15.3 与前文潜在结果框架的统一</h3>
+<p>本节的图论语言与前文的潜在结果语言本质上是统一的：</p>
+<ul>
+<li>潜在结果框架将识别写成假设</li>
+</ul>
+<p><span class="arithmatex">\(Y^a \perp\!\!\!\perp A\mid X;\)</span></p>
+<ul>
+<li>
+<p>DAG 框架用后门准则帮助我们判断哪些 <span class="arithmatex">\(X\)</span> 可以让上述条件交换性成立；</p>
+</li>
+<li>
+<p>一旦找到合法调整集合 <span class="arithmatex">\(S\)</span>，估计仍回到前文的标准化、IPTW、AIPW 或 TMLE 等方法。</p>
+</li>
+</ul>
+<p>因此，因果图主要解决的是<strong>该调整谁</strong>的问题；统计估计方法主要解决的是<strong>在给定调整集合后如何稳定、高效地估计因果量</strong>的问题。</p>
+<hr />
+<h2 id="16">16. 本章小结：从潜在结果到因果图</h2>
+<div class="admonition summary">
+<p class="admonition-title">第十章知识结构</p>
+<p>本章的完整逻辑可以概括为：</p>
+<ol>
+<li><strong>定义因果量</strong>：用潜在结果 <span class="arithmatex">\(Y^1,Y^0\)</span> 定义 ATE、CATE 等因果目标；</li>
+<li><strong>说明根本困难</strong>：同一个体不能同时观测 <span class="arithmatex">\(Y^1\)</span> 与 <span class="arithmatex">\(Y^0\)</span>；</li>
+<li><strong>提出识别假设</strong>：一致性、正值性、随机化或条件交换性；</li>
+<li><strong>给出识别公式</strong>：G-formula、IPTW、AIPW 等；</li>
+<li><strong>进行统计估计</strong>：结果回归、倾向得分加权、双重稳健估计与 G-估计；</li>
+<li><strong>引入因果图</strong>：用 DAG 表达科学背景知识；</li>
+<li><strong>判断混杂路径</strong>：用后门路径、碰撞点、d-separation 判断是否需要调整；</li>
+<li><strong>选择调整集合</strong>：用 backdoor path criterion 找到足以控制混杂的变量集合。</li>
+</ol>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">实践中的基本流程</p>
+<p>实际做一个因果推断问题时，推荐按照如下顺序：</p>
+<ol>
+<li>明确暴露 <span class="arithmatex">\(A\)</span>、结局 <span class="arithmatex">\(Y\)</span> 与目标 estimand，例如 <span class="arithmatex">\(\mathbb{E}[Y^1-Y^0]\)</span>；</li>
+<li>根据领域知识画出 DAG；</li>
+<li>用后门准则寻找合法调整集合 <span class="arithmatex">\(S\)</span>；</li>
+<li>
+<p>检查正值性：</p>
+<div class="arithmatex">\[
+0&lt;\Pr(A=a\mid S=s)&lt;1;
+\]</div>
+</li>
+<li>
+<p>根据数据规模与维度选择估计方法：标准化、IPTW、AIPW、TMLE 或 G-估计；</p>
+</li>
+<li>报告估计值、不确定性区间，并讨论不可检验假设，尤其是无未测混杂假设。</li>
+</ol>
+</div>
 
 
 
