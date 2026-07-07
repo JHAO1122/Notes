@@ -922,5 +922,11 @@
         "date": "2026-06-10",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2607.04236v1": {
+        "title": "Robust Bayes-Assisted Conformal Prediction",
+        "date": "2026-07-05",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

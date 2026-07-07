@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-05
+> 更新于: 2026-07-07
 
 ---
+### Robust Bayes-Assisted Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-05
+- **链接**: [PDF](http://arxiv.org/abs/2607.04236v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出两种鲁棒非一致性评分函数：一种基于重尾贝叶斯工作模型诱导，另一种为闭式经验贝叶斯收缩评分，并证明其能在先验信息可靠时利用信息提高预测集效率，在先验信息弱或错误时退化为鲁棒无信息基线（距离均值评分），从而在保持无分布覆盖保证的同时，显著降低分布偏移下的预测区间宽度。
+
+
 ### Online Shift Detection and Conformal Adaptation for Deployed Safety Classifiers 
 
 - [ ] **分类**: Conformal | **日期**: 2026-06-10
