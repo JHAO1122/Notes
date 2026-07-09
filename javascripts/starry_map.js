@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         { id: "RA", parentId: "Analysis", label: isEn ? "Real Analysis" : "实分析", radius: 15, color: colors.analysisSub, collapsed: true },
 
+        { id: "SL", parentId: "Prob-Stat", label: isEn ? "Statistical Learning" : "统计学习", radius: 15, color: colors.probSub, collapsed: true },
+
         // 泛函的内部章节
         { id: "FA-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/0Intro/" },
         { id: "FA-Ch1", label: isEn ? "1. Metric Spaces" : "1.度量空间", parentId: "FA", radius: 8, color: colors.analysisLeaf, url: "Functional_Analysis/1distance_space/" },
@@ -112,6 +114,19 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "RA-Ch10", label: isEn ? "10. Radon-Nikodym" : "10.Radon-Nikodym定理", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/10_radon_nikodym/" },
         { id: "RA-Ch11", label: isEn ? "11. FTC in R" : "11.微积分基本定理", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/11_differentiation_ir/" },
         { id: "RA-Ch12", label: isEn ? "12. Lp Spaces" : "12.L^p空间", parentId: "RA", radius: 8, color: colors.analysisSub, url: "Real_analysis/12_lp_spaces/" },
+
+        //统计学习
+        { id: "SL-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/0Intro/" },
+        { id: "SL-Ch1", label: isEn ? "1. KNN" : "1.KNN", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/1KNN/" },
+        { id: "SL-Ch2", label: isEn ? "2. Linear Regression" : "2.线性回归", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/2Linear_Regression/" }, 
+        { id: "SL-Ch3", label: isEn ? "3. Penalized Regression I" : "3.惩罚回归（一）", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/3Penalized/" },
+        { id: "SL-Ch4", label: isEn ? "4. Penalized Regression II" : "4.惩罚回归（二）", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/4Penalized/" },
+        { id: "SL-Ch5", label: isEn ? "5. Classification" : "5.分类问题", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/5Classification/" },
+        { id: "SL-Ch6", label: isEn ? "6. SVM" : "6.SVM", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/6SVM/" },
+        { id: "SL-Ch7", label: isEn ? "7. RKHS" : "7.核希尔伯特空间", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/7RKHS/" },
+        { id: "SL-Ch8", label: isEn ? "8. Kernel Methods" : "8.核方法", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/8Kernel_Density/" },
+        { id: "SL-Ch9", label: isEn ? "9. Random Forest" : "9.随机森林", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/9Tree_Model/" },
+        { id: "SL-Ch10", label: isEn ? "10. Causal Inference" : "10.因果推断", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/10Causal_Inference/" },
     ];
 
     const allLinks = [
@@ -146,6 +161,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "RA", target: "RA-Ch4" }, { source: "RA", target: "RA-Ch5" }, { source: "RA", target: "RA-Ch6" }, { source: "RA", target: "RA-Ch7" },
         { source: "RA", target: "RA-Ch8" }, { source: "RA", target: "RA-Ch9" }, { source: "RA", target: "RA-Ch10" }, { source: "RA", target: "RA-Ch11" },
         { source: "RA", target: "RA-Ch12" },
+        { source: "SL", target: "SL-Intro" }, { source: "SL", target: "SL-Ch1" }, { source: "SL", target: "SL-Ch2" }, { source: "SL", target: "SL-Ch3" },
+        { source: "SL", target: "SL-Ch4" }, { source: "SL", target: "SL-Ch5" }, { source: "SL", target: "SL-Ch6" }, { source: "SL", target: "SL-Ch7" },
+        { source: "SL", target: "SL-Ch8" }, { source: "SL", target: "SL-Ch9" }, { source: "SL", target: "SL-Ch10" },
+        
     ];
 
     // --- 2. 绘图逻辑 ---
