@@ -928,5 +928,29 @@
         "date": "2026-07-05",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2607.06690v1": {
+        "title": "tsbootstrap: Distribution-Free Uncertainty Quantification and Conformal Prediction for Time Series",
+        "date": "2026-07-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.06605v1": {
+        "title": "A Quiet Failure in Calibrated Virtual Screening: Marginal Conformal Prediction Under-Covers the Minority Class, and a Class-Conditional Fix Recovers It",
+        "date": "2026-07-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.04236v2": {
+        "title": "Robust Bayes-Assisted Conformal Prediction",
+        "date": "2026-07-05",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.00645v2": {
+        "title": "Approximate full-conformal multi-task regression with reproducing kernels",
+        "date": "2026-07-01",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

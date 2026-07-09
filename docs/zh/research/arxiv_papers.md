@@ -3,9 +3,46 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-07
+> 更新于: 2026-07-09
 
 ---
+### tsbootstrap: Distribution-Free Uncertainty Quantification and Conformal Prediction for Time Series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-07
+- **链接**: [PDF](http://arxiv.org/abs/2607.06690v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于将依赖感知的块、残差、筛子及野自助重抽样方法与自适应共形校准器（EnbPI、ACI、NexCP、AgACI）统一于一个类型化API中，并严格证明了在时间序列非交换性下，依赖感知方法能显著降低覆盖偏差，其中筛子自助法在线性短记忆依赖下逼近名义覆盖水平。此外，通过共享固定统计量路径的编译后端和流式归约技术，将峰值额外内存从$O(Bn)$压缩至$O(B)$，同时避免了复制张量的物化，从而在统计效率与计算资源间实现了理论上的最优权衡。
+
+### A Quiet Failure in Calibrated Virtual Screening: Marginal Conformal Prediction Under-Covers the Minority Class, and a Class-Conditional Fix Recovers It 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-07
+- **链接**: [PDF](http://arxiv.org/abs/2607.06605v1)
+
+!!! note "AI 核心解读"
+
+    该论文发现，在类别不平衡的虚拟筛选中，边际共形预测虽然达到全局90%覆盖目标，但少数类实际覆盖率可低至4.2%（如临床毒性数据），并推导出一个守恒恒等式：少数类的覆盖缺口等于多数类的超额覆盖乘以不平衡比率，该恒等式能精确预测实测差距（误差在一个百分点内）。论文通过引入类别条件（Mondrian）共形预测，为每个类别分别构造评分函数，从而在所有数据集上将少数类覆盖率恢复至目标水平，仅以预测集大小适度增加为代价。
+
+### Robust Bayes-Assisted Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-05
+- **链接**: [PDF](http://arxiv.org/abs/2607.04236v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出两种鲁棒非一致性评分函数：一种基于重尾贝叶斯工作模型，另一种为闭式经验贝叶斯收缩评分，通过统计推导证明其能在先验信息可靠时利用信息提升预测集效率，在先验信息弱或错误时自动退化为稳健的非信息基线（距离均值评分），从而在保持无分布覆盖保证的同时，显著降低模型误设下的预测区间宽度。
+
+### Approximate full-conformal multi-task regression with reproducing kernels 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-01
+- **链接**: [PDF](http://arxiv.org/abs/2607.00645v2)
+
+!!! note "AI 核心解读"
+
+    该论文针对多任务回归的全共形预测计算困难问题，在向量值再生核希尔伯特空间中构造了一种近似预测区域，该区域包含精确全共形区域，并在任务间协方差矩阵已知时给出了近似紧致性的理论上界，在矩阵需估计时也保持了统计有效性。其核心创新在于通过设计基于核的评分函数，将无限次训练问题转化为可计算的近似形式，并严格证明了近似区域对真实共形区域的包含关系及体积上界。
+
+
 ### Robust Bayes-Assisted Conformal Prediction 
 
 - [ ] **分类**: Conformal | **日期**: 2026-07-05
