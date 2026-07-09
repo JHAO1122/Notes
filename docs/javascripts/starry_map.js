@@ -183,7 +183,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if (d.target.radius === 15) return 110;
             return 60;
         }))
-        .force("charge", d3.forceManyBody().strength(-400))
+        .force("charge", d3.forceManyBody().strength(d => {
+            if (d.radius >= 30) return -500;  // 大类节点
+            if (d.radius >= 15) return -220;  // 课程节点
+            return -60;                       // 章节小节点
+        }))
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("collide", d3.forceCollide().radius(d => d.radius + 25));
 
@@ -254,11 +258,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const nodeMerge = nodeEnter.merge(node);
         simulation.nodes(visibleNodes).on("tick", () => {
-            linkMerge.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
-            nodeMerge.attr("transform", d => `translate(${d.x},${d.y})`);
+        visibleNodes.forEach(d => {
+            d.x = Math.max(d.radius + 20, Math.min(width - d.radius - 20, d.x));
+            d.y = Math.max(d.radius + 20, Math.min(height - d.radius - 20, d.y));
+        });
+
+        linkMerge
+            .attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+
+        nodeMerge.attr("transform", d => `translate(${d.x},${d.y})`);
         });
         simulation.force("link").links(visibleLinks);
-        simulation.alpha(0.5).restart(); 
+        simulation.alpha(0.25).restart();
     }
 
     // 拖拽逻辑
