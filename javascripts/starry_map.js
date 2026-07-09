@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Analysis", target: "SDE" },
         { source: "Geometry", target: "Top" },
         { source: "Analysis", target: "RA" },
+        { source: "Prob-Stat", target: "SL" },
 
         { source: "FA", target: "FA-Intro" }, { source: "FA", target: "FA-Ch1" }, { source: "FA", target: "FA-Ch2" }, { source: "FA", target: "FA-Ch3" },
         { source: "FA", target: "FA-Ch4" }, { source: "FA", target: "FA-Ch5" }, { source: "FA", target: "FA-Ch6" }, { source: "FA", target: "FA-Ch7" },
@@ -164,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "SL", target: "SL-Intro" }, { source: "SL", target: "SL-Ch1" }, { source: "SL", target: "SL-Ch2" }, { source: "SL", target: "SL-Ch3" },
         { source: "SL", target: "SL-Ch4" }, { source: "SL", target: "SL-Ch5" }, { source: "SL", target: "SL-Ch6" }, { source: "SL", target: "SL-Ch7" },
         { source: "SL", target: "SL-Ch8" }, { source: "SL", target: "SL-Ch9" }, { source: "SL", target: "SL-Ch10" },
-        
+
     ];
 
     // --- 2. 绘图逻辑 ---
