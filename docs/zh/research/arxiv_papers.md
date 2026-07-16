@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-09
+> 更新于: 2026-07-16
 
 ---
+### Knockoffs Inference under Privacy Constraints 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-06-11
+- **链接**: [PDF](http://arxiv.org/abs/2506.09690v2)
+
+!!! note "AI 核心解读"
+
+    该论文在差分隐私约束下，通过构造经拉普拉斯或高斯噪声扰动的模型-X knockoff评分函数，严格证明了隐私噪声注入后仍能保持有限样本下的精确FDR控制；并基于统计功效分析，推导出噪声尺度与样本量、信号强度间的充分条件，确保隐私保护不渐进损失变量选择的统计效力。
+
+### Long-Memory Reservoir Computing for Data-Scarce Dengue Forecasting 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-13
+- **链接**: [PDF](http://arxiv.org/abs/2607.11272v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过将分数阶差分动力学直接嵌入回声状态网络（fESN）或利用小波平滑提取低频成分（wESN），构造了具有多项式衰减依赖的长记忆储层，并从理论上证明了标准ESN仅能生成短记忆过程，而所提储层在闭环动力学下满足统计长记忆的严格定义。其评分函数采用岭回归读出层，在数据稀缺场景下实现了对非线性长程依赖的稳健估计，且无需分布假设即可通过共形预测提供校准的不确定性区间。
+
+### Manifold Constrained Conformal Prediction for Spatial Events 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-10
+- **链接**: [PDF](http://arxiv.org/abs/2607.10008v1)
+
+!!! note "AI 核心解读"
+
+    该论文创新点在于：将空间事件点云表示为经验测度，并利用切片Wasserstein距离构造评分函数，从而在分布值预测集中引入流形约束，推导出交集集合的覆盖下界，并通过数据自适应选择准则使该下界在实际中可忽略。此外，针对解析不可解性，提出了基于流的修正采样程序，以集成形式实现预测集，并证明了该方法在保持近名义覆盖的同时，显著降低了能量距离和流形距离。
+
+
 ### tsbootstrap: Distribution-Free Uncertainty Quantification and Conformal Prediction for Time Series 
 
 - [ ] **分类**: Conformal | **日期**: 2026-07-07
