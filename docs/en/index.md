@@ -30,6 +30,7 @@ Below are the mathematics and statistics courses I have completed or am currentl
 * Asymptotic Statistical Theory
 * Advanced Probability
 * Advanced Mathematical Statistics
+* Advanced Topics in Mathematics Seminar, Topic: Financial Stochastic Analysis
 * Stochastic Processes
 * Mathematical Statistics
 * Probability Theory

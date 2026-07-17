@@ -34,6 +34,8 @@
 
 * 高等数理统计 (Advanced Mathematical Statistics)
 
+* 前沿数学专题讨论 (Advanced Topics in Mathematics Seminar, Topic: Financial Stochastic Analysis)
+
 * 随机过程 (Stochastic Processes) 
 
 * 数理统计 (Mathematical Statistics) 
@@ -49,6 +51,7 @@
 * 统计计算 (Statistical Computing) 
 
 * 数学实践 (Mathematical Practice)
+
 
 **🧮 纯数学基础 (Advanced Pure Mathematics)**
 
