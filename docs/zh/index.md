@@ -34,7 +34,7 @@
 
 * 高等数理统计 (Advanced Mathematical Statistics)
 
-* 前沿数学专题讨论 (Advanced Topics in Mathematics Seminar, Topic: Financial Stochastic Analysis)
+* 前沿数学专题讨论 (Seminars On Frontier Mathematics, Topic: Financial Stochastic Analysis)
 
 * 随机过程 (Stochastic Processes) 
 
