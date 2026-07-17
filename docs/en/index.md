@@ -28,6 +28,8 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 * Stochastic Differential Equations
 * Asymptotic Statistical Theory
+* Advanced Probability
+* Advanced Mathematical Statistics
 * Stochastic Processes
 * Mathematical Statistics
 * Probability Theory
@@ -42,7 +44,9 @@ Below are the mathematics and statistics courses I have completed or am currentl
 * Functions of Real Variables
 * Functional Analysis
 * Distribution Function Theory
+* Differentiable Mandifolds and Riemannian Geometry
 * Point-Set Topology
+* Abstract Algebra
 * Ordinary Differential Equations
 * Honors Mathematical Analysis I & II
 * Advanced Algebra & Analytic Geometry I & II

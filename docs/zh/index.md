@@ -30,6 +30,10 @@
 
 * 渐近统计理论 (Asymptotic Statistical Theory) 
 
+* 高等概率论 (Advanced Probability)
+
+* 高等数理统计 (Advanced Mathematical Statistics)
+
 * 随机过程 (Stochastic Processes) 
 
 * 数理统计 (Mathematical Statistics) 
@@ -54,7 +58,11 @@
 
 * 广义函数论 (Distribution Function Theory)
 
+* 微分流形与黎曼几何 (Differentiable Mandifolds and Riemannian Geometry)
+
 * 点集拓扑 (Point-Set Topology)
+
+* 抽象代数 (Abstract Algebra)
 
 * 常微分方程 (Ordinary Differential Equations) 
 
