@@ -134,7 +134,7 @@ plugins:
             "🪐 抽象代数": "🪐 Abstract Algebra"
             "抽象代数课程概览": "Abstract Algebra Course Overview"
             "🌐 微分流形与黎曼几何": "Differentiable Manifolds and Riemannian Geometry"
-            "微分流形课程概览": "Differentiable Manifolds Course Overview"
+            "微分流形与黎曼几何课程概览": "Differentiable Manifolds and Riemannian Geometry Course Overview"
             "🤖 统计学习": "🤖 Statistical Learning"
             "统计学习课程概览": "Statistical Learning Course Overview"
             "第一章：KNN": "Ch 1: K-Nearest Neighbors"
@@ -284,7 +284,7 @@ nav:
       - 🪐 抽象代数:
           - 抽象代数课程概览: zh/Abstract_Algebra/0Intro.md              
       - 🌐 微分流形与黎曼几何:
-          - 微分流形课程概览: zh/Differential_Manifolds/0Intro.md
+          - 微分流形与黎曼几何课程概览: zh/Differential_Manifolds/0Intro.md
       - 🤖 统计学习:
           - 统计学习课程概览: zh/Statistical_Learning/0Intro.md
           - 📖 笔记:
