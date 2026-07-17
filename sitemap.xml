@@ -806,10 +806,11 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Abstract_Algebra/0Intro/"/>
     </url>
     <url>
-        <loc>https://jhao1122.github.io/Notes/en/Adavanced_Prob/0Intro/</loc>
+        <loc>https://jhao1122.github.io/Notes/en/Advanced_Prob/0Intro/</loc>
         <lastmod>2026-07-17</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Adavanced_Prob/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Advanced_Prob/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Advanced_Prob/0Intro/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Advanced_Stat/0Intro/</loc>
@@ -952,10 +953,11 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Asymptotic-statistics/sol_4/"/>
     </url>
     <url>
-        <loc>https://jhao1122.github.io/Notes/en/Differentiable_Manifolds/0Intro/</loc>
+        <loc>https://jhao1122.github.io/Notes/en/Differential_Manifolds/0Intro/</loc>
         <lastmod>2026-07-17</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Differentiable_Manifolds/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Differential_Manifolds/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Differential_Manifolds/0Intro/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Functional_Analysis/0Intro/</loc>
@@ -1509,20 +1511,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/reference/stochastic/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/reference/stochastic/"/>
-    </url>
-    <url>
-        <loc>https://jhao1122.github.io/Notes/en/Advanced_Prob/0Intro/</loc>
-        <lastmod>2026-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Advanced_Prob/0Intro/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Advanced_Prob/0Intro/"/>
-    </url>
-    <url>
-        <loc>https://jhao1122.github.io/Notes/en/Differential_Manifolds/0Intro/</loc>
-        <lastmod>2026-07-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Differential_Manifolds/0Intro/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Differential_Manifolds/0Intro/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/blog/</loc>
