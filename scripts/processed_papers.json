@@ -970,5 +970,17 @@
         "date": "2026-07-10",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2607.15823v1": {
+        "title": "Aggregation of Statistical Evidence under Exchangeability",
+        "date": "2026-07-17",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.15953v2": {
+        "title": "Drift-Aware Spectral Conformal Prediction for Non-Exchangeable Streaming Data",
+        "date": "2026-06-14",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

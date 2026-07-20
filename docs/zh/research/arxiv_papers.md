@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-16
+> 更新于: 2026-07-20
 
 ---
+### Aggregation of Statistical Evidence under Exchangeability 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-17
+- **链接**: [PDF](http://arxiv.org/abs/2607.15823v1)
+
+!!! note "AI 核心解读"
+
+    该论文基于群不变性，将变换后的数据集视为可交换单元，通过排列构造为每个变换数据集聚合统计证据，并跨变换校准聚合结果；其核心创新在于证明了单批次聚合的临界值在任意依赖结构下均优于Bonferroni校正等确定性校准，并开发了有限样本下的势与适应性理论，同时引入序贯alpha支出和两批次扩展以保持有效性并降低计算成本。
+
+### Drift-Aware Spectral Conformal Prediction for Non-Exchangeable Streaming Data 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-14
+- **链接**: [PDF](http://arxiv.org/abs/2606.15953v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种基于局部谱相似性加权的共形预测区间构造方法，并引入基于传输的漂移评分来动态监测测试分布与校准分布之间的偏离程度。理论贡献在于建立了覆盖损失的近似上界，将其分解为漂移、残差失配与加权有效样本量三项，并提供了加权共形分位数统计脆弱性的有效样本量诊断指标。
+
+
 ### Knockoffs Inference under Privacy Constraints 
 
 - [ ] **分类**: Knockoff | **日期**: 2025-06-11
