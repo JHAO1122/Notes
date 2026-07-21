@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-20
+> 更新于: 2026-07-21
 
 ---
+### Mirror and knockoff+ thresholds under dependence 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-07-19
+- **链接**: [PDF](http://arxiv.org/abs/2607.17084v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过构造满足正回归依赖性的均匀p值联合分布，证明在名义FDR为10%时实际FDR可达17.4%，并揭示在等相关高斯零分下FDR会随假设数量增加而突破50%的理论极限。其核心创新在于严格推导了镜像与knockoff+阈值在缺乏零符号条件独立性时失效的统计机制，证明了仅依赖边际对称性、高斯性或PRDS性质无法保证FDR控制，必须依赖零符号的联合分布特性。
+
+### Isotonic Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-18
+- **链接**: [PDF](http://arxiv.org/abs/2607.16675v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出等渗共形预测（ICP）框架，通过拟合单个等渗再校准映射并基于分层构造预测区间，在有限样本下实现预测条件有效性，并渐近达到自校准性质。其核心创新在于统计推导中解耦校准与预测集构建，避免了SC-CP方法对每个候选结果重新拟合校准器的计算负担，同时保留了精确的有限样本覆盖保证。
+
+### Spectral Adaptive Conformal Prediction for Structured Non-Exchangeable Data 
+
+- [ ] **分类**: Conformal | **日期**: 2026-06-14
+- **链接**: [PDF](http://arxiv.org/abs/2606.15950v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出了一种谱自适应共形预测方法，通过构造基于局部谱相似性的加权共形分位数，并在线更新目标误覆盖水平，将覆盖误差分解为谱失配项与有效样本量项，证明了核谱加权相对于均匀加权不会增加谱失配项，且带宽阶数为N^(-1/(d+2))时可平衡两项误差；同时建立了自适应更新的无条件长期校准界，该界对每条样本路径成立，无需独立或平稳性假设。
+
+
 ### Aggregation of Statistical Evidence under Exchangeability 
 
 - [ ] **分类**: Conformal | **日期**: 2026-07-17

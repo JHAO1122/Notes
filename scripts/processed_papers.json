@@ -982,5 +982,23 @@
         "date": "2026-06-14",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2607.17084v1": {
+        "title": "Mirror and knockoff+ thresholds under dependence",
+        "date": "2026-07-19",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2607.16675v1": {
+        "title": "Isotonic Conformal Prediction",
+        "date": "2026-07-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2606.15950v2": {
+        "title": "Spectral Adaptive Conformal Prediction for Structured Non-Exchangeable Data",
+        "date": "2026-06-14",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
