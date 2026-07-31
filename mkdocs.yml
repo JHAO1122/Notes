@@ -39,6 +39,9 @@ theme:
 # ================= 插件配置 =================
 plugins:
   - search
+  - exclude:
+      glob:
+        - "**/blog/*"
   - i18n:
       docs_structure: folder    # ⭐ 核心：对应你现在的 docs/zh 和 docs/en 结构
       fallback_to_default: true
@@ -168,7 +171,6 @@ plugins:
             "📑 文献研讨": "📑 Paper Discussions"
             "📡 科研汇报": "📡 Research Presentations"
   - encryptcontent:
-      title: "🔒 我的树洞"
       summary: "希望我们有心照不宣的默契。请输入暗号以解密："
       placeholder: "请输入密码"
       decryption_button: "验证并解锁"
