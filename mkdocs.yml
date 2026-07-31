@@ -170,12 +170,12 @@ plugins:
             "2025秋季组会": "2025 Fall Group Meetings"
             "📑 文献研讨": "📑 Paper Discussions"
             "📡 科研汇报": "📡 Research Presentations"
-  - encryptcontent:
-      title: "🔒 我的树洞"
-      summary: "希望我们有心照不宣的默契。请输入暗号以解密："
-      placeholder: "请输入密码"
-      # 删除 decryption_button 这一行
-      decryption_failure_message: "看来我们没有那么默契，即将强制退出..."
+  # - encryptcontent:
+  #     title: "🔒 我的树洞"
+  #     summary: "希望我们有心照不宣的默契。请输入暗号以解密："
+  #     placeholder: "请输入密码"
+  #     # 删除 decryption_button 这一行
+  #     decryption_failure_message: "看来我们没有那么默契，即将强制退出..."
   # - blog:
   #     blog_dir: blog        # 博客文件存放位置
   #     post_excerpt: optional # 自动提取摘要
