@@ -319,20 +319,20 @@ nav:
       - 📑 文献研讨:
           - 2025秋季组会:
               - Derandomized Knockoffs: zh/Lectures/Group_Seminars/derandomized_knockoffs.md
-  - ✍️ 随笔:
-      - 🍃 碎碎念（介绍）: zh/blog/index.md
-      - 📁 往期博文:
-          - 男人的一生只哭十一次: zh/blog/posts/private/2026-4-15.md
-          - 何时收敛: zh/blog/posts/private/2026-4-23.md
-          - 被烫伤的孩子仍然爱火: zh/blog/posts/public/2026-5-5.md
-          - 就这样吧: zh/blog/posts/private/2026-6-13.md
-      - 🔴 🔵 红蓝温度:
-          - 序章:不只是一家俱乐部: zh/blog/Barca/index.md
-          - 🔴 羁绊:
-              - Polseres Blaugrana: zh/blog/Barca/Follow/Blaugrana.md
-          - 🔵 溯源:
-              - 百分百蒂托: zh/blog/Barca/Trace/tito_messi.md
-              - 了却君王天下事 赢得生前身后名: zh/blog/Barca/Trace/RL9.md
+  # - ✍️ 随笔:
+  #     - 🍃 碎碎念（介绍）: zh/blog/index.md
+  #     - 📁 往期博文:
+  #         - 男人的一生只哭十一次: zh/blog/posts/private/2026-4-15.md
+  #         - 何时收敛: zh/blog/posts/private/2026-4-23.md
+  #         - 被烫伤的孩子仍然爱火: zh/blog/posts/public/2026-5-5.md
+  #         - 就这样吧: zh/blog/posts/private/2026-6-13.md
+  #     - 🔴 🔵 红蓝温度:
+  #         - 序章:不只是一家俱乐部: zh/blog/Barca/index.md
+  #         - 🔴 羁绊:
+  #             - Polseres Blaugrana: zh/blog/Barca/Follow/Blaugrana.md
+  #         - 🔵 溯源:
+  #             - 百分百蒂托: zh/blog/Barca/Trace/tito_messi.md
+  #             - 了却君王天下事 赢得生前身后名: zh/blog/Barca/Trace/RL9.md
 # ================= 扩展配置 =================
 extra_javascript:
   - javascripts/mathjax.js
