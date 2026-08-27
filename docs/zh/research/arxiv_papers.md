@@ -3,9 +3,73 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-07-21
+> 更新于: 2026-08-27
 
 ---
+### Mirror and knockoff+ thresholds under dependence 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-07-19
+- **链接**: [PDF](http://arxiv.org/abs/2607.17084v3)
+
+!!! note "AI 核心解读"
+
+    本文创新点在于系统揭示了在自适应阈值选择下，仅依赖边际对称性或PRDS等常见条件无法保证FDR控制，并构造了基于联合符号信息的有限样本修正评分函数。作者通过条件符号赔率的异常事件界与负对照平均化两种积分策略，证明了其调整后阈值的尖锐性，并给出了独立校准数据或指定高斯联合模型下的有效水平解析表达式。
+
+### Beyond Noise: A Hypothesis Testing Approach to Robust Feature Selection 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-11-25
+- **链接**: [PDF](http://arxiv.org/abs/2511.20851v3)
+
+!!! note "AI 核心解读"
+
+    该论文将噪声增强特征选择从启发式规则提升为严格的非参数假设检验框架，通过构造“特征重要性对最大噪声重要性”的检验统计量并推导其零分布，实现了对每个特征是否显著优于最强噪声的统计判定。其核心创新在于利用bootstrap重采样为重要性评分提供了理论支撑的停止准则，从而在保证错误控制的同时显著提升了特征选择的稳健性与计算效率。
+
+### Common-Center Geometry and Certified Radial Reconstruction for Energy-Form Full Conformal Regions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-25
+- **链接**: [PDF](http://arxiv.org/abs/2608.24964v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过将能量形式成对评分函数分解为逐点比较的次水平集条件，在对称性、常数对角线和Fréchet型目标可达性假设下，严格证明了所有比较区域共享同一公共最小化点，从而确保完整共形区域关于该点星形连通，并进一步在凸性条件下给出精确共形区域的星形结构刻画。针对幂距离评分，作者推导出可验证的导数界以控制比较集径向出口的Lipschitz连续性，进而利用经典Lipschitz延拓机制构造出宽度不超过δ+2Lh_U的认证内外径向包络，并建立了同射线Hausdorff距离保证，为低维多变量输出的精确共形重建提供了理论严谨的几何框架。
+
+### Replicable Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-23
+- **链接**: [PDF](http://arxiv.org/abs/2608.23638v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过共享随机种子与粗粒度网格取整的构造，首次在统计上实现了独立校准的完全可复现预测集，并严格证明了覆盖保证与复现概率之间的定量权衡。其核心理论贡献在于推导出样本代价的匹配下界，证明该阈值舍入方法在渐近意义下最优，且无需共享种子时仍能将所有分析者限制在相邻两个分类器内，同时验证了复现性对选择性重校准博弈的天然免疫性。
+
+### Exact grid-free confidence-region computation from dependent p-value functions under arbitrary dependence 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-23
+- **链接**: [PDF](http://arxiv.org/abs/2608.22265v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过引入阶梯校准器诱导的合并函数族，首次在区域层面刻画了任意相依p值函数可精确计算置信域的充要结构条件，并证明了精确可执行性与阶梯结构的紧密联系。其提出的自适应多分位数投票算法无需预设单一序统计阈值，在任意相依下保持有限样本有效性，同时避免了网格反演的计算代价与近似误差。
+
+### Generalized Hierarchical Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-16
+- **链接**: [PDF](http://arxiv.org/abs/2608.15500v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出广义分层共形预测（GHCP），通过随机“捐赠”参考组大小恢复分层可交换性，从而在已有少量目标组观测时仍能构造严格有效的分布自由预测集。其核心创新在于设计新的非一致性评分函数，融合初始组内信息以提升预测效率，并理论证明所构造预测集具有有限样本覆盖保证，同时引入受限捐赠者集合的变体以优化区间长度。
+
+### Confidence Calibration of Deep Learning Systems 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-12
+- **链接**: [PDF](http://arxiv.org/abs/2608.12100v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于构建了基于噪声模型估计的校准框架，通过解析含噪与干净标签分布间的统计关系，推导出无偏的置信度重构评分函数，并扩展至噪声感知的共形预测以保持覆盖保证。此外，针对无监督域适应与本地差分隐私场景，分别提出了利用源域性能与域差异估计目标域精度的校准策略，以及兼顾隐私预算与预测可靠性的共形预测机制，从理论上确保了校准误差的可控性。
+
+
 ### Mirror and knockoff+ thresholds under dependence 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-07-19

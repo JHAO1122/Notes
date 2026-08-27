@@ -1000,5 +1000,47 @@
         "date": "2026-06-14",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2607.17084v3": {
+        "title": "Mirror and knockoff+ thresholds under dependence",
+        "date": "2026-07-19",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2511.20851v3": {
+        "title": "Beyond Noise: A Hypothesis Testing Approach to Robust Feature Selection",
+        "date": "2025-11-25",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2608.24964v1": {
+        "title": "Common-Center Geometry and Certified Radial Reconstruction for Energy-Form Full Conformal Regions",
+        "date": "2026-08-25",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.23638v1": {
+        "title": "Replicable Conformal Prediction",
+        "date": "2026-08-23",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.22265v1": {
+        "title": "Exact grid-free confidence-region computation from dependent p-value functions under arbitrary dependence",
+        "date": "2026-08-23",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.15500v1": {
+        "title": "Generalized Hierarchical Conformal Prediction",
+        "date": "2026-08-16",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.12100v1": {
+        "title": "Confidence Calibration of Deep Learning Systems",
+        "date": "2026-08-12",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
