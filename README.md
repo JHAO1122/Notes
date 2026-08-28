@@ -46,9 +46,6 @@ An automated gateway to the latest academic breakthroughs. Updated daily at 08:0
 
 "If you can't explain it simply, you don't understand it well enough." This section archives my presentation notes and slides from seminars and group meetings since my undergraduate years.
 
-### ✒️ [Blogs](https://jhao1122.github.io/Notes/blog/)
-
-This is a place for passion and sentiment. No formulas, no derivations. For academic content, please refer to the Notes Base.
 
 ---
 
@@ -72,7 +69,3 @@ Deeply interested in High-dimensional Inference, Conformal Prediction, and Proba
 * **GitHub**: [@JHAO1122](https://github.com/JHAO1122)
 
 ---
-
-## 📄 Copyright
-
-Commercial use of any content from this site is strictly prohibited without the author's explicit permission. Please cite the source when reposting or quoting.
