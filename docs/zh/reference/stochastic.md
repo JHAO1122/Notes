@@ -1,4 +1,4 @@
-# 🌊 Stochastic Processes
+# 🌊 随机过程 (Stochastic Processes)
 
 本模块聚焦随机过程的相关内容。
 

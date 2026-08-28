@@ -1,4 +1,4 @@
-# 🎲 Probability Theory
+# 🎲 概率论 (Probability Theory)
 
 本模块涵盖了概率论中的核心不等式、随机变量的收敛性理论以及大样本极限定理。
 

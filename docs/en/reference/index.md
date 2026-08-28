@@ -18,6 +18,12 @@ This quick reference manual is divided into the following core areas based on kn
 
 ### [🌊 Stochastic Processes](stochastic.md)
 
+### [🎯 Convex Optimization](optimization.md)
+
+### [📈 Regression Analysis](regression.md)
+
+### [♾️ Advanced Mathematical Analysis](analysis.md)
+
 ---
 
 ## 💡 Disclaimer

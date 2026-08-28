@@ -18,6 +18,12 @@
 
 ### [🌊 随机过程](stochastic.md)
 
+### [🎯 凸优化](optimization.md)
+
+### [📈 回归分析](regression.md)
+
+### [♾️ 数学分析](analysis.md)
+
 ---
 
 ## 💡 声明

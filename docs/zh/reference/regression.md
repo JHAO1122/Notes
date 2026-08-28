@@ -1,4 +1,4 @@
-# 📈 Regression Analysis (回归分析)
+# 📈 回归分析 (Regression Analysis)
 
 本模块涵盖了线性回归模型的核心理论，包括普通最小二乘法 (OLS)、高斯-马尔可夫定理以及模型违背经典假设时的修正。
 
