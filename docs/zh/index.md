@@ -65,8 +65,6 @@
 
 * 点集拓扑 (Point-Set Topology)
 
-* 抽象代数 (Abstract Algebra)
-
 * 常微分方程 (Ordinary Differential Equations) 
 
 * 数学分析(H) I (Honors Mathematical Analysis I)

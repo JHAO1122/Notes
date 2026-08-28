@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         { id: "Ad-Prob", parentId: "Prob-Stat", label: isEn ? "Advanced Probability" : "高等概率论", radius: 15, color: colors.probSub, collapsed: true },
 
-        { id: "AA", parentId: "Algebra", label: isEn ? "Abstract Algebra" : "抽象代数", radius: 15, color: colors.algebra, collapsed: true },
-
         { id: "DM", parentId: "Geometry", label: isEn ? "Differential Manifolds" : "微分流形与黎曼几何", radius: 15, color: colors.geometry, collapsed: true },
 
         { id: "Ad-Stat", parentId: "Prob-Stat", label: isEn ? "Advanced Mathematical Statistics" : "高等数理统计", radius: 15, color: colors.probSub, collapsed: true },
@@ -128,8 +126,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "Ad-Stat-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "Ad-Stat", radius: 8, color: colors.probSub, url: "Advanced_Stat/0Intro/" },
         //微分流形与黎曼几何
         { id: "DM-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "DM", radius: 8, color: colors.geometry, url: "Differential_Manifolds/0Intro/" },
-        //抽象代数
-        { id: "AA-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "AA", radius: 8, color: colors.algebra, url: "Abstract_Algebra/0Intro/" },
 
         //统计学习
         { id: "SL-Intro", label: isEn ? "0. Intro" : "课程简介", parentId: "SL", radius: 8, color: colors.probSub, url: "Statistical_Learning/0Intro/" },
@@ -161,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Analysis", target: "RA" },
         { source: "Prob-Stat", target: "SL" },
         { source: "Prob-Stat", target: "Ad-Prob" },
-        { source: "Algebra", target: "AA" },
         { source: "Geometry", target: "DM" },
         { source: "Prob-Stat", target: "Ad-Stat" },
 
@@ -186,7 +181,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { source: "Ad-Prob", target: "Ad-Prob-Intro" },
         { source: "Ad-Stat", target: "Ad-Stat-Intro" },
         { source: "DM", target: "DM-Intro" },
-        { source: "AA", target: "AA-Intro" },
 
         { source: "SL", target: "SL-Intro" }, { source: "SL", target: "SL-Ch1" }, { source: "SL", target: "SL-Ch2" }, { source: "SL", target: "SL-Ch3" },
         { source: "SL", target: "SL-Ch4" }, { source: "SL", target: "SL-Ch5" }, { source: "SL", target: "SL-Ch6" }, { source: "SL", target: "SL-Ch7" },
