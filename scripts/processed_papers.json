@@ -1042,5 +1042,35 @@
         "date": "2026-08-12",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2608.26703v1": {
+        "title": "Uncertainty quantification for expectation-calibrated predictions",
+        "date": "2026-08-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.09612v1": {
+        "title": "Local conformal prediction for individual causal effects",
+        "date": "2026-08-10",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.09166v1": {
+        "title": "Particle-Based Conformal Prediction for Contact-Aware Uncertainty Calibration in Stratified Configuration Spaces",
+        "date": "2026-08-10",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.06206v1": {
+        "title": "Beyond Marginal Validity: Finite-Sample Guarantees for Localized Conformal Prediction",
+        "date": "2026-08-06",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.04254v1": {
+        "title": "When Is a Conformal Guarantee Fair? Auditing Silent Subgroup Under-Coverage in Alzheimer's Disease Longitudinal Prediction",
+        "date": "2026-08-04",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

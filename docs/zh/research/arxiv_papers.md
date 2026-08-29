@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-08-27
+> 更新于: 2026-08-29
 
 ---
+### Uncertainty quantification for expectation-calibrated predictions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-27
+- **链接**: [PDF](http://arxiv.org/abs/2608.26703v1)
+
+!!! note "AI 核心解读"
+
+    本文提出期望校准预测的不确定性量化框架，通过构造基于分箱方案的校准置信区间，在可交换性假设下实现分布无关的有限样本保证。针对等渗回归分箱，作者证明了其区间具备渐近相合性且宽度趋于零的强理论性质。
+
+### Local conformal prediction for individual causal effects 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-10
+- **链接**: [PDF](http://arxiv.org/abs/2608.09612v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种面向个体因果效应的局部保形预测框架，通过余弦相似度加权因果森林变量重要性来定位校准邻域，并利用双重稳健的AIPW一致性评分满足Neyman正交性，从而在有限样本下保证边际覆盖率的精确性。其理论贡献在于证明在SUTVA和强可忽略性假设下，结合结果独立的校准集选择条件，所构造的区间能达到名义覆盖水平，且局部设计通过提升校准评分的代表性近似实现条件覆盖。
+
+### Particle-Based Conformal Prediction for Contact-Aware Uncertainty Calibration in Stratified Configuration Spaces 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-10
+- **链接**: [PDF](http://arxiv.org/abs/2608.09166v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种基于粒子滤波与共形预测的几何感知校准框架，通过局部构造非参数评分函数来量化接触与非接触状态下运动模型的不确定性差异，并利用校准数据集推导出具有有限样本覆盖保证的预测区域。其理论贡献在于证明所构造的评分函数在分层配置空间上满足边际覆盖性质，且能适应分布的多模态或低维流形结构，从而在统计上严格保证用户设定的概率覆盖要求。
+
+### Beyond Marginal Validity: Finite-Sample Guarantees for Localized Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-06
+- **链接**: [PDF](http://arxiv.org/abs/2608.06206v1)
+
+!!! note "AI 核心解读"
+
+    该论文首次为随机局部化共形预测（RLCP）在有限样本下同时提供了条件覆盖偏差与区间长度误差的高概率上界，且上界对实现出的局部邻域一致成立，并明确分解为O(h^β)的局部化偏差与随校准样本量递减的校准项，从而严格刻画了带宽选择中的偏差-方差权衡。针对数据分割学习的评分函数，作者证明当评分逼近枢轴评分时，局部保证可分解为固定评分校准误差与均匀评分估计误差之和，揭示了评分学习精度对局部化共形预测理论性质的直接提升作用。
+
+### When Is a Conformal Guarantee Fair? Auditing Silent Subgroup Under-Coverage in Alzheimer's Disease Longitudinal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-04
+- **链接**: [PDF](http://arxiv.org/abs/2608.04254v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过将群体覆盖缺口分解为“稀有性”与“重尾性”两种可量化机制，并分别推导出跨共形池化与子组校准的修正策略，为审计共形预测中的隐性亚组欠覆盖提供了理论依据。其核心创新在于构造了基于组内样本量上限的覆盖界（k/(n+1)）与尾部厚度敏感的评分函数，并证明了在两种机制并存时，所提边际下限修正能同时恢复覆盖保证且不牺牲总体效率。
+
+
 ### Mirror and knockoff+ thresholds under dependence 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-07-19
