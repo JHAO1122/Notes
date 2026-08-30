@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-08-29
+> 更新于: 2026-08-30
 
 ---
+### Beyond Predicting Responses: Conformal Inference for Latent Distributional Parameters 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-04
+- **链接**: [PDF](http://arxiv.org/abs/2608.03607v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出LatentCP，一种无需先验的共形推断框架，通过先在可观测响应空间构造共形预测集，再依据候选潜在参数诱导的响应分布对该集合的赋值概率进行逆映射，从而在无潜在校准标签、无需唯一逆映射或混合分布知识下，实现潜在分布参数的有限样本边际覆盖。其核心理论贡献在于证明潜在集效率对响应空间误覆盖率呈非单调依赖，并据此设计多层级聚合程序，通过独立调优样本选择归一化不兼容性得分的聚合分布，在弱正向识别、观测不可识别及潜在异质性下维持名义覆盖并提升效率。
+
+### Conformal confidence intervals with an application to small area estimation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-03
+- **链接**: [PDF](http://arxiv.org/abs/2608.02766v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种新型共形推断框架，通过构造基于残差排序的评分函数，在有限样本下实现对样本内未知期望的条件覆盖概率精确控制，突破了传统共形预测仅针对样本外结果的局限。其理论性质在于利用交换性假设推导出覆盖概率的有限样本下界，并证明了所构造置信区间在回归模型误设定下仍保持名义覆盖水平，从而为小域估计提供了无需渐近近似的稳健推断工具。
+
+### Uncertainty quantification for trustworthy deep learning: Methods and measures 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-30
+- **链接**: [PDF](http://arxiv.org/abs/2607.28248v1)
+
+!!! note "AI 核心解读"
+
+    该论文的核心创新在于将深度学习的预测分布生成与不确定性度量解耦，并系统梳理了高效集成近似与单次前向传播方法的理论动机与实现细节。其统计贡献体现在对集成多样性理论及熵分解与成对散度度量的对比分析，为分类任务中的认知不确定性估计提供了统一的评估框架。
+
+### Semiparametric Prediction with Efficient Interval Length under a Right-Censored Covariate 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-29
+- **链接**: [PDF](http://arxiv.org/abs/2607.26982v1)
+
+!!! note "AI 核心解读"
+
+    该论文将预测区间构造重新表述为区间半长度的半参数估计，并利用被共形预测方法丢弃的分布信息，从而在估计半长度时达到最小方差。其理论性质在于，即使时间-事件协变量模型或删失时间模型被错误设定，所构造的评分函数仍能保证区间长度估计的一致性，显著优于共形预测在区间长度和覆盖率上的波动性。
+
+### Adaptive Multi-Scale Forecasting and Gate-Localized Conformal Prediction for Multivariate Nonstationary Time Series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-25
+- **链接**: [PDF](http://arxiv.org/abs/2607.23165v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过门控机制将多尺度时序专家与稀疏预测迁移相结合，构造了自适应预测状态表示，并基于此推导出局部化共形校准的评分函数，使得预测区间在非平稳条件下具备近似局部覆盖的理论保证。其核心创新在于将门控状态与时间近邻性联合用于选择校准残差，从而在温和稳定性条件下实现了点预测与不确定性量化的一致性适配。
+
+
 ### Uncertainty quantification for expectation-calibrated predictions 
 
 - [ ] **分类**: Conformal | **日期**: 2026-08-27

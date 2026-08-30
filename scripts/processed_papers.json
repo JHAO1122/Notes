@@ -1072,5 +1072,35 @@
         "date": "2026-08-04",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2608.03607v1": {
+        "title": "Beyond Predicting Responses: Conformal Inference for Latent Distributional Parameters",
+        "date": "2026-08-04",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.02766v1": {
+        "title": "Conformal confidence intervals with an application to small area estimation",
+        "date": "2026-08-03",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.28248v1": {
+        "title": "Uncertainty quantification for trustworthy deep learning: Methods and measures",
+        "date": "2026-07-30",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.26982v1": {
+        "title": "Semiparametric Prediction with Efficient Interval Length under a Right-Censored Covariate",
+        "date": "2026-07-29",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.23165v1": {
+        "title": "Adaptive Multi-Scale Forecasting and Gate-Localized Conformal Prediction for Multivariate Nonstationary Time Series",
+        "date": "2026-07-25",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
