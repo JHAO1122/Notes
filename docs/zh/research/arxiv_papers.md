@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-08-30
+> 更新于: 2026-08-31
 
 ---
+### Conformal Risk-Averse Decision Making with Optimized Certainty Equivalent Risk Control 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-28
+- **链接**: [PDF](http://arxiv.org/abs/2608.28179v1)
+
+!!! note "AI 核心解读"
+
+    本文通过构造基于合成似然模型与留出校准数据的评分函数，将OCE风险控制转化为可验证的保形预测框架，并严格推导了有限样本下风险上界的高概率保证。理论核心在于证明最优策略在CVaR情形下等价于预测集选择，从而为分布未知时的风险敏感决策提供了统计上可校准的通用解法。
+
+### Anytime-Valid Confirmation of Covariate Balance for Prespecified Corrections 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-25
+- **链接**: [PDF](http://arxiv.org/abs/2607.23157v1)
+
+!!! note "AI 核心解读"
+
+    该论文构建了基于时间一致置信序列的协变量平衡确认程序，通过预设平衡函数类与容差带实现任意时刻停止的连续监控，并严格证明了错误确认概率受控于预设水平。其核心创新在于将有限源数据的收缩带与扩张带分别赋予确认性与兼容性双重统计保证，同时提出源校准似然比e过程，利用KL漂移恒等式刻画修正方向，并辅以指数倾斜检验界定可接受修正区域。
+
+### Conformal Prediction for Regression with Clipped Outcomes 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-22
+- **链接**: [PDF](http://arxiv.org/abs/2607.20736v1)
+
+!!! note "AI 核心解读"
+
+    该论文针对双重截断（clipped）回归结果，指出现有共形预测方法在边际覆盖与条件覆盖间存在结构性失衡，并据此构造了新的非一致性评分函数，分别实现紧致边际覆盖与优先条件覆盖的两步校准法。理论部分给出了有限样本覆盖保证，并在基础模型一致估计下证明了所提方法的oracle渐近最优性。
+
+
 ### Beyond Predicting Responses: Conformal Inference for Latent Distributional Parameters 
 
 - [ ] **分类**: Conformal | **日期**: 2026-08-04

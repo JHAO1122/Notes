@@ -1102,5 +1102,23 @@
         "date": "2026-07-25",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2608.28179v1": {
+        "title": "Conformal Risk-Averse Decision Making with Optimized Certainty Equivalent Risk Control",
+        "date": "2026-08-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.23157v1": {
+        "title": "Anytime-Valid Confirmation of Covariate Balance for Prespecified Corrections",
+        "date": "2026-07-25",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2607.20736v1": {
+        "title": "Conformal Prediction for Regression with Clipped Outcomes",
+        "date": "2026-07-22",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
