@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-08-31
+> 更新于: 2026-09-01
 
 ---
+### Response-guided knockoffs for directional FDR control in linear models 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-08-29
+- **链接**: [PDF](http://arxiv.org/abs/2608.29083v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出响应引导的knockoff构造方法，通过引入噪声扰动的响应变量来定向生成伪变量，在仅需n>p+2的弱样本条件下严格证明方向性FDR控制。其核心创新在于构建了响应感知的评分函数，使knockoff分配概率偏向目标符号方向，从而在保持有限样本FDR保证的同时显著提升定向检验功效。
+
+
 ### Conformal Risk-Averse Decision Making with Optimized Certainty Equivalent Risk Control 
 
 - [ ] **分类**: Conformal | **日期**: 2026-08-28
