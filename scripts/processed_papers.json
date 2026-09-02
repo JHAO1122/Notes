@@ -1126,5 +1126,11 @@
         "date": "2026-08-29",
         "tag": "Knockoff",
         "status": "todo"
+    },
+    "2608.24964v2": {
+        "title": "Common-Center Geometry and Certified Radial Reconstruction for Energy-Form Full Conformal Regions",
+        "date": "2026-08-25",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

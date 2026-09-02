@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-01
+> 更新于: 2026-09-02
 
 ---
+### Common-Center Geometry and Certified Radial Reconstruction for Energy-Form Full Conformal Regions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-25
+- **链接**: [PDF](http://arxiv.org/abs/2608.24964v2)
+
+!!! note "AI 核心解读"
+
+    该论文通过将能量形式成对评分函数逐项分解为留一法训练比较的次水平条件，在对称性和Fréchet型目标可达性假设下，严格证明了所有比较区域共享同一最小化点，并由此导出精确共形区域关于该点的星形几何结构。针对幂距离ρ_β，作者构造了可数据检验的导数界，建立了径向出口的Lipschitz控制与精确共形径向函数，进而给出宽度不超过δ+2L̃h_U的认证内外径向包络及同射线Hausdorff保证，填补了非凸共形区域几何认证的理论空白。
+
+
 ### Response-guided knockoffs for directional FDR control in linear models 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-08-29
