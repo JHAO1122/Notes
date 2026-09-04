@@ -1132,5 +1132,17 @@
         "date": "2026-08-25",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.03005v1": {
+        "title": "Unifying Conformal Language Tasks with In-Context Ensembles",
+        "date": "2026-09-02",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2608.03607v2": {
+        "title": "Beyond Prediction: Conformal Inference for Latent Distributional Parameters",
+        "date": "2026-08-04",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

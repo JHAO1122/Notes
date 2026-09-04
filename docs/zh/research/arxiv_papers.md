@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-02
+> 更新于: 2026-09-04
 
 ---
+### Unifying Conformal Language Tasks with In-Context Ensembles 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-02
+- **链接**: [PDF](http://arxiv.org/abs/2609.03005v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出Conformal Relevance框架，通过上下文示例筛选与集成构造评分函数，在无需人工提示工程下同时保证覆盖率并提升简洁性，并给出集成多样性影响的理论分析。其核心创新在于推导了互补性条件，刻画集成何时能改善最差句子的得分，并证明了集成改进的饱和上界。
+
+### Beyond Prediction: Conformal Inference for Latent Distributional Parameters 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-04
+- **链接**: [PDF](http://arxiv.org/abs/2608.03607v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出LatentCP，一种无需先验的共形推断框架，通过先在可观测响应空间构造共形预测集，再依据候选潜参数诱导的分布对该集的概率权重进行逆推，从而在无潜标定标签和唯一逆映射条件下实现潜分布参数的有限样本边际覆盖。其理论核心在于证明潜集效率对响应空间误覆盖率呈非单调依赖，并据此引入多层级聚合程序，通过独立调优样本选择归一化不相容评分的聚合分布，在弱正向识别、观测不可识别及潜异质性下维持名义覆盖并提升效率。
+
+
 ### Common-Center Geometry and Certified Radial Reconstruction for Energy-Form Full Conformal Regions 
 
 - [ ] **分类**: Conformal | **日期**: 2026-08-25
