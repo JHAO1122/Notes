@@ -59,17 +59,9 @@ Let $W$ be a one-dimensional Brownian motion. Define $\tau = \inf\{t: W(t) \in (
     
     Now we examine the target stopping time $\tau = \inf\{t: W(t) \in (a, b]\}$. We can decompose $\{\tau \le t\}$ based on the initial state $W(0)$:
     
-    1. **If $W(0) \le a$**: The process must first cross $a$ to enter $(a, b]$. The event is equivalent to:
-       
-       $$
-       \{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W(s) \le b\}
-       $$
+    1. **If $W(0) \le a$**: The process must first cross $a$ to enter $(a, b]$. The event is equivalent to: $\{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W(s) \le b\}$
 
-    2. **If $W(0) > b$**: The process must first descend to cross $b$ to enter $(a, b]$. The event is equivalent to:
-       
-       $$
-       \{W(0) > b\} \cap \{\tau_b \le t\}
-       $$
+    2. **If $W(0) > b$**: The process must first descend to cross $b$ to enter $(a, b]$. The event is equivalent to: $\{W(0) > b\} \cap \{\tau_b \le t\}$
        
     3. **If $W(0) \in (a, b]$**: In this case, $\tau = 0 \le t$ is necessarily true. The event is equivalent to $\{W(0) \in (a, b]\}$.
 
