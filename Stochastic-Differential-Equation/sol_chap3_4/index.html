@@ -5505,12 +5505,11 @@ f_I(x) = \frac{1}{\sqrt{2\pi \int_0^T g^2(t) dt}} \exp\left( - \frac{x^2}{2 \int
 <hr />
 <h3 id="3">习题 3</h3>
 <p><strong>题目：</strong>
-为了从牛顿（Newton）力学角度解释 Brown 运动，郎之万（Langevin, 1872-1946）提出了如下描述液体中微粒运动速度的（随机）微分方程：
-$<span class="arithmatex">\(\frac{dv}{dt} = -\beta v + \dot{W}(t)\)</span><span class="arithmatex">\(
-其中 \)</span>-\beta v<span class="arithmatex">\( 代表微粒运动受到的摩擦阻力（\)</span>\beta<span class="arithmatex">\( 是正的常数），白噪声 \)</span>\dot{W}(t)<span class="arithmatex">\( 描述微粒受到的随机的冲击力。
-(1) 说明该方程的解为 \)</span>v(t) = v_0 e^{-\beta t} + W(t) - \beta \int_0^t e^{-\beta(t-s)} W(s) ds<span class="arithmatex">\(，从而由原点出发的微粒运动路径为 \)</span>x_\beta(t) = \int_0^t e^{-\beta(t-s)} W(s) ds<span class="arithmatex">\(；
-(2) 计算 \)</span>v(t), x(t)<span class="arithmatex">\( 的期望和方差；
-(3) 证明 \)</span>\lim_{\beta \to \infty} \beta x_\beta(t) = W(t)$。</p>
+为了从牛顿（Newton）力学角度解释 Brown 运动，郎之万（Langevin, 1872-1946）提出了如下描述液体中微粒运动速度的（随机）微分方程：<span class="arithmatex">\(\frac{dv}{dt} = -\beta v + \dot{W}(t)\)</span>
+其中 <span class="arithmatex">\(-\beta v\)</span> 代表微粒运动受到的摩擦阻力（<span class="arithmatex">\(\beta\)</span> 是正的常数），白噪声 <span class="arithmatex">\(\dot{W}(t)\)</span> 描述微粒受到的随机的冲击力。
+(1) 说明该方程的解为 <span class="arithmatex">\(v(t) = v_0 e^{-\beta t} + W(t) - \beta \int_0^t e^{-\beta(t-s)} W(s) ds\)</span>，从而由原点出发的微粒运动路径为 <span class="arithmatex">\(x_\beta(t) = \int_0^t e^{-\beta(t-s)} W(s) ds\)</span>；
+(2) 计算 <span class="arithmatex">\(v(t), x(t)\)</span> 的期望和方差；
+(3) 证明 <span class="arithmatex">\(\lim_{\beta \to \infty} \beta x_\beta(t) = W(t)\)</span>。</p>
 <details class="success">
 <summary>解答 (点击展开)</summary>
 <p><strong>(1) 验证解的形式</strong>
@@ -5634,11 +5633,15 @@ I_B = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]
 <div class="arithmatex">\[
 = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i)[W(t_{i+1}) - W(t_i)] + \lim_{\delta \to 0} \sum_{i=0}^{n-1} [W(t_{i+1}) - W(t_i)]^2
 \]</div>
-<p>观察这两项：
-* 第一项正是标准的 <strong>Itô 积分</strong>的离散定义（在每个子区间取左端点）：
-  $<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)\)</span><span class="arithmatex">\(
-* 第二项正是布朗运动在区间 \)</span>[0,T]<span class="arithmatex">\( 上的 **二次变差 (Quadratic Variation)**。由布朗运动的性质已知，其二次变差在均方意义下收敛于区间的长度：
-  \)</span><span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T\)</span>$</p>
+<p>观察这两项：</p>
+<ul>
+<li>
+<p>第一项正是标准的 <strong>Itô 积分</strong>的离散定义（在每个子区间取左端点）：<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)\)</span></p>
+</li>
+<li>
+<p>第二项正是布朗运动在区间 <span class="arithmatex">\([0,T]\)</span> 上的 <strong>二次变差 (Quadratic Variation)</strong>。由布朗运动的性质已知，其二次变差在均方意义下收敛于区间的长度：<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T\)</span></p>
+</li>
+</ul>
 <p>将两部分合并，即得证：</p>
 <div class="arithmatex">\[
 (B) \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T
@@ -5679,9 +5682,8 @@ I_B = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]
 <hr />
 <h3 id="2_2">习题 2</h3>
 <p><strong>题目</strong>
-定义二阶积分
-$<span class="arithmatex">\(\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2\)</span><span class="arithmatex">\(
-其中 \)</span>0 = t_0 &lt; t_1 &lt; \dots &lt; t_n = T<span class="arithmatex">\(，而 \)</span>\delta \doteq \max_i |t_{i+1} - t_i|<span class="arithmatex">\(。证明：当 \)</span>f \in L^2([0,T])$ 时，有</p>
+定义二阶积分<span class="arithmatex">\(\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2\)</span>
+其中 <span class="arithmatex">\(0 = t_0 &lt; t_1 &lt; \dots &lt; t_n = T\)</span>，而 <span class="arithmatex">\(\delta \doteq \max_i |t_{i+1} - t_i|\)</span>。证明：当 <span class="arithmatex">\(f \in L^2([0,T])\)</span> 时，有</p>
 <div class="arithmatex">\[\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt\]</div>
 <details class="success">
 <summary>解答 (点击展开)</summary>
@@ -5744,10 +5746,18 @@ $<span class="arithmatex">\(\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \
 <details class="success">
 <summary>解答 (点击展开)</summary>
 <p>为了证明一个过程是鞅，最直接的方法是利用 Itô 公式证明其微分项中没有漂移项（即 <span class="arithmatex">\(dt\)</span> 项系数为 0）。</p>
-<p>令二元函数 <span class="arithmatex">\(u(t, x) = e^{t/2} \cos(x)\)</span>，计算其关于 <span class="arithmatex">\(t\)</span> 和 <span class="arithmatex">\(x\)</span> 的偏导数：
-* <span class="arithmatex">\(u_t = \frac{1}{2} e^{t/2} \cos(x)\)</span>
-* <span class="arithmatex">\(u_x = -e^{t/2} \sin(x)\)</span>
-* <span class="arithmatex">\(u_{xx} = -e^{t/2} \cos(x)\)</span></p>
+<p>令二元函数 <span class="arithmatex">\(u(t, x) = e^{t/2} \cos(x)\)</span>，计算其关于 <span class="arithmatex">\(t\)</span> 和 <span class="arithmatex">\(x\)</span> 的偏导数：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(u_t = \frac{1}{2} e^{t/2} \cos(x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u_x = -e^{t/2} \sin(x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u_{xx} = -e^{t/2} \cos(x)\)</span></p>
+</li>
+</ul>
 <p>将 <span class="arithmatex">\(X(t) = W(t)\)</span> 代入 Itô 公式 <span class="arithmatex">\(dY_t = (u_t + \frac{1}{2} u_{xx})dt + u_x dW(t)\)</span>：</p>
 <div class="arithmatex">\[
 dY(t) = \left( \frac{1}{2} e^{t/2} \cos(W(t)) - \frac{1}{2} e^{t/2} \cos(W(t)) \right) dt - e^{t/2} \sin(W(t)) dW(t)
@@ -5815,9 +5825,15 @@ d\left( \frac{1}{4}W^4(t) \right) = W^3(t) dW(t) + \frac{1}{2}(3W^2(t)) dt
 <p>这道题可以通过分析 Itô 积分的分布特性，直接借助正态分布矩母函数来优雅求解。</p>
 <p>令随机变量 <span class="arithmatex">\(X = \int_0^T g(s) dW(s)\)</span>。
 由于 <span class="arithmatex">\(g(s)\)</span> 是一个确定的时间函数（非随机），这个 Itô 积分是高斯过程的线性叠加，因此 <span class="arithmatex">\(X\)</span> 依然服从正态分布。</p>
-<p>根据随机积分的性质：
-* 期望：<span class="arithmatex">\(\mathbb{E}[X] = \mathbb{E}[\int_0^T g dW] = 0\)</span>
-* 方差：由 Itô 等距同构，<span class="arithmatex">\(Var(X) = \mathbb{E}[X^2] = \int_0^T g^2(s) ds\)</span></p>
+<p>根据随机积分的性质：</p>
+<ul>
+<li>
+<p>期望：<span class="arithmatex">\(\mathbb{E}[X] = \mathbb{E}[\int_0^T g dW] = 0\)</span></p>
+</li>
+<li>
+<p>方差：由 Itô 等距同构，<span class="arithmatex">\(Var(X) = \mathbb{E}[X^2] = \int_0^T g^2(s) ds\)</span></p>
+</li>
+</ul>
 <p>所以 <span class="arithmatex">\(X \sim N(0, \sigma^2)\)</span>，其中 <span class="arithmatex">\(\sigma^2 = \int_0^T g^2(s) ds\)</span>。</p>
 <p>原题要求的 <span class="arithmatex">\(\mathbb{E}[e^X]\)</span>，恰好是随机变量 <span class="arithmatex">\(X\)</span> 的矩母函数 <span class="arithmatex">\(M_X(u) = \mathbb{E}[e^{uX}]\)</span> 在 <span class="arithmatex">\(u=1\)</span> 时的取值。
 对于正态分布 <span class="arithmatex">\(N(\mu, \sigma^2)\)</span>，其矩母函数公式为 <span class="arithmatex">\(M_X(u) = \exp(\mu u + \frac{1}{2}\sigma^2 u^2)\)</span>。</p>
