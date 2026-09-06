@@ -171,9 +171,9 @@ The C-R lower bound is sometimes "too low", insufficient to provide a tighter va
 
     In addition to conditions (i) and (ii) of the C-R lower bound theorem, if we strengthen other conditions to:
   
-    (iii)* For $i=1, \dots, K$, the $i$-th derivative of $f_\theta(x)$ exists and $\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0$.
-    (iv)* For $i=1, \dots, K$, the variance of the higher-order logarithmic derivatives is finite: $\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) < \infty$.
-    (v)* $\hat{g}(X)$ is an unbiased estimator of $g(\theta)$ with finite variance, and for every $i=1, \dots, K$, the interchange of integration and differentiation holds:
+    (iii) For $i=1, \dots, K$, the $i$-th derivative of $f_\theta(x)$ exists and $\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0$.
+    (iv) For $i=1, \dots, K$, the variance of the higher-order logarithmic derivatives is finite: $\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) < \infty$.
+    (v) $\hat{g}(X)$ is an unbiased estimator of $g(\theta)$ with finite variance, and for every $i=1, \dots, K$, the interchange of integration and differentiation holds:
   
     \[
     g^{(i)}(\theta) = \frac{\partial^i}{\partial\theta^i}g(\theta) = \int_{\mathcal{X}} \hat{g}(x)\frac{\partial^i f_\theta(x)}{\partial\theta^i}\mu(dx)
@@ -195,9 +195,9 @@ The C-R lower bound is sometimes "too low", insufficient to provide a tighter va
     S_\theta^{(i)}(x) = \frac{1}{f_\theta(x)} \frac{\partial^i f_\theta(x)}{\partial\theta^i}
     \]
 
-    * From condition (iii)*, $E_\theta[S] = 0$.
-    * From condition (iv)* and the definition of $V(\theta)$, $var_\theta(S) = V(\theta)$.
-    * From condition (v)*, the covariance $cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)$.
+    * From condition (iii), $E_\theta[S] = 0$.
+    * From condition (iv) and the definition of $V(\theta)$, $var_\theta(S) = V(\theta)$.
+    * From condition (v), the covariance $cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)$.
 
     Consider the block covariance matrix $A$ of the combined vector $(\hat{g}, S^T)^T$:
 
