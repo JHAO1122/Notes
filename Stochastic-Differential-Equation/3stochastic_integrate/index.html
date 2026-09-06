@@ -5350,9 +5350,15 @@ B_2 \xrightarrow{L^2} \frac{1}{2} T
 <p><em>(注：后面多出来的 <span class="arithmatex">\(-\frac{1}{2}T\)</span> 项称为 Itô 校正项)</em> <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p><strong>两种最重要的积分流派：</strong>
-* 当 <span class="arithmatex">\(\lambda = 0\)</span> 时（取左端点），即为 <strong>Itô 积分</strong>，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>。它保持了鞅的性质，常用于金融数学领域。
-* 当 <span class="arithmatex">\(\lambda = 1/2\)</span> 时（取中点），即为 <strong>Stratonovich 积分</strong>，校正项相互抵消，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>，形式上与经典微积分一致，常用于物理和工程领域。</p>
+<p><strong>两种最重要的积分流派：</strong></p>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(\lambda = 0\)</span> 时（取左端点），即为 <strong>Itô 积分</strong>，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>。它保持了鞅的性质，常用于金融数学领域。</p>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(\lambda = 1/2\)</span> 时（取中点），即为 <strong>Stratonovich 积分</strong>，校正项相互抵消，结果为 <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>，形式上与经典微积分一致，常用于物理和工程领域。</p>
+</li>
+</ul>
 <hr />
 <h2 id="5-ito">5. 严格 Itô 积分的测度论准备</h2>
 <p>为了将 Itô 积分推广到更一般的随机过程（不只是 <span class="arithmatex">\(W(t)\)</span>），我们需要严格定义什么叫做“不管未来，只看过去”。这需要我们引入流 (Filtration) 和适应过程 (Adapted Process) 的概念。</p>

@@ -5350,9 +5350,15 @@ B_2 \xrightarrow{L^2} \frac{1}{2} T
 <p><em>(Note: The extra term <span class="arithmatex">\(-\frac{1}{2}T\)</span> that appears later is called the Itô correction term.)</em> <span class="arithmatex">\(\square\)</span></p>
 </details>
 </div>
-<p><strong>The Two Most Important Schools of Integration:</strong>
-* When <span class="arithmatex">\(\lambda = 0\)</span> (taking the left endpoint), it is the <strong>Itô integral</strong>, with result <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>. It preserves the martingale property and is commonly used in financial mathematics.
-* When <span class="arithmatex">\(\lambda = 1/2\)</span> (taking the midpoint), it is the <strong>Stratonovich integral</strong>, where the correction terms cancel out, resulting in <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>, which formally aligns with classical calculus and is often used in physics and engineering.</p>
+<p><strong>The Two Most Important Schools of Integration:</strong></p>
+<ul>
+<li>
+<p>When <span class="arithmatex">\(\lambda = 0\)</span> (taking the left endpoint), it is the <strong>Itô integral</strong>, with result <span class="arithmatex">\(\frac{1}{2}W(T)^2 - \frac{1}{2}T\)</span>. It preserves the martingale property and is commonly used in financial mathematics.</p>
+</li>
+<li>
+<p>When <span class="arithmatex">\(\lambda = 1/2\)</span> (taking the midpoint), it is the <strong>Stratonovich integral</strong>, where the correction terms cancel out, resulting in <span class="arithmatex">\(\frac{1}{2}W(T)^2\)</span>, which formally aligns with classical calculus and is often used in physics and engineering.</p>
+</li>
+</ul>
 <hr />
 <h2 id="5-measure-theoretic-preparation-for-the-strict-ito-integral">5. Measure-Theoretic Preparation for the Strict Itô Integral</h2>
 <p>To extend the Itô integral to more general stochastic processes (not just <span class="arithmatex">\(W(t)\)</span>), we need to rigorously define what it means to "look only at the past, not the future." This requires us to introduce the concepts of a <strong>filtration</strong> and an <strong>adapted process</strong>.</p>
