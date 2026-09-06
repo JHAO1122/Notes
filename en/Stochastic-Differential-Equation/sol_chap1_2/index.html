@@ -5467,7 +5467,7 @@ Let the probability density function of the random variable <span class="arithma
 <div class="arithmatex">\[
 a \left( \frac{1}{2}x^2 - \frac{1}{3}x^3 \right) \Bigg|_{0}^{1} = 1 \implies a \left( \frac{1}{2} - \frac{1}{3} \right) = 1
 \]</div>
-<p>Solving gives: <span class="arithmatex">\(a = 6\)</span> [cite: 1519].</p>
+<p>Solving gives: <span class="arithmatex">\(a = 6\)</span> .</p>
 <p><br></p>
 <p><strong>(2) Finding the probability density function of <span class="arithmatex">\(Y=X^3\)</span></strong></p>
 <p>First, find the cumulative distribution function <span class="arithmatex">\(F_Y(y)\)</span> of <span class="arithmatex">\(Y\)</span>. Since <span class="arithmatex">\(X \in (0,1)\)</span>, we have <span class="arithmatex">\(Y = X^3 \in (0,1)\)</span>.
@@ -5479,7 +5479,7 @@ F_Y(y) = \mathbb{P}(Y \leqslant y) = \mathbb{P}(X^3 \leqslant y) = \mathbb{P}(X 
 <div class="arithmatex">\[
 F_Y(y) = \int_{0}^{y^{1/3}} 6x(1-x)dx = \left( 3x^2 - 2x^3 \right) \Big|_{0}^{y^{1/3}} = 3y^{2/3} - 2y
 \]</div>
-<p>Differentiating <span class="arithmatex">\(F_Y(y)\)</span> yields the probability density function <span class="arithmatex">\(f_Y(y)\)</span> of <span class="arithmatex">\(Y\)</span> [cite: 1519]:</p>
+<p>Differentiating <span class="arithmatex">\(F_Y(y)\)</span> yields the probability density function <span class="arithmatex">\(f_Y(y)\)</span> of <span class="arithmatex">\(Y\)</span> :</p>
 <div class="arithmatex">\[
 f_Y(y) = F_Y'(y) = 3 \cdot \frac{2}{3}y^{-1/3} - 2 = 2y^{-1/3} - 2
 \]</div>
@@ -5497,7 +5497,7 @@ Let <span class="arithmatex">\(X, Y\)</span> be independent random variables, <s
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p><strong>(1) Proof:</strong></p>
-<p>[cite_start]We adopt the rigorous proof method of the Standard Machine from measure theory [cite: 1520]:</p>
+<p>We adopt the rigorous proof method of the Standard Machine from measure theory :</p>
 <p><strong>Step 1 (Indicator functions):</strong> Let <span class="arithmatex">\(f(x,y) = I_A(x)I_B(y)\)</span>, where <span class="arithmatex">\(A, B\)</span> are Borel sets.
 Since <span class="arithmatex">\(X, Y\)</span> are independent, using properties of conditional expectation (given <span class="arithmatex">\(Y\)</span>, <span class="arithmatex">\(I_B(Y)\)</span> can be factored out, and the conditional expectation of independent variables equals the unconditional expectation):</p>
 <div class="arithmatex">\[
@@ -5508,9 +5508,9 @@ Since <span class="arithmatex">\(X, Y\)</span> are independent, using properties
 \int I_A(x)I_B(Y)dF_X(x) = I_B(Y) \int I_A(x)dF_X(x) = I_B(Y)\mathbb{P}(X \in A)
 \]</div>
 <p>The two are equal, so the statement holds for indicator functions.</p>
-<p><strong>Step 2 (Simple functions):</strong> By the linearity of expectation, the conclusion holds for simple functions, which are finite linear combinations of indicator functions [cite: 1520].</p>
-<p><strong>Step 3 (Non-negative measurable functions):</strong> For any non-negative measurable function, there exists a monotone increasing sequence of simple functions approximating it. By the Monotone Convergence Theorem, the conclusion holds for non-negative measurable functions [cite: 1520].</p>
-<p><strong>Step 4 (Bounded continuous functions):</strong> Any bounded continuous function can be decomposed into its positive and negative parts <span class="arithmatex">\(f = f^+ - f^-\)</span>, and by definition it is Lebesgue integrable. Therefore, the original formula holds for all bounded continuous functions. QED [cite: 1520].</p>
+<p><strong>Step 2 (Simple functions):</strong> By the linearity of expectation, the conclusion holds for simple functions, which are finite linear combinations of indicator functions.</p>
+<p><strong>Step 3 (Non-negative measurable functions):</strong> For any non-negative measurable function, there exists a monotone increasing sequence of simple functions approximating it. By the Monotone Convergence Theorem, the conclusion holds for non-negative measurable functions.</p>
+<p><strong>Step 4 (Bounded continuous functions):</strong> Any bounded continuous function can be decomposed into its positive and negative parts <span class="arithmatex">\(f = f^+ - f^-\)</span>, and by definition it is Lebesgue integrable. Therefore, the original formula holds for all bounded continuous functions. QED.</p>
 <p><br></p>
 <p><strong>(2) Proof:</strong></p>
 <p>The conditional probability can be directly written in the form of conditional expectation:</p>
@@ -5525,7 +5525,7 @@ Since <span class="arithmatex">\(X, Y\)</span> are independent, using properties
 <div class="arithmatex">\[
 \int I_{\{u \leqslant x-Y\}} dF_X(u) = \int_{-\infty}^{x-Y} dF_X(u) = F_X(x-Y)
 \]</div>
-<p>QED [cite: 1521].</p>
+<p>QED.</p>
 </details>
 <hr />
 <h3 id="exercise-3">Exercise 3</h3>
@@ -5546,12 +5546,12 @@ Therefore, the conditional expectation <span class="arithmatex">\(\mathbb{E}[\ch
 <div class="arithmatex">\[
 \int_B (c_1 \chi_B + c_2 \chi_{B^c}) d\mathbb{P} = \int_B \chi_A d\mathbb{P} \implies c_1 \mathbb{P}(B) = \mathbb{P}(A \cap B)
 \]</div>
-<p>If <span class="arithmatex">\(\mathbb{P}(B) &gt; 0\)</span>, then <span class="arithmatex">\(c_1 = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \mathbb{P}(A|B)\)</span> [cite: 1523].</p>
+<p>If <span class="arithmatex">\(\mathbb{P}(B) &gt; 0\)</span>, then <span class="arithmatex">\(c_1 = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \mathbb{P}(A|B)\)</span>.</p>
 <p><strong>Case 2: Take <span class="arithmatex">\(\Lambda = B^c\)</span></strong></p>
 <div class="arithmatex">\[
 \int_{B^c} (c_1 \chi_B + c_2 \chi_{B^c}) d\mathbb{P} = \int_{B^c} \chi_A d\mathbb{P} \implies c_2 \mathbb{P}(B^c) = \mathbb{P}(A \cap B^c)
 \]</div>
-<p>If <span class="arithmatex">\(\mathbb{P}(B^c) &gt; 0\)</span>, then <span class="arithmatex">\(c_2 = \frac{\mathbb{P}(A \cap B^c)}{\mathbb{P}(B^c)} = \mathbb{P}(A|B^c)\)</span> [cite: 1524].</p>
+<p>If <span class="arithmatex">\(\mathbb{P}(B^c) &gt; 0\)</span>, then <span class="arithmatex">\(c_2 = \frac{\mathbb{P}(A \cap B^c)}{\mathbb{P}(B^c)} = \mathbb{P}(A|B^c)\)</span>.</p>
 <p>In summary, the explicit expression for the conditional expectation is:</p>
 <div class="arithmatex">\[
 \mathbb{E}[\chi_A|\chi_B] = \mathbb{P}(A|B)\chi_B + \mathbb{P}(A|B^c)\chi_{B^c}
@@ -5565,9 +5565,9 @@ Let <span class="arithmatex">\(\mathcal{V}_1\)</span> and <span class="arithmate
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p><strong>Proof:</strong></p>
-<p>First, by the definition of conditional expectation, the inner expectation <span class="arithmatex">\(\mathbb{E}(X|\mathcal{V}_1)\)</span> must be a <span class="arithmatex">\(\mathcal{V}_1\)</span>-measurable random variable [cite: 1529].</p>
+<p>First, by the definition of conditional expectation, the inner expectation <span class="arithmatex">\(\mathbb{E}(X|\mathcal{V}_1)\)</span> must be a <span class="arithmatex">\(\mathcal{V}_1\)</span>-measurable random variable.</p>
 <p>Since the problem states that <span class="arithmatex">\(\mathcal{V}_1\)</span> and <span class="arithmatex">\(\mathcal{V}_2\)</span> are independent <span class="arithmatex">\(\sigma\)</span>-fields, the <span class="arithmatex">\(\mathcal{V}_1\)</span>-measurable random variable <span class="arithmatex">\(\mathbb{E}(X|\mathcal{V}_1)\)</span> is naturally independent of the <span class="arithmatex">\(\sigma\)</span>-field <span class="arithmatex">\(\mathcal{V}_2\)</span>.</p>
-<p>According to the property of conditional expectation with respect to an independent <span class="arithmatex">\(\sigma\)</span>-field (if a random variable <span class="arithmatex">\(Z\)</span> is independent of a <span class="arithmatex">\(\sigma\)</span>-field <span class="arithmatex">\(\mathcal{G}\)</span>, then <span class="arithmatex">\(\mathbb{E}[Z|\mathcal{G}] = \mathbb{E}[Z]\)</span>), we can remove the conditioning on <span class="arithmatex">\(\mathcal{V}_2\)</span> [cite: 1529]:</p>
+<p>According to the property of conditional expectation with respect to an independent <span class="arithmatex">\(\sigma\)</span>-field (if a random variable <span class="arithmatex">\(Z\)</span> is independent of a <span class="arithmatex">\(\sigma\)</span>-field <span class="arithmatex">\(\mathcal{G}\)</span>, then <span class="arithmatex">\(\mathbb{E}[Z|\mathcal{G}] = \mathbb{E}[Z]\)</span>), we can remove the conditioning on <span class="arithmatex">\(\mathcal{V}_2\)</span>:</p>
 <div class="arithmatex">\[
 \mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)|\mathcal{V}_2] = \mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)]
 \]</div>
@@ -5575,7 +5575,7 @@ Let <span class="arithmatex">\(\mathcal{V}_1\)</span> and <span class="arithmate
 <div class="arithmatex">\[
 \mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)] = \mathbb{E}[X]
 \]</div>
-<p>Combining the two equations, the original proposition is proved [cite: 1529]. <span class="arithmatex">\(\square\)</span></p>
+<p>Combining the two equations, the original proposition is proved. <span class="arithmatex">\(\square\)</span></p>
 </details>
 <hr />
 <h3 id="exercise-5">Exercise 5</h3>
@@ -5588,15 +5588,15 @@ Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(\{X_n\}
 <summary>Solution (click to expand)</summary>
 <p><strong>Proof:</strong></p>
 <p>Consider the function <span class="arithmatex">\(\Phi(x) = |x|^p\)</span>. Since <span class="arithmatex">\(p \geqslant 1\)</span>, this is a convex function.
-Using the linearity of conditional expectation and the <strong>conditional Jensen's inequality</strong>, we combine the conditional expectations inside the absolute value and move the absolute value inside the expectation [cite: 1530]:</p>
+Using the linearity of conditional expectation and the <strong>conditional Jensen's inequality</strong>, we combine the conditional expectations inside the absolute value and move the absolute value inside the expectation:</p>
 <div class="arithmatex">\[
 \big|\mathbb{E}[X_n|\mathcal{V}] - \mathbb{E}[X|\mathcal{V}]\big|^p = \big|\mathbb{E}[X_n - X | \mathcal{V}]\big|^p \leqslant \mathbb{E}\big[|X_n - X|^p \big| \mathcal{V}\big]
 \]</div>
-<p>Taking the unconditional expectation on both sides of the above inequality and applying the law of total expectation [cite: 1530, 1531]:</p>
+<p>Taking the unconditional expectation on both sides of the above inequality and applying the law of total expectation:</p>
 <div class="arithmatex">\[
 \mathbb{E}\left[\big|\mathbb{E}[X_n|\mathcal{V}] - \mathbb{E}[X|\mathcal{V}]\big|^p\right] \leqslant \mathbb{E}\left[ \mathbb{E}\big[|X_n - X|^p \big| \mathcal{V}\big] \right] = \mathbb{E}\big[|X_n - X|^p\big]
 \]</div>
-<p>Taking the limit as <span class="arithmatex">\(n \to \infty\)</span> on both sides of the inequality. Since it is given that <span class="arithmatex">\(\lim_{n\to\infty}\mathbb{E}[|X_n - X|^p] = 0\)</span>, and the left-hand side expectation is always non-negative, by the squeeze theorem [cite: 1532]:</p>
+<p>Taking the limit as <span class="arithmatex">\(n \to \infty\)</span> on both sides of the inequality. Since it is given that <span class="arithmatex">\(\lim_{n\to\infty}\mathbb{E}[|X_n - X|^p] = 0\)</span>, and the left-hand side expectation is always non-negative, by the squeeze theorem:</p>
 <div class="arithmatex">\[
 \lim_{n\to\infty}\mathbb{E}\left[\big|\mathbb{E}[X_n|\mathcal{V}] - \mathbb{E}[X|\mathcal{V}]\big|^p\right] = 0
 \]</div>
@@ -5630,19 +5630,23 @@ Compute: (1) <span class="arithmatex">\(X\mathbb{E}[Y]\)</span>; (2) <span class
 X\mathbb{E}[Y] = \frac{7}{4}X = \frac{7}{4}\chi_{\{1,2,3,4\}} + \frac{14}{4}\chi_{\{5,6,7,8\}}
 \]</div>
 <p><strong>(2) Computing <span class="arithmatex">\(\mathbb{E}[\mathbb{E}[XY|\mathcal{V}]|\mathcal{H}]\)</span></strong></p>
-<p>Here we utilize the extremely elegant smoothing property (Tower Property) to directly reduce dimensions, avoiding the cumbersome calculation of double conditional expectations [cite: 1533].
+<p>Here we utilize the extremely elegant smoothing property (Tower Property) to directly reduce dimensions, avoiding the cumbersome calculation of double conditional expectations.
 Since <span class="arithmatex">\(\mathcal{H} \subset \mathcal{V}\)</span>, the smaller <span class="arithmatex">\(\sigma\)</span>-algebra plays the decisive role on the outside:</p>
 <div class="arithmatex">\[
 \mathbb{E}\big[\mathbb{E}[XY|\mathcal{V}]\big|\mathcal{H}\big] = \mathbb{E}[XY|\mathcal{H}]
 \]</div>
-<p>Observing the random variable <span class="arithmatex">\(X\)</span>, it is constantly 1 on <span class="arithmatex">\(\{1,2,3,4\}\)</span> and constantly 2 on <span class="arithmatex">\(\{5,6,7,8\}\)</span>, which exactly corresponds to the atomic partition of <span class="arithmatex">\(\mathcal{H}\)</span>. Therefore, <span class="arithmatex">\(X\)</span> is <strong><span class="arithmatex">\(\mathcal{H}\)</span>-measurable</strong>! As known information, it can be factored out of the conditional expectation [cite: 1535]:</p>
+<p>Observing the random variable <span class="arithmatex">\(X\)</span>, it is constantly 1 on <span class="arithmatex">\(\{1,2,3,4\}\)</span> and constantly 2 on <span class="arithmatex">\(\{5,6,7,8\}\)</span>, which exactly corresponds to the atomic partition of <span class="arithmatex">\(\mathcal{H}\)</span>. Therefore, <span class="arithmatex">\(X\)</span> is <strong><span class="arithmatex">\(\mathcal{H}\)</span>-measurable</strong>! As known information, it can be factored out of the conditional expectation:</p>
 <div class="arithmatex">\[
 \mathbb{E}[XY|\mathcal{H}] = X \mathbb{E}[Y|\mathcal{H}]
 \]</div>
-<p>Next, we compute the conditional expectation of <span class="arithmatex">\(Y\)</span> on the two atoms of <span class="arithmatex">\(\mathcal{H}\)</span>:
-* On <span class="arithmatex">\(\{1,2,3,4\}\)</span>: <span class="arithmatex">\(\mathbb{E}[Y|\{1,2,3,4\}] = \frac{1\cdot P(\{1\}) + 2\cdot P(\{2,3,4\})}{P(\{1,2,3,4\})} = \frac{1/10 + 6/10}{4/10} = \frac{7}{4}\)</span></p>
+<p>Next, we compute the conditional expectation of <span class="arithmatex">\(Y\)</span> on the two atoms of <span class="arithmatex">\(\mathcal{H}\)</span>:</p>
 <ul>
-<li>On <span class="arithmatex">\(\{5,6,7,8\}\)</span>: <span class="arithmatex">\(\mathbb{E}[Y|\{5,6,7,8\}] = \frac{1\cdot P(\{5\}) + 2\cdot P(\{6,7,8\})}{P(\{5,6,7,8\})} = \frac{3/20 + 18/20}{12/20} = \frac{7}{4}\)</span></li>
+<li>
+<p>On <span class="arithmatex">\(\{1,2,3,4\}\)</span>: <span class="arithmatex">\(\mathbb{E}[Y|\{1,2,3,4\}] = \frac{1\cdot P(\{1\}) + 2\cdot P(\{2,3,4\})}{P(\{1,2,3,4\})} = \frac{1/10 + 6/10}{4/10} = \frac{7}{4}\)</span></p>
+</li>
+<li>
+<p>On <span class="arithmatex">\(\{5,6,7,8\}\)</span>: <span class="arithmatex">\(\mathbb{E}[Y|\{5,6,7,8\}] = \frac{1\cdot P(\{5\}) + 2\cdot P(\{6,7,8\})}{P(\{5,6,7,8\})} = \frac{3/20 + 18/20}{12/20} = \frac{7}{4}\)</span></p>
+</li>
 </ul>
 <p>It is surprisingly found that <span class="arithmatex">\(\mathbb{E}[Y|\mathcal{H}] = 7/4\)</span> holds constant on both partitions. Hence:</p>
 <div class="arithmatex">\[
@@ -5656,7 +5660,7 @@ Given a probability space <span class="arithmatex">\((\Omega, \mathcal{F}, \math
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p><strong>Proof:</strong>
-[cite_start]We need to strictly verify the three core conditions of a martingale [cite: 1546, 1547]:</p>
+We need to strictly verify the three core conditions of a martingale:</p>
 <p><strong>1. Integrability:</strong>
 Using the contraction property of conditional expectation (the absolute value special case of Jensen's inequality):</p>
 <div class="arithmatex">\[
@@ -5682,7 +5686,7 @@ Let <span class="arithmatex">\(W(t)\)</span> be a one-dimensional Brownian motio
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p><strong>(1) Prove that <span class="arithmatex">\(B(t) = W(t+s) - W(s)\)</span> is a Brownian motion</strong></p>
-<p>We verify the four defining properties of Brownian motion one by one [cite: 1551]:</p>
+<p>We verify the four defining properties of Brownian motion one by one:</p>
 <ol>
 <li>
 <p><strong>Zero initial value</strong>: <span class="arithmatex">\(B(0) = W(0+s) - W(s) = 0\)</span>.</p>
@@ -5702,7 +5706,7 @@ Let <span class="arithmatex">\(W(t)\)</span> be a one-dimensional Brownian motio
 </ol>
 <p>In conclusion, <span class="arithmatex">\(B(t)\)</span> is a one-dimensional Brownian motion.</p>
 <p><strong>(2) Prove that <span class="arithmatex">\(U(t) = cW(t/c^2)\)</span> is a Brownian motion</strong></p>
-<p>Similarly, we verify the properties [cite: 1552, 1553]:</p>
+<p>Similarly, we verify the properties:</p>
 <ol>
 <li>
 <p><strong>Zero initial value</strong>: <span class="arithmatex">\(U(0) = cW(0/c^2) = cW(0) = 0\)</span>.</p>
@@ -5728,7 +5732,7 @@ Let <span class="arithmatex">\(W(t)\)</span> be a one-dimensional Brownian motio
 Prove: <span class="arithmatex">\(\tilde{W}(t) - \tilde{W}(s) \sim N(0, t-s), \forall 0 &lt; s &lt; t\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>For <span class="arithmatex">\(0 &lt; s &lt; t\)</span>, we perform an identity transformation on the increment to arrange mutually independent terms [cite: 1557, 1558]:</p>
+<p>For <span class="arithmatex">\(0 &lt; s &lt; t\)</span>, we perform an identity transformation on the increment to arrange mutually independent terms:</p>
 <div class="arithmatex">\[
 \tilde{W}(t) - \tilde{W}(s) = tW\left(\frac{1}{t}\right) - sW\left(\frac{1}{s}\right)
 \]</div>
@@ -5737,7 +5741,7 @@ Prove: <span class="arithmatex">\(\tilde{W}(t) - \tilde{W}(s) \sim N(0, t-s), \f
 = (t-s)W\left(\frac{1}{t}\right) - s\left(W\left(\frac{1}{s}\right) - W\left(\frac{1}{t}\right)\right)
 \]</div>
 <p>Note that here <span class="arithmatex">\(1/t &lt; 1/s\)</span>. Using the independent increments property of Brownian motion, the random variable <span class="arithmatex">\(W(1/t) = W(1/t) - W(0)\)</span> is independent of the increment <span class="arithmatex">\(W(1/s) - W(1/t)\)</span>.</p>
-<p>Due to independence, the variances can be directly added [cite: 1561]:</p>
+<p>Due to independence, the variances can be directly added:</p>
 <div class="arithmatex">\[
 Var(\tilde{W}(t) - \tilde{W}(s)) = (t-s)^2 Var\left( W\left(\frac{1}{t}\right) \right) + s^2 Var\left( W\left(\frac{1}{s}\right) - W\left(\frac{1}{t}\right) \right)
 \]</div>
@@ -5749,7 +5753,7 @@ Var(\tilde{W}(t) - \tilde{W}(s)) = (t-s)^2 Var\left( W\left(\frac{1}{t}\right) \
 <div class="arithmatex">\[
 = \frac{t^2 - 2ts + s^2}{t} + s - \frac{s^2}{t} = \frac{t^2 - 2ts}{t} + s = t - 2s + s = t - s
 \]</div>
-<p>Furthermore, by the linearity of expectation, <span class="arithmatex">\(E[\tilde{W}(t) - \tilde{W}(s)] = 0 - 0 = 0\)</span> [cite: 1562].
+<p>Furthermore, by the linearity of expectation, <span class="arithmatex">\(E[\tilde{W}(t) - \tilde{W}(s)] = 0 - 0 = 0\)</span>.
 Since it is a linear combination of jointly normal random variables, it must follow a normal distribution.</p>
 <p>The conclusion is proven: <span class="arithmatex">\(\tilde{W}(t) - \tilde{W}(s) \sim N(0, t-s)\)</span>.</p>
 </details>
@@ -5759,7 +5763,7 @@ Since it is a linear combination of jointly normal random variables, it must fol
 Let <span class="arithmatex">\(W(t)\)</span> be a Brownian motion. Prove: <span class="arithmatex">\(\mathbb{E}[W^{2k}(t)] = \frac{(2k)!t^k}{2^k k!}, \forall t &gt; 0\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>Since <span class="arithmatex">\(W(t) \sim N(0, t)\)</span>, using the moment generating function (MGF) of the normal distribution <span class="arithmatex">\(M_W(\lambda) = \mathbb{E}[e^{\lambda W(t)}]\)</span> [cite: 1564]:</p>
+<p>Since <span class="arithmatex">\(W(t) \sim N(0, t)\)</span>, using the moment generating function (MGF) of the normal distribution <span class="arithmatex">\(M_W(\lambda) = \mathbb{E}[e^{\lambda W(t)}]\)</span>:</p>
 <div class="arithmatex">\[
 M_W(\lambda) = \exp\left( \frac{1}{2} \lambda^2 t \right)
 \]</div>
@@ -5776,7 +5780,7 @@ M_W(\lambda) = \exp\left( \frac{1}{2} \lambda^2 t \right)
 <div class="arithmatex">\[
 \frac{\mathbb{E}[W^{2k}(t)]}{(2k)!} = \frac{t^k}{2^k k!}
 \]</div>
-<p>Rearranging yields the proof [cite: 1571]:</p>
+<p>Rearranging yields the proof:</p>
 <div class="arithmatex">\[
 \mathbb{E}[W^{2k}(t)] = \frac{(2k)! t^k}{2^k k!}
 \]</div>
@@ -5789,9 +5793,9 @@ Prove: Let <span class="arithmatex">\(c\)</span> be a constant, <span class="ari
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p>Due to the stationarity and symmetry of Brownian motion increments, <span class="arithmatex">\(W(s) - W(t)\)</span> and <span class="arithmatex">\(W(t) - W(s)\)</span> have the same distribution, both following <span class="arithmatex">\(N(0, t-s)\)</span>.</p>
-<p>This is equivalent to finding the moment generating function of a normal random variable [cite: 1573].
+<p>This is equivalent to finding the moment generating function of a normal random variable.
 Let <span class="arithmatex">\(Z = c(W(s) - W(t))\)</span>, then <span class="arithmatex">\(Z \sim N(0, c^2(t-s))\)</span>.</p>
-<p>According to the moment generating function formula for a normal distribution <span class="arithmatex">\(N(\mu, \sigma^2)\)</span>, <span class="arithmatex">\(\mathbb{E}[e^Z] = \exp(\mu + \frac{1}{2}\sigma^2)\)</span> [cite: 1573, 1574]:</p>
+<p>According to the moment generating function formula for a normal distribution <span class="arithmatex">\(N(\mu, \sigma^2)\)</span>, <span class="arithmatex">\(\mathbb{E}[e^Z] = \exp(\mu + \frac{1}{2}\sigma^2)\)</span>:</p>
 <div class="arithmatex">\[
 \mathbb{E}[\exp(c(W(s) - W(t)))] = \exp\left( 0 + \frac{1}{2} \cdot c^2(t-s) \right) = \exp\left( \frac{1}{2}c^2(t-s) \right)
 \]</div>
@@ -5813,7 +5817,7 @@ Since we assumed <span class="arithmatex">\(t \geqslant s\)</span>, naturally <s
 <div class="arithmatex">\[
 \mathbb{E}\left[ W(e^{2t})W(e^{2s}) \right] = \min(e^{2t}, e^{2s}) = e^{2s}
 \]</div>
-<p>Substituting this back into the original expression [cite: 1576, 1577]:</p>
+<p>Substituting this back into the original expression:</p>
 <div class="arithmatex">\[
 \mathbb{E}[U(t)U(s)] = e^{-(t+s)} \cdot e^{2s} = e^{s-t}
 \]</div>
@@ -5833,7 +5837,7 @@ Consider the random sequence <span class="arithmatex">\(Y_m = \frac{W(m)}{m}\)</
 Var\left(\frac{W(m)}{m}\right) = \frac{1}{m^2} Var(W(m)) = \frac{m}{m^2} = \frac{1}{m}
 \]</div>
 <p><strong>Step 2: Strengthening the Moment Bound (Paving the Way for Borel-Cantelli)</strong></p>
-<p>If we only use Chebyshev's inequality with the second moment, we get <span class="arithmatex">\(P(|Y_m| \ge \epsilon) \le \frac{1}{m\epsilon^2}\)</span> [cite: 1583]. However, <span class="arithmatex">\(\sum_{m=1}^{\infty} \frac{1}{m}\)</span> is the harmonic series, which does not converge, preventing the direct use of the B-C lemma.
+<p>If we only use Chebyshev's inequality with the second moment, we get <span class="arithmatex">\(P(|Y_m| \ge \epsilon) \le \frac{1}{m\epsilon^2}\)</span>. However, <span class="arithmatex">\(\sum_{m=1}^{\infty} \frac{1}{m}\)</span> is the harmonic series, which does not converge, preventing the direct use of the B-C lemma.
 Therefore, we use the fourth moment (or exploit the exponential decay property of the normal distribution). For a standard normal variable <span class="arithmatex">\(Z \sim N(0,1)\)</span>, <span class="arithmatex">\(\mathbb{E}[Z^4] = 3\)</span>.</p>
 <div class="arithmatex">\[
 \mathbb{E}[W(m)^4] = 3m^2 \implies \mathbb{E}\left[\left(\frac{W(m)}{m}\right)^4\right] = \frac{3m^2}{m^4} = \frac{3}{m^2}
@@ -5866,7 +5870,7 @@ Using the identity transformation <span class="arithmatex">\(W(t) = (W(t) - W(s)
 = \mathbb{E}[(W(t) - W(s))^2 | \mathcal{F}(s)] + 2\mathbb{E}[W(s)(W(t) - W(s)) | \mathcal{F}(s)] + \mathbb{E}[W(s)^2 | \mathcal{F}(s)]
 \]</div>
 <ul>
-<li>[cite_start]First term: Due to the independent increments of Brownian motion, <span class="arithmatex">\(W(t)-W(s)\)</span> is independent of <span class="arithmatex">\(\mathcal{F}(s)\)</span>, so the conditional expectation equals the unconditional expectation <span class="arithmatex">\(\mathbb{E}[(W(t)-W(s))^2] = t-s\)</span> [cite: 1585, 1586].</li>
+<li>First term: Due to the independent increments of Brownian motion, <span class="arithmatex">\(W(t)-W(s)\)</span> is independent of <span class="arithmatex">\(\mathcal{F}(s)\)</span>, so the conditional expectation equals the unconditional expectation <span class="arithmatex">\(\mathbb{E}[(W(t)-W(s))^2] = t-s\)</span>.</li>
 <li>Second term: <span class="arithmatex">\(W(s)\)</span> is <span class="arithmatex">\(\mathcal{F}(s)\)</span>-measurable and can be factored out. The remaining increment expectation is 0.</li>
 <li>Third term: <span class="arithmatex">\(W(s)^2\)</span> is <span class="arithmatex">\(\mathcal{F}(s)\)</span>-measurable, so it equals itself.</li>
 </ul>
@@ -5893,7 +5897,7 @@ Using the identity transformation <span class="arithmatex">\(W(t) = (W(t) - W(s)
 <div class="arithmatex">\[
 = \exp(\lambda W(s)) \cdot \exp\left( \frac{1}{2} \lambda^2 (t-s) \right)
 \]</div>
-<p>Substituting the above expectation into the expression to be proved [cite: 1587]:</p>
+<p>Substituting the above expectation into the expression to be proved:</p>
 <div class="arithmatex">\[
 \mathbb{E}\left[ \exp\left(\lambda W(t) - \frac{1}{2}\lambda^2 t\right) \Big| \mathcal{F}(s) \right] = \exp\left(-\frac{1}{2}\lambda^2 t\right) \cdot \exp(\lambda W(s)) \cdot \exp\left( \frac{1}{2} \lambda^2 (t-s) \right)
 \]</div>
@@ -5913,7 +5917,7 @@ Using the identity transformation <span class="arithmatex">\(W(t) = (W(t) - W(s)
 Set <span class="arithmatex">\(X(t) = \int_0^t W(s)ds\)</span>. Prove: <span class="arithmatex">\(\mathbb{E}[X^2(t)] = \frac{t^3}{3}, \forall t &gt; 0\)</span>.</p>
 <details class="success">
 <summary>Solution (click to expand)</summary>
-<p>[cite_start]This is a highly representative stochastic process integral calculation, with the core being the use of Fubini's theorem to interchange the order of expectation and integration [cite: 1588].</p>
+<p>This is a highly representative stochastic process integral calculation, with the core being the use of Fubini's theorem to interchange the order of expectation and integration.</p>
 <p>First, write the squared term as a double Riemann integral:</p>
 <div class="arithmatex">\[
 X^2(t) = \left( \int_0^t W(u)du \right) \left( \int_0^t W(v)dv \right) = \int_0^t \int_0^t W(u)W(v) du dv
@@ -5926,7 +5930,7 @@ X^2(t) = \left( \int_0^t W(u)du \right) \left( \int_0^t W(v)dv \right) = \int_0^
 <div class="arithmatex">\[
 = \int_0^t \int_0^t \min(u, v) du dv
 \]</div>
-<p>Because <span class="arithmatex">\(\min(u,v)\)</span> is not differentiable on the diagonal <span class="arithmatex">\(u=v\)</span>, we partition the integration region <span class="arithmatex">\([0,t] \times [0,t]\)</span> along the diagonal into two parts: the region <span class="arithmatex">\(u \leqslant v\)</span> and the region <span class="arithmatex">\(u &gt; v\)</span> [cite: 1589, 1590]:</p>
+<p>Because <span class="arithmatex">\(\min(u,v)\)</span> is not differentiable on the diagonal <span class="arithmatex">\(u=v\)</span>, we partition the integration region <span class="arithmatex">\([0,t] \times [0,t]\)</span> along the diagonal into two parts: the region <span class="arithmatex">\(u \leqslant v\)</span> and the region <span class="arithmatex">\(u &gt; v\)</span>:</p>
 <div class="arithmatex">\[
 = \int_0^t dv \int_0^v u du + \int_0^t du \int_0^u v dv
 \]</div>
