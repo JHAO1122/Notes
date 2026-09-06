@@ -109,8 +109,7 @@ tags:
 ### 习题 3
 
 **题目：**
-为了从牛顿（Newton）力学角度解释 Brown 运动，郎之万（Langevin, 1872-1946）提出了如下描述液体中微粒运动速度的（随机）微分方程：
-$$\frac{dv}{dt} = -\beta v + \dot{W}(t)$$
+为了从牛顿（Newton）力学角度解释 Brown 运动，郎之万（Langevin, 1872-1946）提出了如下描述液体中微粒运动速度的（随机）微分方程：$\frac{dv}{dt} = -\beta v + \dot{W}(t)$
 其中 $-\beta v$ 代表微粒运动受到的摩擦阻力（$\beta$ 是正的常数），白噪声 $\dot{W}(t)$ 描述微粒受到的随机的冲击力。
 (1) 说明该方程的解为 $v(t) = v_0 e^{-\beta t} + W(t) - \beta \int_0^t e^{-\beta(t-s)} W(s) ds$，从而由原点出发的微粒运动路径为 $x_\beta(t) = \int_0^t e^{-\beta(t-s)} W(s) ds$；
 (2) 计算 $v(t), x(t)$ 的期望和方差；
@@ -299,10 +298,10 @@ $$ \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
     $$
     
     观察这两项：
-    * 第一项正是标准的 **Itô 积分**的离散定义（在每个子区间取左端点）：
-      $$\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)$$
-    * 第二项正是布朗运动在区间 $[0,T]$ 上的 **二次变差 (Quadratic Variation)**。由布朗运动的性质已知，其二次变差在均方意义下收敛于区间的长度：
-      $$\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T$$
+
+    * 第一项正是标准的 **Itô 积分**的离散定义（在每个子区间取左端点）：$\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)$
+    
+    * 第二项正是布朗运动在区间 $[0,T]$ 上的 **二次变差 (Quadratic Variation)**。由布朗运动的性质已知，其二次变差在均方意义下收敛于区间的长度：$\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T$
       
     将两部分合并，即得证：
     
@@ -360,8 +359,7 @@ $$ \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
 
 ### 习题 2
 **题目**
-定义二阶积分
-$$\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2$$
+定义二阶积分$\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2$
 其中 $0 = t_0 < t_1 < \dots < t_n = T$，而 $\delta \doteq \max_i |t_{i+1} - t_i|$。证明：当 $f \in L^2([0,T])$ 时，有
 
 $$\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt$$
@@ -454,8 +452,11 @@ $$\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt$$
     为了证明一个过程是鞅，最直接的方法是利用 Itô 公式证明其微分项中没有漂移项（即 $dt$ 项系数为 0）。
     
     令二元函数 $u(t, x) = e^{t/2} \cos(x)$，计算其关于 $t$ 和 $x$ 的偏导数：
+
     * $u_t = \frac{1}{2} e^{t/2} \cos(x)$
+    
     * $u_x = -e^{t/2} \sin(x)$
+    
     * $u_{xx} = -e^{t/2} \cos(x)$
     
     将 $X(t) = W(t)$ 代入 Itô 公式 $dY_t = (u_t + \frac{1}{2} u_{xx})dt + u_x dW(t)$：
@@ -555,7 +556,9 @@ $$\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt$$
     由于 $g(s)$ 是一个确定的时间函数（非随机），这个 Itô 积分是高斯过程的线性叠加，因此 $X$ 依然服从正态分布。
     
     根据随机积分的性质：
+
     * 期望：$\mathbb{E}[X] = \mathbb{E}[\int_0^T g dW] = 0$
+    
     * 方差：由 Itô 等距同构，$Var(X) = \mathbb{E}[X^2] = \int_0^T g^2(s) ds$
     
     所以 $X \sim N(0, \sigma^2)$，其中 $\sigma^2 = \int_0^T g^2(s) ds$。
