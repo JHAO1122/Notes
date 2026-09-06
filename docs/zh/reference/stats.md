@@ -1,4 +1,4 @@
-# 📖 数理统计 (Mathematical Statistics)
+# 📊 数理统计 (Mathematical Statistics)
 
 本模块持续收录数理统计相关的核心基础概念。
 

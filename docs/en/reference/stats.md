@@ -1,4 +1,4 @@
-# 📖 Mathematical Statistics
+# 📊 Mathematical Statistics
 
 This module continuously compiles core foundational concepts related to mathematical statistics.
 

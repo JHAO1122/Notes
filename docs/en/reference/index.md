@@ -8,9 +8,9 @@ This is my **concept quick reference**. In the process of studying mathematical 
 
 This quick reference manual is divided into the following core areas based on knowledge modules:
 
-### [🎲 Probability Theory](prob.md)
+### [📊 Mathematical Statistics](stats.md)
 
-### [📖 Mathematical Statistics](stats.md)
+### [🎲 Probability Theory](prob.md)
 
 ### [📏 Foundations of Measure Theory](measure.md)
 
