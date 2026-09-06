@@ -269,7 +269,9 @@ h(x) = (x, \alpha u) = \overline{\alpha}(x, u) = \overline{\alpha}f(x)
 \]
 
 Similar to the basic definitions of inner product spaces:
+
 * When $H$ is a real space, the mapping $u \mapsto f$ is completely linear;
+
 * When $H$ is a complex space, the mapping $u \mapsto f$ satisfies the complex conjugate rule, which we call **conjugate linear** (or antilinear).
 
 From the isometric norm relation $\|f\| = \|u\|$ established in the Riesz Representation Theorem, this mapping constitutes an isometric isomorphism (or isometric conjugate isomorphism) from the space onto its dual space.
