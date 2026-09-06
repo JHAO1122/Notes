@@ -5218,19 +5218,15 @@ Let <span class="arithmatex">\(W\)</span> be a one-dimensional Brownian motion. 
 <p><strong>Step 2: Combinatorial logic to prove <span class="arithmatex">\(\tau\)</span> is a stopping time</strong></p>
 <p>Now we examine the target stopping time <span class="arithmatex">\(\tau = \inf\{t: W(t) \in (a, b]\}\)</span>. We can decompose <span class="arithmatex">\(\{\tau \le t\}\)</span> based on the initial state <span class="arithmatex">\(W(0)\)</span>:</p>
 <ol>
-<li><strong>If <span class="arithmatex">\(W(0) \le a\)</span></strong>: The process must first cross <span class="arithmatex">\(a\)</span> to enter <span class="arithmatex">\((a, b]\)</span>. The event is equivalent to:</li>
-</ol>
-<p>$<span class="arithmatex">\(
-   \{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W(s) \le b\}
-   \)</span>$</p>
-<ol>
-<li><strong>If <span class="arithmatex">\(W(0) &gt; b\)</span></strong>: The process must first descend to cross <span class="arithmatex">\(b\)</span> to enter <span class="arithmatex">\((a, b]\)</span>. The event is equivalent to:</li>
-</ol>
-<p>$<span class="arithmatex">\(
-   \{W(0) &gt; b\} \cap \{\tau_b \le t\}
-   \)</span>$</p>
-<ol>
-<li><strong>If <span class="arithmatex">\(W(0) \in (a, b]\)</span></strong>: In this case, <span class="arithmatex">\(\tau = 0 \le t\)</span> is necessarily true. The event is equivalent to <span class="arithmatex">\(\{W(0) \in (a, b]\}\)</span>.</li>
+<li>
+<p><strong>If <span class="arithmatex">\(W(0) \le a\)</span></strong>: The process must first cross <span class="arithmatex">\(a\)</span> to enter <span class="arithmatex">\((a, b]\)</span>. The event is equivalent to: <span class="arithmatex">\(\{W(0) \le a\} \cap \{\tau_a \le t, \inf_{\tau_a \le s \le t} W(s) \le b\}\)</span></p>
+</li>
+<li>
+<p><strong>If <span class="arithmatex">\(W(0) &gt; b\)</span></strong>: The process must first descend to cross <span class="arithmatex">\(b\)</span> to enter <span class="arithmatex">\((a, b]\)</span>. The event is equivalent to: <span class="arithmatex">\(\{W(0) &gt; b\} \cap \{\tau_b \le t\}\)</span></p>
+</li>
+<li>
+<p><strong>If <span class="arithmatex">\(W(0) \in (a, b]\)</span></strong>: In this case, <span class="arithmatex">\(\tau = 0 \le t\)</span> is necessarily true. The event is equivalent to <span class="arithmatex">\(\{W(0) \in (a, b]\}\)</span>.</p>
+</li>
 </ol>
 <p>Taking the union of these three mutually exclusive and exhaustive cases, we get:</p>
 <div class="arithmatex">\[
