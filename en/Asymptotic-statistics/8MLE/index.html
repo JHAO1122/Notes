@@ -5395,9 +5395,9 @@ Since <span class="arithmatex">\(\int_{\mathcal{X}} f_\theta(x)\mu(dx) = \int_{\
 <div class="admonition success">
 <p class="admonition-title">Theorem 8.2 (Bhattacharya Inequality)</p>
 <p>In addition to conditions (i) and (ii) of the C-R lower bound theorem, if we strengthen other conditions to:</p>
-<p>(iii)<em> For <span class="arithmatex">\(i=1, \dots, K\)</span>, the <span class="arithmatex">\(i\)</span>-th derivative of <span class="arithmatex">\(f_\theta(x)\)</span> exists and <span class="arithmatex">\(\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0\)</span>.
-(iv)</em> For <span class="arithmatex">\(i=1, \dots, K\)</span>, the variance of the higher-order logarithmic derivatives is finite: <span class="arithmatex">\(\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) &lt; \infty\)</span>.
-(v)* <span class="arithmatex">\(\hat{g}(X)\)</span> is an unbiased estimator of <span class="arithmatex">\(g(\theta)\)</span> with finite variance, and for every <span class="arithmatex">\(i=1, \dots, K\)</span>, the interchange of integration and differentiation holds:</p>
+<p>(iii) For <span class="arithmatex">\(i=1, \dots, K\)</span>, the <span class="arithmatex">\(i\)</span>-th derivative of <span class="arithmatex">\(f_\theta(x)\)</span> exists and <span class="arithmatex">\(\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0\)</span>.
+(iv) For <span class="arithmatex">\(i=1, \dots, K\)</span>, the variance of the higher-order logarithmic derivatives is finite: <span class="arithmatex">\(\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) &lt; \infty\)</span>.
+(v) <span class="arithmatex">\(\hat{g}(X)\)</span> is an unbiased estimator of <span class="arithmatex">\(g(\theta)\)</span> with finite variance, and for every <span class="arithmatex">\(i=1, \dots, K\)</span>, the interchange of integration and differentiation holds:</p>
 <div class="arithmatex">\[
 g^{(i)}(\theta) = \frac{\partial^i}{\partial\theta^i}g(\theta) = \int_{\mathcal{X}} \hat{g}(x)\frac{\partial^i f_\theta(x)}{\partial\theta^i}\mu(dx)
 \]</div>
@@ -5414,9 +5414,9 @@ var_\theta(\hat{g}(X)) \ge \tilde{g}^T(\theta) V^{-1}(\theta) \tilde{g}(\theta)
 S_\theta^{(i)}(x) = \frac{1}{f_\theta(x)} \frac{\partial^i f_\theta(x)}{\partial\theta^i}
 \]</div>
 <ul>
-<li>From condition (iii)*, <span class="arithmatex">\(E_\theta[S] = 0\)</span>.</li>
-<li>From condition (iv)* and the definition of <span class="arithmatex">\(V(\theta)\)</span>, <span class="arithmatex">\(var_\theta(S) = V(\theta)\)</span>.</li>
-<li>From condition (v)*, the covariance <span class="arithmatex">\(cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)\)</span>.</li>
+<li>From condition (iii), <span class="arithmatex">\(E_\theta[S] = 0\)</span>.</li>
+<li>From condition (iv) and the definition of <span class="arithmatex">\(V(\theta)\)</span>, <span class="arithmatex">\(var_\theta(S) = V(\theta)\)</span>.</li>
+<li>From condition (v), the covariance <span class="arithmatex">\(cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)\)</span>.</li>
 </ul>
 <p>Consider the block covariance matrix <span class="arithmatex">\(A\)</span> of the combined vector <span class="arithmatex">\((\hat{g}, S^T)^T\)</span>:</p>
 <div class="arithmatex">\[
