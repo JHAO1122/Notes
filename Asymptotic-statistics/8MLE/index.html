@@ -5395,9 +5395,9 @@ var_\theta(\hat{g}(X)) \ge \frac{[g'(\theta)]^2}{I_n(\theta)}
 <div class="admonition success">
 <p class="admonition-title">定理 8.2 (Bhattacharya 不等式)</p>
 <p>在满足 C-R 下界定理中条件 (i) 和 (ii) 的基础上，如果我们加强其他条件为：</p>
-<p>(iii)<em> 对于 <span class="arithmatex">\(i=1, \dots, K\)</span>，<span class="arithmatex">\(f_\theta(x)\)</span> 的 <span class="arithmatex">\(i\)</span> 阶导数存在且 <span class="arithmatex">\(\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0\)</span>。
-(iv)</em> 对于 <span class="arithmatex">\(i=1, \dots, K\)</span>，高阶对数导数的方差有限：<span class="arithmatex">\(\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) &lt; \infty\)</span>。
-(v)* <span class="arithmatex">\(\hat{g}(X)\)</span> 是 <span class="arithmatex">\(g(\theta)\)</span> 的方差有限的无偏估计，且对于任意 <span class="arithmatex">\(i=1, \dots, K\)</span> 满足积分可交换性：</p>
+<p>(iii) 对于 <span class="arithmatex">\(i=1, \dots, K\)</span>，<span class="arithmatex">\(f_\theta(x)\)</span> 的 <span class="arithmatex">\(i\)</span> 阶导数存在且 <span class="arithmatex">\(\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0\)</span>。</p>
+<p>(iv) 对于 <span class="arithmatex">\(i=1, \dots, K\)</span>，高阶对数导数的方差有限：<span class="arithmatex">\(\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) &lt; \infty\)</span>。</p>
+<p>(v) <span class="arithmatex">\(\hat{g}(X)\)</span> 是 <span class="arithmatex">\(g(\theta)\)</span> 的方差有限的无偏估计，且对于任意 <span class="arithmatex">\(i=1, \dots, K\)</span> 满足积分可交换性：</p>
 <div class="arithmatex">\[
 g^{(i)}(\theta) = \frac{\partial^i}{\partial\theta^i}g(\theta) = \int_{\mathcal{X}} \hat{g}(x)\frac{\partial^i f_\theta(x)}{\partial\theta^i}\mu(dx)
 \]</div>
@@ -5414,9 +5414,15 @@ var_\theta(\hat{g}(X)) \ge \tilde{g}^T(\theta) V^{-1}(\theta) \tilde{g}(\theta)
 S_\theta^{(i)}(x) = \frac{1}{f_\theta(x)} \frac{\partial^i f_\theta(x)}{\partial\theta^i}
 \]</div>
 <ul>
-<li>由条件 (iii)* 可知，<span class="arithmatex">\(E_\theta[S] = 0\)</span>。</li>
-<li>由条件 (iv)* 和 <span class="arithmatex">\(V(\theta)\)</span> 的定义可知，<span class="arithmatex">\(var_\theta(S) = V(\theta)\)</span>。</li>
-<li>由条件 (v)* 可知，协方差 <span class="arithmatex">\(cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)\)</span>。</li>
+<li>
+<p>由条件 (iii) 可知，<span class="arithmatex">\(E_\theta[S] = 0\)</span>。</p>
+</li>
+<li>
+<p>由条件 (iv) 和 <span class="arithmatex">\(V(\theta)\)</span> 的定义可知，<span class="arithmatex">\(var_\theta(S) = V(\theta)\)</span>。</p>
+</li>
+<li>
+<p>由条件 (v) 可知，协方差 <span class="arithmatex">\(cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)\)</span>。</p>
+</li>
 </ul>
 <p>我们考虑组合向量 <span class="arithmatex">\((\hat{g}, S^T)^T\)</span> 的协方差分块矩阵 <span class="arithmatex">\(A\)</span>：</p>
 <div class="arithmatex">\[
