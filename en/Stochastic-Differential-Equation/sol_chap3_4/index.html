@@ -5637,8 +5637,7 @@ I_B = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]
 * The first term is precisely the discrete definition of the standard <strong>Itô integral</strong> (taking the left endpoint in each subinterval):</p>
 <div class="arithmatex">\[\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)\]</div>
 <ul>
-<li>The second term is precisely the <strong>Quadratic Variation</strong> of Brownian motion on the interval <span class="arithmatex">\([0,T]\)</span>. From the properties of Brownian motion, it is known that its quadratic variation converges in the mean square sense to the length of the interval:
-$<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T\)</span>$</li>
+<li>The second term is precisely the <strong>Quadratic Variation</strong> of Brownian motion on the interval <span class="arithmatex">\([0,T]\)</span>. From the properties of Brownian motion, it is known that its quadratic variation converges in the mean square sense to the length of the interval:<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T\)</span></li>
 </ul>
 <p>Combining the two parts, we obtain the proof:</p>
 <div class="arithmatex">\[
@@ -5680,9 +5679,8 @@ Let <span class="arithmatex">\(Q = \sum_{i=1}^n Z_i^2\)</span>, by definition, <
 <hr />
 <h3 id="exercise-2_2">Exercise 2</h3>
 <p><strong>Problem</strong>
-Define the second-order integral
-$<span class="arithmatex">\(\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2\)</span><span class="arithmatex">\(
-where \)</span>0 = t_0 &lt; t_1 &lt; \dots &lt; t_n = T<span class="arithmatex">\(, and \)</span>\delta \doteq \max_i |t_{i+1} - t_i|<span class="arithmatex">\(. Prove that when \)</span>f \in L^2([0,T])$, we have</p>
+Define the second-order integral <span class="arithmatex">\(\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2\)</span>
+where <span class="arithmatex">\(0 = t_0 &lt; t_1 &lt; \dots &lt; t_n = T\)</span>, and <span class="arithmatex">\(\delta \doteq \max_i |t_{i+1} - t_i|\)</span>. Prove that when <span class="arithmatex">\(f \in L^2([0,T])\)</span>, we have</p>
 <div class="arithmatex">\[\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt\]</div>
 <details class="success">
 <summary>Solution (click to expand)</summary>
@@ -5745,9 +5743,11 @@ Prove: <span class="arithmatex">\(Y(t) = e^{t/2} \cos(W(t))\)</span> is a martin
 <details class="success">
 <summary>Solution (click to expand)</summary>
 <p>To prove that a process is a martingale, the most direct method is to use Itô's formula to show that its differential term has no drift term (i.e., the coefficient of the <span class="arithmatex">\(dt\)</span> term is 0).</p>
-<p>Let the bivariate function <span class="arithmatex">\(u(t, x) = e^{t/2} \cos(x)\)</span>, and compute its partial derivatives with respect to <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(x\)</span>:
-* <span class="arithmatex">\(u_t = \frac{1}{2} e^{t/2} \cos(x)\)</span></p>
+<p>Let the bivariate function <span class="arithmatex">\(u(t, x) = e^{t/2} \cos(x)\)</span>, and compute its partial derivatives with respect to <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(x\)</span>:</p>
 <ul>
+<li>
+<p><span class="arithmatex">\(u_t = \frac{1}{2} e^{t/2} \cos(x)\)</span></p>
+</li>
 <li>
 <p><span class="arithmatex">\(u_x = -e^{t/2} \sin(x)\)</span></p>
 </li>
