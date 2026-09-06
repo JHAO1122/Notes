@@ -36,7 +36,7 @@ tags:
     a \left( \frac{1}{2}x^2 - \frac{1}{3}x^3 \right) \Bigg|_{0}^{1} = 1 \implies a \left( \frac{1}{2} - \frac{1}{3} \right) = 1
     $$
     
-    解得：$a = 6$ [cite: 1519]。
+    解得：$a = 6$。
 
     <br>
 
@@ -55,7 +55,7 @@ tags:
     F_Y(y) = \int_{0}^{y^{1/3}} 6x(1-x)dx = \left( 3x^2 - 2x^3 \right) \Big|_{0}^{y^{1/3}} = 3y^{2/3} - 2y
     $$
     
-    对 $F_Y(y)$ 求导即可得到 $Y$ 的概率密度函数 $f_Y(y)$ [cite: 1519]：
+    对 $F_Y(y)$ 求导即可得到 $Y$ 的概率密度函数 $f_Y(y)$：
     
     $$
     f_Y(y) = F_Y'(y) = 3 \cdot \frac{2}{3}y^{-1/3} - 2 = 2y^{-1/3} - 2
@@ -80,7 +80,7 @@ tags:
 
     **(1) 证明：**
     
-    [cite_start]我们采用测度论中的标准测度逼近方法（Standard Machine）进行严谨证明 [cite: 1520]：
+    我们采用测度论中的标准测度逼近方法（Standard Machine）进行严谨证明：
     
     **第一步（示性函数）：** 设 $f(x,y) = I_A(x)I_B(y)$，其中 $A, B$ 为 Borel 集。
     因为 $X, Y$ 独立，利用条件期望的性质（已知 $Y$ 时 $I_B(Y)$ 可提出，且独立变量的条件期望等于无条件期望）：
@@ -97,11 +97,11 @@ tags:
     
     两者相等，故对示性函数成立。
     
-    **第二步（简单函数）：** 由期望的线性性质，该结论对有限个示性函数线性组合的简单函数成立 [cite: 1520]。
+    **第二步（简单函数）：** 由期望的线性性质，该结论对有限个示性函数线性组合的简单函数成立。
     
-    **第三步（非负可测函数）：** 对于任意非负可测函数，存在单调递增的简单函数序列逼近它，由单调收敛定理 (Monotone Convergence Theorem)，该结论对非负可测函数成立 [cite: 1520]。
+    **第三步（非负可测函数）：** 对于任意非负可测函数，存在单调递增的简单函数序列逼近它，由单调收敛定理 (Monotone Convergence Theorem)，该结论对非负可测函数成立。
     
-    **第四步（有界连续函数）：** 任何有界连续函数均可拆分为正部和负部 $f = f^+ - f^-$，且依定义勒贝格可积，故原式对所有有界连续函数成立。得证 [cite: 1520]。
+    **第四步（有界连续函数）：** 任何有界连续函数均可拆分为正部和负部 $f = f^+ - f^-$，且依定义勒贝格可积，故原式对所有有界连续函数成立。得证。
 
     <br>
 
@@ -125,7 +125,7 @@ tags:
     \int I_{\{u \leqslant x-Y\}} dF_X(u) = \int_{-\infty}^{x-Y} dF_X(u) = F_X(x-Y)
     $$
     
-    得证 [cite: 1521]。
+    得证。
 
 ---
 
@@ -155,7 +155,7 @@ tags:
     \int_B (c_1 \chi_B + c_2 \chi_{B^c}) d\mathbb{P} = \int_B \chi_A d\mathbb{P} \implies c_1 \mathbb{P}(B) = \mathbb{P}(A \cap B)
     $$
     
-    若 $\mathbb{P}(B) > 0$，则 $c_1 = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \mathbb{P}(A|B)$ [cite: 1523]。
+    若 $\mathbb{P}(B) > 0$，则 $c_1 = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \mathbb{P}(A|B)$。
     
     **情况二：取 $\Lambda = B^c$**
     
@@ -163,7 +163,7 @@ tags:
     \int_{B^c} (c_1 \chi_B + c_2 \chi_{B^c}) d\mathbb{P} = \int_{B^c} \chi_A d\mathbb{P} \implies c_2 \mathbb{P}(B^c) = \mathbb{P}(A \cap B^c)
     $$
     
-    若 $\mathbb{P}(B^c) > 0$，则 $c_2 = \frac{\mathbb{P}(A \cap B^c)}{\mathbb{P}(B^c)} = \mathbb{P}(A|B^c)$ [cite: 1524]。
+    若 $\mathbb{P}(B^c) > 0$，则 $c_2 = \frac{\mathbb{P}(A \cap B^c)}{\mathbb{P}(B^c)} = \mathbb{P}(A|B^c)$。
     
     综上所述，条件期望的显式表达为：
     
@@ -183,11 +183,11 @@ $\mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)|\mathcal{V}_2] = \mathbb{E}[X]$。
 
     **证明：**
     
-    首先，由条件期望的定义可知，内层期望 $\mathbb{E}(X|\mathcal{V}_1)$ 必然是一个 $\mathcal{V}_1$-可测的随机变量 [cite: 1529]。
+    首先，由条件期望的定义可知，内层期望 $\mathbb{E}(X|\mathcal{V}_1)$ 必然是一个 $\mathcal{V}_1$-可测的随机变量。
     
     由于题目已知 $\mathcal{V}_1$ 和 $\mathcal{V}_2$ 是相互独立的 $\sigma$-域，因此 $\mathcal{V}_1$-可测的随机变量 $\mathbb{E}(X|\mathcal{V}_1)$ 与 $\sigma$-域 $\mathcal{V}_2$ 自然是相互独立的。
     
-    根据条件期望关于独立 $\sigma$-域的性质（如果随机变量 $Z$ 独立于 $\sigma$-域 $\mathcal{G}$，则 $\mathbb{E}[Z|\mathcal{G}] = \mathbb{E}[Z]$），我们可以去掉关于 $\mathcal{V}_2$ 的条件 [cite: 1529]：
+    根据条件期望关于独立 $\sigma$-域的性质（如果随机变量 $Z$ 独立于 $\sigma$-域 $\mathcal{G}$，则 $\mathbb{E}[Z|\mathcal{G}] = \mathbb{E}[Z]$），我们可以去掉关于 $\mathcal{V}_2$ 的条件：
     
     $$
     \mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)|\mathcal{V}_2] = \mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)]
@@ -199,7 +199,7 @@ $\mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)|\mathcal{V}_2] = \mathbb{E}[X]$。
     \mathbb{E}[\mathbb{E}(X|\mathcal{V}_1)] = \mathbb{E}[X]
     $$
     
-    联合两式，原命题得证 [cite: 1529]。 $\square$
+    联合两式，原命题得证。 $\square$
 
 ---
 
@@ -217,19 +217,19 @@ $$
     **证明：**
     
     考察函数 $\Phi(x) = |x|^p$。由于 $p \geqslant 1$，这是一个凸函数。
-    利用条件期望的线性性质和 **条件 Jensen 不等式**，我们将绝对值内的条件期望合并，并把绝对值放缩到期望内部 [cite: 1530]：
+    利用条件期望的线性性质和 **条件 Jensen 不等式**，我们将绝对值内的条件期望合并，并把绝对值放缩到期望内部：
     
     $$
     \big|\mathbb{E}[X_n|\mathcal{V}] - \mathbb{E}[X|\mathcal{V}]\big|^p = \big|\mathbb{E}[X_n - X | \mathcal{V}]\big|^p \leqslant \mathbb{E}\big[|X_n - X|^p \big| \mathcal{V}\big]
     $$
     
-    对上述不等式两边同时取无条件期望，应用全期望公式 [cite: 1530, 1531]：
+    对上述不等式两边同时取无条件期望，应用全期望公式：
     
     $$
     \mathbb{E}\left[\big|\mathbb{E}[X_n|\mathcal{V}] - \mathbb{E}[X|\mathcal{V}]\big|^p\right] \leqslant \mathbb{E}\left[ \mathbb{E}\big[|X_n - X|^p \big| \mathcal{V}\big] \right] = \mathbb{E}\big[|X_n - X|^p\big]
     $$
     
-    对不等式两边令 $n \to \infty$ 取极限。由于题目已知 $\lim_{n\to\infty}\mathbb{E}[|X_n - X|^p] = 0$，且左侧期望恒非负，由夹逼定理可得 [cite: 1532]：
+    对不等式两边令 $n \to \infty$ 取极限。由于题目已知 $\lim_{n\to\infty}\mathbb{E}[|X_n - X|^p] = 0$，且左侧期望恒非负，由夹逼定理可得：
     
     $$
     \lim_{n\to\infty}\mathbb{E}\left[\big|\mathbb{E}[X_n|\mathcal{V}] - \mathbb{E}[X|\mathcal{V}]\big|^p\right] = 0
@@ -259,7 +259,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
     **(1) 计算 $X\mathbb{E}[Y]$**
     
-    首先计算 $Y$ 的无条件期望 [cite: 1533]：
+    首先计算 $Y$ 的无条件期望：
     
     $$
     \mathbb{E}[Y] = 1 \cdot \mathbb{P}(\{1,5\}) + 2 \cdot \mathbb{P}(\{2,3,4,6,7,8\})
@@ -279,21 +279,23 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
     **(2) 计算 $\mathbb{E}[\mathbb{E}[XY|\mathcal{V}]|\mathcal{H}]$**
     
-    这里我们利用极其优雅的平滑性质 (Tower Property) 直接降维，避免双重条件期望的繁琐计算 [cite: 1533]。
+    这里我们利用极其优雅的平滑性质 (Tower Property) 直接降维，避免双重条件期望的繁琐计算。
     因为 $\mathcal{H} \subset \mathcal{V}$，较小的 $\sigma$-代数在外部起决定性作用：
     
     $$
     \mathbb{E}\big[\mathbb{E}[XY|\mathcal{V}]\big|\mathcal{H}\big] = \mathbb{E}[XY|\mathcal{H}]
     $$
     
-    观察随机变量 $X$，它在 $\{1,2,3,4\}$ 上恒为 1，在 $\{5,6,7,8\}$ 上恒为 2，这恰好完全对应 $\mathcal{H}$ 的原子划分。因此 $X$ 是 **$\mathcal{H}$-可测的**！作为已知信息，可以将其提出条件期望 [cite: 1535]：
+    观察随机变量 $X$，它在 $\{1,2,3,4\}$ 上恒为 1，在 $\{5,6,7,8\}$ 上恒为 2，这恰好完全对应 $\mathcal{H}$ 的原子划分。因此 $X$ 是 **$\mathcal{H}$-可测的**！作为已知信息，可以将其提出条件期望：
     
     $$
     \mathbb{E}[XY|\mathcal{H}] = X \mathbb{E}[Y|\mathcal{H}]
     $$
     
     接着我们在 $\mathcal{H}$ 的两个原子上分别计算 $Y$ 的条件期望：
+
     * 在 $\{1,2,3,4\}$ 上：$\mathbb{E}[Y|\{1,2,3,4\}] = \frac{1\cdot P(\{1\}) + 2\cdot P(\{2,3,4\})}{P(\{1,2,3,4\})} = \frac{1/10 + 6/10}{4/10} = \frac{7}{4}$
+    
     * 在 $\{5,6,7,8\}$ 上：$\mathbb{E}[Y|\{5,6,7,8\}] = \frac{1\cdot P(\{5\}) + 2\cdot P(\{6,7,8\})}{P(\{5,6,7,8\})} = \frac{3/20 + 18/20}{12/20} = \frac{7}{4}$
     
     惊人地发现，在两块划分上 $\mathbb{E}[Y|\mathcal{H}] = 7/4$ 恒成立。故：
@@ -312,7 +314,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 ??? success "解答 (点击展开)"
 
     **证明：**
-    [cite_start]我们要严格验证鞅的三大核心条件 [cite: 1546, 1547]：
+    我们要严格验证鞅的三大核心条件：
     
     **1. 可积性 (Integrability)：**
     利用条件期望的收缩性（Jensen 不等式的绝对值特例）：
@@ -350,14 +352,18 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
     **(1) 证明 $B(t) = W(t+s) - W(s)$ 是布朗运动**
     
-    我们逐一验证布朗运动的四条定义 [cite: 1551]：
+    我们逐一验证布朗运动的四条定义：
     
     1. **零初值**：$B(0) = W(0+s) - W(s) = 0$。
     2. **独立增量**：对于任意 $0 \le t_1 < t_2 < \cdots < t_k$，其增量序列为：
+
        $$B(t_j) - B(t_{j-1}) = W(t_j+s) - W(t_{j-1}+s)$$
+    
        由于原过程 $W$ 具有独立增量性质，且时间区间 $[t_{j-1}+s, t_j+s]$ 在时间轴上互不重叠，因此这些增量是相互独立的。
     3. **平稳正态增量**：对于 $t > u$，增量分布为：
+
        $$B(t) - B(u) = W(t+s) - W(u+s) \sim N(0, (t+s) - (u+s)) = N(0, t-u)$$
+
     4. **路径连续性**：因为 $W(\cdot)$ 的样本路径几乎必然连续，所以平移后的路径 $B(\cdot)$ 也几乎必然连续。
     
     综上，$B(t)$ 是一维布朗运动。
@@ -366,13 +372,16 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
     **(2) 证明 $U(t) = cW(t/c^2)$ 是布朗运动**
     
-    同理进行验证 [cite: 1552, 1553]：
+    同理进行验证：
     
     1. **零初值**：$U(0) = cW(0/c^2) = cW(0) = 0$。
     2. **独立增量**：对于任意 $0 \le t_1 < t_2 < \cdots < t_k$，由于 $t_1/c^2 < t_2/c^2 < \cdots < t_k/c^2$ 不重叠，故原布朗运动的增量相互独立，乘上常数 $c$ 后依然独立。
     3. **平稳正态增量**：由于线性变换的性质，均值仍为 $0$，方差为：
+       
        $$Var(U(t) - U(s)) = Var\left( c(W(t/c^2) - W(s/c^2)) \right) = c^2 \cdot \left( \frac{t-s}{c^2} \right) = t-s$$
+       
        故 $U(t) - U(s) \sim N(0, t-s)$。
+       
     4. **路径连续性**：尺度变换不改变样本路径的连续性。
     
     综上，$U(t) = cW(t/c^2)$ 也是布朗运动（这被称为布朗运动的标度不变性/分形性质）。
@@ -387,7 +396,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ??? success "解答 (点击展开)"
 
-    对于 $0 < s < t$，我们将增量进行恒等变形，凑出相互独立的项 [cite: 1557, 1558]：
+    对于 $0 < s < t$，我们将增量进行恒等变形，凑出相互独立的项：
 
     $$
     \tilde{W}(t) - \tilde{W}(s) = tW\left(\frac{1}{t}\right) - sW\left(\frac{1}{s}\right)
@@ -401,7 +410,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
     注意，这里 $1/t < 1/s$。利用布朗运动的独立增量性质，随机变量 $W(1/t) = W(1/t) - W(0)$ 与增量 $W(1/s) - W(1/t)$ 是相互独立的。
     
-    由于相互独立，方差可以直接相加 [cite: 1561]：
+    由于相互独立，方差可以直接相加：
 
     $$
     Var(\tilde{W}(t) - \tilde{W}(s)) = (t-s)^2 Var\left( W\left(\frac{1}{t}\right) \right) + s^2 Var\left( W\left(\frac{1}{s}\right) - W\left(\frac{1}{t}\right) \right)
@@ -419,7 +428,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
     = \frac{t^2 - 2ts + s^2}{t} + s - \frac{s^2}{t} = \frac{t^2 - 2ts}{t} + s = t - 2s + s = t - s
     $$
 
-    又因为期望的线性性质，$E[\tilde{W}(t) - \tilde{W}(s)] = 0 - 0 = 0$ [cite: 1562]。
+    又因为期望的线性性质，$E[\tilde{W}(t) - \tilde{W}(s)] = 0 - 0 = 0$。
     由于它是联合正态随机变量的线性组合，因此必然服从正态分布。
     
     结论得证：$\tilde{W}(t) - \tilde{W}(s) \sim N(0, t-s)$。
@@ -433,7 +442,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ??? success "解答 (点击展开)"
 
-    由于 $W(t) \sim N(0, t)$，利用正态分布的矩母函数 (Moment Generating Function) $M_W(\lambda) = \mathbb{E}[e^{\lambda W(t)}]$ [cite: 1564]：
+    由于 $W(t) \sim N(0, t)$，利用正态分布的矩母函数 (Moment Generating Function) $M_W(\lambda) = \mathbb{E}[e^{\lambda W(t)}]$：
 
     $$
     M_W(\lambda) = \exp\left( \frac{1}{2} \lambda^2 t \right)
@@ -459,7 +468,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
     \frac{\mathbb{E}[W^{2k}(t)]}{(2k)!} = \frac{t^k}{2^k k!}
     $$
     
-    移项即可得证 [cite: 1571]：
+    移项即可得证：
     
     $$
     \mathbb{E}[W^{2k}(t)] = \frac{(2k)! t^k}{2^k k!}
@@ -478,10 +487,10 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
     由于布朗运动的增量具有平稳性与对称性，$W(s) - W(t)$ 与 $W(t) - W(s)$ 同分布，均服从 $N(0, t-s)$ 分布。
     
-    这等价于求正态随机变量的矩母函数 [cite: 1573]。
+    这等价于求正态随机变量的矩母函数。
     令 $Z = c(W(s) - W(t))$，则 $Z \sim N(0, c^2(t-s))$。
     
-    根据正态分布 $N(\mu, \sigma^2)$ 的矩母函数公式 $\mathbb{E}[e^Z] = \exp(\mu + \frac{1}{2}\sigma^2)$ [cite: 1573, 1574]：
+    根据正态分布 $N(\mu, \sigma^2)$ 的矩母函数公式 $\mathbb{E}[e^Z] = \exp(\mu + \frac{1}{2}\sigma^2)$：
     
     $$
     \mathbb{E}[\exp(c(W(s) - W(t)))] = \exp\left( 0 + \frac{1}{2} \cdot c^2(t-s) \right) = \exp\left( \frac{1}{2}c^2(t-s) \right)
@@ -513,7 +522,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
     \mathbb{E}\left[ W(e^{2t})W(e^{2s}) \right] = \min(e^{2t}, e^{2s}) = e^{2s}
     $$
 
-    将其代回原式 [cite: 1576, 1577]：
+    将其代回原式：
 
     $$
     \mathbb{E}[U(t)U(s)] = e^{-(t+s)} \cdot e^{2s} = e^{s-t}
@@ -541,7 +550,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
     $$
 
     **第二步：强化矩界限（为 Borel-Cantelli 铺垫）**
-    如果仅用二阶矩的切比雪夫不等式，会得到 $P(|Y_m| \ge \epsilon) \le \frac{1}{m\epsilon^2}$ [cite: 1583]。但 $\sum_{m=1}^{\infty} \frac{1}{m}$ 是调和级数，不收敛，无法直接使用 B-C 引理。
+    如果仅用二阶矩的切比雪夫不等式，会得到 $P(|Y_m| \ge \epsilon) \le \frac{1}{m\epsilon^2}$。但 $\sum_{m=1}^{\infty} \frac{1}{m}$ 是调和级数，不收敛，无法直接使用 B-C 引理。
     因此我们使用四阶矩（或利用正态分布的指数衰减性质）。对于标准正态变量 $Z \sim N(0,1)$，$\mathbb{E}[Z^4] = 3$。
     
     $$
@@ -586,7 +595,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
     = \mathbb{E}[(W(t) - W(s))^2 | \mathcal{F}(s)] + 2\mathbb{E}[W(s)(W(t) - W(s)) | \mathcal{F}(s)] + \mathbb{E}[W(s)^2 | \mathcal{F}(s)]
     $$
     
-    * [cite_start]第一项：由于布朗运动独立增量，$W(t)-W(s)$ 独立于 $\mathcal{F}(s)$，故条件期望等于无条件期望 $\mathbb{E}[(W(t)-W(s))^2] = t-s$ [cite: 1585, 1586]。
+    * 第一项：由于布朗运动独立增量，$W(t)-W(s)$ 独立于 $\mathcal{F}(s)$，故条件期望等于无条件期望 $\mathbb{E}[(W(t)-W(s))^2] = t-s$。
     * 第二项：$W(s)$ 是 $\mathcal{F}(s)$-可测的，可提出。剩余增量期望为 0。
     * 第三项：$W(s)^2$ 是 $\mathcal{F}(s)$-可测的，直接等于自身。
     
@@ -626,7 +635,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
     = \exp(\lambda W(s)) \cdot \exp\left( \frac{1}{2} \lambda^2 (t-s) \right)
     $$
     
-    将上述期望代入要证明的式子 [cite: 1587]：
+    将上述期望代入要证明的式子：
 
     $$
     \mathbb{E}\left[ \exp\left(\lambda W(t) - \frac{1}{2}\lambda^2 t\right) \Big| \mathcal{F}(s) \right] = \exp\left(-\frac{1}{2}\lambda^2 t\right) \cdot \exp(\lambda W(s)) \cdot \exp\left( \frac{1}{2} \lambda^2 (t-s) \right)
@@ -655,7 +664,7 @@ $\mathcal{V}$ 是由 $\{1,2\}$ 和 $\{3,4\}$ 生成的 $\sigma$-域，$\mathcal{
 
 ??? success "解答 (点击展开)"
 
-    [cite_start]这是一个极具代表性的随机过程积分计算，核心在于利用 Fubini 定理交换期望和积分顺序 [cite: 1588]。
+    这是一个极具代表性的随机过程积分计算，核心在于利用 Fubini 定理交换期望和积分顺序。
 
     首先将平方项写成双重黎曼积分：
 
