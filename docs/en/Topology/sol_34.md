@@ -339,7 +339,7 @@ A subset $A \subseteq X$ is called **regularly open** if $A = (\overline{A})^o$.
 
     **(ii) Prove $(\overline{A})^o$ is regularly open**
 
-    Let $U = $(\overline{A})^o$. We want to prove $U = (\overline{U})^o$.
+    Let $U = (\overline{A})^o$. We want to prove $U = (\overline{U})^o$.
 
     * According to the definition $U \subseteq \overline{U}$, since $U$ is an open set, $U = U^o \subseteq (\overline{U})^o$.
 
