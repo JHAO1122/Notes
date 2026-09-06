@@ -264,7 +264,9 @@ $$
         *(Note: The extra term $-\frac{1}{2}T$ that appears later is called the Itô correction term.)* $\square$
 
 **The Two Most Important Schools of Integration:**
+
 * When $\lambda = 0$ (taking the left endpoint), it is the **Itô integral**, with result $\frac{1}{2}W(T)^2 - \frac{1}{2}T$. It preserves the martingale property and is commonly used in financial mathematics.
+
 * When $\lambda = 1/2$ (taking the midpoint), it is the **Stratonovich integral**, where the correction terms cancel out, resulting in $\frac{1}{2}W(T)^2$, which formally aligns with classical calculus and is often used in physics and engineering.
 
 ---
