@@ -303,8 +303,7 @@ $$ \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
     
     $$\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)$$
 
-    * The second term is precisely the **Quadratic Variation** of Brownian motion on the interval $[0,T]$. From the properties of Brownian motion, it is known that its quadratic variation converges in the mean square sense to the length of the interval:
-    $$\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T$$
+    * The second term is precisely the **Quadratic Variation** of Brownian motion on the interval $[0,T]$. From the properties of Brownian motion, it is known that its quadratic variation converges in the mean square sense to the length of the interval:$\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T$
 
     Combining the two parts, we obtain the proof:
 
@@ -362,8 +361,7 @@ Let $W(t)$ be an $n$-dimensional Brownian motion. Prove: $\mathbb{E}[|W(t) - W(s
 
 ### Exercise 2
 **Problem**
-Define the second-order integral
-$$\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2$$
+Define the second-order integral $\int_0^T f(t) [dW(t)]^2 \doteq \lim_{\delta \to 0} \sum_{i=0}^{n-1} f(t_i)[W(t_{i+1}) - W(t_i)]^2$
 where $0 = t_0 < t_1 < \dots < t_n = T$, and $\delta \doteq \max_i |t_{i+1} - t_i|$. Prove that when $f \in L^2([0,T])$, we have
 
 $$\int_0^T f(t) [dW(t)]^2 = \int_0^T f(t) dt$$
@@ -456,6 +454,7 @@ Prove: $Y(t) = e^{t/2} \cos(W(t))$ is a martingale.
     To prove that a process is a martingale, the most direct method is to use Itô's formula to show that its differential term has no drift term (i.e., the coefficient of the $dt$ term is 0).
 
     Let the bivariate function $u(t, x) = e^{t/2} \cos(x)$, and compute its partial derivatives with respect to $t$ and $x$:
+
     * $u_t = \frac{1}{2} e^{t/2} \cos(x)$
     
     * $u_x = -e^{t/2} \sin(x)$
