@@ -5931,20 +5931,32 @@ O_1 = U \cap W
 O_2 = V \cup (X \setminus K)
 \]</div>
 <p><strong>验证 <span class="arithmatex">\(O_1, O_2\)</span> 是开集并包含目标：</strong></p>
-<pre><code>* 因为 $U$ 和 $W$ 是开集，所以 $O_1$ 是开集。且 $x \in U$ 和 $x \in W$ 同时成立，故 $x \in O_1$。
-* 因为 $V$ 是开集且 $K$ 是闭集（所以 $X \setminus K$ 是开集），所以 $O_2$ 是开集。
-* 对于 $A$ 中的任意一点 $a$，有两种情况：若 $a \in K$，则 $a \in A \cap K = C$，因此 $a \in V \subseteq O_2$；若 $a \notin K$，则 $a \in X \setminus K \subseteq O_2$。综上可得 $A \subseteq O_2$。
-</code></pre>
+<ul>
+<li>
+<p>因为 <span class="arithmatex">\(U\)</span> 和 <span class="arithmatex">\(W\)</span> 是开集，所以 <span class="arithmatex">\(O_1\)</span> 是开集。且 <span class="arithmatex">\(x \in U\)</span> 和 <span class="arithmatex">\(x \in W\)</span> 同时成立，故 <span class="arithmatex">\(x \in O_1\)</span>。</p>
+</li>
+<li>
+<p>因为 <span class="arithmatex">\(V\)</span> 是开集且 <span class="arithmatex">\(K\)</span> 是闭集（所以 <span class="arithmatex">\(X \setminus K\)</span> 是开集），所以 <span class="arithmatex">\(O_2\)</span> 是开集。</p>
+</li>
+<li>
+<p>对于 <span class="arithmatex">\(A\)</span> 中的任意一点 <span class="arithmatex">\(a\)</span>，有两种情况：若 <span class="arithmatex">\(a \in K\)</span>，则 <span class="arithmatex">\(a \in A \cap K = C\)</span>，因此 <span class="arithmatex">\(a \in V \subseteq O_2\)</span>；若 <span class="arithmatex">\(a \notin K\)</span>，则 <span class="arithmatex">\(a \in X \setminus K \subseteq O_2\)</span>。综上可得 <span class="arithmatex">\(A \subseteq O_2\)</span>。</p>
+</li>
+</ul>
 <p><strong>验证 <span class="arithmatex">\(O_1\)</span> 和 <span class="arithmatex">\(O_2\)</span> 不相交：</strong></p>
 <div class="arithmatex">\[
 O_1 \cap O_2 = (U \cap W) \cap (V \cup (X \setminus K)) = (U \cap W \cap V) \cup (U \cap W \cap (X \setminus K))
 \]</div>
-<pre><code>* 第一部分：因为 $U \cap V = \emptyset$，所以 $U \cap W \cap V = \emptyset$。
-
-* 第二部分：因为 $W \subseteq K$，所以 $W \cap (X \setminus K) = \emptyset$，因此第二部分也为空。
-
-* 这说明 $O_1 \cap O_2 = \emptyset$。
-</code></pre>
+<ul>
+<li>
+<p>第一部分：因为 <span class="arithmatex">\(U \cap V = \emptyset\)</span>，所以 <span class="arithmatex">\(U \cap W \cap V = \emptyset\)</span>。</p>
+</li>
+<li>
+<p>第二部分：因为 <span class="arithmatex">\(W \subseteq K\)</span>，所以 <span class="arithmatex">\(W \cap (X \setminus K) = \emptyset\)</span>，因此第二部分也为空。</p>
+</li>
+<li>
+<p>这说明 <span class="arithmatex">\(O_1 \cap O_2 = \emptyset\)</span>。</p>
+</li>
+</ul>
 <p>综上所述，我们找到了两个不相交的开集 <span class="arithmatex">\(O_1\)</span> 和 <span class="arithmatex">\(O_2\)</span>，分别包含 <span class="arithmatex">\(x\)</span> 和闭集 <span class="arithmatex">\(A\)</span>。故该空间是<strong>正则的</strong>（<span class="arithmatex">\(T_3\)</span> 空间）。</p>
 </details>
 
