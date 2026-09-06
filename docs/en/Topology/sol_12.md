@@ -299,11 +299,7 @@ Prove:
     
     * **1. Well-definedness**:
       We need to prove that the value of $d^*([x], [y])$ does not depend on the choice of the representative elements of the equivalence classes. Let $x \sim x'$ and $y \sim y'$, i.e., $d(x, x') = 0$ and $d(y, y') = 0$.
-      According to the triangle inequality:
-      
-      $$
-      d(x, y) \le d(x, x') + d(x', y') + d(y', y) = 0 + d(x', y') + 0 = d(x', y')
-      $$
+      According to the triangle inequality: $d(x, y) \le d(x, x') + d(x', y') + d(y', y) = 0 + d(x', y') + 0 = d(x', y')$
       
       Similarly, applying the triangle inequality in reverse yields $d(x', y') \le d(x, y)$. Therefore, $d(x, y) = d(x', y')$, the value is independent of the representatives, hence well-defined.
 
