@@ -83,7 +83,9 @@ Xk <- create.gaussian(X, mu, Sigma, diag_s = diags)
 
 ### 2.1 Background and Motivation
 
-In the Model-X method, the generation of Knockoff variables is inherently random. This randomness causes the final set of selected features to vary each time the algorithm is run, leading to instability in the feature selection results. This instability can be intuitively seen from the generation formula for Knockoff variables (taking the Gaussian case as an example): $$\widetilde{X} = X\bigl(I - \Sigma^{-1} S\bigr) + E C$$
+In the Model-X method, the generation of Knockoff variables is inherently random. This randomness causes the final set of selected features to vary each time the algorithm is run, leading to instability in the feature selection results. This instability can be intuitively seen from the generation formula for Knockoff variables (taking the Gaussian case as an example): 
+
+$$\widetilde{X} = X\bigl(I - \Sigma^{-1} S\bigr) + E C$$
 
 Compared to the $p$-value used in traditional hypothesis testing, the $e$-value has excellent composability properties (e.g., it can be directly averaged or multiplied). Therefore, the paper designs a derandomization procedure based on $e$-values.
 
