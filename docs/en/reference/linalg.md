@@ -161,9 +161,7 @@ In Maximum Likelihood Estimation (MLE), especially involving the covariance matr
     
     $$df = d(\ln |X|) = \frac{1}{|X|} d|X| = \text{tr}(X^{-1} dX)$$
 
-    Comparing this to the standard form $df = \text{tr}\left( \left(\frac{\partial f}{\partial X}\right)^T dX \right)$:
-
-    $$\left( \frac{\partial \ln |X|}{\partial X} \right)^T = X^{-1} \implies \frac{\partial \ln |X|}{\partial X} = (X^{-1})^T$$.
+    Comparing this to the standard form $df = \text{tr}\left( \left(\frac{\partial f}{\partial X}\right)^T dX \right)$: $\left( \frac{\partial \ln |X|}{\partial X} \right)^T = X^{-1} \implies \frac{\partial \ln |X|}{\partial X} = (X^{-1})^T$.
 
     *(Note: If $X$ is symmetric, the result simplifies to $X^{-1}$)*
 
