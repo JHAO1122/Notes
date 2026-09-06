@@ -6001,19 +6001,19 @@ P(E_1^c \cap E_2^c \cap E_3^c) \ge 1 - \sum_{i=1}^3 P(E_i) \rightarrow 1
 <p class="admonition-title">定理 12.3 (Z-估计量的相合性 Consistency of Z-Estimator)</p>
 <p>设 <span class="arithmatex">\(\Psi_n\)</span> 为一列随机的向量值函数，<span class="arithmatex">\(M\)</span> 为固定的向量值函数。若对任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，以下条件成立：</p>
 <ul>
-<li><strong>C1*. 一致收敛</strong>：</li>
+<li>C1. 一致收敛**：</li>
 </ul>
 <div class="arithmatex">\[
 \sup_{\theta \in \Theta} \|\Psi_n(\theta) - \Psi(\theta)\| \xrightarrow{p} 0
 \]</div>
 <ul>
-<li><strong>C2*. 良好分离 (Identifiability)</strong>：</li>
+<li>C2. 良好分离 (Identifiability)**：</li>
 </ul>
 <div class="arithmatex">\[
 \inf_{\theta: d(\theta, \theta_0) \ge \epsilon} \|\Psi(\theta)\| &gt; 0 = \|\Psi(\theta_0)\|
 \]</div>
 <ul>
-<li><strong>C3*. 近似零点条件</strong>：估计量序列 <span class="arithmatex">\(\{\hat{\theta}_n\}\)</span> 满足 <span class="arithmatex">\(\Psi_n(\hat{\theta}_n) = o_P(1)\)</span>。</li>
+<li>C3. 近似零点条件**：估计量序列 <span class="arithmatex">\(\{\hat{\theta}_n\}\)</span> 满足 <span class="arithmatex">\(\Psi_n(\hat{\theta}_n) = o_P(1)\)</span>。</li>
 </ul>
 <p>则必有 <span class="arithmatex">\(\hat{\theta}_n \xrightarrow{p} \theta_0\)</span>。</p>
 </div>
