@@ -5633,8 +5633,10 @@ I_B = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_{i+1})[W(t_{i+1}) - W(t_i)]
 <div class="arithmatex">\[
 = \lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i)[W(t_{i+1}) - W(t_i)] + \lim_{\delta \to 0} \sum_{i=0}^{n-1} [W(t_{i+1}) - W(t_i)]^2
 \]</div>
-<p>Observing these two terms:
-* The first term is precisely the discrete definition of the standard <strong>Itô integral</strong> (taking the left endpoint in each subinterval):</p>
+<p>Observing these two terms:</p>
+<ul>
+<li>The first term is precisely the discrete definition of the standard <strong>Itô integral</strong> (taking the left endpoint in each subinterval):</li>
+</ul>
 <div class="arithmatex">\[\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)\]</div>
 <ul>
 <li>The second term is precisely the <strong>Quadratic Variation</strong> of Brownian motion on the interval <span class="arithmatex">\([0,T]\)</span>. From the properties of Brownian motion, it is known that its quadratic variation converges in the mean square sense to the length of the interval:<span class="arithmatex">\(\lim_{\delta \to 0} \sum_{i=0}^{n-1} (\Delta W_i)^2 = T\)</span></li>
