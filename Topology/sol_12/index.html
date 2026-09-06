@@ -5487,11 +5487,8 @@ supp(f) = f^{-1}(\{1\})
 <ul>
 <li><strong>1. 定义良好性 (Well-definedness)</strong>：
   我们需要证明 <span class="arithmatex">\(d^*([x], [y])\)</span> 的取值不依赖于等价类代表元的选择。设 <span class="arithmatex">\(x \sim x'\)</span> 且 <span class="arithmatex">\(y \sim y'\)</span>，即 <span class="arithmatex">\(d(x, x') = 0\)</span> 且 <span class="arithmatex">\(d(y, y') = 0\)</span>。
-  根据三角不等式：</li>
+  根据三角不等式：<span class="arithmatex">\(d(x, y) \le d(x, x') + d(x', y') + d(y', y) = 0 + d(x', y') + 0 = d(x', y')\)</span></li>
 </ul>
-<p>$<span class="arithmatex">\(
-  d(x, y) \le d(x, x') + d(x', y') + d(y', y) = 0 + d(x', y') + 0 = d(x', y')
-  \)</span>$</p>
 <p>同理反向应用三角不等式可得 <span class="arithmatex">\(d(x', y') \le d(x, y)\)</span>。因此 <span class="arithmatex">\(d(x, y) = d(x', y')\)</span>，取值与代表元无关，定义良好。</p>
 <ul>
 <li><strong>2. 验证度量公理</strong>：</li>
