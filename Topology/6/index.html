@@ -5303,9 +5303,15 @@ U \cap (A \setminus \{x\}) \neq \emptyset
 <p>我们将集合 <span class="arithmatex">\(A\)</span> 在 <span class="arithmatex">\(X\)</span> 中的所有极限点构成的集合记为 <span class="arithmatex">\(LP(A)\)</span>（通常也记作导集 <span class="arithmatex">\(A'\)</span>）。</p>
 </div>
 <p>闭包与极限点之间存在直接联系：<span class="arithmatex">\(\overline{A} = A \cup LP(A)\)</span>。</p>
-<p><strong>示例</strong>：
-* 在实数空间 <span class="arithmatex">\(\mathbb{R}\)</span>（赋予标准拓扑）中，设 <span class="arithmatex">\(A = \{\frac{1}{n} \mid n \in \mathbb{N}_{\ge 1}\}\)</span>。虽然 <span class="arithmatex">\(0 \notin A\)</span>，但 <span class="arithmatex">\(0\)</span> 是 <span class="arithmatex">\(A\)</span> 的唯一极限点，即 <span class="arithmatex">\(LP(A) = \{0\}\)</span>，且 <span class="arithmatex">\(\overline{A} = A \cup \{0\}\)</span>。
-* 设 <span class="arithmatex">\(X = \{a, b, c\}\)</span> 且赋予拓扑 <span class="arithmatex">\(\tau = \{\emptyset, X, \{a\}\}\)</span>。对于子集 <span class="arithmatex">\(A = \{a\}\)</span>，其闭包 <span class="arithmatex">\(\overline{A} = X\)</span>，极限点集 <span class="arithmatex">\(LP(A) = \{b, c\}\)</span>。</p>
+<p><strong>示例</strong>：</p>
+<ul>
+<li>
+<p>在实数空间 <span class="arithmatex">\(\mathbb{R}\)</span>（赋予标准拓扑）中，设 <span class="arithmatex">\(A = \{\frac{1}{n} \mid n \in \mathbb{N}_{\ge 1}\}\)</span>。虽然 <span class="arithmatex">\(0 \notin A\)</span>，但 <span class="arithmatex">\(0\)</span> 是 <span class="arithmatex">\(A\)</span> 的唯一极限点，即 <span class="arithmatex">\(LP(A) = \{0\}\)</span>，且 <span class="arithmatex">\(\overline{A} = A \cup \{0\}\)</span>。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(X = \{a, b, c\}\)</span> 且赋予拓扑 <span class="arithmatex">\(\tau = \{\emptyset, X, \{a\}\}\)</span>。对于子集 <span class="arithmatex">\(A = \{a\}\)</span>，其闭包 <span class="arithmatex">\(\overline{A} = X\)</span>，极限点集 <span class="arithmatex">\(LP(A) = \{b, c\}\)</span>。</p>
+</li>
+</ul>
 <hr />
 <h2 id="2-continuity">2. 连续性 (Continuity)</h2>
 <p>映射的连续性是拓扑学最核心的研究对象。拓扑学摒弃了度量空间中对具体数值差（<span class="arithmatex">\(\epsilon-\delta\)</span>）的依赖，将连续性纯粹建立在开集的拉回（原像）上。</p>
