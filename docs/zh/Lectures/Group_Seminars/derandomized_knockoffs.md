@@ -82,7 +82,9 @@ Xk <- create.gaussian(X, mu, Sigma, diag_s = diags)
 
 ### 2.1 背景与动机
 
-在 Model-X 方法中，Knockoff 变量的生成具有内在随机性。这种随机性导致每次运行算法时，最终选择的特征集合都可能发生变化，由此引发了特征选择结果的不稳定性。这种不稳定性可以从 Knockoff 变量的生成公式中直观看出（以高斯分布为例）：$$\widetilde{X} = X\bigl(I - \Sigma^{-1} S\bigr) + E C$$
+在 Model-X 方法中，Knockoff 变量的生成具有内在随机性。这种随机性导致每次运行算法时，最终选择的特征集合都可能发生变化，由此引发了特征选择结果的不稳定性。这种不稳定性可以从 Knockoff 变量的生成公式中直观看出（以高斯分布为例）：
+
+$$\widetilde{X} = X\bigl(I - \Sigma^{-1} S\bigr) + E C$$
 
 相比于传统假设检验中的 $p$-value，$e$-value 具有极为优良的组合性质（例如可以直接取平均值或乘积）。因此，文章基于 $e$-value 设计了去随机化 (Derandomization) 的过程。
 
