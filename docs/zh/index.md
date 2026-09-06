@@ -59,7 +59,7 @@
 
 * 泛函分析 (Functional Analysis) 
 
-* 广义函数论 (Distribution Function Theory)
+* 广义函数论 (Distribution Theory)
 
 * 微分流形与黎曼几何 (Differentiable Mandifolds and Riemannian Geometry)
 

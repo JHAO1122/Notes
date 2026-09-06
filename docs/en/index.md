@@ -44,7 +44,7 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 * Functions of Real Variables
 * Functional Analysis
-* Distribution Function Theory
+* Distribution Theory
 * Differentiable Mandifolds and Riemannian Geometry
 * Point-Set Topology
 * Abstract Algebra
