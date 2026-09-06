@@ -171,9 +171,11 @@ C-R 下界有时“太低”了，不足以给出更紧的方差下界。Bhattac
 
     在满足 C-R 下界定理中条件 (i) 和 (ii) 的基础上，如果我们加强其他条件为：
     
-    (iii)* 对于 $i=1, \dots, K$，$f_\theta(x)$ 的 $i$ 阶导数存在且 $\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0$。
-    (iv)* 对于 $i=1, \dots, K$，高阶对数导数的方差有限：$\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) < \infty$。
-    (v)* $\hat{g}(X)$ 是 $g(\theta)$ 的方差有限的无偏估计，且对于任意 $i=1, \dots, K$ 满足积分可交换性：
+    (iii) 对于 $i=1, \dots, K$，$f_\theta(x)$ 的 $i$ 阶导数存在且 $\int_{\mathcal{X}} \frac{\partial^i f_\theta(x)}{\partial \theta^i}\mu(dx) = 0$。
+
+    (iv) 对于 $i=1, \dots, K$，高阶对数导数的方差有限：$\int_{\mathcal{X}} \frac{1}{f_\theta(x)} \left( \frac{\partial^i f_\theta(x)}{\partial \theta^i} \right)^2 \mu(dx) < \infty$。
+    
+    (v) $\hat{g}(X)$ 是 $g(\theta)$ 的方差有限的无偏估计，且对于任意 $i=1, \dots, K$ 满足积分可交换性：
     
     \[
     g^{(i)}(\theta) = \frac{\partial^i}{\partial\theta^i}g(\theta) = \int_{\mathcal{X}} \hat{g}(x)\frac{\partial^i f_\theta(x)}{\partial\theta^i}\mu(dx)
@@ -195,9 +197,11 @@ C-R 下界有时“太低”了，不足以给出更紧的方差下界。Bhattac
     S_\theta^{(i)}(x) = \frac{1}{f_\theta(x)} \frac{\partial^i f_\theta(x)}{\partial\theta^i}
     \]
 
-    * 由条件 (iii)* 可知，$E_\theta[S] = 0$。
-    * 由条件 (iv)* 和 $V(\theta)$ 的定义可知，$var_\theta(S) = V(\theta)$。
-    * 由条件 (v)* 可知，协方差 $cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)$。
+    * 由条件 (iii) 可知，$E_\theta[S] = 0$。
+
+    * 由条件 (iv) 和 $V(\theta)$ 的定义可知，$var_\theta(S) = V(\theta)$。
+    
+    * 由条件 (v) 可知，协方差 $cov_\theta(\hat{g}(X), S_\theta^{(i)}(X)) = E_\theta[\hat{g}(X) S_\theta^{(i)}(X)] - 0 = g^{(i)}(\theta)$。
 
     我们考虑组合向量 $(\hat{g}, S^T)^T$ 的协方差分块矩阵 $A$：
 
