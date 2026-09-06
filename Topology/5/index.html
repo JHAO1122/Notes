@@ -5311,8 +5311,12 @@ B_1 \cap B_2 = (U_1 \times V_1) \cap (U_2 \times V_2) = (U_1 \cap U_2) \times (V
 <p class="admonition-title">定理 5.1 (交换律)</p>
 <p>设 <span class="arithmatex">\(A \subseteq X\)</span>，<span class="arithmatex">\(D \subseteq Y\)</span>。在笛卡尔积 <span class="arithmatex">\(A \times D\)</span> 上，我们有两种方式定义拓扑：</p>
 <ul>
-<li>方法一：分别取 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(D\)</span> 的子空间拓扑 <span class="arithmatex">\(\tau_A\)</span> 和 <span class="arithmatex">\(\tau_D\)</span>，然后作乘积拓扑 <span class="arithmatex">\(\tau_A \times \tau_D\)</span>。</li>
-<li>方法二：先作乘积空间 <span class="arithmatex">\(X \times Y\)</span>，赋予乘积拓扑 <span class="arithmatex">\(\tau_{X \times Y}\)</span>，然后取 <span class="arithmatex">\(A \times D\)</span> 作为其子空间，诱导相对拓扑 <span class="arithmatex">\((\tau_{X \times Y})_{A \times D}\)</span>。</li>
+<li>
+<p>方法一：分别取 <span class="arithmatex">\(A\)</span> 和 <span class="arithmatex">\(D\)</span> 的子空间拓扑 <span class="arithmatex">\(\tau_A\)</span> 和 <span class="arithmatex">\(\tau_D\)</span>，然后作乘积拓扑 <span class="arithmatex">\(\tau_A \times \tau_D\)</span>。</p>
+</li>
+<li>
+<p>方法二：先作乘积空间 <span class="arithmatex">\(X \times Y\)</span>，赋予乘积拓扑 <span class="arithmatex">\(\tau_{X \times Y}\)</span>，然后取 <span class="arithmatex">\(A \times D\)</span> 作为其子空间，诱导相对拓扑 <span class="arithmatex">\((\tau_{X \times Y})_{A \times D}\)</span>。</p>
+</li>
 </ul>
 <p>这两种方式得到的拓扑是完全相同的。</p>
 </div>
@@ -5339,9 +5343,15 @@ A^\circ = \bigcup_{S \subseteq A, S \in \tau} S
 <p>直观地说，<span class="arithmatex">\(\overline{A}\)</span> 是包含 <span class="arithmatex">\(A\)</span> 的<strong>最小闭集</strong>。</p>
 </div>
 <p><strong>经典示例</strong>：
-在带有标准拓扑的实数轴 <span class="arithmatex">\(X = \mathbb{R}\)</span> 中：
-* 设 <span class="arithmatex">\(A = [1, 2)\)</span>，则其内部 <span class="arithmatex">\(A^\circ = (1, 2)\)</span>，其闭包 <span class="arithmatex">\(\overline{A} = [1, 2]\)</span>。
-* 设 <span class="arithmatex">\(A = \mathbb{Q}\)</span>（有理数集），由于有理数集中不包含任何非空开区间，其内部 <span class="arithmatex">\(A^\circ = \emptyset\)</span>。同时有理数在实数中稠密，其闭包 <span class="arithmatex">\(\overline{A} = \mathbb{R}\)</span>。</p>
+在带有标准拓扑的实数轴 <span class="arithmatex">\(X = \mathbb{R}\)</span> 中：</p>
+<ul>
+<li>
+<p>设 <span class="arithmatex">\(A = [1, 2)\)</span>，则其内部 <span class="arithmatex">\(A^\circ = (1, 2)\)</span>，其闭包 <span class="arithmatex">\(\overline{A} = [1, 2]\)</span>。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(A = \mathbb{Q}\)</span>（有理数集），由于有理数集中不包含任何非空开区间，其内部 <span class="arithmatex">\(A^\circ = \emptyset\)</span>。同时有理数在实数中稠密，其闭包 <span class="arithmatex">\(\overline{A} = \mathbb{R}\)</span>。</p>
+</li>
+</ul>
 <h3 id="31">3.1 内部与闭包的对偶性质</h3>
 <p>内部和闭包通过补集操作表现出完美的对偶性。</p>
 <div class="admonition success">
