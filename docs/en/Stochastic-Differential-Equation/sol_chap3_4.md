@@ -299,6 +299,7 @@ $$ \int_0^T W(t) dW(t) = \int_0^T W(t) dW(t) + T$$
     $$
 
     Observing these two terms:
+    
     * The first term is precisely the discrete definition of the standard **Itô integral** (taking the left endpoint in each subinterval):
     
     $$\lim_{\delta \to 0} \sum_{i=0}^{n-1} W(t_i) \Delta W_i = \int_0^T W(t) dW(t)$$
