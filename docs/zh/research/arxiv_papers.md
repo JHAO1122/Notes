@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-04
+> 更新于: 2026-09-07
 
 ---
+### PRESCCO: Efficient Prediction Intervals under a Right-Censored Covariate 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-29
+- **链接**: [PDF](http://arxiv.org/abs/2607.26982v2)
+
+!!! note "AI 核心解读"
+
+    该论文首次在右删失协变量下构造预测区间，并系统证明直接套用三类保形预测法会导致区间半长估计随研究变化而失稳。其提出的PRESCCO方法基于半参数效率理论推导出双重稳健的评分函数，在任一模型误设时仍保持一致性且覆盖概率不损失，模拟中标准差较保形法降低4至30倍。
+
+
 ### Unifying Conformal Language Tasks with In-Context Ensembles 
 
 - [ ] **分类**: Conformal | **日期**: 2026-09-02

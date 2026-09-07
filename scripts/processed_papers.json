@@ -1144,5 +1144,11 @@
         "date": "2026-08-04",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2607.26982v2": {
+        "title": "PRESCCO: Efficient Prediction Intervals under a Right-Censored Covariate",
+        "date": "2026-07-29",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
