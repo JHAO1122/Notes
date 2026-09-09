@@ -1150,5 +1150,23 @@
         "date": "2026-07-29",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2508.04800v2": {
+        "title": "Differentially Private Model-X Knockoffs via Johnson-Lindenstrauss Transform",
+        "date": "2025-08-06",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2609.07251v1": {
+        "title": "Adaptive Conformal Inference Under Delayed Feedback: Coverage Guarantees and a Delay-to-Memory Diagnostic",
+        "date": "2026-09-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.07112v1": {
+        "title": "COINS: Any-Stage-Valid and Utility-Oriented Sequential Conformal Prediction",
+        "date": "2026-09-07",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

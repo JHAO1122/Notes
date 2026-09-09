@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-07
+> 更新于: 2026-09-09
 
 ---
+### Differentially Private Model-X Knockoffs via Johnson-Lindenstrauss Transform 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-08-06
+- **链接**: [PDF](http://arxiv.org/abs/2508.04800v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出基于Johnson-Lindenstrauss变换的私有化Model-X Knockoff框架，通过随机投影的近似等距性质在保持协变量交换性的同时实现(ε,δ)-差分隐私，并创新性地引入高维私有knockoff的“去偏技术”以严格刻画FDR与检验功效的渐近行为。理论分析揭示了隐私参数、样本量与特征维度对隐私-功效权衡的定量影响，并建立了功效收敛于1的充分条件，证明结构性随机投影机制在统计功效上显著优于传统高斯噪声注入方法。
+
+### Adaptive Conformal Inference Under Delayed Feedback: Coverage Guarantees and a Delay-to-Memory Diagnostic 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-07
+- **链接**: [PDF](http://arxiv.org/abs/2609.07251v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过将τ延迟的ACI递归分解为τ个交错序列，首次给出了长期经验覆盖率的有限样本界，并显式刻画了延迟τ对覆盖偏差的影响。作者进一步构造了延迟-记忆比r=τ/L作为诊断量，证明其能有效区分AR(1)依赖下延迟对自适应率选择的决定性作用，而在GARCH或马尔可夫切换下仅对尺度归一化的必要性提供判别信息。
+
+### COINS: Any-Stage-Valid and Utility-Oriented Sequential Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-07
+- **链接**: [PDF](http://arxiv.org/abs/2609.07112v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出一种通用结构理论，通过仅在存活增强观测上投资共享的有限样本拒绝计数预算，实现跨阶段协调校准，从而在交换性假设下保证任意阶段的有限样本有效性。其构造的COINS评分函数在每一阶段产生的预测集均不大于匹配的Bonferroni方法，并进一步提出Vopt-COINS以优化过程级效用的阶段分配，兼具分支与局部扩展的理论性质。
+
+
 ### PRESCCO: Efficient Prediction Intervals under a Right-Censored Covariate 
 
 - [ ] **分类**: Conformal | **日期**: 2026-07-29
