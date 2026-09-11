@@ -1168,5 +1168,23 @@
         "date": "2026-09-07",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.11524v1": {
+        "title": "Risk-Averse Decision Making with Multi-Level Reliability Guarantees",
+        "date": "2026-09-10",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.11401v1": {
+        "title": "Improving the Sensitivity of Gravitational Wave Detection with Weighted Conformal Prediction",
+        "date": "2026-09-10",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.10737v1": {
+        "title": "Conformal Calibration Transfer",
+        "date": "2026-09-09",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

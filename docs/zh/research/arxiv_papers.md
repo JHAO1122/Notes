@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-09
+> 更新于: 2026-09-11
 
 ---
+### Risk-Averse Decision Making with Multi-Level Reliability Guarantees 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-10
+- **链接**: [PDF](http://arxiv.org/abs/2609.11524v1)
+
+!!! note "AI 核心解读"
+
+    该论文将多层级可靠性证书的加权平均最大化等价转化为对嵌套预测集的优化问题，从而把单层风险规避决策推广至多层设定，并建立了可跨输入值解耦优化的对偶形式。其核心理论贡献在于通过嵌套预测集构造与对偶推导，刻画了单一共享策略实现多层级可靠性保证时的统计可行性与Pareto权衡。
+
+### Improving the Sensitivity of Gravitational Wave Detection with Weighted Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-10
+- **链接**: [PDF](http://arxiv.org/abs/2609.11401v1)
+
+!!! note "AI 核心解读"
+
+    该论文将似然比重加权嵌入保形预测框架，通过重要性权重校正训练（模拟）与测试（真实观测）数据间的协变量偏移，从而在分布漂移下恢复覆盖率的有限样本有效性。其构造的加权非一致性评分函数在检测阈值附近给出更紧致且校准的置信估计，使原本被漏检的真实信号得以被识别。
+
+### Conformal Calibration Transfer 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-09
+- **链接**: [PDF](http://arxiv.org/abs/2609.10737v1)
+
+!!! note "AI 核心解读"
+
+    该论文将源空间已标注的校准集通过配对观测传输至目标空间，并构造了基于无标签不确定性代理的TCC-KS评分校正与加权重标定加权-TCC两种评分函数，分别实现失配检测下的保守校准调整与权重稳定时的效率优化。理论上给出了适应可观测失配度量的目标域有限样本覆盖保证，使覆盖下界随失配程度自适应收紧。
+
+
 ### Differentially Private Model-X Knockoffs via Johnson-Lindenstrauss Transform 
 
 - [ ] **分类**: Knockoff | **日期**: 2025-08-06
