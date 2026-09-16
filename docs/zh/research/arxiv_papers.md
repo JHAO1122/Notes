@@ -3,9 +3,46 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-11
+> 更新于: 2026-09-16
 
 ---
+### On Large-Scale Multiple Testing Over Networks: A Non-Asymptotic Approach 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-09-12
+- **链接**: [PDF](http://arxiv.org/abs/2609.14170v1)
+
+!!! note "AI 核心解读"
+
+    该论文精确刻画了贪心区间聚合在标准带宽下因选择密度统计量的赢家诅咒而产生 \( \Theta(m^{-1/4}\sqrt{\log m}) \) 阶有限样本FDR膨胀，并通过交叉拟合构造无偏评分函数实现有限样本FDR控制；进而提出基于计数knockoff校准的合成均匀零假设掩码评分与e-value随机分裂聚合，在保持 \( O(\sqrt{m}\log m) \) 通信预算下消除Bonferroni因子并平均分裂随机性。
+
+### Conformal Individual Treatment Effect Estimation under Networked Interference 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-14
+- **链接**: [PDF](http://arxiv.org/abs/2609.15254v1)
+
+!!! note "AI 核心解读"
+
+    该论文在存在网络干扰时指出倾向得分重加权无法恢复加权可交换性，进而构造了可观测的理想共形p值上界，并据此建立干扰调整的加权共形预测，使反事实结果与个体处理效应的预测集在转导和归纳设定下均具有限样本边际覆盖保证。进一步在干预引起的非一致性分数变化有界时，推导出更紧的预测集构造。
+
+### Multi-source conformal prediction: leveraging heterogeneity via localization 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-13
+- **链接**: [PDF](http://arxiv.org/abs/2609.14531v1)
+
+!!! note "AI 核心解读"
+
+    该论文在共享条件响应分布假设下，通过数据自适应源选择将随机局部化共形预测扩展到多源场景，并借助可解释的包络分布构造评分函数，建立了有限样本覆盖界。其理论分析允许测试特征分布关于包络绝对连续，从而超越源分布混合的情形，并在正则条件下进一步证明了渐近测试条件覆盖。
+
+### Adaptive Conformal Redistribution for Inter-class Transitional Uncertainty in Medical Image Classification 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-10
+- **链接**: [PDF](http://arxiv.org/abs/2609.13303v1)
+
+!!! note "AI 核心解读"
+
+    提出熵调制且边界感知的非一致性评分函数以构造自适应预测集，并基于该集合内后验概率对过渡类样本进行无标签重分配，从而在给定误覆盖水平下将模糊预测集转化为单一类别决策。理论性质上，该重分配规则在保持共形覆盖保证的同时，通过集合内相对概率排序实现类别归属的精化，且其增益集中于与过渡类相邻的类别边界区域。
+
+
 ### Risk-Averse Decision Making with Multi-Level Reliability Guarantees 
 
 - [ ] **分类**: Conformal | **日期**: 2026-09-10

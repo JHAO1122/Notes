@@ -1186,5 +1186,29 @@
         "date": "2026-09-09",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.14170v1": {
+        "title": "On Large-Scale Multiple Testing Over Networks: A Non-Asymptotic Approach",
+        "date": "2026-09-12",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2609.15254v1": {
+        "title": "Conformal Individual Treatment Effect Estimation under Networked Interference",
+        "date": "2026-09-14",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.14531v1": {
+        "title": "Multi-source conformal prediction: leveraging heterogeneity via localization",
+        "date": "2026-09-13",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.13303v1": {
+        "title": "Adaptive Conformal Redistribution for Inter-class Transitional Uncertainty in Medical Image Classification",
+        "date": "2026-09-10",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
