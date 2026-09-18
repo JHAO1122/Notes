@@ -138,8 +138,10 @@ plugins:
             "充分性与指数族": "Sufficiency and Exponential Families"
             "🌐 微分流形与黎曼几何": "🌐 Differentiable Manifolds and Riemannian Geometry"
             "微分流形与黎曼几何课程概览": "Differentiable Manifolds and Riemannian Geometry Course Overview"
+            "第一章：微分流形": "Ch 1: Differentiable Manifolds"
             "🔲 矩阵计算": "🔲 Matrix Computation"
             "矩阵计算课程概览": "Matrix Computation Course Overview"
+            "第一章：矩阵范数": "Ch 1: Matrix Norms"
             "🤖 统计学习": "🤖 Statistical Learning"
             "统计学习课程概览": "Statistical Learning Course Overview"
             "第一章：KNN": "Ch 1: K-Nearest Neighbors"
@@ -295,6 +297,8 @@ nav:
               - 第一章：微分流形: zh/Differential_Manifolds/1Diff_Mani.md
       - 🔲 矩阵计算:
           - 矩阵计算课程概览: zh/Matrix_Comp/0Intro.md
+          - 📖 笔记:
+              - 第一章：矩阵范数: zh/Matrix_Comp/1Matrix_norm.md
       - 🤖 统计学习:
           - 统计学习课程概览: zh/Statistical_Learning/0Intro.md
           - 📖 笔记:
