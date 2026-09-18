@@ -47,7 +47,6 @@ Below are the mathematics and statistics courses I have completed or am currentl
 * Distribution Theory
 * Differentiable Mandifolds and Riemannian Geometry
 * Point-Set Topology
-* Abstract Algebra
 * Ordinary Differential Equations
 * Honors Mathematical Analysis I & II
 * Advanced Algebra & Analytic Geometry I & II
@@ -55,6 +54,7 @@ Below are the mathematics and statistics courses I have completed or am currentl
 
 **🌌 Applied Mathematics & Computation**
 
+* Matrix Computations
 * Mathematical Software
 * Discrete Mathematics
 * Practical Optimization Algorithms

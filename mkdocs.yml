@@ -134,8 +134,12 @@ plugins:
             "高等概率论课程概览": "Advanced Probability Theory Course Overview"
             "⏳ 高等数理统计": "⏳ Advanced Mathematical Statistics"
             "高等数理统计课程概览": "Advanced Mathematical Statistics Course Overview"
-            "🌐 微分流形与黎曼几何": "🌐 Differentiable Mandifolds and Riemannian Geometry"
-            "微分流形与黎曼几何课程概览": "Differentiable Mandifolds and Riemannian Geometry Course Overview"
+            "高斯几何与经典分布": "Gaussian Geometry and Classical Distributions"
+            "充分性与指数族": "Sufficiency and Exponential Families"
+            "🌐 微分流形与黎曼几何": "🌐 Differentiable Manifolds and Riemannian Geometry"
+            "微分流形与黎曼几何课程概览": "Differentiable Manifolds and Riemannian Geometry Course Overview"
+            "🔲 矩阵计算": "🔲 Matrix Computation"
+            "矩阵计算课程概览": "Matrix Computation Course Overview"
             "🤖 统计学习": "🤖 Statistical Learning"
             "统计学习课程概览": "Statistical Learning Course Overview"
             "第一章：KNN": "Ch 1: K-Nearest Neighbors"
@@ -281,9 +285,16 @@ nav:
       - 🎯 高等概率论:
           - 高等概率论课程概览: zh/Advanced_Prob/0Intro.md
       - ⏳ 高等数理统计:
-          - 高等数理统计课程概览: zh/Advanced_Stat/0Intro.md            
+          - 高等数理统计课程概览: zh/Advanced_Stat/0Intro.md  
+          - 📖 笔记:
+              - 第一章：高斯几何与经典分布: zh/Advanced_Stat/1_Gaussian_Geometry.md 
+              - 第二章：充分性与指数族: zh/Advanced_Stat/2Sufficiency.md
       - 🌐 微分流形与黎曼几何:
           - 微分流形与黎曼几何课程概览: zh/Differential_Manifolds/0Intro.md
+          - 📖 笔记:
+              - 第一章：微分流形: zh/Differential_Manifolds/1Diff_Mani.md
+      - 🔲 矩阵计算:
+          - 矩阵计算课程概览: zh/Matrix_Comp/0Intro.md
       - 🤖 统计学习:
           - 统计学习课程概览: zh/Statistical_Learning/0Intro.md
           - 📖 笔记:

@@ -79,6 +79,8 @@
 
 **🌌 应用与计算 (Applied Mathematics & Computation)**
 
+* 矩阵计算 (Matrix Computations)
+
 * 数学软件 (Mathematical Software) 
 
 * 离散数学 (Discrete Mathematics)

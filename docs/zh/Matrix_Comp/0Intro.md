@@ -1,17 +1,16 @@
 ---
 tags:
-  - 微分流形
-  - 黎曼几何
+  - 矩阵计算
   - 研究生课程
 ---
 
-# 🌐 微分流形与黎曼几何(Differentiable Manifolds and Riemannian Geometry)
+# 🔲 矩阵计算(Matrix Computations)
 
 !!! abstract "📈 课程基本信息(Course Metadata)"
 
     * **开课单位**：数学科学学院
     
-    * **先修要求**：数学分析、高等代数、点集拓扑、常微分方程
+    * **先修要求**：数学分析、高等代数、数值代数
     
     * **课程性质**：48学时 研究生课程
 
