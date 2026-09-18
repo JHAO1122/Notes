@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://jhao1122.github.io/Notes/Real_analysis/7_convergence_theorems/">
+        <link rel="canonical" href="https://jhao1122.github.io/Notes/en/Matrix_Comp/1Matrix_norm/">
       
       
-        <link rel="prev" href="../6_integration_construction/">
+        <link rel="prev" href="../0Intro/">
       
       
-        <link rel="next" href="../8_fubini_theorems/">
+        <link rel="next" href="../../Statistical_Learning/0Intro/">
       
       
         
-          <link rel="alternate" href="./" hreflang="zh">
+          <link rel="alternate" href="../../../Matrix_Comp/1Matrix_norm/" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Real_analysis/7_convergence_theorems/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>第七章：收敛定理 - Jiahao's Academic Space</title>
+        <title>Ch 1: Matrix Norms - Jiahao's Academic Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,8 +92,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#32" class="md-skip">
-          跳转至
+        <a href="#chapter-1-linear-algebra-foundations-and-matrix-norms" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -105,8 +105,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第七章：收敛定理
+              Ch 1: Matrix Norms
             
           </span>
         </div>
@@ -166,20 +166,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="zh" class="md-select__link">
+            <a href="../../../Matrix_Comp/1Matrix_norm/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Real_analysis/7_convergence_theorems/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -200,16 +200,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -222,7 +222,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -234,7 +234,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -255,7 +255,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -265,13 +265,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         
   
   
     
   
-  🏠 首页
+  🏠 Home
 
       </a>
     </li>
@@ -301,7 +301,7 @@
           
   
   
-  📚 笔记库
+  📚 Course Notes
 
         </a>
       </li>
@@ -324,7 +324,7 @@
           
   
   
-  🛠️ 知识速查
+  🛠️ Quick Reference
 
         </a>
       </li>
@@ -344,7 +344,7 @@
           
   
   
-  🛰️ 前沿追踪
+  🛰️ Research Updates
 
         </a>
       </li>
@@ -364,7 +364,7 @@
           
   
   
-  🎙️ 讲座与报告
+  🎙️ Lectures & Talks
 
         </a>
       </li>
@@ -392,9 +392,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -404,7 +404,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jhao1122/Notes" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/jhao1122/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -424,14 +424,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🏠 首页
+    🏠 Home
   
 
     
@@ -479,7 +479,7 @@
   <span class="md-ellipsis">
     
   
-    📚 笔记库
+    📚 Course Notes
   
 
     
@@ -495,7 +495,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📚 笔记库
+    📚 Course Notes
   
 
           </label>
@@ -534,7 +534,7 @@
   <span class="md-ellipsis">
     
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
     
@@ -550,7 +550,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
           </label>
@@ -570,7 +570,7 @@
   <span class="md-ellipsis">
     
   
-    随机微分方程课程概览
+    SDE Course Overview
   
 
     
@@ -614,7 +614,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -630,7 +630,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -650,7 +650,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：条件期望
+    Ch 1: Conditional Expectation
   
 
     
@@ -678,7 +678,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：布朗运动
+    Ch 2: Brownian Motion
   
 
     
@@ -706,7 +706,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分
+    Ch 3: Stochastic Integrals
   
 
     
@@ -734,7 +734,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分
+    Ch 4: Itô Integrals
   
 
     
@@ -762,7 +762,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：多元 Itô 积分
+    Ch 5: Multivariate Itô Calculus
   
 
     
@@ -790,7 +790,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：解的存在唯一性
+    Ch 6: Existence & Uniqueness
   
 
     
@@ -818,7 +818,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：期权定价与停时
+    Ch 7: Option Pricing and Stopping Times
   
 
     
@@ -870,7 +870,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -886,7 +886,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1053,7 +1053,7 @@
   <span class="md-ellipsis">
     
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
     
@@ -1069,7 +1069,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
           </label>
@@ -1089,7 +1089,7 @@
   <span class="md-ellipsis">
     
   
-    渐近统计课程概览
+    Asymptotic Statistics Course Overview
   
 
     
@@ -1133,7 +1133,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1149,7 +1149,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1169,7 +1169,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：随机收敛
+    Ch 1: Stochastic Convergence
   
 
     
@@ -1197,7 +1197,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：特征函数
+    Ch 2: Characteristic Functions
   
 
     
@@ -1225,7 +1225,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：中心极限定理（一）
+    Ch 3: Central Limit Theorem I
   
 
     
@@ -1253,7 +1253,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：中心极限定理（二）
+    Ch 4: Central Limit Theorem II
   
 
     
@@ -1281,7 +1281,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：弱相依数据（一）
+    Ch 5: Weakly Dependent Data I
   
 
     
@@ -1309,7 +1309,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：弱相依数据（二）
+    Ch 6: Weakly Dependent Data II
   
 
     
@@ -1337,7 +1337,7 @@
   <span class="md-ellipsis">
     
   
-    第七章： Delta 方法
+    Ch 7: Delta Method
   
 
     
@@ -1365,7 +1365,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：矩估计
+    Ch 8: Method of Moments
   
 
     
@@ -1393,7 +1393,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：极大似然估计（一）
+    Ch 9: Maximum Likelihood Estimation I
   
 
     
@@ -1421,7 +1421,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：极大似然估计（二）
+    Ch 10: Maximum Likelihood Estimation II
   
 
     
@@ -1449,7 +1449,7 @@
   <span class="md-ellipsis">
     
   
-    第十一章： M估计和Z估计 (一)
+    Ch 11: M-Estimation and Z-Estimation I
   
 
     
@@ -1477,7 +1477,7 @@
   <span class="md-ellipsis">
     
   
-    第十二章： M估计和Z估计 (二)
+    Ch 12: M-Estimation and Z-Estimation II
   
 
     
@@ -1505,7 +1505,7 @@
   <span class="md-ellipsis">
     
   
-    第十三章： U统计量
+    Ch 13: U-Statistics
   
 
     
@@ -1533,7 +1533,7 @@
   <span class="md-ellipsis">
     
   
-    第十四章： Bootstrap
+    Ch 14: Bootstrap
   
 
     
@@ -1585,7 +1585,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -1601,7 +1601,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1768,7 +1768,7 @@
   <span class="md-ellipsis">
     
   
-    🌌 泛函分析
+    🌌 Functional Analysis
   
 
     
@@ -1784,7 +1784,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🌌 泛函分析
+    🌌 Functional Analysis
   
 
           </label>
@@ -1804,7 +1804,7 @@
   <span class="md-ellipsis">
     
   
-    泛函分析课程概览
+    Functional Analysis Course Overview
   
 
     
@@ -1848,7 +1848,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1864,7 +1864,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1884,7 +1884,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：度量空间
+    Ch 1: Distance Spaces
   
 
     
@@ -1912,7 +1912,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：拓扑与完备性
+    Ch 2: Topology and Completeness
   
 
     
@@ -1940,7 +1940,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：紧性
+    Ch 3: Compactness
   
 
     
@@ -1968,7 +1968,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：压缩映射定理
+    Ch 4: Contraction Mapping Theorem
   
 
     
@@ -1996,7 +1996,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：赋范线性空间
+    Ch 5: Normed Linear Spaces
   
 
     
@@ -2024,7 +2024,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：巴拿赫空间
+    Ch 6: Banach Spaces
   
 
     
@@ -2052,7 +2052,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：希尔伯特空间
+    Ch 7: Hilbert Spaces
   
 
     
@@ -2080,7 +2080,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：希尔伯特空间理论
+    Ch 8: Hilbert Space Theory
   
 
     
@@ -2108,7 +2108,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：线性算子
+    Ch 9: Linear Operators
   
 
     
@@ -2136,7 +2136,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：开映射与闭图定理
+    Ch 10: Open Mapping and Closed Graph Theorems
   
 
     
@@ -2164,7 +2164,7 @@
   <span class="md-ellipsis">
     
   
-    第十一章：对偶空间
+    Ch 11: Dual Spaces
   
 
     
@@ -2192,7 +2192,7 @@
   <span class="md-ellipsis">
     
   
-    第十二章：有界线性泛函的延拓与共鸣定理
+    Ch 12: Extension of Bounded Linear Functionals and Hahn-Banach Theorem
   
 
     
@@ -2255,7 +2255,7 @@
   <span class="md-ellipsis">
     
   
-    🍩 点集拓扑
+    🍩 Point Set Topology
   
 
     
@@ -2271,7 +2271,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🍩 点集拓扑
+    🍩 Point Set Topology
   
 
           </label>
@@ -2291,7 +2291,7 @@
   <span class="md-ellipsis">
     
   
-    点集拓扑课程概览
+    Point Set Topology Course Overview
   
 
     
@@ -2335,7 +2335,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -2351,7 +2351,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -2371,7 +2371,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：集合论
+    Ch 1: Set Theory
   
 
     
@@ -2399,7 +2399,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：函数与关系
+    Ch 2: Functions and Relations
   
 
     
@@ -2427,7 +2427,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：可数集
+    Ch 3: Countable Sets
   
 
     
@@ -2455,7 +2455,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：开集与拓扑
+    Ch 4: Open Sets and Topology
   
 
     
@@ -2483,7 +2483,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：诱导拓扑
+    Ch 5: Induced Topology
   
 
     
@@ -2511,7 +2511,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：连续与同胚
+    Ch 6: Continuity and Homeomorphisms
   
 
     
@@ -2539,7 +2539,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：连通性
+    Ch 7: Connectedness
   
 
     
@@ -2567,7 +2567,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：紧性
+    Ch 8: Compactness
   
 
     
@@ -2595,7 +2595,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：欧式空间的紧性
+    Ch 9: Compactness in Euclidean Spaces
   
 
     
@@ -2623,7 +2623,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：序列紧
+    Ch 10: Sequential Compactness
   
 
     
@@ -2651,7 +2651,7 @@
   <span class="md-ellipsis">
     
   
-    第十一章：单点紧化
+    Ch 11: One-Point Compactification
   
 
     
@@ -2679,7 +2679,7 @@
   <span class="md-ellipsis">
     
   
-    第十二章：可数性
+    Ch 12: Countability
   
 
     
@@ -2707,7 +2707,7 @@
   <span class="md-ellipsis">
     
   
-    第十三章：分离公理
+    Ch 13: Separation Axioms
   
 
     
@@ -2759,7 +2759,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -2775,7 +2775,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -2913,8 +2913,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2930,11 +2928,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
@@ -2944,7 +2942,7 @@
   <span class="md-ellipsis">
     
   
-    🧱 实分析
+    🧱 Real Analysis
   
 
     
@@ -2955,12 +2953,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🧱 实分析
+    🧱 Real Analysis
   
 
           </label>
@@ -2973,14 +2971,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../0Intro/" class="md-nav__link">
+      <a href="../../Real_analysis/0Intro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    实分析课程概览
+    Real Analysis Course Overview
   
 
     
@@ -2998,8 +2996,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3012,11 +3008,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
         
           
           <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
@@ -3026,7 +3022,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -3037,12 +3033,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -3055,14 +3051,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../1_sigma_algebra/" class="md-nav__link">
+      <a href="../../Real_analysis/1_sigma_algebra/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第一章：sigma-代数
+    Ch 1: Sigma-Algebras
   
 
     
@@ -3083,14 +3079,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../2_outer_measure/" class="md-nav__link">
+      <a href="../../Real_analysis/2_outer_measure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第二章：外测度
+    Ch 2: Outer Measure
   
 
     
@@ -3111,14 +3107,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../3_ls_measure/" class="md-nav__link">
+      <a href="../../Real_analysis/3_ls_measure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第三章：Lebesgue测度
+    Ch 3: Lebesgue
   
 
     
@@ -3139,14 +3135,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../4_measurable_functions/" class="md-nav__link">
+      <a href="../../Real_analysis/4_measurable_functions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第四章：可测函数（一）
+    Ch 4: Measurable Functions I
   
 
     
@@ -3167,14 +3163,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../5_limits_decomposition/" class="md-nav__link">
+      <a href="../../Real_analysis/5_limits_decomposition/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第五章：可测函数（二）
+    Ch 5: Measurable Functions II
   
 
     
@@ -3195,161 +3191,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../6_integration_construction/" class="md-nav__link">
+      <a href="../../Real_analysis/6_integration_construction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第六章：积分构造
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第七章：收敛定理
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第七章：收敛定理
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-mct" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 单调收敛定理 (MCT)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-fatou" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Fatou 引理
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-dct" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 控制收敛定理 (DCT)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 依测度收敛与经典关系
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../8_fubini_theorems/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第八章：Fubini定理
+    Ch 6: Construction of the Integral
   
 
     
@@ -3370,14 +3219,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../9_hahn_jordan/" class="md-nav__link">
+      <a href="../../Real_analysis/7_convergence_theorems/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第九章：Hahn-Jordan分解
+    Ch 7: Convergence Theorems
   
 
     
@@ -3398,14 +3247,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_radon_nikodym/" class="md-nav__link">
+      <a href="../../Real_analysis/8_fubini_theorems/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第十章：Radon-Nikodym定理
+    Ch 8: Fubini's Theorem
   
 
     
@@ -3426,14 +3275,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_differentiation_ir/" class="md-nav__link">
+      <a href="../../Real_analysis/9_hahn_jordan/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第十一章：微积分基本定理
+    Ch 9: Hahn-Jordan Decomposition
   
 
     
@@ -3454,14 +3303,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../12_lp_spaces/" class="md-nav__link">
+      <a href="../../Real_analysis/10_radon_nikodym/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第十二章：L^p空间
+    Ch 10: Radon-Nikodym Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/11_differentiation_ir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Fundamental Theorem of Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/12_lp_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: L^p Spaces
   
 
     
@@ -3524,7 +3429,7 @@
   <span class="md-ellipsis">
     
   
-    🎯 高等概率论
+    🎯 Advanced Probability Theory
   
 
     
@@ -3540,7 +3445,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🎯 高等概率论
+    🎯 Advanced Probability Theory
   
 
           </label>
@@ -3560,7 +3465,7 @@
   <span class="md-ellipsis">
     
   
-    高等概率论课程概览
+    Advanced Probability Theory Course Overview
   
 
     
@@ -3615,7 +3520,7 @@
   <span class="md-ellipsis">
     
   
-    ⏳ 高等数理统计
+    ⏳ Advanced Mathematical Statistics
   
 
     
@@ -3631,7 +3536,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ⏳ 高等数理统计
+    ⏳ Advanced Mathematical Statistics
   
 
           </label>
@@ -3651,7 +3556,7 @@
   <span class="md-ellipsis">
     
   
-    高等数理统计课程概览
+    Advanced Mathematical Statistics Course Overview
   
 
     
@@ -3695,7 +3600,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -3711,7 +3616,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -3822,7 +3727,7 @@
   <span class="md-ellipsis">
     
   
-    🌐 微分流形与黎曼几何
+    🌐 Differentiable Manifolds and Riemannian Geometry
   
 
     
@@ -3838,7 +3743,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🌐 微分流形与黎曼几何
+    🌐 Differentiable Manifolds and Riemannian Geometry
   
 
           </label>
@@ -3858,7 +3763,7 @@
   <span class="md-ellipsis">
     
   
-    微分流形与黎曼几何课程概览
+    Differentiable Manifolds and Riemannian Geometry Course Overview
   
 
     
@@ -3902,7 +3807,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -3918,7 +3823,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -3938,7 +3843,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：微分流形
+    Ch 1: Differentiable Manifolds
   
 
     
@@ -3972,6 +3877,8 @@
                 
   
   
+    
+  
   
   
     
@@ -3987,11 +3894,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
         
           
           <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
@@ -4001,7 +3908,7 @@
   <span class="md-ellipsis">
     
   
-    🔲 矩阵计算
+    🔲 Matrix Computation
   
 
     
@@ -4012,12 +3919,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🔲 矩阵计算
+    🔲 Matrix Computation
   
 
           </label>
@@ -4030,14 +3937,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Matrix_Comp/0Intro/" class="md-nav__link">
+      <a href="../0Intro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    矩阵计算课程概览
+    Matrix Computation Course Overview
   
 
     
@@ -4055,8 +3962,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -4067,11 +3976,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_9_2" id="__nav_2_9_2_label" tabindex="0">
@@ -4081,7 +3990,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -4092,12 +4001,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_9_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -4107,17 +4016,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Matrix_Comp/1Matrix_norm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Matrix Norms
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    第一章：矩阵范数
+    Ch 1: Matrix Norms
   
 
     
@@ -4126,6 +4062,325 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-linear-algebra-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Linear Algebra Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Linear Algebra Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-linear-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Linear Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-span-and-subspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Span and Subspaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-bases-and-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Bases and Dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-range-and-null-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Range and Null Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-rank-and-the-ranknullity-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Rank and the Rank–Nullity Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-shermanmorrisonwoodbury-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Sherman–Morrison–Woodbury Formula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-orthogonality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Orthogonality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Orthogonality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-orthogonality-and-orthonormality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Orthogonality and Orthonormality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-orthogonal-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Orthogonal Complement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-orthogonal-matrices-and-orthonormal-basis-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Orthogonal Matrices and Orthonormal Basis Completion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vector-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Vector Norms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Vector Norms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definition-of-a-vector-norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Definition of a Vector Norm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-common-p-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Common \(p\)-Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-youngs-inequality-and-holders-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Young's Inequality and Hölder's Inequality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-minkowskis-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Minkowski's Inequality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-equivalence-of-norms-in-finite-dimensional-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Equivalence of Norms in Finite-Dimensional Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Matrix Norms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Matrix Norms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-matrix-norms-and-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Matrix Norms and Consistency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-induced-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Induced Matrix Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-common-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Common Matrix Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-relationships-among-common-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Relationships Among Common Matrix Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-quantifying-perturbations-with-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Quantifying Perturbations with Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-orthogonal-invariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Orthogonal Invariance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-summary-of-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Summary of This Chapter
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4180,7 +4435,7 @@
   <span class="md-ellipsis">
     
   
-    🤖 统计学习
+    🤖 Statistical Learning
   
 
     
@@ -4196,7 +4451,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🤖 统计学习
+    🤖 Statistical Learning
   
 
           </label>
@@ -4216,7 +4471,7 @@
   <span class="md-ellipsis">
     
   
-    统计学习课程概览
+    Statistical Learning Course Overview
   
 
     
@@ -4260,7 +4515,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -4276,7 +4531,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -4296,7 +4551,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：KNN
+    Ch 1: K-Nearest Neighbors
   
 
     
@@ -4324,7 +4579,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：线性回归
+    Ch 2: Linear Regression
   
 
     
@@ -4352,7 +4607,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：惩罚线性回归（一）
+    Ch 3: Penalized Linear Regression I
   
 
     
@@ -4380,7 +4635,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：惩罚线性回归（二）
+    Ch 4: Penalized Linear Regression II
   
 
     
@@ -4408,7 +4663,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：分类问题
+    Ch 5: Classification Problems
   
 
     
@@ -4436,7 +4691,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：支持向量机
+    Ch 6: Support Vector Machines
   
 
     
@@ -4464,7 +4719,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：RKHS与核回归
+    Ch 7: RKHS and Kernel Regression
   
 
     
@@ -4492,7 +4747,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：核密度估计
+    Ch 8: Kernel Density Estimation
   
 
     
@@ -4520,7 +4775,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：树模型
+    Ch 9: Tree Models
   
 
     
@@ -4548,7 +4803,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：因果推断
+    Ch 10: Causal Inference
   
 
     
@@ -4615,7 +4870,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
     
@@ -4631,7 +4886,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -4651,7 +4906,7 @@
   <span class="md-ellipsis">
     
   
-    📖 概览
+    📖 Overview
   
 
     
@@ -4695,7 +4950,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 速查
+    🛠️ Quick Reference
   
 
     
@@ -4711,7 +4966,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -4731,7 +4986,7 @@
   <span class="md-ellipsis">
     
   
-    📊 数理统计
+    📊 Mathematical Statistics
   
 
     
@@ -4759,7 +5014,7 @@
   <span class="md-ellipsis">
     
   
-    🎲 概率论
+    🎲 Probability Theory
   
 
     
@@ -4787,7 +5042,7 @@
   <span class="md-ellipsis">
     
   
-    📏 测度论基础
+    📏 Measure Theory
   
 
     
@@ -4815,7 +5070,7 @@
   <span class="md-ellipsis">
     
   
-    🔢 线性代数
+    🔢 Linear Algebra
   
 
     
@@ -4843,7 +5098,7 @@
   <span class="md-ellipsis">
     
   
-    🌊 随机过程
+    🌊 Stochastic Processes
   
 
     
@@ -4871,7 +5126,7 @@
   <span class="md-ellipsis">
     
   
-    🎯 凸优化
+    🎯 Convex Optimization
   
 
     
@@ -4899,7 +5154,7 @@
   <span class="md-ellipsis">
     
   
-    📈 回归分析
+    📈 Regression Analysis
   
 
     
@@ -4927,7 +5182,7 @@
   <span class="md-ellipsis">
     
   
-    ♾️ 数学分析
+    ♾️ Mathematical Analysis
   
 
     
@@ -4986,7 +5241,7 @@
   <span class="md-ellipsis">
     
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
     
@@ -5002,7 +5257,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
           </label>
@@ -5022,7 +5277,7 @@
   <span class="md-ellipsis">
     
   
-    📝 最新论文
+    📝 Latest Papers
   
 
     
@@ -5073,7 +5328,7 @@
   <span class="md-ellipsis">
     
   
-    🎙️ 讲座与报告
+    🎙️ Lectures & Talks
   
 
     
@@ -5089,7 +5344,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🎙️ 讲座与报告
+    🎙️ Lectures & Talks
   
 
           </label>
@@ -5109,7 +5364,7 @@
   <span class="md-ellipsis">
     
   
-    📖 概览
+    📖 Overview
   
 
     
@@ -5153,7 +5408,7 @@
   <span class="md-ellipsis">
     
   
-    🏛️ 基础理论
+    🏛️ Fundamental Theory
   
 
     
@@ -5169,7 +5424,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🏛️ 基础理论
+    🏛️ Fundamental Theory
   
 
           </label>
@@ -5205,7 +5460,7 @@
   <span class="md-ellipsis">
     
   
-    2025秋季高等概率论讨论班
+    2025 Fall Advanced Probability Seminar
   
 
     
@@ -5221,7 +5476,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    2025秋季高等概率论讨论班
+    2025 Fall Advanced Probability Seminar
   
 
           </label>
@@ -5241,7 +5496,7 @@
   <span class="md-ellipsis">
     
   
-    大偏差原理 (LDP)
+    Large Deviation Principle (LDP)
   
 
     
@@ -5301,7 +5556,7 @@
   <span class="md-ellipsis">
     
   
-    📑 文献研讨
+    📑 Paper Discussions
   
 
     
@@ -5317,7 +5572,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📑 文献研讨
+    📑 Paper Discussions
   
 
           </label>
@@ -5353,7 +5608,7 @@
   <span class="md-ellipsis">
     
   
-    2025秋季组会
+    2025 Fall Group Meetings
   
 
     
@@ -5369,7 +5624,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    2025秋季组会
+    2025 Fall Group Meetings
   
 
           </label>
@@ -5439,7 +5694,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -5448,15 +5703,87 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-mct" class="md-nav__link">
+  <a href="#1-linear-algebra-foundations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 单调收敛定理 (MCT)
+        1. Linear Algebra Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Linear Algebra Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-linear-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Linear Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-span-and-subspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Span and Subspaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-bases-and-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Bases and Dimension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-range-and-null-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Range and Null Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-rank-and-the-ranknullity-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Rank and the Rank–Nullity Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-shermanmorrisonwoodbury-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Sherman–Morrison–Woodbury Formula
       
     </span>
   </a>
@@ -5464,32 +5791,215 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-fatou" class="md-nav__link">
+  <a href="#3-orthogonality" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Fatou 引理
+        3. Orthogonality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Orthogonality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-orthogonality-and-orthonormality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Orthogonality and Orthonormality
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-dct" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#32-orthogonal-complement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 控制收敛定理 (DCT)
+        3.2 Orthogonal Complement
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#33-orthogonal-matrices-and-orthonormal-basis-completion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 依测度收敛与经典关系
+        3.3 Orthogonal Matrices and Orthonormal Basis Completion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vector-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Vector Norms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Vector Norms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definition-of-a-vector-norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Definition of a Vector Norm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-common-p-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Common \(p\)-Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-youngs-inequality-and-holders-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Young's Inequality and Hölder's Inequality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-minkowskis-inequality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Minkowski's Inequality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-equivalence-of-norms-in-finite-dimensional-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Equivalence of Norms in Finite-Dimensional Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Matrix Norms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Matrix Norms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-matrix-norms-and-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Matrix Norms and Consistency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-induced-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Induced Matrix Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-common-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Common Matrix Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-relationships-among-common-matrix-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Relationships Among Common Matrix Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-quantifying-perturbations-with-norms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Quantifying Perturbations with Norms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-orthogonal-invariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Orthogonal Invariance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-summary-of-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Summary of This Chapter
       
     </span>
   </a>
@@ -5517,176 +6027,784 @@
   
 
 
-<h1 id="32">3.2 三大收敛定理与依测度收敛</h1>
-<p>在黎曼积分中，要交换极限和积分号通常需要极为苛刻的“一致收敛”条件。而在勒贝格积分的框架下，由于积分是建立在测度基础上的，我们只需要很弱的条件即可实现积分与极限的交换。构筑这一宏大理论的基石便是著名的“三大收敛定理”。</p>
+<h1 id="chapter-1-linear-algebra-foundations-and-matrix-norms">Chapter 1: Linear Algebra Foundations and Matrix Norms</h1>
+<p>Matrix computation studies how to perform linear algebra operations in an efficient and stable manner. This chapter first reviews basic concepts such as linear independence, subspaces, bases, ranges, null spaces, and rank, then introduces the Sherman–Morrison–Woodbury formula under low-rank corrections, orthogonality and orthogonal complements, and finally systematically discusses vector norms and matrix norms.</p>
+<p>The focus of this chapter is not only to memorize the definitions of various norms, but also to understand their relationships and how to use norms to quantify errors and perturbations in matrix computations.</p>
 <hr />
-<h2 id="1-mct">1. 单调收敛定理 (MCT)</h2>
-<p>单调收敛定理 (Monotone Convergence Theorem) 是建立积分理论的第一块基石。它表明，对于非负递增的函数列，极限的积分等于积分的极限。</p>
-<div class="admonition success">
-<p class="admonition-title">定理 3.2.1 (单调收敛定理 MCT)</p>
-<p>设 <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> 为一列非负可测函数。如果它几乎处处单调递增，且逐点收敛于 <span class="arithmatex">\(f\)</span>：</p>
-<div class="arithmatex">\[
-0 \le f_1 \le f_2 \le \dots \le f_n \le \dots \text{ a.e.} \quad \text{且} \quad \lim_{n \to \infty} f_n(x) = f(x) \text{ a.e.}
-\]</div>
-<p>那么 <span class="arithmatex">\(f \in L^+\)</span>，并且有：</p>
-<div class="arithmatex">\[
-\int_X f \, d\mu = \lim_{n \to \infty} \int_X f_n \, d\mu
-\]</div>
-</div>
-<details class="proof">
-<summary>单调收敛定理的证明</summary>
-<p>首先，由于 <span class="arithmatex">\(f_n \le f\)</span>，由积分的单调性显然有 <span class="arithmatex">\(\int f_n \le \int f\)</span>，从而 <span class="arithmatex">\(\lim_{n \to \infty} \int f_n \le \int f\)</span>。</p>
-<p>接下来我们需要证明反向的不等式。任取一个满足 <span class="arithmatex">\(0 \le \phi \le f\)</span> 的非负简单函数 <span class="arithmatex">\(\phi\)</span>，以及任意常数 <span class="arithmatex">\(\alpha \in (0, 1)\)</span>。
-定义可测集序列：</p>
-<div class="arithmatex">\[
-E_n = \{x \in X : f_n(x) \ge \alpha \phi(x)\}
-\]</div>
-<p>因为 <span class="arithmatex">\(f_n\)</span> 单调递增，所以集合序列是递增的，即 <span class="arithmatex">\(E_1 \subset E_2 \subset \dots\)</span>。
-又因为 <span class="arithmatex">\(f_n \to f \ge \phi &gt; \alpha \phi\)</span> (当 <span class="arithmatex">\(\phi &gt; 0\)</span> 时)，所以 <span class="arithmatex">\(\bigcup_{n=1}^\infty E_n = X\)</span>。</p>
-<p>根据积分的性质，我们有：</p>
-<div class="arithmatex">\[
-\int_X f_n \, d\mu \ge \int_{E_n} f_n \, d\mu \ge \alpha \int_{E_n} \phi \, d\mu
-\]</div>
-<p>令 <span class="arithmatex">\(n \to \infty\)</span>，利用测度（及简单函数积分）的自下连续性：</p>
-<div class="arithmatex">\[
-\lim_{n \to \infty} \int_X f_n \, d\mu \ge \alpha \int_X \phi \, d\mu
-\]</div>
-<p>由于 <span class="arithmatex">\(\alpha \in (0, 1)\)</span> 是任意的，令 <span class="arithmatex">\(\alpha \to 1\)</span>，得到 <span class="arithmatex">\(\lim \int f_n \ge \int \phi\)</span>。再对所有满足 <span class="arithmatex">\(0 \le \phi \le f\)</span> 的简单函数取上确界，即得：</p>
-<div class="arithmatex">\[
-\lim_{n \to \infty} \int_X f_n \, d\mu \ge \int_X f \, d\mu
-\]</div>
-<p>结合两个方向的不等式，定理得证。</p>
-</details>
-<p>利用 MCT，我们可以立刻推导出级数积分的逐项求和性质。</p>
+<h2 id="1-linear-algebra-foundations">1. Linear Algebra Foundations</h2>
+<h3 id="11-linear-independence">1.1 Linear Independence</h3>
 <div class="admonition info">
-<p class="admonition-title">推论 (非负级数的逐项积分)</p>
-<p>设 <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> 为非负可测函数列，则：</p>
+<p class="admonition-title">Definition 1.1 (Linear Independence)</p>
+<p>Let <span class="arithmatex">\(a_1,\ldots,a_k\in\mathbb{R}^n\)</span>. If</p>
 <div class="arithmatex">\[
-\int_X \left( \sum_{n=1}^\infty f_n \right) d\mu = \sum_{n=1}^\infty \int_X f_n \, d\mu
+\sum_{i=1}^k\beta_i a_i=0
+\quad\Longrightarrow\quad
+\beta_i=0,
+\qquad i=1,\ldots,k,
 \]</div>
+<p>then the vectors <span class="arithmatex">\(a_1,\ldots,a_k\)</span> are called <strong>linearly independent</strong>; otherwise they are called linearly dependent.</p>
 </div>
-<hr />
-<h2 id="2-fatou">2. Fatou 引理</h2>
-<p>对于不一定单调的非负函数列，我们无法直接得到等号，但可以得到一个极具价值的不等式。它是连接 MCT 和 DCT 的桥梁。</p>
-<div class="admonition success">
-<p class="admonition-title">定理 3.2.2 (Fatou 引理)</p>
-<p>设 <span class="arithmatex">\(\{f_n\}_{n=1}^\infty \subset L^+\)</span> 是一列非负可测函数，则：</p>
+<p>Equivalently, form a matrix with these vectors as columns:</p>
 <div class="arithmatex">\[
-\int_X \left( \liminf_{n \to \infty} f_n \right) d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
+A=(a_1,\ldots,a_k)\in\mathbb{R}^{n\times k}.
 \]</div>
-</div>
-<details class="proof">
-<summary>Fatou 引理的证明</summary>
-<p>定义函数列 <span class="arithmatex">\(g_n(x) = \inf_{k \ge n} f_k(x)\)</span>。</p>
-<p>显然 <span class="arithmatex">\(\{g_n\}\)</span> 也是非负可测函数列，且由于随着 <span class="arithmatex">\(n\)</span> 的增大，求下确界的范围在缩小，所以 <span class="arithmatex">\(\{g_n\}\)</span> 是单调递增的，即 <span class="arithmatex">\(g_1 \le g_2 \le \dots\)</span>。
-由下极限的定义：</p>
+<p>Then <span class="arithmatex">\(a_1,\ldots,a_k\)</span> are linearly independent if and only if the homogeneous equation <span class="arithmatex">\(A\beta=0\)</span> has only the zero solution, that is,</p>
 <div class="arithmatex">\[
-\lim_{n \to \infty} g_n(x) = \liminf_{n \to \infty} f_n(x)
+\operatorname{Null}(A)=\{0\}.
 \]</div>
-<p>因为对于所有的 <span class="arithmatex">\(k \ge n\)</span> 都有 <span class="arithmatex">\(g_n \le f_k\)</span>，特别地有 <span class="arithmatex">\(g_n \le f_n\)</span>，所以：</p>
-<div class="arithmatex">\[
-\int_X g_n \, d\mu \le \int_X f_n \, d\mu
-\]</div>
-<p>两边取下极限：</p>
-<div class="arithmatex">\[
-\liminf_{n \to \infty} \int_X g_n \, d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
-\]</div>
-<p>另一方面，由于 <span class="arithmatex">\(g_n\)</span> 单调递增，应用单调收敛定理 (MCT) 于 <span class="arithmatex">\(\{g_n\}\)</span>：</p>
-<div class="arithmatex">\[
-\liminf_{n \to \infty} \int_X g_n \, d\mu = \lim_{n \to \infty} \int_X g_n \, d\mu = \int_X \left( \lim_{n \to \infty} g_n \right) d\mu = \int_X \left( \liminf_{n \to \infty} f_n \right) d\mu
-\]</div>
-<p>综合以上两式，即得 Fatou 引理。</p>
-</details>
-<hr />
-<h2 id="3-dct">3. 控制收敛定理 (DCT)</h2>
-<p>这是实分析中使用频率最高的收敛定理。它放宽了单调性的要求，代价是需要一个可积的“控制函数”。</p>
-<div class="admonition success">
-<p class="admonition-title">定理 3.2.3 (Lebesgue 控制收敛定理 DCT)</p>
-<p>设 <span class="arithmatex">\(\{f_n\}\)</span> 是一列可测函数，几乎处处收敛于 <span class="arithmatex">\(f\)</span>：</p>
-<div class="arithmatex">\[
-\lim_{n \to \infty} f_n(x) = f(x) \quad \text{a.e.}
-\]</div>
-<p>如果存在一个非负的<strong>可积函数</strong> <span class="arithmatex">\(g \in L^1(\mu)\)</span>，使得对于所有的 <span class="arithmatex">\(n\)</span>，几乎处处有：</p>
-<div class="arithmatex">\[
-|f_n(x)| \le g(x) \quad \text{a.e.}
-\]</div>
-<p>那么 <span class="arithmatex">\(f \in L^1(\mu)\)</span>，并且：</p>
-<div class="arithmatex">\[
-\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu \quad \text{且} \quad \lim_{n \to \infty} \int_X |f_n - f| \, d\mu = 0
-\]</div>
-</div>
-<details class="proof">
-<summary>控制收敛定理的证明</summary>
-<p>由于 <span class="arithmatex">\(|f_n| \le g\)</span> 且 <span class="arithmatex">\(f_n \to f\)</span>，取极限知 <span class="arithmatex">\(|f| \le g\)</span> a.e.。因为 <span class="arithmatex">\(g \in L^1\)</span>，所以 <span class="arithmatex">\(f \in L^1\)</span>。</p>
-<p>我们构造两个非负函数列：<span class="arithmatex">\(g + f_n \ge 0\)</span> 以及 <span class="arithmatex">\(g - f_n \ge 0\)</span>。</p>
-<p>对 <span class="arithmatex">\(g + f_n\)</span> 应用 Fatou 引理：</p>
-<div class="arithmatex">\[
-\int_X (g + f) \, d\mu \le \liminf_{n \to \infty} \int_X (g + f_n) \, d\mu = \int_X g \, d\mu + \liminf_{n \to \infty} \int_X f_n \, d\mu
-\]</div>
-<p>因为 <span class="arithmatex">\(g\)</span> 可积，可以消去两边的 <span class="arithmatex">\(\int g\)</span>，得到：</p>
-<div class="arithmatex">\[
-\int_X f \, d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu
-\]</div>
-<p>同理，对 <span class="arithmatex">\(g - f_n\)</span> 应用 Fatou 引理：</p>
-<div class="arithmatex">\[
-\int_X (g - f) \, d\mu \le \liminf_{n \to \infty} \int_X (g - f_n) \, d\mu = \int_X g \, d\mu - \limsup_{n \to \infty} \int_X f_n \, d\mu
-\]</div>
-<p>再次消去 <span class="arithmatex">\(\int g\)</span>，化简得到：</p>
-<div class="arithmatex">\[
-\limsup_{n \to \infty} \int_X f_n \, d\mu \le \int_X f \, d\mu
-\]</div>
-<p>结合上述两式，必有 <span class="arithmatex">\(\liminf = \limsup = \lim\)</span>，从而证明了 <span class="arithmatex">\(\lim_{n \to \infty} \int f_n = \int f\)</span>。
-将上述证明中的 <span class="arithmatex">\(f_n\)</span> 替换为 <span class="arithmatex">\(|f_n - f|\)</span>（它被 <span class="arithmatex">\(2g\)</span> 控制），同理可证 <span class="arithmatex">\(\lim \int |f_n - f| = 0\)</span>。</p>
-</details>
-<hr />
-<h2 id="4">4. 依测度收敛与经典关系</h2>
-<p>除了几乎处处收敛 (a.e.) 和 <span class="arithmatex">\(L^1\)</span> 收敛，测度论中还有一种在概率论中极为重要的收敛性——依测度收敛（对应于概率论中的依概率收敛）。</p>
+<h3 id="12-span-and-subspaces">1.2 Span and Subspaces</h3>
 <div class="admonition info">
-<p class="admonition-title">定义 3.2.1 (依测度收敛)</p>
-<p>设 <span class="arithmatex">\(f_n, f\)</span> 为可测函数。如果对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，满足以下条件的集合的测度趋于 0：</p>
+<p class="admonition-title">Definition 1.2 (Span)</p>
+<p>The span of the vectors <span class="arithmatex">\(a_1,\ldots,a_k\)</span> is defined as</p>
 <div class="arithmatex">\[
-\lim_{n \to \infty} \mu(\{x \in X : |f_n(x) - f(x)| \ge \epsilon\}) = 0
+\operatorname{span}\{a_1,\ldots,a_k\}
+=\left\{\sum_{i=1}^k\beta_i a_i:\beta_i\in\mathbb{R}\right\}.
 \]</div>
-<p>则称 <span class="arithmatex">\(f_n\)</span> <strong>依测度收敛</strong>于 <span class="arithmatex">\(f\)</span>，记作 <span class="arithmatex">\(f_n \xrightarrow{\mu} f\)</span>。</p>
+<p>It is a linear subspace of <span class="arithmatex">\(\mathbb{R}^n\)</span>.</p>
 </div>
-<p>同理，若 <span class="arithmatex">\(\mu(\{x : |f_n(x) - f_m(x)| \ge \epsilon\}) \to 0\)</span> (<span class="arithmatex">\(n, m \to \infty\)</span>)，则称 <span class="arithmatex">\(\{f_n\}\)</span> 是<strong>依测度的 Cauchy 列</strong>。</p>
-<p>依测度收敛与几乎处处收敛之间有着微妙的关系。著名的 Riesz 定理指出了这两种收敛的子列关系。</p>
-<div class="admonition success">
-<p class="admonition-title">定理 3.2.4 (Riesz 定理)</p>
-<ul>
-<li>
-<p>如果 <span class="arithmatex">\(\{f_n\}\)</span> 是依测度的 Cauchy 列，则它必然依测度收敛到某个可测函数 <span class="arithmatex">\(f\)</span>。</p>
-</li>
-<li>
-<p>如果 <span class="arithmatex">\(f_n \xrightarrow{\mu} f\)</span>，那么必定存在 <span class="arithmatex">\(\{f_n\}\)</span> 的一个子列 <span class="arithmatex">\(\{f_{n_k}\}\)</span>，使得该子列几乎处处收敛于 <span class="arithmatex">\(f\)</span>：</p>
-</li>
-</ul>
+<p>If</p>
 <div class="arithmatex">\[
-f_{n_k}(x) \to f(x) \quad \text{a.e. as } k \to \infty
+\operatorname{span}\{a_1,\ldots,a_k\}
+=\operatorname{span}\{b_1,\ldots,b_r\},
+\]</div>
+<p>then the two sets of vectors span the same subspace, but their numbers of vectors and linear dependence relations need not be the same.</p>
+<h3 id="13-bases-and-dimension">1.3 Bases and Dimension</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.3 (Basis)</p>
+<p>Let <span class="arithmatex">\(S\subseteq\mathbb{R}^n\)</span> be a linear subspace. If the vectors <span class="arithmatex">\(b_1,\ldots,b_r\)</span> are linearly independent and</p>
+<div class="arithmatex">\[
+S=\operatorname{span}\{b_1,\ldots,b_r\},
+\]</div>
+<p>then <span class="arithmatex">\(b_1,\ldots,b_r\)</span> are called a <strong>basis</strong> of <span class="arithmatex">\(S\)</span>.</p>
+</div>
+<p>Any two bases of the same finite-dimensional subspace contain the same number of vectors. This number is called the dimension of the subspace and is denoted by <span class="arithmatex">\(\dim(S)\)</span>.</p>
+<h3 id="14-range-and-null-space">1.4 Range and Null Space</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.4 (Range)</p>
+<p>For <span class="arithmatex">\(A\in\mathbb{R}^{m\times n}\)</span>, the range or column space of the matrix <span class="arithmatex">\(A\)</span> is defined as</p>
+<div class="arithmatex">\[
+\operatorname{Range}(A)
+=\{Ax:x\in\mathbb{R}^n\}
+\subseteq\mathbb{R}^m.
+\]</div>
+<p>If <span class="arithmatex">\(A=(a_1,\ldots,a_n)\)</span>, then</p>
+<div class="arithmatex">\[
+\operatorname{Range}(A)
+=\operatorname{span}\{a_1,\ldots,a_n\}.
 \]</div>
 </div>
-<p>在有限测度空间上，几乎处处收敛甚至可以推导出比依测度收敛更强的性质，即<strong>近乎一致收敛</strong>。</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.5 (Null Space)</p>
+<p>The null space of the matrix <span class="arithmatex">\(A\)</span> is defined as</p>
+<div class="arithmatex">\[
+\operatorname{Null}(A)
+=\{x\in\mathbb{R}^n:Ax=0\}.
+\]</div>
+</div>
+<p>Both the range and the null space are linear subspaces.</p>
+<h3 id="15-rank-and-the-ranknullity-theorem">1.5 Rank and the Rank–Nullity Theorem</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.6 (Rank)</p>
+<p>The rank of a matrix <span class="arithmatex">\(A\)</span> is defined as the dimension of its range:</p>
+<div class="arithmatex">\[
+\operatorname{rank}(A)
+=\dim\operatorname{Range}(A).
+\]</div>
+<p>It is also equal to the maximum number of linearly independent columns of <span class="arithmatex">\(A\)</span>.</p>
+</div>
 <div class="admonition success">
-<p class="admonition-title">定理 3.2.5 (Egoroff 定理)</p>
-<p>设 <span class="arithmatex">\(\mu(X) &lt; \infty\)</span>。如果 <span class="arithmatex">\(\{f_n\}\)</span> 在 <span class="arithmatex">\(X\)</span> 上几乎处处收敛于 <span class="arithmatex">\(f\)</span>，那么对于任意 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，存在一个可测子集 <span class="arithmatex">\(E \subset X\)</span> 满足：</p>
-<ul>
-<li>
-<p><span class="arithmatex">\(\mu(E) &lt; \epsilon\)</span> （剔除的坏集测度极小）</p>
-</li>
-<li>
-<p><span class="arithmatex">\(f_n\)</span> 在保留的集合 <span class="arithmatex">\(E^c = X \setminus E\)</span> 上<strong>一致收敛</strong>于 <span class="arithmatex">\(f\)</span>。</p>
-</li>
-</ul>
+<p class="admonition-title">Theorem 1.7 (Rank–Nullity Theorem)</p>
+<p>If <span class="arithmatex">\(A\in\mathbb{R}^{m\times n}\)</span>, then</p>
+<div class="arithmatex">\[
+\dim\operatorname{Range}(A)
++\dim\operatorname{Null}(A)
+=n.
+\]</div>
 </div>
 <details class="proof">
-<summary>Egoroff 定理的证明核心</summary>
-<p>构造集合 <span class="arithmatex">\(E_n(k) = \bigcup_{m=n}^\infty \{x : |f_m(x) - f(x)| \ge \frac{1}{k}\}\)</span>。
-因为 <span class="arithmatex">\(f_n \to f\)</span> a.e.，对于固定的 <span class="arithmatex">\(k\)</span>，随着 <span class="arithmatex">\(n \to \infty\)</span>，集合序列 <span class="arithmatex">\(E_n(k)\)</span> 单调递减且其交集的测度为 0。
-由于全空间测度有限，利用测度的自上连续性，必然有 <span class="arithmatex">\(\lim_{n \to \infty} \mu(E_n(k)) = 0\)</span>。</p>
-<p>对于每一个 <span class="arithmatex">\(k\)</span>，我们可以选取足够大的 <span class="arithmatex">\(N_k\)</span>，使得 <span class="arithmatex">\(\mu(E_{N_k}(k)) &lt; \epsilon \cdot 2^{-k}\)</span>。
-令坏集 <span class="arithmatex">\(E = \bigcup_{k=1}^\infty E_{N_k}(k)\)</span>。由次可加性，<span class="arithmatex">\(\mu(E) &lt; \sum \epsilon 2^{-k} = \epsilon\)</span>。
-在 <span class="arithmatex">\(E^c\)</span> 上，对于任意 <span class="arithmatex">\(k\)</span> 只要 <span class="arithmatex">\(n &gt; N_k\)</span> 就有 <span class="arithmatex">\(|f_n - f| &lt; 1/k\)</span>，这恰好是一致收敛的定义。</p>
+<summary>Proof of Theorem 1.7 (click to expand)</summary>
+<p>Let <span class="arithmatex">\(v_1,\ldots,v_s\)</span> be a basis of <span class="arithmatex">\(\operatorname{Null}(A)\)</span>, and extend it to a basis of <span class="arithmatex">\(\mathbb{R}^n\)</span></p>
+<div class="arithmatex">\[
+v_1,\ldots,v_s,v_{s+1},\ldots,v_n.
+\]</div>
+<p>We prove that <span class="arithmatex">\(Av_{s+1},\ldots,Av_n\)</span> form a basis of <span class="arithmatex">\(\operatorname{Range}(A)\)</span>.</p>
+<p>Take any <span class="arithmatex">\(x\in\mathbb{R}^n\)</span> and write</p>
+<div class="arithmatex">\[
+x=\sum_{i=1}^n\alpha_i v_i.
+\]</div>
+<p>Since <span class="arithmatex">\(Av_i=0\)</span> for <span class="arithmatex">\(i=1,\ldots,s\)</span>, we have</p>
+<div class="arithmatex">\[
+Ax=\sum_{i=s+1}^n\alpha_iAv_i.
+\]</div>
+<p>Thus these vectors span <span class="arithmatex">\(\operatorname{Range}(A)\)</span>. If</p>
+<div class="arithmatex">\[
+\sum_{i=s+1}^n\alpha_iAv_i=0,
+\]</div>
+<p>then <span class="arithmatex">\(\sum_{i=s+1}^n\alpha_iv_i\in\operatorname{Null}(A)\)</span>. By the linear independence of the whole set <span class="arithmatex">\(v_1,\ldots,v_n\)</span>, all <span class="arithmatex">\(\alpha_i=0\)</span>, so <span class="arithmatex">\(Av_{s+1},\ldots,Av_n\)</span> are linearly independent.</p>
+<p>Therefore</p>
+<div class="arithmatex">\[
+\dim\operatorname{Range}(A)=n-s,
+\qquad
+\dim\operatorname{Null}(A)=s,
+\]</div>
+<p>and their sum equals <span class="arithmatex">\(n\)</span>. <span class="arithmatex">\(\square\)</span></p>
 </details>
+<hr />
+<h2 id="2-the-shermanmorrisonwoodbury-formula">2. The Sherman–Morrison–Woodbury Formula</h2>
+<p>In matrix computation, we often already know <span class="arithmatex">\(A^{-1}\)</span> but need the inverse of a low-rank correction matrix <span class="arithmatex">\(A+UV^T\)</span>. The Sherman–Morrison–Woodbury formula transforms the problem of inverting an <span class="arithmatex">\(n\times n\)</span> matrix into the problem of inverting a <span class="arithmatex">\(k\times k\)</span> matrix; when <span class="arithmatex">\(k\ll n\)</span>, this transformation is very useful.</p>
+<div class="admonition info">
+<p class="admonition-title">Lemma 2.1 (Difference of Two Inverse Matrices)</p>
+<p>If <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are both invertible, then</p>
+<div class="arithmatex">\[
+A^{-1}-B^{-1}
+=A^{-1}(B-A)B^{-1}
+=B^{-1}(B-A)A^{-1}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Lemma 2.1 (click to expand)</summary>
+<p>Direct expansion gives</p>
+<div class="arithmatex">\[
+A^{-1}(B-A)B^{-1}
+=A^{-1}BB^{-1}-A^{-1}AB^{-1}
+=A^{-1}-B^{-1}.
+\]</div>
+<p>The other equality follows similarly. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.2 (Sherman–Morrison–Woodbury Formula)</p>
+<p>Let <span class="arithmatex">\(A\in\mathbb{R}^{n\times n}\)</span> be invertible and let <span class="arithmatex">\(U,V\in\mathbb{R}^{n\times k}\)</span>. Then <span class="arithmatex">\(A+UV^T\)</span> is invertible if and only if <span class="arithmatex">\(I_k+V^TA^{-1}U\)</span> is invertible. In this case,</p>
+<div class="arithmatex">\[
+(A+UV^T)^{-1}
+=A^{-1}
+-A^{-1}U(I_k+V^TA^{-1}U)^{-1}V^TA^{-1}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 2.2 (click to expand)</summary>
+<p>First note that</p>
+<div class="arithmatex">\[
+A+UV^T
+=A(I_n+A^{-1}UV^T).
+\]</div>
+<p>The Sylvester determinant identity gives</p>
+<div class="arithmatex">\[
+\det(I_n+A^{-1}UV^T)
+=\det(I_k+V^TA^{-1}U),
+\]</div>
+<p>so the two matrices are either both invertible or both singular.</p>
+<p>Let</p>
+<div class="arithmatex">\[
+M=I_k+V^TA^{-1}U.
+\]</div>
+<p>Directly verify the candidate inverse on the right-hand side:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;(A+UV^T)
+\left(A^{-1}-A^{-1}UM^{-1}V^TA^{-1}\right)\\
+&amp;\quad=I_n+UV^TA^{-1}
+-UM^{-1}V^TA^{-1}
+-UV^TA^{-1}UM^{-1}V^TA^{-1}\\
+&amp;\quad=I_n+U\left[I_k-M^{-1}-(M-I_k)M^{-1}\right]V^TA^{-1}\\
+&amp;\quad=I_n.
+\end{aligned}
+\]</div>
+<p>Similarly, the product in the reverse direction also equals <span class="arithmatex">\(I_n\)</span>, so the formula holds. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2.3 (Sherman–Morrison Formula)</p>
+<p>When <span class="arithmatex">\(k=1\)</span>, write <span class="arithmatex">\(U=u\)</span> and <span class="arithmatex">\(V=v\)</span>. If</p>
+<div class="arithmatex">\[
+\alpha=1+v^TA^{-1}u\neq0,
+\]</div>
+<p>then</p>
+<div class="arithmatex">\[
+(A+uv^T)^{-1}
+=A^{-1}-\frac{A^{-1}uv^TA^{-1}}{1+v^TA^{-1}u}.
+\]</div>
+</div>
+<hr />
+<h2 id="3-orthogonality">3. Orthogonality</h2>
+<h3 id="31-orthogonality-and-orthonormality">3.1 Orthogonality and Orthonormality</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1 (Orthogonal Vectors)</p>
+<p>Vectors <span class="arithmatex">\(x_1,\ldots,x_k\in\mathbb{R}^n\)</span> are called orthogonal if</p>
+<div class="arithmatex">\[
+x_i^Tx_j=0,
+\qquad i\neq j.
+\]</div>
+<p>If in addition</p>
+<div class="arithmatex">\[
+x_i^Tx_j=\delta_{ij},
+\]</div>
+<p>then they are called orthonormal.</p>
+</div>
+<p>Any orthogonal set of vectors containing no zero vector is linearly independent.</p>
+<h3 id="32-orthogonal-complement">3.2 Orthogonal Complement</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.2 (Orthogonal Complement)</p>
+<p>Let <span class="arithmatex">\(S\subseteq\mathbb{R}^n\)</span> be a linear subspace. The orthogonal complement of <span class="arithmatex">\(S\)</span> is defined as</p>
+<div class="arithmatex">\[
+S^\perp
+=\{y\in\mathbb{R}^n:y^Tx=0\text{ for all }x\in S\}.
+\]</div>
+</div>
+<p>The orthogonal complement <span class="arithmatex">\(S^\perp\)</span> is also a linear subspace of <span class="arithmatex">\(\mathbb{R}^n\)</span>, and</p>
+<div class="arithmatex">\[
+\mathbb{R}^n=S\oplus S^\perp,
+\qquad
+\dim(S)+\dim(S^\perp)=n.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Proposition 3.3 (Orthogonal Relation Between Range and Null Space)</p>
+<p>For any <span class="arithmatex">\(A\in\mathbb{R}^{m\times n}\)</span>,</p>
+<div class="arithmatex">\[
+\operatorname{Range}(A)^\perp
+=\operatorname{Null}(A^T),
+\qquad
+\operatorname{Range}(A^T)^\perp
+=\operatorname{Null}(A).
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 3.3 (click to expand)</summary>
+<p>For <span class="arithmatex">\(y\in\mathbb{R}^m\)</span>,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+y\in\operatorname{Range}(A)^\perp
+&amp;\Longleftrightarrow y^TAx=0
+\text{ for all }x\in\mathbb{R}^n\\
+&amp;\Longleftrightarrow A^Ty=0\\
+&amp;\Longleftrightarrow y\in\operatorname{Null}(A^T).
+\end{aligned}
+\]</div>
+<p>The second equality follows by applying the first equality to <span class="arithmatex">\(A^T\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="33-orthogonal-matrices-and-orthonormal-basis-completion">3.3 Orthogonal Matrices and Orthonormal Basis Completion</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.4 (Orthogonal Matrix)</p>
+<p>If a square matrix <span class="arithmatex">\(Q\in\mathbb{R}^{n\times n}\)</span> satisfies</p>
+<div class="arithmatex">\[
+Q^TQ=QQ^T=I_n,
+\]</div>
+<p>then <span class="arithmatex">\(Q\)</span> is called an orthogonal matrix. Equivalently, the columns of <span class="arithmatex">\(Q\)</span> form an orthonormal basis of <span class="arithmatex">\(\mathbb{R}^n\)</span>.</p>
+</div>
+<p>An orthogonal matrix satisfies</p>
+<div class="arithmatex">\[
+Q^{-1}=Q^T,
+\]</div>
+<p>and preserves the Euclidean inner product and the <span class="arithmatex">\(2\)</span>-norm:</p>
+<div class="arithmatex">\[
+(Qx)^T(Qy)=x^Ty,
+\qquad
+\lVert Qx\rVert_2=\lVert x\rVert_2.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.5 (Completion of an Orthonormal Basis)</p>
+<p>Let <span class="arithmatex">\(U_1\in\mathbb{R}^{n\times r}\)</span>, where <span class="arithmatex">\(r&lt;n\)</span>, and suppose the columns of <span class="arithmatex">\(U_1\)</span> are orthonormal, that is,</p>
+<div class="arithmatex">\[
+U_1^TU_1=I_r.
+\]</div>
+<p>Then there exists <span class="arithmatex">\(U_2\in\mathbb{R}^{n\times(n-r)}\)</span> such that</p>
+<div class="arithmatex">\[
+Q=[U_1\ U_2]\in\mathbb{R}^{n\times n}
+\]</div>
+<p>is an orthogonal matrix, and</p>
+<div class="arithmatex">\[
+\operatorname{Range}(U_1)^\perp
+=\operatorname{Range}(U_2).
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 3.5 (click to expand)</summary>
+<p>The columns of <span class="arithmatex">\(U_1\)</span> form an orthonormal basis of the subspace <span class="arithmatex">\(\operatorname{Range}(U_1)\)</span>. Choose an orthonormal basis in its orthogonal complement, and take these vectors as the columns of <span class="arithmatex">\(U_2\)</span>. Since</p>
+<div class="arithmatex">\[
+\mathbb{R}^n
+=\operatorname{Range}(U_1)
+\oplus\operatorname{Range}(U_1)^\perp,
+\]</div>
+<p>all columns of <span class="arithmatex">\(Q=[U_1\ U_2]\)</span> form an orthonormal basis of <span class="arithmatex">\(\mathbb{R}^n\)</span>, so <span class="arithmatex">\(Q\)</span> is an orthogonal matrix. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>By this theorem, every <span class="arithmatex">\(x\in\mathbb{R}^n\)</span> has the orthogonal decomposition</p>
+<div class="arithmatex">\[
+x=U_1U_1^Tx+U_2U_2^Tx,
+\]</div>
+<p>where the two components belong respectively to <span class="arithmatex">\(\operatorname{Range}(U_1)\)</span> and <span class="arithmatex">\(\operatorname{Range}(U_1)^\perp\)</span>.</p>
+<hr />
+<h2 id="4-vector-norms">4. Vector Norms</h2>
+<h3 id="41-definition-of-a-vector-norm">4.1 Definition of a Vector Norm</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1 (Vector Norm)</p>
+<p>A function <span class="arithmatex">\(\lVert\cdot\rVert:\mathbb{R}^n\to\mathbb{R}\)</span> is called a vector norm if for any <span class="arithmatex">\(x,y\in\mathbb{R}^n\)</span> and any <span class="arithmatex">\(\alpha\in\mathbb{R}\)</span>, it satisfies:</p>
+<ol>
+<li><strong>Positive definiteness:</strong> <span class="arithmatex">\(\lVert x\rVert\geq0\)</span>, and <span class="arithmatex">\(\lVert x\rVert=0\)</span> if and only if <span class="arithmatex">\(x=0\)</span>;</li>
+<li><strong>Absolute homogeneity:</strong> <span class="arithmatex">\(\lVert\alpha x\rVert=|\alpha|\lVert x\rVert\)</span>;</li>
+<li><strong>Triangle inequality:</strong> <span class="arithmatex">\(\lVert x+y\rVert\leq\lVert x\rVert+\lVert y\rVert\)</span>.</li>
+</ol>
+</div>
+<h3 id="42-common-p-norms">4.2 Common <span class="arithmatex">\(p\)</span>-Norms</h3>
+<p>For <span class="arithmatex">\(1\leq p&lt;\infty\)</span>, define</p>
+<div class="arithmatex">\[
+\lVert x\rVert_p
+=\left(\sum_{i=1}^n|x_i|^p\right)^{1/p}.
+\]</div>
+<p>In particular,</p>
+<div class="arithmatex">\[
+\lVert x\rVert_1=\sum_{i=1}^n|x_i|,
+\qquad
+\lVert x\rVert_2=\left(\sum_{i=1}^n|x_i|^2\right)^{1/2}.
+\]</div>
+<p>When <span class="arithmatex">\(p=\infty\)</span>, define</p>
+<div class="arithmatex">\[
+\lVert x\rVert_\infty
+=\max_{1\leq i\leq n}|x_i|.
+\]</div>
+<h3 id="43-youngs-inequality-and-holders-inequality">4.3 Young's Inequality and Hölder's Inequality</h3>
+<div class="admonition info">
+<p class="admonition-title">Lemma 4.2 (Young's Inequality)</p>
+<p>Let <span class="arithmatex">\(a,b\geq0\)</span>, <span class="arithmatex">\(p,q&gt;1\)</span>, and</p>
+<div class="arithmatex">\[
+\frac{1}{p}+\frac{1}{q}=1.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+ab\leq\frac{a^p}{p}+\frac{b^q}{q}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Lemma 4.2 (click to expand)</summary>
+<p>Apply the weighted Jensen inequality to the convex function <span class="arithmatex">\(f(t)=e^t\)</span>, and take</p>
+<div class="arithmatex">\[
+\lambda=\frac{1}{p},
+\qquad
+1-\lambda=\frac{1}{q},
+\]</div>
+<p>to obtain</p>
+<div class="arithmatex">\[
+ab
+=\exp(\log a+\log b)
+\leq\frac{a^p}{p}+\frac{b^q}{q}.
+\]</div>
+<p>When <span class="arithmatex">\(a=0\)</span> or <span class="arithmatex">\(b=0\)</span>, the conclusion is obvious. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.3 (Hölder's Inequality)</p>
+<p>Let <span class="arithmatex">\(x,y\in\mathbb{R}^n\)</span>, <span class="arithmatex">\(1\leq p,q\leq\infty\)</span>, and</p>
+<div class="arithmatex">\[
+\frac{1}{p}+\frac{1}{q}=1.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+|x^Ty|
+\leq\lVert x\rVert_p\lVert y\rVert_q.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 4.3 (click to expand)</summary>
+<p>First consider <span class="arithmatex">\(1&lt;p,q&lt;\infty\)</span>, with <span class="arithmatex">\(x,y\neq0\)</span>. Let</p>
+<div class="arithmatex">\[
+\bar{x}=\frac{x}{\lVert x\rVert_p},
+\qquad
+\bar{y}=\frac{y}{\lVert y\rVert_q}.
+\]</div>
+<p>Applying Young's inequality to each <span class="arithmatex">\(i\)</span>, we obtain</p>
+<div class="arithmatex">\[
+|\bar{x}_i\bar{y}_i|
+\leq\frac{|\bar{x}_i|^p}{p}
++\frac{|\bar{y}_i|^q}{q}.
+\]</div>
+<p>Summing gives</p>
+<div class="arithmatex">\[
+\sum_{i=1}^n|\bar{x}_i\bar{y}_i|
+\leq\frac{1}{p}\sum_{i=1}^n|\bar{x}_i|^p
++\frac{1}{q}\sum_{i=1}^n|\bar{y}_i|^q
+=\frac{1}{p}+\frac{1}{q}=1.
+\]</div>
+<p>Therefore</p>
+<div class="arithmatex">\[
+|x^Ty|
+\leq\sum_{i=1}^n|x_iy_i|
+\leq\lVert x\rVert_p\lVert y\rVert_q.
+\]</div>
+<p>When <span class="arithmatex">\((p,q)=(1,\infty)\)</span> or <span class="arithmatex">\((\infty,1)\)</span>, the conclusion follows directly from</p>
+<div class="arithmatex">\[
+\sum_i|x_iy_i|
+\leq\left(\sum_i|x_i|\right)\max_i|y_i|.
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>When <span class="arithmatex">\(p=q=2\)</span>, Hölder's inequality becomes the Cauchy–Schwarz inequality:</p>
+<div class="arithmatex">\[
+|x^Ty|\leq\lVert x\rVert_2\lVert y\rVert_2.
+\]</div>
+<h3 id="44-minkowskis-inequality">4.4 Minkowski's Inequality</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.4 (Minkowski's Inequality)</p>
+<p>For any <span class="arithmatex">\(1\leq p\leq\infty\)</span> and <span class="arithmatex">\(x,y\in\mathbb{R}^n\)</span>,</p>
+<div class="arithmatex">\[
+\lVert x+y\rVert_p
+\leq\lVert x\rVert_p+\lVert y\rVert_p.
+\]</div>
+<p>Therefore, <span class="arithmatex">\(\lVert\cdot\rVert_p\)</span> indeed satisfies the triangle inequality and is a vector norm.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 4.4 (click to expand)</summary>
+<p>When <span class="arithmatex">\(p=1\)</span> or <span class="arithmatex">\(p=\infty\)</span>, the conclusion follows directly from the triangle inequality for real numbers.</p>
+<p>Let <span class="arithmatex">\(1&lt;p&lt;\infty\)</span> and set <span class="arithmatex">\(q=p/(p-1)\)</span>. If <span class="arithmatex">\(x+y=0\)</span>, the conclusion is obvious. Otherwise, by Hölder's inequality,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert x+y\rVert_p^p
+&amp;=\sum_{i=1}^n|x_i+y_i|^p\\
+&amp;\leq\sum_{i=1}^n|x_i|\,|x_i+y_i|^{p-1}
++\sum_{i=1}^n|y_i|\,|x_i+y_i|^{p-1}\\
+&amp;\leq(\lVert x\rVert_p+\lVert y\rVert_p)
+\left(\sum_{i=1}^n|x_i+y_i|^{(p-1)q}\right)^{1/q}\\
+&amp;=(\lVert x\rVert_p+\lVert y\rVert_p)
+\lVert x+y\rVert_p^{p-1}.
+\end{aligned}
+\]</div>
+<p>Dividing both sides by <span class="arithmatex">\(\lVert x+y\rVert_p^{p-1}\)</span> gives the result. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="45-equivalence-of-norms-in-finite-dimensional-spaces">4.5 Equivalence of Norms in Finite-Dimensional Spaces</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.5 (Equivalent Norms)</p>
+<p>Let <span class="arithmatex">\(\lVert\cdot\rVert_\alpha\)</span> and <span class="arithmatex">\(\lVert\cdot\rVert_\beta\)</span> be two norms on <span class="arithmatex">\(\mathbb{R}^n\)</span>. If there exist constants <span class="arithmatex">\(c_1,c_2&gt;0\)</span> independent of <span class="arithmatex">\(x\)</span> such that for all <span class="arithmatex">\(x\in\mathbb{R}^n\)</span>,</p>
+<div class="arithmatex">\[
+c_1\lVert x\rVert_\alpha
+\leq\lVert x\rVert_\beta
+\leq c_2\lVert x\rVert_\alpha,
+\]</div>
+<p>then the two norms are called equivalent.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.6 (All Norms Are Equivalent in Finite-Dimensional Spaces)</p>
+<p>Any two vector norms on <span class="arithmatex">\(\mathbb{R}^n\)</span> are equivalent.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 4.6 (click to expand)</summary>
+<p>It suffices to prove that any norm <span class="arithmatex">\(\lVert\cdot\rVert_\alpha\)</span> is equivalent to the <span class="arithmatex">\(2\)</span>-norm.</p>
+<p>Let <span class="arithmatex">\(e_1,\ldots,e_n\)</span> be the standard basis. For any <span class="arithmatex">\(x=\sum_i x_ie_i\)</span>, by the triangle inequality and the Cauchy–Schwarz inequality,</p>
+<div class="arithmatex">\[
+\lVert x\rVert_\alpha
+\leq\sum_{i=1}^n|x_i|\lVert e_i\rVert_\alpha
+\leq\sqrt{n}\max_i\lVert e_i\rVert_\alpha\lVert x\rVert_2.
+\]</div>
+<p>Therefore, <span class="arithmatex">\(\lVert\cdot\rVert_\alpha\)</span> is continuous with respect to the <span class="arithmatex">\(2\)</span>-norm. Consider the compact set</p>
+<div class="arithmatex">\[
+S^{n-1}=\{x\in\mathbb{R}^n:\lVert x\rVert_2=1\}.
+\]</div>
+<p>The continuous function <span class="arithmatex">\(x\mapsto\lVert x\rVert_\alpha\)</span> attains a maximum <span class="arithmatex">\(M\)</span> and a minimum <span class="arithmatex">\(m\)</span> on <span class="arithmatex">\(S^{n-1}\)</span>. By positive definiteness of the norm and <span class="arithmatex">\(0\notin S^{n-1}\)</span>, we have <span class="arithmatex">\(m&gt;0\)</span>. Hence, for any nonzero <span class="arithmatex">\(x\)</span>,</p>
+<div class="arithmatex">\[
+m
+\leq\left\lVert\frac{x}{\lVert x\rVert_2}\right\rVert_\alpha
+\leq M.
+\]</div>
+<p>Using homogeneity, we obtain</p>
+<div class="arithmatex">\[
+m\lVert x\rVert_2
+\leq\lVert x\rVert_\alpha
+\leq M\lVert x\rVert_2.
+\]</div>
+<p>Thus every norm is equivalent to the <span class="arithmatex">\(2\)</span>-norm, and hence any two norms are equivalent to each other. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>For <span class="arithmatex">\(1\leq p\leq q\leq\infty\)</span>, a common explicit estimate is</p>
+<div class="arithmatex">\[
+\lVert x\rVert_q
+\leq\lVert x\rVert_p
+\leq n^{1/p-1/q}\lVert x\rVert_q.
+\]</div>
+<p>In particular,</p>
+<div class="arithmatex">\[
+\lVert x\rVert_2
+\leq\lVert x\rVert_1
+\leq\sqrt{n}\lVert x\rVert_2,
+\]</div>
+<div class="arithmatex">\[
+\lVert x\rVert_\infty
+\leq\lVert x\rVert_2
+\leq\sqrt{n}\lVert x\rVert_\infty,
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\lVert x\rVert_\infty
+\leq\lVert x\rVert_1
+\leq n\lVert x\rVert_\infty.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Norm Equivalence and Convergence</p>
+<p>In finite-dimensional spaces, if a sequence of vectors converges in one norm, then it converges in every norm. Therefore, convergence of finite-dimensional vector sequences is independent of the chosen norm.</p>
+<p>This conclusion generally cannot be extended to infinite-dimensional spaces. For example, let <span class="arithmatex">\(y^{(n)}\)</span> have its first <span class="arithmatex">\(n\)</span> components all equal to <span class="arithmatex">\(1/n\)</span> and its remaining components zero. Then</p>
+<div class="arithmatex">\[
+\lVert y^{(n)}\rVert_2=\frac{1}{\sqrt{n}}\longrightarrow0,
+\qquad
+\lVert y^{(n)}\rVert_1=1.
+\]</div>
+</div>
+<hr />
+<h2 id="5-matrix-norms">5. Matrix Norms</h2>
+<h3 id="51-matrix-norms-and-consistency">5.1 Matrix Norms and Consistency</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 5.1 (Matrix Norm)</p>
+<p>A function <span class="arithmatex">\(\lVert\cdot\rVert:\mathbb{R}^{m\times n}\to\mathbb{R}\)</span> is a vector norm on the matrix space if it satisfies positive definiteness, absolute homogeneity, and the triangle inequality.</p>
+<p>For matrices whose dimensions are compatible for multiplication, if it also satisfies</p>
+<div class="arithmatex">\[
+\lVert AB\rVert\leq\lVert A\rVert\lVert B\rVert,
+\]</div>
+<p>then the matrix norm is called <strong>submultiplicative</strong>, or said to have consistency.</p>
+</div>
+<p>Submultiplicativity is not an automatic consequence of the first three norm axioms. For example, define</p>
+<div class="arithmatex">\[
+\lVert A\rVert_{\max}=\max_{i,j}|a_{ij}|.
+\]</div>
+<p>It satisfies the three axioms of a vector norm, but it is not submultiplicative. Take</p>
+<div class="arithmatex">\[
+A=\begin{pmatrix}1&amp;1\\1&amp;1\end{pmatrix},
+\]</div>
+<p>then</p>
+<div class="arithmatex">\[
+\lVert A\rVert_{\max}=1,
+\qquad
+\lVert A^2\rVert_{\max}=2
+&gt;\lVert A\rVert_{\max}^2.
+\]</div>
+<h3 id="52-induced-matrix-norms">5.2 Induced Matrix Norms</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 5.2 (Induced Norm)</p>
+<p>Given vector norms on <span class="arithmatex">\(\mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbb{R}^m\)</span>, the induced norm of a matrix <span class="arithmatex">\(A\in\mathbb{R}^{m\times n}\)</span> is defined as</p>
+<div class="arithmatex">\[
+\lVert A\rVert
+=\sup_{x\neq0}\frac{\lVert Ax\rVert}{\lVert x\rVert}
+=\sup_{\lVert x\rVert=1}\lVert Ax\rVert.
+\]</div>
+<p>When <span class="arithmatex">\(p\)</span>-norms are used on both sides, it is denoted by</p>
+<div class="arithmatex">\[
+\lVert A\rVert_p
+=\sup_{x\neq0}\frac{\lVert Ax\rVert_p}{\lVert x\rVert_p}.
+\]</div>
+</div>
+<p>By definition, the induced norm satisfies the subordinate property</p>
+<div class="arithmatex">\[
+\lVert Ax\rVert_p
+\leq\lVert A\rVert_p\lVert x\rVert_p,
+\]</div>
+<p>and submultiplicativity</p>
+<div class="arithmatex">\[
+\lVert AB\rVert_p
+\leq\lVert A\rVert_p\lVert B\rVert_p.
+\]</div>
+<details class="proof">
+<summary>Proof of Submultiplicativity of the Induced Norm (click to expand)</summary>
+<p>For any <span class="arithmatex">\(x\neq0\)</span>,</p>
+<div class="arithmatex">\[
+\lVert ABx\rVert_p
+\leq\lVert A\rVert_p\lVert Bx\rVert_p
+\leq\lVert A\rVert_p\lVert B\rVert_p\lVert x\rVert_p.
+\]</div>
+<p>Dividing both sides by <span class="arithmatex">\(\lVert x\rVert_p\)</span> and taking the supremum over all <span class="arithmatex">\(x\neq0\)</span> gives the result. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="53-common-matrix-norms">5.3 Common Matrix Norms</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 5.3 (Frobenius Norm)</p>
+<p>For <span class="arithmatex">\(A=(a_{ij})\in\mathbb{R}^{m\times n}\)</span>, the Frobenius norm is defined as</p>
+<div class="arithmatex">\[
+\lVert A\rVert_F
+=\left(\sum_{i=1}^m\sum_{j=1}^na_{ij}^2\right)^{1/2}
+=\sqrt{\operatorname{tr}(A^TA)}.
+\]</div>
+</div>
+<p>The Frobenius norm is not an operator norm induced by vector norms of the same dimension, but it satisfies submultiplicativity.</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 5.4 (Explicit Formulas for Common Induced Norms)</p>
+<p>For <span class="arithmatex">\(A=(a_{ij})\in\mathbb{R}^{m\times n}\)</span>,</p>
+<div class="arithmatex">\[
+\lVert A\rVert_1
+=\max_{1\leq j\leq n}\sum_{i=1}^m|a_{ij}|,
+\]</div>
+<p>that is, the maximum absolute column sum;</p>
+<div class="arithmatex">\[
+\lVert A\rVert_\infty
+=\max_{1\leq i\leq m}\sum_{j=1}^n|a_{ij}|,
+\]</div>
+<p>that is, the maximum absolute row sum; and</p>
+<div class="arithmatex">\[
+\lVert A\rVert_2
+=\sqrt{\lambda_{\max}(A^TA)}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 5.4 (click to expand)</summary>
+<p>For the <span class="arithmatex">\(1\)</span>-norm,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert Ax\rVert_1
+&amp;=\sum_{i=1}^m\left|\sum_{j=1}^na_{ij}x_j\right|\\
+&amp;\leq\sum_{j=1}^n\left(\sum_{i=1}^m|a_{ij}|\right)|x_j|\\
+&amp;\leq\left(\max_j\sum_i|a_{ij}|\right)\lVert x\rVert_1.
+\end{aligned}
+\]</div>
+<p>Taking <span class="arithmatex">\(x=e_{j_*}\)</span>, where <span class="arithmatex">\(j_*\)</span> is the column attaining the maximum column sum, achieves equality.</p>
+<p>For the <span class="arithmatex">\(\infty\)</span>-norm,</p>
+<div class="arithmatex">\[
+\lVert Ax\rVert_\infty
+\leq\left(\max_i\sum_j|a_{ij}|\right)\lVert x\rVert_\infty.
+\]</div>
+<p>For the <span class="arithmatex">\(i_*\)</span>-th row attaining the maximum row sum, taking <span class="arithmatex">\(x_j=\operatorname{sgn}(a_{i_*j})\)</span> achieves equality.</p>
+<p>Finally, <span class="arithmatex">\(A^TA\)</span> is a symmetric positive semidefinite matrix, so</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert A\rVert_2^2
+&amp;=\sup_{x\neq0}\frac{\lVert Ax\rVert_2^2}{\lVert x\rVert_2^2}\\
+&amp;=\sup_{x\neq0}\frac{x^TA^TAx}{x^Tx}\\
+&amp;=\lambda_{\max}(A^TA).
+\end{aligned}
+\]</div>
+<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="54-relationships-among-common-matrix-norms">5.4 Relationships Among Common Matrix Norms</h3>
+<p>For <span class="arithmatex">\(A\in\mathbb{R}^{m\times n}\)</span>,</p>
+<div class="arithmatex">\[
+\lVert A\rVert_2
+\leq\lVert A\rVert_F
+\leq\sqrt{\min\{m,n\}}\lVert A\rVert_2,
+\]</div>
+<div class="arithmatex">\[
+\frac{1}{\sqrt{n}}\lVert A\rVert_\infty
+\leq\lVert A\rVert_2
+\leq\sqrt{m}\lVert A\rVert_\infty,
+\]</div>
+<div class="arithmatex">\[
+\frac{1}{\sqrt{m}}\lVert A\rVert_1
+\leq\lVert A\rVert_2
+\leq\sqrt{n}\lVert A\rVert_1,
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\lVert A\rVert_2^2
+\leq\lVert A\rVert_1\lVert A\rVert_\infty.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Meaning of the Dimension Factors</p>
+<p>Factors such as <span class="arithmatex">\(\sqrt{m}\)</span> and <span class="arithmatex">\(\sqrt{n}\)</span> in the above inequalities come from the equivalence relations among finite-dimensional vector norms. They show that although different norms describe the same finite-dimensional topology, dimension factors may not be negligible when performing quantitative error estimates.</p>
+</div>
+<h3 id="55-quantifying-perturbations-with-norms">5.5 Quantifying Perturbations with Norms</h3>
+<div class="admonition success">
+<p class="admonition-title">Lemma 5.5 (Neumann Series)</p>
+<p>Let <span class="arithmatex">\(A\in\mathbb{R}^{n\times n}\)</span> and suppose that for some submultiplicative matrix norm,</p>
+<div class="arithmatex">\[
+\lVert A\rVert&lt;1.
+\]</div>
+<p>Then <span class="arithmatex">\(I-A\)</span> is invertible, and</p>
+<div class="arithmatex">\[
+(I-A)^{-1}=\sum_{k=0}^{\infty}A^k,
+\qquad
+\lVert(I-A)^{-1}\rVert
+\leq\frac{1}{1-\lVert A\rVert}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Lemma 5.5 (click to expand)</summary>
+<p>Let</p>
+<div class="arithmatex">\[
+S_N=\sum_{k=0}^NA^k.
+\]</div>
+<p>By submultiplicativity,</p>
+<div class="arithmatex">\[
+\sum_{k=0}^{\infty}\lVert A^k\rVert
+\leq\sum_{k=0}^{\infty}\lVert A\rVert^k
+=\frac{1}{1-\lVert A\rVert}&lt;\infty.
+\]</div>
+<p>Therefore <span class="arithmatex">\(S_N\)</span> converges to some matrix <span class="arithmatex">\(S\)</span>. On the other hand,</p>
+<div class="arithmatex">\[
+S_N(I-A)=(I-A)S_N=I-A^{N+1}.
+\]</div>
+<p>Since <span class="arithmatex">\(\lVert A^{N+1}\rVert\leq\lVert A\rVert^{N+1}\to0\)</span>, letting <span class="arithmatex">\(N\to\infty\)</span> gives</p>
+<div class="arithmatex">\[
+S(I-A)=(I-A)S=I.
+\]</div>
+<p>Hence <span class="arithmatex">\(S=(I-A)^{-1}\)</span>. The norm estimate follows directly from the geometric series. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>This immediately gives</p>
+<div class="arithmatex">\[
+\lVert(I-A)^{-1}-I\rVert
+\leq\frac{\lVert A\rVert}{1-\lVert A\rVert}.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 5.6 (Sensitivity of the Inverse Matrix to Perturbations)</p>
+<p>Let <span class="arithmatex">\(A\)</span> be nonsingular, and let</p>
+<div class="arithmatex">\[
+r=\lVert A^{-1}E\rVert&lt;1.
+\]</div>
+<p>Then <span class="arithmatex">\(A+E\)</span> is nonsingular, and</p>
+<div class="arithmatex">\[
+\lVert(A+E)^{-1}-A^{-1}\rVert
+\leq
+\frac{\lVert E\rVert\lVert A^{-1}\rVert^2}{1-r}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Corollary 5.6 (click to expand)</summary>
+<p>Since</p>
+<div class="arithmatex">\[
+A+E=A(I+A^{-1}E),
+\]</div>
+<p>and <span class="arithmatex">\(\lVert A^{-1}E\rVert&lt;1\)</span>, the Neumann series shows that <span class="arithmatex">\(I+A^{-1}E\)</span> is invertible, so <span class="arithmatex">\(A+E\)</span> is invertible.</p>
+<p>Using Lemma 2.1,</p>
+<div class="arithmatex">\[
+(A+E)^{-1}-A^{-1}
+=-(A+E)^{-1}EA^{-1}.
+\]</div>
+<p>Also,</p>
+<div class="arithmatex">\[
+\lVert(A+E)^{-1}\rVert
+\leq\frac{\lVert A^{-1}\rVert}{1-r}.
+\]</div>
+<p>Combining this with submultiplicativity gives the desired estimate. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="56-orthogonal-invariance">5.6 Orthogonal Invariance</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 5.7 (Orthogonal Invariance of the Frobenius Norm and Spectral Norm)</p>
+<p>Let <span class="arithmatex">\(A\in\mathbb{R}^{m\times n}\)</span>, and let <span class="arithmatex">\(Q\in\mathbb{R}^{m\times m}\)</span> and <span class="arithmatex">\(Z\in\mathbb{R}^{n\times n}\)</span> be orthogonal matrices. Then</p>
+<div class="arithmatex">\[
+\lVert QAZ\rVert_F=\lVert A\rVert_F,
+\qquad
+\lVert QAZ\rVert_2=\lVert A\rVert_2.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 5.7 (click to expand)</summary>
+<p>For the Frobenius norm, using the cyclic invariance of the trace,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert QAZ\rVert_F^2
+&amp;=\operatorname{tr}(Z^TA^TQ^TQAZ)\\
+&amp;=\operatorname{tr}(Z^TA^TAZ)\\
+&amp;=\operatorname{tr}(A^TAZZ^T)\\
+&amp;=\operatorname{tr}(A^TA)
+=\lVert A\rVert_F^2.
+\end{aligned}
+\]</div>
+<p>For the spectral norm, orthogonal matrices preserve the <span class="arithmatex">\(2\)</span>-norm, so</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\lVert QAZ\rVert_2
+&amp;=\sup_{x\neq0}\frac{\lVert QAZx\rVert_2}{\lVert x\rVert_2}\\
+&amp;=\sup_{x\neq0}\frac{\lVert AZx\rVert_2}{\lVert Zx\rVert_2}\\
+&amp;=\lVert A\rVert_2.
+\end{aligned}
+\]</div>
+<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="6-summary-of-this-chapter">6. Summary of This Chapter</h2>
+<ol>
+<li>Range, null space, and rank describe the basic structure of a linear map, and the rank–nullity theorem gives the relationship between their dimensions.</li>
+<li>The Sherman–Morrison–Woodbury formula can efficiently handle low-rank corrections of matrices.</li>
+<li>An orthonormal set of vectors can be completed to an orthogonal matrix, and a subspace together with its orthogonal complement gives the orthogonal direct sum decomposition of <span class="arithmatex">\(\mathbb{R}^n\)</span>.</li>
+<li>Hölder's inequality and Minkowski's inequality are the foundations of <span class="arithmatex">\(p\)</span>-norm theory.</li>
+<li>All norms on a finite-dimensional space are equivalent, so convergence is independent of the specific norm, but quantitative estimates may still be affected by dimension factors.</li>
+<li>Induced matrix norms have the subordinate property and submultiplicativity; the <span class="arithmatex">\(1\)</span>-norm, <span class="arithmatex">\(\infty\)</span>-norm, and <span class="arithmatex">\(2\)</span>-norm correspond respectively to the maximum column sum, maximum row sum, and spectral norm.</li>
+<li>The Neumann series can be used to determine invertibility after perturbation and to give error bounds for the inverse matrix.</li>
+</ol>
 
 
 
@@ -5731,7 +6849,7 @@ f_{n_k}(x) \to f(x) \quad \text{a.e. as } k \to \infty
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -5763,20 +6881,20 @@ f_{n_k}(x) \to f(x) \quad \text{a.e. as } k \to \infty
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/security.js"></script>
+        <script src="../../../javascripts/security.js"></script>
       
         <script src="https://d3js.org/d3.v7.min.js"></script>
       
-        <script src="../../javascripts/starry_map.js"></script>
+        <script src="../../../javascripts/starry_map.js"></script>
       
     
   </body>

@@ -302,6 +302,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Matrix_Comp/0Intro/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/Matrix_Comp/1Matrix_norm/</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Matrix_Comp/1Matrix_norm/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Matrix_Comp/1Matrix_norm/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/Real_analysis/0Intro/</loc>
         <lastmod>2026-09-18</lastmod>
         <changefreq>daily</changefreq>
@@ -925,6 +932,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Differential_Manifolds/0Intro/"/>
     </url>
     <url>
+        <loc>https://jhao1122.github.io/Notes/en/Differential_Manifolds/1Diff_Mani/</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Differential_Manifolds/1Diff_Mani/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Differential_Manifolds/1Diff_Mani/"/>
+    </url>
+    <url>
         <loc>https://jhao1122.github.io/Notes/en/Functional_Analysis/0Intro/</loc>
         <lastmod>2026-09-18</lastmod>
         <changefreq>daily</changefreq>
@@ -1035,6 +1049,20 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Lectures/Group_Seminars/derandomized_knockoffs/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Lectures/Group_Seminars/derandomized_knockoffs/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Matrix_Comp/0Intro/</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Matrix_Comp/0Intro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Matrix_Comp/0Intro/"/>
+    </url>
+    <url>
+        <loc>https://jhao1122.github.io/Notes/en/Matrix_Comp/1Matrix_norm/</loc>
+        <lastmod>2026-09-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Matrix_Comp/1Matrix_norm/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Matrix_Comp/1Matrix_norm/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/Real_analysis/0Intro/</loc>
@@ -1476,20 +1504,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/reference/stochastic/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/reference/stochastic/"/>
-    </url>
-    <url>
-        <loc>https://jhao1122.github.io/Notes/en/Differential_Manifolds/1Diff_Mani/</loc>
-        <lastmod>2026-09-18</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Differential_Manifolds/1Diff_Mani/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Differential_Manifolds/1Diff_Mani/"/>
-    </url>
-    <url>
-        <loc>https://jhao1122.github.io/Notes/en/Matrix_Comp/0Intro/</loc>
-        <lastmod>2026-09-18</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jhao1122.github.io/Notes/en/Matrix_Comp/0Intro/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jhao1122.github.io/Notes/Matrix_Comp/0Intro/"/>
     </url>
     <url>
         <loc>https://jhao1122.github.io/Notes/en/research/arxiv_papers/</loc>
