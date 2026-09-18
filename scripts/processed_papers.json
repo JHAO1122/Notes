@@ -1210,5 +1210,11 @@
         "date": "2026-09-10",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.19035v1": {
+        "title": "Calibrated Predictive Distributions from Sample-Based Generators",
+        "date": "2026-07-20",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

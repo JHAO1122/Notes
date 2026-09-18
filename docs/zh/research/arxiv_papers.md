@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-16
+> 更新于: 2026-09-18
 
 ---
+### Calibrated Predictive Distributions from Sample-Based Generators 
+
+- [ ] **分类**: Conformal | **日期**: 2026-07-20
+- **链接**: [PDF](http://arxiv.org/abs/2609.19035v1)
+
+!!! note "AI 核心解读"
+
+    该论文在可交换性假设下建立了有限样本概率校准的理论保证，并通过仿射位置-尺度偏差校正与保形PIT校准的两步构造，将基于样本的预测分布表示为生成器次序统计量上的加权经验分布。其提出的PIT中心性评分函数进一步构造出具有有限样本边际覆盖率的嵌套预测区间，从而实现对超越概率、任意分位数及最高密度区间的阈值相干估计。
+
+
 ### On Large-Scale Multiple Testing Over Networks: A Non-Asymptotic Approach 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-09-12
