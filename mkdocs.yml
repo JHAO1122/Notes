@@ -132,10 +132,11 @@ plugins:
             "第十二章：L^p空间": "Ch 12: L^p Spaces"
             "🎯 高等概率论": "🎯 Advanced Probability Theory"
             "高等概率论课程概览": "Advanced Probability Theory Course Overview"
+            "第一章：概率空间与随机变量": "Ch 1: Probability Spaces and Random Variables"
             "⏳ 高等数理统计": "⏳ Advanced Mathematical Statistics"
             "高等数理统计课程概览": "Advanced Mathematical Statistics Course Overview"
-            "高斯几何与经典分布": "Gaussian Geometry and Classical Distributions"
-            "充分性与指数族": "Sufficiency and Exponential Families"
+            "第一章：高斯几何与经典分布": "Ch 1: Gaussian Geometry and Classical Distributions"
+            "第二章：充分性与指数族": "Ch 2: Sufficiency and Exponential Families"
             "🌐 微分流形与黎曼几何": "🌐 Differentiable Manifolds and Riemannian Geometry"
             "微分流形与黎曼几何课程概览": "Differentiable Manifolds and Riemannian Geometry Course Overview"
             "第一章：微分流形": "Ch 1: Differentiable Manifolds"
@@ -286,6 +287,8 @@ nav:
               - 第十二章：L^p空间: zh/Real_analysis/12_lp_spaces.md
       - 🎯 高等概率论:
           - 高等概率论课程概览: zh/Advanced_Prob/0Intro.md
+          - 📖 笔记:
+              - 第一章：概率空间与随机变量: zh/Advanced_Prob/1Random_var.md
       - ⏳ 高等数理统计:
           - 高等数理统计课程概览: zh/Advanced_Stat/0Intro.md  
           - 📖 笔记:
