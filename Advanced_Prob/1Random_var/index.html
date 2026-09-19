@@ -6010,14 +6010,12 @@
 <div class="admonition info">
 <p class="admonition-title">定义 1.2（<span class="arithmatex">\(\sigma\)</span>-代数）</p>
 <p>设 <span class="arithmatex">\(\mathcal{A}\)</span> 是 <span class="arithmatex">\(\Omega\)</span> 的若干子集组成的集合族。如果满足：</p>
-<ol>
-<li><span class="arithmatex">\(\varnothing,\Omega\in\mathcal{A}\)</span>；</li>
-<li>若 <span class="arithmatex">\(A\in\mathcal{A}\)</span>，则 <span class="arithmatex">\(A^c\in\mathcal{A}\)</span>；</li>
-<li>若 <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>，则</li>
-</ol>
-<p>[
-   \bigcup_{n=1}^{\infty}A_n\in\mathcal{A},
-   ]</p>
+<p>(i) <span class="arithmatex">\(\varnothing,\Omega\in\mathcal{A}\)</span>；</p>
+<p>(ii) 若 <span class="arithmatex">\(A\in\mathcal{A}\)</span>，则 <span class="arithmatex">\(A^c\in\mathcal{A}\)</span>；</p>
+<p>(iii) 若 <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>，则</p>
+<div class="arithmatex">\[
+\bigcup_{n=1}^{\infty}A_n\in\mathcal{A}.
+\]</div>
 <p>则称 <span class="arithmatex">\(\mathcal{A}\)</span> 是 <span class="arithmatex">\(\Omega\)</span> 上的一个 <strong><span class="arithmatex">\(\sigma\)</span>-代数（<span class="arithmatex">\(\sigma\)</span>-field）</strong>，其中的元素称为事件。</p>
 </div>
 <p>由补集和可数并的封闭性，根据 De Morgan 公式还可得到：若 <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>，则</p>
@@ -6043,14 +6041,12 @@
 P:\mathcal{A}\longrightarrow[0,1]
 \]</div>
 <p>如果满足：</p>
-<ol>
-<li><span class="arithmatex">\(P(\Omega)=1\)</span>；</li>
-<li>对任意两两不交的事件 <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>，有</li>
-</ol>
-<p>[
-   P\left(\bigcup_{n=1}^{\infty}A_n\right)
-   =\sum_{n=1}^{\infty}P(A_n),
-   ]</p>
+<p>(i) <span class="arithmatex">\(P(\Omega)=1\)</span>；</p>
+<p>(ii) 对任意两两不交的事件 <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>，有</p>
+<div class="arithmatex">\[
+P\left(\bigcup_{n=1}^{\infty}A_n\right)
+=\sum_{n=1}^{\infty}P(A_n).
+\]</div>
 <p>则称 <span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\((\Omega,\mathcal{A})\)</span> 上的一个<strong>概率测度</strong>。</p>
 </div>
 <p>三元组</p>
@@ -6221,26 +6217,20 @@ F_X:\mathbb{R}\longrightarrow[0,1].
 <div class="admonition success">
 <p class="admonition-title">命题 5.2（分布函数的性质）</p>
 <p>任意分布函数 <span class="arithmatex">\(F_X\)</span> 都满足：</p>
-<ol>
-<li><strong>单调不减：</strong>若 <span class="arithmatex">\(x_1&lt;x_2\)</span>，则</li>
-</ol>
-<p>[
-   F_X(x_1)\leq F_X(x_2).
-   ]</p>
-<ol>
-<li><strong>右连续：</strong>对任意 <span class="arithmatex">\(x\in\mathbb{R}\)</span>，</li>
-</ol>
-<p>[
-   \lim_{h\downarrow0}F_X(x+h)=F_X(x).
-   ]</p>
-<ol>
-<li><strong>两端极限：</strong></li>
-</ol>
-<p>[
-   \lim_{x\to-\infty}F_X(x)=0,
-   \qquad
-   \lim_{x\to+\infty}F_X(x)=1.
-   ]</p>
+<p>(i) <strong>单调不减：</strong>若 <span class="arithmatex">\(x_1&lt;x_2\)</span>，则</p>
+<div class="arithmatex">\[
+F_X(x_1)\leq F_X(x_2).
+\]</div>
+<p>(ii) <strong>右连续：</strong>对任意 <span class="arithmatex">\(x\in\mathbb{R}\)</span>，</p>
+<div class="arithmatex">\[
+\lim_{h\downarrow0}F_X(x+h)=F_X(x).
+\]</div>
+<p>(iii) <strong>两端极限：</strong></p>
+<div class="arithmatex">\[
+\lim_{x\to-\infty}F_X(x)=0,
+\qquad
+\lim_{x\to+\infty}F_X(x)=1.
+\]</div>
 </div>
 <details class="proof">
 <summary>命题 5.2 的说明（点击展开）</summary>

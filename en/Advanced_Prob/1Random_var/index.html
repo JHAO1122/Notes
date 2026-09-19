@@ -6010,14 +6010,12 @@
 <div class="admonition info">
 <p class="admonition-title">Definition 1.2 (<span class="arithmatex">\(\sigma\)</span>-Algebra)</p>
 <p>Let <span class="arithmatex">\(\mathcal{A}\)</span> be a family of subsets of <span class="arithmatex">\(\Omega\)</span>. If it satisfies:</p>
-<ol>
-<li><span class="arithmatex">\(\varnothing,\Omega\in\mathcal{A}\)</span>;</li>
-<li>If <span class="arithmatex">\(A\in\mathcal{A}\)</span>, then <span class="arithmatex">\(A^c\in\mathcal{A}\)</span>;</li>
-<li>If <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>, then</li>
-</ol>
-<p>[
-   \bigcup_{n=1}^{\infty}A_n\in\mathcal{A},
-   ]</p>
+<p>(i) <span class="arithmatex">\(\varnothing,\Omega\in\mathcal{A}\)</span>;</p>
+<p>(ii) If <span class="arithmatex">\(A\in\mathcal{A}\)</span>, then <span class="arithmatex">\(A^c\in\mathcal{A}\)</span>;</p>
+<p>(iii) If <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>, then</p>
+<div class="arithmatex">\[
+\bigcup_{n=1}^{\infty}A_n\in\mathcal{A}.
+\]</div>
 <p>then <span class="arithmatex">\(\mathcal{A}\)</span> is called a <strong><span class="arithmatex">\(\sigma\)</span>-algebra</strong> on <span class="arithmatex">\(\Omega\)</span>, and its elements are called events.</p>
 </div>
 <p>From the closure under complements and countable unions, by De Morgan's formulas we also obtain: if <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>, then</p>
@@ -6042,15 +6040,13 @@
 <div class="arithmatex">\[
 P:\mathcal{A}\longrightarrow[0,1]
 \]</div>
-<p>is called a <strong>probability measure</strong> on <span class="arithmatex">\((\Omega,\mathcal{A})\)</span> if it satisfies:</p>
-<ol>
-<li><span class="arithmatex">\(P(\Omega)=1\)</span>;</li>
-<li>For any pairwise disjoint events <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>,</li>
-</ol>
-<p>[
-   P\left(\bigcup_{n=1}^{\infty}A_n\right)
-   =\sum_{n=1}^{\infty}P(A_n),
-   ]</p>
+<p>if it satisfies:</p>
+<p>(i) <span class="arithmatex">\(P(\Omega)=1\)</span>;</p>
+<p>(ii) For any pairwise disjoint events <span class="arithmatex">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>,</p>
+<div class="arithmatex">\[
+P\left(\bigcup_{n=1}^{\infty}A_n\right)
+=\sum_{n=1}^{\infty}P(A_n).
+\]</div>
 <p>then <span class="arithmatex">\(P\)</span> is called a <strong>probability measure</strong> on <span class="arithmatex">\((\Omega,\mathcal{A})\)</span>.</p>
 </div>
 <p>The triple</p>
@@ -6172,13 +6168,13 @@ P_1\otimes P_2).
 <div class="arithmatex">\[
 X:\Omega\longrightarrow\mathbb{R}
 \]</div>
-<p>is called a <strong>random variable</strong> if for every <span class="arithmatex">\(B\in\mathcal{B}(\mathbb{R})\)</span> it satisfies</p>
+<p>if for every <span class="arithmatex">\(B\in\mathcal{B}(\mathbb{R})\)</span> it satisfies</p>
 <div class="arithmatex">\[
 X^{-1}(B)
 =\{\omega\in\Omega:X(\omega)\in B\}
 \in\mathcal{A},
 \]</div>
-<p>and is also called a measurable mapping from <span class="arithmatex">\((\Omega,\mathcal{A})\)</span> to <span class="arithmatex">\((\mathbb{R},\mathcal{B}(\mathbb{R}))\)</span>.</p>
+<p>then <span class="arithmatex">\(X\)</span> is called a <strong>random variable</strong>, and is also called a measurable mapping from <span class="arithmatex">\((\Omega,\mathcal{A})\)</span> to <span class="arithmatex">\((\mathbb{R},\mathcal{B}(\mathbb{R}))\)</span>.</p>
 </div>
 <p>A random variable is not the naive concept of a “variable taking random values”, but a measurable function that maps abstract sample points to real numbers.</p>
 <h3 id="43-induced-distribution-of-a-random-variable">4.3 Induced Distribution of a Random Variable</h3>
@@ -6220,26 +6216,20 @@ F_X:\mathbb{R}\longrightarrow[0,1].
 <div class="admonition success">
 <p class="admonition-title">Proposition 5.2 (Properties of Distribution Functions)</p>
 <p>Any distribution function <span class="arithmatex">\(F_X\)</span> satisfies:</p>
-<ol>
-<li><strong>Nondecreasing:</strong> If <span class="arithmatex">\(x_1&lt;x_2\)</span>, then</li>
-</ol>
-<p>[
-   F_X(x_1)\leq F_X(x_2).
-   ]</p>
-<ol>
-<li><strong>Right-continuous:</strong> For every <span class="arithmatex">\(x\in\mathbb{R}\)</span>,</li>
-</ol>
-<p>[
-   \lim_{h\downarrow0}F_X(x+h)=F_X(x).
-   ]</p>
-<ol>
-<li><strong>Limits at the two ends:</strong></li>
-</ol>
-<p>[
-   \lim_{x\to-\infty}F_X(x)=0,
-   \qquad
-   \lim_{x\to+\infty}F_X(x)=1.
-   ]</p>
+<p>(i) <strong>Nondecreasing:</strong> If <span class="arithmatex">\(x_1&lt;x_2\)</span>, then</p>
+<div class="arithmatex">\[
+F_X(x_1)\leq F_X(x_2).
+\]</div>
+<p>(ii) <strong>Right-continuous:</strong> For every <span class="arithmatex">\(x\in\mathbb{R}\)</span>,</p>
+<div class="arithmatex">\[
+\lim_{h\downarrow0}F_X(x+h)=F_X(x).
+\]</div>
+<p>(iii) <strong>Limits at the two ends:</strong></p>
+<div class="arithmatex">\[
+\lim_{x\to-\infty}F_X(x)=0,
+\qquad
+\lim_{x\to+\infty}F_X(x)=1.
+\]</div>
 </div>
 <details class="proof">
 <summary>Explanation of Proposition 5.2 (click to expand)</summary>
