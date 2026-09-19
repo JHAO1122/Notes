@@ -22,13 +22,15 @@
 
     设 $\mathcal{A}$ 是 $\Omega$ 的若干子集组成的集合族。如果满足：
 
-    1. $\varnothing,\Omega\in\mathcal{A}$；
-    2. 若 $A\in\mathcal{A}$，则 $A^c\in\mathcal{A}$；
-    3. 若 $A_1,A_2,\ldots\in\mathcal{A}$，则
+    (i) $\varnothing,\Omega\in\mathcal{A}$；
 
-       \[
-       \bigcup_{n=1}^{\infty}A_n\in\mathcal{A},
-       \]
+    (ii) 若 $A\in\mathcal{A}$，则 $A^c\in\mathcal{A}$；
+
+    (iii) 若 $A_1,A_2,\ldots\in\mathcal{A}$，则
+
+    \[
+    \bigcup_{n=1}^{\infty}A_n\in\mathcal{A}.
+    \]
 
     则称 $\mathcal{A}$ 是 $\Omega$ 上的一个 **$\sigma$-代数（$\sigma$-field）**，其中的元素称为事件。
 
@@ -64,13 +66,14 @@
 
     如果满足：
 
-    1. $P(\Omega)=1$；
-    2. 对任意两两不交的事件 $A_1,A_2,\ldots\in\mathcal{A}$，有
+    (i) $P(\Omega)=1$；
 
-       \[
-       P\left(\bigcup_{n=1}^{\infty}A_n\right)
-       =\sum_{n=1}^{\infty}P(A_n),
-       \]
+    (ii) 对任意两两不交的事件 $A_1,A_2,\ldots\in\mathcal{A}$，有
+
+    \[
+    P\left(\bigcup_{n=1}^{\infty}A_n\right)
+    =\sum_{n=1}^{\infty}P(A_n).
+    \]
 
     则称 $P$ 是 $(\Omega,\mathcal{A})$ 上的一个**概率测度**。
 
@@ -307,25 +310,25 @@ B=(-\infty,x],
 
     任意分布函数 $F_X$ 都满足：
 
-    1. **单调不减：**若 $x_1<x_2$，则
+    (i) **单调不减：**若 $x_1<x_2$，则
 
-       \[
-       F_X(x_1)\leq F_X(x_2).
-       \]
+    \[
+    F_X(x_1)\leq F_X(x_2).
+    \]
 
-    2. **右连续：**对任意 $x\in\mathbb{R}$，
+    (ii) **右连续：**对任意 $x\in\mathbb{R}$，
 
-       \[
-       \lim_{h\downarrow0}F_X(x+h)=F_X(x).
-       \]
+    \[
+    \lim_{h\downarrow0}F_X(x+h)=F_X(x).
+    \]
 
-    3. **两端极限：**
+    (iii) **两端极限：**
 
-       \[
-       \lim_{x\to-\infty}F_X(x)=0,
-       \qquad
-       \lim_{x\to+\infty}F_X(x)=1.
-       \]
+    \[
+    \lim_{x\to-\infty}F_X(x)=0,
+    \qquad
+    \lim_{x\to+\infty}F_X(x)=1.
+    \]
 
 ??? proof "命题 5.2 的说明（点击展开）"
 

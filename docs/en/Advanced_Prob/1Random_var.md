@@ -22,13 +22,15 @@ A subset of the sample space is called an event. In order to assign probabilitie
 
     Let $\mathcal{A}$ be a family of subsets of $\Omega$. If it satisfies:
 
-    1. $\varnothing,\Omega\in\mathcal{A}$;
-    2. If $A\in\mathcal{A}$, then $A^c\in\mathcal{A}$;
-    3. If $A_1,A_2,\ldots\in\mathcal{A}$, then
+    (i) $\varnothing,\Omega\in\mathcal{A}$;
 
-       \[
-       \bigcup_{n=1}^{\infty}A_n\in\mathcal{A},
-       \]
+    (ii) If $A\in\mathcal{A}$, then $A^c\in\mathcal{A}$;
+
+    (iii) If $A_1,A_2,\ldots\in\mathcal{A}$, then
+
+    \[
+    \bigcup_{n=1}^{\infty}A_n\in\mathcal{A}.
+    \]
 
     then $\mathcal{A}$ is called a **$\sigma$-algebra** on $\Omega$, and its elements are called events.
 
@@ -62,15 +64,16 @@ From the closure under complements and countable unions, by De Morgan's formulas
     P:\mathcal{A}\longrightarrow[0,1]
     \]
 
-    is called a **probability measure** on $(\Omega,\mathcal{A})$ if it satisfies:
+    if it satisfies:
 
-    1. $P(\Omega)=1$;
-    2. For any pairwise disjoint events $A_1,A_2,\ldots\in\mathcal{A}$,
+    (i) $P(\Omega)=1$;
 
-       \[
-       P\left(\bigcup_{n=1}^{\infty}A_n\right)
-       =\sum_{n=1}^{\infty}P(A_n),
-       \]
+    (ii) For any pairwise disjoint events $A_1,A_2,\ldots\in\mathcal{A}$,
+
+    \[
+    P\left(\bigcup_{n=1}^{\infty}A_n\right)
+    =\sum_{n=1}^{\infty}P(A_n).
+    \]
 
     then $P$ is called a **probability measure** on $(\Omega,\mathcal{A})$.
 
@@ -240,7 +243,7 @@ For example, an open half-line can be represented as
     X:\Omega\longrightarrow\mathbb{R}
     \]
 
-    is called a **random variable** if for every $B\in\mathcal{B}(\mathbb{R})$ it satisfies
+    if for every $B\in\mathcal{B}(\mathbb{R})$ it satisfies
 
     \[
     X^{-1}(B)
@@ -248,7 +251,7 @@ For example, an open half-line can be represented as
     \in\mathcal{A},
     \]
 
-    and is also called a measurable mapping from $(\Omega,\mathcal{A})$ to $(\mathbb{R},\mathcal{B}(\mathbb{R}))$.
+    then $X$ is called a **random variable**, and is also called a measurable mapping from $(\Omega,\mathcal{A})$ to $(\mathbb{R},\mathcal{B}(\mathbb{R}))$.
 
 A random variable is not the naive concept of a “variable taking random values”, but a measurable function that maps abstract sample points to real numbers.
 
@@ -305,25 +308,25 @@ to obtain the distribution function of the random variable.
 
     Any distribution function $F_X$ satisfies:
 
-    1. **Nondecreasing:** If $x_1<x_2$, then
+    (i) **Nondecreasing:** If $x_1<x_2$, then
 
-       \[
-       F_X(x_1)\leq F_X(x_2).
-       \]
+    \[
+    F_X(x_1)\leq F_X(x_2).
+    \]
 
-    2. **Right-continuous:** For every $x\in\mathbb{R}$,
+    (ii) **Right-continuous:** For every $x\in\mathbb{R}$,
 
-       \[
-       \lim_{h\downarrow0}F_X(x+h)=F_X(x).
-       \]
+    \[
+    \lim_{h\downarrow0}F_X(x+h)=F_X(x).
+    \]
 
-    3. **Limits at the two ends:**
+    (iii) **Limits at the two ends:**
 
-       \[
-       \lim_{x\to-\infty}F_X(x)=0,
-       \qquad
-       \lim_{x\to+\infty}F_X(x)=1.
-       \]
+    \[
+    \lim_{x\to-\infty}F_X(x)=0,
+    \qquad
+    \lim_{x\to+\infty}F_X(x)=1.
+    \]
 
 ??? proof "Explanation of Proposition 5.2 (click to expand)"
 
